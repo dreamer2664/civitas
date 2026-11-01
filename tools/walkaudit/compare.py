@@ -26,3 +26,7 @@ for crossing in lua['crossings']:
     assert math.isclose(crossing['result']['maxStep'],other['maxStepStuds'],abs_tol=1e-7), 'crossing step checks disagree'
     assert normalized(crossing['result']['defects'])==normalized(other['defects']), 'crossing defects disagree'
 print('PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks and 162 crossing axes')
+
+stream=json.loads((root/'walkability-streaming-exact.json').read_text())
+assert stream['streamingEnvelope']==py['streamingEnvelope'], 'streaming report and audit integration disagree'
+print('STREAMING PARITY PASS: report and audit use identical continuous bounding-footprint envelopes')

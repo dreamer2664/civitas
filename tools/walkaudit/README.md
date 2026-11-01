@@ -2,6 +2,7 @@
 
 `bash tools/walkaudit/verify.sh` from repo root runs lint, format and scoped Luau static
 analysis, 18 pure Luau regression tests, 11 Python clipping/geometry regression tests,
+9 continuous streaming-envelope regression tests,
 strata's 6 generator tests, Rojo assembly, actual builder export and exact geometry audit.
 It returns nonzero for route, sidewalk or crossing continuity defects. This is NOT an engine test.
 
@@ -45,9 +46,14 @@ streaming, Humanoid state, render submission or character grounding is simulated
   with 1-stud endpoint inset. Results identify source-part IDs and exact blocked spans.
 * District A and station-concourse spawn locations receive support/clearance checks. This
   is not a runtime teleport or first-frame physics test. No platform is present to test.
-* Streaming envelopes at 64/256/384/512/1024 studs count footprint/circle intersections
-  at 114 route positions, max 16-stud spacing. These are sampled conservative residency
-  envelopes, NOT engine residency, true streaming maxima, GPU calls or memory measurements.
+* Streaming envelopes at 64/256/384/512/1024 studs use an analytic continuous sweep of
+  bounding-footprint/disk intersection intervals over the entire route, not 16-stud
+  samples. A rounded rectangle is decomposed into two strips and four corner disks;
+  clip each primitive, merge the convex interval and sweep per-part entry/exit events.
+  Cylinder bounds remain conservative. Closed-boundary contacts count. The previous
+  sampled numbers are retained separately for comparison. The new peak at radius 512
+  is 1005 (not sampled 998), and 384 peaks at 621 (not 620).
+  These are NOT engine residency, GPU calls, retained models or memory measurements.
 * Unbatched main-pass estimate assumes one submission per resident part, no batching or
   culling. This is a risk proxy, not a guaranteed upper bound on total GPU draw calls
   (shadows/multipass effects can add calls; batching/occlusion can reduce calls).
@@ -62,7 +68,8 @@ check. It must not overwrite the current evidence with a synthetic fixture pass.
 all sidewalk findings, policy findings and streaming envelopes.
 `walkability-geometry-defects.csv`: all coordinate/span findings across route, sidewalks and crossings.
 `walkability-collision-defects.csv`: all 291 decorative-collision IDs, coordinates and sizes.
-`walkability-metrics.json`: configured properties and static/constructed part counts.
+`walkability-streaming-exact.json`: continuous bounding-footprint extrema and peak coordinates.
+`walkability-metrics.json`: configured properties, part counts and source SHA-256 manifest.
 `renders/walkability-route.svg`: actual footprints, gold audited route, red blocked sidewalks.
 `walkability-milestone.rbxlx`: Rojo assembly evidence, not simulated runtime geometry.
 

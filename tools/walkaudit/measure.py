@@ -1,5 +1,6 @@
 """Static evidence only. Never reports engine draw calls or streamed counts."""
 import json
+import hashlib
 import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -13,6 +14,9 @@ classes = {'Part', 'MeshPart', 'UnionOperation', 'WedgePart', 'SpawnLocation', '
 count = sum(i.attrib.get('class') in classes for i in workspace.iter('Item')) if workspace is not None else 0
 metrics = {
     'sourceRevision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip(),
+    'sourceSHA256': {str(path.relative_to(root)):hashlib.sha256(path.read_bytes()).hexdigest()
+        for folder in ('src/server/World','src/server/Walkability','src/server/Spawn','tools/walkaudit','tests/walk')
+        for path in sorted((root/folder).glob('*')) if path.suffix in ('.luau','.py','.sh')},
     'staticWorkspaceParts': count,
     'generatedWalkableParts': result.get('partCount', result.get('parts')),
     'drawCalls': None,

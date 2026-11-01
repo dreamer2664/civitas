@@ -1848,6 +1848,6 @@
 <text x="40" y="1368" font-size="10">9. concourse (120, 925)</text>
 <text x="480" y="1275" font-size="13">162 grid crossings: clear; max step 0.255 studs</text>
 <text x="480" y="1300" font-size="13">Exact ground containment: 2,895,200 studs²</text>
-<text x="480" y="1325" font-size="13">Geometry audit only — not Roblox engine proof.</text>
+<text x="480" y="1325" font-size="13">384-radius bound peak: 621 parts; not engine profiling.</text>
 <text x="480" y="1350" font-size="13">Platform absent; mobile draw calls unmeasured.</text>
 </g></svg>

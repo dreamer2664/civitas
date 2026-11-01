@@ -7,11 +7,15 @@ prove support. Unsupported shapes/tilt prevent acceptance.
 import json
 import csv
 import math
+import importlib.util
 import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 EPS = 1e-5
+_stream_spec=importlib.util.spec_from_file_location('walk_streaming',Path(__file__).with_name('streaming.py'))
+_stream_module=importlib.util.module_from_spec(_stream_spec)
+_stream_spec.loader.exec_module(_stream_module)
 
 
 def local(p, x, z):
@@ -121,6 +125,7 @@ def audit(data, minimum=1500, measure_streaming=True, check_spawns=True):
                         n+=1
                 counts_at.append(n)
         streaming[str(radius)]={'minIntersectingParts':min(counts_at),'maxIntersectingParts':max(counts_at),'samplePositions':len(counts_at),'spacingMaxStuds':16}
+    continuous=_stream_module.envelopes(parts,route) if measure_streaming else {}
     return dict(status='GEOMETRY_CHECKS_PASS' if not defects else 'FAIL',engineTested=False,
         sourceRevision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         worldRevision=subprocess.check_output(['git','rev-parse','origin/world/historic-core-blockout'],cwd=ROOT,text=True).strip(),
@@ -128,8 +133,8 @@ def audit(data, minimum=1500, measure_streaming=True, check_spawns=True):
         groundSeal={'proven':seal_witness is not None,'method':'exact closed base-solid contains all domain corners','witness':seal_witness['id'] if seal_witness else None,'bounds':bounds,'areaStudsSquared':(bounds['maxX']-bounds['minX'])*(bounds['maxZ']-bounds['minZ'])},
         defects=defects,decorativeCollisionCount=len(decorative),decorativeCollisionClasses=counts,
         collisionPolicyFindings=[dict(code='DECORATIVE_COLLISION',x=p['x'],y=p['y'],z=p['z'],sx=p['sx'],sy=p['sy'],sz=p['sz'],id=p['id']) for p in decorative],
-        streamingEnvelope=streaming,unbatchedMainPassEstimate=streaming.get('1024',{}).get('maxIntersectingParts'),
-        measuredDrawCalls=None,limitations=['Lune data model only, no engine','Box/cylinder obstacle bounds conservative','Radius envelope sampled along route, not streaming simulation','Platform absent: station placeholder cannot prove platform exit','Landmark sight line and first-frame character grounding unverified'])
+        streamingEnvelope=continuous,sampledStreamingEnvelope=streaming,unbatchedMainPassEstimate=continuous.get('1024',{}).get('maxIntersectingParts'),
+        measuredDrawCalls=None,limitations=['Lune data model only, no engine','Box/cylinder obstacle bounds conservative','Continuous analytic bounding-footprint envelopes, not streaming simulation','Platform absent: station placeholder cannot prove platform exit','Landmark sight line and first-frame character grounding unverified'])
 
 
 if __name__=='__main__':

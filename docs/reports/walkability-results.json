@@ -1,7 +1,7 @@
 {
   "status": "FAIL_SIDEWALK_CONTINUITY",
   "engineTested": false,
-  "sourceRevision": "91ec7755c076d0237940d20d937c676f9c3a8eb7",
+  "sourceRevision": "0e866a46eea196488e6e027308f6d3d1f1f41e3f",
   "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
   "partCount": 1817,
   "spawnChecks": [
@@ -2965,6 +2965,68 @@
     "64": {
       "minIntersectingParts": 7,
       "maxIntersectingParts": 38,
+      "peakPosition": {
+        "x": 136.75,
+        "z": -156.37768510550535,
+        "segment": 1,
+        "t": 0.7327610831734768
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "256": {
+      "minIntersectingParts": 27,
+      "maxIntersectingParts": 317,
+      "peakPosition": {
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "384": {
+      "minIntersectingParts": 82,
+      "maxIntersectingParts": 621,
+      "peakPosition": {
+        "x": 136.75,
+        "z": 12.453606872578689,
+        "segment": 1,
+        "t": 0.9885660710190586
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "512": {
+      "minIntersectingParts": 212,
+      "maxIntersectingParts": 1005,
+      "peakPosition": {
+        "x": 136.75,
+        "z": 138.28786575625128,
+        "segment": 6,
+        "t": 0.0121880378768401
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "1024": {
+      "minIntersectingParts": 1023,
+      "maxIntersectingParts": 1814,
+      "peakPosition": {
+        "x": 136.75,
+        "z": -21.76563357489283,
+        "segment": 1,
+        "t": 0.9367187370077381
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    }
+  },
+  "sampledStreamingEnvelope": {
+    "64": {
+      "minIntersectingParts": 7,
+      "maxIntersectingParts": 38,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
@@ -2993,12 +3055,12 @@
       "spacingMaxStuds": 16
     }
   },
-  "unbatchedMainPassEstimate": 1813,
+  "unbatchedMainPassEstimate": 1814,
   "measuredDrawCalls": null,
   "limitations": [
     "Lune data model only, no engine",
     "Box/cylinder obstacle bounds conservative",
-    "Radius envelope sampled along route, not streaming simulation",
+    "Continuous analytic bounding-footprint envelopes, not streaming simulation",
     "Platform absent: station placeholder cannot prove platform exit",
     "Landmark sight line and first-frame character grounding unverified"
   ],
