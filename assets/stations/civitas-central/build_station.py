@@ -94,12 +94,17 @@ def piece(category,parent,offset,zscale=1):
   ob=src.copy(); ob.data=src.data; s.collection.objects.link(ob); ob.parent=parent
   ob.location=src.location+Vector(offset); ob.location.z=src.location.z*zscale+offset[2]; ob.rotation_euler=src.rotation_euler.copy(); ob.scale=src.scale.copy(); ob.scale.z*=zscale
   ob.name=parent.name+'_'+src.name
+surface_cache={}
 for platform,y in [(1,11.2),(2,-5.6)]:
  for module,x in [(1,-20),(2,20)]:
-  mod=empty('PLATFORM_%d_MODULE_%d'%(platform,module),(x,y,.76),root); mod['kit_instances']=10; mod['surface_width_m']=6.0; edge=-1 if platform==1 else 1
+  mod=empty('PLATFORM_%d_MODULE_%d'%(platform,module),(x,y,.76),root); mod['kit_instances']=10; mod['surface_width_m']=6.0; mod.scale.y=1 if platform==1 else -1; edge=-1
   # A 40m continuous walking surface; separate box proxy.
-  box(mod.name+'_surface_VISUAL',(0,0,-.18),(40,6,.36),floor,mod)
-  box(mod.name+'_surface_COLLISION',(0,0,-.18),(40,6,.36),floor,mod,True)
+  for suffix,is_collision in [('VISUAL',False),('COLLISION',True)]:
+   surface=box(mod.name+'_surface_'+suffix,(0,0,-.18),(40,6,.36),floor,mod,is_collision)
+   if suffix in surface_cache:
+    old_mesh=surface.data; surface.data=surface_cache[suffix]
+    if old_mesh.users==0: bpy.data.meshes.remove(old_mesh)
+   else: surface_cache[suffix]=surface.data
   for i in range(10):
    along=-18+4*i
    piece('edge',mod,(along,edge*2.775,0)); piece('coping',mod,(along,edge*2.775,0)); piece('tactile',mod,(along,edge*2.30,0)); piece('canopy',mod,(along,.4,0),2.8)

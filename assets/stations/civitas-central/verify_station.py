@@ -13,7 +13,10 @@ if scale!=1.0:
   assert obj is not None, 'Missing '+name
   actual=obj.matrix_world.translation*scale
   assert all(abs(actual[i]-position[i])<.001 for i in range(3)), (name,actual,position)
- print('GLB_MODULE_TRANSFORMS_PASS',len(expected),'axis round-trip in Blender, stud-scaled')
+  yaxis=(obj.matrix_world.to_3x3() @ Vector((0,1,0)))*scale
+  sign=-1 if name.startswith('PLATFORM_2_') else 1
+  assert (yaxis-Vector((0,sign,0))).length<.001,(name,yaxis)
+ print('GLB_MODULE_TRANSFORMS_PASS',len(expected),'axis round-trip in Blender, stud-scaled; platform 2 reflected')
 print('ROUTE_CHECK_MODE','GLB reimport (Blender)' if scale!=1.0 else 'source blend')
 s=bpy.context.scene; dg=bpy.context.evaluated_depsgraph_get()
 def build_tree(collision):
