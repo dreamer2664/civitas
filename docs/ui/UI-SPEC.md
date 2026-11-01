@@ -70,6 +70,12 @@ Rules:
 - Text is never shorter than its meaning. Truncation is avoided by wrapping or by a larger container, not by an ellipsis on a
   safety-relevant word such as "STOP" or "EMERGENCY".
 - Sentence case for labels; capitals only for sign text and status words in the cab.
+- **Glyph coverage.** Roblox draws a box for a character the font lacks, and reports nothing. Every string a
+  component shows is checked by `UI/Text.luau` against the coverage declared for its face in `UI/FontCoverage.luau`,
+  and a character outside it fails the build with its code point named (for example "Ł (U+0141)").
+  **The declared coverage is claimed, not measured.** Roblox publishes no glyph coverage for BuilderSans or Roboto,
+  and the sandbox cannot render them. The claim is Basic Latin plus Latin-1 Supplement, which covers ä ö ü ß é è à ç ñ ø å æ
+  (so Mühlbach and Søndergård pass). Ł, ő, ş, ą and ź fail until a Studio check adds them (D17, Q9).
 
 ## 4. Colour
 
@@ -121,6 +127,10 @@ notch number as well as lit segments. Delay shows "+4 min" as well as a tone.
 
 - **Space** (`Theme.space`, 4 px grid, enforced by tests): 4, 8, 12, 16, 24, 32, 48.
 - **Radius:** sign 2, control 4, panel 6.
+- **Elevation** (`Theme.elevation`): depth is a fill step, not a shadow. `flat` = surface, `raised` = raised,
+  `overlay` = pressed (for sheets). Each level must be lighter than the one below; tested. Night-lit: the base is dark
+  ink, text is warm, and no fill is bright.
+- **Status dot:** 12 px (`Theme.size.dot`). A dot never appears without its word (§11, StatusDot).
 - **Sizes:** hairline 1, focus ring 2.
 - **Touch targets:** smallest tappable control **48 px** (`touchMin`) on any device; cab controls and primary actions
   **56 px** (`touchComfort`). Controls below the minimum grow to it; they never shrink below design size.
@@ -139,6 +149,22 @@ notch number as well as lit segments. Delay shows "+4 min" as well as a tone.
 | phone | < 500 px | single column menus; cab uses thumb zones |
 | tablet | 500–799 px | two-column menus; cab panels at edges |
 | desktop | ≥ 800 px | side panels; cab dashboard across the top |
+
+**Device profiles** (`Layout.profileFor`, tested in `tests/client/layout.spec.luau`). Viewports in
+Roblox points. "Min column" is the narrowest menu column at the profile's gutter and column count, against
+the 48 px touch minimum. Thumb cells are the 2 × 2 cells of one cab thumb zone, against the 56 px comfort size.
+
+| Profile | Viewport | Columns | Gutter | Min column | Cab | Thumb cell |
+|---|---|---|---|---|---|---|
+| phone-portrait | 390 × 844 | 1 | 16 | 358.0 | no (rotate card) | n/a |
+| phone-landscape | 844 × 390 | 2 | 16 | 398.0 | yes | 147.2 × 83.8 |
+| tablet-portrait | 768 × 1024 | 1 | 24 | 720.0 | no (rotate card) | n/a |
+| tablet-landscape | 1024 × 768 | 2 | 24 | 480.0 | yes | 183.2 × 168.8 |
+| desktop | 1920 × 1080 | 3 | 32 | 608.0 | yes | 362.4 × 239.0 |
+
+Every menu column is above 48 px in every profile. Every thumb cell is above 56 px. Thumb cells were
+computed with 44 px left and right insets on the phone-landscape row; those insets are an assumption to
+check on a real device. The spec's earlier worked example (146 × 79) is superseded by this table.
 
 **Orientation.** `StarterGui.ScreenOrientation = Sensor`, so the device may be held either way. Menus, Settings,
 Map, Station and Progression support **portrait and landscape**. The cab is designed for **landscape**: in portrait
@@ -211,8 +237,15 @@ the custom mouse icon is not changed in Phase 1.
 
 ## 8. Network map
 
-Source: `docs/rail/NETWORK.md`, written by CODE · vector, **not yet present**. The map module accepts only the data shape in
-`tests/fixtures/network-sample.luau` until that file lands; the fixture is synthetic and is not game data.
+Source: `docs/rail/NETWORK.md`, written by CODE · vector, **not yet present**. The map does not read a file. It asks a
+**network source** (`UI/Map/NetworkSource.luau`) for a table, validates it, and draws it. Three kinds of source:
+- `stub`: `UI/Map/StubNetwork.luau`, synthetic, not game data. Used until the real network exists.
+- `module`: a Luau table generated from `NETWORK.md`. Roblox cannot read Markdown at runtime, so a generator must
+  produce the module. **That generator is not built**; it needs vector's file format first (Q10).
+- `unavailable`: returns no data and a reason. Used to test the unavailable screen.
+
+Invalid or missing data shows **"Network map unavailable."** The reason goes to the developer log with `warn`, and
+the player sees one sentence. The map never draws a partial network (D19).
 
 **Rendering convention (assumption, to reconcile with `docs/world/WORLD-MAP.md`):**
 - World **+Z is north**, drawn at the **top** of the map. Screen y is flipped against Z, so the map is not mirrored.
@@ -305,7 +338,7 @@ Values are sent at `displayHz = 10` by the server; the view interpolates nothing
 - Results: **Bought** (balance updated); **Not enough money**; **Quote expired** (re-quote button); **Too many attempts,
   try again shortly**.
 - Money is shown from integer minor units through a formatter; the client never does currency arithmetic.
-- **Blocked:** `EconomyContract` proposal in `docs/contracts/proposals/`, awaiting ratification. Currency code is an open question (§15).
+- **Blocked:** `EconomyContract` proposal in `src/shared/Contracts/Proposed/`, awaiting ratification. Currency code is an open question (§15).
 
 ### 9.9 Progression and toasts
 - **XP toast:** "+N XP · reason", queued, at most **two** visible, each 3 s, fades in `base` (instant under reduced motion).
@@ -339,16 +372,22 @@ Paths:
 
 ## 11. Components (`src/client/UI/Components`)
 
-| Component | Behaviour | Test coverage |
-|---|---|---|
-| `Button` | touch minimum; focus ring on `SelectionGained`; press tween; `setEnabled` sets `Active` and `Selectable` | logic-only; visual unverified |
-| `Panel` | flat `surface` or `raised` fill, hairline border, panel radius | logic-only |
-| `SignText` | `sign` panel, `signText` text, aspect-locked | logic-only |
-| `Meter` | notch segments from `Gauge.notch`; value from `Gauge.fraction`; numeric readout supplied by caller | `Gauge` pure maths tested |
-| `MapView` | chunked build, zoom, pan, destroy disconnects everything | `MapModel` and `MapProjection` tested; view unverified |
+Every component reads colour, font and size through `Style` (never a literal), runs any text it shows through the
+glyph guard (`Label.checkText`), and is `--!strict`. Logic is tested under `lune` where it is pure. The Roblox
+side is type-checked only, and no component has been seen running.
 
-Every component reads colour, font and size through `Style` (never literals), has `--!strict`, and exposes `destroy`
-where it owns connections.
+| Component | Behaviour | Lune-tested part |
+|---|---|---|
+| `Label` | Text in a type token and colour token; wraps; coverage-checked. `Label.setText` checks again | `Text`, `FontCoverage` |
+| `Panel` | Flat fill from an elevation level, 6 px corners, 1 px hairline | elevation order in `theme.spec` |
+| `Button` | Touch minimum; focus ring on `SelectionGained`; press tween; `setEnabled` sets `Active` and `Selectable`; primary, secondary and danger looks | label contrast on each look in `theme.spec` |
+| `Field` | Caption label, 56 px raised well with a body-size input, an error line that always begins "Error:" | coverage of caption and placeholder |
+| `Toggle` | Full-width 56 px button; state written in the label ("Reduce motion: On"); accent fill with ink text when on | label coverage |
+| `Divider` | 1 px hairline, horizontal or vertical; decorative only | none (no logic) |
+| `StatusDot` | 12 px dot, tone colour and a mandatory word. Neutral uses `textMuted`, never a status colour. Empty word is an error | none beyond the word rule |
+| `SignText` | Station and destination sign: sign plate, signText, RobotoCondensed; coverage-checked | `FontCoverage` |
+| `Meter` | Notch segments from `Gauge.notch`; value from `Gauge.fraction`; numeric readout supplied by the caller | `Gauge` |
+| `MapView` | Chunked build under 4 ms; zoom; pan; unavailable screen; destroy disconnects everything | `MapModel`, `MapProjection`, `NetworkSource` |
 
 ## 12. Performance and streaming
 
@@ -359,7 +398,9 @@ where it owns connections.
   so the UI avoids large text buffers and long lists in the cab.
 - **Frame time.** Map build is capped at 4 ms per frame. The 16.67 ms frame budget is shared with the world.
 - **Streaming.** UI never caches Workspace instances at startup and never indexes Workspace directly (rule 4). Anything that
-  looks up world objects uses tags or `CollectionService` and tolerates stream-out.
+  looks up world objects uses tags or `CollectionService` and tolerates stream-out. **Enforced:** `tools/check_streaming.py`
+  runs in `tools/verify.sh` and fails on any `workspace` reference in `src/client` outside comments. It was probed with a
+  planted reference, which it caught.
 - **Lists.** Long lists (unlocks, departures) are capped and paged; they are not rebuilt every frame.
 
 ## 13. Accessibility and verification boundary
@@ -380,6 +421,11 @@ where it owns connections.
 | Roblox names exist (Enum.Font, KeyCode, classes) | `tools/check_enums.py` against Full-API-Dump | verified, 85 references checked |
 | Roblox code type-checks | `luau-lsp analyze --definitions` strict | verified, 0 diagnostics |
 | Place file builds | `rojo build` | verified |
+| Glyph coverage guard rejects undeclared characters and names them | `lune` (text spec) | verified in logic. The coverage **claim** itself is unverified (Q9) |
+| Device profiles keep menu columns ≥ 48 px and thumb cells ≥ 56 px | `lune` (layout spec) and the table in §6 | verified in maths only |
+| Elevation levels get lighter as they rise; button label contrast | `lune` (theme spec) | verified |
+| No `Workspace` reference in client code | `tools/check_streaming.py` (in verify) | verified, probed |
+| Roblox names used by the new components exist | `tools/check_enums.py` | verified, 112 references checked |
 | Any control works in Studio, on a device, on screen | — | **not verified**. No Studio, no device. |
 | Visual look, legibility at 12 px, touch feel | — | **not verified** |
 
@@ -408,6 +454,12 @@ Each decision states what was chosen, why, and what was rejected. Decided here, 
 | D14 | Delay within ±60 s is "On time"; above 300 s is `severelyLate`; exactly 300 s is `late` | Matches the tolerance most European operators publish; stops the board flickering. | No tolerance band. |
 | D15 | Map drawn from network data only, +Z north at the top, data failing validation rejected whole | Streaming can remove Workspace geometry; a truncated map looks right and is wrong. | Reading Workspace; drawing a partial network. |
 | D16 | Input through `Bindings.luau` as data, mapped to the Input Action System at runtime | One source for tests and for the running game; Roblox recommends the system; `Sink` prevents menu presses reaching the cab. | Hard-coded `UserInputService` checks scattered in components. |
+| D17 | Glyph coverage is a declared, claimed set (Basic Latin and Latin-1), enforced by a guard that fails the build; extra ranges added only after a Studio check | Roblox gives no coverage data and a missing glyph is silent. A loud failure with the character named is better than a box on screen. | Assuming coverage (ships boxes); a font-fallback layer (not available to this UI). |
+| D18 | Device profiles are named and tested: phone portrait and tablet portrait get no cab; landscape and desktop get one | Thumb zones need landscape width. Menus and map keep both orientations. | A single "mobile" profile (hides the portrait and landscape differences the spec depends on). |
+| D19 | Invalid or missing map data shows "Network map unavailable." and logs the reason; no partial network | A partly drawn map looks correct and is wrong. A logged reason keeps the failure visible to developers without alarming players. | Raising an error into the cab (crashes the HUD); drawing the valid part. |
+| D20 | The synthetic network lives in `src/client/UI/Map/StubNetwork.luau`, not `tests/` | The running client needs a source before the real network exists. The test and the client now read one copy. | Two copies (they drift). |
+| D21 | Proposed contracts go to `src/shared/Contracts/Proposed/` on their own branch, for Manager review as one PR, not merged | The Manager asked for PRs to `src/shared/Contracts/`, and ratification stays with the Manager. A separate PR keeps the UI PR free of contract changes. | Putting proposals in `docs/`: the Manager reviews code paths, and `docs/` would need a second move. |
+| D22 | `Layout` stays in `src/client/UI/`, not `src/shared/Gameplay/` | `src/shared/Gameplay/**` is CODE · vector's (OWNERSHIP). Layout is client UI arithmetic, and vector's code must not depend on it. | Moving it to shared Gameplay: breaks ownership and drags UI into the server. |
 
 ## 15. Open questions and reconciliation
 
@@ -420,8 +472,14 @@ Each decision states what was chosen, why, and what was rejected. Decided here, 
 | Q5 | `StationContract` (departures, platform, status) is not yet proposed. | CODE · vector | §9.7 |
 | Q6 | Pause and emergency: a `menuDuringCab` context holding only the emergency brake, so the brake works with any menu open. Proposed in this draft; implemented once the Input Action System mapping is verified in Studio. | CODE · lumen | §7, §9.4 |
 | Q7 | Cab car dimensions for the dashboard layout are in `GeometryContract` (§4 of `docs/ASSET-INTERFACES.md`, ratified). Not yet read into a layout; the cab layout here does not depend on car size. | CODE · lumen | none |
-| Q8 | Notch count 8 (throttle and brake) is a lumen proposal in `CabControl.proposed.luau`. | CODE · vector | §9.5 |
+| Q8 | Notch count 8 (throttle and brake) is a lumen proposal in `CabControl.luau` (Proposed). | CODE · vector | §9.5 |
+| Q9 | Studio check of the claimed coverage: render Basic Latin and Latin-1 in each face (BuilderSans, BuilderSansMedium, BuilderSansBold, BuilderSansExtraBold, RobotoCondensed, RobotoMono). Remove any range that shows a box. Then decide which Latin Extended characters to add. | Manager (Studio) | §3, D17 |
+| Q10 | Generator from `docs/rail/NETWORK.md` to a Luau module for the map. Needs vector's file format first. | CODE · vector, then CODE · lumen | §8 real data |
+| Q11 | Contract proposals (`src/shared/Contracts/Proposed/`) need vector's agreement and Manager ratification before any client code imports them. | Manager A, CODE · vector | §9.7–9.9, §9.5 |
 
 ## 16. Change log
 
 - 2026-11-01: first draft, Phase 1 (CODE · lumen). Verification boundary in §13.
+- 2026-11-01: second pass after Manager review. Added glyph guard (§3), elevation and status dot (§5), device profiles
+  with measured table (§6), network source and unavailable screen (§8), component list (§11), streaming check (§12),
+  verification rows (§13), decisions D17–D22 and open questions Q9–Q11. Contract proposals moved out of `docs/`.
