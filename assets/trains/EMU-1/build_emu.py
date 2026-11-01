@@ -29,7 +29,7 @@ def shell_car(name,length,origin,cab):
  cube(name+'_roof',((start+end)/2,0,3.91),(end-start,2.72,.38),white,root,.12)
  doors=[-length*.27,-length*.73]
  for side in [-1,1]:
-  suffix='L' if side<0 else 'R'; wall_y=side*1.365
+  suffix='L' if side<0 else 'R'; wall_y=side*1.35
   # Walls are built from short solid pieces, leaving physical openings at doors.
   segments=[]; prev=start
   for d in sorted(doors):
@@ -43,12 +43,12 @@ def shell_car(name,length,origin,cab):
    n=max(1,int((b-a)/1.8))
    for j in range(n+1):
     x=a+(b-a)*j/n
-    cube(f'{name}_{suffix}_pillar_{i}_{j}',(x,side*1.434,2.25),(.09,.025,1.54),white,root)
+    cube(f'{name}_{suffix}_pillar_{i}_{j}',(x,side*1.405,2.25),(.09,.025,1.54),white,root)
   for i,d in enumerate(doors):
    cube(f'{name}_{suffix}_door_header_{i}',(d,wall_y,3.52),(1.3,.12,.45),white,root,.02)
    # Separate leaves. Their closure blocks entry only while closed, no wall behind them.
    for leaf in [-1,1]:
-    leafroot=empty(f'{name}_{suffix}_door_{i}_{leaf}_PIVOT',(d+leaf*.65,side*1.37,.76),root)
+    leafroot=empty(f'{name}_{suffix}_door_{i}_{leaf}_PIVOT',(d+leaf*.65,side*1.345,.76),root)
     leafroot['travel_m']=1.35
     cube(f'{name}_{suffix}_door_{i}_{leaf}_leaf',(-leaf*.325,0,.975),(.65,.09,1.95),red,leafroot,.025)
     cube(f'{name}_{suffix}_door_{i}_{leaf}_glass',(-leaf*.325,side*.055,1.26),(.46,.025,.90),dark,leafroot,.025)
@@ -59,7 +59,20 @@ def shell_car(name,length,origin,cab):
   cube(f'{name}_bogie_{k}_frame',(0,0,.55),(2.35,1.95,.27),black,bogie,.05)
   for dx in (-.75,.75):
    for side in (-1,1): wheel(f'{name}_wheel_{k}_{dx}_{side}',(dx,side*.72,.42),bogie)
+ # Walkable collision proxies, individually named; no continuous wall across doors.
+ coll=cube(name+'_COLLISION_floor',((start+end)/2,0,.64),(end-start,2.60,.12),black,root); coll.hide_render=True
+ for side in (-1,1):
+  prev=start
+  for i,(a,b) in enumerate([(start,sorted(doors)[0]-.65),(sorted(doors)[0]+.65,sorted(doors)[1]-.65),(sorted(doors)[1]+.65,end)]):
+   if b>a:
+    coll=cube(f'{name}_COLLISION_wall_{side}_{i}',((a+b)/2,side*1.35,2.18),(b-a,.10,2.95),black,root); coll.hide_render=True
  if cab:
+  # A compact cab desk and seat, currently a blockout for dashboard integration.
+  cube('CAB_desk',(-3.35,-.34,1.48),(.55,1.30,.22),black,root,.05)
+  cube('CAB_console',(-3.32,-.34,1.63),(.38,1.18,.12),silver,root,.025)
+  cube('CAB_seat_base',(-4.32,-.32,1.05),(.6,.6,.16),dark,root,.04)
+  cube('CAB_seat_back',(-4.62,-.32,1.45),(.15,.6,.85),dark,root,.05)
+  cube('CAB_seat_stand',(-4.32,-.32,.86),(.25,.25,.3),black,root,.03)
   # Sculptural cab nose as successive 8-point cross sections, closed end caps.
   sections=[(-3.2,1.425,.72,3.99),(-1.8,1.38,.70,3.82),(-.55,1.15,.63,2.98),(-.20,.82,.58,1.65)]
   verts=[]
@@ -87,7 +100,13 @@ world=scene.world; world.color=(.06,.06,.06)
 def camera(name,loc,target,scale):
  data=bpy.data.cameras.new(name); ob=bpy.data.objects.new(name,data); scene.collection.objects.link(ob); ob.location=loc; ob.rotation_euler=(Vector(target)-ob.location).to_track_quat('-Z','Y').to_euler(); data.type='ORTHO'; data.ortho_scale=scale; return ob
 scene.camera=camera('three_quarter',(13,-31,18),(-11,0,1.4),29)
-scene.render.image_settings.file_format='PNG'; scene.render.filepath=os.path.join(D,'renders','front-three-quarter-study.png'); bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'EMU-1-study.blend')); bpy.ops.render.render(write_still=True)
+scene.render.image_settings.file_format='PNG'; scene.render.filepath=os.path.join(D,'renders','front-three-quarter.png'); bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'EMU-1.blend')); bpy.ops.render.render(write_still=True)
+scene.camera=camera('side',(-21,-48,2.4),(-21,0,2.0),46)
+scene.render.filepath=os.path.join(D,'renders','side.png'); bpy.ops.render.render(write_still=True)
+# Interior perspective: camera is inside cab looking forward to the desk and inner nose.
+scene.camera=camera('cab_interior',(-5.8,.45,2.4),(-3.0,-.35,1.55),4)
+scene.camera.data.type='PERSP'; scene.camera.data.lens=16
+scene.render.filepath=os.path.join(D,'renders','cab-interior.png'); bpy.ops.render.render(write_still=True)
 dep=bpy.context.evaluated_depsgraph_get(); total=0; counts={}
 for obj in scene.objects:
  if obj.type!='MESH': continue
