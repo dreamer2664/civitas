@@ -11,6 +11,16 @@
         0.429
       ]
     },
+    "CAB_COLLISION_trailing_floor": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.643,
+        5.607,
+        0.429
+      ]
+    },
     "CAB_COLLISION_wall_-1_0": {
       "collision": true,
       "nonmanifold_edges": 0,
@@ -69,6 +79,36 @@
         6.5,
         0.357,
         10.536
+      ]
+    },
+    "CAB_GANGWAY_COLLISION_floor": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        1.786,
+        5.607,
+        0.429
+      ]
+    },
+    "CAB_GANGWAY_metal": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 972,
+      "world_aabb_studs_blender_xyz": [
+        1.411,
+        6.714,
+        9.018
+      ]
+    },
+    "CAB_GANGWAY_undercarriage": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 432,
+      "world_aabb_studs_blender_xyz": [
+        1.786,
+        6.571,
+        9.357
       ]
     },
     "CAB_L_door_0_-1_leaf": {
@@ -154,7 +194,7 @@
     "CAB_STATIC_body_porcelain": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 2320,
+      "triangles": 2344,
       "world_aabb_studs_blender_xyz": [
         74.286,
         10.179,
@@ -184,9 +224,9 @@
     "CAB_STATIC_interior": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 12,
+      "triangles": 36,
       "world_aabb_studs_blender_xyz": [
-        62.929,
+        63.571,
         9.821,
         0.429
       ]
@@ -338,6 +378,16 @@
       "world_aabb_studs_blender_xyz": [
         70.143,
         9.286,
+        0.429
+      ]
+    },
+    "INTERMEDIATE_COLLISION_leading_floor": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.643,
+        5.607,
         0.429
       ]
     },
@@ -534,7 +584,7 @@
     "INTERMEDIATE_STATIC_body_porcelain": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 2124,
+      "triangles": 2148,
       "world_aabb_studs_blender_xyz": [
         71.429,
         10.179,
@@ -544,9 +594,9 @@
     "INTERMEDIATE_STATIC_interior": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 12,
+      "triangles": 36,
       "world_aabb_studs_blender_xyz": [
-        70.143,
+        70.786,
         9.821,
         0.429
       ]
@@ -693,19 +743,19 @@
     }
   },
   "render_material_triangles": {
-    "body_porcelain": 4660,
+    "body_porcelain": 4708,
     "cab_windscreen_glazing": 36,
     "door_vermilion": 1728,
     "headlamp": 648,
-    "interior": 24,
-    "metal": 2004,
-    "undercarriage": 3720,
+    "interior": 72,
+    "metal": 2976,
+    "undercarriage": 4152,
     "window_smoked": 5508
   },
   "status": "design study, not validated in Studio",
   "summary": {
-    "collision_triangles": 168,
-    "render_triangles": 18328
+    "collision_triangles": 204,
+    "render_triangles": 19828
   },
   "units": "1 metre = 3.571428571 studs"
 }

@@ -32,6 +32,12 @@ def rod(name,a,b,r,material,parent):
  bpy.ops.mesh.primitive_cylinder_add(vertices=12,radius=r,depth=d.length,location=(0,0,0))
  o=bpy.context.object; o.name=name; o.parent=parent; o.location=(a+b)/2
  o.rotation_euler=d.to_track_quat('Z','Y').to_euler(); o.data.materials.append(material); return o
+def gangway_portal(name,x,parent):
+ # Four closed pieces leave a 1.57m-wide, 2m-high passage.
+ for side in (-1,1):
+  cube(name+'_portal_post',(x,side*1.105,2.15),(.12,.64,2.98),white,parent)
+ cube(name+'_portal_header',(x,0,3.20),(.12,1.57,.88),white,parent)
+ cube(name+'_portal_sill',(x,0,.71),(.12,1.57,.10),interior,parent)
 def shell_car(name,length,origin,cab):
  root=empty(name+'_ROOT',(origin,0,0)); root['pivot']='leading coupling face, rail top, track centre'; root['length_m']=length
  # Hollow, sectional body: two clearly separated doorway apertures per side.
@@ -122,14 +128,32 @@ def shell_car(name,length,origin,cab):
     cube(f'{name}_luggage_rack',((a+b)/2,side*1.08,3.25),(b-a,.38,.07),silver,root,.02)
    for x in (-6.2,-4.6,-15.4,-13.8):
     cube(f'{name}_stanchion',(x,side*.67,1.90),(.05,.05,2.25),silver,root,.01)
-  cube(name+'_leading_bulkhead',(-.06,0,2.15),(.12,2.85,2.98),white,root)
+  gangway_portal(name+'_leading',-.06,root)
+  cube(name+'_leading_floor',(-.09,0,.70),(.18,1.57,.12),interior,root)
+  p=cube(name+'_COLLISION_leading_floor',(-.09,0,.70),(.18,1.57,.12),interior,root); p.hide_render=True
  # Rear plane is exactly the trailing coupling datum.
- cube(name+'_trailing_bulkhead',(-length+.06,0,2.15),(.12,2.85,2.98),white,root)
+ if cab:
+  gangway_portal(name+'_trailing',-length+.06,root)
+  cube(name+'_trailing_floor',(-length+.09,0,.70),(.18,1.57,.12),interior,root)
+  p=cube(name+'_COLLISION_trailing_floor',(-length+.09,0,.70),(.18,1.57,.12),interior,root); p.hide_render=True
+ else:
+  cube(name+'_trailing_bulkhead',(-length+.06,0,2.15),(.12,2.85,2.98),white,root)
  cube(name+'_coupler',(-.1,0,.58),(.2,.42,.22),black,root,.02)
  return root
 shell_car('CAB',21,0,True); shell_car('INTERMEDIATE',20,-21.5,False)
 # Bespoke raised single-arm pantograph and HVAC, all separate from car-body
 # envelope. Height is rail-top referenced; contact shoe at 5.65m.
+cab=bpy.data.objects['CAB_ROOT']
+gangway=empty('CAB_GANGWAY',(-21.25,0,0),cab)
+# Hollow diaphragm spans the 0.5m coupling gap; end portals and tread connect
+# the interiors in the straight pose, not a simulated flexible joint.
+for side in (-1,1): cube('gangway_bellows_side',(0,side*.85,2.0),(.5,.14,2.48),black,gangway,.015)
+cube('gangway_bellows_roof',(0,0,3.20),(.5,1.84,.12),black,gangway,.015)
+cube('gangway_bellows_tread',(0,0,.70),(.5,1.57,.12),black,gangway,.015)
+proxy=cube('CAB_GANGWAY_COLLISION_floor',(0,0,.70),(.5,1.57,.12),black,gangway); proxy.hide_render=True
+for x in (-.18,0,.18):
+ for side in (-1,1): cube('gangway_bellows_rib',(x,side*.91,2.0),(.035,.06,2.48),silver,gangway,.01)
+ cube('gangway_bellows_top_rib',(x,0,3.26),(.035,1.84,.05),silver,gangway,.01)
 inter=bpy.data.objects['INTERMEDIATE_ROOT']
 panto=empty('INTERMEDIATE_PANTOGRAPH',(-10,0,0),inter)
 panto['contact_height_m']=5.65
@@ -176,10 +200,10 @@ for rootname in ('CAB_ROOT','INTERMEDIATE_ROOT'):
   material=obj.data.materials[0].name if obj.data.materials else 'none'
   groups.setdefault(material,[]).append(obj)
  for material,objects in groups.items(): combine(objects,rootname.replace('_ROOT','')+'_STATIC_'+material)
-for equipment in [bpy.data.objects['INTERMEDIATE_PANTOGRAPH'],bpy.data.objects['INTERMEDIATE_ROOF_EQUIPMENT']]:
+for equipment in [bpy.data.objects['INTERMEDIATE_PANTOGRAPH'],bpy.data.objects['INTERMEDIATE_ROOF_EQUIPMENT'],bpy.data.objects['CAB_GANGWAY']]:
  groups={}
  for obj in list(equipment.children):
-  if obj.type=='MESH': groups.setdefault(obj.data.materials[0].name,[]).append(obj)
+  if obj.type=='MESH' and 'COLLISION' not in obj.name: groups.setdefault(obj.data.materials[0].name,[]).append(obj)
  for material,items in groups.items(): combine(items,equipment.name+'_'+material)
 for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name and o.name.endswith('_PIVOT')]:
  items=[o for o in pivot.children if o.type=='MESH']
@@ -222,6 +246,8 @@ scene.camera=camera('door_sequence',(-5.67,-8,1.8),(-5.67,-1.3,1.75),5.8)
 for frame in (1,6,15,24):
  scene.frame_set(frame); scene.render.filepath=os.path.join(D,'renders',f'door-{frame:02d}.png'); bpy.ops.render.render(write_still=True)
 scene.frame_set(1)
+scene.camera=camera('gangway_detail',(-17,-8,6),(-21.25,0,2),10)
+scene.render.filepath=os.path.join(D,'renders','gangway.png'); bpy.ops.render.render(write_still=True)
 scene.camera=camera('roof_equipment',(-24,-10,11),(-31.5,0,4.8),13)
 scene.render.filepath=os.path.join(D,'renders','roof-equipment.png'); bpy.ops.render.render(write_still=True)
 dep=bpy.context.evaluated_depsgraph_get(); total=0; counts={}
