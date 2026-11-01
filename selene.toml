@@ -1,0 +1,8 @@
+std = "roblox"
+exclude = ["assets/**", "tests/fixtures/**"]
+
+[lints]
+almost_swapped = "deny"
+multiple_statements = "deny"
+shadowing = "warn"
+unused_variable = "deny"

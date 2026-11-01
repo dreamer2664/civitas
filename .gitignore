@@ -1,0 +1,15 @@
+*.rbxl
+*.rbxl.lock
+*.rbxlx.lock
+*.rbxm.lock
+sourcemap.json
+build/
+.DS_Store
+# Blender
+*.blend1
+*.blend2
+assets/**/tmp/
+# Python tooling
+__pycache__/
+*.pyc
+.venv/
