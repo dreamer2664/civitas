@@ -39,7 +39,10 @@ for i,(a,b) in enumerate(openings+[(84,84)]):
 pair('north_upper_wall',(0,27.75,7.75),(168,.5,2.1),stone)
 # Cornices and vertical piers articulate the long civic facade.
 box('north_cornice',(0,28.03,9.05),(168,.7,.55),light)
-box('north_plinth',(0,28.03,1.05),(168,.15,.55),light)
+prev=-84
+for i,(a,b) in enumerate(openings+[(84,84)]):
+ if a>prev: box('north_plinth_%d'%i,((prev+a)/2,28.03,1.05),(a-prev,.15,.55),light)
+ prev=b
 for x in range(-80,81,8):
  if any(a-1.1<x<b+1.1 for a,b in openings): continue
  box('north_pier',(x,28.15,4.35),(.8,.4,7.3),light)
@@ -63,45 +66,70 @@ for i in range(segments):
  b=box('vault_roof_panel',(0,yc,z),(168,56/segments+.03,.18),roof)
  dzdy=-10*yc/(28*28); b.rotation_euler.x=math.atan(dzdy)
 for x in range(-80,81,8):
- for side in (-1,1): box('roof_support',(x,side*27.4,5),(.35,.35,10),steel)
+ for side in (-1,1):
+  if side==1 and any(a-.3<x<b+.3 for a,b in openings): continue
+  box('roof_support',(x,side*27.4,5),(.35,.35,10),steel)
 # Steel transverse arch ribs follow the same profile as the roof.
 for x in range(-80,81,16):
  for i in range(16):
   y=-28+(i+.5)*3.5; z=10.2+5*(1-(y/28)**2)-.22
   b=box('vault_rib',(x,y,z),(.20,3.55,.28),steel); b.rotation_euler.x=math.atan(-10*y/(28*28))
-# Four physically linked module instances: two bays per platform, each 28m x 6m.
+# Four physically linked module instances: two bays per platform, each 40m x 6m.
 with bpy.data.libraries.load(KIT,link=False) as (source,dest):
  dest.objects=[n for n in source.objects if n.endswith('_VISUAL') or '_COLLISION' in n]
 kit={o.name:o for o in dest.objects if o}
-def piece(category,parent,offset):
+def piece(category,parent,offset,zscale=1):
  for src in kit.values():
   if not (src.name.startswith(category+'_VISUAL') or src.name.startswith(category+'_COLLISION')): continue
+  if category in ('edge','coping','tactile') and '_COLLISION' in src.name: continue  # surface proxy already supports walking
   ob=src.copy(); ob.data=src.data; s.collection.objects.link(ob); ob.parent=parent
-  ob.location=src.location+Vector(offset); ob.rotation_euler=src.rotation_euler.copy(); ob.scale=src.scale.copy()
+  ob.location=src.location+Vector(offset); ob.location.z=src.location.z*zscale+offset[2]; ob.rotation_euler=src.rotation_euler.copy(); ob.scale=src.scale.copy(); ob.scale.z*=zscale
   ob.name=parent.name+'_'+src.name
 for platform,y in [(1,11.2),(2,-5.6)]:
- for module,x in [(1,-14),(2,14)]:
-  mod=empty('PLATFORM_%d_MODULE_%d'%(platform,module),(x,y,.76),root); mod['kit_instances']=7; mod['surface_width_m']=6.0; edge=-1 if platform==1 else 1
-  # A 28m continuous walking surface; separate box proxy.
-  box(mod.name+'_surface_VISUAL',(0,0,-.18),(28,6,.36),floor,mod)
-  box(mod.name+'_surface_COLLISION',(0,0,-.18),(28,6,.36),floor,mod,True)
-  for i in range(7):
-   along=-12+4*i
-   piece('edge',mod,(along,edge*2.775,0)); piece('coping',mod,(along,edge*2.775,0)); piece('tactile',mod,(along,edge*2.30,0)); piece('canopy',mod,(along,-edge*.4,0))
-  piece('bench',mod,(-7,-edge*1.8,0)); piece('bin',mod,(0,-edge*2.1,0)); piece('lamp',mod,(6,-edge*2.3,0)); piece('gantry',mod,(11,0,0))
+ for module,x in [(1,-20),(2,20)]:
+  mod=empty('PLATFORM_%d_MODULE_%d'%(platform,module),(x,y,.76),root); mod['kit_instances']=10; mod['surface_width_m']=6.0; edge=-1 if platform==1 else 1
+  # A 40m continuous walking surface; separate box proxy.
+  box(mod.name+'_surface_VISUAL',(0,0,-.18),(40,6,.36),floor,mod)
+  box(mod.name+'_surface_COLLISION',(0,0,-.18),(40,6,.36),floor,mod,True)
+  for i in range(10):
+   along=-18+4*i
+   piece('edge',mod,(along,edge*2.775,0)); piece('coping',mod,(along,edge*2.775,0)); piece('tactile',mod,(along,edge*2.30,0)); piece('canopy',mod,(along,.4,0),2.8)
+  piece('bench',mod,(-7,-edge*1.8,0)); piece('bin',mod,(0,-edge*2.1,0)); piece('lamp',mod,(6,-edge*2.3,0)); piece('gantry',mod,(11,-edge*2.3,0))
 # Rail-top datum at Z=0 (Blender); rail visuals continue through building ends.
 for centre in (6.5,-.9):
  for side in (-1,1): box('through_rail',(0,centre+side*.7175,-.035),(168,.07,.07),yellow)
  for x in range(-84,85,3): box('rail_sleeper',(x,centre,-.11),(.19,2.6,.12),steel)
 # Accessible bridge links platforms: 1:12 ramps above through rails.
-# At bridge top 5.04m above rail, underside 4.92m exceeds 4.60m clearance.
-lo=.76; hi=5.04; run=(hi-lo)*12
+# Bridge underside 6.88m leaves room for 5.8m overhead wire and vehicle clearance.
+lo=.76; hi=7.0; run=(hi-lo)*12
 ramp('north_bridge_ramp',-run/2,run/2,11.2,lo,hi,1.8)
 ramp('south_bridge_ramp',-run/2,run/2,-5.6,lo,hi,1.8)
-pair('bridge_deck',(run/2,2.8,hi-.06),(1.8,16.8,.12),floor)
+pair('bridge_deck',(run/2,2.8,hi-.06),(1.8,18.6,.12),floor)
 for y in (12.3,-6.7): pair('bridge_support_'+str(y),(run/2,y,(hi+.76)/2),(.2,.2,hi-.76),steel)
 # Walkable railings beside the bridge; not treated as walk surfaces.
-for x in (run/2-.99,run/2+.99): box('bridge_railing',(x,2.8,hi+.55),(.09,16.8,1.1),steel)
+for x in (run/2-.99,run/2+.99): box('bridge_railing',(x,2.8,hi+.55),(.09,14.8,1.1),steel)
+# Guardrails stay outside the 1.8m clear ramp; the 1:12 slope is unchanged.
+for y in (11.2,-5.6):
+ for side in (-1,1):
+  bar=box('ramp_guardrail',(0,y+side*.98,(lo+hi)/2+1.0),(math.hypot(run,hi-lo),.07,.07),steel)
+  bar.rotation_euler.y=-math.atan2(hi-lo,run)
+  for i in range(7):
+   x=-run/2+run*i/6; z=lo+(hi-lo)*i/6
+   box('ramp_baluster',(x,y+side*.98,z+.52),(.07,.07,1.04),steel)
+# Consolidate static architecture by material and 42m X zone; kit module
+# instances remain independent and linked to the original kit mesh datablocks.
+# Collision boxes stay separate so convex collision cannot seal entrances.
+groups={}
+for ob in list(root.children):
+ if ob.type!='MESH' or 'COLLISION' in ob.name: continue
+ zone=max(0,min(3,int((ob.location.x+84)/42)))
+ key=(zone,ob.data.materials[0].name if ob.data.materials else 'none')
+ groups.setdefault(key,[]).append(ob)
+for (zone,material),objects in groups.items():
+ bpy.ops.object.select_all(action='DESELECT')
+ for ob in objects: ob.select_set(True)
+ bpy.context.view_layer.objects.active=objects[0]; bpy.ops.object.join()
+ bpy.context.object.name='CENTRAL_visual_zone%d_%s'%(zone,material)
 # Workbench cameras, preliminary evidence only; no Studio functionality implied.
 s.render.engine='BLENDER_WORKBENCH'; s.display.shading.light='STUDIO'; s.display.shading.color_type='MATERIAL'; s.display.shading.show_shadows=True; s.display.shading.show_cavity=True
 s.render.resolution_x=1600; s.render.resolution_y=900; s.render.resolution_percentage=100
@@ -110,6 +138,15 @@ def camera(name,loc,target,scale):
  data=bpy.data.cameras.new(name); ob=bpy.data.objects.new(name,data); s.collection.objects.link(ob); ob.location=loc; ob.rotation_euler=(Vector(target)-ob.location).to_track_quat('-Z','Y').to_euler(); data.type='ORTHO'; data.ortho_scale=scale; return ob
 s.camera=camera('facade',(190,185,95),(0,12,4),215)
 s.render.image_settings.file_format='PNG'; bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'civitas-central.blend'))
-for name,loc,target,scale in [('facade',(190,185,95),(0,12,4),215),('overview',(125,-150,170),(0,0,0),195),('concourse',(30,40,20),(0,9,1),95)]:
- s.camera=camera(name+'_render',loc,target,scale); s.render.filepath=os.path.join(D,'renders',name+'.png'); bpy.ops.render.render(write_still=True)
-print('CENTRAL: four 28m platform modules, two platforms, three front openings, one 1:12 bridge')
+for name,loc,target,scale in [('facade',(135,185,35),(0,20,4),195),('overview',(100,-90,145),(0,0,0),155),('concourse',(0,24,2.5),(0,5,2.5),50)]:
+ # Cutaway reveals platforms without pretending the roof is absent from the asset.
+ if name=='overview':
+  for ob in s.objects:
+   if ob.name.startswith(('vault_roof_panel','vault_rib')): ob.hide_render=True
+ if name=='concourse':
+  for ob in s.objects:
+   if ob.name.startswith(('vault_roof_panel','vault_rib')): ob.hide_render=False
+ s.camera=camera(name+'_render',loc,target,scale)
+ if name=='concourse': s.camera.data.type='PERSP'; s.camera.data.lens=18
+ s.render.filepath=os.path.join(D,'renders',name+'.png'); bpy.ops.render.render(write_still=True)
+print('CENTRAL: four 40m platform modules, two platforms, three front openings, one 1:12 bridge')

@@ -1,0 +1,19 @@
+{
+  "status": "proposed; world and Roblox integration unverified",
+  "world_axes": "X east, Y up, Z south; 1m = 1/0.28 studs",
+  "station_root_world_studs": [4000, 0, 3400],
+  "rail_top_world_y_studs_assumed": 0,
+  "core_footprint_world_studs": {"x_min": 3700, "x_max": 4300, "z_min": 3300, "z_max": 3500},
+  "concourse_floor_world_y_studs": 2.714285714,
+  "north_door_centres_world_studs": [[3930, 2.714285714, 3300], [4000, 2.714285714, 3300], [4070, 2.714285714, 3300]],
+  "door_clear_width_studs": 20,
+  "platform_centres_world_z_studs": [3360, 3420],
+  "platform_x_extent_world_studs": [3857.142857, 4142.857143],
+  "platform_top_world_y_studs": 2.714285714,
+  "track_centres_world_z_studs": [3376.785714, 3403.214286],
+  "bridge_deck_world_y_studs": 25,
+  "bridge_underside_world_y_studs": 24.571428571,
+  "bridge_x_world_studs": 4133.714285714,
+  "ramp_slope": "1:12",
+  "conflict": "docs/rail/NETWORK.md locates Central at (0,0) underground; manager requested (4000,3400). Reconciliation required."
+}

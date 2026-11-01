@@ -1,0 +1,3578 @@
+{
+  "max_mesh_triangles": 3612,
+  "meshes": {
+    "CENTRAL_visual_zone0_roof_steel": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 1032,
+      "world_aabb_studs_blender_xyz": [
+        139.964,
+        199.84,
+        54.679
+      ]
+    },
+    "CENTRAL_visual_zone0_station_limestone": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 36,
+      "world_aabb_studs_blender_xyz": [
+        220.0,
+        200.0,
+        34.286
+      ]
+    },
+    "CENTRAL_visual_zone0_station_trim": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 132,
+      "world_aabb_studs_blender_xyz": [
+        220.0,
+        1.982,
+        26.696
+      ]
+    },
+    "CENTRAL_visual_zone1_roof_steel": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 984,
+      "world_aabb_studs_blender_xyz": [
+        139.964,
+        199.84,
+        54.679
+      ]
+    },
+    "CENTRAL_visual_zone1_station_glazing": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 36,
+      "world_aabb_studs_blender_xyz": [
+        67.857,
+        0.286,
+        9.464
+      ]
+    },
+    "CENTRAL_visual_zone1_station_limestone": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        50.0,
+        1.786,
+        23.929
+      ]
+    },
+    "CENTRAL_visual_zone1_station_trim": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 132,
+      "world_aabb_studs_blender_xyz": [
+        135.089,
+        1.982,
+        35.446
+      ]
+    },
+    "CENTRAL_visual_zone2_concourse_terrazzo": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        123.214,
+        23.143
+      ]
+    },
+    "CENTRAL_visual_zone2_rail_metal": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        31.804,
+        0.25
+      ]
+    },
+    "CENTRAL_visual_zone2_roof_steel": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 1332,
+      "world_aabb_studs_blender_xyz": [
+        277.207,
+        199.84,
+        54.679
+      ]
+    },
+    "CENTRAL_visual_zone2_roof_zinc": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 192,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        199.822,
+        120.709
+      ]
+    },
+    "CENTRAL_visual_zone2_station_brick": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        110.714,
+        2.143,
+        7.143
+      ]
+    },
+    "CENTRAL_visual_zone2_station_glazing": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 36,
+      "world_aabb_studs_blender_xyz": [
+        67.857,
+        0.286,
+        9.464
+      ]
+    },
+    "CENTRAL_visual_zone2_station_limestone": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 24,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        1.786,
+        31.429
+      ]
+    },
+    "CENTRAL_visual_zone2_station_trim": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 168,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        2.946,
+        38.393
+      ]
+    },
+    "CENTRAL_visual_zone3_roof_steel": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 1056,
+      "world_aabb_studs_blender_xyz": [
+        150.679,
+        199.84,
+        54.679
+      ]
+    },
+    "CENTRAL_visual_zone3_station_limestone": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 36,
+      "world_aabb_studs_blender_xyz": [
+        220.0,
+        200.0,
+        34.286
+      ]
+    },
+    "CENTRAL_visual_zone3_station_trim": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 132,
+      "world_aabb_studs_blender_xyz": [
+        220.0,
+        1.982,
+        26.696
+      ]
+    },
+    "PLATFORM_1_MODULE_1_bench_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.857,
+        0.357
+      ]
+    },
+    "PLATFORM_1_MODULE_1_bench_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 108,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.982,
+        3.839
+      ]
+    },
+    "PLATFORM_1_MODULE_1_bin_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        1.571,
+        1.571,
+        3.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_bin_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 120,
+      "world_aabb_studs_blender_xyz": [
+        1.714,
+        1.714,
+        3.107
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.010": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.011": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.012": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.013": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.014": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.015": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.016": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.017": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.018": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_post.019": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_COLLISION_roof.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_canopy_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_coping_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_edge_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_1_gantry_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_1_MODULE_1_gantry_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_1_MODULE_1_gantry_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        13.286,
+        0.513,
+        11.786
+      ]
+    },
+    "PLATFORM_1_MODULE_1_lamp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.429
+      ]
+    },
+    "PLATFORM_1_MODULE_1_lamp_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 84,
+      "world_aabb_studs_blender_xyz": [
+        3.196,
+        1.0,
+        11.429
+      ]
+    },
+    "PLATFORM_1_MODULE_1_surface_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_1_MODULE_1_surface_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_1_tactile_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_bench_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.857,
+        0.357
+      ]
+    },
+    "PLATFORM_1_MODULE_2_bench_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 108,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.982,
+        3.839
+      ]
+    },
+    "PLATFORM_1_MODULE_2_bin_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        1.571,
+        1.571,
+        3.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_bin_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 120,
+      "world_aabb_studs_blender_xyz": [
+        1.714,
+        1.714,
+        3.107
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.010": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.011": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.012": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.013": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.014": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.015": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.016": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.017": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.018": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_post.019": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_COLLISION_roof.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_canopy_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_coping_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_edge_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_1_MODULE_2_gantry_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_1_MODULE_2_gantry_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_1_MODULE_2_gantry_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        13.286,
+        0.513,
+        11.786
+      ]
+    },
+    "PLATFORM_1_MODULE_2_lamp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.429
+      ]
+    },
+    "PLATFORM_1_MODULE_2_lamp_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 84,
+      "world_aabb_studs_blender_xyz": [
+        3.196,
+        1.0,
+        11.429
+      ]
+    },
+    "PLATFORM_1_MODULE_2_surface_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_1_MODULE_2_surface_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_1_MODULE_2_tactile_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_bench_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.857,
+        0.357
+      ]
+    },
+    "PLATFORM_2_MODULE_1_bench_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 108,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.982,
+        3.839
+      ]
+    },
+    "PLATFORM_2_MODULE_1_bin_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        1.571,
+        1.571,
+        3.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_bin_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 120,
+      "world_aabb_studs_blender_xyz": [
+        1.714,
+        1.714,
+        3.107
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.010": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.011": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.012": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.013": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.014": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.015": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.016": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.017": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.018": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_post.019": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_COLLISION_roof.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_canopy_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_coping_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_edge_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_1_gantry_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_2_MODULE_1_gantry_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_2_MODULE_1_gantry_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        13.286,
+        0.512,
+        11.786
+      ]
+    },
+    "PLATFORM_2_MODULE_1_lamp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.429
+      ]
+    },
+    "PLATFORM_2_MODULE_1_lamp_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 84,
+      "world_aabb_studs_blender_xyz": [
+        3.196,
+        1.0,
+        11.429
+      ]
+    },
+    "PLATFORM_2_MODULE_1_surface_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_2_MODULE_1_surface_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_1_tactile_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_bench_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.857,
+        0.357
+      ]
+    },
+    "PLATFORM_2_MODULE_2_bench_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 108,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.982,
+        3.839
+      ]
+    },
+    "PLATFORM_2_MODULE_2_bin_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        1.571,
+        1.571,
+        3.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_bin_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 120,
+      "world_aabb_studs_blender_xyz": [
+        1.714,
+        1.714,
+        3.107
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.010": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.011": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.012": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.013": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.014": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.015": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.016": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.017": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.018": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_post.019": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_COLLISION_roof.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_canopy_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_coping_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_edge_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "PLATFORM_2_MODULE_2_gantry_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_2_MODULE_2_gantry_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "PLATFORM_2_MODULE_2_gantry_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        13.286,
+        0.512,
+        11.786
+      ]
+    },
+    "PLATFORM_2_MODULE_2_lamp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.429
+      ]
+    },
+    "PLATFORM_2_MODULE_2_lamp_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 84,
+      "world_aabb_studs_blender_xyz": [
+        3.196,
+        1.0,
+        11.429
+      ]
+    },
+    "PLATFORM_2_MODULE_2_surface_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_2_MODULE_2_surface_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "PLATFORM_2_MODULE_2_tactile_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    },
+    "bridge_deck_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        66.429,
+        0.429
+      ]
+    },
+    "bridge_support_-6.7_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.714,
+        0.714,
+        22.286
+      ]
+    },
+    "bridge_support_12.3_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.714,
+        0.714,
+        22.286
+      ]
+    },
+    "concourse_floor_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        50.0,
+        0.857
+      ]
+    },
+    "north_bridge_ramp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        267.429,
+        6.429,
+        22.714
+      ]
+    },
+    "north_upper_wall_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        600.0,
+        1.786,
+        7.5
+      ]
+    },
+    "north_wall_0_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        220.0,
+        1.786,
+        23.929
+      ]
+    },
+    "north_wall_1_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        50.0,
+        1.786,
+        23.929
+      ]
+    },
+    "north_wall_2_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        50.0,
+        1.786,
+        23.929
+      ]
+    },
+    "north_wall_3_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        220.0,
+        1.786,
+        23.929
+      ]
+    },
+    "sidewall_concourse_-83.75_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        1.786,
+        50.0,
+        34.286
+      ]
+    },
+    "sidewall_concourse_83.75_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        1.786,
+        50.0,
+        34.286
+      ]
+    },
+    "south_bridge_ramp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        267.429,
+        6.429,
+        22.714
+      ]
+    }
+  },
+  "render_material_triangles": {
+    "bench_timber": 240,
+    "cast_concrete": 480,
+    "concourse_terrazzo": 96,
+    "coping_stone": 480,
+    "dark_detail": 240,
+    "painted_steel": 3744,
+    "rail_metal": 48,
+    "roof_steel": 4404,
+    "roof_zinc": 192,
+    "sign_offwhite": 96,
+    "station_brick": 12,
+    "station_glazing": 72,
+    "station_limestone": 108,
+    "station_trim": 564,
+    "tactile_buff": 144480
+  },
+  "status": "design study, not validated in Studio",
+  "summary": {
+    "collision_triangles": 2268,
+    "render_triangles": 155256
+  },
+  "units": "1 metre = 3.571428571 studs"
+}
