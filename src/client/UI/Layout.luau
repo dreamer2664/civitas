@@ -131,6 +131,58 @@ function Layout.cabThumbZones(safe: Rect): { left: Rect, right: Rect }
 	}
 end
 
+-- Walk-mode touch controls, inside the same thumb zones the cab uses. The movement pad is a square
+-- in the left zone, bottom-aligned so the thumb finds it without looking. The action buttons form a
+-- two-column grid in the right zone, filled row by row. `gap` is the space between controls and from
+-- the zone edges. Returns the pad and one rect per action, in order. Pure: no requires.
+function Layout.touchControls(
+	safe: Rect,
+	gap: number,
+	actionCount: number
+): { pad: Rect, actions: { Rect } }
+	assert(gap >= 0, "touch gap cannot be negative")
+	assert(
+		actionCount >= 0 and actionCount == math.floor(actionCount),
+		"actionCount must be a whole number"
+	)
+	local zones = Layout.cabThumbZones(safe)
+	local left = zones.left
+	local side = math.min(left.w - 2 * gap, left.h - 2 * gap)
+	local pad = { x = left.x + gap, y = left.y + left.h - gap - side, w = side, h = side }
+
+	local right = zones.right
+	local area =
+		{ x = right.x + gap, y = right.y + gap, w = right.w - 2 * gap, h = right.h - 2 * gap }
+	local actions: { Rect } = {}
+	if actionCount > 0 then
+		local rows = math.ceil(actionCount / 2)
+		local cells = Layout.gridCells(area, 2, rows, gap)
+		for i = 1, actionCount do
+			table.insert(actions, cells[i])
+		end
+	end
+	return { pad = pad, actions = actions }
+end
+
+-- Converts a touch point on the movement pad into a stick vector: the pad centre is (0, 0), its
+-- edge is length 1, and anything beyond the edge is clamped to length 1 so a thumb sliding off the
+-- pad still gives a full-speed direction. Screen y grows downward, so "up" is negative y.
+function Layout.padVector(pad: Rect, px: number, py: number): (number, number)
+	local cx = pad.x + pad.w / 2
+	local cy = pad.y + pad.h / 2
+	local radius = math.min(pad.w, pad.h) / 2
+	if radius <= 0 then
+		return 0, 0
+	end
+	local dx = (px - cx) / radius
+	local dy = (py - cy) / radius
+	local length = math.sqrt(dx * dx + dy * dy)
+	if length > 1 then
+		return dx / length, dy / length
+	end
+	return dx, dy
+end
+
 -- Splits a rect into cols × rows equal cells with `gap` between them. Cells are returned row by
 -- row, left to right. Used to place cab controls inside a thumb zone without hand-tuned offsets.
 function Layout.gridCells(area: Rect, cols: number, rows: number, gap: number): { Rect }

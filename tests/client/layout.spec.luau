@@ -246,3 +246,144 @@ harness.test("a bottom-right control on phone landscape keeps its 16 px margin",
 	harness.near(origin.x, 708, 1e-9)
 	harness.near(origin.y, 318, 1e-9)
 end)
+
+-- Walk-mode touch controls. The 8 px gap comes from Theme.space; the safe areas are the insets a
+-- notched phone reports (landscape side insets 47 pt, portrait top 47 and bottom 34 pt).
+harness.suite("layout touch controls")
+
+local TOUCH_GAP = Theme.space.s2
+local TOUCH_ACTIONS = 4 -- interact, jump, sprint, menu
+
+local function safeFor(size: { w: number, h: number }, insets: Layout.Insets): Layout.Rect
+	return Layout.safeRect(size.w, size.h, insets)
+end
+
+local function allRects(controls: { pad: Layout.Rect, actions: { Layout.Rect } }): { Layout.Rect }
+	local out = { controls.pad }
+	for _, r in controls.actions do
+		table.insert(out, r)
+	end
+	return out
+end
+
+local function overlaps(a: Layout.Rect, b: Layout.Rect): boolean
+	return a.x < b.x + b.w and b.x < a.x + a.w and a.y < b.y + b.h and b.y < a.y + a.h
+end
+
+local function inside(outer: Layout.Rect, r: Layout.Rect): boolean
+	return r.x >= outer.x
+		and r.y >= outer.y
+		and r.x + r.w <= outer.x + outer.w
+		and r.y + r.h <= outer.y + outer.h
+end
+
+local PHONE_PORTRAIT_INSETS = { top = 47, bottom = 34, left = 0, right = 0 }
+local PHONE_LANDSCAPE_INSETS = { top = 0, bottom = 21, left = 47, right = 47 }
+
+harness.test(
+	"touch controls: every control reaches the 56 px comfort size on a phone in portrait",
+	function()
+		local safe = safeFor(IPHONE_PORTRAIT, PHONE_PORTRAIT_INSETS)
+		local controls = Layout.touchControls(safe, TOUCH_GAP, TOUCH_ACTIONS)
+		for i, r in allRects(controls) do
+			harness.truthy(r.w >= Theme.size.touchComfort, `portrait control {i} is {r.w} px wide`)
+			harness.truthy(r.h >= Theme.size.touchComfort, `portrait control {i} is {r.h} px tall`)
+		end
+	end
+)
+
+harness.test(
+	"touch controls: every control reaches the 56 px comfort size on a phone in landscape",
+	function()
+		local safe = safeFor(IPHONE_LANDSCAPE, PHONE_LANDSCAPE_INSETS)
+		local controls = Layout.touchControls(safe, TOUCH_GAP, TOUCH_ACTIONS)
+		for i, r in allRects(controls) do
+			harness.truthy(r.w >= Theme.size.touchComfort, `landscape control {i} is {r.w} px wide`)
+			harness.truthy(r.h >= Theme.size.touchComfort, `landscape control {i} is {r.h} px tall`)
+		end
+	end
+)
+
+harness.test(
+	"touch controls: the smallest supported phone (320 px wide) still meets the 48 px minimum",
+	function()
+		local safe = safeFor({ w = 320, h = 568 }, { top = 20, bottom = 0, left = 0, right = 0 })
+		local controls = Layout.touchControls(safe, TOUCH_GAP, TOUCH_ACTIONS)
+		for i, r in allRects(controls) do
+			harness.truthy(
+				Layout.meetsTouchMinimum(r.w, r.h, Theme.size.touchMin),
+				`small phone control {i} is {r.w}×{r.h}`
+			)
+		end
+	end
+)
+
+harness.test("touch controls stay inside the safe area and never overlap", function()
+	for _, case in
+		{ { IPHONE_PORTRAIT, PHONE_PORTRAIT_INSETS }, { IPHONE_LANDSCAPE, PHONE_LANDSCAPE_INSETS } }
+	do
+		local safe = safeFor(case[1], case[2])
+		local rects = allRects(Layout.touchControls(safe, TOUCH_GAP, TOUCH_ACTIONS))
+		for i, r in rects do
+			harness.truthy(inside(safe, r), `control {i} leaves the safe area`)
+			for j = i + 1, #rects do
+				harness.falsy(overlaps(r, rects[j]), `controls {i} and {j} overlap`)
+			end
+		end
+	end
+end)
+
+harness.test("the movement pad is in the left thumb zone and the actions in the right", function()
+	local safe = safeFor(IPHONE_LANDSCAPE, PHONE_LANDSCAPE_INSETS)
+	local controls = Layout.touchControls(safe, TOUCH_GAP, TOUCH_ACTIONS)
+	local midX = safe.x + safe.w / 2
+	harness.truthy(controls.pad.x + controls.pad.w <= midX, "pad crosses into the right half")
+	for i, r in controls.actions do
+		harness.truthy(r.x >= midX, `action {i} sits in the left half`)
+	end
+	harness.equal(#controls.actions, TOUCH_ACTIONS)
+end)
+
+harness.test(
+	"with no actions the layout returns the pad alone, and a partial row fills in order",
+	function()
+		local safe = safeFor(IPHONE_LANDSCAPE, PHONE_LANDSCAPE_INSETS)
+		harness.equal(#Layout.touchControls(safe, TOUCH_GAP, 0).actions, 0)
+		harness.equal(#Layout.touchControls(safe, TOUCH_GAP, 3).actions, 3)
+		harness.raises(function()
+			Layout.touchControls(safe, TOUCH_GAP, 1.5)
+		end, "whole number")
+	end
+)
+
+harness.test(
+	"pad vector: the centre is zero, the edge is unit length, beyond the edge is clamped",
+	function()
+		local pad = { x = 0, y = 0, w = 100, h = 100 }
+		local x, y = Layout.padVector(pad, 50, 50)
+		harness.near(x, 0, 1e-9)
+		harness.near(y, 0, 1e-9)
+		x, y = Layout.padVector(pad, 100, 50)
+		harness.near(x, 1, 1e-9, "right edge")
+		harness.near(y, 0, 1e-9)
+		x, y = Layout.padVector(pad, 500, 50)
+		harness.near(x, 1, 1e-9, "far beyond the edge is still full speed, not more")
+		harness.near(y, 0, 1e-9)
+	end
+)
+
+harness.test(
+	"pad vector: up on screen is negative y, and the diagonal stays unit length",
+	function()
+		local pad = { x = 0, y = 0, w = 100, h = 100 }
+		local _, up = Layout.padVector(pad, 50, 0)
+		harness.near(up, -1, 1e-9, "top edge should be -1 (screen y grows downward)")
+		local dx, dy = Layout.padVector(pad, 200, 200)
+		harness.near(
+			math.sqrt(dx * dx + dy * dy),
+			1,
+			1e-9,
+			"diagonal beyond the edge is unit length"
+		)
+	end
+)
