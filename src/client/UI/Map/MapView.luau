@@ -12,13 +12,15 @@
 
 	Not verified here (no Studio): the sign convention of Frame.Rotation on screen (projection
 	tests assume clockwise-positive), label overlap at low zoom, and touch drag feel. These are
-	listed in docs/ui/UI-SPEC.md §12 for the Manager's device pass.
+	listed in docs/ui/UI-SPEC.md §13 for the Manager's device pass.
 ]]
 
 local UserInputService = game:GetService("UserInputService")
 
 local MapModel = require(script.Parent.MapModel)
 local MapProjection = require(script.Parent.MapProjection)
+local NetworkSource = require(script.Parent.NetworkSource)
+local Label = require(script.Parent.Parent.Components.Label)
 local Theme = require(script.Parent.Parent.Theme)
 local Style = require(script.Parent.Parent.Style)
 
@@ -219,11 +221,18 @@ end
 
 -- Builds the map under `parent`. Errors on invalid data, listing every reason, so a bad network
 -- file is a clear failure in tests and never a half-drawn map.
-function MapView.new(parent: GuiObject, data: MapModel.MapData): View
-	local ok, errors = MapModel.validate(data, ALLOWED_COLOURS)
-	if not ok then
-		error(`map data rejected: {table.concat(errors, "; ")}`)
+function MapView.new(parent: GuiObject, source: NetworkSource.Source): View
+	local raw, reason = source.load()
+	if raw == nil then
+		warn(`MapView: source '{source.name}' has no data: {reason or "no reason given"}`)
+		return MapView.unavailable(parent)
 	end
+	local ok, errors = MapModel.validate(raw, ALLOWED_COLOURS)
+	if not ok then
+		warn(`MapView: source '{source.name}' rejected: {table.concat(errors, "; ")}`)
+		return MapView.unavailable(parent)
+	end
+	local data: MapModel.MapData = raw
 
 	local root = Instance.new("Frame")
 	root.Name = "NetworkMap"
@@ -357,6 +366,45 @@ function MapView.new(parent: GuiObject, data: MapModel.MapData): View
 	)
 
 	return view
+end
+
+-- The screen when no valid network exists (UI-SPEC §9.6). One sentence for the player; the reason
+-- went to the developer log in `new`. The view is empty but fully destroyable, so the caller's
+-- close path does not need a special case.
+function MapView.unavailable(parent: GuiObject): View
+	local root = Instance.new("Frame")
+	root.Name = "NetworkMap"
+	root.BackgroundColor3 = Style.color("surface")
+	root.BorderSizePixel = 0
+	root.Size = UDim2.fromScale(1, 1)
+	root.ClipsDescendants = true
+	root.Parent = parent
+
+	local message = Label.new({
+		name = "Unavailable",
+		text = "Network map unavailable.",
+		type = "heading",
+		color = "text",
+		align = "center",
+	})
+	message.AnchorPoint = Vector2.new(0.5, 0.5)
+	message.Position = UDim2.fromScale(0.5, 0.5)
+	message.Size = UDim2.fromScale(0.8, 0.2)
+	message.Parent = root
+
+	local empty: MapModel.MapData = { stations = {}, lines = {} }
+	local noBounds: MapModel.Bounds = { minX = 0, minZ = 0, maxX = 0, maxZ = 0 }
+	return {
+		root = root,
+		canvas = root,
+		data = empty,
+		bounds = noBounds,
+		items = {},
+		transform = nil,
+		userZoomed = false,
+		connections = {},
+		destroyed = false,
+	}
 end
 
 function MapView.destroy(view: View)

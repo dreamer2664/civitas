@@ -1,12 +1,13 @@
 --!strict
 -- Network map rules: the data boundary (MapModel.validate), the element budget, and the projection
--- maths that the map view depends on. The fixture is synthetic; see tests/fixtures/network-sample.
+-- maths that the map view depends on. The fixture is the synthetic stub in UI/Map/StubNetwork.
 
 local harness = require("../harness")
 local MapModel = require("../../src/client/UI/Map/MapModel")
 local MapProjection = require("../../src/client/UI/Map/MapProjection")
 local Theme = require("../../src/client/UI/Theme")
-local fixture = require("../fixtures/network-sample")
+local fixture = require("../../src/client/UI/Map/StubNetwork")
+local NetworkSource = require("../../src/client/UI/Map/NetworkSource")
 
 local ALLOWED: { [string]: boolean } = {}
 for name in Theme.lineColours do
@@ -239,4 +240,18 @@ harness.test("screen y is flipped, so a line running north-east rises on the map
 	local d = MapProjection.drawSegment(t, { x1 = 0, z1 = 0, x2 = 10, z2 = 10 })
 	harness.near(d.angleDeg, -45, 1e-9, "north-east should be -45° in screen space")
 	harness.near(d.length, math.sqrt(200), 1e-9)
+end)
+
+harness.test("a source hands back the table it was given", function()
+	local source = NetworkSource.fromTable("stub", fixture)
+	local data, reason = source.load()
+	harness.truthy(data == fixture, "the same table, not a copy")
+	harness.falsy(reason, "no reason when loading succeeds")
+end)
+
+harness.test("an unavailable source returns no data and a reason", function()
+	local source = NetworkSource.unavailable("missing", "docs/rail/NETWORK.md not generated")
+	local data, reason = source.load()
+	harness.falsy(data, "no data")
+	harness.equal(reason, "docs/rail/NETWORK.md not generated")
 end)

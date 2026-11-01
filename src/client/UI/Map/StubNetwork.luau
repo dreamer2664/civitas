@@ -1,10 +1,11 @@
 --!strict
 --[[
-	SYNTHETIC TEST FIXTURE. NOT GAME DATA.
+	SYNTHETIC STUB. NOT GAME DATA.
 
-	A three-line, six-station network invented only so the map maths can be tested. It is not the
-	Civitas network: that comes from docs/rail/NETWORK.md when CODE · vector commits it. Coordinates
-	are arbitrary studs. Do not copy these names or positions into Config/.
+	A three-line network invented so the map can be built and tested before docs/rail/NETWORK.md
+	exists. It is one of the sources in UI/Map/NetworkSource.luau, and the map does not know which
+	source it has. Coordinates are arbitrary studs. Do not copy these names or positions into
+	Config/. Lives in src/ rather than tests/ because the running client needs a source too.
 ]]
 
 local fixture = {
