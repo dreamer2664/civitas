@@ -9,7 +9,7 @@ ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH=os.path.join(ROOT,'textures','rail_palette.png')
 COLORS={
  'body_porcelain':(194,201,199),'window_smoked':(7,18,27),'door_vermilion':(143,15,10),'undercarriage':(9,11,13),'metal':(94,107,112),'headlamp':(232,219,168),'interior':(89,97,92),'cab_windscreen_glazing':(41,87,102),
- 'cast_concrete':(135,143,138),'coping_stone':(194,194,181),'tactile_buff':(186,156,82),'painted_steel':(33,48,56),'bench_timber':(110,64,31),'sign_offwhite':(199,204,194),'dark_detail':(14,19,20)}
+ 'cast_concrete':(135,143,138),'coping_stone':(194,194,181),'tactile_buff':(186,156,82),'painted_steel':(33,48,56),'bench_timber':(110,64,31),'sign_offwhite':(199,204,194),'dark_detail':(14,19,20),'livery_blue':(32,65,88)}
 NAMES=list(COLORS)
 def generate():
  os.makedirs(os.path.dirname(PATH),exist_ok=True)

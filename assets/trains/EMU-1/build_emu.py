@@ -11,6 +11,7 @@ def mat(name,col,metal=0):
  m=bpy.data.materials.new(name); m.diffuse_color=(*col,1); m.use_nodes=True
  p=m.node_tree.nodes.get('Principled BSDF'); p.inputs['Base Color'].default_value=(*col,1); p.inputs['Metallic'].default_value=metal; p.inputs['Roughness'].default_value=.38
  return m
+livery=mat('livery_blue',(.125,.255,.345),.18)
 white=mat('body_porcelain',(0.76,.79,.78),.25); dark=mat('window_smoked',(.025,.07,.105),.15); red=mat('door_vermilion',(.56,.06,.04)); black=mat('undercarriage',(.035,.045,.052),.3); silver=mat('metal',(.37,.42,.44),.8); light=mat('headlamp',(.91,.86,.66)); interior=mat('interior',(.35,.38,.36))
 # A real translucent material, exported in the GLB as alpha blending.
 cab_glass=mat('cab_windscreen_glazing',(.16,.34,.40),.02)
@@ -56,6 +57,8 @@ def shell_car(name,length,origin,cab):
    if b<=a: continue
    for z,h,ma in [(1.08,.64,white),(2.21,1.62,dark),(3.31,.58,white)]:
     cube(f'{name}_{suffix}_side_{i}_{z}',((a+b)/2,wall_y,z),(b-a,.12,h),ma,root,.025)
+   # A fine continuous blue belt aligns the glazing with the door surrounds.
+   cube(f'{name}_{suffix}_livery_band_{i}',((a+b)/2,side*1.412,1.32),(b-a,.012,.14),livery,root)
    # white pillars over window band
    n=max(1,int((b-a)/1.8))
    for j in range(n+1):
@@ -63,6 +66,10 @@ def shell_car(name,length,origin,cab):
     cube(f'{name}_{suffix}_pillar_{i}_{j}',(x,side*1.405,2.25),(.09,.025,1.54),white,root)
   for i,d in enumerate(doors):
    cube(f'{name}_{suffix}_door_header_{i}',(d,wall_y,3.52),(1.3,.12,.45),white,root,.02)
+   # Blue door surrounds sit outside the clear aperture; leaves remain separate.
+   for sign in (-1,1):
+    cube(f'{name}_{suffix}_door_surround_{i}_{sign}',(d+sign*.71,side*1.412,1.735),(.10,.012,1.95),livery,root)
+   cube(f'{name}_{suffix}_door_surround_top_{i}',(d,side*1.412,2.80),(1.52,.012,.14),livery,root)
    # Separate leaves. Their closure blocks entry only while closed, no wall behind them.
    for leaf in [-1,1]:
     leafroot=empty(f'{name}_{suffix}_door_{i}_{leaf}_PIVOT',(d+leaf*.65,side*1.345,.76),root)
