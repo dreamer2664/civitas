@@ -46,6 +46,7 @@ def shell_car(name,length,origin,cab):
  cube(name+'_floor',((start+end)/2,0,.70),(end-start,2.75,.12),interior,root)
  cube(name+'_roof',((start+end)/2,0,3.91),(end-start,2.72,.38),white,root,.12)
  doors=[-length*.27,-length*.73]
+ steps=empty(name+'_DOOR_STEPS',(0,0,0),root)
  for side in [-1,1]:
   suffix='L' if side<0 else 'R'; wall_y=side*1.35
   # Walls are built from short solid pieces, leaving physical openings at doors.
@@ -65,6 +66,10 @@ def shell_car(name,length,origin,cab):
     x=a+.06+(b-a-.12)*j/n
     cube(f'{name}_{suffix}_pillar_{i}_{j}',(x,side*1.405,2.25),(.09,.025,1.54),white,root)
   for i,d in enumerate(doors):
+   # Low fixed footboard reaches the approved 3.20m structural envelope;
+   # independent collision proxy joins the car floor at platform height.
+   cube(f'{name}_{suffix}_footboard_{i}',(d,side*1.40,.70),(1.20,.40,.12),silver,steps)
+   foot=cube(f'{name}_{suffix}_COLLISION_footboard_{i}',(d,side*1.40,.70),(1.20,.40,.12),black,steps); foot.hide_render=True
    cube(f'{name}_{suffix}_door_header_{i}',(d,wall_y,3.52),(1.3,.12,.45),white,root,.02)
    # Blue door surrounds sit outside the clear aperture; leaves remain separate.
    for sign in (-1,1):
@@ -81,10 +86,11 @@ def shell_car(name,length,origin,cab):
  for k,x in enumerate((-3,-length+3)):
   bogie=empty(f'{name}_BOGIE_{k}_PIVOT',(x,0,0),root); bogie['pivot']='bogie centre at rail top'
   cube(f'{name}_bogie_{k}_frame',(0,0,.55),(2.35,1.95,.27),black,bogie,.05)
-  for dx in (-.75,.75):
-   for side in (-1,1): wheel(f'{name}_wheel_{k}_{dx}_{side}',(dx,side*.72,.42),bogie)
+  for j,dx in enumerate((-.75,.75)):
+   axle=empty(f'{name}_BOGIE_{k}_AXLE_{j}_PIVOT',(dx,0,.42),bogie)
+   for side in (-1,1): wheel(f'{name}_wheel_{k}_{dx}_{side}',(0,side*.72,0),axle)
  # Walkable collision proxies, individually named; no continuous wall across doors.
- coll=cube(name+'_COLLISION_floor',((start+end)/2,0,.64),(end-start,2.60,.12),black,root); coll.hide_render=True
+ coll=cube(name+'_COLLISION_floor',((start+end)/2,0,.70),(end-start,2.60,.12),black,root); coll.hide_render=True
  for side in (-1,1):
   prev=start
   for i,(a,b) in enumerate([(start,sorted(doors)[0]-.65),(sorted(doors)[0]+.65,sorted(doors)[1]-.65),(sorted(doors)[1]+.65,end)]):
@@ -207,7 +213,10 @@ for rootname in ('CAB_ROOT','INTERMEDIATE_ROOT'):
   material=obj.data.materials[0].name if obj.data.materials else 'none'
   groups.setdefault(material,[]).append(obj)
  for material,objects in groups.items(): combine(objects,rootname.replace('_ROOT','')+'_STATIC_'+material)
-for equipment in [bpy.data.objects['INTERMEDIATE_PANTOGRAPH'],bpy.data.objects['INTERMEDIATE_ROOF_EQUIPMENT'],bpy.data.objects['CAB_GANGWAY']]:
+# Each pair of wheels is combined below its own centred axle pivot.
+for axle in [o for o in scene.objects if o.type=='EMPTY' and '_AXLE_' in o.name and o.name.endswith('_PIVOT')]:
+ combine([o for o in axle.children if o.type=='MESH'],axle.name.replace('_PIVOT','_WHEELSET'))
+for equipment in [bpy.data.objects['INTERMEDIATE_PANTOGRAPH'],bpy.data.objects['INTERMEDIATE_ROOF_EQUIPMENT'],bpy.data.objects['CAB_GANGWAY'],bpy.data.objects['CAB_DOOR_STEPS'],bpy.data.objects['INTERMEDIATE_DOOR_STEPS']]:
  groups={}
  for obj in list(equipment.children):
   if obj.type=='MESH' and 'COLLISION' not in obj.name: groups.setdefault(obj.data.materials[0].name,[]).append(obj)

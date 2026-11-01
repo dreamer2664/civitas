@@ -21,7 +21,7 @@ The builder regenerates the source and three workbench renders. Exporter reads t
 
 ## Scale, axes and pivots
 
-Body-envelope measurements below exclude roof equipment and the raised pantograph. Source units are metres, Blender Z-up and car-forward +X; the exporter multiplies the root transforms by 1/0.28 = 3.5714286 to write studs and uses FBX forward -Z / up Y, or glTF Y-up. Scene origins are preserved. Manager must verify importer axis, pivot, scale and materials. Studs in the measurements below are axis-aligned *evaluated visual geometry*, Blender X/Y/Z, not declared target envelopes.
+Body-envelope measurements below exclude roof equipment, the raised pantograph and the separate footboards. Fixed footboards reach 1.60 m from the centreline, within the ratified 3.20 m structural clearance envelope. Source units are metres, Blender Z-up and car-forward +X; the exporter multiplies the root transforms by 1/0.28 = 3.5714286 to write studs and uses FBX forward -Z / up Y, or glTF Y-up. Scene origins are preserved. Manager must verify importer axis, pivot, scale and materials. Studs in the measurements below are axis-aligned *evaluated visual geometry*, Blender X/Y/Z, not declared target envelopes.
 
 | Car | Measured length × width × height, studs | Contract target, studs |
 |---|---|---|
@@ -34,9 +34,11 @@ The intermediate car has bespoke HVAC boxes, insulators and a fixed raised panto
 
 The 0.5 m inter-car gap now has bespoke bellows, open end portals and a separate floor collision proxy. `verify_gangway.py` samples the floor and three unobstructed visual rays in the straight pose; the bellows is rigidly parented to the cab, not a flexible/animated joint, so curves, moving collision and boarding remain unverified.
 
+The car-floor collision proxies now align with the 0.76 m platform floor. Fixed 1.20 m-wide footboards at each door extend the support proxy to 1.60 m from track centre, within the 1.60 m half-width clearance envelope. In a representative, static, aligned Blender test with Central platform 2, the open doorway is visually clear and the unsupported proxy gap is approximately 0.10 m (0.357 studs, sampled in 0.01 m increments), down from approximately 0.40 m. This is not proof of boarding: actual avatar steps, train placement, station gaps and collision groups must be tested in Studio.
+
 ## Geometry and collision
 
-`mesh-stats.json` lists evaluated triangles, bounding dimensions and non-manifold edge counts per mesh, including collisions. Latest: 20,260 visual triangles, 204 collision triangles; largest mesh 2,808; zero non-manifold edges. A manifold-edge test alone does not establish absence of self-intersection, correct normals, visual quality or Roblox compatibility. There are 76 source meshes including proxies: 38 cab and 38 intermediate, down from 171 combined in the original study (before interiors were added). Static objects sharing a material are consolidated; each animated door leaf retains its pivot, each bogie and wheel is separate, and couplers and collision proxies remain separate. Door meshes have multiple materials and may split into additional glTF/Roblox primitives, so source-mesh counts do not establish draw calls or imported MeshPart count. Mobile profiling and Studio inspection remain required. Train meshes are not suitable for automatic static SLIM assumptions.
+`mesh-stats.json` lists evaluated triangles, bounding dimensions and non-manifold edge counts per mesh, including collisions. Latest: 20,356 visual triangles, 300 collision triangles; largest mesh 2,808; zero non-manifold edges. A manifold-edge test alone does not establish absence of self-intersection, correct normals, visual quality or Roblox compatibility. There are 78 source meshes including proxies: 39 cab and 39 intermediate, down from 171 combined in the original study (before interiors were added). Static objects sharing a material are consolidated; each animated door leaf retains its pivot, each bogie and centred wheelset axle pivot is separate, and couplers and collision proxies remain separate. Door meshes have multiple materials and may split into additional glTF/Roblox primitives, so source-mesh counts do not establish draw calls or imported MeshPart count. Mobile profiling and Studio inspection remain required. Train meshes are not suitable for automatic static SLIM assumptions.
 
 `*_COLLISION_*` objects are separate simple proxy meshes. Wall proxies are segmented around door apertures; visual meshes should be made non-colliding by the integrator, and proxy visibility/collision must be set in Studio. This is not yet a complete collision solution: cab and car ends need properly designed proxies, and moving-door collision must be integrated and tested. Keep train unanchored per contract; vector determines runtime assembly.
 
@@ -44,17 +46,17 @@ Nine purpose-named materials, including a blue waist belt and door surrounds, sh
 
 | Render material | Triangles | Share |
 |---|---:|---:|
-| body_porcelain | 4,708 | 23.24% |
+| body_porcelain | 4,708 | 23.13% |
 | cab_windscreen_glazing | 36 | 0.18% |
-| door_vermilion | 1,728 | 8.53% |
-| headlamp | 648 | 3.20% |
-| interior | 72 | 0.36% |
-| livery_blue | 432 | 2.13% |
-| metal | 2,976 | 14.69% |
-| undercarriage | 4,152 | 20.49% |
-| window_smoked | 5,508 | 27.19% |
+| door_vermilion | 1,728 | 8.49% |
+| headlamp | 648 | 3.18% |
+| interior | 72 | 0.35% |
+| livery_blue | 432 | 2.12% |
+| metal | 3,072 | 15.09% |
+| undercarriage | 4,152 | 20.40% |
+| window_smoked | 5,508 | 27.06% |
 
-Shares use 20,260 render triangles; rounding may affect totals. No reference photos or third-party assets were used; original procedural geometry.
+Shares use 20,356 render triangles; rounding may affect totals. No reference photos or third-party assets were used; original procedural geometry.
 
 Renders: `renders/gangway.png` shows the car joint; `renders/roof-equipment.png` documents the raised pantograph. `renders/door-01.png`, `door-06.png`, `door-15.png`, `door-24.png` show the motion. Main views: `renders/front-three-quarter.png`, `renders/side.png`, `renders/cab-interior.png`. Exterior and door views are headless Blender Workbench previews; the cab view is headless Cycles, with a striped render-only target outside to show the sightline. The target is not included in the source asset or exports. None are Studio screenshots.
 
@@ -62,7 +64,7 @@ Studio must validate importer axis, scale and pivots; glazing transparency; coll
 
 ## Far LOD candidates
 
-`CAB_LOD1` and `INTERMEDIATE_LOD1` are static, frame-1 visual meshes produced by a 20% collapse of evaluated source geometry. Cab: 1,710 triangles; intermediate: 2,340; total 4,050; non-manifold edges 0. `lod1-mesh-stats.json` contains the audit and `renders/lod1.png` is a Blender preview. They contain no collision or usable door/pantograph animation and should not be substituted while nearby players interact. Material splits may produce multiple imported MeshParts. There is **no implemented runtime LOD switching**, no Roblox LOD transition test and no performance claim.
+`CAB_LOD1` and `INTERMEDIATE_LOD1` are static, frame-1 visual meshes produced by a 20% collapse of evaluated source geometry. Cab: 1,720 triangles; intermediate: 2,350; total 4,070; non-manifold edges 0. `lod1-mesh-stats.json` contains the audit and `renders/lod1.png` is a Blender preview. They contain no collision or usable door/pantograph animation and should not be substituted while nearby players interact. Material splits may produce multiple imported MeshParts. There is **no implemented runtime LOD switching**, no Roblox LOD transition test and no performance claim.
 
 ```sh
 blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/build_lod.py

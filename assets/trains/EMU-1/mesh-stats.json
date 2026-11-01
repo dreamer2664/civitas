@@ -1,6 +1,46 @@
 {
   "max_mesh_triangles": 2808,
   "meshes": {
+    "CAB_BOGIE_0_AXLE_0_WHEELSET": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 184,
+      "world_aabb_studs_blender_xyz": [
+        3.0,
+        5.607,
+        3.0
+      ]
+    },
+    "CAB_BOGIE_0_AXLE_1_WHEELSET": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 184,
+      "world_aabb_studs_blender_xyz": [
+        3.0,
+        5.607,
+        3.0
+      ]
+    },
+    "CAB_BOGIE_1_AXLE_0_WHEELSET": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 184,
+      "world_aabb_studs_blender_xyz": [
+        3.0,
+        5.607,
+        3.0
+      ]
+    },
+    "CAB_BOGIE_1_AXLE_1_WHEELSET": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 184,
+      "world_aabb_studs_blender_xyz": [
+        3.0,
+        5.607,
+        3.0
+      ]
+    },
     "CAB_COLLISION_floor": {
       "collision": true,
       "nonmanifold_edges": 0,
@@ -81,6 +121,16 @@
         10.536
       ]
     },
+    "CAB_DOOR_STEPS_metal": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        38.786,
+        11.429,
+        0.429
+      ]
+    },
     "CAB_GANGWAY_COLLISION_floor": {
       "collision": true,
       "nonmanifold_edges": 0,
@@ -109,6 +159,26 @@
         1.786,
         6.571,
         9.357
+      ]
+    },
+    "CAB_L_COLLISION_footboard_0": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
+      ]
+    },
+    "CAB_L_COLLISION_footboard_1": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
       ]
     },
     "CAB_L_door_0_-1_leaf": {
@@ -149,6 +219,26 @@
         2.143,
         0.402,
         6.964
+      ]
+    },
+    "CAB_R_COLLISION_footboard_0": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
+      ]
+    },
+    "CAB_R_COLLISION_footboard_1": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
       ]
     },
     "CAB_R_door_0_-1_leaf": {
@@ -301,83 +391,43 @@
         0.786
       ]
     },
-    "CAB_wheel_0_-0.75_-1": {
+    "INTERMEDIATE_BOGIE_0_AXLE_0_WHEELSET": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 92,
+      "triangles": 184,
       "world_aabb_studs_blender_xyz": [
         3.0,
-        0.464,
+        5.607,
         3.0
       ]
     },
-    "CAB_wheel_0_-0.75_1": {
+    "INTERMEDIATE_BOGIE_0_AXLE_1_WHEELSET": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 92,
+      "triangles": 184,
       "world_aabb_studs_blender_xyz": [
         3.0,
-        0.464,
+        5.607,
         3.0
       ]
     },
-    "CAB_wheel_0_0.75_-1": {
+    "INTERMEDIATE_BOGIE_1_AXLE_0_WHEELSET": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 92,
+      "triangles": 184,
       "world_aabb_studs_blender_xyz": [
         3.0,
-        0.464,
+        5.607,
         3.0
       ]
     },
-    "CAB_wheel_0_0.75_1": {
+    "INTERMEDIATE_BOGIE_1_AXLE_1_WHEELSET": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 92,
+      "triangles": 184,
       "world_aabb_studs_blender_xyz": [
         3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "CAB_wheel_1_-0.75_-1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "CAB_wheel_1_-0.75_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "CAB_wheel_1_0.75_-1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "CAB_wheel_1_0.75_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
+        5.607,
         3.0
       ]
     },
@@ -459,6 +509,36 @@
         16.321,
         0.357,
         10.536
+      ]
+    },
+    "INTERMEDIATE_DOOR_STEPS_metal": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        37.143,
+        11.429,
+        0.429
+      ]
+    },
+    "INTERMEDIATE_L_COLLISION_footboard_0": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
+      ]
+    },
+    "INTERMEDIATE_L_COLLISION_footboard_1": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
       ]
     },
     "INTERMEDIATE_L_door_0_-1_leaf": {
@@ -549,6 +629,26 @@
         39.643,
         5.714,
         0.107
+      ]
+    },
+    "INTERMEDIATE_R_COLLISION_footboard_0": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
+      ]
+    },
+    "INTERMEDIATE_R_COLLISION_footboard_1": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.286,
+        1.429,
+        0.429
       ]
     },
     "INTERMEDIATE_R_door_0_-1_leaf": {
@@ -680,86 +780,6 @@
         1.5,
         0.786
       ]
-    },
-    "INTERMEDIATE_wheel_0_-0.75_-1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_0_-0.75_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_0_0.75_-1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_0_0.75_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_1_-0.75_-1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_1_-0.75_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_1_0.75_-1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
-    },
-    "INTERMEDIATE_wheel_1_0.75_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 92,
-      "world_aabb_studs_blender_xyz": [
-        3.0,
-        0.464,
-        3.0
-      ]
     }
   },
   "render_material_triangles": {
@@ -769,14 +789,14 @@
     "headlamp": 648,
     "interior": 72,
     "livery_blue": 432,
-    "metal": 2976,
+    "metal": 3072,
     "undercarriage": 4152,
     "window_smoked": 5508
   },
   "status": "design study, not validated in Studio",
   "summary": {
-    "collision_triangles": 204,
-    "render_triangles": 20260
+    "collision_triangles": 300,
+    "render_triangles": 20356
   },
   "units": "1 metre = 3.571428571 studs"
 }
