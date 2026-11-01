@@ -1,0 +1,201 @@
+{
+  "max_mesh_triangles": 3612,
+  "meshes": {
+    "bench_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.857,
+        0.357
+      ]
+    },
+    "bench_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 108,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.982,
+        3.839
+      ]
+    },
+    "bin_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        1.571,
+        1.571,
+        3.0
+      ]
+    },
+    "bin_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 120,
+      "world_aabb_studs_blender_xyz": [
+        1.714,
+        1.714,
+        3.107
+      ]
+    },
+    "canopy_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        11.429
+      ]
+    },
+    "canopy_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        11.429
+      ]
+    },
+    "canopy_COLLISION_roof": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        0.571
+      ]
+    },
+    "canopy_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        12.214
+      ]
+    },
+    "coping_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "coping_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "edge_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "edge_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "gantry_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "gantry_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "gantry_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        13.286,
+        0.513,
+        11.786
+      ]
+    },
+    "lamp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.429
+      ]
+    },
+    "lamp_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 84,
+      "world_aabb_studs_blender_xyz": [
+        3.196,
+        1.0,
+        11.429
+      ]
+    },
+    "tactile_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.143
+      ]
+    },
+    "tactile_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 3612,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.207
+      ]
+    }
+  },
+  "status": "design study, not validated in Studio",
+  "summary": {
+    "collision_triangles": 228,
+    "render_triangles": 4068
+  },
+  "units": "1 metre = 3.571428571 studs"
+}
