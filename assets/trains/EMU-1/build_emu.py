@@ -12,6 +12,11 @@ def mat(name,col,metal=0):
  p=m.node_tree.nodes.get('Principled BSDF'); p.inputs['Base Color'].default_value=(*col,1); p.inputs['Metallic'].default_value=metal; p.inputs['Roughness'].default_value=.38
  return m
 white=mat('body_porcelain',(0.76,.79,.78),.25); dark=mat('window_smoked',(.025,.07,.105),.15); red=mat('door_vermilion',(.56,.06,.04)); black=mat('undercarriage',(.035,.045,.052),.3); silver=mat('metal',(.37,.42,.44),.8); light=mat('headlamp',(.91,.86,.66)); interior=mat('interior',(.35,.38,.36))
+# A real translucent material, exported in the GLB as alpha blending.
+cab_glass=mat('cab_windscreen_glazing',(.16,.34,.40),.02)
+cab_glass.diffuse_color=(.16,.34,.40,.24)
+p=cab_glass.node_tree.nodes.get('Principled BSDF'); p.inputs['Alpha'].default_value=.24; p.inputs['Roughness'].default_value=.12
+cab_glass.surface_render_method='DITHERED'
 def empty(name,loc,parent=None):
  o=bpy.data.objects.new(name,None); scene.collection.objects.link(o); o.location=loc; o.parent=parent; return o
 def cube(n,loc,dim,material,parent, bevel=0):
@@ -80,17 +85,25 @@ def shell_car(name,length,origin,cab):
   for x,w,lo,hi in sections:
    c=.20
    verts += [(x,-w+c,lo),(x,w-c,lo),(x,w,lo+c),(x,w,hi-c),(x,w-c,hi),(x,-w+c,hi),(x,-w,hi-c),(x,-w,lo+c)]
-  faces=[tuple(reversed(range(8))),tuple(range(24,32))]
+  faces=[tuple(range(24,32))]
   for j in range(3):
-   for i in range(8): faces.append((j*8+i,j*8+(i+1)%8,(j+1)*8+(i+1)%8,(j+1)*8+i))
+   for i in range(8):
+    if i==4 and j<2: continue  # aperture, not a dark overlay on a solid nose
+    faces.append((j*8+i,j*8+(i+1)%8,(j+1)*8+(i+1)%8,(j+1)*8+i))
   mesh=bpy.data.meshes.new('cab nose'); mesh.from_pydata(verts,[],faces); mesh.update(); obj=bpy.data.objects.new(name+'_sculpted_nose',mesh); scene.collection.objects.link(obj); obj.parent=root; obj.data.materials.append(white)
-  # Sloping windscreen overlay, solid wedge rather than a zero-thickness plane.
-  vs=[(-2.85,-1.13,3.91),(-2.85,1.13,3.91),(-.62,.94,2.94),(-.62,-.94,2.94),(-2.85,-1.13,3.885),(-2.85,1.13,3.885),(-.62,.94,2.915),(-.62,-.94,2.915)]
-  fs=[(0,1,2,3),(7,6,5,4),(0,4,5,1),(1,5,6,2),(2,6,7,3),(3,7,4,0)]
-  me=bpy.data.meshes.new('windscreen'); me.from_pydata(vs,[],fs); me.update(); ob=bpy.data.objects.new(name+'_windscreen',me); scene.collection.objects.link(ob); ob.parent=root; ob.data.materials.append(dark)
+  mod=obj.modifiers.new('shell thickness','SOLIDIFY'); mod.thickness=.06
+  # The missing shell faces are replaced by thin glazed panels that follow the rake.
+  # Each is a closed, non-zero-thickness wedge with alpha-blended glazing.
+  for j in range(2):
+   outer=[verts[j*8+4],verts[j*8+5],verts[(j+1)*8+5],verts[(j+1)*8+4]]
+   inner=[(x,y,z-.012) for x,y,z in outer]; vs=outer+inner
+   fs=[(0,1,2,3),(7,6,5,4),(0,4,5,1),(1,5,6,2),(2,6,7,3),(3,7,4,0)]
+   me=bpy.data.meshes.new('windscreen'); me.from_pydata(vs,[],fs); me.update(); ob=bpy.data.objects.new(name+'_windscreen_'+str(j),me); scene.collection.objects.link(ob); ob.parent=root; ob.data.materials.append(cab_glass)
   for y in (-.75,.75): cube(name+'_headlamp',( -.19,y,1.24),(.08,.30,.14),light,root,.03)
  else:
-  for x in (start,end): cube(name+'_end_bulkhead',(x,0,2.15),(.12,2.74,2.98),white,root,.03)
+  cube(name+'_leading_bulkhead',(-.06,0,2.15),(.12,2.85,2.98),white,root)
+ # Rear plane is exactly the trailing coupling datum.
+ cube(name+'_trailing_bulkhead',(-length+.06,0,2.15),(.12,2.85,2.98),white,root)
  cube(name+'_coupler',(-.1,0,.58),(.2,.42,.22),black,root,.02)
  return root
 shell_car('CAB',21,0,True); shell_car('INTERMEDIATE',20,-21.5,False)

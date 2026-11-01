@@ -1,5 +1,5 @@
 {
-  "max_mesh_triangles": 108,
+  "max_mesh_triangles": 124,
   "meshes": {
     "CAB_COLLISION_floor": {
       "collision": true,
@@ -744,9 +744,9 @@
     "CAB_sculpted_nose": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 60,
+      "triangles": 124,
       "world_aabb_studs_blender_xyz": [
-        10.714,
+        10.737,
         10.179,
         12.179
       ]
@@ -779,6 +779,16 @@
         0.893,
         0.893,
         1.071
+      ]
+    },
+    "CAB_trailing_bulkhead": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.429,
+        10.179,
+        10.643
       ]
     },
     "CAB_underframe": {
@@ -871,14 +881,24 @@
         3.0
       ]
     },
-    "CAB_windscreen": {
+    "CAB_windscreen_0": {
       "collision": false,
       "nonmanifold_edges": 0,
       "triangles": 12,
       "world_aabb_studs_blender_xyz": [
-        7.964,
-        8.071,
-        3.554
+        5.0,
+        8.75,
+        0.65
+      ]
+    },
+    "CAB_windscreen_1": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        4.464,
+        8.429,
+        3.043
       ]
     },
     "INTERMEDIATE_COLLISION_floor": {
@@ -1581,26 +1601,6 @@
         0.786
       ]
     },
-    "INTERMEDIATE_end_bulkhead": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.429,
-        9.786,
-        10.643
-      ]
-    },
-    "INTERMEDIATE_end_bulkhead.001": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.429,
-        9.786,
-        10.643
-      ]
-    },
     "INTERMEDIATE_floor": {
       "collision": false,
       "nonmanifold_edges": 0,
@@ -1611,6 +1611,16 @@
         0.429
       ]
     },
+    "INTERMEDIATE_leading_bulkhead": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.429,
+        10.179,
+        10.643
+      ]
+    },
     "INTERMEDIATE_roof": {
       "collision": false,
       "nonmanifold_edges": 0,
@@ -1619,6 +1629,16 @@
         70.143,
         9.714,
         1.357
+      ]
+    },
+    "INTERMEDIATE_trailing_bulkhead": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.429,
+        10.179,
+        10.643
       ]
     },
     "INTERMEDIATE_underframe": {
@@ -1715,7 +1735,7 @@
   "status": "design study, not validated in Studio",
   "summary": {
     "collision_triangles": 168,
-    "render_triangles": 12332
+    "render_triangles": 12228
   },
   "units": "1 metre = 3.571428571 studs"
 }
