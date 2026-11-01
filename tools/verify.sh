@@ -60,6 +60,9 @@ analyse "luau-lsp analyze: src/shared/Rail (pure, standard)" \
 step "check_enums (Roblox names vs API dump)"
 python3 tools/check_enums.py --dump "$DUMP"
 
+step "check_streaming (no Workspace in client code)"
+python3 tools/check_streaming.py
+
 step "lune unit tests"
 lune run tests/run.luau
 
