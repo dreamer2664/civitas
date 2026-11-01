@@ -1,0 +1,831 @@
+{
+  "max_mesh_triangles": 722,
+  "meshes": {
+    "REFLECTED_PLATFORM_1_MODULE_1_bench_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.857,
+        0.357
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_bench_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 108,
+      "world_aabb_studs_blender_xyz": [
+        6.429,
+        1.982,
+        3.839
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_bin_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        1.571,
+        1.571,
+        3.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_bin_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 120,
+      "world_aabb_studs_blender_xyz": [
+        1.714,
+        1.714,
+        3.107
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.010": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.011": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.012": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.013": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.014": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.015": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.016": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.017": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.018": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_post.019": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.571,
+        0.571,
+        32.0
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.002": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.003": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.004": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.005": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.006": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.007": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.008": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_COLLISION_roof.009": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        1.6
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_canopy_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 72,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        9.464,
+        34.2
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_coping_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.25,
+        0.25
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_edge_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        1.607,
+        2.714
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_gantry_COLLISION_post": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_gantry_COLLISION_post.001": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.786
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_gantry_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 48,
+      "world_aabb_studs_blender_xyz": [
+        13.286,
+        0.513,
+        11.786
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_lamp_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 60,
+      "world_aabb_studs_blender_xyz": [
+        0.5,
+        0.5,
+        11.429
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_lamp_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 84,
+      "world_aabb_studs_blender_xyz": [
+        3.196,
+        1.0,
+        11.429
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_surface_COLLISION": {
+      "collision": true,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_surface_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 12,
+      "world_aabb_studs_blender_xyz": [
+        142.857,
+        21.429,
+        1.286
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.001": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.002": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.003": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.004": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.005": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.006": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.007": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.008": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    },
+    "REFLECTED_PLATFORM_1_MODULE_1_tactile_VISUAL.009": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 722,
+      "world_aabb_studs_blender_xyz": [
+        14.286,
+        2.143,
+        0.169
+      ]
+    }
+  },
+  "render_material_triangles": {
+    "bench_timber": 60,
+    "cast_concrete": 120,
+    "concourse_terrazzo": 12,
+    "coping_stone": 120,
+    "dark_detail": 60,
+    "painted_steel": 936,
+    "sign_offwhite": 24,
+    "tactile_buff": 7220
+  },
+  "status": "design study, not validated in Studio",
+  "summary": {
+    "collision_triangles": 528,
+    "render_triangles": 8552
+  },
+  "units": "1 metre = 3.571428571 studs"
+}
