@@ -122,3 +122,27 @@ harness.test("touch minimum is at least 48 px and comfort is larger", function()
 	harness.truthy(Theme.size.touchMin >= 48)
 	harness.truthy(Theme.size.touchComfort > Theme.size.touchMin)
 end)
+
+-- Elevation is depth by fill step. If a higher level were darker than the one below, a raised
+-- card would look sunk into its panel, so the order is checked, not assumed.
+harness.test("elevation levels get lighter as they rise", function()
+	local flat = Theme.luminance(Theme.palette[Theme.elevation.flat])
+	local raised = Theme.luminance(Theme.palette[Theme.elevation.raised])
+	local overlay = Theme.luminance(Theme.palette[Theme.elevation.overlay])
+	harness.truthy(flat < raised, "raised must be lighter than flat")
+	harness.truthy(raised < overlay, "overlay must be lighter than raised")
+end)
+
+-- The button looks are pairs of fill and label. Each pair must meet the text rule, otherwise a
+-- primary or danger button would be unreadable in the cab.
+harness.test("button label colours reach 4.5:1 on their fills", function()
+	local pairs_ = {
+		{ "ink", "accent", "primary" },
+		{ "text", "raised", "secondary" },
+		{ "ink", "stop", "danger" },
+	}
+	for _, pair in pairs_ do
+		local ratio = Theme.contrast(Theme.palette[pair[1]], Theme.palette[pair[2]])
+		harness.truthy(ratio >= 4.5, `{pair[3]} button label is {ratio} on its fill`)
+	end
+end)

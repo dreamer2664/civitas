@@ -106,6 +106,7 @@ Theme.size = {
 	touchComfort = 56, -- cab controls and primary actions
 	hairline = 1,
 	focusRing = 2,
+	dot = 12, -- status dot diameter
 	minTextSize = 12, -- UITextSizeConstraint floor; Roblox documents values below 9 as unreadable
 	maxTextSize = 72,
 }
@@ -157,6 +158,15 @@ function Theme.luminance(hex: string): number
 	local r, g, b = Theme.rgb(hex)
 	return 0.2126 * linear(r) + 0.7152 * linear(g) + 0.0722 * linear(b)
 end
+
+-- Elevation is a fill step, not a drop shadow: shadows cost fill-rate on low-end phones and the
+-- palette is night-lit (dark ink base, warm text), so depth reads as a lighter surface. Each level
+-- must be lighter than the one below it; tests/client/theme.spec.luau checks that order.
+Theme.elevation = {
+	flat = "surface",
+	raised = "raised",
+	overlay = "pressed",
+} :: { [string]: string }
 
 -- WCAG 2.x contrast ratio, from 1 to 21.
 function Theme.contrast(a: string, b: string): number
