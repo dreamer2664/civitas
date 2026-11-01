@@ -18,4 +18,11 @@ for check in lua['sidewalks']:
     def normalized(defects):
         return sorted((d['code'],round(d['x'],6),round(d['z'],6),d['detail']) for d in defects)
     assert normalized(check['result']['defects'])==normalized(other['defects']), check['source']
-print('PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks')
+assert lua['crossingCount']==len(py['crossingChecks']), 'crossing inventories disagree'
+by_crossing={(c['x'],c['z'],c['axis']):c for c in py['crossingChecks']}
+for crossing in lua['crossings']:
+    other=by_crossing[(crossing['x'],crossing['z'],crossing['axis'])]
+    assert math.isclose(crossing['result']['length'],other['length'],abs_tol=1e-7), 'crossing lengths disagree'
+    assert math.isclose(crossing['result']['maxStep'],other['maxStepStuds'],abs_tol=1e-7), 'crossing step checks disagree'
+    assert normalized(crossing['result']['defects'])==normalized(other['defects']), 'crossing defects disagree'
+print('PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks and 162 crossing axes')

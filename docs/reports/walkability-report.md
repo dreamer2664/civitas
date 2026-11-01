@@ -2,7 +2,48 @@
 
 **2026-11-01 / Manager A / NOT FROZEN / overall continuity gate RED**
 
-## Latest publication-first checkpoint
+## Current wake-2230 checkpoint — exhaustive grid crossings added
+
+Restored committed audit work on **walk/audit** (`20bd896`), attempted authenticated push
+first, then integrated the current published strata revision at `91ec775`. Fresh evidence
+uses strata **329d358**, whose World source still matches **8ae4bb0** exactly. World-owned
+source files were integrated unchanged; WALK did not patch the collision geometry.
+
+Added **162 crossing-axis checks across all 81 declared grid intersections**, using only
+actual constructed collision/support parts. Lune and independent Python results agree:
+**0 crossing gaps, 0 over-limit steps, 0 crossing body blockers; max step 0.254997 studs**.
+The tests cover both directions across each road, not only the gold acceptance route.
+No separate driveway inventory exists, so driveway-specific semantic coverage is not claimed;
+all 48 constructed sidewalk long axes continue to be checked.
+
+**Current gate is RED** for the same two sidewalks intersecting StationRearWall:
+x=**103.25 / 136.75**, blocked tested z interval **[961.25,969]**. Six precise partitioned
+spans, source paths and blocker IDs are exported to **walkability-geometry-defects.csv**.
+There are **no route/crossing/sidewalk gap or over-limit step findings** and no holes in the
+base containment proof. Decorative collision policy still has **291** findings separately.
+
+Numbers remain **1817 parts**, **1632.999280 route studs**, **0.595001 max route step**,
+**0.75 max sidewalk step**, and **2,895,200 studs² sealed base**. Commands:
+`lune run tools/walkaudit/check_world.luau` (construction + geometry assertions),
+`python tools/walkaudit/audit_world.py` (independent checks + streaming envelopes),
+`python tools/walkaudit/compare.py` (parity, now including every crossing).
+
+Streaming recommendation remains **min 64 / target 384 as a mobile profiling candidate**:
+maximum sampled envelope **620 parts** at 384 versus **1813** at configured target 1024.
+The command above produced both numbers. Configuration remains **64/1024**, Improved,
+PauseOutsideLoadedArea, Opportunistic. No measured client residency or GPU draw-call claim.
+
+Complete verification rerun: lint/format/scoped analysis, **35 regression tests**, Rojo
+assembly, real Lune assertions, Python audit and parity. All code checks pass; overall audit
+correctly exits **1** for two blocked sidewalks. The top-down render now includes the crossing
+summary. Engine, platform-exit, first-frame grounding and mobile profiling remain unverified.
+
+**Publication remains blocked by authentication:** the supplied PAT is explicitly rejected
+by GitHub with **Invalid username or token**, exit 128. No successful push is claimed. Portable
+patch and Git bundle are retained outside the checkout; see tools/walkaudit/PUBLISH.md.
+
+## Previous publication-first checkpoint
+
 
 Created branch **`walk/audit`** directly from the already committed patch work and attempted
 push before further analysis, including an authenticated attempt using the supplied PAT.

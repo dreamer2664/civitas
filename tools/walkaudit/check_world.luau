@@ -63,6 +63,45 @@ for _, p in parts do
 	maximumSidewalkStep = math.max(maximumSidewalkStep, result.maxStep)
 	table.insert(checks, { source = p.id, result = result })
 end
+-- Check both road-crossing axes at every declared grid intersection, not just
+-- the acceptance route. No synthetic paving is created; all support is real parts.
+assert(
+	type(data.intersections) == "table" and #data.intersections > 0,
+	"missing crossing inventory"
+)
+assert(finite(data.sidewalkWidth) and data.sidewalkWidth >= 2, "invalid sidewalk width")
+local crossings = {}
+local blockedCrossings = 0
+local maximumCrossingStep = 0
+for _, intersection in data.intersections do
+	for _, key in { "x", "z", "widthX", "widthZ" } do
+		assert(finite(intersection[key]), "invalid crossing coordinate/width")
+	end
+	assert(intersection.widthX > 0 and intersection.widthZ > 0, "invalid road width")
+	for _, axis in { "x", "z" } do
+		local half = (if axis == "x" then intersection.widthX else intersection.widthZ) / 2
+			+ data.sidewalkWidth / 2
+		local crossingRoute: { Audit.Point } = {
+			{
+				x = intersection.x - (if axis == "x" then half else 0),
+				z = intersection.z - (if axis == "z" then half else 0),
+			},
+			{
+				x = intersection.x + (if axis == "x" then half else 0),
+				z = intersection.z + (if axis == "z" then half else 0),
+			},
+		}
+		local result = Audit.route(parts, crossingRoute, 0)
+		if #result.defects > 0 then
+			blockedCrossings += 1
+		end
+		maximumCrossingStep = math.max(maximumCrossingStep, result.maxStep)
+		table.insert(
+			crossings,
+			{ x = intersection.x, z = intersection.z, axis = axis, result = result }
+		)
+	end
+end
 local categories: { [string]: number } =
 	{ ROUTE_GAP = 0, STEP = 0, NONCOLLIDABLE_SURFACE = 0, BODY_BLOCKED = 0 }
 for _, defect in main.defects do
@@ -70,6 +109,11 @@ for _, defect in main.defects do
 end
 for _, check in checks do
 	for _, defect in check.result.defects do
+		categories[defect.code] = (categories[defect.code] or 0) + 1
+	end
+end
+for _, crossing in crossings do
+	for _, defect in crossing.result.defects do
 		categories[defect.code] = (categories[defect.code] or 0) + 1
 	end
 end
@@ -85,6 +129,10 @@ fs.writeFile(
 		blockedSidewalks = blockedSidewalks,
 		maximumSidewalkStep = maximumSidewalkStep,
 		sidewalks = checks,
+		crossings = crossings,
+		crossingCount = #crossings,
+		blockedCrossings = blockedCrossings,
+		maximumCrossingStep = maximumCrossingStep,
 	}, true)
 )
 print(
@@ -99,6 +147,15 @@ print(
 		blockedSidewalks
 	)
 )
+print(
+	string.format(
+		"LUNE CROSSINGS: checked=%d blocked=%d maxStep=%.6f",
+		#crossings,
+		blockedCrossings,
+		maximumCrossingStep
+	)
+)
+assert(blockedCrossings == 0, "real crossing continuity fails; see walkability-lune-results.json")
 assert(sealed, "ground seal unproven")
 assert(
 	#main.defects == 0,

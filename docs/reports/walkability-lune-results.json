@@ -1,4 +1,5 @@
 {
+  "blockedCrossings": 0,
   "blockedSidewalks": 2,
   "categoryCounts": {
     "BODY_BLOCKED": 6,
@@ -6,6 +7,1791 @@
     "ROUTE_GAP": 0,
     "STEP": 0
   },
+  "crossingCount": 162,
+  "crossings": [
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 630
+    }
+  ],
   "engineTested": false,
   "groundSealed": true,
   "mainRoute": {
@@ -14,6 +1800,7 @@
     "length": 1632.999280097293,
     "maxStep": 0.595001220703125
   },
+  "maximumCrossingStep": 0.25499725341796875,
   "maximumSidewalkStep": 0.75,
   "partCount": 1817,
   "sidewalkCount": 48,

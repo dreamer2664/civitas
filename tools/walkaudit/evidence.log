@@ -25,7 +25,7 @@ PASS ground with missing collision cannot establish seal
 8 oriented Luau tests passed, 0 failed
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.045s
+Ran 11 tests in 0.041s
 
 OK
   ok   city slice has the required varied massing and landmarks
@@ -40,16 +40,17 @@ Building project 'CIVITAS'
 Built project to walkability-milestone.rbxlx
 Executed real CityBuilder in Lune: 1817 BaseParts; 1633.00-stud route
 LUNE REAL AUDIT: parts=1817 route=1632.999280 maxStep=0.595001 routeDefects=0 sealed=true sidewalks=48 blocked=2
-/home/user/civitas/tools/walkaudit/check_world:107: real sidewalk continuity fails; see walkability-lune-results.json
+LUNE CROSSINGS: checked=162 blocked=0 maxStep=0.254997
+/home/user/civitas/tools/walkaudit/check_world:164: real sidewalk continuity fails; see walkability-lune-results.json
 [Stack Begin]
     Script '[C]' - function 'assert'
-    Script '/home/user/civitas/tools/walkaudit/check_world', Line 107
+    Script '/home/user/civitas/tools/walkaudit/check_world', Line 164
 [Stack End]
 
 {
   "status": "FAIL_SIDEWALK_CONTINUITY",
   "engineTested": false,
-  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
+  "sourceRevision": "91ec7755c076d0237940d20d937c676f9c3a8eb7",
   "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
   "partCount": 1817,
   "spawnChecks": [
@@ -123,12 +124,14 @@ LUNE REAL AUDIT: parts=1817 route=1632.999280 maxStep=0.595001 routeDefects=0 se
   },
   "unbatchedMainPassEstimate": 1813,
   "measuredDrawCalls": null,
+  "crossingDefectCount": 0,
+  "maximumCrossingStep": 0.25499725341796875,
   "sidewalkDefectCount": 6
 }
 defects=0; decorativeCollisions=291
-PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks
+PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks and 162 crossing axes
 {
-  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
+  "sourceRevision": "91ec7755c076d0237940d20d937c676f9c3a8eb7",
   "staticWorkspaceParts": 0,
   "generatedWalkableParts": 1817,
   "drawCalls": null,

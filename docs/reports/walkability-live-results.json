@@ -1,7 +1,7 @@
 {
   "status": "FAIL_SIDEWALK_CONTINUITY",
   "engineTested": false,
-  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
+  "sourceRevision": "91ec7755c076d0237940d20d937c676f9c3a8eb7",
   "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
   "partCount": 1817,
   "spawnChecks": [
@@ -3002,6 +3002,1306 @@
     "Platform absent: station placeholder cannot prove platform exit",
     "Landmark sight line and first-frame character grounding unverified"
   ],
+  "crossingChecks": [
+    {
+      "x": -650,
+      "z": -620,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -450,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -300,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -145,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 0,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 150,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 295,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 455,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 630,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -650,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -620,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -450,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -300,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -145,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 0,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 150,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 295,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 455,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 630,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -490,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -620,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -450,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -300,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -145,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 0,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 150,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 295,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 455,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 630,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -350,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -620,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -450,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -300,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -145,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 0,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 150,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 295,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 455,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 630,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -200,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -620,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -450,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -300,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -145,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 0,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 150,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 295,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 455,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 630,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": -55,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -620,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -450,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -300,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -145,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 0,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 150,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 295,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 455,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 630,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -620,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -450,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -300,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -145,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 0,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 150,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 295,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 455,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 630,
+      "axis": "x",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 270,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -620,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -450,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -300,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -145,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 0,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 150,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 295,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 455,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 630,
+      "axis": "x",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 435,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -620,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -620,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -450,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -450,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -300,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -300,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -145,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": -145,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 0,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 0,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 150,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 150,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 295,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 295,
+      "axis": "z",
+      "length": 12.0,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 455,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 630,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 620,
+      "z": 630,
+      "axis": "z",
+      "length": 33.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    }
+  ],
+  "crossingDefectCount": 0,
+  "maximumCrossingStep": 0.25499725341796875,
   "sidewalkChecks": [
     {
       "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_1",

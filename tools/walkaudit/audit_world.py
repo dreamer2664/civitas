@@ -147,6 +147,18 @@ if __name__=='__main__':
         sample=dict(data,route=route)
         check=audit(sample,minimum=0,measure_streaming=False,check_spawns=False)
         sidewalk_checks.append(dict(id=part['id'],length=check['routeLength'],maxStepStuds=check['maxStepStuds'],defects=check['defects']))
+    crossing_checks=[]
+    for intersection in data['intersections']:
+        for axis in ('x','z'):
+            half=intersection['widthX' if axis=='x' else 'widthZ']/2+data['sidewalkWidth']/2
+            route=[dict(x=intersection['x']- (half if axis=='x' else 0),z=intersection['z']-(half if axis=='z' else 0)),
+                   dict(x=intersection['x']+ (half if axis=='x' else 0),z=intersection['z']+(half if axis=='z' else 0))]
+            check=audit(dict(data,route=route),minimum=0,measure_streaming=False,check_spawns=False)
+            crossing_checks.append(dict(x=intersection['x'],z=intersection['z'],axis=axis,length=check['routeLength'],maxStepStuds=check['maxStepStuds'],defects=check['defects']))
+    result['crossingChecks']=crossing_checks
+    result['crossingDefectCount']=sum(len(c['defects']) for c in crossing_checks)
+    result['maximumCrossingStep']=max(c['maxStepStuds'] for c in crossing_checks)
+    if result['crossingDefectCount']: result['status']='FAIL_CROSSING_CONTINUITY'
     result['sidewalkChecks']=sidewalk_checks
     result['sidewalkDefectCount']=sum(len(p['defects']) for p in sidewalk_checks)
     if result['sidewalkDefectCount']: result['status']='FAIL_SIDEWALK_CONTINUITY'
@@ -155,6 +167,16 @@ if __name__=='__main__':
     with (ROOT/'docs/reports/walkability-collision-defects.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=['code','id','x','y','z','sx','sy','sz'])
         writer.writeheader();writer.writerows(result['collisionPolicyFindings'])
-    print(json.dumps({k:v for k,v in result.items() if k not in ('defects','limitations','decorativeCollisionClasses','collisionPolicyFindings','sidewalkChecks')},indent=2))
+    geometry_rows=[]
+    scopes=[('acceptance-route',result['defects'])]
+    scopes += [(c['id'],c['defects']) for c in result['sidewalkChecks']]
+    scopes += [(f"crossing-{c['x']}-{c['z']}-{c['axis']}",c['defects']) for c in result['crossingChecks']]
+    for scope,defects in scopes:
+        for defect in defects:
+            geometry_rows.append(dict(scope=scope,**{k:defect.get(k,'') for k in ('code','x','z','startX','startZ','endX','endZ','detail')}))
+    with (ROOT/'docs/reports/walkability-geometry-defects.csv').open('w',newline='') as f:
+        writer=csv.DictWriter(f,fieldnames=['scope','code','x','z','startX','startZ','endX','endZ','detail'])
+        writer.writeheader();writer.writerows(geometry_rows)
+    print(json.dumps({k:v for k,v in result.items() if k not in ('defects','limitations','decorativeCollisionClasses','collisionPolicyFindings','sidewalkChecks','crossingChecks')},indent=2))
     print(f"defects={len(result['defects'])}; decorativeCollisions={result['decorativeCollisionCount']}")
-    raise SystemExit(1 if result['defects'] or result['sidewalkDefectCount'] else 0)
+    raise SystemExit(1 if result['defects'] or result['sidewalkDefectCount'] or result['crossingDefectCount'] else 0)
