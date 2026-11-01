@@ -1803,6 +1803,19 @@
   "maximumCrossingStep": 0.25499725341796875,
   "maximumSidewalkStep": 0.75,
   "partCount": 1817,
+  "recommendedSpawn": {
+    "point": {
+      "x": 136.75,
+      "z": -512
+    },
+    "route": {
+      "defects": {},
+      "intervals": 115,
+      "length": 1504.999280097293,
+      "maxStep": 0.55499267578125
+    },
+    "runtimeApplied": false
+  },
   "sidewalkCount": 48,
   "sidewalks": [
     {

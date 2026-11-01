@@ -102,6 +102,16 @@ for _, intersection in data.intersections do
 		)
 	end
 end
+local candidateRoute: { Audit.Point } = {}
+for _, point in route do
+	table.insert(candidateRoute, { x = point.x, z = point.z })
+end
+assert(
+	finite(data.recommendedSpawn.city.x) and finite(data.recommendedSpawn.city.z),
+	"invalid candidate spawn"
+)
+candidateRoute[1] = { x = data.recommendedSpawn.city.x, z = data.recommendedSpawn.city.z }
+local candidate = Audit.route(parts, candidateRoute, 1500)
 local categories: { [string]: number } =
 	{ ROUTE_GAP = 0, STEP = 0, NONCOLLIDABLE_SURFACE = 0, BODY_BLOCKED = 0 }
 for _, defect in main.defects do
@@ -133,6 +143,11 @@ fs.writeFile(
 		crossingCount = #crossings,
 		blockedCrossings = blockedCrossings,
 		maximumCrossingStep = maximumCrossingStep,
+		recommendedSpawn = {
+			runtimeApplied = false,
+			point = data.recommendedSpawn.city,
+			route = candidate,
+		},
 	}, true)
 )
 print(
@@ -155,6 +170,7 @@ print(
 		maximumCrossingStep
 	)
 )
+assert(#candidate.defects == 0, "recommended spawn route geometry fails")
 assert(blockedCrossings == 0, "real crossing continuity fails; see walkability-lune-results.json")
 assert(sealed, "ground seal unproven")
 assert(

@@ -23,6 +23,10 @@ svg.append(f'<polyline points="{points}" fill="none" stroke="#ffd465" stroke-wid
 for check in result.get('sidewalkChecks',[]):
     for d in check['defects']:
         x,z=xy(d['x'],d['z']);svg.append(f'<circle cx="{x}" cy="{z}" r="7" fill="#ff5e60"><title>{html.escape(d["code"]+": "+d["detail"])}</title></circle>')
+candidate=data.get('recommendedSpawn',{}).get('city')
+if candidate:
+    x,z=xy(candidate['x'],candidate['z'])
+    svg.append(f'<circle cx="{x}" cy="{z}" r="7" fill="#6fe2e7" stroke="#142230"><title>Unapplied spawn candidate ({candidate["x"]}, {candidate["z"]}); 1505-stud route; geometry-visible landmark anchors</title></circle>')
 for i,p in enumerate(data['route']):
     x,z=xy(p['x'],p['z']);svg.append(f'<circle cx="{x}" cy="{z}" r="5" fill="#ffd465" stroke="#142230"/><text x="{x+9}" y="{z-8}" font-size="13" fill="#fff1c6">{i+1}</text>')
 for i,p in enumerate(data['route']):

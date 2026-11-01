@@ -2,9 +2,9 @@
 
 `bash tools/walkaudit/verify.sh` from repo root runs lint, format and scoped Luau static
 analysis, 18 pure Luau regression tests, 11 Python clipping/geometry regression tests,
-9 continuous streaming-envelope regression tests,
+9 continuous streaming-envelope regression tests, 9 conservative sightline tests,
 strata's 6 generator tests, Rojo assembly, actual builder export and exact geometry audit.
-It returns nonzero for route, sidewalk or crossing continuity defects. This is NOT an engine test.
+It returns nonzero for route, sidewalk, crossing or actual-spawn tested-anchor failures. This is NOT an engine test.
 
 `lune run tools/walkaudit/check_world.luau` is the direct real-geometry Lune assertion gate.
 It loads the actual builder/exporter and runs the strict pure `OrientedAudit` kernel.
@@ -61,6 +61,21 @@ streaming, Humanoid state, render submission or character grounding is simulated
 The old `run.luau` proposed box adapter remains available but is no longer the main city
 check. It must not overwrite the current evidence with a synthetic fixture pass.
 
+## Spawn anchor sightlines and candidate (not runtime applied)
+
+`python tools/walkaudit/sightlines.py` casts 3D rays through actual constructed bounding
+solids from an explicitly assumed eye offset. It skips fully transparent parts, but treats
+partial transparency and cylinders conservatively. No rig, FOV, camera or pixel visibility
+is simulated. The current spawn has no clear tested Crown/Lantern anchor (17 rays across
+12 landmarks). This is not a proof that all landmark pixels are invisible.
+
+The pure `src/server/Spawn/RecommendedPlan.luau` chooses (136.75,-512), Civic Archive Tower,
+and a 4.5-stud assumed eye offset. Lune proves the modified-first-waypoint route is clear
+and remains 1504.999280 studs; Python finds two clear landmark-anchor rays from existing
+support. This plan is not wired to runtime or applied to the existing SpawnLocation.
+`walkability-spawn-candidate.json` records that distinction explicitly. The original spawn
+still fails the anchor gate; no geometry or spawn is silently patched by the audit.
+
 ## Outputs
 
 `docs/reports/walkability-world.json`: actual part export and source waypoints.
@@ -68,6 +83,8 @@ check. It must not overwrite the current evidence with a synthetic fixture pass.
 all sidewalk findings, policy findings and streaming envelopes.
 `walkability-geometry-defects.csv`: all coordinate/span findings across route, sidewalks and crossings.
 `walkability-collision-defects.csv`: all 291 decorative-collision IDs, coordinates and sizes.
+`walkability-spawn-sightlines.csv/json`: actual-spawn target/blocker/hit coordinates.
+`walkability-spawn-candidate.json`: unapplied candidate route and anchor proof.
 `walkability-streaming-exact.json`: continuous bounding-footprint extrema and peak coordinates.
 `walkability-metrics.json`: configured properties, part counts and source SHA-256 manifest.
 `renders/walkability-route.svg`: actual footprints, gold audited route, red blocked sidewalks.
