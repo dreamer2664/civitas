@@ -1,0 +1,76 @@
+--!strict
+-- All dimensions are Roblox studs. This intentionally describes a walkable slice, not a full city.
+local CityConfig = {
+	seed = 2664,
+	ground = {
+		centerX = 0,
+		centerZ = 115,
+		width = 1540,
+		depth = 1880,
+		thickness = 12,
+	},
+	streets = {
+		localWidth = 13,
+		laneWidth = 8.5,
+		arterialWidth = 30,
+		sidewalkWidth = 3.5,
+		curbWidth = 0.65,
+		curbHeight = 0.28,
+		cornerRadius = 11,
+		gridX = { -650, -490, -350, -200, -55, 120, 270, 435, 620 },
+		gridZ = { -620, -450, -300, -145, 0, 150, 295, 455, 630 },
+		laneX = { -350, -55, 270 },
+		laneZ = { -300, 0, 295 },
+		minX = -720,
+		maxX = 700,
+		minZ = -650,
+		maxZ = 970,
+		stationAvenueX = 120,
+		cutSegments = {
+			{ name = "Canal diagonal", x1 = -490, z1 = -450, x2 = -350, z2 = -300 },
+			{ name = "Market diagonal", x1 = 270, z1 = 295, x2 = 435, z2 = 455 },
+			{ name = "Crooked Lane west 1", x1 = -200, z1 = -145, x2 = -175, z2 = -80 },
+			{ name = "Crooked Lane west 2", x1 = -175, z1 = -80, x2 = -200, z2 = 0 },
+			{ name = "Crooked Lane east 1", x1 = 435, z1 = 150, x2 = 455, z2 = 220 },
+			{ name = "Crooked Lane east 2", x1 = 455, z1 = 220, x2 = 435, z2 = 295 },
+		},
+	},
+	blocks = {
+		streetInset = 11,
+		lotsAcross = 3,
+		lotsDeep = 2,
+		lotGap = 8,
+		minWidth = 28,
+		maxWidth = 48,
+		minDepth = 25,
+		maxDepth = 43,
+		minHeight = 18,
+		maxHeight = 86,
+	},
+	square = {
+		centerX = 200,
+		centerZ = 75,
+		width = 100,
+		depth = 110,
+	},
+	station = {
+		centerX = 120,
+		forecourtZ = 810,
+		entryZ = 858,
+		concourseZ = 925,
+		width = 176,
+		depth = 150,
+	},
+	streaming = {
+		minRadius = 64,
+		targetRadius = 1024,
+		districtEdgePadding = 96,
+	},
+	buildingBudget = {
+		min = 200,
+		max = 400,
+		partTarget = 25000,
+	},
+}
+
+return CityConfig
