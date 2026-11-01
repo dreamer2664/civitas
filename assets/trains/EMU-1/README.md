@@ -11,6 +11,7 @@ assets/trains/tools/install_blender.sh
 blender -b --factory-startup --python-exit-code 1 -P assets/trains/EMU-1/build_emu.py
 blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/export_emu.py
 blender -b --factory-startup --python-exit-code 1 -P assets/trains/EMU-1/verify_emu.py
+blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/verify_doors.py
 ```
 
 The builder regenerates the source and three workbench renders. Exporter reads the source in memory and writes FBX, GLB and `mesh-stats.json`, leaving the source unchanged. The shared `../tools/export_common.py` is required. GLB verifier imports the export into Blender and checks six root/bogie positions; it is not a Roblox import. Use `--python-exit-code 1` to fail on script exceptions.
@@ -24,7 +25,7 @@ Source units are metres, Blender Z-up and car-forward +X; the exporter multiplie
 | Cab | 75.000 × 10.179 × 14.643 | 75.000 × 10.179 × 14.643 |
 | Intermediate | 71.429 × 10.179 × 14.643 | 71.429 × 10.179 × 14.643 |
 
-Trailing ends have been brought to the coupling datum. `CAB_ROOT` is at (0,0,0) and `INTERMEDIATE_ROOT` at (-76.786,0,0) studs in the source frame, i.e. 21 m + 0.5 m between leading coupling datums. `CAB_BOGIE_0_PIVOT`, `CAB_BOGIE_1_PIVOT` are 10.714 and 64.286 studs behind their root; the intermediate pivots are 10.714 and 60.714 studs behind its root. Door pivots are named `*_door_*_PIVOT` at outboard leaf edges, with 1.35 m proposed travel stored as metadata; no animation or tested kinematic implementation exists. Apertures are 1.30 m wide × 1.95 m high per source.
+Trailing ends have been brought to the coupling datum. `CAB_ROOT` is at (0,0,0) and `INTERMEDIATE_ROOT` at (-76.786,0,0) studs in the source frame, i.e. 21 m + 0.5 m between leading coupling datums. `CAB_BOGIE_0_PIVOT`, `CAB_BOGIE_1_PIVOT` are 10.714 and 64.286 studs behind their root; the intermediate pivots are 10.714 and 60.714 studs behind its root. Door pivots are named `*_door_*_PIVOT` at outboard leaf edges, with 1.35 m outward slide after a 0.24 m lateral plug-out. The GLB contains a `Door_open` animation with 16 channels; four render frames show the motion. Blender BVH checks found no leaf/body surface intersections in integer frames 1–24; this does not test other obstacles, continuous time or Roblox runtime collision. Apertures are 1.30 m wide × 1.95 m high per source.
 
 ## Geometry and collision
 
@@ -34,4 +35,4 @@ Trailing ends have been brought to the coupling datum. `CAB_ROOT` is at (0,0,0) 
 
 Purpose-named materials are porcelain body, smoked window, door vermilion, undercarriage, metal, headlamp and interior. These are preliminary solid materials, not final PBR or clean finished UV artwork. No reference photos or third-party assets were used; original procedural geometry.
 
-Renders: `renders/front-three-quarter.png`, `renders/side.png`, `renders/cab-interior.png`. They are headless Blender Workbench previews, not Studio screenshots.
+Renders: `renders/door-01.png`, `door-06.png`, `door-15.png`, `door-24.png` show the motion. Main views: `renders/front-three-quarter.png`, `renders/side.png`, `renders/cab-interior.png`. They are headless Blender Workbench previews, not Studio screenshots.

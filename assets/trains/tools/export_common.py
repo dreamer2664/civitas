@@ -24,5 +24,5 @@ def exports(objects,roots,base):
  for o in objects: o.select_set(True)
  bpy.context.view_layer.objects.active=roots[0]
  bpy.ops.export_scene.fbx(filepath=base+'.fbx',use_selection=True,object_types={'EMPTY','MESH'},axis_forward='-Z',axis_up='Y',apply_unit_scale=False,global_scale=1.0,add_leaf_bones=False,mesh_smooth_type='FACE',use_mesh_modifiers=True)
- bpy.ops.export_scene.gltf(filepath=base+'.glb',export_format='GLB',use_selection=True,export_yup=True,export_apply=True)
+ bpy.ops.export_scene.gltf(filepath=base+'.glb',export_format='GLB',use_selection=True,export_yup=True,export_apply=True,export_animations=True,export_animation_mode='NLA_TRACKS')
  print('EXPORTED',base+'.fbx',base+'.glb')
