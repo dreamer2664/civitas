@@ -5,6 +5,7 @@ local roblox = require("@lune/roblox")
 local luau = require("@lune/luau")
 local fs = require("@lune/fs")
 local serde = require("@lune/serde")
+local recommendedSpawn = require("../../src/server/Spawn/RecommendedPlan")
 local config = require("../../src/server/World/CityConfig")
 local generator = require("../../src/server/World/CityGenerator")
 local builderSource = fs.readFile("src/server/World/CityBuilder.luau")
@@ -38,6 +39,13 @@ for _, part in world:GetDescendants() do
 		if typeof(orientation) ~= "Vector3" then
 			orientation = roblox.Vector3.zero
 		end
+		local _, transparency = pcall(function()
+			return part.Transparency
+		end)
+		if type(transparency) ~= "number" then
+			transparency = 0
+		end
+		assert(transparency >= 0 and transparency <= 1, "invalid transparency")
 		local pos, size = part.Position, part.Size
 		local _, shape = pcall(function()
 			return part.Shape.Name
@@ -61,6 +69,7 @@ for _, part in world:GetDescendants() do
 			collide = part.CanCollide,
 			anchored = part.Anchored,
 			material = part.Material.Name,
+			transparency = transparency,
 			walk = part:GetAttribute("Walkable") == true
 				or part.Name == "CollidableGround"
 				or part.Name == "ConcourseFloor"
@@ -79,6 +88,8 @@ fs.writeFile(
 		bounds = plan.districtBounds[1],
 		stats = plan.stats,
 		station = plan.station,
+		landmarks = plan.landmarks,
+		recommendedSpawn = recommendedSpawn,
 		configStreaming = config.streaming,
 	}, true)
 )

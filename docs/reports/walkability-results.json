@@ -1,7 +1,7 @@
 {
   "status": "FAIL_SIDEWALK_CONTINUITY",
   "engineTested": false,
-  "sourceRevision": "0e866a46eea196488e6e027308f6d3d1f1f41e3f",
+  "sourceRevision": "64e3aa1f33c0b624724918c135e21a067de925cd",
   "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
   "partCount": 1817,
   "spawnChecks": [

@@ -1828,6 +1828,7 @@
 <circle cx="590.2340425531914" cy="1195.340425531915" r="7" fill="#ff5e60"><title>BODY_BLOCKED: Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall</title></circle>
 <circle cx="590.2340425531914" cy="1197.1276595744682" r="7" fill="#ff5e60"><title>BODY_BLOCKED: Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall</title></circle>
 <circle cx="590.2340425531914" cy="1198.2446808510638" r="7" fill="#ff5e60"><title>BODY_BLOCKED: Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall</title></circle>
+<circle cx="610.1914893617021" cy="316.468085106383" r="7" fill="#6fe2e7" stroke="#142230"><title>Unapplied spawn candidate (136.75, -512); 1505-stud route; geometry-visible landmark anchors</title></circle>
 <circle cx="610.1914893617021" cy="240.2127659574468" r="5" fill="#ffd465" stroke="#142230"/><text x="619.1914893617021" y="232.2127659574468" font-size="13" fill="#fff1c6">1</text>
 <circle cx="610.1914893617021" cy="633.4042553191489" r="5" fill="#ffd465" stroke="#142230"/><text x="619.1914893617021" y="625.4042553191489" font-size="13" fill="#fff1c6">2</text>
 <circle cx="618.0851063829787" cy="633.4042553191489" r="5" fill="#ffd465" stroke="#142230"/><text x="627.0851063829787" y="625.4042553191489" font-size="13" fill="#fff1c6">3</text>

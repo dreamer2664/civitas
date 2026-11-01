@@ -25,12 +25,17 @@ PASS ground with missing collision cannot establish seal
 8 oriented Luau tests passed, 0 failed
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.042s
+Ran 11 tests in 0.049s
 
 OK
 .........
 ----------------------------------------------------------------------
-Ran 9 tests in 0.217s
+Ran 9 tests in 0.227s
+
+OK
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
 
 OK
   ok   city slice has the required varied massing and landmarks
@@ -46,16 +51,16 @@ Built project to walkability-milestone.rbxlx
 Executed real CityBuilder in Lune: 1817 BaseParts; 1633.00-stud route
 LUNE REAL AUDIT: parts=1817 route=1632.999280 maxStep=0.595001 routeDefects=0 sealed=true sidewalks=48 blocked=2
 LUNE CROSSINGS: checked=162 blocked=0 maxStep=0.254997
-/home/user/civitas/tools/walkaudit/check_world:164: real sidewalk continuity fails; see walkability-lune-results.json
+/home/user/civitas/tools/walkaudit/check_world:180: real sidewalk continuity fails; see walkability-lune-results.json
 [Stack Begin]
     Script '[C]' - function 'assert'
-    Script '/home/user/civitas/tools/walkaudit/check_world', Line 164
+    Script '/home/user/civitas/tools/walkaudit/check_world', Line 180
 [Stack End]
 
 {
   "status": "FAIL_SIDEWALK_CONTINUITY",
   "engineTested": false,
-  "sourceRevision": "0e866a46eea196488e6e027308f6d3d1f1f41e3f",
+  "sourceRevision": "64e3aa1f33c0b624724918c135e21a067de925cd",
   "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
   "partCount": 1817,
   "spawnChecks": [
@@ -265,8 +270,10 @@ defects=0; decorativeCollisions=291
 }
 PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks and 162 crossing axes
 STREAMING PARITY PASS: report and audit use identical continuous bounding-footprint envelopes
+CANDIDATE SPAWN: point={'x': 136.75, 'z': -512} clearAnchors=2 route=1504.999280 (runtime not applied)
+SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks=12 testedAnchors=17 clear=0 (NO_TESTED_ANCHOR_CLEAR; camera/rig unverified)
 {
-  "sourceRevision": "0e866a46eea196488e6e027308f6d3d1f1f41e3f",
+  "sourceRevision": "64e3aa1f33c0b624724918c135e21a067de925cd",
   "sourceSHA256": {
     "src/server/World/CityBuilder.luau": "77bbab8baddb4223801e00c427fc83191c6ae6b6d46c2fd17605ff41f3fc1311",
     "src/server/World/CityConfig.luau": "59a685ec43cdf404012e467aa90befcfbe5aed5a44710d5e90db8ef418eda13d",
@@ -275,18 +282,21 @@ STREAMING PARITY PASS: report and audit use identical continuous bounding-footpr
     "src/server/Walkability/Audit.luau": "39eada5d259940d4ef1392187ae4ee43f633950561ed402e8105e94b9d5d8d5a",
     "src/server/Walkability/OrientedAudit.luau": "98627af08ff30b1dda903f88c15edd63702d836d9af43bbdcc1b0a690b935f67",
     "src/server/Spawn/Plan.luau": "6e9a19546a80d9787ab8a1ff1b41b3e9fd2709e6727b82c5809fca570621271c",
+    "src/server/Spawn/RecommendedPlan.luau": "ab13a94702c2a35c896b54ed4be168dc6cb6793d021dcf8bf3b69ec09a89c6d7",
     "tools/walkaudit/audit_world.py": "9e706e86fdda89d592c2e61314b747eb789c016488a73960fd200aaf937b73ff",
-    "tools/walkaudit/check_world.luau": "d2f06f0d76f1d758e9efa2b056a6deecce329dd8478a1b944174e6381cb7a2e5",
+    "tools/walkaudit/check_world.luau": "724232f64809993c11a47719d54a207d611a0db0d930b145cfd0d6ba0b9353c5",
     "tools/walkaudit/compare.py": "0d9b99419ab90c1372c8ebb29d37a05f0efdcc87790f8f25d50e17835c0e5941",
-    "tools/walkaudit/export_world.luau": "1209e812f17af1f447bef334b698583429f16508f739aab87c4244a47d9cec00",
+    "tools/walkaudit/export_world.luau": "21b9580f5819ec4923c9629509908bb9dfd81d06b104cb3c9877236c7cb8d6fe",
     "tools/walkaudit/measure.py": "f5a0be35263742a3a8bae42d6f83c6911f4189ce8c4db76824e11befe1928c56",
     "tools/walkaudit/render.py": "bd3de0649bb89019c4347b6502b24900e0f8872e89e0ea5b1206d1446c708237",
-    "tools/walkaudit/render_world.py": "e1dfa7448670f33423dadd3627ccf36400297eb5735b8a2b7ff82b0324590906",
+    "tools/walkaudit/render_world.py": "4fbbf3bd181a040ccee78ae5bf9e1fa5871d30dbb361578f78e3878aa8d5c2ad",
     "tools/walkaudit/run.luau": "205f30817e48cda3afca30760c5270c5229f55ee128e7284562051d2cdf16f88",
+    "tools/walkaudit/sightlines.py": "e3d4d9b98bd2e71594d474b814210e9d43c9fb67aee5f33c9380c1d28b0bbe9a",
     "tools/walkaudit/streaming.py": "b299babe4ec9b48e55c8d4728d8dbe891f2887b8cc0597ac829efab5f6f18cee",
-    "tools/walkaudit/verify.sh": "4f1af006c1ab02f277630f3abab9e5cfbbbd9fea868938c0172a1afb9b26c3d0",
+    "tools/walkaudit/verify.sh": "762ea19bcea504a02169e8fdda503e2eaa226825aca504ac5dc3614dc60de42b",
     "tests/walk/oriented.luau": "6d2b3edc0ea759cc75b2cf79c2139d1ee80330d1eac29ebf24375db435ebf737",
     "tests/walk/run.luau": "d0c299f1893524fb0d7b02559fea0522c95b49cef5b9d0a060b024f799900ed5",
+    "tests/walk/test_sightlines.py": "6223c0e81817e258831e1bd3cbb4675186aab3388c582d6aadd9a01ca3bdd4bb",
     "tests/walk/test_streaming.py": "4d991f557b97a5c5af00455ef807c3a9c44892d049787b03dffa431d23f96726",
     "tests/walk/test_world_audit.py": "3525e17fb60a41a42aad105e17844a79b98b17cb9c3146906756eb17861c7b2d"
   },

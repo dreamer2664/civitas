@@ -15,11 +15,15 @@ Fetched World revision: **329d358ca71f4fa4af2ae68e09d10f906d7db673**.
 returns **0**: World geometry is unchanged from the requested **8ae4bb0**, with 302 ordinary
 buildings, 12 landmarks and 64 irregular blocks. No World-owned geometry was edited.
 
-**New:** replaced 16-stud sampling as the primary streaming envelope with an analytic
-continuous interval sweep across the whole route. It detects maxima between former samples.
-Added 9 regression tests, including a peak deliberately hidden between sample positions,
-rounded-corner rejection, tangent/endpoint contacts, yaw, zero-length segments and a dense
-reference cross-check. The old samples remain in JSON for comparison, not as maxima claims.
+**New this checkpoint:** recovered the existing committed history from the verified bundle
+rather than rebuilding it, reran the complete real-world audit, and added conservative 3D
+landmark-anchor sightline checks. The current spawn has **0 clear anchors out of 17 tested
+across 12 landmarks** at an explicitly assumed 4.5-stud eye offset. This does not prove every
+landmark pixel is hidden or simulate the engine camera; exact target/blocker/hit coordinates
+are now recorded. A verified alternative spawn plan is documented below, not applied.
+
+The previous checkpoint's continuous streaming sweep remains unchanged: 384-radius peak
+621, 512 peak 1005, 1024 peak 1814. Nine regression tests cover that algorithm.
 
 ## Headless geometry results
 
@@ -96,6 +100,30 @@ teleport test. Platform integration, streamed teleport readiness, landmark sight
 first-frame grounded character physics remain unverified. No Studio/account/device test
 was performed or claimed. The sidewalk SpawnLocation comes from strata's builder.
 
+### WALK-007 — current spawn landmark-anchor rays occluded; alternative verified
+
+At actual spawn **(136.75,-640)**, assumed eye **(136.75,5.649994,-640)**, all **17 tested
+Crown/Lantern anchors across 12 actual landmarks** are blocked by constructed opaque massing.
+Example: ray to Old Town Clock Tower Lantern target **(-570,130.8,-375)** first hits
+`BuildingMassing.Block 25 Plot 3-1.UpperMassing` at
+**(-74.250008,43.013492,-560.884327)**. Every target, first blocker and 3D hit point is in
+**walkability-spawn-sightlines.csv/json**. Shapes/partial transparency are conservatively
+boxed/opaque; an occluded anchor set is not a proof of total landmark invisibility. Rig eye
+height, camera framing/FOV and the first-frame player view remain unverified.
+
+Chosen alternative: **(136.75,-512)**, on the same actual District A sidewalk and route slab.
+The pure **src/server/Spawn/RecommendedPlan.luau** records it and the Civic Archive Tower
+bearing. Lune proves its full-footprint route has **1504.999280 studs and zero defects**.
+At the geometry-supported eye point there are **two clear Crown/Lantern anchor rays** to
+Civic Archive Tower. Actual support top is 0.554993 studs. All checks use existing parts;
+no rescue paving, massing changes or spawn movement was performed. The alternative is
+**not applied at runtime**, and is not presented as a successful engine spawn. Its route
+proof and complete ray results are in **walkability-spawn-candidate.json**. The map marks
+this unapplied point cyan; gold remains the actual original audit route.
+
+Command: `python tools/walkaudit/sightlines.py` after the Lune check. It deliberately exits
+1 for the current spawn's failed tested-anchor gate while recording the clear candidate.
+
 ## Streaming / mobile recommendation — corrected continuous maxima
 
 Commands producing part count and geometry:
@@ -152,7 +180,7 @@ reused meshes and local spatially coherent models; never make the entire city Pe
 
 ## Verification and artifacts
 
-Run **`bash tools/walkaudit/verify.sh`**. Current expected exit **1**: two blocked sidewalks.
+Run **`bash tools/walkaudit/verify.sh`**. Current expected exit **1**: two blocked sidewalks and the current spawn tested-anchor gate.
 Full command output is committed at `tools/walkaudit/evidence.log`.
 
 * Selene owned Luau paths: **0 errors, 0 warnings, 0 parse errors**.
@@ -160,20 +188,23 @@ Full command output is committed at `tools/walkaudit/evidence.log`.
 * Scoped luau-lsp standard analysis: both pure audit kernels, spawn validator and specs;
   exit 0, no diagnostics, warning that no definitions file was supplied. Lune bindings are
   runtime-executed/validated; no blanket whole-project static-analysis claim.
-* **18 Luau + 11 Python geometry + 9 Python streaming + 6 strata = 44 regression tests pass**.
+* **18 Luau + 11 Python geometry + 9 Python streaming + 9 Python sightline + 6 strata = 53 regression tests pass**.
 * `rojo build default.project.json -o docs/reports/walkability-milestone.rbxlx`: success;
   assembly evidence only, not engine execution.
 * `lune run tools/walkaudit/check_world.luau`: actual geometry assertions; fails on sidewalks.
 * `python tools/walkaudit/audit_world.py`: independent geometry + sampled/continuous metrics.
 * `python tools/walkaudit/compare.py`: Lune/Python parity on geometry, all 48 sidewalks and
   162 crossings; direct streaming report and integrated audit envelopes agree.
+* `python tools/walkaudit/sightlines.py`: actual-spawn and unapplied-candidate anchor rays,
+  using an assumed eye offset; current spawn fails.
 * `python tools/walkaudit/measure.py`: configured streaming, static/actual counts, code hashes.
 * `python tools/walkaudit/render_world.py`: real footprint map, gold route, red blocked axes,
   crossing summary and corrected 384-radius envelope peak.
 
 Main visual: **`docs/reports/renders/walkability-route.svg`**. Results:
 `walkability-lune-results.json`, `walkability-live-results.json`, `walkability-results.json`,
-`walkability-streaming-exact.json`, `walkability-metrics.json` and coordinate CSVs.
+`walkability-streaming-exact.json`, `walkability-metrics.json`, `walkability-spawn-candidate.json`,
+`walkability-spawn-sightlines.json` and coordinate CSVs.
 
 **Remaining blockers:** working push authentication; strata's WALK-004/005 resolutions;
 platform/station integration and engine/device acceptance. Freeze is not claimed.
