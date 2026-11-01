@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install the Debian Blender package for headless build/export jobs.
 set -euo pipefail
-if ! command -v blender >/dev/null 2>&1; then
+if ! command -v blender >/dev/null 2>&1 || [[ "$(blender --version 2>/dev/null | head -n 1)" != "Blender 4.3.2" ]]; then
   if [[ "$(id -u)" == 0 ]]; then
     apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get install -y blender=4.3.2+dfsg-2 blender-data=4.3.2+dfsg-2
