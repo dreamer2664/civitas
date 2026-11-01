@@ -32,13 +32,14 @@ Local copies (`.md` versions) were fetched to `/tmp/civ` during the session and 
 |---|---|
 | WCAG 2.x relative luminance and contrast ratio (W3C) | Every contrast figure in `Theme.luau`, `tests/client/theme.spec.luau` and UI-SPEC §4. Text 4.5:1; non-text 3:1 |
 | WCAG 1.4.1 Use of colour | Rule that colour is never the only signal (UI-SPEC §4) |
+| Unicode code point ranges (Basic Latin U+0020–U+007E, Latin-1 Supplement U+00A0–U+00FF) | The claimed glyph coverage in `FontCoverage.luau`. Ranges are standard; the claim that each Roblox face covers them is not measured (UI-SPEC D17, Q9) |
 
 ## Repository documents
 
 | Document | Used for |
 |---|---|
 | `docs/ASSET-INTERFACES.md` and `src/shared/Contracts/GeometryContract.luau` (Manager, ratified) | Car dimensions for the cab layout (UI-SPEC Q7) |
-| `docs/reports/vector-phase1-report.md` (on `vector/rail-core`) | Client input and dashboard fields requested by CODE · vector (§3). Answered in `docs/contracts/proposals/CabControl.proposed.luau` |
+| `docs/reports/vector-phase1-report.md` (on `main`) | Client input and dashboard fields requested by CODE · vector (§3). Answered in `src/shared/Contracts/Proposed/CabControl.luau` (contract branch `lumen/contract-proposals`) |
 | `docs/ARCHITECTURE.md` | Seven rules; contract-first workflow; budgets |
 | `docs/RESOURCES.md` | Roblox pages assigned to CODE · lumen |
 | `docs/STANDARDS.md` | Luau style, commit rules, evidence rule |
@@ -47,4 +48,6 @@ Local copies (`.md` versions) were fetched to `/tmp/civ` during the session and 
 
 - The `Font` set in `Theme.type` is the Roblox built-in family. Its names are checked against the Full API Dump; the look is
   not checked in Studio.
+- Glyph coverage of BuilderSans and Roboto: no Roblox page publishes it, and an unofficial search returned no coverage
+  table. The claim in `FontCoverage.luau` is therefore unverified.
 - Platform touch-size figures (44 pt, 48 dp) in UI-SPEC D9 are general guidance, not re-read this session.
