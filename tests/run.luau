@@ -16,6 +16,7 @@ require("./rail/kinematics.spec")
 
 -- Client specs (CODE · lumen), registered with tests/harness.
 require("./client/theme.spec")
+require("./client/text.spec")
 require("./client/layout.spec")
 require("./client/format.spec")
 require("./client/navigation.spec")
