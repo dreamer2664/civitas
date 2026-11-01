@@ -441,6 +441,56 @@
         6.964
       ]
     },
+    "INTERMEDIATE_PANTOGRAPH_headlamp": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 432,
+      "world_aabb_studs_blender_xyz": [
+        5.286,
+        4.429,
+        0.571
+      ]
+    },
+    "INTERMEDIATE_PANTOGRAPH_metal": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 264,
+      "world_aabb_studs_blender_xyz": [
+        3.76,
+        4.429,
+        4.759
+      ]
+    },
+    "INTERMEDIATE_PANTOGRAPH_undercarriage": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 412,
+      "world_aabb_studs_blender_xyz": [
+        5.893,
+        7.679,
+        4.964
+      ]
+    },
+    "INTERMEDIATE_ROOF_EQUIPMENT_body_porcelain": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 216,
+      "world_aabb_studs_blender_xyz": [
+        42.143,
+        7.143,
+        1.0
+      ]
+    },
+    "INTERMEDIATE_ROOF_EQUIPMENT_undercarriage": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 648,
+      "world_aabb_studs_blender_xyz": [
+        39.643,
+        5.714,
+        0.107
+      ]
+    },
     "INTERMEDIATE_R_door_0_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
@@ -643,19 +693,19 @@
     }
   },
   "render_material_triangles": {
-    "body_porcelain": 4444,
+    "body_porcelain": 4660,
     "cab_windscreen_glazing": 36,
     "door_vermilion": 1728,
-    "headlamp": 216,
+    "headlamp": 648,
     "interior": 24,
-    "metal": 1740,
-    "undercarriage": 2660,
+    "metal": 2004,
+    "undercarriage": 3720,
     "window_smoked": 5508
   },
   "status": "design study, not validated in Studio",
   "summary": {
     "collision_triangles": 168,
-    "render_triangles": 16356
+    "render_triangles": 18328
   },
   "units": "1 metre = 3.571428571 studs"
 }

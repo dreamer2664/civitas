@@ -27,6 +27,11 @@ def cube(n,loc,dim,material,parent, bevel=0):
  return o
 def wheel(name,loc,parent):
  bpy.ops.mesh.primitive_cylinder_add(vertices=24,radius=.42,depth=.13,location=(0,0,0),rotation=(math.pi/2,0,0)); o=bpy.context.object; o.name=name; o.parent=parent; o.location=loc; o.data.materials.append(black)
+def rod(name,a,b,r,material,parent):
+ a,b=Vector(a),Vector(b); d=b-a
+ bpy.ops.mesh.primitive_cylinder_add(vertices=12,radius=r,depth=d.length,location=(0,0,0))
+ o=bpy.context.object; o.name=name; o.parent=parent; o.location=(a+b)/2
+ o.rotation_euler=d.to_track_quat('Z','Y').to_euler(); o.data.materials.append(material); return o
 def shell_car(name,length,origin,cab):
  root=empty(name+'_ROOT',(origin,0,0)); root['pivot']='leading coupling face, rail top, track centre'; root['length_m']=length
  # Hollow, sectional body: two clearly separated doorway apertures per side.
@@ -123,6 +128,27 @@ def shell_car(name,length,origin,cab):
  cube(name+'_coupler',(-.1,0,.58),(.2,.42,.22),black,root,.02)
  return root
 shell_car('CAB',21,0,True); shell_car('INTERMEDIATE',20,-21.5,False)
+# Bespoke raised single-arm pantograph and HVAC, all separate from car-body
+# envelope. Height is rail-top referenced; contact shoe at 5.65m.
+inter=bpy.data.objects['INTERMEDIATE_ROOT']
+panto=empty('INTERMEDIATE_PANTOGRAPH',(-10,0,0),inter)
+panto['contact_height_m']=5.65
+for x in (-.65,.65):
+ for y in (-.53,.53):
+  cube('pantograph_insulator',(x,y,4.18),(.18,.18,.16),light,panto,.015)
+for y in (-.53,.53):
+ cube('pantograph_base',(0,y,4.30),(1.65,.08,.08),black,panto,.01)
+ rod('pantograph_lower_arm',(-.65,y,4.34),(.35,y,5.00),.045,silver,panto)
+ rod('pantograph_upper_arm',(.35,y,5.00),(-.42,y,5.60),.035,silver,panto)
+ rod('pantograph_brace',(-.50,y,4.34),(-.42,y,5.60),.022,black,panto)
+rod('pantograph_crossbrace',(.35,-.53,5),(.35,.53,5),.028,silver,panto)
+rod('pantograph_head_carrier',(-.42,-.62,5.60),(-.42,.62,5.60),.035,silver,panto)
+cube('pantograph_contact_strip',(-.42,0,5.64),(.10,2.15,.02),black,panto,.01)
+hvac=empty('INTERMEDIATE_ROOF_EQUIPMENT',(0,0,0),inter)
+for x in (-5.5,-14.5):
+ cube('HVAC_case',(x,0,4.24),(2.8,2.0,.28),white,hvac,.07)
+ for offset in (-.8,0,.8): cube('HVAC_vent',(x+offset,0,4.395),(.5,1.6,.03),black,hvac,.01)
+
 # Plug-slide: move each leaf outward first, then along the body.  The named
 # outboard-edge pivots are unchanged at rest. NLA tracks share a name for GLB.
 for door in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name and o.name.endswith('_PIVOT')]:
@@ -150,6 +176,11 @@ for rootname in ('CAB_ROOT','INTERMEDIATE_ROOT'):
   material=obj.data.materials[0].name if obj.data.materials else 'none'
   groups.setdefault(material,[]).append(obj)
  for material,objects in groups.items(): combine(objects,rootname.replace('_ROOT','')+'_STATIC_'+material)
+for equipment in [bpy.data.objects['INTERMEDIATE_PANTOGRAPH'],bpy.data.objects['INTERMEDIATE_ROOF_EQUIPMENT']]:
+ groups={}
+ for obj in list(equipment.children):
+  if obj.type=='MESH': groups.setdefault(obj.data.materials[0].name,[]).append(obj)
+ for material,items in groups.items(): combine(items,equipment.name+'_'+material)
 for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name and o.name.endswith('_PIVOT')]:
  items=[o for o in pivot.children if o.type=='MESH']
  items.sort(key=lambda o: 0 if o.name.endswith('_leaf') else 1)
@@ -191,6 +222,8 @@ scene.camera=camera('door_sequence',(-5.67,-8,1.8),(-5.67,-1.3,1.75),5.8)
 for frame in (1,6,15,24):
  scene.frame_set(frame); scene.render.filepath=os.path.join(D,'renders',f'door-{frame:02d}.png'); bpy.ops.render.render(write_still=True)
 scene.frame_set(1)
+scene.camera=camera('roof_equipment',(-24,-10,11),(-31.5,0,4.8),13)
+scene.render.filepath=os.path.join(D,'renders','roof-equipment.png'); bpy.ops.render.render(write_still=True)
 dep=bpy.context.evaluated_depsgraph_get(); total=0; counts={}
 for obj in scene.objects:
  if obj.type!='MESH': continue
