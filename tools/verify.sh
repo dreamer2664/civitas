@@ -57,6 +57,9 @@ analyse "luau-lsp analyze: shared contracts (types only, no Roblox globals)" \
 analyse "luau-lsp analyze: src/shared/Rail (pure, standard)" \
   --platform=standard --base-luaurc=.luaurc src/shared/Rail
 
+step "gen_network --check (map data matches docs/rail/NETWORK.md)"
+python3 tools/gen_network.py --check
+
 step "check_enums (Roblox names vs API dump)"
 python3 tools/check_enums.py --dump "$DUMP"
 
