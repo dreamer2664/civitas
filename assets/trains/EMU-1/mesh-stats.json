@@ -164,11 +164,11 @@
     "CAB_STATIC_cab_windscreen_glazing": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 24,
+      "triangles": 36,
       "world_aabb_studs_blender_xyz": [
-        9.464,
+        10.714,
         8.75,
-        3.65
+        8.4
       ]
     },
     "CAB_STATIC_headlamp": {
@@ -644,7 +644,7 @@
   },
   "render_material_triangles": {
     "body_porcelain": 4444,
-    "cab_windscreen_glazing": 24,
+    "cab_windscreen_glazing": 36,
     "door_vermilion": 1728,
     "headlamp": 216,
     "interior": 24,
@@ -655,7 +655,7 @@
   "status": "design study, not validated in Studio",
   "summary": {
     "collision_triangles": 168,
-    "render_triangles": 16344
+    "render_triangles": 16356
   },
   "units": "1 metre = 3.571428571 studs"
 }

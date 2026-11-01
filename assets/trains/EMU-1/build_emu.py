@@ -91,13 +91,13 @@ def shell_car(name,length,origin,cab):
   faces=[tuple(range(24,32))]
   for j in range(3):
    for i in range(8):
-    if i==4 and j<2: continue  # aperture, not a dark overlay on a solid nose
+    if i==4: continue  # aperture, not a dark overlay on a solid nose
     faces.append((j*8+i,j*8+(i+1)%8,(j+1)*8+(i+1)%8,(j+1)*8+i))
   mesh=bpy.data.meshes.new('cab nose'); mesh.from_pydata(verts,[],faces); mesh.update(); obj=bpy.data.objects.new(name+'_sculpted_nose',mesh); scene.collection.objects.link(obj); obj.parent=root; obj.data.materials.append(white)
   mod=obj.modifiers.new('shell thickness','SOLIDIFY'); mod.thickness=.06
   # The missing shell faces are replaced by thin glazed panels that follow the rake.
   # Each is a closed, non-zero-thickness wedge with alpha-blended glazing.
-  for j in range(2):
+  for j in range(3):
    outer=[verts[j*8+4],verts[j*8+5],verts[(j+1)*8+5],verts[(j+1)*8+4]]
    inner=[(x,y,z-.012) for x,y,z in outer]; vs=outer+inner
    fs=[(0,1,2,3),(7,6,5,4),(0,4,5,1),(1,5,6,2),(2,6,7,3),(3,7,4,0)]
@@ -168,9 +168,23 @@ scene.render.image_settings.file_format='PNG'; scene.render.filepath=os.path.joi
 scene.camera=camera('side',(-21,-48,2.4),(-21,0,2.0),46)
 scene.render.filepath=os.path.join(D,'renders','side.png'); bpy.ops.render.render(write_still=True)
 # Interior perspective: camera is inside cab looking forward to the desk and inner nose.
-scene.camera=camera('cab_interior',(-5.8,.45,2.4),(-3.0,-.35,1.55),4)
+scene.camera=camera('cab_interior',(-5.6,.40,2.5),(0,0,2.25),4)
 scene.camera.data.type='PERSP'; scene.camera.data.lens=16
+# Render-only sightline target and daylight. Added after source save and removed
+# before any export: the striped target makes an unobstructed view auditable.
+scene.render.engine='CYCLES'; scene.cycles.samples=16; scene.cycles.use_denoising=False
+scene.world.use_nodes=True
+scene.world.node_tree.nodes['Background'].inputs['Color'].default_value=(.5,.67,.8,1)
+scene.world.node_tree.nodes['Background'].inputs['Strength'].default_value=.8
+ld=bpy.data.lights.new('preview_sun','SUN'); ld.energy=2
+sun=bpy.data.objects.new('preview_sun',ld); scene.collection.objects.link(sun); sun.rotation_euler=(.3,-.5,-.4)
+backmat=mat('preview_target_blue',(.15,.38,.48)); stripe=mat('preview_target_gold',(.8,.58,.16))
+back=cube('preview_target',(5,0,2.5),(.15,8,5),backmat,None)
+stripes=[]
+for y in (-2,-1,0,1,2): stripes.append(cube('preview_target_stripe',(4.90,y,2.5),(.04,.15,5),stripe,None))
 scene.render.filepath=os.path.join(D,'renders','cab-interior.png'); bpy.ops.render.render(write_still=True)
+for ob in [sun,back]+stripes: bpy.data.objects.remove(ob,do_unlink=True)
+scene.render.engine='BLENDER_WORKBENCH'
 
 # Four-stage door movement evidence: closed, plugged out, mid-slide, open.
 scene.camera=camera('door_sequence',(-5.67,-8,1.8),(-5.67,-1.3,1.75),5.8)
