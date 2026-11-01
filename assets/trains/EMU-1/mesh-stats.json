@@ -1,5 +1,5 @@
 {
-  "max_mesh_triangles": 108,
+  "max_mesh_triangles": 2808,
   "meshes": {
     "CAB_COLLISION_floor": {
       "collision": true,
@@ -71,584 +71,154 @@
         10.536
       ]
     },
-    "CAB_L_door_0_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
-      ]
-    },
     "CAB_L_door_0_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_L_door_0_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_L_door_0_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_L_door_1_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_L_door_1_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_L_door_1_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_L_door_1_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_L_door_header_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
-      ]
-    },
-    "CAB_L_door_header_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
-      ]
-    },
-    "CAB_L_pillar_0_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_0_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_0_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_1_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_1_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_1_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_1_3": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_1_4": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_2_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_pillar_2_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_L_side_0_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        17.286,
-        0.429,
-        2.286
-      ]
-    },
-    "CAB_L_side_0_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        17.286,
-        0.429,
-        5.786
-      ]
-    },
-    "CAB_L_side_0_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        17.286,
-        0.429,
-        2.071
-      ]
-    },
-    "CAB_L_side_1_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        29.857,
-        0.429,
-        2.286
-      ]
-    },
-    "CAB_L_side_1_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        29.857,
-        0.429,
-        5.786
-      ]
-    },
-    "CAB_L_side_1_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        29.857,
-        0.429,
-        2.071
-      ]
-    },
-    "CAB_L_side_2_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        6.5,
-        0.429,
-        2.286
-      ]
-    },
-    "CAB_L_side_2_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        6.5,
-        0.429,
-        5.786
-      ]
-    },
-    "CAB_L_side_2_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        6.5,
-        0.429,
-        2.071
-      ]
-    },
-    "CAB_R_door_0_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_R_door_0_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_R_door_0_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_R_door_0_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_R_door_1_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_R_door_1_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "CAB_R_door_1_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "CAB_R_door_1_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
       ]
     },
-    "CAB_R_door_header_0": {
+    "CAB_STATIC_body_porcelain": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 2320,
       "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
+        74.286,
+        10.179,
+        12.571
       ]
     },
-    "CAB_R_door_header_1": {
+    "CAB_STATIC_cab_windscreen_glazing": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 36,
       "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
+        10.714,
+        8.75,
+        8.4
       ]
     },
-    "CAB_R_pillar_0_0": {
+    "CAB_STATIC_headlamp": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 216,
+      "world_aabb_studs_blender_xyz": [
+        0.286,
+        6.429,
+        0.5
+      ]
+    },
+    "CAB_STATIC_interior": {
       "collision": false,
       "nonmanifold_edges": 0,
       "triangles": 12,
       "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
+        62.929,
+        9.821,
+        0.429
       ]
     },
-    "CAB_R_pillar_0_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_0_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_1_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_1_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_1_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_1_3": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_1_4": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_2_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_pillar_2_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "CAB_R_side_0_1.08": {
+    "CAB_STATIC_metal": {
       "collision": false,
       "nonmanifold_edges": 0,
       "triangles": 108,
       "world_aabb_studs_blender_xyz": [
-        17.286,
-        0.429,
-        2.286
+        1.357,
+        4.214,
+        0.429
       ]
     },
-    "CAB_R_side_0_2.21": {
+    "CAB_STATIC_undercarriage": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 432,
       "world_aabb_studs_blender_xyz": [
-        17.286,
-        0.429,
-        5.786
+        71.786,
+        8.393,
+        5.375
       ]
     },
-    "CAB_R_side_0_3.31": {
+    "CAB_STATIC_window_smoked": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 972,
       "world_aabb_studs_blender_xyz": [
-        17.286,
-        0.429,
-        2.071
-      ]
-    },
-    "CAB_R_side_1_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        29.857,
-        0.429,
-        2.286
-      ]
-    },
-    "CAB_R_side_1_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        29.857,
-        0.429,
-        5.786
-      ]
-    },
-    "CAB_R_side_1_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        29.857,
-        0.429,
-        2.071
-      ]
-    },
-    "CAB_R_side_2_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        6.5,
-        0.429,
-        2.286
-      ]
-    },
-    "CAB_R_side_2_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        6.5,
-        0.429,
-        5.786
-      ]
-    },
-    "CAB_R_side_2_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        6.5,
-        0.429,
-        2.071
+        63.036,
+        10.071,
+        7.321
       ]
     },
     "CAB_bogie_0_frame": {
@@ -671,16 +241,6 @@
         0.964
       ]
     },
-    "CAB_console": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.357,
-        4.214,
-        0.429
-      ]
-    },
     "CAB_coupler": {
       "collision": false,
       "nonmanifold_edges": 0,
@@ -689,106 +249,6 @@
         0.714,
         1.5,
         0.786
-      ]
-    },
-    "CAB_desk": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.964,
-        4.643,
-        0.786
-      ]
-    },
-    "CAB_floor": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        62.929,
-        9.821,
-        0.429
-      ]
-    },
-    "CAB_headlamp": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.286,
-        1.071,
-        0.5
-      ]
-    },
-    "CAB_headlamp.001": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.286,
-        1.071,
-        0.5
-      ]
-    },
-    "CAB_roof": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        62.929,
-        9.714,
-        1.357
-      ]
-    },
-    "CAB_sculpted_nose": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 60,
-      "world_aabb_studs_blender_xyz": [
-        10.714,
-        10.179,
-        12.179
-      ]
-    },
-    "CAB_seat_back": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.536,
-        2.143,
-        3.036
-      ]
-    },
-    "CAB_seat_base": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        2.143,
-        2.143,
-        0.571
-      ]
-    },
-    "CAB_seat_stand": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.893,
-        0.893,
-        1.071
-      ]
-    },
-    "CAB_underframe": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        71.786,
-        8.393,
-        1.0
       ]
     },
     "CAB_wheel_0_-0.75_-1": {
@@ -871,16 +331,6 @@
         3.0
       ]
     },
-    "CAB_windscreen": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        7.964,
-        8.071,
-        3.554
-      ]
-    },
     "INTERMEDIATE_COLLISION_floor": {
       "collision": true,
       "nonmanifold_edges": 0,
@@ -951,604 +401,134 @@
         10.536
       ]
     },
-    "INTERMEDIATE_L_door_0_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
-      ]
-    },
     "INTERMEDIATE_L_door_0_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_L_door_0_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_L_door_0_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_L_door_1_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_L_door_1_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_L_door_1_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_L_door_1_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_L_door_header_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
-      ]
-    },
-    "INTERMEDIATE_L_door_header_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
-      ]
-    },
-    "INTERMEDIATE_L_pillar_0_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_0_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_0_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_1_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_1_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_1_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_1_3": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_1_4": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_2_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_2_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_pillar_2_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_L_side_0_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.286
-      ]
-    },
-    "INTERMEDIATE_L_side_0_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        5.786
-      ]
-    },
-    "INTERMEDIATE_L_side_0_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.071
-      ]
-    },
-    "INTERMEDIATE_L_side_1_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        28.214,
-        0.429,
-        2.286
-      ]
-    },
-    "INTERMEDIATE_L_side_1_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        28.214,
-        0.429,
-        5.786
-      ]
-    },
-    "INTERMEDIATE_L_side_1_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        28.214,
-        0.429,
-        2.071
-      ]
-    },
-    "INTERMEDIATE_L_side_2_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.286
-      ]
-    },
-    "INTERMEDIATE_L_side_2_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        5.786
-      ]
-    },
-    "INTERMEDIATE_L_side_2_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.071
-      ]
-    },
-    "INTERMEDIATE_R_door_0_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_R_door_0_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_R_door_0_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_R_door_0_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_R_door_1_-1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_R_door_1_-1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
-      ]
-    },
-    "INTERMEDIATE_R_door_1_1_glass": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        1.643,
-        0.089,
-        3.214
       ]
     },
     "INTERMEDIATE_R_door_1_1_leaf": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 216,
       "world_aabb_studs_blender_xyz": [
-        2.321,
-        0.321,
+        2.143,
+        0.402,
         6.964
       ]
     },
-    "INTERMEDIATE_R_door_header_0": {
+    "INTERMEDIATE_STATIC_body_porcelain": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 2124,
       "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
+        71.429,
+        10.179,
+        12.286
       ]
     },
-    "INTERMEDIATE_R_door_header_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        4.643,
-        0.429,
-        1.607
-      ]
-    },
-    "INTERMEDIATE_R_pillar_0_0": {
+    "INTERMEDIATE_STATIC_interior": {
       "collision": false,
       "nonmanifold_edges": 0,
       "triangles": 12,
       "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
+        70.143,
+        9.821,
+        0.429
       ]
     },
-    "INTERMEDIATE_R_pillar_0_1": {
+    "INTERMEDIATE_STATIC_metal": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 12,
+      "triangles": 1632,
       "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
+        64.286,
+        9.071,
+        8.982
       ]
     },
-    "INTERMEDIATE_R_pillar_0_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_1_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_1_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_1_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_1_3": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_1_4": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_2_0": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_2_1": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_pillar_2_2": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        0.321,
-        0.089,
-        5.5
-      ]
-    },
-    "INTERMEDIATE_R_side_0_1.08": {
+    "INTERMEDIATE_STATIC_undercarriage": {
       "collision": false,
       "nonmanifold_edges": 0,
       "triangles": 108,
       "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.286
+        68.214,
+        8.393,
+        1.0
       ]
     },
-    "INTERMEDIATE_R_side_0_2.21": {
+    "INTERMEDIATE_STATIC_window_smoked": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 108,
+      "triangles": 2808,
       "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        5.786
-      ]
-    },
-    "INTERMEDIATE_R_side_0_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.071
-      ]
-    },
-    "INTERMEDIATE_R_side_1_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        28.214,
-        0.429,
-        2.286
-      ]
-    },
-    "INTERMEDIATE_R_side_1_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        28.214,
-        0.429,
-        5.786
-      ]
-    },
-    "INTERMEDIATE_R_side_1_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        28.214,
-        0.429,
-        2.071
-      ]
-    },
-    "INTERMEDIATE_R_side_2_1.08": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.286
-      ]
-    },
-    "INTERMEDIATE_R_side_2_2.21": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        5.786
-      ]
-    },
-    "INTERMEDIATE_R_side_2_3.31": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        16.321,
-        0.429,
-        2.071
+        70.143,
+        10.071,
+        6.857
       ]
     },
     "INTERMEDIATE_bogie_0_frame": {
@@ -1579,56 +559,6 @@
         0.714,
         1.5,
         0.786
-      ]
-    },
-    "INTERMEDIATE_end_bulkhead": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.429,
-        9.786,
-        10.643
-      ]
-    },
-    "INTERMEDIATE_end_bulkhead.001": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        0.429,
-        9.786,
-        10.643
-      ]
-    },
-    "INTERMEDIATE_floor": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 12,
-      "world_aabb_studs_blender_xyz": [
-        70.143,
-        9.821,
-        0.429
-      ]
-    },
-    "INTERMEDIATE_roof": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        70.143,
-        9.714,
-        1.357
-      ]
-    },
-    "INTERMEDIATE_underframe": {
-      "collision": false,
-      "nonmanifold_edges": 0,
-      "triangles": 108,
-      "world_aabb_studs_blender_xyz": [
-        68.214,
-        8.393,
-        1.0
       ]
     },
     "INTERMEDIATE_wheel_0_-0.75_-1": {
@@ -1712,10 +642,20 @@
       ]
     }
   },
+  "render_material_triangles": {
+    "body_porcelain": 4444,
+    "cab_windscreen_glazing": 36,
+    "door_vermilion": 1728,
+    "headlamp": 216,
+    "interior": 24,
+    "metal": 1740,
+    "undercarriage": 2660,
+    "window_smoked": 5508
+  },
   "status": "design study, not validated in Studio",
   "summary": {
     "collision_triangles": 168,
-    "render_triangles": 12332
+    "render_triangles": 16356
   },
   "units": "1 metre = 3.571428571 studs"
 }

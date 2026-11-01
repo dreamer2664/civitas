@@ -1,5 +1,5 @@
 """Build a modular platform-kit design study in metres; Z is up, +X along platform."""
-import bpy, os, math
+import bpy, os, math, sys
 from mathutils import Vector
 D=os.path.dirname(os.path.abspath(__file__))
 bpy.context.preferences.filepaths.save_version=0
@@ -44,6 +44,9 @@ for rt in [o for o in s.objects if o.type=='EMPTY']:
  bpy.ops.object.select_all(action='DESELECT')
  for o in visual: o.select_set(True)
  bpy.context.view_layer.objects.active=visual[0]; bpy.ops.object.join(); visual[0].name=rt.name+'_VISUAL'
+sys.path.insert(0,os.path.abspath(os.path.join(D,'..','..','trains','tools')))
+from palette import setup as setup_palette
+setup_palette()
 s.render.engine='BLENDER_WORKBENCH'; s.display.shading.light='STUDIO'; s.display.shading.color_type='MATERIAL'; s.display.shading.show_shadows=True; s.display.shading.show_cavity=True
 s.render.resolution_x=1400; s.render.resolution_y=800; s.render.resolution_percentage=100
 def camera(n,loc,target,scale):

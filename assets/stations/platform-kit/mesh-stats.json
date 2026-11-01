@@ -192,6 +192,15 @@
       ]
     }
   },
+  "render_material_triangles": {
+    "bench_timber": 60,
+    "cast_concrete": 12,
+    "coping_stone": 12,
+    "dark_detail": 60,
+    "painted_steel": 288,
+    "sign_offwhite": 24,
+    "tactile_buff": 3612
+  },
   "status": "design study, not validated in Studio",
   "summary": {
     "collision_triangles": 228,

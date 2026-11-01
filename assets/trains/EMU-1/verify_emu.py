@@ -11,3 +11,12 @@ for name,x in expected.items():
  print('PIVOT',name,tuple(round(q,4) for q in v))
  assert abs(v.x-x)<0.001 and abs(v.y)<0.001 and abs(v.z)<0.001, name
 print('GLB pivot checks passed:',len(expected))
+door=bpy.data.objects.get('CAB_L_door_0_-1_PIVOT')
+assert door is not None
+positions=[]
+for frame in (1,6,24):
+ bpy.context.scene.frame_set(frame); v=door.matrix_world.translation.copy(); positions.append(v)
+ print('DOOR',frame,tuple(round(q,4) for q in v))
+assert abs((positions[1]-positions[0]).y + .24/.28)<.001
+assert abs((positions[2]-positions[1]).x + 1.35/.28)<.001
+print('GLB door animation displacement checks passed')
