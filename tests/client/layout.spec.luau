@@ -171,3 +171,78 @@ harness.test(
 		end
 	end
 )
+
+-- Device profiles (UI-SPEC §6). Each named profile must give every menu column a touch target of
+-- at least the touch minimum, and the cab must be unavailable wherever its thumb zones would be
+-- too narrow to use. These are the claims the Manager's device table repeats.
+local SAMPLES: { [string]: { w: number, h: number } } = {
+	["phone-portrait"] = IPHONE_PORTRAIT,
+	["phone-landscape"] = IPHONE_LANDSCAPE,
+	["tablet-portrait"] = TABLET_PORTRAIT,
+	["tablet-landscape"] = { w = 1024, h = 768 },
+	["desktop"] = DESKTOP,
+}
+
+harness.test("each sample viewport maps to its named profile", function()
+	for name, size in SAMPLES do
+		harness.equal(Layout.profileFor(size.w, size.h).name, name, name)
+	end
+end)
+
+harness.test("every profile keeps menu columns at or above the touch minimum", function()
+	local gap = Theme.space.s4
+	for name, size in SAMPLES do
+		local profile = Layout.profileFor(size.w, size.h)
+		local area = { x = 0, y = 0, w = size.w - 2 * profile.gutter, h = size.h }
+		local cells = Layout.gridCells(area, profile.columns, 1, gap)
+		for _, cell in cells do
+			harness.truthy(
+				Layout.meetsTouchMinimum(cell.w, cell.h, Theme.size.touchMin),
+				`{name}: a menu column is {cell.w}×{cell.h}, below the touch minimum`
+			)
+		end
+	end
+end)
+
+harness.test("the cab is available in landscape and on desktop, never in portrait", function()
+	harness.falsy(Layout.profileFor(390, 844).cabAvailable, "phone portrait")
+	harness.falsy(Layout.profileFor(768, 1024).cabAvailable, "tablet portrait")
+	harness.truthy(Layout.profileFor(844, 390).cabAvailable, "phone landscape")
+	harness.truthy(Layout.profileFor(1920, 1080).cabAvailable, "desktop")
+end)
+
+harness.test("phone landscape cab thumb cells reach the comfort size", function()
+	local safe = Layout.safeRect(844, 390, { top = 0, bottom = 0, left = 44, right = 44 })
+	local zones = Layout.cabThumbZones(safe)
+	for _, zone in { zones.left, zones.right } do
+		local cells = Layout.gridCells(zone, 2, 2, Theme.space.s2)
+		for _, cell in cells do
+			harness.truthy(
+				cell.w >= Theme.size.touchComfort and cell.h >= Theme.size.touchComfort,
+				`thumb cell {cell.w}×{cell.h} is below the comfort size`
+			)
+		end
+	end
+end)
+
+harness.test("a centred control lands in the middle of a phone portrait screen", function()
+	local origin = Layout.anchorOrigin(
+		{ x = 0, y = 0, w = 390, h = 844 },
+		{ x = 200, y = 56 },
+		{ x = 0.5, y = 0.5 },
+		{ x = { scale = 0.5, offset = 0 }, y = { scale = 0.5, offset = 0 } }
+	)
+	harness.near(origin.x, 95, 1e-9)
+	harness.near(origin.y, 394, 1e-9)
+end)
+
+harness.test("a bottom-right control on phone landscape keeps its 16 px margin", function()
+	local origin = Layout.anchorOrigin(
+		{ x = 0, y = 0, w = 844, h = 390 },
+		{ x = 120, y = 56 },
+		{ x = 1, y = 1 },
+		{ x = { scale = 1, offset = -16 }, y = { scale = 1, offset = -16 } }
+	)
+	harness.near(origin.x, 708, 1e-9)
+	harness.near(origin.y, 318, 1e-9)
+end)

@@ -151,4 +151,58 @@ function Layout.gridCells(area: Rect, cols: number, rows: number, gap: number): 
 	return cells
 end
 
+-- Device profiles: the named layouts the UI spec promises. Columns and gutters are the numbers the
+-- screens use; cabAvailable says whether the train controls can be shown at all. The cab needs
+-- landscape width for two thumb zones, so portrait gets a rotate card instead (UI-SPEC §6).
+export type Profile = {
+	name: string,
+	columns: number,
+	gutter: number,
+	cabAvailable: boolean,
+}
+
+-- Gutters are spacing tokens (Theme.space): 16 on phones, 32 on desktop.
+local PROFILES: { [string]: Profile } = {
+	["phone-portrait"] = { name = "phone-portrait", columns = 1, gutter = 16, cabAvailable = false },
+	["phone-landscape"] = {
+		name = "phone-landscape",
+		columns = 2,
+		gutter = 16,
+		cabAvailable = true,
+	},
+	["tablet-portrait"] = {
+		name = "tablet-portrait",
+		columns = 1,
+		gutter = 24,
+		cabAvailable = false,
+	},
+	["tablet-landscape"] = {
+		name = "tablet-landscape",
+		columns = 2,
+		gutter = 24,
+		cabAvailable = true,
+	},
+	["desktop"] = { name = "desktop", columns = 3, gutter = 32, cabAvailable = true },
+}
+
+-- Which named profile a viewport is. Built on classify, so the phone threshold is the same
+-- everywhere in the UI.
+function Layout.profileFor(width: number, height: number): Profile
+	local bp = Layout.classify(width, height)
+	local key
+	if bp.class == "phone" then
+		key = if bp.orientation == "portrait" then "phone-portrait" else "phone-landscape"
+	elseif bp.class == "tablet" then
+		key = if bp.orientation == "portrait" then "tablet-portrait" else "tablet-landscape"
+	else
+		key = "desktop"
+	end
+	return PROFILES[key]
+end
+
+-- Every profile, in a fixed order, for tests and for the spec table.
+Layout.profileNames =
+	{ "phone-portrait", "phone-landscape", "tablet-portrait", "tablet-landscape", "desktop" }
+Layout.profiles = PROFILES
+
 return Layout
