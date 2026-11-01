@@ -50,8 +50,8 @@ analyse() {
 analyse "luau-lsp analyze: src/client (strict, Roblox definitions)" \
   --definitions="$DEFS" --sourcemap=build/sourcemap.json --base-luaurc=.luaurc src/client
 
-analyse "luau-lsp analyze: contract proposals (types only)" \
-  --platform=standard --base-luaurc=.luaurc docs/contracts/proposals
+analyse "luau-lsp analyze: shared contracts (types only, no Roblox globals)" \
+  --platform=standard --base-luaurc=.luaurc src/shared/Contracts
 
 # Vector's runtime modules are types-plus-pure-Luau and checked without Roblox definitions.
 analyse "luau-lsp analyze: src/shared/Rail (pure, standard)" \
