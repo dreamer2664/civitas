@@ -54,3 +54,24 @@ assert missing, 'Expected gap changed; inspect and update the reported seam'
 gap=(max(missing)-min(missing))+.01
 print('BOARDING_PROXY_GAP approximately_m=',round(gap,3),'studs=',round(gap/.28,3),'step_m=',.01)
 print('LIMIT: static representative pose, no Roblox character controller; gap traversability is not established')
+# Cross-check a 0.56 m corridor from the coach interior to the exact
+# platform-2 starting point used by verify_passenger_route.py. This remains a
+# set of rays, not a simulated character crossing the unsupported gap.
+visual=tree(False); blocked=[]
+for dx in (-.28,0,.28):
+ for z in (1.0,1.65,2.5):
+  p=visual.ray_cast(Vector((-10+dx,-1.8,z)),Vector((0,-1,0)),1.4)[0]
+  if p: blocked.append((dx,z,p))
+assert not blocked, ('boarding corridor blocked',blocked)
+widths=[]
+for dx in (-.28,0,.28):
+ absent=[]
+ for i in range(141):
+  y=-1.8-i*.01
+  p=c.ray_cast(Vector((-10+dx,y,.86)),Vector((0,0,-1)),.2)[0]
+  if p is None or abs(p.z-.76)>.015: absent.append(y)
+ assert absent, ('boarding gap unexpectedly absent; inspect',dx)
+ width=max(absent)-min(absent)+.01; widths.append(width)
+ assert width<=.115, ('boarding gap too wide',dx,width)
+print('BOARDING_CORRIDOR_PASS width_m=.56, max_unsupported_m=',round(max(widths),3),'over 3 sampled lines')
+print('ROUTE_JOIN_PASS train door x=-10m to platform-2 route start y=-3.2m in this aligned pose')
