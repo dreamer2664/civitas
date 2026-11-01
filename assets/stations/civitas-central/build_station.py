@@ -78,6 +78,15 @@ for x in range(-80,81,16):
 with bpy.data.libraries.load(KIT,link=False) as (source,dest):
  dest.objects=[n for n in source.objects if n.endswith('_VISUAL') or '_COLLISION' in n]
 kit={o.name:o for o in dest.objects if o}
+# Derive one shared station-specific tactile LOD from the original kit mesh.
+# The source kit .blend is untouched; every module references this datablock.
+tactile_source=kit['tactile_VISUAL']
+tmp=tactile_source.copy(); tmp.data=tactile_source.data.copy(); s.collection.objects.link(tmp); tmp.parent=None
+bpy.ops.object.select_all(action='DESELECT'); tmp.select_set(True); bpy.context.view_layer.objects.active=tmp
+mod=tmp.modifiers.new('Station tactile budget','DECIMATE'); mod.ratio=.20
+bpy.ops.object.modifier_apply(modifier=mod.name)
+tactile_source.data=tmp.data
+bpy.data.objects.remove(tmp,do_unlink=True)
 def piece(category,parent,offset,zscale=1):
  for src in kit.values():
   if not (src.name.startswith(category+'_VISUAL') or src.name.startswith(category+'_COLLISION')): continue
