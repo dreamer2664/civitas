@@ -237,20 +237,26 @@ the custom mouse icon is not changed in Phase 1.
 
 ## 8. Network map
 
-Source: `docs/rail/NETWORK.md`, written by CODE · vector, **not yet present**. The map does not read a file. It asks a
-**network source** (`UI/Map/NetworkSource.luau`) for a table, validates it, and draws it. Three kinds of source:
-- `stub`: `UI/Map/StubNetwork.luau`, synthetic, not game data. Used until the real network exists.
-- `module`: a Luau table generated from `NETWORK.md`. Roblox cannot read Markdown at runtime, so a generator must
-  produce the module. **That generator is not built**; it needs vector's file format first (Q10).
+Source: `docs/rail/NETWORK.md` (CODE · vector, on `main`). The map does not read a file. It asks a **network source**
+(`UI/Map/NetworkSource.luau`) for a table, validates it, and draws it. Three kinds of source:
+- `module` (what the client ships): `UI/Map/NetworkData.luau`, generated from `NETWORK.md` by `tools/gen_network.py`.
+  Roblox cannot read Markdown at runtime, so the generator writes the table. `tools/verify.sh` runs `--check`, which
+  fails when the committed table is stale. The generator checks that every station is a waypoint of each line it
+  serves, and that every §6 rule endpoint is a waypoint.
+- `stub`: `tests/fixtures/network-stub.luau`, synthetic, not game data. Used only by tests to exercise the boundary.
 - `unavailable`: returns no data and a reason. Used to test the unavailable screen.
 
 Invalid or missing data shows **"Network map unavailable."** The reason goes to the developer log with `warn`, and
 the player sees one sentence. The map never draws a partial network (D19).
 
-**Rendering convention (assumption, to reconcile with `docs/world/WORLD-MAP.md`):**
-- World **+Z is north**, drawn at the **top** of the map. Screen y is flipped against Z, so the map is not mirrored.
-- X runs east, left to right.
-- Coordinates are studs in the world frame. The frame must be stated in `NETWORK.md` §1 when it lands.
+**Rendering convention (from `NETWORK.md` §1, provisional until `docs/world/WORLD-MAP.md` exists):**
+- The world frame is X east, **Z south**, in studs. The map draws **north at the top**, so the anchor is the minimum Z
+  and screen y grows with Z. No mirror flip is needed. Earlier drafts assumed +Z north; vector's frame is the source.
+- X runs east, left to right. A test puts Airport Terminal top-left and Lakeside at the bottom, on the real data.
+- Line colours are lumen's choice, not in `NETWORK.md`: line 1 teal, line 2 slate, line 3 ochre (`tools/gen_network.py`).
+- Section kinds come from `NETWORK.md` §6. A segment not named there is ground, as §3 states.
+- Not drawn in Phase 1: the depot, the three junctions and the stopping patterns. They are not passenger-facing.
+  Element count is 57 of the 300 budget.
 
 **Content rules:**
 - Each line is a list of sections; each section is a list of points (64 maximum). Segments are straight pieces between points.
@@ -452,29 +458,33 @@ Each decision states what was chosen, why, and what was rejected. Decided here, 
 | D12 | "NO SIGNAL" after 2 s without `TrainDisplay`; never stale numbers | A dashboard showing old speed looks current and is wrong. | Holding the last value. |
 | D13 | Times are 24-hour `HH:MM` | Standard on European railway boards. | 12-hour clock. |
 | D14 | Delay within ±60 s is "On time"; above 300 s is `severelyLate`; exactly 300 s is `late` | Matches the tolerance most European operators publish; stops the board flickering. | No tolerance band. |
-| D15 | Map drawn from network data only, +Z north at the top, data failing validation rejected whole | Streaming can remove Workspace geometry; a truncated map looks right and is wrong. | Reading Workspace; drawing a partial network. |
+| D15 | Map drawn from network data only, north at the top (D24 fixes the axis), data failing validation rejected whole | Streaming can remove Workspace geometry; a truncated map looks right and is wrong. | Reading Workspace; drawing a partial network. |
 | D16 | Input through `Bindings.luau` as data, mapped to the Input Action System at runtime | One source for tests and for the running game; Roblox recommends the system; `Sink` prevents menu presses reaching the cab. | Hard-coded `UserInputService` checks scattered in components. |
 | D17 | Glyph coverage is a declared, claimed set (Basic Latin and Latin-1), enforced by a guard that fails the build; extra ranges added only after a Studio check | Roblox gives no coverage data and a missing glyph is silent. A loud failure with the character named is better than a box on screen. | Assuming coverage (ships boxes); a font-fallback layer (not available to this UI). |
 | D18 | Device profiles are named and tested: phone portrait and tablet portrait get no cab; landscape and desktop get one | Thumb zones need landscape width. Menus and map keep both orientations. | A single "mobile" profile (hides the portrait and landscape differences the spec depends on). |
 | D19 | Invalid or missing map data shows "Network map unavailable." and logs the reason; no partial network | A partly drawn map looks correct and is wrong. A logged reason keeps the failure visible to developers without alarming players. | Raising an error into the cab (crashes the HUD); drawing the valid part. |
-| D20 | The synthetic network lives in `src/client/UI/Map/StubNetwork.luau`, not `tests/` | The running client needs a source before the real network exists. The test and the client now read one copy. | Two copies (they drift). |
+| D20 | ~~The synthetic network lives in `src/client/UI/Map/StubNetwork.luau`, not `tests/`~~ Superseded by D25. | Was: the client needed a source before the real network existed. | — |
 | D21 | Proposed contracts go to `src/shared/Contracts/Proposed/` on their own branch, for Manager review as one PR, not merged | The Manager asked for PRs to `src/shared/Contracts/`, and ratification stays with the Manager. A separate PR keeps the UI PR free of contract changes. | Putting proposals in `docs/`: the Manager reviews code paths, and `docs/` would need a second move. |
 | D22 | `Layout` stays in `src/client/UI/`, not `src/shared/Gameplay/` | `src/shared/Gameplay/**` is CODE · vector's (OWNERSHIP). Layout is client UI arithmetic, and vector's code must not depend on it. | Moving it to shared Gameplay: breaks ownership and drags UI into the server. |
+| D23 | The client ships the network generated from `docs/rail/NETWORK.md` (`NetworkData.luau`), with a staleness check in verify | The real network is on `main`. A generated table keeps one source of truth and turns any change in vector's doc into a diff in review. | Hand-copying the table (drifts); reading Markdown at runtime (not possible in Roblox). |
+| D24 | North is -Z: the anchor is the minimum Z, and no mirror flip. Tests put Airport Terminal top-left on real data | Vector's frame is X east, Z south. The first draft assumed +Z north with a flip; that was wrong for vector's data, and only a test on the real network catches it. | Keeping the flip and reversing the data (would hide the frame from the next reader). |
+| D25 | The stub returns to `tests/fixtures/` and is used only by tests | It is synthetic. Shipping it would put invented stations in the game. Supersedes D20. | Keeping it in `src/` for the running client (no longer needed now that real data exists). |
+| D26 | Line colours (teal, slate, ochre) and the §6 section rules are lumen's encoding of vector's network, and live in one generator | Neither is in NETWORK.md as data. Keeping them in one place makes each choice reviewable. | Hard-coding them in the map view (scatters the decision). |
 
 ## 15. Open questions and reconciliation
 
 | # | Question | Owner | Blocks |
 |---|---|---|---|
 | Q1 | Art bible (`docs/art/` or similar) is not on any branch. Reconcile §2 when it lands. | BLENDER · atlas | §2 only |
-| Q2 | `docs/rail/NETWORK.md` does not exist. Map uses the synthetic fixture until it does. Frame must be stated in §1 of that file. | CODE · vector | §8 real data |
-| Q3 | `docs/world/WORLD-MAP.md` does not exist. The +Z-north convention in §8 is an assumption. | BLENDER · atlas | §8 convention |
+| Q2 | ~~`docs/rail/NETWORK.md` does not exist.~~ Resolved: on `main`; the frame is stated in §1 (X east, Z south). | — | §8 |
+| Q3 | `docs/world/WORLD-MAP.md` does not exist (checked on `main`). The map follows NETWORK.md §1 until it does; if atlas's frame differs, the generator and the anchor change. | BLENDER · atlas | §8 convention |
 | Q4 | Currency code: one currency for the place, or set per region? The proposal assumes one place currency. | Manager A | §9.8 |
 | Q5 | `StationContract` (departures, platform, status) is not yet proposed. | CODE · vector | §9.7 |
 | Q6 | Pause and emergency: a `menuDuringCab` context holding only the emergency brake, so the brake works with any menu open. Proposed in this draft; implemented once the Input Action System mapping is verified in Studio. | CODE · lumen | §7, §9.4 |
 | Q7 | Cab car dimensions for the dashboard layout are in `GeometryContract` (§4 of `docs/ASSET-INTERFACES.md`, ratified). Not yet read into a layout; the cab layout here does not depend on car size. | CODE · lumen | none |
 | Q8 | Notch count 8 (throttle and brake) is a lumen proposal in `CabControl.luau` (Proposed). | CODE · vector | §9.5 |
 | Q9 | Studio check of the claimed coverage: render Basic Latin and Latin-1 in each face (BuilderSans, BuilderSansMedium, BuilderSansBold, BuilderSansExtraBold, RobotoCondensed, RobotoMono). Remove any range that shows a box. Then decide which Latin Extended characters to add. | Manager (Studio) | §3, D17 |
-| Q10 | Generator from `docs/rail/NETWORK.md` to a Luau module for the map. Needs vector's file format first. | CODE · vector, then CODE · lumen | §8 real data |
+| Q10 | ~~Generator from `NETWORK.md`.~~ Built: `tools/gen_network.py`. Open: vector to confirm the §6 section wording maps to the rules in the generator (D26). | CODE · vector | §8 |
 | Q11 | Contract proposals (`src/shared/Contracts/Proposed/`) need vector's agreement and Manager ratification before any client code imports them. | Manager A, CODE · vector | §9.7–9.9, §9.5 |
 
 ## 16. Change log
@@ -483,3 +493,5 @@ Each decision states what was chosen, why, and what was rejected. Decided here, 
 - 2026-11-01: second pass after Manager review. Added glyph guard (§3), elevation and status dot (§5), device profiles
   with measured table (§6), network source and unavailable screen (§8), component list (§11), streaming check (§12),
   verification rows (§13), decisions D17–D22 and open questions Q9–Q11. Contract proposals moved out of `docs/`.
+- 2026-11-01: map rebuilt on vector's `NETWORK.md` (on `main` at 66dd635). Axis corrected to X east, Z south (D24); real
+  network generated (D23); stub back to tests (D25); line colours and section rules recorded (D26). Q2 and Q10 resolved.
