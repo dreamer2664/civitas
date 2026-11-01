@@ -33,6 +33,19 @@ Trailing ends have been brought to the coupling datum. `CAB_ROOT` is at (0,0,0) 
 
 `*_COLLISION_*` objects are separate simple proxy meshes. Wall proxies are segmented around door apertures; visual meshes should be made non-colliding by the integrator, and proxy visibility/collision must be set in Studio. This is not yet a complete collision solution: cab and car ends need properly designed proxies, and moving-door collision must be integrated and tested. Keep train unanchored per contract; vector determines runtime assembly.
 
-Purpose-named materials are porcelain body, smoked window, door vermilion, undercarriage, metal, headlamp and interior. These are preliminary solid materials, not final PBR or clean finished UV artwork. No reference photos or third-party assets were used; original procedural geometry.
+Eight purpose-named materials share `assets/trains/textures/rail_palette.png`, a reproducibly generated 1024×1024 base-colour swatch atlas. Each face has nondegenerate UVs within the appropriate swatch. This is a flat-colour atlas, not a detailed paint/weathering texture set; there are no normal, metallic or roughness texture maps. Roughness is 0.38 for stock materials and 0.12 for cab glazing. GLB contains one embedded image; FBX embeds the same atlas. Import appearance requires Studio validation.
+
+| Render material | Triangles | Share |
+|---|---:|---:|
+| body_porcelain | 4,444 | 27.19% |
+| cab_windscreen_glazing | 24 | 0.15% |
+| door_vermilion | 1,728 | 10.57% |
+| headlamp | 216 | 1.32% |
+| interior | 24 | 0.15% |
+| metal | 1,740 | 10.65% |
+| undercarriage | 2,660 | 16.28% |
+| window_smoked | 5,508 | 33.70% |
+
+Shares use 16,344 render triangles; rounding may affect totals. No reference photos or third-party assets were used; original procedural geometry.
 
 Renders: `renders/door-01.png`, `door-06.png`, `door-15.png`, `door-24.png` show the motion. Main views: `renders/front-three-quarter.png`, `renders/side.png`, `renders/cab-interior.png`. They are headless Blender Workbench previews, not Studio screenshots.

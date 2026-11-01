@@ -1,5 +1,5 @@
 """Preliminary, reproducible exterior study. Not a completed production asset."""
-import bpy, math, json, os
+import bpy, math, json, os, sys
 from mathutils import Vector
 from mathutils.geometry import tessellate_polygon
 D=os.path.dirname(os.path.abspath(__file__))
@@ -154,6 +154,9 @@ for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name
  items=[o for o in pivot.children if o.type=='MESH']
  items.sort(key=lambda o: 0 if o.name.endswith('_leaf') else 1)
  combine(items,pivot.name.replace('_PIVOT','_leaf'))
+sys.path.insert(0,os.path.join(D,'..','tools'))
+from palette import setup as setup_palette
+setup_palette()
 # Studio workbench preview. Render is a design study, not proof of final visual quality.
 scene.render.engine='BLENDER_WORKBENCH'; scene.display.shading.light='STUDIO'; scene.display.shading.color_type='MATERIAL'; scene.display.shading.show_shadows=True; scene.display.shading.show_cavity=True
 scene.render.resolution_x=1400; scene.render.resolution_y=700; scene.render.resolution_percentage=100

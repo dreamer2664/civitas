@@ -642,6 +642,16 @@
       ]
     }
   },
+  "render_material_triangles": {
+    "body_porcelain": 4444,
+    "cab_windscreen_glazing": 24,
+    "door_vermilion": 1728,
+    "headlamp": 216,
+    "interior": 24,
+    "metal": 1740,
+    "undercarriage": 2660,
+    "window_smoked": 5508
+  },
   "status": "design study, not validated in Studio",
   "summary": {
     "collision_triangles": 168,
