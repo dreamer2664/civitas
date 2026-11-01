@@ -3,12 +3,12 @@
 `bash tools/walkaudit/verify.sh` from repo root runs lint, format and scoped Luau static
 analysis, 18 pure Luau regression tests, 11 Python clipping/geometry regression tests,
 strata's 6 generator tests, Rojo assembly, actual builder export and exact geometry audit.
-It returns nonzero for route or sidewalk continuity defects. This is NOT an engine test.
+It returns nonzero for route, sidewalk or crossing continuity defects. This is NOT an engine test.
 
 `lune run tools/walkaudit/check_world.luau` is the direct real-geometry Lune assertion gate.
 It loads the actual builder/exporter and runs the strict pure `OrientedAudit` kernel.
 `python tools/walkaudit/compare.py` requires the independent Python results to agree with
-Lune on seal, length, steps and every sidewalk defect. Both currently fail city continuity
+Lune on seal, length, steps and every sidewalk/crossing defect. Both currently fail city continuity
 for the same two station-wall conflicts. Noncollidable intended surfaces are explicitly
 rejected even over an otherwise solid fallback ground slab.
 
@@ -38,6 +38,9 @@ streaming, Humanoid state, render submission or character grounding is simulated
 * Obstacles use a 1-stud outward margin, 5-stud headroom and 1.2-stud step threshold. Cylinder
   obstacles are conservatively enclosed; cylinder support cannot establish a pass. Unknown
   shapes and tilted surfaces fail. Future true ramps/meshes need exact surface support.
+* Both crossing axes at all 81 declared grid intersections are checked (162 crossings).
+  The current largest crossing step is 0.254997 studs with no gaps/body blockers. No
+  driveway inventory exists; this does not invent semantic driveway coverage.
 * Every actual sidewalk's long axis is independently audited (48, including diagonals),
   with 1-stud endpoint inset. Results identify source-part IDs and exact blocked spans.
 * District A and station-concourse spawn locations receive support/clearance checks. This
@@ -57,6 +60,7 @@ check. It must not overwrite the current evidence with a synthetic fixture pass.
 `docs/reports/walkability-world.json`: actual part export and source waypoints.
 `walkability-live-results.json` and `walkability-results.json`: results, spawn checks,
 all sidewalk findings, policy findings and streaming envelopes.
+`walkability-geometry-defects.csv`: all coordinate/span findings across route, sidewalks and crossings.
 `walkability-collision-defects.csv`: all 291 decorative-collision IDs, coordinates and sizes.
 `walkability-metrics.json`: configured properties and static/constructed part counts.
 `renders/walkability-route.svg`: actual footprints, gold audited route, red blocked sidewalks.

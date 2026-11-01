@@ -74,6 +74,8 @@ fs.writeFile(
 	serde.encode("json", {
 		parts = parts,
 		route = plan.route,
+		intersections = plan.intersections,
+		sidewalkWidth = config.streets.sidewalkWidth,
 		bounds = plan.districtBounds[1],
 		stats = plan.stats,
 		station = plan.station,
