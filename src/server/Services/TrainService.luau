@@ -26,8 +26,10 @@ local Rail = Shared:WaitForChild("Rail") :: Instance
 -- result is cast. Pure rules in Spline/Kinematics are unit-tested separately under lune.
 local SplineModule = require(Rail:WaitForChild("Spline") :: ModuleScript)
 local KinematicsModule = require(Rail:WaitForChild("Kinematics") :: ModuleScript)
+local StopsModule = require(Shared:WaitForChild("Config"):WaitForChild("Stops"))
 local Spline = SplineModule :: any
 local Kinematics = KinematicsModule :: any
+local Stops = StopsModule :: any
 
 -- Remote names mirror src/shared/Contracts/RemoteContract.luau (PROVISIONALLY RATIFIED).
 local REMOTE_CONTROL = "Train.Control"
@@ -65,11 +67,16 @@ export type ActiveTrain = {
 		brake: number,
 		emergencyBrake: boolean,
 	},
+	-- Station stop state.
+	nextStop: { stationId: string, distanceStuds: number }?,
+	dwellTimer: number,
+	stoppedAtStation: boolean,
+	doorState: "closed" | "opening" | "open" | "closing",
 }
 
 local TrainService = {}
 local activeTrains: { [string]: ActiveTrain } = {}
-local pendingIntents: { [string]: { tractive: number, brake: number, emergencyBrake: boolean } } =
+local pendingIntents: { [string]: { tractive: number, serviceBrake: number, emergencyBrake: boolean } } =
 	{}
 
 local controlRemote: RemoteEvent?
@@ -96,18 +103,19 @@ local function ensureRemotes(): (RemoteEvent, RemoteEvent)
 end
 
 -- Validate and clamp an intent command before the sim sees it. All fields bounded.
+-- Client-facing field is `brake`; internally we use `serviceBrake` to match Kinematics.
 local function sanitizeCommand(command: {
 	tractive: number?,
 	brake: number?,
 	emergencyBrake: boolean?,
 }): {
 	tractive: number,
-	brake: number,
+	serviceBrake: number,
 	emergencyBrake: boolean,
 }
 	return {
 		tractive = math.clamp(command.tractive or 0, -1, 1),
-		brake = math.clamp(command.brake or 0, 0, 1),
+		serviceBrake = math.clamp(command.brake or 0, 0, 1),
 		emergencyBrake = command.emergencyBrake == true,
 	}
 end
@@ -130,9 +138,41 @@ function TrainService.spawnTrain(
 		state = { speedMs = 0, distanceStuds = startDistanceStuds or 0 },
 		config = config or {},
 		lastCommand = { tractive = 0, brake = 0, emergencyBrake = false },
+		nextStop = nil,
+		dwellTimer = 0,
+		stoppedAtStation = false,
+		doorState = "closed",
 	}
 	activeTrains[trainId] = train
 	return train
+end
+
+-- Find the next station stop ahead of the train on its line.
+local function nextStopAhead(train: ActiveTrain): { stationId: string, distanceStuds: number }?
+	local stops = Stops[train.lineId]
+	if stops == nil then
+		return nil
+	end
+	local s = train.state.distanceStuds
+	local best: { stationId: string, distanceStuds: number }? = nil
+	for _, stop in ipairs(stops) do
+		if stop.distanceStuds > s + 1 then -- at least 1 stud ahead
+			if best == nil or stop.distanceStuds < best.distanceStuds then
+				best = stop
+			end
+		end
+	end
+	return best
+end
+
+-- Distance (studs) required to stop from current speed under service brake.
+local function serviceStopDistance(train: ActiveTrain): number
+	return Kinematics.stopDistanceStuds(
+		train.state,
+		{ tractive = 0, serviceBrake = 1, emergencyBrake = false },
+		train.config :: any,
+		0
+	)
 end
 
 function TrainService.despawnTrain(trainId: string)
@@ -168,10 +208,55 @@ end
 -- One fixed tick of the simulation.
 local function tick(dt: number)
 	for _, train in pairs(activeTrains) do
+		-- Resolve the next stop ahead if we don't have one.
+		if train.nextStop == nil then
+			train.nextStop = nextStopAhead(train)
+		end
+
 		local command = pendingIntents[train.trainId]
-			or { tractive = 0, brake = 0, emergencyBrake = false }
+			or { tractive = 0, serviceBrake = 0, emergencyBrake = false }
 		-- Consume the intent: apply once per tick.
 		pendingIntents[train.trainId] = nil
+
+		-- Station stop logic: brake into stops, dwell, open/close doors.
+		if train.nextStop ~= nil then
+			local distToStop = train.nextStop.distanceStuds - train.state.distanceStuds
+			local stopDist = serviceStopDistance(train)
+
+			if train.stoppedAtStation then
+				-- Dwell at the station with doors open.
+				if train.doorState ~= "open" then
+					train.doorState = "open"
+				end
+				train.dwellTimer += dt
+				if train.dwellTimer >= Stops.DWELL_SECONDS then
+					train.dwellTimer = 0
+					train.stoppedAtStation = false
+					train.doorState = "closing"
+					-- Proceed past the stop: clear nextStop so we find the next one.
+					train.nextStop = nil
+				end
+				command = { tractive = 0, serviceBrake = 1, emergencyBrake = false }
+			elseif distToStop <= stopDist + 2 then
+				-- Within braking distance of the stop: apply service brake.
+				command = { tractive = 0, serviceBrake = 1, emergencyBrake = false }
+				if train.state.speedMs <= 0.5 then
+					-- Arrived: stop precisely at the marker.
+					train.state.distanceStuds = train.nextStop.distanceStuds
+					train.state.speedMs = 0
+					train.stoppedAtStation = true
+					train.doorState = "opening"
+					train.dwellTimer = 0
+				end
+			else
+				-- Approaching but not yet braking: apply player intent.
+				command = {
+					tractive = command.tractive,
+					serviceBrake = command.serviceBrake,
+					emergencyBrake = command.emergencyBrake,
+				}
+			end
+		end
 
 		-- Kinematics.integrate is pure; called here at the Roblox boundary.
 		local newState = Kinematics.integrate(
@@ -179,7 +264,7 @@ local function tick(dt: number)
 			dt,
 			{
 				tractive = command.tractive,
-				serviceBrake = command.brake,
+				serviceBrake = command.serviceBrake,
 				emergencyBrake = command.emergencyBrake,
 			},
 			train.config :: any,
@@ -201,7 +286,7 @@ local function tick(dt: number)
 				distanceStuds = train.state.distanceStuds,
 				speedStudsPerS = train.state.speedMs / (1 / 0.28), -- m/s -> studs/s
 				direction = 1,
-				doorState = "closed",
+				doorState = train.doorState,
 				signalAspect = "green",
 				speedLimitKph = 120,
 				updatedAt = os.clock(),
