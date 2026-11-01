@@ -10,6 +10,7 @@ local suite = require("./support/suite")
 local specFiles = {
 	"rail/spline.spec",
 	"rail/kinematics.spec",
+	"util/rate_limit.spec",
 }
 
 for _, specFile in ipairs(specFiles) do
