@@ -211,10 +211,27 @@ local function tick(dt: number)
 	end
 end
 
+-- Track config: data-driven line definitions (src/shared/Config/Tracks.luau).
+local TracksModule = require(Shared:WaitForChild("Config"):WaitForChild("Tracks"))
+local Tracks = TracksModule :: any
+
 function TrainService.start()
 	controlRemote, stateRemote = ensureRemotes()
 	assert(controlRemote ~= nil, "TrainService: control remote must exist")
 	assert(stateRemote ~= nil, "TrainService: state remote must exist")
+
+	-- Spawn a demonstration train on Line 1 at the start of the line (Airport Terminal).
+	-- The train applies throttle so it moves along the spline in the tick loop.
+	local line1 = Tracks.Line1
+	TrainService.spawnTrain(
+		"train-1",
+		line1.lineId,
+		line1.controlPoints,
+		0, -- start at distance 0
+		{}
+	)
+	-- Apply throttle so the train moves along the spline.
+	TrainService.applyIntent("train-1", { tractive = 0.6, brake = 0, emergencyBrake = false })
 
 	controlRemote.OnServerEvent.Connect(function(_player: Instance, trainId: any, command: any)
 		if type(trainId) ~= "string" then
