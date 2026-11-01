@@ -15,8 +15,8 @@ This supersedes the earlier working assumption that everything must be generated
 | Category | Sourced? | Owner |
 |---|---|---|
 | Human characters — pedestrians, crowd, station staff | **YES** — open-source scans and rigged characters | atlas II |
-| Buildings, whole or modular kits | **YES** | stratum (WORLD · strata) |
-| Street props, vegetation, signage, furniture | **YES** | stratum |
+| Buildings, whole or modular kits | **YES** | strata (WORLD · strata) |
+| Street props, vegetation, signage, furniture | **YES** | strata |
 | Station components not covered by mason's kit | **YES**, only if mason has not already built it | mason |
 | Trains and rolling stock | **NO** — bespoke, ours, already on the rails | mason |
 
@@ -82,7 +82,7 @@ place file with no manual steps and no unrecorded downloads.
 
 - **atlas II** — owns humans and crowd. Scans and rigged characters allowed. Needs a crowd of at
   least 12 distinct silhouettes that read at 100 studs, plus the catalogue entries and licence record.
-- **stratum (WORLD · strata)** — may use ready-made building models and kits, provided they match the
+- **strata (WORLD · strata)** — may use ready-made building models and kits, provided they match the
   art bible, pass vetting, are decimated and are instanced through the generator rather than placed
   by hand.
 - **mason** — may source station components you have not built, but trains stay bespoke.
