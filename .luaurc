@@ -1,0 +1,25 @@
+{
+  "globals": [
+    "game",
+    "Workspace",
+    "Instance",
+    "ModuleScript",
+    "RemoteEvent",
+    "RunService",
+    "ReplicatedStorage",
+    "RBXScriptSignal",
+    "RBXScriptConnection",
+    "require",
+    "os",
+    "string",
+    "math",
+    "table",
+    "coroutine",
+    "debug",
+    "bit32",
+    "utf8",
+    "warn",
+    "error",
+    "print"
+  ]
+}
