@@ -90,18 +90,31 @@ def draw_plan() -> None:
                 ax.add_patch(Rectangle((sx - sidewalk_w / 2, street["start"]), sidewalk_w, street["finish"] - street["start"], color="#d4cdbb", zorder=2))
 
     for block in PLAN["blocks"]:
-        ax.add_patch(
-            Rectangle(
-                (block["minX"], block["minZ"]),
-                block["maxX"] - block["minX"],
-                block["maxZ"] - block["minZ"],
-                fill=False,
-                edgecolor="#78826b",
-                lw=0.5,
-                alpha=0.7,
-                zorder=3,
+        if block["superblock"]:
+            members = {(cell["xi"], cell["zi"]) for cell in block["cells"]}
+            for cell in block["cells"]:
+                edges = [
+                    (cell["xi"], cell["zi"] - 1, (cell["minX"], cell["minZ"], cell["maxX"], cell["minZ"])),
+                    (cell["xi"] + 1, cell["zi"], (cell["maxX"], cell["minZ"], cell["maxX"], cell["maxZ"])),
+                    (cell["xi"], cell["zi"] + 1, (cell["minX"], cell["maxZ"], cell["maxX"], cell["maxZ"])),
+                    (cell["xi"] - 1, cell["zi"], (cell["minX"], cell["minZ"], cell["minX"], cell["maxZ"])),
+                ]
+                for neighbor_x, neighbor_z, edge in edges:
+                    if (neighbor_x, neighbor_z) not in members:
+                        ax.plot([edge[0], edge[2]], [edge[1], edge[3]], color="#4f6657", lw=1.5, alpha=0.9, zorder=3)
+        else:
+            ax.add_patch(
+                Rectangle(
+                    (block["minX"], block["minZ"]),
+                    block["maxX"] - block["minX"],
+                    block["maxZ"] - block["minZ"],
+                    fill=False,
+                    edgecolor="#78826b",
+                    lw=0.5,
+                    alpha=0.7,
+                    zorder=3,
+                )
             )
-        )
     for b in PLAN["buildings"] + PLAN["landmarks"]:
         color = PALETTE.get(b["style"], "#c4b08e")
         alpha = 0.98 if b["landmark"] else 0.87
@@ -126,6 +139,12 @@ def draw_plan() -> None:
     plaza = PLAN["plaza"]
     ax.add_patch(Rectangle((plaza["centerX"] - plaza["width"] / 2, plaza["centerZ"] - plaza["depth"] / 2), plaza["width"], plaza["depth"], facecolor="#aaa28d", edgecolor="#f2ebdc", lw=1.5, zorder=5))
     ax.scatter([plaza["centerX"]], [plaza["centerZ"] + 28], s=32, marker="o", color="#537b83", edgecolor="#e5ddca", linewidth=0.8, zorder=6)
+    for square in PLAN["pocketSquares"]:
+        ax.add_patch(Rectangle(
+            (square["centerX"] - square["width"] / 2, square["centerZ"] - square["depth"] / 2),
+            square["width"], square["depth"], facecolor="#b8aa8d", edgecolor="#786b55", lw=1.1, zorder=5,
+        ))
+        ax.text(square["centerX"], square["centerZ"], square["name"], fontsize=4.8, ha="center", va="center", color="#2e2b25", zorder=6)
     station = PLAN["station"]
     ax.add_patch(Rectangle((station["centerX"] - station["width"] / 2, station["entryZ"]), station["width"], station["depth"] * 0.55, facecolor="#b8a789", edgecolor="#3c3630", lw=1.3, zorder=4))
     ax.add_patch(Rectangle((station["centerX"] - station["width"] / 2 - 18, station["forecourtZ"] - 20), station["width"] + 36, 45, facecolor="#c9c0ab", edgecolor="none", zorder=3))
@@ -135,7 +154,7 @@ def draw_plan() -> None:
     ax.scatter([route[-1]["x"]], [route[-1]["z"]], marker="s", s=25, color="#4e7480", edgecolor="white", zorder=8, label="Concourse")
 
     ax.text(-665, 930, "DISTRICT A  /  HISTORIC CENTRE SLICE", fontsize=10, fontweight="bold", color="#293128")
-    ax.text(-665, 890, f"{PLAN['stats']['buildingCount']} ordinary buildings   ·   {PLAN['stats']['landmarkCount']} landmarks   ·   {PLAN['stats']['blockCount']} irregular blocks", fontsize=7.5, color="#293128")
+    ax.text(-665, 890, f"{PLAN['stats']['buildingCount']} ordinary   ·   {PLAN['stats']['landmarkCount']} landmarks   ·   {PLAN['stats']['superblockCount']} superblocks   ·   {PLAN['stats']['pocketSquareCount']} pocket squares", fontsize=7.5, color="#293128")
     ax.text(145, 975, "CENTRAL STATION", fontsize=7.5, fontweight="bold", color="#332d26")
     ax.annotate("Old Town Square", (plaza["centerX"], plaza["centerZ"]), xytext=(plaza["centerX"] + 96, plaza["centerZ"] + 32), fontsize=7, arrowprops={"arrowstyle": "-", "color": "#554d41"})
 
@@ -318,6 +337,9 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
     # Square paving, fountain, station concourse shell and the forecourt's four colonnade pillars.
     sq = PLAN["plaza"]
     queue_polygon([(sq["centerX"] - sq["width"] / 2, .16, sq["centerZ"] - sq["depth"] / 2), (sq["centerX"] + sq["width"] / 2, .16, sq["centerZ"] - sq["depth"] / 2), (sq["centerX"] + sq["width"] / 2, .16, sq["centerZ"] + sq["depth"] / 2), (sq["centerX"] - sq["width"] / 2, .16, sq["centerZ"] + sq["depth"] / 2)], "#aaa28e", edge="#eee7d7", line=1.2)
+    for square in PLAN["pocketSquares"]:
+        x, z, width, depth = square["centerX"], square["centerZ"], square["width"], square["depth"]
+        queue_polygon([(x - width / 2, .16, z - depth / 2), (x + width / 2, .16, z - depth / 2), (x + width / 2, .16, z + depth / 2), (x - width / 2, .16, z + depth / 2)], "#b8aa8d", edge="#786b55", line=.8)
     st = PLAN["station"]
     for face in cuboid_faces(st["centerX"], 0, st["concourseZ"], st["width"] - 20, 19, st["depth"] * .55):
         queue_polygon(face, "#bba987", edge="#655b4d", line=.55)

@@ -40,6 +40,15 @@ local CityConfig = {
 		lotsAcross = 3,
 		lotsDeep = 2,
 		lotGap = 8,
+		superblocks = {
+			{
+				name = "West Cloister Superblock",
+				cells = { { 2, 3 }, { 3, 3 }, { 2, 4 }, { 3, 4 } },
+			},
+			{ name = "Northwest Irregular Court", cells = { { 2, 1 }, { 3, 1 }, { 2, 2 } } },
+			{ name = "East Guild Superblock", cells = { { 4, 6 }, { 5, 6 }, { 4, 7 }, { 5, 7 } } },
+			{ name = "East Gate Superblock", cells = { { 7, 6 }, { 8, 6 }, { 7, 7 }, { 8, 7 } } },
+		},
 		minWidth = 28,
 		maxWidth = 48,
 		minDepth = 25,
@@ -52,6 +61,10 @@ local CityConfig = {
 		centerZ = 75,
 		width = 100,
 		depth = 110,
+	},
+	pocketSquares = {
+		{ name = "Crooked Lane Court", centerX = -175, centerZ = -80, width = 32, depth = 28 },
+		{ name = "Market Cut Square", centerX = 435, centerZ = 455, width = 38, depth = 34 },
 	},
 	station = {
 		centerX = 120,

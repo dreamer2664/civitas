@@ -19,6 +19,8 @@ suite.test("city slice has the required varied massing and landmarks", function(
 	expect.ok(plan.stats.buildingCount >= config.buildingBudget.min)
 	expect.ok(plan.stats.buildingCount <= config.buildingBudget.max)
 	expect.equal(plan.stats.landmarkCount, 12)
+	expect.equal(plan.stats.superblockCount, #config.blocks.superblocks)
+	expect.equal(plan.stats.pocketSquareCount, #config.pocketSquares)
 	expect.ok(plan.stats.blockCount >= 20)
 	local heights = {}
 	for _, building in ipairs(plan.buildings) do
@@ -138,6 +140,29 @@ suite.test("diagonal and jog lanes stay clear of building collision footprints",
 	end
 end)
 
+suite.test(
+	"superblocks merge cells and remove internal street runs; junction squares remain walkable",
+	function()
+		local expectedBlocks = (#config.streets.gridX - 1) * (#config.streets.gridZ - 1)
+		for _, group in ipairs(config.blocks.superblocks) do
+			expectedBlocks -= #group.cells - 1
+		end
+		expect.equal(plan.stats.blockCount, expectedBlocks)
+		expect.equal(plan.stats.superblockCount, 4)
+		expect.equal(plan.stats.pocketSquareCount, 2)
+		for _, gap in ipairs(plan.streetGaps) do
+			for _, street in ipairs(plan.streets) do
+				if street.axis == gap.axis and street.center == gap.center then
+					expect.ok(
+						street.finish <= gap.start or street.start >= gap.finish,
+						"merged cell edge still has a road through it"
+					)
+				end
+			end
+		end
+	end
+)
+
 suite.test("route follows the long sidewalk and every grid crossing has a radius cut", function()
 	local avenue = nil
 	for _, street in ipairs(plan.streets) do
@@ -184,16 +209,42 @@ suite.test(
 			if street.axis == "segment" then
 				streetParts += 5
 			else
-				local crossings = 0
+				local curbGaps = {}
 				for _, intersection in ipairs(plan.intersections) do
 					if
 						(street.axis == "z" and intersection.x == street.center)
 						or (street.axis == "x" and intersection.z == street.center)
 					then
-						crossings += 1
+						local coordinate = if street.axis == "z"
+							then intersection.z
+							else intersection.x
+						local crossingWidth = if street.axis == "z"
+							then intersection.widthZ
+							else intersection.widthX
+						local halfGap = crossingWidth / 2 + intersection.radius
+						table.insert(
+							curbGaps,
+							{ start = coordinate - halfGap, finish = coordinate + halfGap }
+						)
 					end
 				end
-				streetParts += 3 + 2 * (crossings + 1)
+				table.sort(curbGaps, function(a, b)
+					return a.start < b.start
+				end)
+				local cursor = street.start
+				local curbPieces = 0
+				for _, gap in ipairs(curbGaps) do
+					local gapStart = math.max(street.start, gap.start)
+					local gapFinish = math.min(street.finish, gap.finish)
+					if gapStart > cursor then
+						curbPieces += 1
+					end
+					cursor = math.max(cursor, gapFinish)
+				end
+				if cursor < street.finish then
+					curbPieces += 1
+				end
+				streetParts += 3 + 2 * curbPieces
 			end
 		end
 		local ordinaryParts = 0
@@ -216,6 +267,7 @@ suite.test(
 			+ ordinaryParts
 			+ landmarkParts
 			+ 2
+			+ #plan.pocketSquares
 			+ 8
 			+ plan.stats.routeLinkCount
 			+ 1
