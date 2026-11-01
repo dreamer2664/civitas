@@ -1,0 +1,7 @@
+{
+  "code": "WORLD_DATA_UNAVAILABLE",
+  "detail": "error requiring module \"../../src/server/World/Geometry\": could not resolve child component \"World\"",
+  "engineTested": false,
+  "module": "../../src/server/World/Geometry",
+  "status": "BLOCKED"
+}

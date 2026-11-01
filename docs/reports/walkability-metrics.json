@@ -1,0 +1,15 @@
+{
+  "sourceRevision": "aea670197fea6d24e5fde7b7e2a576a5ed4a0a09",
+  "staticWorkspaceParts": 0,
+  "generatedWalkableParts": null,
+  "drawCalls": null,
+  "reason": "No generator export available",
+  "streaming": {
+    "StreamingEnabled": true,
+    "StreamingMinRadius": 64,
+    "StreamingTargetRadius": 1024,
+    "ModelStreamingBehavior": "Improved",
+    "StreamingIntegrityMode": "PauseOutsideLoadedArea",
+    "StreamOutBehavior": "Opportunistic"
+  }
+}
