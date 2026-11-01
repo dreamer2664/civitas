@@ -16,6 +16,7 @@ local TweenService = game:GetService("TweenService")
 local Theme = require(script.Parent.Parent.Theme)
 local Style = require(script.Parent.Parent.Style)
 local Layout = require(script.Parent.Parent.Layout)
+local Label = require(script.Parent.Label)
 
 local Button = {}
 
@@ -41,6 +42,7 @@ local DEFAULT_WIDTH = 160
 function Button.new(options: Options): TextButton
 	local variant: Variant = options.variant or "secondary"
 	local look = LOOKS[variant]
+	Label.checkText(options.text, "label")
 	local width, height = Layout.touchSize(
 		options.width or DEFAULT_WIDTH,
 		options.height or Theme.size.touchComfort,

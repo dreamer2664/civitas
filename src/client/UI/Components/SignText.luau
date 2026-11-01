@@ -7,6 +7,7 @@
 
 local Theme = require(script.Parent.Parent.Theme)
 local Style = require(script.Parent.Parent.Style)
+local Label = require(script.Parent.Label)
 
 local SignText = {}
 
@@ -19,6 +20,7 @@ export type Options = {
 }
 
 function SignText.new(options: Options): TextLabel
+	Label.checkText(options.text, if options.large then "signLarge" else "sign")
 	local label = Instance.new("TextLabel")
 	label.Name = `Sign_{options.text}`
 	label.Text = string.upper(options.text)

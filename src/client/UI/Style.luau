@@ -75,6 +75,13 @@ function Style.duration(name: "instant" | "fast" | "base" | "slow"): number
 	return Theme.motion[name]
 end
 
+export type Elevation = "flat" | "raised" | "overlay"
+
+-- Fill colour for a depth level. The level-to-token mapping is data in Theme.elevation.
+function Style.elevation(level: Elevation): Color3
+	return Style.color(Theme.elevation[level] :: ColorName)
+end
+
 function Style.font(name: TypeName): Enum.Font
 	local face = Theme.type[name].face
 	local font = FONTS[face]

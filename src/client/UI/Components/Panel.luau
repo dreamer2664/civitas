@@ -12,15 +12,17 @@ local Panel = {}
 
 export type Options = {
 	name: string?,
-	fill: Style.ColorName?,
+	elevation: Style.Elevation?,
 }
 
 function Panel.new(options: Options?): Frame
 	local frame = Instance.new("Frame")
 	frame.Name = if options and options.name then options.name else "Panel"
 	frame.BorderSizePixel = 0
-	local fill: Style.ColorName = if options and options.fill then options.fill else "surface"
-	frame.BackgroundColor3 = Style.color(fill)
+	local level: Style.Elevation = if options and options.elevation
+		then options.elevation
+		else "flat"
+	frame.BackgroundColor3 = Style.elevation(level)
 
 	local corner = Instance.new("UICorner")
 	corner.CornerRadius = UDim.new(0, Theme.radius.panel)
