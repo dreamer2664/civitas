@@ -2,3040 +2,4077 @@
   "blocks": [
     {
       "id": 1,
-      "maxX": -388,
-      "maxZ": -238,
-      "minX": -572,
-      "minZ": -392
+      "maxX": -507.5,
+      "maxZ": -467.5,
+      "minX": -624,
+      "minZ": -594
     },
     {
       "id": 2,
-      "maxX": -388,
-      "maxZ": -28,
-      "minX": -572,
-      "minZ": -182
+      "maxX": -507.5,
+      "maxZ": -315.25,
+      "minX": -624,
+      "minZ": -432.5
     },
     {
       "id": 3,
-      "maxX": -388,
-      "maxZ": 182,
-      "minX": -572,
-      "minZ": 28
+      "maxX": -507.5,
+      "maxZ": -162.5,
+      "minX": -624,
+      "minZ": -284.75
     },
     {
       "id": 4,
-      "maxX": -388,
-      "maxZ": 392,
-      "minX": -572,
-      "minZ": 238
+      "maxX": -507.5,
+      "maxZ": -15.25,
+      "minX": -624,
+      "minZ": -127.5
     },
     {
       "id": 5,
-      "maxX": -388,
-      "maxZ": 602,
-      "minX": -572,
-      "minZ": 448
+      "maxX": -507.5,
+      "maxZ": 132.5,
+      "minX": -624,
+      "minZ": 15.25
     },
     {
       "id": 6,
-      "maxX": -148,
-      "maxZ": -238,
-      "minX": -332,
-      "minZ": -392
+      "maxX": -507.5,
+      "maxZ": 279.75,
+      "minX": -624,
+      "minZ": 167.5
     },
     {
       "id": 7,
-      "maxX": -148,
-      "maxZ": -28,
-      "minX": -332,
-      "minZ": -182
+      "maxX": -507.5,
+      "maxZ": 437.5,
+      "minX": -624,
+      "minZ": 310.25
     },
     {
       "id": 8,
-      "maxX": -148,
-      "maxZ": 182,
-      "minX": -332,
-      "minZ": 28
+      "maxX": -507.5,
+      "maxZ": 604,
+      "minX": -624,
+      "minZ": 472.5
     },
     {
       "id": 9,
-      "maxX": -148,
-      "maxZ": 392,
-      "minX": -332,
-      "minZ": 238
+      "maxX": -365.25,
+      "maxZ": -467.5,
+      "minX": -472.5,
+      "minZ": -594
     },
     {
       "id": 10,
-      "maxX": -148,
-      "maxZ": 602,
-      "minX": -332,
-      "minZ": 448
+      "maxX": -365.25,
+      "maxZ": -315.25,
+      "minX": -472.5,
+      "minZ": -432.5
     },
     {
       "id": 11,
-      "maxX": 92,
-      "maxZ": -238,
-      "minX": -92,
-      "minZ": -392
+      "maxX": -365.25,
+      "maxZ": -162.5,
+      "minX": -472.5,
+      "minZ": -284.75
     },
     {
       "id": 12,
-      "maxX": 92,
-      "maxZ": -28,
-      "minX": -92,
-      "minZ": -182
+      "maxX": -365.25,
+      "maxZ": -15.25,
+      "minX": -472.5,
+      "minZ": -127.5
     },
     {
       "id": 13,
-      "maxX": 92,
-      "maxZ": 182,
-      "minX": -92,
-      "minZ": 28
+      "maxX": -365.25,
+      "maxZ": 132.5,
+      "minX": -472.5,
+      "minZ": 15.25
     },
     {
       "id": 14,
-      "maxX": 92,
-      "maxZ": 392,
-      "minX": -92,
-      "minZ": 238
+      "maxX": -365.25,
+      "maxZ": 279.75,
+      "minX": -472.5,
+      "minZ": 167.5
     },
     {
       "id": 15,
-      "maxX": 92,
-      "maxZ": 602,
-      "minX": -92,
-      "minZ": 448
+      "maxX": -365.25,
+      "maxZ": 437.5,
+      "minX": -472.5,
+      "minZ": 310.25
     },
     {
       "id": 16,
-      "maxX": 332,
-      "maxZ": -238,
-      "minX": 148,
-      "minZ": -392
+      "maxX": -365.25,
+      "maxZ": 604,
+      "minX": -472.5,
+      "minZ": 472.5
     },
     {
       "id": 17,
-      "maxX": 332,
-      "maxZ": -28,
-      "minX": 148,
-      "minZ": -182
+      "maxX": -217.5,
+      "maxZ": -467.5,
+      "minX": -334.75,
+      "minZ": -594
     },
     {
       "id": 18,
-      "maxX": 332,
-      "maxZ": 182,
-      "minX": 148,
-      "minZ": 28
+      "maxX": -217.5,
+      "maxZ": -315.25,
+      "minX": -334.75,
+      "minZ": -432.5
     },
     {
       "id": 19,
-      "maxX": 332,
-      "maxZ": 392,
-      "minX": 148,
-      "minZ": 238
+      "maxX": -217.5,
+      "maxZ": -162.5,
+      "minX": -334.75,
+      "minZ": -284.75
     },
     {
       "id": 20,
-      "maxX": 332,
-      "maxZ": 602,
-      "minX": 148,
-      "minZ": 448
+      "maxX": -217.5,
+      "maxZ": -15.25,
+      "minX": -334.75,
+      "minZ": -127.5
     },
     {
       "id": 21,
-      "maxX": 572,
-      "maxZ": -238,
-      "minX": 388,
-      "minZ": -392
+      "maxX": -217.5,
+      "maxZ": 132.5,
+      "minX": -334.75,
+      "minZ": 15.25
     },
     {
       "id": 22,
-      "maxX": 572,
-      "maxZ": -28,
-      "minX": 388,
-      "minZ": -182
+      "maxX": -217.5,
+      "maxZ": 279.75,
+      "minX": -334.75,
+      "minZ": 167.5
     },
     {
       "id": 23,
-      "maxX": 572,
-      "maxZ": 182,
-      "minX": 388,
-      "minZ": 28
+      "maxX": -217.5,
+      "maxZ": 437.5,
+      "minX": -334.75,
+      "minZ": 310.25
     },
     {
       "id": 24,
-      "maxX": 572,
-      "maxZ": 392,
-      "minX": 388,
-      "minZ": 238
+      "maxX": -217.5,
+      "maxZ": 604,
+      "minX": -334.75,
+      "minZ": 472.5
     },
     {
       "id": 25,
-      "maxX": 572,
-      "maxZ": 602,
-      "minX": 388,
-      "minZ": 448
+      "maxX": -70.25,
+      "maxZ": -467.5,
+      "minX": -182.5,
+      "minZ": -594
+    },
+    {
+      "id": 26,
+      "maxX": -70.25,
+      "maxZ": -315.25,
+      "minX": -182.5,
+      "minZ": -432.5
+    },
+    {
+      "id": 27,
+      "maxX": -70.25,
+      "maxZ": -162.5,
+      "minX": -182.5,
+      "minZ": -284.75
+    },
+    {
+      "id": 28,
+      "maxX": -70.25,
+      "maxZ": -15.25,
+      "minX": -182.5,
+      "minZ": -127.5
+    },
+    {
+      "id": 29,
+      "maxX": -70.25,
+      "maxZ": 132.5,
+      "minX": -182.5,
+      "minZ": 15.25
+    },
+    {
+      "id": 30,
+      "maxX": -70.25,
+      "maxZ": 279.75,
+      "minX": -182.5,
+      "minZ": 167.5
+    },
+    {
+      "id": 31,
+      "maxX": -70.25,
+      "maxZ": 437.5,
+      "minX": -182.5,
+      "minZ": 310.25
+    },
+    {
+      "id": 32,
+      "maxX": -70.25,
+      "maxZ": 604,
+      "minX": -182.5,
+      "minZ": 472.5
+    },
+    {
+      "id": 33,
+      "maxX": 94,
+      "maxZ": -467.5,
+      "minX": -39.75,
+      "minZ": -594
+    },
+    {
+      "id": 34,
+      "maxX": 94,
+      "maxZ": -315.25,
+      "minX": -39.75,
+      "minZ": -432.5
+    },
+    {
+      "id": 35,
+      "maxX": 94,
+      "maxZ": -162.5,
+      "minX": -39.75,
+      "minZ": -284.75
+    },
+    {
+      "id": 36,
+      "maxX": 94,
+      "maxZ": -15.25,
+      "minX": -39.75,
+      "minZ": -127.5
+    },
+    {
+      "id": 37,
+      "maxX": 94,
+      "maxZ": 132.5,
+      "minX": -39.75,
+      "minZ": 15.25
+    },
+    {
+      "id": 38,
+      "maxX": 94,
+      "maxZ": 279.75,
+      "minX": -39.75,
+      "minZ": 167.5
+    },
+    {
+      "id": 39,
+      "maxX": 94,
+      "maxZ": 437.5,
+      "minX": -39.75,
+      "minZ": 310.25
+    },
+    {
+      "id": 40,
+      "maxX": 94,
+      "maxZ": 604,
+      "minX": -39.75,
+      "minZ": 472.5
+    },
+    {
+      "id": 41,
+      "maxX": 254.75,
+      "maxZ": -467.5,
+      "minX": 146,
+      "minZ": -594
+    },
+    {
+      "id": 42,
+      "maxX": 254.75,
+      "maxZ": -315.25,
+      "minX": 146,
+      "minZ": -432.5
+    },
+    {
+      "id": 43,
+      "maxX": 254.75,
+      "maxZ": -162.5,
+      "minX": 146,
+      "minZ": -284.75
+    },
+    {
+      "id": 44,
+      "maxX": 254.75,
+      "maxZ": -15.25,
+      "minX": 146,
+      "minZ": -127.5
+    },
+    {
+      "id": 45,
+      "maxX": 254.75,
+      "maxZ": 132.5,
+      "minX": 146,
+      "minZ": 15.25
+    },
+    {
+      "id": 46,
+      "maxX": 254.75,
+      "maxZ": 279.75,
+      "minX": 146,
+      "minZ": 167.5
+    },
+    {
+      "id": 47,
+      "maxX": 254.75,
+      "maxZ": 437.5,
+      "minX": 146,
+      "minZ": 310.25
+    },
+    {
+      "id": 48,
+      "maxX": 254.75,
+      "maxZ": 604,
+      "minX": 146,
+      "minZ": 472.5
+    },
+    {
+      "id": 49,
+      "maxX": 417.5,
+      "maxZ": -467.5,
+      "minX": 285.25,
+      "minZ": -594
+    },
+    {
+      "id": 50,
+      "maxX": 417.5,
+      "maxZ": -315.25,
+      "minX": 285.25,
+      "minZ": -432.5
+    },
+    {
+      "id": 51,
+      "maxX": 417.5,
+      "maxZ": -162.5,
+      "minX": 285.25,
+      "minZ": -284.75
+    },
+    {
+      "id": 52,
+      "maxX": 417.5,
+      "maxZ": -15.25,
+      "minX": 285.25,
+      "minZ": -127.5
+    },
+    {
+      "id": 53,
+      "maxX": 417.5,
+      "maxZ": 132.5,
+      "minX": 285.25,
+      "minZ": 15.25
+    },
+    {
+      "id": 54,
+      "maxX": 417.5,
+      "maxZ": 279.75,
+      "minX": 285.25,
+      "minZ": 167.5
+    },
+    {
+      "id": 55,
+      "maxX": 417.5,
+      "maxZ": 437.5,
+      "minX": 285.25,
+      "minZ": 310.25
+    },
+    {
+      "id": 56,
+      "maxX": 417.5,
+      "maxZ": 604,
+      "minX": 285.25,
+      "minZ": 472.5
+    },
+    {
+      "id": 57,
+      "maxX": 594,
+      "maxZ": -467.5,
+      "minX": 452.5,
+      "minZ": -594
+    },
+    {
+      "id": 58,
+      "maxX": 594,
+      "maxZ": -315.25,
+      "minX": 452.5,
+      "minZ": -432.5
+    },
+    {
+      "id": 59,
+      "maxX": 594,
+      "maxZ": -162.5,
+      "minX": 452.5,
+      "minZ": -284.75
+    },
+    {
+      "id": 60,
+      "maxX": 594,
+      "maxZ": -15.25,
+      "minX": 452.5,
+      "minZ": -127.5
+    },
+    {
+      "id": 61,
+      "maxX": 594,
+      "maxZ": 132.5,
+      "minX": 452.5,
+      "minZ": 15.25
+    },
+    {
+      "id": 62,
+      "maxX": 594,
+      "maxZ": 279.75,
+      "minX": 452.5,
+      "minZ": 167.5
+    },
+    {
+      "id": 63,
+      "maxX": 594,
+      "maxZ": 437.5,
+      "minX": 452.5,
+      "minZ": 310.25
+    },
+    {
+      "id": 64,
+      "maxX": 594,
+      "maxZ": 604,
+      "minX": 452.5,
+      "minZ": 472.5
     }
   ],
   "buildings": [
     {
       "depth": 39,
+      "frontage": "stone-plinth",
       "height": 80,
       "landmark": false,
       "name": "Block 1 Plot 1-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 33,
-      "x": -549,
-      "z": -366.3333333333333
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": -562.375
     },
     {
       "depth": 33,
+      "frontage": "stone-plinth",
       "height": 59,
       "landmark": false,
       "name": "Block 1 Plot 1-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 35,
-      "x": -549,
-      "z": -315
-    },
-    {
-      "depth": 27,
-      "height": 37,
-      "landmark": false,
-      "name": "Block 1 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 37,
-      "x": -549,
-      "z": -263.66666666666663
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": -499.125
     },
     {
       "depth": 36,
+      "frontage": "stone-plinth",
       "height": 74,
       "landmark": false,
       "name": "Block 1 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -503,
-      "z": -366.3333333333333
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": -562.375
     },
     {
-      "depth": 25,
-      "height": 32,
+      "depth": 31,
+      "frontage": "awning",
+      "height": 53,
       "landmark": false,
-      "name": "Block 1 Plot 2-3",
+      "name": "Block 1 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 30,
-      "x": -503,
-      "z": -263.66666666666663
+      "width": 28,
+      "x": -565.75,
+      "z": -499.125
     },
     {
       "depth": 34,
+      "frontage": "awning",
       "height": 69,
       "landmark": false,
       "name": "Block 1 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -457,
-      "z": -366.3333333333333
+      "width": 30.833333333333336,
+      "x": -526.9166666666666,
+      "z": -562.375
     },
     {
-      "depth": 41,
-      "height": 26,
+      "depth": 28,
+      "frontage": "stone-plinth",
+      "height": 48,
       "landmark": false,
-      "name": "Block 1 Plot 3-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -457,
-      "z": -263.66666666666663
-    },
-    {
-      "depth": 31,
-      "height": 64,
-      "landmark": false,
-      "name": "Block 1 Plot 4-1",
+      "name": "Block 1 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 33,
-      "x": -411,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 25,
-      "height": 42,
-      "landmark": false,
-      "name": "Block 1 Plot 4-2",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 35,
-      "x": -411,
-      "z": -315
-    },
-    {
-      "depth": 39,
-      "height": 21,
-      "landmark": false,
-      "name": "Block 1 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 37,
-      "x": -411,
-      "z": -263.66666666666663
-    },
-    {
-      "depth": 42,
-      "height": 84,
-      "landmark": false,
-      "name": "Block 2 Plot 1-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -549,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 36,
-      "height": 62,
-      "landmark": false,
-      "name": "Block 2 Plot 1-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -549,
-      "z": -105
+      "width": 30.833333333333336,
+      "x": -526.9166666666666,
+      "z": -499.125
     },
     {
       "depth": 30,
-      "height": 41,
-      "landmark": false,
-      "name": "Block 2 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -549,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 35,
-      "height": 67,
-      "landmark": false,
-      "name": "Block 2 Plot 4-1",
-      "rotation": 90,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -411,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 29,
-      "height": 46,
-      "landmark": false,
-      "name": "Block 2 Plot 4-2",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -411,
-      "z": -105
-    },
-    {
-      "depth": 42,
-      "height": 25,
-      "landmark": false,
-      "name": "Block 2 Plot 4-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -411,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 27,
-      "height": 19,
-      "landmark": false,
-      "name": "Block 3 Plot 1-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 32,
-      "x": -549,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 40,
-      "height": 66,
-      "landmark": false,
-      "name": "Block 3 Plot 1-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": -549,
-      "z": 105
-    },
-    {
-      "depth": 34,
-      "height": 45,
-      "landmark": false,
-      "name": "Block 3 Plot 1-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 36,
-      "x": -549,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 43,
-      "height": 82,
-      "landmark": false,
-      "name": "Block 3 Plot 2-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -503,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 31,
-      "height": 40,
-      "landmark": false,
-      "name": "Block 3 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 29,
-      "x": -503,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 41,
-      "height": 77,
-      "landmark": false,
-      "name": "Block 3 Plot 3-1",
-      "rotation": 90,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -457,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 29,
-      "height": 34,
-      "landmark": false,
-      "name": "Block 3 Plot 3-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -457,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 38,
-      "height": 71,
-      "landmark": false,
-      "name": "Block 3 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 32,
-      "x": -411,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 32,
-      "height": 50,
-      "landmark": false,
-      "name": "Block 3 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": -411,
-      "z": 105
-    },
-    {
-      "depth": 26,
-      "height": 29,
-      "landmark": false,
-      "name": "Block 3 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 36,
-      "x": -411,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 30,
+      "frontage": "recessed-entry",
       "height": 23,
       "landmark": false,
       "name": "Block 4 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -549,
-      "z": 263.6666666666667
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": -99.4375
     },
     {
       "depth": 43,
+      "frontage": "shopfront",
       "height": 70,
       "landmark": false,
       "name": "Block 4 Plot 1-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 38,
-      "x": -549,
-      "z": 315
-    },
-    {
-      "depth": 37,
-      "height": 49,
-      "landmark": false,
-      "name": "Block 4 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -549,
-      "z": 366.33333333333337
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": -43.3125
     },
     {
       "depth": 27,
+      "frontage": "shopfront",
       "height": 86,
       "landmark": false,
       "name": "Block 4 Plot 2-1",
       "rotation": 90,
       "style": "corner-shop",
-      "width": 35,
-      "x": -503,
-      "z": 263.6666666666667
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": -99.4375
     },
     {
-      "depth": 34,
-      "height": 44,
+      "depth": 40,
+      "frontage": "awning",
+      "height": 65,
       "landmark": false,
-      "name": "Block 4 Plot 2-3",
+      "name": "Block 4 Plot 2-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -503,
-      "z": 366.33333333333337
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": -43.3125
     },
     {
       "depth": 25,
+      "frontage": "awning",
       "height": 81,
       "landmark": false,
       "name": "Block 4 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
       "width": 28,
-      "x": -457,
-      "z": 263.6666666666667
-    },
-    {
-      "depth": 32,
-      "height": 38,
-      "landmark": false,
-      "name": "Block 4 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 32,
-      "x": -457,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 41,
-      "height": 75,
-      "landmark": false,
-      "name": "Block 4 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -411,
-      "z": 263.6666666666667
-    },
-    {
-      "depth": 35,
-      "height": 54,
-      "landmark": false,
-      "name": "Block 4 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -411,
-      "z": 315
-    },
-    {
-      "depth": 29,
-      "height": 33,
-      "landmark": false,
-      "name": "Block 4 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -411,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 33,
-      "height": 27,
-      "landmark": false,
-      "name": "Block 5 Plot 1-1",
-      "rotation": 90,
-      "style": "corner-shop",
-      "width": 31,
-      "x": -549,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 27,
-      "height": 74,
-      "landmark": false,
-      "name": "Block 5 Plot 1-2",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": -549,
-      "z": 525
-    },
-    {
-      "depth": 40,
-      "height": 53,
-      "landmark": false,
-      "name": "Block 5 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 35,
-      "x": -549,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 31,
-      "height": 21,
-      "landmark": false,
-      "name": "Block 5 Plot 2-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -503,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 25,
-      "height": 69,
-      "landmark": false,
-      "name": "Block 5 Plot 2-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -503,
-      "z": 525
+      "x": -526.9166666666666,
+      "z": -99.4375
     },
     {
       "depth": 38,
-      "height": 47,
+      "frontage": "stone-plinth",
+      "height": 59,
       "landmark": false,
-      "name": "Block 5 Plot 2-3",
+      "name": "Block 4 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 28,
-      "x": -503,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 28,
-      "height": 85,
-      "landmark": false,
-      "name": "Block 5 Plot 3-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -457,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 41,
-      "height": 63,
-      "landmark": false,
-      "name": "Block 5 Plot 3-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -457,
-      "z": 525
-    },
-    {
-      "depth": 35,
-      "height": 42,
-      "landmark": false,
-      "name": "Block 5 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -457,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 26,
-      "height": 79,
-      "landmark": false,
-      "name": "Block 5 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": -411,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 39,
-      "height": 58,
-      "landmark": false,
-      "name": "Block 5 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": -411,
-      "z": 525
+      "width": 30,
+      "x": -526.9166666666666,
+      "z": -43.3125
     },
     {
       "depth": 33,
-      "height": 37,
-      "landmark": false,
-      "name": "Block 5 Plot 4-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 35,
-      "x": -411,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 33,
+      "frontage": "awning",
       "height": 18,
       "landmark": false,
       "name": "Block 6 Plot 1-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": -366.3333333333333
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": 195.5625
     },
     {
       "depth": 31,
+      "frontage": "awning",
       "height": 78,
       "landmark": false,
       "name": "Block 6 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": -315
-    },
-    {
-      "depth": 25,
-      "height": 57,
-      "landmark": false,
-      "name": "Block 6 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": -263.66666666666663
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": 251.6875
     },
     {
       "depth": 30,
+      "frontage": "stone-plinth",
       "height": 82,
       "landmark": false,
       "name": "Block 6 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 33,
-      "x": -263,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 41,
-      "height": 51,
-      "landmark": false,
-      "name": "Block 6 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -263,
-      "z": -263.66666666666663
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": 195.5625
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
+      "height": 73,
+      "landmark": false,
+      "name": "Block 6 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": 251.6875
+    },
+    {
+      "depth": 28,
+      "frontage": "stone-plinth",
       "height": 76,
       "landmark": false,
       "name": "Block 6 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 39,
-      "height": 46,
-      "landmark": false,
-      "name": "Block 6 Plot 3-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 31,
-      "x": -217,
-      "z": -263.66666666666663
+      "width": 30.833333333333336,
+      "x": -526.9166666666666,
+      "z": 195.5625
     },
     {
       "depth": 25,
-      "height": 71,
+      "frontage": "recessed-entry",
+      "height": 67,
       "landmark": false,
-      "name": "Block 6 Plot 4-1",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -171,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 42,
-      "height": 62,
-      "landmark": false,
-      "name": "Block 6 Plot 4-2",
-      "rotation": 90,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -171,
-      "z": -315
-    },
-    {
-      "depth": 36,
-      "height": 40,
-      "landmark": false,
-      "name": "Block 6 Plot 4-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -171,
-      "z": -263.66666666666663
-    },
-    {
-      "depth": 36,
-      "height": 22,
-      "landmark": false,
-      "name": "Block 7 Plot 1-1",
+      "name": "Block 6 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
       "width": 29,
-      "x": -309,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 30,
-      "height": 70,
-      "landmark": false,
-      "name": "Block 7 Plot 1-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": -309,
-      "z": -105
-    },
-    {
-      "depth": 43,
-      "height": 49,
-      "landmark": false,
-      "name": "Block 7 Plot 1-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 33,
-      "x": -309,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 34,
-      "height": 86,
-      "landmark": false,
-      "name": "Block 7 Plot 2-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -263,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 28,
-      "height": 65,
-      "landmark": false,
-      "name": "Block 7 Plot 2-2",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -263,
-      "z": -105
-    },
-    {
-      "depth": 41,
-      "height": 43,
-      "landmark": false,
-      "name": "Block 7 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -263,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 31,
-      "height": 80,
-      "landmark": false,
-      "name": "Block 7 Plot 3-1",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 36,
-      "x": -217,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 25,
-      "height": 59,
-      "landmark": false,
-      "name": "Block 7 Plot 3-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": -105
-    },
-    {
-      "depth": 38,
-      "height": 38,
-      "landmark": false,
-      "name": "Block 7 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 29,
-      "height": 75,
-      "landmark": false,
-      "name": "Block 7 Plot 4-1",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 29,
-      "x": -171,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 42,
-      "height": 54,
-      "landmark": false,
-      "name": "Block 7 Plot 4-2",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": -171,
-      "z": -105
-    },
-    {
-      "depth": 36,
-      "height": 32,
-      "landmark": false,
-      "name": "Block 7 Plot 4-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": -171,
-      "z": -53.66666666666666
+      "x": -526.9166666666666,
+      "z": 251.6875
     },
     {
       "depth": 40,
+      "frontage": "stone-plinth",
       "height": 26,
       "landmark": false,
       "name": "Block 8 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": 53.66666666666667
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": 505.375
     },
     {
       "depth": 34,
+      "frontage": "shopfront",
       "height": 74,
       "landmark": false,
       "name": "Block 8 Plot 1-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 38,
-      "x": -309,
-      "z": 105
-    },
-    {
-      "depth": 28,
-      "height": 53,
-      "landmark": false,
-      "name": "Block 8 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": 156.33333333333334
+      "width": 30.833333333333336,
+      "x": -604.5833333333334,
+      "z": 571.125
     },
     {
       "depth": 37,
+      "frontage": "shopfront",
       "height": 21,
       "landmark": false,
       "name": "Block 8 Plot 2-1",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 32,
-      "x": -263,
-      "z": 53.66666666666667
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": 505.375
     },
     {
       "depth": 31,
+      "frontage": "recessed-entry",
       "height": 68,
       "landmark": false,
       "name": "Block 8 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 34,
-      "x": -263,
-      "z": 105
-    },
-    {
-      "depth": 25,
-      "height": 47,
-      "landmark": false,
-      "name": "Block 8 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 36,
-      "x": -263,
-      "z": 156.33333333333334
+      "width": 30.833333333333336,
+      "x": -565.75,
+      "z": 571.125
     },
     {
       "depth": 35,
+      "frontage": "awning",
       "height": 84,
       "landmark": false,
       "name": "Block 8 Plot 3-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": 53.66666666666667
+      "width": 30.833333333333336,
+      "x": -526.9166666666666,
+      "z": 505.375
     },
     {
       "depth": 29,
+      "frontage": "stone-plinth",
       "height": 63,
       "landmark": false,
       "name": "Block 8 Plot 3-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": 105
-    },
-    {
-      "depth": 42,
-      "height": 42,
-      "landmark": false,
-      "name": "Block 8 Plot 3-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 29,
-      "x": -217,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 32,
-      "height": 79,
-      "landmark": false,
-      "name": "Block 8 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -171,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 26,
-      "height": 58,
-      "landmark": false,
-      "name": "Block 8 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -171,
-      "z": 105
-    },
-    {
-      "depth": 39,
-      "height": 36,
-      "landmark": false,
-      "name": "Block 8 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -171,
-      "z": 156.33333333333334
+      "width": 30.833333333333336,
+      "x": -526.9166666666666,
+      "z": 571.125
     },
     {
       "depth": 43,
+      "frontage": "shopfront",
       "height": 30,
       "landmark": false,
       "name": "Block 9 Plot 1-1",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 28,
-      "x": -309,
-      "z": 263.6666666666667
+      "width": 27.75,
+      "x": -454.625,
+      "z": -562.375
     },
     {
       "depth": 37,
+      "frontage": "recessed-entry",
       "height": 78,
       "landmark": false,
       "name": "Block 9 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 30,
-      "x": -309,
-      "z": 315
-    },
-    {
-      "depth": 31,
-      "height": 56,
-      "landmark": false,
-      "name": "Block 9 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 32,
-      "x": -309,
-      "z": 366.33333333333337
+      "width": 27.75,
+      "x": -454.625,
+      "z": -499.125
     },
     {
       "depth": 40,
+      "frontage": "stone-plinth",
       "height": 25,
       "landmark": false,
       "name": "Block 9 Plot 2-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -263,
-      "z": 263.6666666666667
+      "width": 27.75,
+      "x": -418.875,
+      "z": -562.375
     },
     {
       "depth": 34,
+      "frontage": "stone-plinth",
       "height": 72,
       "landmark": false,
       "name": "Block 9 Plot 2-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -263,
-      "z": 315
-    },
-    {
-      "depth": 28,
-      "height": 51,
-      "landmark": false,
-      "name": "Block 9 Plot 2-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -263,
-      "z": 366.33333333333337
+      "width": 27.75,
+      "x": -418.875,
+      "z": -499.125
     },
     {
       "depth": 38,
+      "frontage": "stone-plinth",
       "height": 19,
       "landmark": false,
       "name": "Block 9 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 35,
-      "x": -217,
-      "z": 263.6666666666667
+      "width": 27.75,
+      "x": -383.125,
+      "z": -562.375
     },
     {
       "depth": 32,
+      "frontage": "awning",
       "height": 67,
       "landmark": false,
       "name": "Block 9 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 37,
-      "x": -217,
-      "z": 315
-    },
-    {
-      "depth": 26,
-      "height": 46,
-      "landmark": false,
-      "name": "Block 9 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 35,
-      "height": 83,
-      "landmark": false,
-      "name": "Block 9 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 28,
-      "x": -171,
-      "z": 263.6666666666667
-    },
-    {
-      "depth": 29,
-      "height": 61,
-      "landmark": false,
-      "name": "Block 9 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 30,
-      "x": -171,
-      "z": 315
-    },
-    {
-      "depth": 42,
-      "height": 40,
-      "landmark": false,
-      "name": "Block 9 Plot 4-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 32,
-      "x": -171,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 27,
-      "height": 34,
-      "landmark": false,
-      "name": "Block 10 Plot 1-1",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": 473.6666666666667
+      "width": 27.75,
+      "x": -383.125,
+      "z": -499.125
     },
     {
       "depth": 40,
+      "frontage": "awning",
       "height": 82,
       "landmark": false,
       "name": "Block 10 Plot 1-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": 525
-    },
-    {
-      "depth": 34,
-      "height": 60,
-      "landmark": false,
-      "name": "Block 10 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -309,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 25,
-      "height": 29,
-      "landmark": false,
-      "name": "Block 10 Plot 2-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": -263,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 38,
-      "height": 76,
-      "landmark": false,
-      "name": "Block 10 Plot 2-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": -263,
-      "z": 525
-    },
-    {
-      "depth": 32,
-      "height": 55,
-      "landmark": false,
-      "name": "Block 10 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 35,
-      "x": -263,
-      "z": 576.3333333333334
+      "width": 27.75,
+      "x": -454.625,
+      "z": -344.5625
     },
     {
       "depth": 41,
+      "frontage": "stone-plinth",
       "height": 23,
       "landmark": false,
       "name": "Block 10 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 35,
-      "height": 71,
-      "landmark": false,
-      "name": "Block 10 Plot 3-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -217,
-      "z": 525
-    },
-    {
-      "depth": 29,
-      "height": 49,
-      "landmark": false,
-      "name": "Block 10 Plot 3-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 28,
-      "x": -217,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 39,
-      "height": 18,
-      "landmark": false,
-      "name": "Block 10 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -171,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 33,
-      "height": 65,
-      "landmark": false,
-      "name": "Block 10 Plot 4-2",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -171,
-      "z": 525
-    },
-    {
-      "depth": 27,
-      "height": 44,
-      "landmark": false,
-      "name": "Block 10 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -171,
-      "z": 576.3333333333334
+      "width": 27.75,
+      "x": -383.125,
+      "z": -403.1875
     },
     {
       "depth": 30,
+      "frontage": "stone-plinth",
       "height": 38,
       "landmark": false,
       "name": "Block 11 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -69,
-      "z": -366.3333333333333
+      "width": 27.75,
+      "x": -454.625,
+      "z": -254.1875
     },
     {
       "depth": 25,
+      "frontage": "stone-plinth",
       "height": 86,
       "landmark": false,
       "name": "Block 11 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 29,
-      "x": -69,
-      "z": -315
-    },
-    {
-      "depth": 38,
-      "height": 64,
-      "landmark": false,
-      "name": "Block 11 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": -69,
-      "z": -263.66666666666663
+      "width": 27.75,
+      "x": -454.625,
+      "z": -193.0625
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
       "height": 32,
       "landmark": false,
       "name": "Block 11 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -23,
-      "z": -366.3333333333333
+      "width": 27.75,
+      "x": -418.875,
+      "z": -254.1875
     },
     {
-      "depth": 35,
-      "height": 59,
+      "depth": 41,
+      "frontage": "awning",
+      "height": 80,
       "landmark": false,
-      "name": "Block 11 Plot 2-3",
+      "name": "Block 11 Plot 2-2",
       "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -23,
-      "z": -263.66666666666663
+      "style": "historic-terrace",
+      "width": 27.75,
+      "x": -418.875,
+      "z": -193.0625
     },
     {
       "depth": 25,
+      "frontage": "recessed-entry",
       "height": 27,
       "landmark": false,
       "name": "Block 11 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 34,
-      "x": 23,
-      "z": -366.3333333333333
+      "width": 27.75,
+      "x": -383.125,
+      "z": -254.1875
     },
     {
-      "depth": 33,
-      "height": 53,
+      "depth": 38,
+      "frontage": "shopfront",
+      "height": 75,
       "landmark": false,
-      "name": "Block 11 Plot 3-3",
+      "name": "Block 11 Plot 3-2",
       "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 23,
-      "z": -263.66666666666663
-    },
-    {
-      "depth": 42,
-      "height": 22,
-      "landmark": false,
-      "name": "Block 11 Plot 4-1",
-      "rotation": 90,
       "style": "corner-shop",
-      "width": 38,
-      "x": 69,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 36,
-      "height": 69,
-      "landmark": false,
-      "name": "Block 11 Plot 4-2",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 29,
-      "x": 69,
-      "z": -315
-    },
-    {
-      "depth": 30,
-      "height": 48,
-      "landmark": false,
-      "name": "Block 11 Plot 4-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": 69,
-      "z": -263.66666666666663
+      "width": 27.75,
+      "x": -383.125,
+      "z": -193.0625
     },
     {
       "depth": 34,
+      "frontage": "awning",
       "height": 42,
       "landmark": false,
       "name": "Block 12 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 37,
-      "x": -69,
-      "z": -156.33333333333334
+      "width": 27.75,
+      "x": -454.625,
+      "z": -99.4375
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
       "height": 20,
       "landmark": false,
       "name": "Block 12 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -69,
-      "z": -105
-    },
-    {
-      "depth": 41,
-      "height": 68,
-      "landmark": false,
-      "name": "Block 12 Plot 1-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -69,
-      "z": -53.66666666666666
+      "width": 27.75,
+      "x": -454.625,
+      "z": -43.3125
     },
     {
       "depth": 31,
+      "frontage": "recessed-entry",
       "height": 36,
       "landmark": false,
       "name": "Block 12 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 30,
-      "x": -23,
-      "z": -156.33333333333334
+      "width": 27.75,
+      "x": -418.875,
+      "z": -99.4375
     },
     {
-      "depth": 38,
-      "height": 63,
+      "depth": 25,
+      "frontage": "shopfront",
+      "height": 84,
       "landmark": false,
-      "name": "Block 12 Plot 2-3",
+      "name": "Block 12 Plot 2-2",
       "rotation": 0,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": -23,
-      "z": -53.66666666666666
+      "style": "corner-shop",
+      "width": 27.75,
+      "x": -418.875,
+      "z": -43.3125
     },
     {
       "depth": 29,
+      "frontage": "shopfront",
       "height": 31,
       "landmark": false,
       "name": "Block 12 Plot 3-1",
       "rotation": 90,
       "style": "corner-shop",
-      "width": 38,
-      "x": 23,
-      "z": -156.33333333333334
+      "width": 27.75,
+      "x": -383.125,
+      "z": -99.4375
     },
     {
-      "depth": 36,
-      "height": 57,
+      "depth": 42,
+      "frontage": "awning",
+      "height": 79,
       "landmark": false,
-      "name": "Block 12 Plot 3-3",
+      "name": "Block 12 Plot 3-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 23,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 26,
-      "height": 25,
-      "landmark": false,
-      "name": "Block 12 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 37,
-      "x": 69,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 39,
-      "height": 73,
-      "landmark": false,
-      "name": "Block 12 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 69,
-      "z": -105
-    },
-    {
-      "depth": 33,
-      "height": 52,
-      "landmark": false,
-      "name": "Block 12 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 69,
-      "z": -53.66666666666666
+      "width": 27.75,
+      "x": -383.125,
+      "z": -43.3125
     },
     {
       "depth": 37,
+      "frontage": "recessed-entry",
       "height": 46,
       "landmark": false,
       "name": "Block 13 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -69,
-      "z": 53.66666666666667
+      "width": 27.75,
+      "x": -454.625,
+      "z": 44.5625
     },
     {
       "depth": 31,
+      "frontage": "shopfront",
       "height": 24,
       "landmark": false,
       "name": "Block 13 Plot 1-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 28,
-      "x": -69,
-      "z": 105
-    },
-    {
-      "depth": 25,
-      "height": 72,
-      "landmark": false,
-      "name": "Block 13 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 30,
-      "x": -69,
-      "z": 156.33333333333334
+      "width": 27.75,
+      "x": -454.625,
+      "z": 103.1875
     },
     {
       "depth": 35,
+      "frontage": "shopfront",
       "height": 40,
       "landmark": false,
       "name": "Block 13 Plot 2-1",
       "rotation": 90,
       "style": "corner-shop",
-      "width": 38,
-      "x": -23,
-      "z": 53.66666666666667
+      "width": 27.75,
+      "x": -418.875,
+      "z": 44.5625
     },
     {
-      "depth": 42,
-      "height": 67,
+      "depth": 29,
+      "frontage": "stone-plinth",
+      "height": 19,
       "landmark": false,
-      "name": "Block 13 Plot 2-3",
+      "name": "Block 13 Plot 2-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -23,
-      "z": 156.33333333333334
+      "width": 27.75,
+      "x": -418.875,
+      "z": 103.1875
     },
     {
       "depth": 32,
+      "frontage": "stone-plinth",
       "height": 35,
       "landmark": false,
       "name": "Block 13 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 33,
-      "x": 23,
-      "z": 53.66666666666667
+      "width": 27.75,
+      "x": -383.125,
+      "z": 44.5625
     },
     {
-      "depth": 39,
-      "height": 61,
+      "depth": 26,
+      "frontage": "stone-plinth",
+      "height": 82,
       "landmark": false,
-      "name": "Block 13 Plot 3-3",
+      "name": "Block 13 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 37,
-      "x": 23,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 29,
-      "height": 29,
-      "landmark": false,
-      "name": "Block 13 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 69,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 43,
-      "height": 77,
-      "landmark": false,
-      "name": "Block 13 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 28,
-      "x": 69,
-      "z": 105
+      "width": 27.75,
+      "x": -383.125,
+      "z": 103.1875
     },
     {
       "depth": 37,
-      "height": 56,
-      "landmark": false,
-      "name": "Block 13 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 30,
-      "x": 69,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 37,
+      "frontage": "recessed-entry",
       "height": 38,
       "landmark": false,
       "name": "Block 14 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 35,
-      "x": -69,
-      "z": 263.6666666666667
+      "width": 27.75,
+      "x": -454.625,
+      "z": 195.5625
     },
     {
       "depth": 31,
+      "frontage": "recessed-entry",
       "height": 85,
       "landmark": false,
       "name": "Block 14 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 37,
-      "x": -69,
-      "z": 315
-    },
-    {
-      "depth": 28,
-      "height": 76,
-      "landmark": false,
-      "name": "Block 14 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": -69,
-      "z": 366.33333333333337
+      "width": 27.75,
+      "x": -454.625,
+      "z": 251.6875
     },
     {
       "depth": 34,
+      "frontage": "awning",
       "height": 32,
       "landmark": false,
       "name": "Block 14 Plot 2-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 28,
-      "x": -23,
-      "z": 263.6666666666667
+      "width": 27.75,
+      "x": -418.875,
+      "z": 195.5625
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
       "height": 80,
       "landmark": false,
       "name": "Block 14 Plot 2-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 30,
-      "x": -23,
-      "z": 315
-    },
-    {
-      "depth": 26,
-      "height": 71,
-      "landmark": false,
-      "name": "Block 14 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": -23,
-      "z": 366.33333333333337
+      "width": 27.75,
+      "x": -418.875,
+      "z": 251.6875
     },
     {
       "depth": 32,
+      "frontage": "stone-plinth",
       "height": 27,
       "landmark": false,
       "name": "Block 14 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 23,
-      "z": 263.6666666666667
+      "width": 27.75,
+      "x": -383.125,
+      "z": 195.5625
     },
     {
       "depth": 26,
+      "frontage": "stone-plinth",
       "height": 74,
       "landmark": false,
       "name": "Block 14 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 23,
-      "z": 315
-    },
-    {
-      "depth": 42,
-      "height": 65,
-      "landmark": false,
-      "name": "Block 14 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 23,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 29,
-      "height": 21,
-      "landmark": false,
-      "name": "Block 14 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 35,
-      "x": 69,
-      "z": 263.6666666666667
-    },
-    {
-      "depth": 42,
-      "height": 69,
-      "landmark": false,
-      "name": "Block 14 Plot 4-2",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 37,
-      "x": 69,
-      "z": 315
+      "width": 27.75,
+      "x": -383.125,
+      "z": 251.6875
     },
     {
       "depth": 40,
-      "height": 60,
-      "landmark": false,
-      "name": "Block 14 Plot 4-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 69,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 40,
+      "frontage": "stone-plinth",
       "height": 41,
       "landmark": false,
       "name": "Block 15 Plot 1-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -69,
-      "z": 473.6666666666667
+      "width": 27.75,
+      "x": -454.625,
+      "z": 342.0625
     },
     {
       "depth": 34,
+      "frontage": "stone-plinth",
       "height": 20,
       "landmark": false,
       "name": "Block 15 Plot 1-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -69,
-      "z": 525
-    },
-    {
-      "depth": 28,
-      "height": 68,
-      "landmark": false,
-      "name": "Block 15 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 28,
-      "x": -69,
-      "z": 576.3333333333334
+      "width": 27.75,
+      "x": -454.625,
+      "z": 405.6875
     },
     {
       "depth": 38,
+      "frontage": "stone-plinth",
       "height": 36,
       "landmark": false,
       "name": "Block 15 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -23,
-      "z": 473.6666666666667
+      "width": 27.75,
+      "x": -418.875,
+      "z": 342.0625
     },
     {
       "depth": 32,
+      "frontage": "awning",
       "height": 84,
       "landmark": false,
       "name": "Block 15 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": -23,
-      "z": 525
-    },
-    {
-      "depth": 26,
-      "height": 62,
-      "landmark": false,
-      "name": "Block 15 Plot 2-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": -23,
-      "z": 576.3333333333334
+      "width": 27.75,
+      "x": -418.875,
+      "z": 405.6875
     },
     {
       "depth": 35,
+      "frontage": "awning",
       "height": 31,
       "landmark": false,
       "name": "Block 15 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 31,
-      "x": 23,
-      "z": 473.6666666666667
+      "width": 27.75,
+      "x": -383.125,
+      "z": 342.0625
     },
     {
       "depth": 29,
+      "frontage": "shopfront",
       "height": 78,
       "landmark": false,
       "name": "Block 15 Plot 3-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 33,
-      "x": 23,
-      "z": 525
-    },
-    {
-      "depth": 42,
-      "height": 57,
-      "landmark": false,
-      "name": "Block 15 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 35,
-      "x": 23,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 33,
-      "height": 25,
-      "landmark": false,
-      "name": "Block 15 Plot 4-1",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 69,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 27,
-      "height": 73,
-      "landmark": false,
-      "name": "Block 15 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 69,
-      "z": 525
-    },
-    {
-      "depth": 40,
-      "height": 51,
-      "landmark": false,
-      "name": "Block 15 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 28,
-      "x": 69,
-      "z": 576.3333333333334
+      "width": 27.75,
+      "x": -383.125,
+      "z": 405.6875
     },
     {
       "depth": 43,
+      "frontage": "awning",
       "height": 45,
       "landmark": false,
       "name": "Block 16 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 34,
-      "x": 171,
-      "z": -366.3333333333333
+      "width": 27.75,
+      "x": -454.625,
+      "z": 505.375
     },
     {
       "depth": 38,
+      "frontage": "stone-plinth",
       "height": 24,
       "landmark": false,
       "name": "Block 16 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 36,
-      "x": 171,
-      "z": -315
-    },
-    {
-      "depth": 32,
-      "height": 72,
-      "landmark": false,
-      "name": "Block 16 Plot 1-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 171,
-      "z": -263.66666666666663
+      "width": 27.75,
+      "x": -454.625,
+      "z": 571.125
     },
     {
       "depth": 41,
+      "frontage": "stone-plinth",
       "height": 40,
       "landmark": false,
       "name": "Block 16 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": -366.3333333333333
+      "width": 27.75,
+      "x": -418.875,
+      "z": 505.375
     },
     {
       "depth": 35,
+      "frontage": "shopfront",
       "height": 19,
       "landmark": false,
       "name": "Block 16 Plot 2-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 29,
-      "x": 217,
-      "z": -315
-    },
-    {
-      "depth": 29,
-      "height": 66,
-      "landmark": false,
-      "name": "Block 16 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": 217,
-      "z": -263.66666666666663
+      "width": 27.75,
+      "x": -418.875,
+      "z": 571.125
     },
     {
       "depth": 38,
+      "frontage": "shopfront",
       "height": 34,
       "landmark": false,
       "name": "Block 16 Plot 3-1",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 38,
-      "x": 263,
-      "z": -366.3333333333333
+      "width": 27.75,
+      "x": -383.125,
+      "z": 505.375
     },
     {
       "depth": 32,
+      "frontage": "recessed-entry",
       "height": 82,
       "landmark": false,
       "name": "Block 16 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 263,
-      "z": -315
-    },
-    {
-      "depth": 27,
-      "height": 61,
-      "landmark": false,
-      "name": "Block 16 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 263,
-      "z": -263.66666666666663
-    },
-    {
-      "depth": 36,
-      "height": 29,
-      "landmark": false,
-      "name": "Block 16 Plot 4-1",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": 309,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 30,
-      "height": 77,
-      "landmark": false,
-      "name": "Block 16 Plot 4-2",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 36,
-      "x": 309,
-      "z": -315
-    },
-    {
-      "depth": 43,
-      "height": 55,
-      "landmark": false,
-      "name": "Block 16 Plot 4-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 309,
-      "z": -263.66666666666663
+      "width": 27.75,
+      "x": -383.125,
+      "z": 571.125
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
       "height": 49,
       "landmark": false,
       "name": "Block 17 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 171,
-      "z": -156.33333333333334
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": -562.375
     },
     {
       "depth": 41,
+      "frontage": "shopfront",
       "height": 28,
       "landmark": false,
       "name": "Block 17 Plot 1-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 38,
-      "x": 171,
-      "z": -105
-    },
-    {
-      "depth": 35,
-      "height": 76,
-      "landmark": false,
-      "name": "Block 17 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 171,
-      "z": -53.66666666666666
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": -499.125
     },
     {
       "depth": 25,
+      "frontage": "shopfront",
       "height": 44,
       "landmark": false,
       "name": "Block 17 Plot 2-1",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 37,
-      "x": 217,
-      "z": -156.33333333333334
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": -562.375
     },
     {
       "depth": 38,
+      "frontage": "recessed-entry",
       "height": 23,
       "landmark": false,
       "name": "Block 17 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": -105
-    },
-    {
-      "depth": 32,
-      "height": 70,
-      "landmark": false,
-      "name": "Block 17 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": -53.66666666666666
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": -499.125
     },
     {
       "depth": 42,
+      "frontage": "stone-plinth",
       "height": 38,
       "landmark": false,
       "name": "Block 17 Plot 3-1",
       "rotation": 90,
       "style": "historic-terrace",
       "width": 30,
-      "x": 263,
-      "z": -156.33333333333334
+      "x": -237.04166666666666,
+      "z": -562.375
     },
     {
       "depth": 36,
+      "frontage": "stone-plinth",
       "height": 86,
       "landmark": false,
       "name": "Block 17 Plot 3-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 32,
-      "x": 263,
-      "z": -105
-    },
-    {
-      "depth": 30,
-      "height": 65,
-      "landmark": false,
-      "name": "Block 17 Plot 3-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": 263,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 39,
-      "height": 33,
-      "landmark": false,
-      "name": "Block 17 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 309,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 33,
-      "height": 81,
-      "landmark": false,
-      "name": "Block 17 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 309,
-      "z": -105
-    },
-    {
-      "depth": 27,
-      "height": 59,
-      "landmark": false,
-      "name": "Block 17 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 309,
-      "z": -53.66666666666666
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": -499.125
     },
     {
       "depth": 34,
+      "frontage": "awning",
       "height": 57,
       "landmark": false,
       "name": "Block 19 Plot 1-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 171,
-      "z": 263.6666666666667
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": -254.1875
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
       "height": 36,
       "landmark": false,
       "name": "Block 19 Plot 1-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 171,
-      "z": 315
-    },
-    {
-      "depth": 41,
-      "height": 83,
-      "landmark": false,
-      "name": "Block 19 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 171,
-      "z": 366.33333333333337
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": -193.0625
     },
     {
       "depth": 32,
+      "frontage": "stone-plinth",
       "height": 52,
       "landmark": false,
       "name": "Block 19 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 36,
-      "x": 217,
-      "z": 263.6666666666667
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": -254.1875
     },
     {
       "depth": 26,
+      "frontage": "stone-plinth",
       "height": 30,
       "landmark": false,
       "name": "Block 19 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": 315
-    },
-    {
-      "depth": 39,
-      "height": 78,
-      "landmark": false,
-      "name": "Block 19 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": 366.33333333333337
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": -193.0625
     },
     {
       "depth": 29,
+      "frontage": "stone-plinth",
       "height": 46,
       "landmark": false,
       "name": "Block 19 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
       "width": 29,
-      "x": 263,
-      "z": 263.6666666666667
+      "x": -237.04166666666666,
+      "z": -254.1875
     },
     {
       "depth": 42,
+      "frontage": "awning",
       "height": 25,
       "landmark": false,
       "name": "Block 19 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
       "width": 31,
-      "x": 263,
-      "z": 315
-    },
-    {
-      "depth": 36,
-      "height": 73,
-      "landmark": false,
-      "name": "Block 19 Plot 3-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 33,
-      "x": 263,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 27,
-      "height": 41,
-      "landmark": false,
-      "name": "Block 19 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 309,
-      "z": 263.6666666666667
-    },
-    {
-      "depth": 40,
-      "height": 19,
-      "landmark": false,
-      "name": "Block 19 Plot 4-2",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 309,
-      "z": 315
-    },
-    {
-      "depth": 34,
-      "height": 67,
-      "landmark": false,
-      "name": "Block 19 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 309,
-      "z": 366.33333333333337
+      "x": -237.04166666666666,
+      "z": -193.0625
     },
     {
       "depth": 38,
+      "frontage": "stone-plinth",
       "height": 61,
       "landmark": false,
       "name": "Block 20 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 32,
-      "x": 171,
-      "z": 473.6666666666667
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": -99.4375
     },
     {
       "depth": 32,
+      "frontage": "awning",
       "height": 40,
       "landmark": false,
       "name": "Block 20 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 34,
-      "x": 171,
-      "z": 525
-    },
-    {
-      "depth": 26,
-      "height": 18,
-      "landmark": false,
-      "name": "Block 20 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 36,
-      "x": 171,
-      "z": 576.3333333333334
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": -43.3125
     },
     {
       "depth": 35,
+      "frontage": "awning",
       "height": 56,
       "landmark": false,
       "name": "Block 20 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": 473.6666666666667
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": -99.4375
     },
     {
       "depth": 29,
+      "frontage": "stone-plinth",
       "height": 34,
       "landmark": false,
       "name": "Block 20 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 217,
-      "z": 525
-    },
-    {
-      "depth": 42,
-      "height": 82,
-      "landmark": false,
-      "name": "Block 20 Plot 2-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 29,
-      "x": 217,
-      "z": 576.3333333333334
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": -43.3125
     },
     {
       "depth": 33,
+      "frontage": "recessed-entry",
       "height": 50,
       "landmark": false,
       "name": "Block 20 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 263,
-      "z": 473.6666666666667
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": -99.4375
     },
     {
       "depth": 27,
+      "frontage": "shopfront",
       "height": 29,
       "landmark": false,
       "name": "Block 20 Plot 3-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 38,
-      "x": 263,
-      "z": 525
-    },
-    {
-      "depth": 40,
-      "height": 76,
-      "landmark": false,
-      "name": "Block 20 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 263,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 30,
-      "height": 45,
-      "landmark": false,
-      "name": "Block 20 Plot 4-1",
-      "rotation": 90,
-      "style": "corner-shop",
-      "width": 32,
-      "x": 309,
-      "z": 473.6666666666667
-    },
-    {
-      "depth": 43,
-      "height": 23,
-      "landmark": false,
-      "name": "Block 20 Plot 4-2",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": 309,
-      "z": 525
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": -43.3125
     },
     {
       "depth": 37,
-      "height": 71,
-      "landmark": false,
-      "name": "Block 20 Plot 4-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 36,
-      "x": 309,
-      "z": 576.3333333333334
-    },
-    {
-      "depth": 37,
+      "frontage": "stone-plinth",
       "height": 53,
       "landmark": false,
       "name": "Block 21 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": -366.3333333333333
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": 44.5625
     },
     {
       "depth": 35,
+      "frontage": "stone-plinth",
       "height": 44,
       "landmark": false,
       "name": "Block 21 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": -315
-    },
-    {
-      "depth": 29,
-      "height": 22,
-      "landmark": false,
-      "name": "Block 21 Plot 1-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 411,
-      "z": -263.66666666666663
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": 103.1875
     },
     {
       "depth": 35,
+      "frontage": "shopfront",
       "height": 47,
       "landmark": false,
       "name": "Block 21 Plot 2-1",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 34,
-      "x": 457,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 27,
-      "height": 86,
-      "landmark": false,
-      "name": "Block 21 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 457,
-      "z": -263.66666666666663
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 44.5625
     },
     {
       "depth": 32,
+      "frontage": "shopfront",
+      "height": 38,
+      "landmark": false,
+      "name": "Block 21 Plot 2-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 103.1875
+    },
+    {
+      "depth": 32,
+      "frontage": "recessed-entry",
       "height": 42,
       "landmark": false,
       "name": "Block 21 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 503,
-      "z": -366.3333333333333
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": 44.5625
     },
     {
-      "depth": 43,
-      "height": 80,
+      "depth": 30,
+      "frontage": "stone-plinth",
+      "height": 33,
       "landmark": false,
-      "name": "Block 21 Plot 3-3",
+      "name": "Block 21 Plot 3-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 32,
-      "x": 503,
-      "z": -263.66666666666663
-    },
-    {
-      "depth": 33,
-      "height": 49,
-      "landmark": false,
-      "name": "Block 21 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": -366.3333333333333
-    },
-    {
-      "depth": 27,
-      "height": 27,
-      "landmark": false,
-      "name": "Block 21 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": -315
-    },
-    {
-      "depth": 40,
-      "height": 75,
-      "landmark": false,
-      "name": "Block 21 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": -263.66666666666663
+      "width": 30,
+      "x": -237.04166666666666,
+      "z": 103.1875
     },
     {
       "depth": 41,
+      "frontage": "shopfront",
       "height": 57,
       "landmark": false,
       "name": "Block 22 Plot 1-1",
       "rotation": 0,
       "style": "corner-shop",
       "width": 30,
-      "x": 411,
-      "z": -156.33333333333334
+      "x": -315.2083333333333,
+      "z": 195.5625
     },
     {
       "depth": 35,
+      "frontage": "stone-plinth",
       "height": 35,
       "landmark": false,
       "name": "Block 22 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 32,
-      "x": 411,
-      "z": -105
-    },
-    {
-      "depth": 29,
-      "height": 83,
-      "landmark": false,
-      "name": "Block 22 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 34,
-      "x": 411,
-      "z": -53.66666666666666
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": 251.6875
     },
     {
       "depth": 38,
+      "frontage": "recessed-entry",
       "height": 51,
       "landmark": false,
       "name": "Block 22 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 457,
-      "z": -156.33333333333334
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 195.5625
     },
     {
-      "depth": 26,
-      "height": 78,
+      "depth": 32,
+      "frontage": "recessed-entry",
+      "height": 30,
       "landmark": false,
-      "name": "Block 22 Plot 2-3",
+      "name": "Block 22 Plot 2-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 457,
-      "z": -53.66666666666666
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 251.6875
     },
     {
       "depth": 36,
+      "frontage": "awning",
       "height": 46,
       "landmark": false,
       "name": "Block 22 Plot 3-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 37,
-      "x": 503,
-      "z": -156.33333333333334
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": 195.5625
     },
     {
-      "depth": 43,
-      "height": 72,
+      "depth": 30,
+      "frontage": "stone-plinth",
+      "height": 25,
       "landmark": false,
-      "name": "Block 22 Plot 3-3",
+      "name": "Block 22 Plot 3-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 503,
-      "z": -53.66666666666666
-    },
-    {
-      "depth": 33,
-      "height": 40,
-      "landmark": false,
-      "name": "Block 22 Plot 4-1",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 30,
-      "x": 549,
-      "z": -156.33333333333334
-    },
-    {
-      "depth": 27,
-      "height": 19,
-      "landmark": false,
-      "name": "Block 22 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 32,
-      "x": 549,
-      "z": -105
-    },
-    {
-      "depth": 40,
-      "height": 67,
-      "landmark": false,
-      "name": "Block 22 Plot 4-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 34,
-      "x": 549,
-      "z": -53.66666666666666
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": 251.6875
     },
     {
       "depth": 25,
+      "frontage": "recessed-entry",
       "height": 61,
       "landmark": false,
       "name": "Block 23 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": 53.66666666666667
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": 342.0625
     },
     {
       "depth": 38,
+      "frontage": "recessed-entry",
       "height": 39,
       "landmark": false,
       "name": "Block 23 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": 105
-    },
-    {
-      "depth": 32,
-      "height": 18,
-      "landmark": false,
-      "name": "Block 23 Plot 1-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": 156.33333333333334
+      "width": 31.083333333333336,
+      "x": -315.2083333333333,
+      "z": 405.6875
     },
     {
       "depth": 42,
+      "frontage": "stone-plinth",
       "height": 55,
       "landmark": false,
       "name": "Block 23 Plot 2-1",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 33,
-      "x": 457,
-      "z": 53.66666666666667
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 342.0625
     },
     {
-      "depth": 30,
-      "height": 82,
+      "depth": 36,
+      "frontage": "stone-plinth",
+      "height": 34,
       "landmark": false,
-      "name": "Block 23 Plot 2-3",
+      "name": "Block 23 Plot 2-2",
       "rotation": 90,
       "style": "historic-terrace",
-      "width": 37,
-      "x": 457,
-      "z": 156.33333333333334
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 405.6875
     },
     {
       "depth": 39,
+      "frontage": "stone-plinth",
       "height": 50,
       "landmark": false,
       "name": "Block 23 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 503,
-      "z": 53.66666666666667
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": 342.0625
     },
     {
-      "depth": 27,
-      "height": 76,
+      "depth": 33,
+      "frontage": "awning",
+      "height": 28,
       "landmark": false,
-      "name": "Block 23 Plot 3-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 30,
-      "x": 503,
-      "z": 156.33333333333334
-    },
-    {
-      "depth": 36,
-      "height": 44,
-      "landmark": false,
-      "name": "Block 23 Plot 4-1",
+      "name": "Block 23 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": 53.66666666666667
-    },
-    {
-      "depth": 31,
-      "height": 23,
-      "landmark": false,
-      "name": "Block 23 Plot 4-2",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 549,
-      "z": 105
-    },
-    {
-      "depth": 25,
-      "height": 71,
-      "landmark": false,
-      "name": "Block 23 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": 156.33333333333334
+      "width": 28,
+      "x": -237.04166666666666,
+      "z": 405.6875
     },
     {
       "depth": 28,
+      "frontage": "stone-plinth",
       "height": 65,
       "landmark": false,
       "name": "Block 24 Plot 1-1",
       "rotation": 90,
       "style": "historic-terrace",
       "width": 29,
-      "x": 411,
-      "z": 263.6666666666667
+      "x": -315.2083333333333,
+      "z": 505.375
     },
     {
       "depth": 41,
+      "frontage": "awning",
       "height": 43,
       "landmark": false,
       "name": "Block 24 Plot 1-2",
       "rotation": 90,
       "style": "historic-terrace",
       "width": 31,
-      "x": 411,
-      "z": 315
-    },
-    {
-      "depth": 35,
-      "height": 22,
-      "landmark": false,
-      "name": "Block 24 Plot 1-3",
-      "rotation": 90,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": 411,
-      "z": 366.33333333333337
+      "x": -315.2083333333333,
+      "z": 571.125
     },
     {
       "depth": 26,
+      "frontage": "awning",
       "height": 59,
       "landmark": false,
       "name": "Block 24 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 457,
-      "z": 263.6666666666667
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 505.375
     },
     {
-      "depth": 33,
-      "height": 85,
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 38,
       "landmark": false,
-      "name": "Block 24 Plot 2-3",
+      "name": "Block 24 Plot 2-2",
       "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 457,
-      "z": 366.33333333333337
+      "style": "historic-terrace",
+      "width": 31.083333333333336,
+      "x": -276.125,
+      "z": 571.125
     },
     {
       "depth": 42,
+      "frontage": "stone-plinth",
       "height": 54,
       "landmark": false,
       "name": "Block 24 Plot 3-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 36,
-      "x": 503,
-      "z": 263.6666666666667
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": 505.375
     },
     {
-      "depth": 30,
-      "height": 80,
+      "depth": 36,
+      "frontage": "shopfront",
+      "height": 32,
       "landmark": false,
-      "name": "Block 24 Plot 3-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 38,
-      "x": 503,
-      "z": 366.33333333333337
-    },
-    {
-      "depth": 40,
-      "height": 48,
-      "landmark": false,
-      "name": "Block 24 Plot 4-1",
+      "name": "Block 24 Plot 3-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 29,
-      "x": 549,
-      "z": 263.6666666666667
-    },
-    {
-      "depth": 34,
-      "height": 27,
-      "landmark": false,
-      "name": "Block 24 Plot 4-2",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 31,
-      "x": 549,
-      "z": 315
-    },
-    {
-      "depth": 28,
-      "height": 75,
-      "landmark": false,
-      "name": "Block 24 Plot 4-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 33,
-      "x": 549,
-      "z": 366.33333333333337
+      "width": 31.083333333333336,
+      "x": -237.04166666666666,
+      "z": 571.125
     },
     {
       "depth": 32,
+      "frontage": "stone-plinth",
       "height": 68,
       "landmark": false,
       "name": "Block 25 Plot 1-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": 473.6666666666667
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": -562.375
     },
     {
       "depth": 26,
+      "frontage": "stone-plinth",
       "height": 47,
       "landmark": false,
       "name": "Block 25 Plot 1-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 411,
-      "z": 525
-    },
-    {
-      "depth": 39,
-      "height": 26,
-      "landmark": false,
-      "name": "Block 25 Plot 1-3",
-      "rotation": 0,
-      "style": "corner-shop",
-      "width": 38,
-      "x": 411,
-      "z": 576.3333333333334
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": -499.125
     },
     {
       "depth": 29,
+      "frontage": "stone-plinth",
       "height": 63,
       "landmark": false,
       "name": "Block 25 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 32,
-      "x": 457,
-      "z": 473.6666666666667
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": -562.375
     },
     {
       "depth": 42,
+      "frontage": "shopfront",
       "height": 42,
       "landmark": false,
       "name": "Block 25 Plot 2-2",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 34,
-      "x": 457,
-      "z": 525
-    },
-    {
-      "depth": 36,
-      "height": 20,
-      "landmark": false,
-      "name": "Block 25 Plot 2-3",
-      "rotation": 0,
-      "style": "historic-terrace",
-      "width": 36,
-      "x": 457,
-      "z": 576.3333333333334
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": -499.125
     },
     {
       "depth": 27,
+      "frontage": "shopfront",
       "height": 58,
       "landmark": false,
       "name": "Block 25 Plot 3-1",
       "rotation": 0,
       "style": "corner-shop",
-      "width": 38,
-      "x": 503,
-      "z": 473.6666666666667
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": -562.375
     },
     {
       "depth": 40,
+      "frontage": "recessed-entry",
       "height": 36,
       "landmark": false,
       "name": "Block 25 Plot 3-2",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 503,
-      "z": 525
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": -499.125
     },
     {
-      "depth": 34,
-      "height": 84,
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 75,
       "landmark": false,
-      "name": "Block 25 Plot 3-3",
+      "name": "Block 28 Plot 2-1",
       "rotation": 0,
       "style": "historic-terrace",
-      "width": 29,
-      "x": 503,
-      "z": 576.3333333333334
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": -99.4375
     },
     {
-      "depth": 43,
-      "height": 52,
+      "depth": 33,
+      "frontage": "awning",
+      "height": 53,
       "landmark": false,
-      "name": "Block 25 Plot 4-1",
-      "rotation": 90,
+      "name": "Block 28 Plot 2-2",
+      "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": 473.6666666666667
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": -43.3125
     },
     {
-      "depth": 37,
-      "height": 31,
+      "depth": 36,
+      "frontage": "awning",
+      "height": 69,
       "landmark": false,
-      "name": "Block 25 Plot 4-2",
-      "rotation": 90,
+      "name": "Block 28 Plot 3-1",
+      "rotation": 0,
       "style": "historic-terrace",
-      "width": 38,
-      "x": 549,
-      "z": 525
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": -99.4375
     },
     {
       "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 48,
+      "landmark": false,
+      "name": "Block 28 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": -43.3125
+    },
+    {
+      "depth": 26,
+      "frontage": "awning",
+      "height": 76,
+      "landmark": false,
+      "name": "Block 30 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": 195.5625
+    },
+    {
+      "depth": 39,
+      "frontage": "shopfront",
+      "height": 55,
+      "landmark": false,
+      "name": "Block 30 Plot 1-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": 251.6875
+    },
+    {
+      "depth": 42,
+      "frontage": "shopfront",
+      "height": 71,
+      "landmark": false,
+      "name": "Block 30 Plot 2-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": 195.5625
+    },
+    {
+      "depth": 36,
+      "frontage": "stone-plinth",
+      "height": 49,
+      "landmark": false,
+      "name": "Block 30 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": 251.6875
+    },
+    {
+      "depth": 40,
+      "frontage": "recessed-entry",
+      "height": 65,
+      "landmark": false,
+      "name": "Block 30 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": 195.5625
+    },
+    {
+      "depth": 34,
+      "frontage": "recessed-entry",
+      "height": 44,
+      "landmark": false,
+      "name": "Block 30 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": 251.6875
+    },
+    {
+      "depth": 29,
+      "frontage": "shopfront",
+      "height": 80,
+      "landmark": false,
+      "name": "Block 31 Plot 1-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": 342.0625
+    },
+    {
+      "depth": 42,
+      "frontage": "awning",
+      "height": 59,
+      "landmark": false,
+      "name": "Block 31 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": 405.6875
+    },
+    {
+      "depth": 26,
+      "frontage": "recessed-entry",
+      "height": 74,
+      "landmark": false,
+      "name": "Block 31 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28,
+      "x": -126.375,
+      "z": 342.0625
+    },
+    {
+      "depth": 39,
+      "frontage": "recessed-entry",
+      "height": 53,
+      "landmark": false,
+      "name": "Block 31 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": 405.6875
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 69,
+      "landmark": false,
+      "name": "Block 31 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": 342.0625
+    },
+    {
+      "depth": 37,
+      "frontage": "stone-plinth",
+      "height": 48,
+      "landmark": false,
+      "name": "Block 31 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": 405.6875
+    },
+    {
+      "depth": 32,
+      "frontage": "recessed-entry",
+      "height": 84,
+      "landmark": false,
+      "name": "Block 32 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": 505.375
+    },
+    {
+      "depth": 26,
+      "frontage": "recessed-entry",
+      "height": 62,
+      "landmark": false,
+      "name": "Block 32 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -163.79166666666666,
+      "z": 571.125
+    },
+    {
+      "depth": 30,
+      "frontage": "stone-plinth",
       "height": 78,
       "landmark": false,
-      "name": "Block 25 Plot 4-3",
+      "name": "Block 32 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": 505.375
+    },
+    {
+      "depth": 43,
+      "frontage": "awning",
+      "height": 57,
+      "landmark": false,
+      "name": "Block 32 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -126.375,
+      "z": 571.125
+    },
+    {
+      "depth": 27,
+      "frontage": "awning",
+      "height": 73,
+      "landmark": false,
+      "name": "Block 32 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": 505.375
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 52,
+      "landmark": false,
+      "name": "Block 32 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29.416666666666664,
+      "x": -88.95833333333334,
+      "z": 571.125
+    },
+    {
+      "depth": 36,
+      "frontage": "awning",
+      "height": 19,
+      "landmark": false,
+      "name": "Block 33 Plot 1-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 34,
+      "x": -17.458333333333332,
+      "z": -562.375
+    },
+    {
+      "depth": 30,
+      "frontage": "stone-plinth",
+      "height": 66,
+      "landmark": false,
+      "name": "Block 33 Plot 1-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36,
+      "x": -17.458333333333332,
+      "z": -499.125
+    },
+    {
+      "depth": 33,
+      "frontage": "stone-plinth",
+      "height": 82,
+      "landmark": false,
+      "name": "Block 33 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": -562.375
+    },
+    {
+      "depth": 27,
+      "frontage": "stone-plinth",
+      "height": 61,
+      "landmark": false,
+      "name": "Block 33 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29,
+      "x": 27.125,
+      "z": -499.125
+    },
+    {
+      "depth": 30,
+      "frontage": "stone-plinth",
+      "height": 77,
+      "landmark": false,
+      "name": "Block 33 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": -562.375
+    },
+    {
+      "depth": 25,
+      "frontage": "shopfront",
+      "height": 55,
+      "landmark": false,
+      "name": "Block 33 Plot 3-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": -499.125
+    },
+    {
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 23,
+      "landmark": false,
+      "name": "Block 34 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": -403.1875
+    },
+    {
+      "depth": 33,
+      "frontage": "awning",
+      "height": 70,
+      "landmark": false,
+      "name": "Block 34 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": -344.5625
+    },
+    {
+      "depth": 36,
+      "frontage": "awning",
+      "height": 86,
+      "landmark": false,
+      "name": "Block 34 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": -403.1875
+    },
+    {
+      "depth": 30,
+      "frontage": "shopfront",
+      "height": 65,
+      "landmark": false,
+      "name": "Block 34 Plot 2-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": -344.5625
+    },
+    {
+      "depth": 34,
+      "frontage": "shopfront",
+      "height": 81,
+      "landmark": false,
+      "name": "Block 34 Plot 3-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 30,
+      "x": 71.70833333333334,
+      "z": -403.1875
+    },
+    {
+      "depth": 28,
+      "frontage": "recessed-entry",
+      "height": 59,
+      "landmark": false,
+      "name": "Block 34 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 32,
+      "x": 71.70833333333334,
+      "z": -344.5625
+    },
+    {
+      "depth": 42,
+      "frontage": "stone-plinth",
+      "height": 26,
+      "landmark": false,
+      "name": "Block 35 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 33,
+      "x": -17.458333333333332,
+      "z": -254.1875
+    },
+    {
+      "depth": 36,
+      "frontage": "shopfront",
+      "height": 74,
+      "landmark": false,
+      "name": "Block 35 Plot 1-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 35,
+      "x": -17.458333333333332,
+      "z": -193.0625
+    },
+    {
+      "depth": 40,
+      "frontage": "shopfront",
+      "height": 21,
+      "landmark": false,
+      "name": "Block 35 Plot 2-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": -254.1875
+    },
+    {
+      "depth": 34,
+      "frontage": "recessed-entry",
+      "height": 69,
+      "landmark": false,
+      "name": "Block 35 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28,
+      "x": 27.125,
+      "z": -193.0625
+    },
+    {
+      "depth": 37,
+      "frontage": "awning",
+      "height": 85,
+      "landmark": false,
+      "name": "Block 35 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": -254.1875
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 63,
+      "landmark": false,
+      "name": "Block 35 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": -193.0625
+    },
+    {
+      "depth": 42,
+      "frontage": "stone-plinth",
+      "height": 18,
+      "landmark": false,
+      "name": "Block 36 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": -99.4375
+    },
+    {
+      "depth": 39,
+      "frontage": "recessed-entry",
+      "height": 78,
+      "landmark": false,
+      "name": "Block 36 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": -43.3125
+    },
+    {
+      "depth": 39,
+      "frontage": "recessed-entry",
+      "height": 82,
+      "landmark": false,
+      "name": "Block 36 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 35,
+      "x": 27.125,
+      "z": -99.4375
+    },
+    {
+      "depth": 37,
+      "frontage": "stone-plinth",
+      "height": 73,
+      "landmark": false,
+      "name": "Block 36 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": -43.3125
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 19,
+      "landmark": false,
+      "name": "Block 36 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29,
+      "x": 71.70833333333334,
+      "z": -99.4375
+    },
+    {
+      "depth": 34,
+      "frontage": "awning",
+      "height": 67,
+      "landmark": false,
+      "name": "Block 36 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 31,
+      "x": 71.70833333333334,
+      "z": -43.3125
+    },
+    {
+      "depth": 26,
+      "frontage": "recessed-entry",
+      "height": 22,
+      "landmark": false,
+      "name": "Block 37 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 31,
+      "x": -17.458333333333332,
+      "z": 44.5625
+    },
+    {
+      "depth": 39,
+      "frontage": "recessed-entry",
+      "height": 70,
+      "landmark": false,
+      "name": "Block 37 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 33,
+      "x": -17.458333333333332,
+      "z": 103.1875
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 86,
+      "landmark": false,
+      "name": "Block 37 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": 44.5625
+    },
+    {
+      "depth": 37,
+      "frontage": "stone-plinth",
+      "height": 64,
+      "landmark": false,
+      "name": "Block 37 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": 103.1875
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 80,
+      "landmark": false,
+      "name": "Block 37 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": 44.5625
+    },
+    {
+      "depth": 34,
+      "frontage": "shopfront",
+      "height": 59,
+      "landmark": false,
+      "name": "Block 37 Plot 3-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": 103.1875
+    },
+    {
+      "depth": 30,
+      "frontage": "stone-plinth",
+      "height": 26,
+      "landmark": false,
+      "name": "Block 38 Plot 1-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": 195.5625
+    },
+    {
+      "depth": 43,
+      "frontage": "awning",
+      "height": 74,
+      "landmark": false,
+      "name": "Block 38 Plot 1-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": 251.6875
+    },
+    {
+      "depth": 27,
+      "frontage": "awning",
+      "height": 21,
+      "landmark": false,
+      "name": "Block 38 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 34,
+      "x": 27.125,
+      "z": 195.5625
+    },
+    {
+      "depth": 40,
+      "frontage": "shopfront",
+      "height": 68,
+      "landmark": false,
+      "name": "Block 38 Plot 2-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36,
+      "x": 27.125,
+      "z": 251.6875
+    },
+    {
+      "depth": 43,
+      "frontage": "shopfront",
+      "height": 84,
+      "landmark": false,
+      "name": "Block 38 Plot 3-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": 195.5625
+    },
+    {
+      "depth": 38,
+      "frontage": "stone-plinth",
+      "height": 63,
+      "landmark": false,
+      "name": "Block 38 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29,
+      "x": 71.70833333333334,
+      "z": 251.6875
+    },
+    {
+      "depth": 33,
+      "frontage": "stone-plinth",
+      "height": 30,
+      "landmark": false,
+      "name": "Block 39 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 30,
+      "x": -17.458333333333332,
+      "z": 342.0625
+    },
+    {
+      "depth": 27,
+      "frontage": "shopfront",
+      "height": 78,
+      "landmark": false,
+      "name": "Block 39 Plot 1-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 32,
+      "x": -17.458333333333332,
+      "z": 405.6875
+    },
+    {
+      "depth": 30,
+      "frontage": "shopfront",
+      "height": 25,
+      "landmark": false,
+      "name": "Block 39 Plot 2-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": 342.0625
+    },
+    {
+      "depth": 43,
+      "frontage": "awning",
+      "height": 72,
+      "landmark": false,
+      "name": "Block 39 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 27.125,
+      "z": 405.6875
+    },
+    {
+      "depth": 28,
+      "frontage": "recessed-entry",
+      "height": 19,
+      "landmark": false,
+      "name": "Block 39 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": 342.0625
+    },
+    {
+      "depth": 41,
+      "frontage": "recessed-entry",
+      "height": 67,
+      "landmark": false,
+      "name": "Block 39 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": 405.6875
+    },
+    {
+      "depth": 36,
+      "frontage": "shopfront",
+      "height": 34,
+      "landmark": false,
+      "name": "Block 40 Plot 1-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": 505.375
+    },
+    {
+      "depth": 30,
+      "frontage": "stone-plinth",
+      "height": 82,
+      "landmark": false,
+      "name": "Block 40 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": -17.458333333333332,
+      "z": 571.125
+    },
+    {
+      "depth": 34,
+      "frontage": "recessed-entry",
+      "height": 29,
+      "landmark": false,
+      "name": "Block 40 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 33,
+      "x": 27.125,
+      "z": 505.375
+    },
+    {
+      "depth": 28,
+      "frontage": "recessed-entry",
+      "height": 76,
+      "landmark": false,
+      "name": "Block 40 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 35,
+      "x": 27.125,
+      "z": 571.125
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 23,
+      "landmark": false,
+      "name": "Block 40 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.583333333333336,
+      "x": 71.70833333333334,
+      "z": 505.375
+    },
+    {
+      "depth": 25,
+      "frontage": "awning",
+      "height": 71,
+      "landmark": false,
+      "name": "Block 40 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28,
+      "x": 71.70833333333334,
+      "z": 571.125
+    },
+    {
+      "depth": 39,
+      "frontage": "recessed-entry",
+      "height": 38,
+      "landmark": false,
+      "name": "Block 41 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -562.375
+    },
+    {
+      "depth": 33,
+      "frontage": "recessed-entry",
+      "height": 86,
+      "landmark": false,
+      "name": "Block 41 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -499.125
+    },
+    {
+      "depth": 37,
+      "frontage": "awning",
+      "height": 32,
+      "landmark": false,
+      "name": "Block 41 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -562.375
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 80,
+      "landmark": false,
+      "name": "Block 41 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -499.125
+    },
+    {
+      "depth": 34,
+      "frontage": "stone-plinth",
+      "height": 27,
+      "landmark": false,
+      "name": "Block 41 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -562.375
+    },
+    {
+      "depth": 28,
+      "frontage": "stone-plinth",
+      "height": 75,
+      "landmark": false,
+      "name": "Block 41 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -499.125
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 42,
+      "landmark": false,
+      "name": "Block 42 Plot 1-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -403.1875
+    },
+    {
+      "depth": 37,
+      "frontage": "stone-plinth",
+      "height": 20,
+      "landmark": false,
+      "name": "Block 42 Plot 1-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -344.5625
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 36,
+      "landmark": false,
+      "name": "Block 42 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -403.1875
+    },
+    {
+      "depth": 34,
+      "frontage": "awning",
+      "height": 84,
+      "landmark": false,
+      "name": "Block 42 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -344.5625
+    },
+    {
+      "depth": 38,
+      "frontage": "awning",
+      "height": 31,
+      "landmark": false,
+      "name": "Block 42 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -403.1875
+    },
+    {
+      "depth": 32,
+      "frontage": "shopfront",
+      "height": 79,
+      "landmark": false,
+      "name": "Block 42 Plot 3-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -344.5625
+    },
+    {
+      "depth": 27,
+      "frontage": "awning",
+      "height": 46,
+      "landmark": false,
+      "name": "Block 43 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28,
+      "x": 164.125,
+      "z": -254.1875
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 24,
+      "landmark": false,
+      "name": "Block 43 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -193.0625
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 40,
+      "landmark": false,
+      "name": "Block 43 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -254.1875
+    },
+    {
+      "depth": 38,
+      "frontage": "shopfront",
+      "height": 19,
+      "landmark": false,
+      "name": "Block 43 Plot 2-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -193.0625
+    },
+    {
+      "depth": 41,
+      "frontage": "shopfront",
+      "height": 35,
+      "landmark": false,
+      "name": "Block 43 Plot 3-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -254.1875
+    },
+    {
+      "depth": 35,
+      "frontage": "recessed-entry",
+      "height": 82,
+      "landmark": false,
+      "name": "Block 43 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -193.0625
+    },
+    {
+      "depth": 27,
+      "frontage": "shopfront",
+      "height": 38,
+      "landmark": false,
+      "name": "Block 44 Plot 1-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -99.4375
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 85,
+      "landmark": false,
+      "name": "Block 44 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": -43.3125
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 32,
+      "landmark": false,
+      "name": "Block 44 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -99.4375
+    },
+    {
+      "depth": 37,
+      "frontage": "stone-plinth",
+      "height": 80,
+      "landmark": false,
+      "name": "Block 44 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": -43.3125
+    },
+    {
+      "depth": 41,
+      "frontage": "recessed-entry",
+      "height": 27,
+      "landmark": false,
+      "name": "Block 44 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -99.4375
+    },
+    {
+      "depth": 38,
+      "frontage": "stone-plinth",
+      "height": 86,
+      "landmark": false,
+      "name": "Block 44 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": -43.3125
+    },
+    {
+      "depth": 33,
+      "frontage": "recessed-entry",
+      "height": 45,
+      "landmark": false,
+      "name": "Block 46 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": 195.5625
+    },
+    {
+      "depth": 27,
+      "frontage": "recessed-entry",
+      "height": 24,
+      "landmark": false,
+      "name": "Block 46 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": 251.6875
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 40,
+      "landmark": false,
+      "name": "Block 46 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": 195.5625
+    },
+    {
+      "depth": 25,
+      "frontage": "awning",
+      "height": 19,
+      "landmark": false,
+      "name": "Block 46 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": 251.6875
+    },
+    {
+      "depth": 28,
+      "frontage": "awning",
+      "height": 34,
+      "landmark": false,
+      "name": "Block 46 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": 195.5625
+    },
+    {
+      "depth": 41,
+      "frontage": "shopfront",
+      "height": 82,
+      "landmark": false,
+      "name": "Block 46 Plot 3-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 236.625,
+      "z": 251.6875
+    },
+    {
+      "depth": 37,
+      "frontage": "awning",
+      "height": 49,
+      "landmark": false,
+      "name": "Block 47 Plot 1-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": 342.0625
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 28,
+      "landmark": false,
+      "name": "Block 47 Plot 1-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": 405.6875
+    },
+    {
+      "depth": 34,
+      "frontage": "stone-plinth",
+      "height": 44,
+      "landmark": false,
+      "name": "Block 47 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": 342.0625
+    },
+    {
+      "depth": 28,
+      "frontage": "shopfront",
+      "height": 22,
+      "landmark": false,
+      "name": "Block 47 Plot 2-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 200.375,
+      "z": 405.6875
+    },
+    {
+      "depth": 32,
+      "frontage": "shopfront",
+      "height": 38,
+      "landmark": false,
+      "name": "Block 47 Plot 3-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 236.625,
+      "z": 342.0625
+    },
+    {
+      "depth": 26,
+      "frontage": "awning",
+      "height": 86,
+      "landmark": false,
+      "name": "Block 47 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": 405.6875
+    },
+    {
+      "depth": 40,
+      "frontage": "stone-plinth",
+      "height": 53,
+      "landmark": false,
+      "name": "Block 48 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 164.125,
+      "z": 505.375
+    },
+    {
+      "depth": 34,
+      "frontage": "shopfront",
+      "height": 32,
+      "landmark": false,
+      "name": "Block 48 Plot 1-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28.25,
+      "x": 164.125,
+      "z": 571.125
+    },
+    {
+      "depth": 37,
+      "frontage": "shopfront",
+      "height": 48,
+      "landmark": false,
+      "name": "Block 48 Plot 2-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 28,
+      "x": 200.375,
+      "z": 505.375
+    },
+    {
+      "depth": 32,
+      "frontage": "stone-plinth",
+      "height": 26,
+      "landmark": false,
+      "name": "Block 48 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 200.375,
+      "z": 571.125
+    },
+    {
+      "depth": 35,
+      "frontage": "recessed-entry",
+      "height": 42,
+      "landmark": false,
+      "name": "Block 48 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": 505.375
+    },
+    {
+      "depth": 29,
+      "frontage": "recessed-entry",
+      "height": 21,
+      "landmark": false,
+      "name": "Block 48 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28.25,
+      "x": 236.625,
+      "z": 571.125
+    },
+    {
+      "depth": 43,
+      "frontage": "shopfront",
+      "height": 57,
+      "landmark": false,
+      "name": "Block 49 Plot 1-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": -562.375
+    },
+    {
+      "depth": 37,
+      "frontage": "stone-plinth",
+      "height": 36,
+      "landmark": false,
+      "name": "Block 49 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": -499.125
+    },
+    {
+      "depth": 41,
+      "frontage": "recessed-entry",
+      "height": 52,
+      "landmark": false,
+      "name": "Block 49 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -562.375
+    },
+    {
+      "depth": 35,
+      "frontage": "recessed-entry",
+      "height": 30,
+      "landmark": false,
+      "name": "Block 49 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -499.125
+    },
+    {
+      "depth": 38,
+      "frontage": "awning",
+      "height": 46,
+      "landmark": false,
+      "name": "Block 49 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 31,
+      "x": 395.45833333333337,
+      "z": -562.375
+    },
+    {
+      "depth": 32,
+      "frontage": "stone-plinth",
+      "height": 25,
+      "landmark": false,
+      "name": "Block 49 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 33,
+      "x": 395.45833333333337,
+      "z": -499.125
+    },
+    {
+      "depth": 28,
+      "frontage": "recessed-entry",
+      "height": 61,
+      "landmark": false,
+      "name": "Block 50 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 34,
+      "x": 307.2916666666667,
+      "z": -403.1875
+    },
+    {
+      "depth": 41,
+      "frontage": "recessed-entry",
+      "height": 40,
+      "landmark": false,
+      "name": "Block 50 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36,
+      "x": 307.2916666666667,
+      "z": -344.5625
+    },
+    {
+      "depth": 25,
+      "frontage": "stone-plinth",
+      "height": 56,
+      "landmark": false,
+      "name": "Block 50 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -403.1875
+    },
+    {
+      "depth": 38,
+      "frontage": "stone-plinth",
+      "height": 34,
+      "landmark": false,
+      "name": "Block 50 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 29,
+      "x": 351.375,
+      "z": -344.5625
+    },
+    {
+      "depth": 42,
+      "frontage": "stone-plinth",
+      "height": 50,
+      "landmark": false,
+      "name": "Block 50 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": -403.1875
+    },
+    {
+      "depth": 36,
+      "frontage": "awning",
+      "height": 29,
+      "landmark": false,
+      "name": "Block 50 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": -344.5625
+    },
+    {
+      "depth": 27,
+      "frontage": "recessed-entry",
+      "height": 53,
+      "landmark": false,
+      "name": "Block 51 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": -254.1875
+    },
+    {
+      "depth": 25,
+      "frontage": "awning",
+      "height": 44,
+      "landmark": false,
+      "name": "Block 51 Plot 1-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": -193.0625
+    },
+    {
+      "depth": 28,
+      "frontage": "awning",
+      "height": 59,
+      "landmark": false,
+      "name": "Block 51 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -254.1875
+    },
+    {
+      "depth": 41,
+      "frontage": "stone-plinth",
+      "height": 38,
+      "landmark": false,
+      "name": "Block 51 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -193.0625
+    },
+    {
+      "depth": 26,
+      "frontage": "stone-plinth",
+      "height": 54,
+      "landmark": false,
+      "name": "Block 51 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 30,
+      "x": 395.45833333333337,
+      "z": -254.1875
+    },
+    {
+      "depth": 39,
+      "frontage": "shopfront",
+      "height": 33,
+      "landmark": false,
+      "name": "Block 51 Plot 3-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 32,
+      "x": 395.45833333333337,
+      "z": -193.0625
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 57,
+      "landmark": false,
+      "name": "Block 52 Plot 1-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 32,
+      "x": 307.2916666666667,
+      "z": -99.4375
+    },
+    {
+      "depth": 25,
+      "frontage": "shopfront",
+      "height": 35,
+      "landmark": false,
+      "name": "Block 52 Plot 1-2",
+      "rotation": 90,
+      "style": "corner-shop",
+      "width": 34,
+      "x": 307.2916666666667,
+      "z": -43.3125
+    },
+    {
+      "depth": 28,
+      "frontage": "shopfront",
+      "height": 51,
+      "landmark": false,
+      "name": "Block 52 Plot 2-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -99.4375
+    },
+    {
+      "depth": 41,
+      "frontage": "stone-plinth",
+      "height": 30,
+      "landmark": false,
+      "name": "Block 52 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": -43.3125
+    },
+    {
+      "depth": 26,
+      "frontage": "stone-plinth",
+      "height": 46,
+      "landmark": false,
+      "name": "Block 52 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": -99.4375
+    },
+    {
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 25,
+      "landmark": false,
+      "name": "Block 52 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": -43.3125
+    },
+    {
+      "depth": 34,
+      "frontage": "shopfront",
+      "height": 61,
+      "landmark": false,
+      "name": "Block 53 Plot 1-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": 44.5625
+    },
+    {
+      "depth": 28,
+      "frontage": "stone-plinth",
+      "height": 39,
+      "landmark": false,
+      "name": "Block 53 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": 103.1875
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 55,
+      "landmark": false,
+      "name": "Block 53 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 35,
+      "x": 351.375,
+      "z": 44.5625
+    },
+    {
+      "depth": 26,
+      "frontage": "awning",
+      "height": 34,
+      "landmark": false,
+      "name": "Block 53 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": 103.1875
+    },
+    {
+      "depth": 29,
+      "frontage": "recessed-entry",
+      "height": 50,
+      "landmark": false,
+      "name": "Block 53 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28,
+      "x": 395.45833333333337,
+      "z": 44.5625
+    },
+    {
+      "depth": 42,
+      "frontage": "recessed-entry",
+      "height": 28,
+      "landmark": false,
+      "name": "Block 53 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 30,
+      "x": 395.45833333333337,
+      "z": 103.1875
+    },
+    {
+      "depth": 37,
+      "frontage": "awning",
+      "height": 65,
+      "landmark": false,
+      "name": "Block 54 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 31,
+      "x": 307.2916666666667,
+      "z": 195.5625
+    },
+    {
+      "depth": 31,
+      "frontage": "stone-plinth",
+      "height": 43,
+      "landmark": false,
+      "name": "Block 54 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 33,
+      "x": 307.2916666666667,
+      "z": 251.6875
+    },
+    {
+      "depth": 35,
+      "frontage": "recessed-entry",
+      "height": 59,
+      "landmark": false,
+      "name": "Block 54 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": 195.5625
+    },
+    {
+      "depth": 29,
+      "frontage": "recessed-entry",
+      "height": 38,
+      "landmark": false,
+      "name": "Block 54 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": 251.6875
+    },
+    {
+      "depth": 32,
+      "frontage": "stone-plinth",
+      "height": 54,
+      "landmark": false,
+      "name": "Block 54 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": 195.5625
+    },
+    {
+      "depth": 26,
+      "frontage": "awning",
+      "height": 32,
+      "landmark": false,
+      "name": "Block 54 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": 251.6875
+    },
+    {
+      "depth": 35,
+      "frontage": "recessed-entry",
+      "height": 47,
+      "landmark": false,
+      "name": "Block 55 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 307.2916666666667,
+      "z": 405.6875
+    },
+    {
+      "depth": 36,
+      "frontage": "stone-plinth",
+      "height": 58,
+      "landmark": false,
+      "name": "Block 55 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": 342.0625
+    },
+    {
+      "depth": 25,
+      "frontage": "stone-plinth",
+      "height": 72,
+      "landmark": false,
+      "name": "Block 56 Plot 1-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 30,
+      "x": 307.2916666666667,
+      "z": 505.375
+    },
+    {
+      "depth": 38,
+      "frontage": "stone-plinth",
+      "height": 51,
+      "landmark": false,
+      "name": "Block 56 Plot 1-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 32,
+      "x": 307.2916666666667,
+      "z": 571.125
+    },
+    {
+      "depth": 41,
+      "frontage": "stone-plinth",
+      "height": 67,
+      "landmark": false,
+      "name": "Block 56 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": 505.375
+    },
+    {
+      "depth": 35,
+      "frontage": "shopfront",
+      "height": 46,
+      "landmark": false,
+      "name": "Block 56 Plot 2-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.083333333333336,
+      "x": 351.375,
+      "z": 571.125
+    },
+    {
+      "depth": 39,
+      "frontage": "shopfront",
+      "height": 61,
+      "landmark": false,
+      "name": "Block 56 Plot 3-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": 505.375
+    },
+    {
+      "depth": 33,
+      "frontage": "stone-plinth",
+      "height": 40,
+      "landmark": false,
+      "name": "Block 56 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36.083333333333336,
+      "x": 395.45833333333337,
+      "z": 571.125
+    },
+    {
+      "depth": 28,
+      "frontage": "awning",
+      "height": 76,
+      "landmark": false,
+      "name": "Block 57 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 476.0833333333333,
+      "z": -562.375
+    },
+    {
+      "depth": 41,
+      "frontage": "shopfront",
+      "height": 55,
+      "landmark": false,
+      "name": "Block 57 Plot 1-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 39.166666666666664,
+      "x": 476.0833333333333,
+      "z": -499.125
+    },
+    {
+      "depth": 26,
+      "frontage": "shopfront",
+      "height": 71,
+      "landmark": false,
+      "name": "Block 57 Plot 2-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 33,
+      "x": 523.25,
+      "z": -562.375
+    },
+    {
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 49,
+      "landmark": false,
+      "name": "Block 57 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 35,
+      "x": 523.25,
+      "z": -499.125
+    },
+    {
+      "depth": 42,
+      "frontage": "recessed-entry",
+      "height": 65,
+      "landmark": false,
+      "name": "Block 57 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": -562.375
+    },
+    {
+      "depth": 36,
+      "frontage": "recessed-entry",
+      "height": 44,
+      "landmark": false,
+      "name": "Block 57 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 28,
+      "x": 570.4166666666666,
+      "z": -499.125
+    },
+    {
+      "depth": 26,
+      "frontage": "stone-plinth",
+      "height": 69,
+      "landmark": false,
+      "name": "Block 58 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 36,
+      "x": 570.4166666666666,
+      "z": -403.1875
+    },
+    {
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 48,
+      "landmark": false,
+      "name": "Block 58 Plot 3-2",
       "rotation": 90,
       "style": "historic-terrace",
       "width": 38,
-      "x": 549,
-      "z": 576.3333333333334
+      "x": 570.4166666666666,
+      "z": -344.5625
+    },
+    {
+      "depth": 26,
+      "frontage": "stone-plinth",
+      "height": 61,
+      "landmark": false,
+      "name": "Block 59 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": -254.1875
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 52,
+      "landmark": false,
+      "name": "Block 59 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": -193.0625
+    },
+    {
+      "depth": 35,
+      "frontage": "recessed-entry",
+      "height": 76,
+      "landmark": false,
+      "name": "Block 60 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 476.0833333333333,
+      "z": -99.4375
+    },
+    {
+      "depth": 29,
+      "frontage": "recessed-entry",
+      "height": 55,
+      "landmark": false,
+      "name": "Block 60 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 29,
+      "x": 476.0833333333333,
+      "z": -43.3125
+    },
+    {
+      "depth": 32,
+      "frontage": "stone-plinth",
+      "height": 70,
+      "landmark": false,
+      "name": "Block 60 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 523.25,
+      "z": -99.4375
+    },
+    {
+      "depth": 26,
+      "frontage": "shopfront",
+      "height": 49,
+      "landmark": false,
+      "name": "Block 60 Plot 2-2",
+      "rotation": 90,
+      "style": "corner-shop",
+      "width": 39.166666666666664,
+      "x": 523.25,
+      "z": -43.3125
+    },
+    {
+      "depth": 30,
+      "frontage": "shopfront",
+      "height": 65,
+      "landmark": false,
+      "name": "Block 60 Plot 3-1",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 34,
+      "x": 570.4166666666666,
+      "z": -99.4375
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 44,
+      "landmark": false,
+      "name": "Block 60 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 36,
+      "x": 570.4166666666666,
+      "z": -43.3125
+    },
+    {
+      "depth": 33,
+      "frontage": "stone-plinth",
+      "height": 69,
+      "landmark": false,
+      "name": "Block 61 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": 44.5625
+    },
+    {
+      "depth": 27,
+      "frontage": "awning",
+      "height": 48,
+      "landmark": false,
+      "name": "Block 61 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": 103.1875
+    },
+    {
+      "depth": 39,
+      "frontage": "awning",
+      "height": 78,
+      "landmark": false,
+      "name": "Block 62 Plot 2-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 523.25,
+      "z": 195.5625
+    },
+    {
+      "depth": 33,
+      "frontage": "stone-plinth",
+      "height": 57,
+      "landmark": false,
+      "name": "Block 62 Plot 2-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 523.25,
+      "z": 251.6875
+    },
+    {
+      "depth": 36,
+      "frontage": "recessed-entry",
+      "height": 73,
+      "landmark": false,
+      "name": "Block 62 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 33,
+      "x": 570.4166666666666,
+      "z": 195.5625
+    },
+    {
+      "depth": 30,
+      "frontage": "recessed-entry",
+      "height": 52,
+      "landmark": false,
+      "name": "Block 62 Plot 3-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 35,
+      "x": 570.4166666666666,
+      "z": 251.6875
+    },
+    {
+      "depth": 39,
+      "frontage": "awning",
+      "height": 77,
+      "landmark": false,
+      "name": "Block 63 Plot 3-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": 342.0625
+    },
+    {
+      "depth": 33,
+      "frontage": "stone-plinth",
+      "height": 55,
+      "landmark": false,
+      "name": "Block 63 Plot 3-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 570.4166666666666,
+      "z": 405.6875
+    },
+    {
+      "depth": 29,
+      "frontage": "recessed-entry",
+      "height": 23,
+      "landmark": false,
+      "name": "Block 64 Plot 1-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 476.0833333333333,
+      "z": 505.375
+    },
+    {
+      "depth": 42,
+      "frontage": "recessed-entry",
+      "height": 70,
+      "landmark": false,
+      "name": "Block 64 Plot 1-2",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 476.0833333333333,
+      "z": 571.125
+    },
+    {
+      "depth": 26,
+      "frontage": "stone-plinth",
+      "height": 86,
+      "landmark": false,
+      "name": "Block 64 Plot 2-1",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 39,
+      "x": 523.25,
+      "z": 505.375
+    },
+    {
+      "depth": 39,
+      "frontage": "stone-plinth",
+      "height": 65,
+      "landmark": false,
+      "name": "Block 64 Plot 2-2",
+      "rotation": 90,
+      "style": "historic-terrace",
+      "width": 39.166666666666664,
+      "x": 523.25,
+      "z": 571.125
+    },
+    {
+      "depth": 43,
+      "frontage": "stone-plinth",
+      "height": 81,
+      "landmark": false,
+      "name": "Block 64 Plot 3-1",
+      "rotation": 0,
+      "style": "historic-terrace",
+      "width": 32,
+      "x": 570.4166666666666,
+      "z": 505.375
+    },
+    {
+      "depth": 37,
+      "frontage": "shopfront",
+      "height": 59,
+      "landmark": false,
+      "name": "Block 64 Plot 3-2",
+      "rotation": 0,
+      "style": "corner-shop",
+      "width": 34,
+      "x": 570.4166666666666,
+      "z": 571.125
     }
   ],
   "districtBounds": [
@@ -3057,254 +4094,569 @@
   "intersections": [
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -600,
-      "z": -420
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -600,
-      "z": -210
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
+      "widthX": 30,
       "widthZ": 30,
-      "x": -600,
+      "x": -650,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": -650,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": -650,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": -650,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": -650,
       "z": 0
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -600,
-      "z": 210
+      "widthX": 30,
+      "widthZ": 13,
+      "x": -650,
+      "z": 150
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -600,
-      "z": 420
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": -650,
+      "z": 295
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -600,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": -650,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 30,
+      "x": -650,
       "z": 630
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -360,
-      "z": -420
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -360,
-      "z": -210
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
+      "widthX": 13,
       "widthZ": 30,
-      "x": -360,
+      "x": -490,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -490,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": -490,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -490,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": -490,
       "z": 0
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -360,
-      "z": 210
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -490,
+      "z": 150
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -360,
-      "z": 420
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": -490,
+      "z": 295
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -360,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -490,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 30,
+      "x": -490,
       "z": 630
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -120,
-      "z": -420
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -120,
-      "z": -210
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
+      "widthX": 8.5,
       "widthZ": 30,
-      "x": -120,
+      "x": -350,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -350,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": -350,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -350,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": -350,
       "z": 0
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -120,
-      "z": 210
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -350,
+      "z": 150
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -120,
-      "z": 420
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": -350,
+      "z": 295
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": -120,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -350,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 30,
+      "x": -350,
+      "z": 630
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 30,
+      "x": -200,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -200,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": -200,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -200,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": -200,
+      "z": 0
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -200,
+      "z": 150
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": -200,
+      "z": 295
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": -200,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 30,
+      "x": -200,
+      "z": 630
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 30,
+      "x": -55,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -55,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": -55,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -55,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": -55,
+      "z": 0
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -55,
+      "z": 150
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": -55,
+      "z": 295
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": -55,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 30,
+      "x": -55,
       "z": 630
     },
     {
       "radius": 11,
       "widthX": 30,
-      "widthZ": 18,
-      "x": 120,
-      "z": -420
-    },
-    {
-      "radius": 11,
-      "widthX": 30,
-      "widthZ": 18,
-      "x": 120,
-      "z": -210
-    },
-    {
-      "radius": 11,
-      "widthX": 30,
       "widthZ": 30,
+      "x": 120,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": 120,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": 120,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": 120,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
       "x": 120,
       "z": 0
     },
     {
       "radius": 11,
       "widthX": 30,
-      "widthZ": 18,
+      "widthZ": 13,
       "x": 120,
-      "z": 210
+      "z": 150
     },
     {
       "radius": 11,
       "widthX": 30,
-      "widthZ": 18,
+      "widthZ": 8.5,
       "x": 120,
-      "z": 420
+      "z": 295
     },
     {
       "radius": 11,
       "widthX": 30,
-      "widthZ": 18,
+      "widthZ": 13,
+      "x": 120,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 30,
       "x": 120,
       "z": 630
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 360,
-      "z": -420
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 360,
-      "z": -210
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
+      "widthX": 8.5,
       "widthZ": 30,
-      "x": 360,
+      "x": 270,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": 270,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": 270,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": 270,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": 270,
       "z": 0
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 360,
-      "z": 210
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": 270,
+      "z": 150
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 360,
-      "z": 420
+      "widthX": 8.5,
+      "widthZ": 8.5,
+      "x": 270,
+      "z": 295
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 360,
+      "widthX": 8.5,
+      "widthZ": 13,
+      "x": 270,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 8.5,
+      "widthZ": 30,
+      "x": 270,
       "z": 630
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 600,
-      "z": -420
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 600,
-      "z": -210
-    },
-    {
-      "radius": 11,
-      "widthX": 18,
+      "widthX": 13,
       "widthZ": 30,
-      "x": 600,
+      "x": 435,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": 435,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": 435,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": 435,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": 435,
       "z": 0
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 600,
-      "z": 210
+      "widthX": 13,
+      "widthZ": 13,
+      "x": 435,
+      "z": 150
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 600,
-      "z": 420
+      "widthX": 13,
+      "widthZ": 8.5,
+      "x": 435,
+      "z": 295
     },
     {
       "radius": 11,
-      "widthX": 18,
-      "widthZ": 18,
-      "x": 600,
+      "widthX": 13,
+      "widthZ": 13,
+      "x": 435,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 13,
+      "widthZ": 30,
+      "x": 435,
+      "z": 630
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 30,
+      "x": 620,
+      "z": -620
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": 620,
+      "z": -450
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": 620,
+      "z": -300
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": 620,
+      "z": -145
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": 620,
+      "z": 0
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": 620,
+      "z": 150
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 8.5,
+      "x": 620,
+      "z": 295
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 13,
+      "x": 620,
+      "z": 455
+    },
+    {
+      "radius": 11,
+      "widthX": 30,
+      "widthZ": 30,
+      "x": 620,
       "z": 630
     }
   ],
@@ -3317,8 +4669,8 @@
       "rotation": 0,
       "style": "tower",
       "width": 44,
-      "x": -480,
-      "z": -315
+      "x": -570,
+      "z": -375
     },
     {
       "depth": 42,
@@ -3328,8 +4680,8 @@
       "rotation": 0,
       "style": "church",
       "width": 44,
-      "x": -240,
-      "z": -315
+      "x": -275,
+      "z": -375
     },
     {
       "depth": 42,
@@ -3339,8 +4691,8 @@
       "rotation": 0,
       "style": "tower",
       "width": 44,
-      "x": 0,
-      "z": -315
+      "x": -120,
+      "z": -370
     },
     {
       "depth": 42,
@@ -3350,8 +4702,8 @@
       "rotation": 0,
       "style": "hotel",
       "width": 44,
-      "x": 480,
-      "z": -315
+      "x": 520,
+      "z": -370
     },
     {
       "depth": 58,
@@ -3361,8 +4713,8 @@
       "rotation": 0,
       "style": "market",
       "width": 86,
-      "x": -480,
-      "z": -105
+      "x": -570,
+      "z": -220
     },
     {
       "depth": 42,
@@ -3372,8 +4724,8 @@
       "rotation": 0,
       "style": "civic",
       "width": 44,
-      "x": 0,
-      "z": -105
+      "x": -120,
+      "z": -220
     },
     {
       "depth": 42,
@@ -3383,8 +4735,8 @@
       "rotation": 0,
       "style": "tower",
       "width": 44,
-      "x": 480,
-      "z": -105
+      "x": 520,
+      "z": -220
     },
     {
       "depth": 42,
@@ -3394,8 +4746,8 @@
       "rotation": 0,
       "style": "civic",
       "width": 44,
-      "x": -480,
-      "z": 105
+      "x": -570,
+      "z": 75
     },
     {
       "depth": 42,
@@ -3405,8 +4757,8 @@
       "rotation": 0,
       "style": "tower",
       "width": 44,
-      "x": 0,
-      "z": 105
+      "x": -120,
+      "z": 75
     },
     {
       "depth": 42,
@@ -3416,8 +4768,8 @@
       "rotation": 0,
       "style": "civic",
       "width": 44,
-      "x": 480,
-      "z": 105
+      "x": 520,
+      "z": 75
     },
     {
       "depth": 42,
@@ -3427,8 +4779,8 @@
       "rotation": 0,
       "style": "tower",
       "width": 44,
-      "x": -480,
-      "z": 315
+      "x": -570,
+      "z": 370
     },
     {
       "depth": 42,
@@ -3438,15 +4790,15 @@
       "rotation": 0,
       "style": "church",
       "width": 44,
-      "x": 480,
-      "z": 315
+      "x": 520,
+      "z": 370
     }
   ],
   "plaza": {
-    "centerX": 250,
-    "centerZ": 105,
+    "centerX": 200,
+    "centerZ": 75,
     "depth": 110,
-    "width": 170
+    "width": 100
   },
   "route": [
     {
@@ -3457,27 +4809,27 @@
     {
       "label": "historic grid sidewalk",
       "x": 136.75,
-      "z": 50
+      "z": 20
     },
     {
       "label": "square north-west walk",
-      "x": 165,
-      "z": 50
+      "x": 150,
+      "z": 20
     },
     {
       "label": "public square",
-      "x": 250,
-      "z": 105
+      "x": 200,
+      "z": 75
     },
     {
       "label": "square south-west walk",
-      "x": 165,
-      "z": 160
+      "x": 150,
+      "z": 130
     },
     {
       "label": "square south sidewalk return",
       "x": 136.75,
-      "z": 160
+      "z": 130
     },
     {
       "label": "station forecourt",
@@ -3504,39 +4856,55 @@
     "width": 176
   },
   "stats": {
-    "blockCount": 25,
-    "buildingCount": 260,
-    "estimatedParts": 773,
+    "blockCount": 64,
+    "buildingCount": 302,
+    "estimatedParts": 1817,
     "landmarkCount": 12,
     "partBudget": 25000,
-    "routeLength": 1716.8231599372737,
+    "routeLength": 1632.999280097293,
     "routeLinkCount": 8,
-    "streetSegmentCount": 12
+    "streetSegmentCount": 24
   },
   "streets": [
     {
       "axis": "z",
-      "center": -600,
+      "center": -650,
       "finish": 970,
-      "kind": "local",
+      "kind": "arterial",
       "start": -650,
-      "width": 18
+      "width": 30
     },
     {
       "axis": "z",
-      "center": -360,
+      "center": -490,
       "finish": 970,
       "kind": "local",
       "start": -650,
-      "width": 18
+      "width": 13
     },
     {
       "axis": "z",
-      "center": -120,
+      "center": -350,
+      "finish": 970,
+      "kind": "lane",
+      "start": -650,
+      "width": 8.5
+    },
+    {
+      "axis": "z",
+      "center": -200,
       "finish": 970,
       "kind": "local",
       "start": -650,
-      "width": 18
+      "width": 13
+    },
+    {
+      "axis": "z",
+      "center": -55,
+      "finish": 970,
+      "kind": "lane",
+      "start": -650,
+      "width": 8.5
     },
     {
       "axis": "z",
@@ -3548,67 +4916,159 @@
     },
     {
       "axis": "z",
-      "center": 360,
+      "center": 270,
       "finish": 970,
-      "kind": "local",
+      "kind": "lane",
       "start": -650,
-      "width": 18
+      "width": 8.5
     },
     {
       "axis": "z",
-      "center": 600,
+      "center": 435,
       "finish": 970,
       "kind": "local",
       "start": -650,
-      "width": 18
+      "width": 13
+    },
+    {
+      "axis": "z",
+      "center": 620,
+      "finish": 970,
+      "kind": "arterial",
+      "start": -650,
+      "width": 30
     },
     {
       "axis": "x",
-      "center": -420,
+      "center": -620,
       "finish": 700,
-      "kind": "local",
-      "start": -700,
-      "width": 18
+      "kind": "arterial",
+      "start": -720,
+      "width": 30
     },
     {
       "axis": "x",
-      "center": -210,
+      "center": -450,
       "finish": 700,
       "kind": "local",
-      "start": -700,
-      "width": 18
+      "start": -720,
+      "width": 13
+    },
+    {
+      "axis": "x",
+      "center": -300,
+      "finish": 700,
+      "kind": "lane",
+      "start": -720,
+      "width": 8.5
+    },
+    {
+      "axis": "x",
+      "center": -145,
+      "finish": 700,
+      "kind": "local",
+      "start": -720,
+      "width": 13
     },
     {
       "axis": "x",
       "center": 0,
       "finish": 700,
-      "kind": "arterial",
-      "start": -700,
-      "width": 30
+      "kind": "lane",
+      "start": -720,
+      "width": 8.5
     },
     {
       "axis": "x",
-      "center": 210,
+      "center": 150,
       "finish": 700,
       "kind": "local",
-      "start": -700,
-      "width": 18
+      "start": -720,
+      "width": 13
     },
     {
       "axis": "x",
-      "center": 420,
+      "center": 295,
+      "finish": 700,
+      "kind": "lane",
+      "start": -720,
+      "width": 8.5
+    },
+    {
+      "axis": "x",
+      "center": 455,
       "finish": 700,
       "kind": "local",
-      "start": -700,
-      "width": 18
+      "start": -720,
+      "width": 13
     },
     {
       "axis": "x",
       "center": 630,
       "finish": 700,
-      "kind": "local",
-      "start": -700,
-      "width": 18
+      "kind": "arterial",
+      "start": -720,
+      "width": 30
+    },
+    {
+      "axis": "segment",
+      "finishX": -350,
+      "finishZ": -300,
+      "kind": "lane",
+      "name": "Canal diagonal",
+      "startX": -490,
+      "startZ": -450,
+      "width": 8.5
+    },
+    {
+      "axis": "segment",
+      "finishX": 435,
+      "finishZ": 455,
+      "kind": "lane",
+      "name": "Market diagonal",
+      "startX": 270,
+      "startZ": 295,
+      "width": 8.5
+    },
+    {
+      "axis": "segment",
+      "finishX": -175,
+      "finishZ": -80,
+      "kind": "lane",
+      "name": "Crooked Lane west 1",
+      "startX": -200,
+      "startZ": -145,
+      "width": 8.5
+    },
+    {
+      "axis": "segment",
+      "finishX": -200,
+      "finishZ": 0,
+      "kind": "lane",
+      "name": "Crooked Lane west 2",
+      "startX": -175,
+      "startZ": -80,
+      "width": 8.5
+    },
+    {
+      "axis": "segment",
+      "finishX": 455,
+      "finishZ": 220,
+      "kind": "lane",
+      "name": "Crooked Lane east 1",
+      "startX": 435,
+      "startZ": 150,
+      "width": 8.5
+    },
+    {
+      "axis": "segment",
+      "finishX": 435,
+      "finishZ": 295,
+      "kind": "lane",
+      "name": "Crooked Lane east 2",
+      "startX": 455,
+      "startZ": 220,
+      "width": 8.5
     }
   ]
 }

@@ -1,4 +1,4 @@
-# District A walkable-core generator — v0.1
+# District A walkable-core generator — v0.2
 
 This folder owns the reproducible city-plan exporter, tests, renders, and the generated Rojo place artifact. The runtime generator/builder is in `src/server/World/`.
 
@@ -7,10 +7,11 @@ This folder owns the reproducible city-plan exporter, tests, renders, and the ge
 Coordinates are Roblox studs, with world `Y` vertical. This is a bounded slice of District A, not a claim to have built the 10,000 × 8,000-stud city:
 
 - Collidable ground: 1,540 × 1,880 studs, centered at `(X=0, Z=115)`, top at `Y=0` (bounds `X=[-770,770]`, `Z=[-825,1055]`).
-- Historic grid: 6 north-south streets × 6 east-west streets, 25 blocks, 36 intersections; the station avenue runs south to `Z=970`.
-- Main carriageway widths: 30 studs arterial / 18 local; sidewalks 3.5 studs each side; low curb 0.65 wide × 0.28 high. Intersections cut the curb back by the configured 11-stud corner radius, keeping the walk surface continuous and providing a low/no-curb crossing zone.
-- Square: center `(250,105)`, 170 × 110 studs. Station forecourt begins at `Z=810`; station entry at `Z=858`; concourse walk floor centered at `Z=925`.
-- The route is generated as connected physical walk links: east station-avenue sidewalk spawn → historic grid → square → station forecourt → concourse. The test-measured centerline is **1,716.8 studs**.
+- Historic core: 9 north-south × 9 east-west street lines, 64 variable-size blocks and 81 intersections. Neighbor spacings vary (roughly 140–185 studs); arterial lines are kept to the outer ring and the station approach.
+- Carriageways: 30-stud outer/station arterials, 13-stud locals and 8.5-stud lanes at 140–150-stud intervals; sidewalks are 3.5 studs each side. Six narrow diagonal/jog segments cut across the lattice; their landings reserve building-free walk corridors. Low curbs are 0.65 wide × 0.28 high, with 11-stud radius cutbacks at intersections.
+- Square: center `(200,75)`, 100 × 110 studs, placed inside the irregular blocks rather than on an arterial. Station forecourt begins at `Z=810`; entry at `Z=858`; concourse walk floor centered at `Z=925`.
+- The route is generated as connected physical walk links: east station-avenue sidewalk spawn → narrow-lane grid → square → station forecourt → concourse. The test-measured centerline is **1,633.0 studs**.
+- Ordinary massing has a darker separate ground storey, varied storefront glazing/doors, awnings or entry lintels, and upper massing. Landmark-scale forms retain their own crowns and tower lanterns.
 
 All street widths, sidewalk width, block lot pattern, square, station, bounds, seed, streaming values, and building ranges come from `src/server/World/CityConfig.luau`. Change a parameter there; `CityGenerator.generate(config)` regenerates the deterministic plan.
 
@@ -20,15 +21,15 @@ From `lune run tools/world/export_plan.luau` (same `CityGenerator` consumed by t
 
 | Measure | Result |
 |---|---:|
-| Ordinary blockout buildings | 260 |
+| Ordinary blockout buildings | 302 |
 | Landmark-scale buildings | 12 |
-| Total massings | 272 |
-| Blocks / street segments / intersections | 25 / 12 / 36 |
-| Exact planned Roblox `BasePart` count | **773** |
+| Total massings | 314 |
+| Blocks / street segments / intersections | 64 / 24 / 81 |
+| Exact planned Roblox `BasePart` count | **1,817** |
 | Part budget | 25,000 |
-| Route centerline | **1,716.8 studs** |
+| Route centerline | **1,633.0 studs** |
 
-The 773 figure is an exact count against the current builder recipe (including segmented curb returns, two parts per ordinary massing, landmark crowns/lanterns, ground, station shell, route, and spawn); the builder also counts actual `BasePart` descendants on startup and stores `GeneratedPartCount`. No Studio runtime count has been observed here.
+The 1,817 figure is an exact count against the current builder recipe (ordinary ground/upper/roof pieces plus frontage accents, landmark ground/upper/crowns, segmented curb returns, diagonal-lane surfaces, ground, station shell, route, and spawn); the Roblox builder also counts actual `BasePart` descendants on startup and stores `GeneratedPartCount`. No Studio runtime count has been observed here.
 
 Landmarks: Old Town Clock Tower, St. Elian's Church, Civic Archive Tower, North Gate Hotel, Covered Market Hall, Guildhall, Riverside Exchange, Opera House, South Arcade Tower, Museum of Navigation, West Bastion Tower, and East Gate Basilica.
 
@@ -60,8 +61,8 @@ These are Python/matplotlib concept renders of the actual generated footprints a
 
 ## Sourcing decision (Director addendum)
 
-Read `docs/ASSET-SOURCING-POLICY.md` from current `origin/main` before deciding. It permits sourced buildings but still requires a fully vetted, decimated, reproducible asset pipeline, per-model script/hidden-part/licence/hash audit, a catalogue + manifest entry, and metre scale/pivot checks. No building kit is included in this milestone: this workspace has no Blender or mesh-processing toolchain, and no art bible/model candidate is available in the repo to match. Getting a kit through vetting, decimation, catalogue handoff, and deterministic generator integration would exceed the one-hour cap and risks the walkable acceptance target. The city therefore keeps the licensed-from-scratch procedural blockout; sourcing is a follow-up with atlas for the shared catalogue/manifest.
+Read `docs/ASSET-SOURCING-POLICY.md` from current `origin/main` before deciding. It permits sourced buildings but still requires a fully vetted, decimated, reproducible asset pipeline, per-model script/hidden-part/licence/hash audit, a catalogue + manifest entry, and metre scale/pivot checks. No building kit is included in this milestone: this workspace has no Blender or mesh-processing toolchain, and no art bible/model candidate is available in the repo to match. Getting a kit through vetting, decimation, catalogue handoff, and deterministic generator integration would exceed the one-hour cap and risks the walkable acceptance target. The city therefore keeps the original procedural blockout; sourcing is a follow-up with atlas for the shared catalogue/manifest.
 
 ## Handoff / not in this slice
 
-The station is a **walkable placeholder shell** (entry opening, forecourt colonnade, floor, side/rear walls), not mason's final station asset or rail concourse integration. No tracks/platforms, coastline, other districts, NPCs/traffic, shop interiors, detailed façade windows, final street furniture, Studio import, or mobile runtime profiling are represented. The route's collidable geometry is generated and statically checked; only a Roblox Studio run can confirm the live character controller clears every seam and collision interaction.
+The station is a **walkable placeholder shell** (entry opening, forecourt colonnade, floor, side/rear walls), not mason's final station asset or rail concourse integration. No tracks/platforms, coastline, other districts, NPCs/traffic, shop interiors, upper-storey window detail, street trees/furniture, Studio import, or mobile runtime profiling are represented. The route's collidable geometry is generated and statically checked; only a Roblox Studio run can confirm the live character controller clears every seam and collision interaction.

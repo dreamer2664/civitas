@@ -9,7 +9,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
+from matplotlib.patches import Rectangle, Polygon as PolygonPatch
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -35,6 +35,21 @@ def rect_for_street(street: dict) -> tuple[float, float, float, float]:
     return street["center"] - street["width"] / 2, street["start"], street["width"], length
 
 
+def strip_polygon(street: dict, width: float, offset: float = 0.0) -> list[tuple[float, float]]:
+    dx = street["finishX"] - street["startX"]
+    dz = street["finishZ"] - street["startZ"]
+    length = (dx * dx + dz * dz) ** 0.5
+    px, pz = -dz / length, dx / length
+    ox, oz = px * offset, pz * offset
+    hx, hz = px * width / 2, pz * width / 2
+    return [
+        (street["startX"] + ox + hx, street["startZ"] + oz + hz),
+        (street["finishX"] + ox + hx, street["finishZ"] + oz + hz),
+        (street["finishX"] + ox - hx, street["finishZ"] + oz - hz),
+        (street["startX"] + ox - hx, street["startZ"] + oz - hz),
+    ]
+
+
 def draw_plan() -> None:
     fig, ax = plt.subplots(figsize=(13, 12), dpi=180, facecolor="#ece9df")
     ax.set_facecolor("#9eae83")
@@ -55,10 +70,16 @@ def draw_plan() -> None:
         ax.axhline(z, color="#748365", lw=0.35, alpha=0.25, zorder=0)
 
     for street in PLAN["streets"]:
-        x, z, w, d = rect_for_street(street)
         road_color = "#42474a" if street["kind"] == "arterial" else "#626568"
-        ax.add_patch(Rectangle((x, z), w, d, color=road_color, zorder=1))
         sidewalk_w = 3.5
+        if street["axis"] == "segment":
+            ax.add_patch(PolygonPatch(strip_polygon(street, street["width"]), closed=True, color=road_color, zorder=1))
+            for side in (-1, 1):
+                offset = side * (street["width"] / 2 + sidewalk_w / 2)
+                ax.add_patch(PolygonPatch(strip_polygon(street, sidewalk_w, offset), closed=True, color="#d4cdbb", zorder=2))
+            continue
+        x, z, w, d = rect_for_street(street)
+        ax.add_patch(Rectangle((x, z), w, d, color=road_color, zorder=1))
         if street["axis"] == "x":
             for side in (-1, 1):
                 sz = street["center"] + side * (street["width"] / 2 + sidewalk_w / 2)
@@ -114,7 +135,7 @@ def draw_plan() -> None:
     ax.scatter([route[-1]["x"]], [route[-1]["z"]], marker="s", s=25, color="#4e7480", edgecolor="white", zorder=8, label="Concourse")
 
     ax.text(-665, 930, "DISTRICT A  /  HISTORIC CENTRE SLICE", fontsize=10, fontweight="bold", color="#293128")
-    ax.text(-665, 890, "200 blockout buildings   ·   12 landmarks   ·   20 blocks", fontsize=7.5, color="#293128")
+    ax.text(-665, 890, f"{PLAN['stats']['buildingCount']} ordinary buildings   ·   {PLAN['stats']['landmarkCount']} landmarks   ·   {PLAN['stats']['blockCount']} irregular blocks", fontsize=7.5, color="#293128")
     ax.text(145, 975, "CENTRAL STATION", fontsize=7.5, fontweight="bold", color="#332d26")
     ax.annotate("Old Town Square", (plaza["centerX"], plaza["centerZ"]), xytext=(plaza["centerX"] + 96, plaza["centerZ"] + 32), fontsize=7, arrowprops={"arrowstyle": "-", "color": "#554d41"})
 
@@ -213,6 +234,14 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
     # A forward-facing ground window avoids any vertex behind the pinhole camera plane.
     queue_polygon([(camera_x - 1500, 0, camera_z + 16), (camera_x + 1500, 0, camera_z + 16), (camera_x + 1500, 0, camera_z + 1800), (camera_x - 1500, 0, camera_z + 1800)], "#8e9d78")
     for street in PLAN["streets"]:
+        if street["axis"] == "segment":
+            road = strip_polygon(street, street["width"])
+            queue_polygon([(x, .06, z) for x, z in road], "#626568")
+            for side in (-1, 1):
+                offset = side * (street["width"] / 2 + 3.5 / 2)
+                walk = strip_polygon(street, 3.5, offset)
+                queue_polygon([(x, .12, z) for x, z in walk], "#d4cbb8")
+            continue
         x, z, w, d = rect_for_street(street)
         if street["axis"] == "z":
             z = max(z, camera_z + 16)
@@ -232,15 +261,54 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
                 sc = street["center"] + side * (street["width"] / 2 + sw / 2)
                 queue_polygon([(sc - sw / 2, .12, z), (sc + sw / 2, .12, z), (sc + sw / 2, .12, z + d), (sc - sw / 2, .12, z + d)], "#d4cbb8")
 
-    # A thin, far-to-near painter's pass produces readable facade planes for each blockout mass.
+    # A thin, far-to-near painter's pass articulates street-level frontages rather than
+    # presenting a single uninterrupted box from pavement to roof.
+    def queue_box(cx, cy, cz, width, height, depth, color, rotation=0, edge="#665947"):
+        for face in cuboid_faces(cx, cy, cz, width, height, depth, rotation):
+            queue_polygon(face, color, edge=edge, line=0.4)
+
+    def facade_center(building, local_x, local_z):
+        angle = math.radians(building["rotation"])
+        return (
+            building["x"] + local_x * math.cos(angle) - local_z * math.sin(angle),
+            building["z"] + local_x * math.sin(angle) + local_z * math.cos(angle),
+        )
+
     for building in PLAN["buildings"] + PLAN["landmarks"]:
         if building["z"] < min(camera_z, target_z) - 160 or building["z"] > max(camera_z, target_z) + 220:
             continue
-        faces = cuboid_faces(building["x"], 0, building["z"], building["width"], building["height"], building["depth"], building["rotation"])
-        base = PALETTE.get(building["style"], "#c4b08e")
-        for face_index, face in enumerate(faces):
-            shades = ("#d0bc9c", "#b59e7e", "#c5ae8d", "#a89172", "#baa382", "#927f68")
+        ground_height = min(10, building["height"] / 3)
+        ground_colors = {
+            "shopfront": "#53676a",
+            "recessed-entry": "#706250",
+            "awning": "#907451",
+            "stone-plinth": "#817765",
+        }
+        frontage = building.get("frontage", "monumental-entry")
+        queue_box(building["x"], 0, building["z"], building["width"], ground_height, building["depth"], ground_colors.get(frontage, "#817765"), building["rotation"])
+        shades = ("#d0bc9c", "#b59e7e", "#c5ae8d", "#a89172", "#baa382", "#927f68")
+        for face_index, face in enumerate(cuboid_faces(building["x"], ground_height, building["z"], building["width"], building["height"] - ground_height, building["depth"], building["rotation"])):
             queue_polygon(face, shades[face_index], edge="#665947", line=0.45)
+        if not building["landmark"]:
+            facade_z = -building["depth"] / 2
+            details = []
+            if frontage == "shopfront":
+                details = [
+                    (-building["width"] * .24, ground_height * .58, facade_z - .15, building["width"] * .28, 4, .35, "#688f92"),
+                    (building["width"] * .24, ground_height * .58, facade_z - .15, building["width"] * .28, 4, .35, "#688f92"),
+                    (0, ground_height * .42, facade_z - .22, 4, ground_height * .72, .45, "#363f3e"),
+                    (0, ground_height * .96, facade_z - 1.35, building["width"] * .88, 1, 2.4, "#9a5b44"),
+                ]
+            elif frontage == "recessed-entry":
+                details = [
+                    (0, ground_height * .4, facade_z - .15, 4, ground_height * .72, .3, "#3f3a34"),
+                    (0, ground_height * .88, facade_z - .22, 7, 1.3, .45, "#9d8e74"),
+                ]
+            elif frontage == "awning":
+                details = [(0, ground_height * .9, facade_z - 1.1, building["width"] * .58, .8, 2, "#727c66")]
+            for local_x, y, local_z, part_width, part_height, part_depth, color in details:
+                world_x, world_z = facade_center(building, local_x, local_z)
+                queue_box(world_x, y - part_height / 2, world_z, part_width, part_height, part_depth, color, building["rotation"], edge="#574b3a")
         if building["landmark"] and building["style"] == "tower":
             for face in cuboid_faces(building["x"], building["height"], building["z"], building["width"] * .42, 8, building["depth"] * .42):
                 queue_polygon(face, "#80694f", edge="#5d4c3a", line=0.45)
@@ -281,7 +349,7 @@ def main() -> None:
     draw_plan()
     draw_street_view(
         "street-view-grid.png",
-        -360,
+        -350,
         -580,
         "STREET VIEW 01  /  north grid approach to the old town",
         -360,

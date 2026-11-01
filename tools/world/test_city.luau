@@ -29,6 +29,13 @@ suite.test("city slice has the required varied massing and landmarks", function(
 		uniqueHeights += 1
 	end
 	expect.ok(uniqueHeights >= 20, "building heights must vary, not repeat as a wall of boxes")
+	local frontages = {}
+	for _, building in ipairs(plan.buildings) do
+		frontages[building.frontage] = true
+	end
+	for _, frontage in ipairs({ "shopfront", "recessed-entry", "awning", "stone-plinth" }) do
+		expect.ok(frontages[frontage], "missing ground-floor treatment: " .. frontage)
+	end
 end)
 
 suite.test("walk acceptance route is continuous and exceeds 1500 studs", function()
@@ -106,6 +113,31 @@ suite.test(
 	end
 )
 
+suite.test("diagonal and jog lanes stay clear of building collision footprints", function()
+	for _, street in ipairs(plan.streets) do
+		if street.axis == "segment" then
+			local dx = street.finishX - street.startX
+			local dz = street.finishZ - street.startZ
+			local length = math.sqrt(dx * dx + dz * dz)
+			local steps = math.max(1, math.ceil(length / 3))
+			local margin = street.width / 2 + config.streets.sidewalkWidth / 2
+			for step = 0, steps do
+				local t = step / steps
+				local x = street.startX + dx * t
+				local z = street.startZ + dz * t
+				for _, buildingList in ipairs({ plan.buildings, plan.landmarks }) do
+					for _, building in ipairs(buildingList) do
+						expect.ok(
+							not pointInsideBuilding(x, z, building, margin),
+							street.name .. " overlaps massing at " .. building.name
+						)
+					end
+				end
+			end
+		end
+	end
+end)
+
 suite.test("route follows the long sidewalk and every grid crossing has a radius cut", function()
 	local avenue = nil
 	for _, street in ipairs(plan.streets) do
@@ -119,7 +151,17 @@ suite.test("route follows the long sidewalk and every grid crossing has a radius
 	expect.near(plan.route[1].x, eastSidewalkCenter, 1e-6)
 	expect.near(plan.route[2].x, eastSidewalkCenter, 1e-6)
 	expect.near(plan.route[6].x, eastSidewalkCenter, 1e-6)
-	expect.equal(#plan.intersections, 36)
+	expect.equal(#plan.intersections, #config.streets.gridX * #config.streets.gridZ)
+	expect.equal(#config.streets.cutSegments, 6)
+	local xSpacings = {}
+	for index = 2, #config.streets.gridX do
+		xSpacings[config.streets.gridX[index] - config.streets.gridX[index - 1]] = true
+	end
+	local spacingVariety = 0
+	for _ in pairs(xSpacings) do
+		spacingVariety += 1
+	end
+	expect.ok(spacingVariety >= 4, "historic blocks need irregular street spacing")
 	for _, intersection in ipairs(plan.intersections) do
 		expect.equal(intersection.radius, config.streets.cornerRadius)
 	end
@@ -135,6 +177,7 @@ suite.test(
 		for _, street in ipairs(plan.streets) do
 			expect.ok(
 				street.width == config.streets.localWidth
+					or street.width == config.streets.laneWidth
 					or street.width == config.streets.arterialWidth
 			)
 		end

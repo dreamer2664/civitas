@@ -36,6 +36,50 @@ local function range(value: number, minimum: number, maximum: number): number
 	return minimum + (value % (maximum - minimum + 1))
 end
 
+local function roadKind(
+	value: number,
+	index: number,
+	count: number,
+	stationCoordinate: number?,
+	laneCoordinates: { number }
+): string
+	if index == 1 or index == count or value == stationCoordinate then
+		return "arterial"
+	end
+	if table.find(laneCoordinates, value) ~= nil then
+		return "lane"
+	end
+	return "local"
+end
+
+local function roadWidth(kind: string, streets: any): number
+	if kind == "arterial" then
+		return streets.arterialWidth
+	elseif kind == "lane" then
+		return streets.laneWidth
+	end
+	return streets.localWidth
+end
+
+local function distanceToSegment(
+	px: number,
+	pz: number,
+	x1: number,
+	z1: number,
+	x2: number,
+	z2: number
+): number
+	local dx = x2 - x1
+	local dz = z2 - z1
+	local lengthSquared = dx * dx + dz * dz
+	local t = math.clamp(((px - x1) * dx + (pz - z1) * dz) / lengthSquared, 0, 1)
+	local nearestX = x1 + t * dx
+	local nearestZ = z1 + t * dz
+	local offsetX = px - nearestX
+	local offsetZ = pz - nearestZ
+	return math.sqrt(offsetX * offsetX + offsetZ * offsetZ)
+end
+
 local function squareContains(x: number, z: number, config: any): boolean
 	-- Reserve a small public-realm apron as well as the square footprint, so its approaches
 	-- cannot be sealed off by a lot placed directly against the paving edge.
@@ -72,25 +116,25 @@ function CityGenerator.generate(config: any): any
 	}
 	local streets = config.streets
 
-	for _, x in ipairs(streets.gridX) do
-		local kind = if x == streets.stationAvenueX then "arterial" else "local"
+	for index, x in ipairs(streets.gridX) do
+		local kind = roadKind(x, index, #streets.gridX, streets.stationAvenueX, streets.laneX)
 		table.insert(plan.streets, {
 			axis = "z",
 			center = x,
 			start = streets.minZ,
 			finish = streets.maxZ,
-			width = if kind == "arterial" then streets.arterialWidth else streets.localWidth,
+			width = roadWidth(kind, streets),
 			kind = kind,
 		})
 	end
-	for _, z in ipairs(streets.gridZ) do
-		local kind = if z == 0 then "arterial" else "local"
+	for index, z in ipairs(streets.gridZ) do
+		local kind = roadKind(z, index, #streets.gridZ, nil, streets.laneZ)
 		table.insert(plan.streets, {
 			axis = "x",
 			center = z,
 			start = streets.minX,
 			finish = streets.maxX,
-			width = if kind == "arterial" then streets.arterialWidth else streets.localWidth,
+			width = roadWidth(kind, streets),
 			kind = kind,
 		})
 	end
@@ -115,21 +159,33 @@ function CityGenerator.generate(config: any): any
 			end
 		end
 	end
+	for _, cut in ipairs(streets.cutSegments) do
+		table.insert(plan.streets, {
+			axis = "segment",
+			startX = cut.x1,
+			startZ = cut.z1,
+			finishX = cut.x2,
+			finishZ = cut.z2,
+			width = streets.laneWidth,
+			kind = "lane",
+			name = cut.name,
+		})
+	end
 
 	local landmarkLots: { { x: number, z: number, name: string, style: string, height: number } } =
 		{
-			{ x = -480, z = -315, name = "Old Town Clock Tower", style = "tower", height = 112 },
-			{ x = -240, z = -315, name = "St. Elian's Church", style = "church", height = 78 },
-			{ x = 0, z = -315, name = "Civic Archive Tower", style = "tower", height = 96 },
-			{ x = 480, z = -315, name = "North Gate Hotel", style = "hotel", height = 64 },
-			{ x = -480, z = -105, name = "Covered Market Hall", style = "market", height = 34 },
-			{ x = 0, z = -105, name = "Guildhall", style = "civic", height = 58 },
-			{ x = 480, z = -105, name = "Riverside Exchange", style = "tower", height = 105 },
-			{ x = -480, z = 105, name = "Opera House", style = "civic", height = 48 },
-			{ x = 0, z = 105, name = "South Arcade Tower", style = "tower", height = 88 },
-			{ x = 480, z = 105, name = "Museum of Navigation", style = "civic", height = 42 },
-			{ x = -480, z = 315, name = "West Bastion Tower", style = "tower", height = 72 },
-			{ x = 480, z = 315, name = "East Gate Basilica", style = "church", height = 66 },
+			{ x = -570, z = -375, name = "Old Town Clock Tower", style = "tower", height = 112 },
+			{ x = -275, z = -375, name = "St. Elian's Church", style = "church", height = 78 },
+			{ x = -120, z = -370, name = "Civic Archive Tower", style = "tower", height = 96 },
+			{ x = 520, z = -370, name = "North Gate Hotel", style = "hotel", height = 64 },
+			{ x = -570, z = -220, name = "Covered Market Hall", style = "market", height = 34 },
+			{ x = -120, z = -220, name = "Guildhall", style = "civic", height = 58 },
+			{ x = 520, z = -220, name = "Riverside Exchange", style = "tower", height = 105 },
+			{ x = -570, z = 75, name = "Opera House", style = "civic", height = 48 },
+			{ x = -120, z = 75, name = "South Arcade Tower", style = "tower", height = 88 },
+			{ x = 520, z = 75, name = "Museum of Navigation", style = "civic", height = 42 },
+			{ x = -570, z = 370, name = "West Bastion Tower", style = "tower", height = 72 },
+			{ x = 520, z = 370, name = "East Gate Basilica", style = "church", height = 66 },
 		}
 	for _, item in ipairs(landmarkLots) do
 		table.insert(plan.landmarks, {
@@ -148,11 +204,34 @@ function CityGenerator.generate(config: any): any
 	local blockIndex = 0
 	for xi = 1, #streets.gridX - 1 do
 		for zi = 1, #streets.gridZ - 1 do
-			local left = streets.gridX[xi] + streets.localWidth / 2 + config.blocks.streetInset
-			local right = streets.gridX[xi + 1] - streets.localWidth / 2 - config.blocks.streetInset
-			local top = streets.gridZ[zi] + streets.localWidth / 2 + config.blocks.streetInset
+			local leftKind = roadKind(
+				streets.gridX[xi],
+				xi,
+				#streets.gridX,
+				streets.stationAvenueX,
+				streets.laneX
+			)
+			local rightKind = roadKind(
+				streets.gridX[xi + 1],
+				xi + 1,
+				#streets.gridX,
+				streets.stationAvenueX,
+				streets.laneX
+			)
+			local topKind = roadKind(streets.gridZ[zi], zi, #streets.gridZ, nil, streets.laneZ)
+			local bottomKind =
+				roadKind(streets.gridZ[zi + 1], zi + 1, #streets.gridZ, nil, streets.laneZ)
+			local left = streets.gridX[xi]
+				+ roadWidth(leftKind, streets) / 2
+				+ config.blocks.streetInset
+			local right = streets.gridX[xi + 1]
+				- roadWidth(rightKind, streets) / 2
+				- config.blocks.streetInset
+			local top = streets.gridZ[zi]
+				+ roadWidth(topKind, streets) / 2
+				+ config.blocks.streetInset
 			local bottom = streets.gridZ[zi + 1]
-				- streets.localWidth / 2
+				- roadWidth(bottomKind, streets) / 2
 				- config.blocks.streetInset
 			local block = {
 				id = blockIndex + 1,
@@ -177,6 +256,26 @@ function CityGenerator.generate(config: any): any
 							and math.abs(z - landmark.z) < landmark.depth / 2 + 23
 						then
 							reserved = true
+						end
+					end
+					for _, street in ipairs(plan.streets) do
+						if street.axis == "segment" then
+							local clearance = street.width / 2
+								+ streets.sidewalkWidth
+								+ math.max(config.blocks.maxWidth, config.blocks.maxDepth) / 2
+								+ config.blocks.lotGap
+							if
+								distanceToSegment(
+									x,
+									z,
+									street.startX,
+									street.startZ,
+									street.finishX,
+									street.finishZ
+								) < clearance
+							then
+								reserved = true
+							end
 						end
 					end
 					if not reserved then
@@ -205,6 +304,11 @@ function CityGenerator.generate(config: any): any
 							),
 							rotation = if h % 4 == 0 then 90 else 0,
 							style = if h % 5 == 0 then "corner-shop" else "historic-terrace",
+							frontage = if h % 5 == 0
+								then "shopfront"
+								elseif h % 4 == 1 then "recessed-entry"
+								elseif h % 3 == 0 then "awning"
+								else "stone-plinth",
 							landmark = false,
 							name = "Block "
 								.. tostring(blockIndex)
@@ -250,26 +354,38 @@ function CityGenerator.generate(config: any): any
 			extraTowerParts += 1
 		end
 	end
-	-- Exact Part count for the current builder recipe: ground, road + two sidewalks +
-	-- corner-radius curb segments per street, two per ordinary building, massing/crown per landmark (+ tower lanterns), plaza,
-	-- fountain, eight station shell/colonnade Parts, one per route link, and spawn.
+	-- Exact Part count for the current builder recipe, including facade accents and
+	-- radius-cut curb segments; diagonal lanes use five Parts each.
 	local streetPartCount = 0
 	for _, street in ipairs(plan.streets) do
-		local crossingCount = 0
-		for _, intersection in ipairs(plan.intersections) do
-			if
-				(street.axis == "z" and intersection.x == street.center)
-				or (street.axis == "x" and intersection.z == street.center)
-			then
-				crossingCount += 1
+		if street.axis == "segment" then
+			streetPartCount += 5
+		else
+			local crossingCount = 0
+			for _, intersection in ipairs(plan.intersections) do
+				if
+					(street.axis == "z" and intersection.x == street.center)
+					or (street.axis == "x" and intersection.z == street.center)
+				then
+					crossingCount += 1
+				end
 			end
+			streetPartCount += 3 + 2 * (crossingCount + 1)
 		end
-		streetPartCount += 3 + 2 * (crossingCount + 1)
+	end
+	local ordinaryPartCount = 0
+	for _, building in ipairs(plan.buildings) do
+		local facadeParts = if building.frontage == "shopfront"
+			then 4
+			elseif building.frontage == "recessed-entry" then 2
+			elseif building.frontage == "awning" then 1
+			else 0
+		ordinaryPartCount += 3 + facadeParts
 	end
 	local estimatedParts = 1
 		+ streetPartCount
-		+ #plan.buildings * 2
-		+ #plan.landmarks * 2
+		+ ordinaryPartCount
+		+ #plan.landmarks * 3
 		+ extraTowerParts
 		+ 2
 		+ 8

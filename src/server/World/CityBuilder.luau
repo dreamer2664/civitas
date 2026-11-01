@@ -41,6 +41,62 @@ local function axisSize(axis: string, length: number, width: number, height: num
 end
 
 local function buildStreet(parent: Instance, street: any, config: any, intersections: { any })
+	if street.axis == "segment" then
+		local dx = street.finishX - street.startX
+		local dz = street.finishZ - street.startZ
+		local length = math.sqrt(dx * dx + dz * dz)
+		local yaw = math.deg(math.atan2(dx, dz))
+		local midpointX = (street.startX + street.finishX) / 2
+		local midpointZ = (street.startZ + street.finishZ) / 2
+		local perpendicularX = dz / length
+		local perpendicularZ = -dx / length
+		local road = createPart(
+			parent,
+			street.name .. "_Carriageway",
+			Vector3.new(street.width, 0.3, length),
+			Vector3.new(midpointX, 0.15, midpointZ),
+			Enum.Material.Asphalt,
+			Color3.fromRGB(72, 75, 77)
+		)
+		road.Orientation = Vector3.new(0, yaw, 0)
+		road:SetAttribute("StreetKind", "narrow diagonal lane")
+		for side = -1, 1, 2 do
+			local sidewalkOffset = street.width / 2 + config.streets.sidewalkWidth / 2
+			local curbOffset = street.width / 2
+				+ config.streets.sidewalkWidth
+				+ config.streets.curbWidth / 2
+			local sidewalk = createPart(
+				parent,
+				street.name .. "_Sidewalk_" .. tostring(side),
+				Vector3.new(config.streets.sidewalkWidth, 0.4, length),
+				Vector3.new(
+					midpointX + side * perpendicularX * sidewalkOffset,
+					0.2,
+					midpointZ + side * perpendicularZ * sidewalkOffset
+				),
+				Enum.Material.Concrete,
+				Color3.fromRGB(184, 179, 165)
+			)
+			sidewalk.Orientation = Vector3.new(0, yaw, 0)
+			sidewalk:SetAttribute("Walkable", true)
+			local curb = createPart(
+				parent,
+				street.name .. "_Curb_" .. tostring(side),
+				Vector3.new(config.streets.curbWidth, config.streets.curbHeight, length),
+				Vector3.new(
+					midpointX + side * perpendicularX * curbOffset,
+					0.18,
+					midpointZ + side * perpendicularZ * curbOffset
+				),
+				Enum.Material.Concrete,
+				Color3.fromRGB(126, 124, 117)
+			)
+			curb.Orientation = Vector3.new(0, yaw, 0)
+			curb:SetAttribute("AccessibleCornerRadius", config.streets.cornerRadius)
+		end
+		return
+	end
+
 	local length = street.finish - street.start
 	local center = (street.start + street.finish) / 2
 	local roadColor = if street.kind == "arterial"
@@ -166,16 +222,122 @@ local function buildBuilding(parent: Instance, building: any, palette: any)
 	local model = makeModel(parent, building.name)
 	model:SetAttribute("Typology", building.style)
 	model:SetAttribute("Landmark", building.landmark)
+	model:SetAttribute("Frontage", building.frontage or "monumental-entry")
 	local color = palette[building.style] or Color3.fromRGB(181, 164, 139)
-	local base = createPart(
+	local groundHeight = math.min(10, building.height / 3)
+	local upperHeight = building.height - groundHeight
+	local groundColor = if building.frontage == "shopfront"
+		then Color3.fromRGB(83, 104, 106)
+		elseif building.frontage == "recessed-entry" then Color3.fromRGB(112, 98, 80)
+		elseif building.frontage == "awning" then Color3.fromRGB(151, 119, 84)
+		else Color3.fromRGB(139, 129, 111)
+	local groundStorey = createPart(
 		model,
-		"Massing",
-		Vector3.new(building.width, building.height, building.depth),
-		Vector3.new(building.x, building.height / 2, building.z),
+		"GroundStorey_DarkerStreetBand",
+		Vector3.new(building.width, groundHeight, building.depth),
+		Vector3.new(building.x, groundHeight / 2, building.z),
+		Enum.Material.Brick,
+		groundColor
+	)
+	groundStorey.Orientation = Vector3.new(0, building.rotation, 0)
+	local upper = createPart(
+		model,
+		"UpperMassing",
+		Vector3.new(building.width, upperHeight, building.depth),
+		Vector3.new(building.x, groundHeight + upperHeight / 2, building.z),
 		Enum.Material.Brick,
 		color
 	)
-	base.Orientation = Vector3.new(0, building.rotation, 0)
+	upper.Orientation = Vector3.new(0, building.rotation, 0)
+
+	local function facadePart(
+		name: string,
+		localX: number,
+		localY: number,
+		localZ: number,
+		size: Vector3,
+		partColor: Color3,
+		material: Enum.Material
+	)
+		local angle = math.rad(building.rotation)
+		local worldX = building.x + localX * math.cos(angle) - localZ * math.sin(angle)
+		local worldZ = building.z + localX * math.sin(angle) + localZ * math.cos(angle)
+		local part =
+			createPart(model, name, size, Vector3.new(worldX, localY, worldZ), material, partColor)
+		part.Orientation = Vector3.new(0, building.rotation, 0)
+		return part
+	end
+
+	if not building.landmark then
+		if building.frontage == "shopfront" then
+			facadePart(
+				"DisplayWindow_Left",
+				-building.width * 0.24,
+				groundHeight * 0.58,
+				-building.depth / 2 - 0.15,
+				Vector3.new(building.width * 0.28, 4, 0.35),
+				Color3.fromRGB(104, 145, 148),
+				Enum.Material.Glass
+			)
+			facadePart(
+				"DisplayWindow_Right",
+				building.width * 0.24,
+				groundHeight * 0.58,
+				-building.depth / 2 - 0.15,
+				Vector3.new(building.width * 0.28, 4, 0.35),
+				Color3.fromRGB(104, 145, 148),
+				Enum.Material.Glass
+			)
+			facadePart(
+				"RecessedShopDoor",
+				0,
+				groundHeight * 0.42,
+				-building.depth / 2 - 0.22,
+				Vector3.new(4, groundHeight * 0.72, 0.45),
+				Color3.fromRGB(54, 63, 62),
+				Enum.Material.WoodPlanks
+			)
+			facadePart(
+				"CanvasAwning",
+				0,
+				groundHeight * 0.96,
+				-building.depth / 2 - 1.35,
+				Vector3.new(building.width * 0.88, 1, 2.4),
+				Color3.fromRGB(154, 91, 68),
+				Enum.Material.Fabric
+			)
+		elseif building.frontage == "recessed-entry" then
+			facadePart(
+				"RecessedDoor",
+				0,
+				groundHeight * 0.4,
+				-building.depth / 2 - 0.15,
+				Vector3.new(4, groundHeight * 0.72, 0.3),
+				Color3.fromRGB(63, 58, 52),
+				Enum.Material.WoodPlanks
+			)
+			facadePart(
+				"EntryLintel",
+				0,
+				groundHeight * 0.88,
+				-building.depth / 2 - 0.22,
+				Vector3.new(7, 1.3, 0.45),
+				Color3.fromRGB(157, 142, 116),
+				Enum.Material.Slate
+			)
+		elseif building.frontage == "awning" then
+			facadePart(
+				"SingleShopAwning",
+				0,
+				groundHeight * 0.9,
+				-building.depth / 2 - 1.1,
+				Vector3.new(building.width * 0.58, 0.8, 2),
+				Color3.fromRGB(114, 124, 102),
+				Enum.Material.Fabric
+			)
+		end
+	end
+
 	if not building.landmark then
 		local roof = createPart(
 			model,
