@@ -34,6 +34,8 @@ def floor_at(x,y,z):
 def clear(x,y,z):
  p=hit(coll,(x,y,z+.05),(0,0,1),2.0)
  if p: raise AssertionError(('insufficient proxy headroom',x,y,z,p))
+ p=hit(visual,(x,y,z+.05),(0,0,1),2.0)
+ if p: raise AssertionError(('insufficient visual headroom',x,y,z,p))
 for x in (-19.6,0,19.6):
  # Square threshold to platform 1, north wall: y=27.75 and seam y=14.
  for i in range(31): floor_at(x,27.9-(27.9-13.4)*i/30,.76)
@@ -47,8 +49,21 @@ for y in (11.2,-5.6):
  for i in range(25):
   x=-run/2+run*i/24; z=lo+(hi-lo)*i/24
   floor_at(x,y,z); clear(x,y,z)
- print('RAMP_PASS',y,'m, 25 samples, 1:12; 2m proxy headroom')
+ print('RAMP_PASS',y,'m, 25 samples, 1:12; 2m proxy and visual headroom')
 for i in range(25):
  y=-5.6+16.8*i/24; floor_at(run/2,y,hi); clear(run/2,y,hi)
 print('BRIDGE_PASS 25 samples; underside 6.88m > 4.60m rail envelope; wire clearance not simulated')
+# Straight line probes through each nominal train-envelope cross section.
+# This detects obstructions along sampled lines, not a continuous volume sweep.
+for centre in (6.5,-.9):
+ for offset in (-1.6,0,1.6):
+  for z in (.1,1.0,2.8,4.6):
+   for tree,label in ((coll,'proxy'),(visual,'visual')):
+    p=hit(tree,(-83.5,centre+offset,z),(1,0,0),167)
+    if p: raise AssertionError(('through track obstruction',centre,offset,z,label,p))
+ print('THROUGH_TRACK_PASS',centre,'m, 24 sampled lines each 167m long')
+ for tree,label in ((coll,'proxy'),(visual,'visual')):
+  p=hit(tree,(-83.5,centre,5.65),(1,0,0),167)
+  if p: raise AssertionError(('overhead centreline obstruction',centre,label,p))
+ print('PANTOGRAPH_CENTERLINE_PASS',centre,'m at 5.65m above rail')
 print('NOTE: sampled geometric checks only, not a continuous sweep or Studio path test')
