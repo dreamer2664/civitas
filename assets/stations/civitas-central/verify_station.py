@@ -22,9 +22,10 @@ def build_tree(collision):
   if ob.type!='MESH' or ('COLLISION' in ob.name)!=collision: continue
   ev=ob.evaluated_get(dg); me=ev.to_mesh(); start=len(vertices)
   vertices += [(ev.matrix_world@v.co)*scale for v in me.vertices]
-  polygons += [[start+i for i in p.vertices] for p in me.polygons]; n+=1; ev.to_mesh_clear()
+  me.calc_loop_triangles()
+  polygons += [[start+i for i in p.vertices] for p in me.loop_triangles]; n+=1; ev.to_mesh_clear()
  print('ROUTE_MESHES', 'collision' if collision else 'visual',n)
- return BVHTree.FromPolygons(vertices,polygons,epsilon=.000001)
+ return BVHTree.FromPolygons(vertices,polygons,all_triangles=True,epsilon=0.0)
 coll=build_tree(True); visual=build_tree(False)
 def hit(tree,origin,direction,distance):
  return tree.ray_cast(Vector(origin),Vector(direction).normalized(),distance)[0]
@@ -47,7 +48,7 @@ for x in (-19.6,0,19.6):
 lo=.76; hi=7.0; run=(hi-lo)*12
 for y in (11.2,-5.6):
  for i in range(25):
-  x=-run/2+run*i/24; z=lo+(hi-lo)*i/24
+  x=-run/2-.9+run*i/24; z=lo+(hi-lo)*i/24
   floor_at(x,y,z); clear(x,y,z)
  print('RAMP_PASS',y,'m, 25 samples, 1:12; 2m proxy and visual headroom')
 for i in range(25):

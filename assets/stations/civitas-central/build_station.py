@@ -103,7 +103,7 @@ for platform,y in [(1,11.2),(2,-5.6)]:
   for i in range(10):
    along=-18+4*i
    piece('edge',mod,(along,edge*2.775,0)); piece('coping',mod,(along,edge*2.775,0)); piece('tactile',mod,(along,edge*2.30,0)); piece('canopy',mod,(along,.4,0),2.8)
-  piece('bench',mod,(-7,-edge*1.8,0)); piece('bin',mod,(0,-edge*2.1,0)); piece('lamp',mod,(6,-edge*2.3,0)); piece('gantry',mod,(11,-edge*2.3,0))
+  piece('bench',mod,(-7,-edge*1.8,0)); piece('bin',mod,(4,-edge*2.1,0)); piece('lamp',mod,(6,-edge*2.3,0)); piece('gantry',mod,(11,-edge*2.3,0))
 # Rail-top datum at Z=0 (Blender); rail visuals continue through building ends.
 for centre in (6.5,-.9):
  for side in (-1,1): box('through_rail',(0,centre+side*.7175,-.035),(168,.07,.07),yellow)
@@ -111,8 +111,8 @@ for centre in (6.5,-.9):
 # Accessible bridge links platforms: 1:12 ramps above through rails.
 # Bridge underside 6.88m leaves room for 5.8m overhead wire and vehicle clearance.
 lo=.76; hi=7.0; run=(hi-lo)*12
-ramp('north_bridge_ramp',-run/2,run/2,11.2,lo,hi,1.8)
-ramp('south_bridge_ramp',-run/2,run/2,-5.6,lo,hi,1.8)
+ramp('north_bridge_ramp',-run/2-.9,run/2-.9,11.2,lo,hi,1.8)
+ramp('south_bridge_ramp',-run/2-.9,run/2-.9,-5.6,lo,hi,1.8)
 pair('bridge_deck',(run/2,2.8,hi-.06),(1.8,18.6,.12),floor)
 for y in (12.3,-6.7): pair('bridge_support_'+str(y),(run/2,y,(hi+.76)/2),(.2,.2,hi-.76),steel)
 # Walkable railings beside the bridge; not treated as walk surfaces.
@@ -120,10 +120,10 @@ for x in (run/2-.99,run/2+.99): box('bridge_railing',(x,2.8,hi+.55),(.09,14.8,1.
 # Guardrails stay outside the 1.8m clear ramp; the 1:12 slope is unchanged.
 for y in (11.2,-5.6):
  for side in (-1,1):
-  bar=box('ramp_guardrail',(0,y+side*.98,(lo+hi)/2+1.0),(math.hypot(run,hi-lo),.07,.07),steel)
+  bar=box('ramp_guardrail',(-.9,y+side*.98,(lo+hi)/2+1.0),(math.hypot(run,hi-lo),.07,.07),steel)
   bar.rotation_euler.y=-math.atan2(hi-lo,run)
   for i in range(7):
-   x=-run/2+run*i/6; z=lo+(hi-lo)*i/6
+   x=-run/2-.9+run*i/6; z=lo+(hi-lo)*i/6
    box('ramp_baluster',(x,y+side*.98,z+.52),(.07,.07,1.04),steel)
 # Consolidate static architecture by material and 42m X zone; kit module
 # instances remain independent and linked to the original kit mesh datablocks.

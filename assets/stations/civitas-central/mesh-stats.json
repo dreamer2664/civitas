@@ -1,5 +1,5 @@
 {
-  "max_mesh_triangles": 1332,
+  "max_mesh_triangles": 1236,
   "meshes": {
     "CENTRAL_visual_zone0_roof_steel": {
       "collision": false,
@@ -34,9 +34,9 @@
     "CENTRAL_visual_zone1_roof_steel": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 984,
+      "triangles": 1080,
       "world_aabb_studs_blender_xyz": [
-        139.964,
+        280.85,
         199.84,
         54.679
       ]
@@ -94,9 +94,9 @@
     "CENTRAL_visual_zone2_roof_steel": {
       "collision": false,
       "nonmanifold_edges": 0,
-      "triangles": 1332,
+      "triangles": 1236,
       "world_aabb_studs_blender_xyz": [
-        277.207,
+        144.107,
         199.84,
         54.679
       ]
