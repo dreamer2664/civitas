@@ -174,13 +174,57 @@ suite.test(
 		expect.ok(config.streets.cornerRadius > 0)
 		expect.ok(plan.stats.estimatedParts < plan.stats.partBudget)
 		expect.equal(plan.stats.partBudget, 25000)
+		local streetParts = 0
 		for _, street in ipairs(plan.streets) do
 			expect.ok(
 				street.width == config.streets.localWidth
 					or street.width == config.streets.laneWidth
 					or street.width == config.streets.arterialWidth
 			)
+			if street.axis == "segment" then
+				streetParts += 5
+			else
+				local crossings = 0
+				for _, intersection in ipairs(plan.intersections) do
+					if
+						(street.axis == "z" and intersection.x == street.center)
+						or (street.axis == "x" and intersection.z == street.center)
+					then
+						crossings += 1
+					end
+				end
+				streetParts += 3 + 2 * (crossings + 1)
+			end
 		end
+		local ordinaryParts = 0
+		for _, building in ipairs(plan.buildings) do
+			local facadeParts = if building.frontage == "shopfront"
+				then 4
+				elseif building.frontage == "recessed-entry" then 2
+				elseif building.frontage == "awning" then 1
+				else 0
+			ordinaryParts += 3 + facadeParts
+		end
+		local landmarkParts = #plan.landmarks * 3
+		for _, landmark in ipairs(plan.landmarks) do
+			if landmark.style == "tower" then
+				landmarkParts += 1
+			end
+		end
+		local expectedParts = 1
+			+ streetParts
+			+ ordinaryParts
+			+ landmarkParts
+			+ 2
+			+ 8
+			+ plan.stats.routeLinkCount
+			+ 1
+		expect.equal(
+			plan.stats.estimatedParts,
+			expectedParts,
+			"part budget estimate must match the builder recipe"
+		)
+		expect.ok(expectedParts < plan.stats.partBudget)
 	end
 )
 
