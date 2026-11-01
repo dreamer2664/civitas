@@ -2,10 +2,10 @@
 --[[
 	SYNTHETIC STUB. NOT GAME DATA.
 
-	A three-line network invented so the map can be built and tested before docs/rail/NETWORK.md
-	exists. It is one of the sources in UI/Map/NetworkSource.luau, and the map does not know which
-	source it has. Coordinates are arbitrary studs. Do not copy these names or positions into
-	Config/. Lives in src/ rather than tests/ because the running client needs a source too.
+	A three-line network invented to test the map's data boundary and the swappable source. Only
+	tests use it (tests/client/map.spec). The client ships the generated network from
+	docs/rail/NETWORK.md (UI/Map/NetworkData.luau). Coordinates are arbitrary studs. Do not copy these
+	names or positions into game data.
 ]]
 
 local fixture = {

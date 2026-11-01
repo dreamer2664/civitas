@@ -2,11 +2,13 @@
 --[[
 	World (X, Z) to map-canvas pixels, plus zoom and pan. Pure.
 
-	Model: screen x = (x - minX) * scale + ox ; screen y = (maxZ - z) * scale + oy
-	- The anchors (minX, maxZ) are stored in the transform, so zooming and panning change only the
+	Frame: NETWORK.md §1 gives X east and Z south, in studs. The map draws north at the top, so the
+	anchor is the minimum Z (the northmost point) and screen y grows with Z.
+
+	Model: screen x = (x - minX) * scale + ox ; screen y = (z - minZ) * scale + oy
+	- The anchors (minX, minZ) are stored in the transform, so zooming and panning change only the
 	  scale and the offset. That keeps the zoom-about-a-point maths in one place.
-	- Screen y grows downward, as in Roblox GUI. Because y is flipped against Z, +Z is drawn at the
-	  top of the map (north), matching MapModel.
+	- Roblox GUI y also grows downward, so no flip is needed: the orientation comes from the anchor.
 
 	Rotations follow the same screen convention: a Frame's Rotation is clockwise, and atan2 in
 	screen space gives clockwise-positive angles, so the two agree. Verifying that Roblox draws a
@@ -18,7 +20,7 @@ local MapProjection = {}
 export type Bounds = { minX: number, minZ: number, maxX: number, maxZ: number }
 export type Transform = {
 	minX: number,
-	maxZ: number,
+	minZ: number,
 	scale: number,
 	ox: number,
 	oy: number,
@@ -38,7 +40,7 @@ function MapProjection.fit(bounds: Bounds, viewW: number, viewH: number, padding
 	local scale = math.min(availW / contentW, availH / contentH)
 	return {
 		minX = bounds.minX,
-		maxZ = bounds.maxZ,
+		minZ = bounds.minZ,
 		scale = scale,
 		ox = padding + (availW - contentW * scale) / 2,
 		oy = padding + (availH - contentH * scale) / 2,
@@ -46,11 +48,11 @@ function MapProjection.fit(bounds: Bounds, viewW: number, viewH: number, padding
 end
 
 function MapProjection.toScreen(t: Transform, x: number, z: number): (number, number)
-	return (x - t.minX) * t.scale + t.ox, (t.maxZ - z) * t.scale + t.oy
+	return (x - t.minX) * t.scale + t.ox, (z - t.minZ) * t.scale + t.oy
 end
 
 function MapProjection.fromScreen(t: Transform, sx: number, sy: number): (number, number)
-	return (sx - t.ox) / t.scale + t.minX, t.maxZ - (sy - t.oy) / t.scale
+	return (sx - t.ox) / t.scale + t.minX, (sy - t.oy) / t.scale + t.minZ
 end
 
 -- Zoom by `factor` while keeping the world point under (px, py) fixed on screen. That is what a
@@ -68,17 +70,17 @@ function MapProjection.zoomAt(
 	local scale = math.clamp(t.scale * factor, minScale, maxScale)
 	return {
 		minX = t.minX,
-		maxZ = t.maxZ,
+		minZ = t.minZ,
 		scale = scale,
 		ox = px - (wx - t.minX) * scale,
-		oy = py - (t.maxZ - wz) * scale,
+		oy = py - (wz - t.minZ) * scale,
 	}
 end
 
 function MapProjection.panBy(t: Transform, dx: number, dy: number): Transform
 	return {
 		minX = t.minX,
-		maxZ = t.maxZ,
+		minZ = t.minZ,
 		scale = t.scale,
 		ox = t.ox + dx,
 		oy = t.oy + dy,
@@ -99,7 +101,7 @@ function MapProjection.clampToView(
 	local keepY = math.min(ch, viewH * 0.25)
 	return {
 		minX = t.minX,
-		maxZ = t.maxZ,
+		minZ = t.minZ,
 		scale = t.scale,
 		ox = math.clamp(t.ox, keepX - cw, viewW - keepX),
 		oy = math.clamp(t.oy, keepY - ch, viewH - keepY),

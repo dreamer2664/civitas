@@ -4,10 +4,9 @@
 	(MapModel.validate); it never reads a file, a remote or a Workspace instance itself.
 
 	Sources in use or planned:
-	- stub: UI/Map/StubNetwork.luau, synthetic, for building the map before the real network exists.
-	- module: a generated Luau table from docs/rail/NETWORK.md. Roblox cannot read a Markdown file
-	  at runtime, so a generator must produce the module. That generator is not built yet; see the
-	  Phase 1 report, "What is not done".
+	- module: UI/Map/NetworkData.luau, generated from docs/rail/NETWORK.md by tools/gen_network.py.
+	  This is what the client ships. Roblox cannot read a Markdown file at runtime, so it is generated.
+	- stub: tests/fixtures/network-stub.luau, synthetic. Used only to test the source boundary.
 
 	Pure: no requires, so lune can test every source. A caller builds the source and passes it in.
 ]]

@@ -7,9 +7,9 @@
 	built entirely from this table. Everything arriving here is untrusted until `validate` passes:
 	it is the boundary between the network data and the drawing code.
 
-	Coordinates are world X and Z in studs. The map treats +Z as north (top of screen); that is an
-	assumption to be reconciled with BLENDER · atlas's docs/world/WORLD-MAP.md, and it is stated in
-	UI-SPEC §8 rather than hidden.
+	Coordinates are world X and Z in studs, in the frame of docs/rail/NETWORK.md §1: X east, Z south.
+	The map draws north at the top, so -Z is up the screen. Until BLENDER · atlas's WORLD-MAP.md
+	exists, that frame is vector's provisional one; UI-SPEC §8 says so.
 ]]
 
 local MapModel = {}

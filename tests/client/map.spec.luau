@@ -1,12 +1,13 @@
 --!strict
 -- Network map rules: the data boundary (MapModel.validate), the element budget, and the projection
--- maths that the map view depends on. The fixture is the synthetic stub in UI/Map/StubNetwork.
+-- maths that the map view depends on. The fixture is the synthetic stub in tests/fixtures.
 
 local harness = require("../harness")
 local MapModel = require("../../src/client/UI/Map/MapModel")
 local MapProjection = require("../../src/client/UI/Map/MapProjection")
 local Theme = require("../../src/client/UI/Theme")
-local fixture = require("../../src/client/UI/Map/StubNetwork")
+local fixture = require("../fixtures/network-stub")
+local network = require("../../src/client/UI/Map/NetworkData")
 local NetworkSource = require("../../src/client/UI/Map/NetworkSource")
 
 local ALLOWED: { [string]: boolean } = {}
@@ -152,6 +153,74 @@ harness.test("bounds cover every station and every line point", function()
 	harness.equal(b.maxZ, 900)
 end)
 
+harness.suite("generated network (docs/rail/NETWORK.md)")
+
+harness.test("the generated network passes the same validation as any source", function()
+	local ok, errors = MapModel.validate(network, ALLOWED)
+	harness.truthy(ok, `generated network rejected: {table.concat(errors, "; ")}`)
+end)
+
+harness.test("it has the 14 stations and 3 lines NETWORK.md describes", function()
+	harness.equal(#network.stations, 14)
+	harness.equal(#network.lines, 3)
+end)
+
+harness.test("Civitas Central and Riverside are the interchanges", function()
+	local interchanges = {}
+	for _, station in network.stations do
+		if station.interchange then
+			table.insert(interchanges, station.id)
+		end
+	end
+	table.sort(interchanges)
+	harness.equal(table.concat(interchanges, ","), "civitas-central,riverside")
+end)
+
+harness.test("line 1 runs underground from Riverside to Old Town (NETWORK.md §6)", function()
+	local line1 = network.lines[1]
+	local found = false
+	for _, section in line1.sections do
+		if section.kind == "underground" then
+			local first, last = section.points[1], section.points[#section.points]
+			if first.x == -1100 and first.z == 200 and last.x == 900 and last.z == 700 then
+				found = true
+			end
+		end
+	end
+	harness.truthy(found, "no underground section from (-1100, 200) to (900, 700)")
+end)
+
+harness.test(
+	"the map is north-up on real data: Airport Terminal top-left, Lakeside at the bottom",
+	function()
+		-- Airport Terminal is at (-4200, -1800): west and north. Harbour End is at (4400, 3200): east
+		-- and south. Lakeside is at (-600, 3000): south. If Z were drawn upward these would invert.
+		local t = MapProjection.fit(MapModel.bounds(network), 800, 600, 16)
+		local function at(id: string): (number, number)
+			for _, s in network.stations do
+				if s.id == id then
+					return MapProjection.toScreen(t, s.x, s.z)
+				end
+			end
+			error(`no station '{id}' in the generated network`)
+		end
+		local ax, ay = at("airport-terminal")
+		local hx, hy = at("harbour-end")
+		local _, ly = at("lakeside")
+		harness.truthy(ax < hx and ay < hy, "Airport Terminal should be north-west of Harbour End")
+		harness.truthy(
+			ly > ay,
+			"Lakeside is south of Airport Terminal and must sit lower on screen"
+		)
+	end
+)
+
+harness.test("the generated network fits the element budget with its real count", function()
+	-- 26 segments (14 + 6 + 6), 3 badges, and 14 stations × 2 pieces = 57.
+	harness.equal(MapModel.elementCount(network), 57)
+	harness.equal(#MapModel.segments(network), 26)
+end)
+
 harness.suite("map projection")
 
 local FIT_BOUNDS = { minX = 0, minZ = 0, maxX = 100, maxZ = 50 }
@@ -165,10 +234,10 @@ harness.test("fit scales to the tighter axis and centres the spare space", funct
 	harness.near(t.scale, 2.8, 1e-9)
 	harness.near(t.ox, 10, 1e-9)
 	harness.near(t.oy, 30, 1e-9, "140 px of content centred in 180 px")
-	local x1, y1 = MapProjection.toScreen(t, 0, 50)
+	local x1, y1 = MapProjection.toScreen(t, 0, 0)
 	harness.near(x1, 10, 1e-9)
-	harness.near(y1, 30, 1e-9, "north-west corner is top-left")
-	local x2, y2 = MapProjection.toScreen(t, 100, 0)
+	harness.near(y1, 30, 1e-9, "north-west corner (least X, least Z) is top-left")
+	local x2, y2 = MapProjection.toScreen(t, 100, 50)
 	harness.near(x2, 290, 1e-9)
 	harness.near(y2, 170, 1e-9)
 end)
@@ -227,17 +296,17 @@ harness.test("clampToView stops the network leaving the screen entirely", functi
 end)
 
 harness.test("a horizontal segment has angle 0 and its length in pixels", function()
-	local t = { minX = 0, maxZ = 0, scale = 1, ox = 0, oy = 0 }
+	local t = { minX = 0, minZ = 0, scale = 1, ox = 0, oy = 0 }
 	local d = MapProjection.drawSegment(t, { x1 = 0, z1 = 0, x2 = 10, z2 = 0 })
 	harness.near(d.length, 10, 1e-9)
 	harness.near(d.angleDeg, 0, 1e-9)
 	harness.near(d.cx, 5, 1e-9)
 end)
 
-harness.test("screen y is flipped, so a line running north-east rises on the map", function()
-	-- With maxZ = 10, world (0,0) is drawn at the bottom and (10,10) at the top.
-	local t = { minX = 0, maxZ = 10, scale = 1, ox = 0, oy = 0 }
-	local d = MapProjection.drawSegment(t, { x1 = 0, z1 = 0, x2 = 10, z2 = 10 })
+harness.test("north is up: a line running north-east (east, and -Z) rises on the map", function()
+	-- Z grows south, so north-east is +X and -Z. From (0,10) to (10,0) the screen goes right and up.
+	local t = { minX = 0, minZ = 0, scale = 1, ox = 0, oy = 0 }
+	local d = MapProjection.drawSegment(t, { x1 = 0, z1 = 10, x2 = 10, z2 = 0 })
 	harness.near(d.angleDeg, -45, 1e-9, "north-east should be -45° in screen space")
 	harness.near(d.length, math.sqrt(200), 1e-9)
 end)
