@@ -1,0 +1,40 @@
+Results:
+0 errors
+0 warnings
+0 parse errors
+[WARN] No definitions file provided by client
+PASS sealed 1596-stud fixture
+PASS 0.01 stud hole missed by coarse sampling is detected
+PASS noncollidable floor fails
+PASS 1.21 stud curb fails
+PASS 1.2 stud boundary is permitted
+PASS thin invisible wall fails
+PASS overhead canopy does not block body
+PASS decorative noncollidable detail is ignored
+PASS spawn requires footprint support
+PASS short route rejected
+10 passed, 0 failed (synthetic fixtures, NOT city acceptance)
+Building project 'CIVITAS'
+Built project to walkability-milestone.rbxlx
+/home/user/civitas/tools/walkaudit/run:61: WORLD_DATA_UNAVAILABLE: error requiring module "../../src/server/World/Geometry": could not resolve child component "World"
+[Stack Begin]
+    Script '[C]' - function 'error'
+    Script '/home/user/civitas/tools/walkaudit/run', Line 61
+[Stack End]
+
+{
+  "sourceRevision": "5b9117d9574c17ba12681c9490140e9c505d8e4c",
+  "staticWorkspaceParts": 0,
+  "generatedWalkableParts": null,
+  "drawCalls": null,
+  "reason": "No generator export available",
+  "streaming": {
+    "StreamingEnabled": true,
+    "StreamingMinRadius": 64,
+    "StreamingTargetRadius": 1024,
+    "ModelStreamingBehavior": "Improved",
+    "StreamingIntegrityMode": "PauseOutsideLoadedArea",
+    "StreamOutBehavior": "Opportunistic"
+  }
+}
+docs/reports/renders/walkability-route.svg

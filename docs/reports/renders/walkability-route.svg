@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#111c28"/>
+<g font-family="monospace" fill="#ecf1f6"><text x="40" y="52" font-size="26">CIVITAS / WALK · pave / HEADLESS AUDIT</text>
+<text x="40" y="140" font-size="30" fill="#ffbe77">BLOCKED — NO WORLD GEOMETRY</text>
+<text x="40" y="195" font-size="18">No city route can be drawn or accepted from this revision.</text>
+<text x="40" y="230" font-size="18">Missing: src/server/World/Geometry.generateAuditData()</text>
+<text x="40" y="290" font-size="18">No substitute floor. No invented city. No engine test.</text>
+<text x="40" y="855" font-size="16">Geometry evidence only — Roblox character physics and client streaming unverified.</text></g></svg>

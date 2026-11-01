@@ -8,5 +8,8 @@ luau-lsp analyze --platform=standard src/server/Walkability/Audit.luau src/serve
 lune run tests/walk/run.luau
 rojo build default.project.json -o docs/reports/walkability-milestone.rbxlx
 # Intentionally exits nonzero without real world data; fixtures cannot satisfy this gate.
-lune run tools/walkaudit/run.luau "$@"
+status=0
+lune run tools/walkaudit/run.luau "$@" || status=$?
 python tools/walkaudit/measure.py
+python tools/walkaudit/render.py
+exit "$status"
