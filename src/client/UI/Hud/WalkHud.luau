@@ -22,6 +22,8 @@ local Panel = require(script.Parent.Parent.Components.Panel)
 local Label = require(script.Parent.Parent.Components.Label)
 local Button = require(script.Parent.Parent.Components.Button)
 local SignText = require(script.Parent.Parent.Components.SignText)
+local CompassView = require(script.Parent.CompassView)
+local NamePlate = require(script.Parent.NamePlate)
 
 local WalkHud = {}
 
@@ -31,6 +33,7 @@ export type Options = {
 	prompt: string?, -- interaction prompt; nil hides it
 	actions: { Action }, -- right thumb, row by row; at most 6
 	touch: boolean, -- true lays out touch controls; false leaves keyboard and gamepad alone
+	compass: boolean, -- true shows the compass strip; the caller then calls setHeading
 	onMove: (x: number, y: number) -> (),
 	onAction: (id: string) -> (),
 }
@@ -39,6 +42,8 @@ export type View = {
 	root: ScreenGui,
 	setPrompt: (text: string?) -> (),
 	setDistrict: (text: string?) -> (),
+	setHeading: (degrees: number) -> (),
+	showPlate: (text: string) -> NamePlate.Plate,
 	destroy: () -> (),
 }
 
@@ -65,6 +70,8 @@ function WalkHud.new(root: ScreenGui, options: Options): View
 	local districtSign: TextLabel? = nil
 	local prompt: TextLabel? = nil
 	local controls: { GuiObject } = {}
+	local compass: CompassView.View? = nil
+	local plates: { NamePlate.Plate } = {}
 
 	local function setDistrict(text: string?)
 		if districtSign then
@@ -105,6 +112,10 @@ function WalkHud.new(root: ScreenGui, options: Options): View
 
 	setDistrict(options.district)
 	setPrompt(options.prompt)
+
+	if options.compass then
+		compass = CompassView.new(frame)
+	end
 
 	if options.touch then
 		local pad = Panel.new({ name = "MovePad", elevation = "raised" })
@@ -221,6 +232,12 @@ function WalkHud.new(root: ScreenGui, options: Options): View
 		for _, control in controls do
 			control:Destroy()
 		end
+		for _, plate in plates do
+			plate.destroy()
+		end
+		if compass then
+			compass.destroy()
+		end
 		frame:Destroy()
 	end
 
@@ -228,6 +245,16 @@ function WalkHud.new(root: ScreenGui, options: Options): View
 		root = root,
 		setPrompt = setPrompt,
 		setDistrict = setDistrict,
+		setHeading = function(degrees: number)
+			if compass then
+				compass.setHeading(degrees)
+			end
+		end,
+		showPlate = function(text: string): NamePlate.Plate
+			local plate = NamePlate.new(frame, text)
+			table.insert(plates, plate)
+			return plate
+		end,
 		destroy = destroy,
 	}
 end
