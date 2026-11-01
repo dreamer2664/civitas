@@ -7,9 +7,9 @@ local suite = require("../support/suite")
 local expect = suite.expect
 local RateLimit = require("../../src/shared/Util/RateLimit")
 
-local CONTROL_CONFIG = { maxPerSecond = 30, burst = 60 }   -- Train.Control / Train.State
-local OBSERVE_CONFIG = { maxPerSecond = 10, burst = 20 }   -- Signal.Observe
-local BOARD_CONFIG = { maxPerSecond = 2, burst = 4 }       -- Station.Board
+local CONTROL_CONFIG = { maxPerSecond = 30, burst = 60 } -- Train.Control / Train.State
+local OBSERVE_CONFIG = { maxPerSecond = 10, burst = 20 } -- Signal.Observe
+local BOARD_CONFIG = { maxPerSecond = 2, burst = 4 } -- Station.Board
 
 suite.test("RateLimit: burst allows a short burst then rejects spam", function()
 	local config = CONTROL_CONFIG
@@ -32,36 +32,43 @@ suite.test("RateLimit: burst allows a short burst then rejects spam", function()
 	expect.equal(result.allowed, false)
 end)
 
-suite.test("RateLimit: spam client cannot starve the schedule feed — per-client buckets are independent", function()
-	local config = OBSERVE_CONFIG -- Signal.Observe: 10/s, burst 20
+suite.test(
+	"RateLimit: spam client cannot starve the schedule feed — per-client buckets are independent",
+	function()
+		local config = OBSERVE_CONFIG -- Signal.Observe: 10/s, burst 20
 
-	-- Spam client: 100 requests instantly.
-	local spamBucket = RateLimit.new(config)
-	local spamAllowed = 0
-	for _ = 1, 100 do
-		local result = RateLimit.tryConsume(spamBucket, config, 0)
-		if result.allowed then
-			spamAllowed += 1
-			spamBucket = result.bucket
+		-- Spam client: 100 requests instantly.
+		local spamBucket = RateLimit.new(config)
+		local spamAllowed = 0
+		for _ = 1, 100 do
+			local result = RateLimit.tryConsume(spamBucket, config, 0)
+			if result.allowed then
+				spamAllowed += 1
+				spamBucket = result.bucket
+			end
 		end
-	end
-	expect.ok(spamAllowed <= config.burst) -- at most the burst
+		expect.ok(spamAllowed <= config.burst) -- at most the burst
 
-	-- A different (well-behaved) client still gets its own full burst.
-	local goodBucket = RateLimit.new(config)
-	local goodAllowed = 0
-	for _ = 1, config.burst do
-		local result = RateLimit.tryConsume(goodBucket, config, 0)
-		if result.allowed then
-			goodAllowed += 1
-			goodBucket = result.bucket
+		-- A different (well-behaved) client still gets its own full burst.
+		local goodBucket = RateLimit.new(config)
+		local goodAllowed = 0
+		for _ = 1, config.burst do
+			local result = RateLimit.tryConsume(goodBucket, config, 0)
+			if result.allowed then
+				goodAllowed += 1
+				goodBucket = result.bucket
+			end
 		end
+		expect.equal(goodAllowed, config.burst) -- unaffected by spam client
 	end
-	expect.equal(goodAllowed, config.burst) -- unaffected by spam client
-end)
+)
 
 -- Helper: refill without consuming.
-local function refillHelper(bucket: { tokens: number, lastRefill: number }, config: { maxPerSecond: number, burst: number }, now: number): { tokens: number, lastRefill: number }
+local function refillHelper(
+	bucket: { tokens: number, lastRefill: number },
+	config: { maxPerSecond: number, burst: number },
+	now: number
+): { tokens: number, lastRefill: number }
 	local elapsed = now - bucket.lastRefill
 	if elapsed <= 0 then
 		return bucket
