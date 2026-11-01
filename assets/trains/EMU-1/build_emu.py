@@ -56,7 +56,7 @@ def shell_car(name,length,origin,cab):
    for leaf in [-1,1]:
     leafroot=empty(f'{name}_{suffix}_door_{i}_{leaf}_PIVOT',(d+leaf*.65,side*1.345,.76),root)
     leafroot['travel_m']=1.35
-    cube(f'{name}_{suffix}_door_{i}_{leaf}_leaf',(-leaf*.325,0,.975),(.60,.09,1.95),red,leafroot,.025)
+    cube(f'{name}_{suffix}_door_{i}_{leaf}_leaf',(-leaf*.325,0,.978),(.60,.09,1.95),red,leafroot,.025)
     cube(f'{name}_{suffix}_door_{i}_{leaf}_glass',(-leaf*.325,side*.055,1.26),(.46,.025,.90),dark,leafroot,.025)
  # Underbody equipment and bogies
  cube(name+'_underframe',(-length/2,0,.51),(length-.9,2.35,.28),black,root,.04)
@@ -134,6 +134,26 @@ for door in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name 
   for key in fc.keyframe_points: key.interpolation='LINEAR'
  track=door.animation_data.nla_tracks.new(); track.name='Door_open'; track.strips.new('Door_open',1,action); door.animation_data.action=None
 scene.frame_set(1)
+# Apply bevels and combine only static children with identical material. Keep
+# bogie wheelsets, door pivot hierarchies, collision pieces and couplers separate.
+def combine(items,name):
+ if not items: return
+ bpy.ops.object.select_all(action='DESELECT')
+ for obj in items: obj.select_set(True)
+ bpy.context.view_layer.objects.active=items[0]
+ bpy.ops.object.convert(target='MESH')
+ bpy.ops.object.join(); bpy.context.object.name=name
+for rootname in ('CAB_ROOT','INTERMEDIATE_ROOT'):
+ root=bpy.data.objects[rootname]; groups={}
+ for obj in list(root.children):
+  if obj.type!='MESH' or 'COLLISION' in obj.name or obj.name.endswith('_coupler'): continue
+  material=obj.data.materials[0].name if obj.data.materials else 'none'
+  groups.setdefault(material,[]).append(obj)
+ for material,objects in groups.items(): combine(objects,rootname.replace('_ROOT','')+'_STATIC_'+material)
+for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name and o.name.endswith('_PIVOT')]:
+ items=[o for o in pivot.children if o.type=='MESH']
+ items.sort(key=lambda o: 0 if o.name.endswith('_leaf') else 1)
+ combine(items,pivot.name.replace('_PIVOT','_leaf'))
 # Studio workbench preview. Render is a design study, not proof of final visual quality.
 scene.render.engine='BLENDER_WORKBENCH'; scene.display.shading.light='STUDIO'; scene.display.shading.color_type='MATERIAL'; scene.display.shading.show_shadows=True; scene.display.shading.show_cavity=True
 scene.render.resolution_x=1400; scene.render.resolution_y=700; scene.render.resolution_percentage=100

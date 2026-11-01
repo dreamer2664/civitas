@@ -11,8 +11,7 @@ for frame in range(1,25):
   car=o.name.split('_')[0]; side=o.name.split('_')[1]
   leaf=tree(o)
   for t in s.objects:
-   if t.type!='MESH' or not t.name.startswith(car+'_'+side+'_'):continue
-   if not any(x in t.name for x in ['_side_','_pillar_','_door_header_']):continue
+   if t.type!='MESH' or not t.name.startswith(car+'_STATIC_'):continue
    if leaf.overlap(tree(t)): errors.append((o.name,t.name))
  if errors: issues.extend((frame,*e) for e in errors); print('FRAME',frame,'INTERSECTIONS',len(errors),errors[:2])
 assert not issues, f'Door/body surface intersections: {len(issues)}'
