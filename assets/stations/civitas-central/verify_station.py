@@ -1,14 +1,27 @@
 """Geometric route sampling in Blender; not a Roblox navigation or physics test."""
-import bpy
+import bpy, os, sys
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
+scale=.28 if '--gltf' in sys.argv else 1.0
+if scale!=1.0:
+ bpy.ops.object.select_all(action='SELECT'); bpy.ops.object.delete(use_global=False)
+ path=os.path.join(os.path.dirname(os.path.abspath(__file__)),'civitas-central.glb')
+ bpy.ops.import_scene.gltf(filepath=path)
+ expected={'PLATFORM_1_MODULE_1':(-20,11.2,.76),'PLATFORM_1_MODULE_2':(20,11.2,.76),'PLATFORM_2_MODULE_1':(-20,-5.6,.76),'PLATFORM_2_MODULE_2':(20,-5.6,.76)}
+ for name,position in expected.items():
+  obj=bpy.data.objects.get(name)
+  assert obj is not None, 'Missing '+name
+  actual=obj.matrix_world.translation*scale
+  assert all(abs(actual[i]-position[i])<.001 for i in range(3)), (name,actual,position)
+ print('GLB_MODULE_TRANSFORMS_PASS',len(expected),'axis round-trip in Blender, stud-scaled')
+print('ROUTE_CHECK_MODE','GLB reimport (Blender)' if scale!=1.0 else 'source blend')
 s=bpy.context.scene; dg=bpy.context.evaluated_depsgraph_get()
 def build_tree(collision):
  vertices=[]; polygons=[]; n=0
  for ob in s.objects:
   if ob.type!='MESH' or ('COLLISION' in ob.name)!=collision: continue
   ev=ob.evaluated_get(dg); me=ev.to_mesh(); start=len(vertices)
-  vertices += [ev.matrix_world@v.co for v in me.vertices]
+  vertices += [(ev.matrix_world@v.co)*scale for v in me.vertices]
   polygons += [[start+i for i in p.vertices] for p in me.polygons]; n+=1; ev.to_mesh_clear()
  print('ROUTE_MESHES', 'collision' if collision else 'visual',n)
  return BVHTree.FromPolygons(vertices,polygons,epsilon=.000001)
