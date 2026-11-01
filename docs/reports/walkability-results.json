@@ -1,7 +1,3376 @@
 {
-  "code": "WORLD_DATA_UNAVAILABLE",
-  "detail": "error requiring module \"../../src/server/World/Geometry\": could not resolve child component \"World\"",
+  "status": "FAIL_SIDEWALK_CONTINUITY",
   "engineTested": false,
-  "module": "../../src/server/World/Geometry",
-  "status": "BLOCKED"
+  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
+  "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
+  "partCount": 1817,
+  "spawnChecks": [
+    {
+      "label": "District A sidewalk",
+      "x": 136.75,
+      "z": -640,
+      "supportTop": 1.149993896484375,
+      "geometrySafe": true,
+      "blockers": [],
+      "runtimeVerified": false
+    },
+    {
+      "label": "station concourse",
+      "x": 120,
+      "z": 925,
+      "supportTop": 0.6300048828125,
+      "geometrySafe": true,
+      "blockers": [],
+      "runtimeVerified": false
+    }
+  ],
+  "routeLength": 1632.999280097293,
+  "routeIntervals": 125,
+  "maxStepStuds": 0.595001220703125,
+  "groundSeal": {
+    "proven": true,
+    "method": "exact closed base-solid contains all domain corners",
+    "witness": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.CollidableGround",
+    "bounds": {
+      "maxX": 770,
+      "maxZ": 1055,
+      "minX": -770,
+      "minZ": -825,
+      "name": "District A \u2014 Historic Centre slice"
+    },
+    "areaStudsSquared": 2895200
+  },
+  "defects": [],
+  "decorativeCollisionCount": 291,
+  "decorativeCollisionClasses": {
+    "RecessedShopDoor": 57,
+    "DisplayWindow_Right": 57,
+    "DisplayWindow_Left": 57,
+    "EntryLintel": 60,
+    "RecessedDoor": 60
+  },
+  "collisionPolicyFindings": [
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 4.1999969482421875,
+      "z": 552.405029296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 578.57666015625,
+      "y": 5.8000030517578125,
+      "z": 552.4749755859375,
+      "sx": 9.520004272460938,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 562.2566528320312,
+      "y": 5.8000030517578125,
+      "z": 552.4749755859375,
+      "sx": 9.520004272460938,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 8.800003051757812,
+      "z": 549.905029296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 4,
+      "z": 549.9749755859375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 6.746673583984375,
+      "z": 490.6549987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 3.0666656494140625,
+      "z": 490.7250061035156,
+      "sx": 4,
+      "sy": 5.5200042724609375,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 64 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 8.800003051757812,
+      "z": 236.46749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 62 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 4,
+      "z": 236.53750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 62 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 8.800003051757812,
+      "z": 177.34249877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 62 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 4,
+      "z": 177.41250610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 62 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 4.1999969482421875,
+      "z": -114.65750122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 578.57666015625,
+      "y": 5.8000030517578125,
+      "z": -114.58750915527344,
+      "sx": 9.520004272460938,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 562.2566528320312,
+      "y": 5.8000030517578125,
+      "z": -114.58750915527344,
+      "sx": 9.520004272460938,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 536.469970703125,
+      "y": 4.1999969482421875,
+      "z": -43.3125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 536.4000244140625,
+      "y": 5.8000030517578125,
+      "z": -33.912506103515625,
+      "sx": 10.966659545898438,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 536.4000244140625,
+      "y": 5.8000030517578125,
+      "z": -52.71250915527344,
+      "sx": 10.966659545898438,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 8.800003051757812,
+      "z": -58.032501220703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 4,
+      "z": -57.96250915527344,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 8.800003051757812,
+      "z": -117.15750122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 4,
+      "z": -117.08750915527344,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 60 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 8.800003051757812,
+      "z": -517.344970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 4,
+      "z": -517.2750244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 8.800003051757812,
+      "z": -583.594970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 570.4166870117188,
+      "y": 4,
+      "z": -583.5250244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 523.25,
+      "y": 4.1999969482421875,
+      "z": -575.594970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 531.1699829101562,
+      "y": 5.8000030517578125,
+      "z": -575.5250244140625,
+      "sx": 9.240005493164062,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 515.3300170898438,
+      "y": 5.8000030517578125,
+      "z": -575.5250244140625,
+      "sx": 9.240005493164062,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 476.0833435058594,
+      "y": 4.1999969482421875,
+      "z": -519.844970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 485.48333740234375,
+      "y": 5.8000030517578125,
+      "z": -519.7750244140625,
+      "sx": 10.966659545898438,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 466.6833190917969,
+      "y": 5.8000030517578125,
+      "z": -519.7750244140625,
+      "sx": 10.966659545898438,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 57 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 395.4583435058594,
+      "y": 4.1999969482421875,
+      "z": 485.6549987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 56 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 404.11834716796875,
+      "y": 5.8000030517578125,
+      "z": 485.7250061035156,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 56 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 386.79833984375,
+      "y": 5.8000030517578125,
+      "z": 485.7250061035156,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 56 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 4.1999969482421875,
+      "z": 553.405029296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 56 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 360.0350036621094,
+      "y": 5.8000030517578125,
+      "z": 553.4749755859375,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 56 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 342.7149963378906,
+      "y": 5.8000030517578125,
+      "z": 553.4749755859375,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 56 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 8.800003051757812,
+      "z": 387.9674987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 55 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 4,
+      "z": 388.0375061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 55 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 8.800003051757812,
+      "z": 236.96749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 54 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 4,
+      "z": 237.03750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 54 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 8.800003051757812,
+      "z": 177.84249877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 54 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 4,
+      "z": 177.91250610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 54 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 395.4583435058594,
+      "y": 8.213333129882812,
+      "z": 81.96749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 395.4583435058594,
+      "y": 3.73333740234375,
+      "z": 82.03750610351562,
+      "sx": 4,
+      "sy": 6.720001220703125,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 395.4583435058594,
+      "y": 8.800003051757812,
+      "z": 29.842498779296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 395.4583435058594,
+      "y": 4,
+      "z": 29.912506103515625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 4.1999969482421875,
+      "z": 27.342498779296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 315.95166015625,
+      "y": 5.8000030517578125,
+      "z": 27.412506103515625,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 298.63165283203125,
+      "y": 5.8000030517578125,
+      "z": 27.412506103515625,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 53 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 4.1999969482421875,
+      "z": -113.65750122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 360.0350036621094,
+      "y": 5.8000030517578125,
+      "z": -113.58750915527344,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 342.7149963378906,
+      "y": 5.8000030517578125,
+      "z": -113.58750915527344,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 320.01165771484375,
+      "y": 4.1999969482421875,
+      "z": -43.3125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 319.9416809082031,
+      "y": 5.8000030517578125,
+      "z": -35.152496337890625,
+      "sx": 9.520004272460938,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 319.9416809082031,
+      "y": 5.8000030517578125,
+      "z": -51.472503662109375,
+      "sx": 9.520004272460938,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 395.4583435058594,
+      "y": 4.1999969482421875,
+      "z": -212.78250122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 51 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 403.1383361816406,
+      "y": 5.8000030517578125,
+      "z": -212.71249389648438,
+      "sx": 8.960006713867188,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 51 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 387.7783203125,
+      "y": 5.8000030517578125,
+      "z": -212.71249389648438,
+      "sx": 8.960006713867188,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 51 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 8.800003051757812,
+      "z": -267.9075012207031,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 51 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 4,
+      "z": -267.8374938964844,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 51 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 8.800003051757812,
+      "z": -365.2825012207031,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 50 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 4,
+      "z": -365.2124938964844,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 50 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 8.800003051757812,
+      "z": -417.4075012207031,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 50 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 4,
+      "z": -417.3374938964844,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 50 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 8.800003051757812,
+      "z": -516.844970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 4,
+      "z": -516.7750244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 8.800003051757812,
+      "z": -583.094970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 351.375,
+      "y": 4,
+      "z": -583.0250244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 307.2916564941406,
+      "y": 4.1999969482421875,
+      "z": -584.094970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 315.95166015625,
+      "y": 5.8000030517578125,
+      "z": -584.0250244140625,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 298.63165283203125,
+      "y": 5.8000030517578125,
+      "z": -584.0250244140625,
+      "sx": 10.10333251953125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 49 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 6.160003662109375,
+      "z": 556.405029296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 2.8000030517578125,
+      "z": 556.4749755859375,
+      "sx": 4,
+      "sy": 5.0399932861328125,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 8.800003051757812,
+      "z": 487.6549987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 4,
+      "z": 487.7250061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 200.375,
+      "y": 4.1999969482421875,
+      "z": 486.6549987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 207.09500122070312,
+      "y": 5.8000030517578125,
+      "z": 486.7250061035156,
+      "sx": 7.839996337890625,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 193.65499877929688,
+      "y": 5.8000030517578125,
+      "z": 486.7250061035156,
+      "sx": 7.839996337890625,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 4.1999969482421875,
+      "z": 553.905029296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 170.90499877929688,
+      "y": 5.8000030517578125,
+      "z": 553.9749755859375,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 157.34500122070312,
+      "y": 5.8000030517578125,
+      "z": 553.9749755859375,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 48 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 4.1999969482421875,
+      "z": 325.8424987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 47 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 243.40499877929688,
+      "y": 5.8000030517578125,
+      "z": 325.9125061035156,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 47 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 229.84500122070312,
+      "y": 5.8000030517578125,
+      "z": 325.9125061035156,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 47 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 200.375,
+      "y": 3.0800018310546875,
+      "z": 391.4674987792969,
+      "sx": 4,
+      "sy": 5.279998779296875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 47 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 207.15499877929688,
+      "y": 4.253326416015625,
+      "z": 391.5375061035156,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 47 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 193.59500122070312,
+      "y": 4.253326416015625,
+      "z": 391.5375061035156,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 47 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 4.1999969482421875,
+      "z": 230.96749877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 243.40499877929688,
+      "y": 5.8000030517578125,
+      "z": 231.03750610351562,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 229.84500122070312,
+      "y": 5.8000030517578125,
+      "z": 231.03750610351562,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 7.0399932861328125,
+      "z": 237.96749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 3.1999969482421875,
+      "z": 238.03750610351562,
+      "sx": 4,
+      "sy": 5.7599945068359375,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 8.800003051757812,
+      "z": 178.84249877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 4,
+      "z": 178.91250610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 46 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 7.9199981689453125,
+      "z": -120.15750122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 44 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 3.600006103515625,
+      "z": -120.08750915527344,
+      "sx": 4,
+      "sy": 6.4799957275390625,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 44 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 4.1999969482421875,
+      "z": -113.15750122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 44 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 170.90499877929688,
+      "y": 5.8000030517578125,
+      "z": -113.08750915527344,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 44 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 157.34500122070312,
+      "y": 5.8000030517578125,
+      "z": -113.08750915527344,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 44 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 8.800003051757812,
+      "z": -210.78250122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 4,
+      "z": -210.71249389648438,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 4.1999969482421875,
+      "z": -274.9075012207031,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 243.40499877929688,
+      "y": 5.8000030517578125,
+      "z": -274.8374938964844,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 229.84500122070312,
+      "y": 5.8000030517578125,
+      "z": -274.8374938964844,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 200.375,
+      "y": 2.660003662109375,
+      "z": -212.28250122070312,
+      "sx": 4,
+      "sy": 4.55999755859375,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 207.15499877929688,
+      "y": 3.67333984375,
+      "z": -212.21249389648438,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 193.59500122070312,
+      "y": 3.67333984375,
+      "z": -212.21249389648438,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 43 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 236.625,
+      "y": 4.1999969482421875,
+      "z": -360.7825012207031,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 42 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 243.40499877929688,
+      "y": 5.8000030517578125,
+      "z": -360.7124938964844,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 42 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 229.84500122070312,
+      "y": 5.8000030517578125,
+      "z": -360.7124938964844,
+      "sx": 7.910003662109375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 42 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 8.800003051757812,
+      "z": -515.844970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 41 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 4,
+      "z": -515.7750244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 41 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 8.800003051757812,
+      "z": -582.094970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 41 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 164.125,
+      "y": 4,
+      "z": -582.0250244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 41 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 8.800003051757812,
+      "z": 556.905029296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 4,
+      "z": 556.9749755859375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 8.506668090820312,
+      "z": 488.1549987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 3.866668701171875,
+      "z": 488.2250061035156,
+      "sx": 4,
+      "sy": 6.9600067138671875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 4.1999969482421875,
+      "z": 487.1549987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -8.678329467773438,
+      "y": 5.8000030517578125,
+      "z": 487.2250061035156,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -26.238327026367188,
+      "y": 5.8000030517578125,
+      "z": 487.2250061035156,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 40 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 8.800003051757812,
+      "z": 384.9674987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 4,
+      "z": 385.0375061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 5.573333740234375,
+      "z": 327.8424987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 2.5333404541015625,
+      "z": 327.9125061035156,
+      "sx": 4,
+      "sy": 4.55999755859375,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 3.5,
+      "z": 326.8424987792969,
+      "sx": 4,
+      "sy": 6,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 35.904998779296875,
+      "y": 4.8333282470703125,
+      "z": 326.9125061035156,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 18.345001220703125,
+      "y": 4.8333282470703125,
+      "z": 326.9125061035156,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 4.1999969482421875,
+      "z": 391.9674987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -9.778335571289062,
+      "y": 5.8000030517578125,
+      "z": 392.0375061035156,
+      "sx": 8.960006713867188,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -25.138336181640625,
+      "y": 5.8000030517578125,
+      "z": 392.0375061035156,
+      "sx": 8.960006713867188,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 39 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 4.1999969482421875,
+      "z": 173.84249877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 38 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 80.48834228515625,
+      "y": 5.8000030517578125,
+      "z": 173.91250610351562,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 38 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 62.92832946777344,
+      "y": 5.8000030517578125,
+      "z": 173.91250610351562,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 38 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 4.1999969482421875,
+      "z": 231.46749877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 38 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 35.76499938964844,
+      "y": 5.8000030517578125,
+      "z": 231.53750610351562,
+      "sx": 10.080001831054688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 38 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 18.485000610351562,
+      "y": 5.8000030517578125,
+      "z": 231.53750610351562,
+      "sx": 10.080001831054688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 38 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 4.1999969482421875,
+      "z": 85.96749877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 80.48834228515625,
+      "y": 5.8000030517578125,
+      "z": 86.03750610351562,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 62.92832946777344,
+      "y": 5.8000030517578125,
+      "z": 86.03750610351562,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 8.800003051757812,
+      "z": 83.46749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 4,
+      "z": 83.53750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 6.453338623046875,
+      "z": 31.342498779296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 2.9333343505859375,
+      "z": 31.412506103515625,
+      "sx": 4,
+      "sy": 5.279998779296875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 8.800003051757812,
+      "z": -119.15750122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 4,
+      "z": -119.08750915527344,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 8.800003051757812,
+      "z": -63.032501220703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 4,
+      "z": -62.96250915527344,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 8.800003051757812,
+      "z": -210.28250122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 4,
+      "z": -210.21249389648438,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 2.94000244140625,
+      "z": -274.4075012207031,
+      "sx": 4,
+      "sy": 5.0399932861328125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 35.904998779296875,
+      "y": 4.05999755859375,
+      "z": -274.3374938964844,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 18.345001220703125,
+      "y": 4.05999755859375,
+      "z": -274.3374938964844,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -17.458328247070312,
+      "y": 4.1999969482421875,
+      "z": -211.28250122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -9.058334350585938,
+      "y": 5.8000030517578125,
+      "z": -211.21249389648438,
+      "sx": 9.800003051757812,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -25.85833740234375,
+      "y": 5.8000030517578125,
+      "z": -211.21249389648438,
+      "sx": 9.800003051757812,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 8.800003051757812,
+      "z": -358.7825012207031,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 4,
+      "z": -358.7124938964844,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 4.1999969482421875,
+      "z": -420.4075012207031,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 78.90834045410156,
+      "y": 5.8000030517578125,
+      "z": -420.3374938964844,
+      "sx": 8.399993896484375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 64.50833129882812,
+      "y": 5.8000030517578125,
+      "z": -420.3374938964844,
+      "sx": 8.399993896484375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 27.125,
+      "y": 4.1999969482421875,
+      "z": -359.7825012207031,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 35.904998779296875,
+      "y": 5.8000030517578125,
+      "z": -359.7124938964844,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 18.345001220703125,
+      "y": 5.8000030517578125,
+      "z": -359.7124938964844,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 34 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 71.70834350585938,
+      "y": 4.1999969482421875,
+      "z": -511.8450012207031,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 33 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 80.48834228515625,
+      "y": 5.8000030517578125,
+      "z": -511.7749938964844,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 33 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": 62.92832946777344,
+      "y": 5.8000030517578125,
+      "z": -511.7749938964844,
+      "sx": 10.243331909179688,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 33 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -163.7916717529297,
+      "y": 8.800003051757812,
+      "z": 557.905029296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 32 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -163.7916717529297,
+      "y": 4,
+      "z": 557.9749755859375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 32 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -163.7916717529297,
+      "y": 8.800003051757812,
+      "z": 489.1549987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 32 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -163.7916717529297,
+      "y": 4,
+      "z": 489.2250061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 32 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -126.375,
+      "y": 8.800003051757812,
+      "z": 385.9674987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -126.375,
+      "y": 4,
+      "z": 386.0375061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -126.375,
+      "y": 8.800003051757812,
+      "z": 328.8424987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -126.375,
+      "y": 4,
+      "z": 328.9125061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -163.7916717529297,
+      "y": 4.1999969482421875,
+      "z": 327.3424987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -156.73167419433594,
+      "y": 5.8000030517578125,
+      "z": 327.4125061035156,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -170.85166931152344,
+      "y": 5.8000030517578125,
+      "z": 327.4125061035156,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 31 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 8.800003051757812,
+      "z": 234.46749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 4,
+      "z": 234.53750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 8.800003051757812,
+      "z": 175.34249877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 4,
+      "z": 175.41250610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -126.375,
+      "y": 4.1999969482421875,
+      "z": 174.34249877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -119.31500244140625,
+      "y": 5.8000030517578125,
+      "z": 174.41250610351562,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -133.43499755859375,
+      "y": 5.8000030517578125,
+      "z": 174.41250610351562,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -163.7916717529297,
+      "y": 4.1999969482421875,
+      "z": 231.96749877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -156.73167419433594,
+      "y": 5.8000030517578125,
+      "z": 232.03750610351562,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -170.85166931152344,
+      "y": 5.8000030517578125,
+      "z": 232.03750610351562,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 30 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 8.800003051757812,
+      "z": -519.344970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 4,
+      "z": -519.2750244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -88.95834350585938,
+      "y": 4.1999969482421875,
+      "z": -576.094970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -81.89833068847656,
+      "y": 5.8000030517578125,
+      "z": -576.0250244140625,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -96.01834106445312,
+      "y": 5.8000030517578125,
+      "z": -576.0250244140625,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -126.375,
+      "y": 4.1999969482421875,
+      "z": -520.344970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -119.31500244140625,
+      "y": 5.8000030517578125,
+      "z": -520.2750244140625,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -133.43499755859375,
+      "y": 5.8000030517578125,
+      "z": -520.2750244140625,
+      "sx": 8.236663818359375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 25 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -237.0416717529297,
+      "y": 4.1999969482421875,
+      "z": 552.905029296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 24 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -229.5816650390625,
+      "y": 5.8000030517578125,
+      "z": 552.9749755859375,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 24 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -244.5016632080078,
+      "y": 5.8000030517578125,
+      "z": 552.9749755859375,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 24 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -315.2083435058594,
+      "y": 8.800003051757812,
+      "z": 386.4674987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 23 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -315.2083435058594,
+      "y": 4,
+      "z": 386.5375061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 23 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -315.2083435058594,
+      "y": 8.800003051757812,
+      "z": 329.3424987792969,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 23 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -315.2083435058594,
+      "y": 4,
+      "z": 329.4125061035156,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 23 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 8.800003051757812,
+      "z": 235.46749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 4,
+      "z": 235.53750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 8.800003051757812,
+      "z": 176.34249877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 4,
+      "z": 176.41250610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -315.2083435058594,
+      "y": 4.1999969482421875,
+      "z": 174.84249877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -308.0083312988281,
+      "y": 5.8000030517578125,
+      "z": 174.91250610351562,
+      "sx": 8.399993896484375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -322.4083251953125,
+      "y": 5.8000030517578125,
+      "z": 174.91250610351562,
+      "sx": 8.399993896484375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 22 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -237.0416717529297,
+      "y": 8.800003051757812,
+      "z": 28.342498779296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -237.0416717529297,
+      "y": 4,
+      "z": 28.412506103515625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 4.1999969482421875,
+      "z": 86.96749877929688,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -268.6650085449219,
+      "y": 5.8000030517578125,
+      "z": 87.03750610351562,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -283.5849914550781,
+      "y": 5.8000030517578125,
+      "z": 87.03750610351562,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 4.1999969482421875,
+      "z": 26.842498779296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -268.6650085449219,
+      "y": 5.8000030517578125,
+      "z": 26.912506103515625,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -283.5849914550781,
+      "y": 5.8000030517578125,
+      "z": 26.912506103515625,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 21 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -237.0416717529297,
+      "y": 4.05999755859375,
+      "z": -57.032501220703125,
+      "sx": 4,
+      "sy": 6.9600067138671875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 20 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -229.5816650390625,
+      "y": 5.6066741943359375,
+      "z": -56.96250915527344,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 20 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -244.5016632080078,
+      "y": 5.6066741943359375,
+      "z": -56.96250915527344,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 20 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -237.0416717529297,
+      "y": 8.800003051757812,
+      "z": -116.15750122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 20 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -237.0416717529297,
+      "y": 4,
+      "z": -116.08750915527344,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 20 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 6.746673583984375,
+      "z": -518.344970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 3.0666656494140625,
+      "z": -518.2750244140625,
+      "sx": 4,
+      "sy": 5.5200042724609375,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -276.125,
+      "y": 4.1999969482421875,
+      "z": -575.094970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -268.6650085449219,
+      "y": 5.8000030517578125,
+      "z": -575.0250244140625,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -283.5849914550781,
+      "y": 5.8000030517578125,
+      "z": -575.0250244140625,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -315.2083435058594,
+      "y": 3.9199981689453125,
+      "z": -519.844970703125,
+      "sx": 4,
+      "sy": 6.720001220703125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -307.7483215332031,
+      "y": 5.413330078125,
+      "z": -519.7750244140625,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -322.6683349609375,
+      "y": 5.413330078125,
+      "z": -519.7750244140625,
+      "sx": 8.703338623046875,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 17 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 8.800003051757812,
+      "z": 554.905029296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 4,
+      "z": 554.9749755859375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 4.1999969482421875,
+      "z": 486.1549987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -376.4649963378906,
+      "y": 5.8000030517578125,
+      "z": 486.2250061035156,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -389.7850036621094,
+      "y": 5.8000030517578125,
+      "z": 486.2250061035156,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -418.875,
+      "y": 2.660003662109375,
+      "z": 553.405029296875,
+      "sx": 4,
+      "sy": 4.55999755859375,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -412.2149963378906,
+      "y": 3.67333984375,
+      "z": 553.4749755859375,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -425.5350036621094,
+      "y": 3.67333984375,
+      "z": 553.4749755859375,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 16 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 4.1999969482421875,
+      "z": 390.9674987792969,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 15 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -376.4649963378906,
+      "y": 5.8000030517578125,
+      "z": 391.0375061035156,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 15 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -389.7850036621094,
+      "y": 5.8000030517578125,
+      "z": 391.0375061035156,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 15 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 8.800003051757812,
+      "z": 235.96749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 14 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 4,
+      "z": 236.03750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 14 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 8.800003051757812,
+      "z": 176.84249877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 14 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 4,
+      "z": 176.91250610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 14 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -401.1549987792969,
+      "y": 4.1999969482421875,
+      "z": 44.5625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -401.2250061035156,
+      "y": 5.8000030517578125,
+      "z": 51.222503662109375,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -401.2250061035156,
+      "y": 5.8000030517578125,
+      "z": 37.902496337890625,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 3.3600006103515625,
+      "z": 87.46749877929688,
+      "sx": 4,
+      "sy": 5.7599945068359375,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -447.9649963378906,
+      "y": 4.6399993896484375,
+      "z": 87.53750610351562,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -461.2850036621094,
+      "y": 4.6399993896484375,
+      "z": 87.53750610351562,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 8.800003051757812,
+      "z": 25.842498779296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 4,
+      "z": 25.912506103515625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 13 Plot 1-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -368.4049987792969,
+      "y": 4.1999969482421875,
+      "z": -99.4375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 3-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -368.4750061035156,
+      "y": 5.8000030517578125,
+      "z": -92.77749633789062,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 3-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -368.4750061035156,
+      "y": 5.8000030517578125,
+      "z": -106.09750366210938,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 3-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -418.875,
+      "y": 4.1999969482421875,
+      "z": -56.032501220703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 2-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -412.2149963378906,
+      "y": 5.8000030517578125,
+      "z": -55.96250915527344,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 2-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -425.5350036621094,
+      "y": 5.8000030517578125,
+      "z": -55.96250915527344,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 2-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -418.875,
+      "y": 8.800003051757812,
+      "z": -115.15750122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 2-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -418.875,
+      "y": 4,
+      "z": -115.08750915527344,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 12 Plot 2-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 4.1999969482421875,
+      "z": -212.28250122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 11 Plot 3-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -376.4649963378906,
+      "y": 5.8000030517578125,
+      "z": -212.21249389648438,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 11 Plot 3-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -389.7850036621094,
+      "y": 5.8000030517578125,
+      "z": -212.21249389648438,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 11 Plot 3-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 7.9199981689453125,
+      "z": -266.9075012207031,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 11 Plot 3-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -383.125,
+      "y": 3.600006103515625,
+      "z": -266.8374938964844,
+      "sx": 4,
+      "sy": 6.4799957275390625,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 11 Plot 3-1.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 8.800003051757812,
+      "z": -517.844970703125,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 9 Plot 1-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 4,
+      "z": -517.7750244140625,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 9 Plot 1-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -454.625,
+      "y": 4.1999969482421875,
+      "z": -584.094970703125,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 9 Plot 1-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -447.9649963378906,
+      "y": 5.8000030517578125,
+      "z": -584.0250244140625,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 9 Plot 1-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -461.2850036621094,
+      "y": 5.8000030517578125,
+      "z": -584.0250244140625,
+      "sx": 7.7700042724609375,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 9 Plot 1-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -565.75,
+      "y": 8.800003051757812,
+      "z": 555.405029296875,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 2-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -565.75,
+      "y": 4,
+      "z": 555.4749755859375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 2-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -565.75,
+      "y": 2.94000244140625,
+      "z": 486.6549987792969,
+      "sx": 4,
+      "sy": 5.0399932861328125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -558.3499755859375,
+      "y": 4.05999755859375,
+      "z": 486.7250061035156,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -573.1500244140625,
+      "y": 4.05999755859375,
+      "z": 486.7250061035156,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -604.5833129882812,
+      "y": 4.1999969482421875,
+      "z": 553.905029296875,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -597.183349609375,
+      "y": 5.8000030517578125,
+      "z": 553.9749755859375,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -611.9833374023438,
+      "y": 5.8000030517578125,
+      "z": 553.9749755859375,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 8 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -526.9166870117188,
+      "y": 8.800003051757812,
+      "z": 238.96749877929688,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 6 Plot 3-2.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -526.9166870117188,
+      "y": 4,
+      "z": 239.03750610351562,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 6 Plot 3-2.RecessedDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -552.030029296875,
+      "y": 4.1999969482421875,
+      "z": -99.4375,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 2-1.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -552.0999755859375,
+      "y": 5.8000030517578125,
+      "z": -92.03750610351562,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 2-1.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -552.0999755859375,
+      "y": 5.8000030517578125,
+      "z": -106.83750915527344,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 2-1.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -604.5833129882812,
+      "y": 4.1999969482421875,
+      "z": -65.03250122070312,
+      "sx": 4,
+      "sy": 7.1999969482421875,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 1-2.RecessedShopDoor"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -597.183349609375,
+      "y": 5.8000030517578125,
+      "z": -64.96250915527344,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 1-2.DisplayWindow_Right"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -611.9833374023438,
+      "y": 5.8000030517578125,
+      "z": -64.96250915527344,
+      "sx": 8.633331298828125,
+      "sy": 4,
+      "sz": 0.350006103515625,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 1-2.DisplayWindow_Left"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -604.5833129882812,
+      "y": 6.746673583984375,
+      "z": -114.65750122070312,
+      "sx": 7,
+      "sy": 1.3000030517578125,
+      "sz": 0.4499969482421875,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 1-1.EntryLintel"
+    },
+    {
+      "code": "DECORATIVE_COLLISION",
+      "x": -604.5833129882812,
+      "y": 3.0666656494140625,
+      "z": -114.58750915527344,
+      "sx": 4,
+      "sy": 5.5200042724609375,
+      "sz": 0.3000030517578125,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 4 Plot 1-1.RecessedDoor"
+    }
+  ],
+  "streamingEnvelope": {
+    "64": {
+      "minIntersectingParts": 7,
+      "maxIntersectingParts": 38,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "256": {
+      "minIntersectingParts": 27,
+      "maxIntersectingParts": 315,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "384": {
+      "minIntersectingParts": 82,
+      "maxIntersectingParts": 620,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "512": {
+      "minIntersectingParts": 212,
+      "maxIntersectingParts": 998,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "1024": {
+      "minIntersectingParts": 1023,
+      "maxIntersectingParts": 1813,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    }
+  },
+  "unbatchedMainPassEstimate": 1813,
+  "measuredDrawCalls": null,
+  "limitations": [
+    "Lune data model only, no engine",
+    "Box/cylinder obstacle bounds conservative",
+    "Radius envelope sampled along route, not streaming simulation",
+    "Platform absent: station placeholder cannot prove platform exit",
+    "Landmark sight line and first-frame character grounding unverified"
+  ],
+  "sidewalkChecks": [
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_1",
+      "length": 75.62088012695315,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_-1",
+      "length": 75.62088012695315,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 1_Sidewalk_1",
+      "length": 70.80110168457033,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 1_Sidewalk_-1",
+      "length": 70.80110168457033,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_Sidewalk_1",
+      "length": 81.81527709960938,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_Sidewalk_-1",
+      "length": 81.81527709960938,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_Sidewalk_1",
+      "length": 67.64195251464844,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_Sidewalk_-1",
+      "length": 67.64195251464844,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_Sidewalk_1",
+      "length": 227.83689880371094,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_Sidewalk_-1",
+      "length": 227.83689880371094,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Canal diagonal_Sidewalk_1",
+      "length": 203.18284606933597,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Canal diagonal_Sidewalk_-1",
+      "length": 203.18284606933597,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_630_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_630_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_150_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_150_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_0_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_0_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-300_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-300_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-620_1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-620_-1",
+      "length": 1418.0,
+      "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_620_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_620_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_270_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_270_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_120_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.75,
+      "defects": [
+        {
+          "code": "BODY_BLOCKED",
+          "x": 136.75,
+          "z": 963.25,
+          "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+          "segment": 1,
+          "top": 19.0,
+          "bottom": 0.0,
+          "startX": 136.75,
+          "startZ": 961.25,
+          "endX": 136.75,
+          "endZ": 965.25
+        },
+        {
+          "code": "BODY_BLOCKED",
+          "x": 136.75,
+          "z": 966.2500000000002,
+          "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+          "segment": 1,
+          "top": 19.0,
+          "bottom": 0.0,
+          "startX": 136.75,
+          "startZ": 965.25,
+          "endX": 136.75,
+          "endZ": 967.25
+        },
+        {
+          "code": "BODY_BLOCKED",
+          "x": 136.75,
+          "z": 968.125,
+          "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+          "segment": 1,
+          "top": 19.0,
+          "bottom": 0.0,
+          "startX": 136.75,
+          "startZ": 967.25,
+          "endX": 136.75,
+          "endZ": 969.0
+        }
+      ]
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_120_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.230010986328125,
+      "defects": [
+        {
+          "code": "BODY_BLOCKED",
+          "x": 103.25,
+          "z": 963.25,
+          "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+          "segment": 1,
+          "top": 19.0,
+          "bottom": 0.0,
+          "startX": 103.25,
+          "startZ": 961.25,
+          "endX": 103.25,
+          "endZ": 965.25
+        },
+        {
+          "code": "BODY_BLOCKED",
+          "x": 103.25,
+          "z": 966.2500000000002,
+          "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+          "segment": 1,
+          "top": 19.0,
+          "bottom": 0.0,
+          "startX": 103.25,
+          "startZ": 965.25,
+          "endX": 103.25,
+          "endZ": 967.25
+        },
+        {
+          "code": "BODY_BLOCKED",
+          "x": 103.25,
+          "z": 968.125,
+          "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+          "segment": 1,
+          "top": 19.0,
+          "bottom": 0.0,
+          "startX": 103.25,
+          "startZ": 967.25,
+          "endX": 103.25,
+          "endZ": 969.0
+        }
+      ]
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-650_1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-650_-1",
+      "length": 1618.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    }
+  ],
+  "sidewalkDefectCount": 6
 }

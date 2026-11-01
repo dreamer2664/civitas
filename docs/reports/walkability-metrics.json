@@ -1,9 +1,42 @@
 {
-  "sourceRevision": "5b9117d9574c17ba12681c9490140e9c505d8e4c",
+  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
   "staticWorkspaceParts": 0,
-  "generatedWalkableParts": null,
+  "generatedWalkableParts": 1817,
   "drawCalls": null,
-  "reason": "No generator export available",
+  "unbatchedMainPassEstimate": 1813,
+  "streamingEnvelope": {
+    "64": {
+      "minIntersectingParts": 7,
+      "maxIntersectingParts": 38,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "256": {
+      "minIntersectingParts": 27,
+      "maxIntersectingParts": 315,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "384": {
+      "minIntersectingParts": 82,
+      "maxIntersectingParts": 620,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "512": {
+      "minIntersectingParts": 212,
+      "maxIntersectingParts": 998,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "1024": {
+      "minIntersectingParts": 1023,
+      "maxIntersectingParts": 1813,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    }
+  },
+  "reason": "Engine profiling required; parts are not draw calls",
   "streaming": {
     "StreamingEnabled": true,
     "StreamingMinRadius": 64,

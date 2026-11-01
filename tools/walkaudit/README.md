@@ -1,62 +1,66 @@
-# WALK geometry handoff (proposed adapter, not a shared contract change)
+# WALK real-builder audit
 
-Run from repo root: `bash tools/walkaudit/verify.sh`.
-Needs lune, rojo, selene, stylua and luau-lsp on PATH (`$HOME/bin` also searched).
-The command is deliberately **red** when World is absent, even when fixtures pass.
+`bash tools/walkaudit/verify.sh` from repo root runs lint, format and scoped Luau static
+analysis, 18 pure Luau regression tests, 11 Python clipping/geometry regression tests,
+strata's 6 generator tests, Rojo assembly, actual builder export and exact geometry audit.
+It returns nonzero for route or sidewalk continuity defects. This is NOT an engine test.
 
-## WORLD · strata integration request
+`lune run tools/walkaudit/check_world.luau` is the direct real-geometry Lune assertion gate.
+It loads the actual builder/exporter and runs the strict pure `OrientedAudit` kernel.
+`python tools/walkaudit/compare.py` requires the independent Python results to agree with
+Lune on seal, length, steps and every sidewalk defect. Both currently fail city continuity
+for the same two station-wall conflicts. Noncollidable intended surfaces are explicitly
+rejected even over an otherwise solid fallback ground slab.
 
-No World module exists at baseline `aea670197fea6d24e5fde7b7e2a576a5ed4a0a09`.
-Provide a **pure** module `src/server/World/Geometry.luau` with
-`generateAuditData()` returning the following export. Alternate module path can be passed
-as the first argument to verify.sh (resolved relative to tools/walkaudit/run.luau).
-Do not maintain an independent simplified mock: derive this export from the same data
-used by the runtime generator. Each box needs a stable source-part ID.
+## Provenance
 
-```lua
-{
-  schema = "walk-boxes-v1",
-  boxes = {
-    {id="source part ID", x0=0, x1=100, z0=0, z1=100,
-     bottom=-2, top=0, collide=true, walk=true},
-  },
-  bounds = {x0=0, x1=100, z0=0, z1=100},
-  route = {{x=5,z=5}, {x=95,z=5}}, -- actual ordered route >=1500 studs
-  citySpawn = {x=5,z=5},
-  stationSpawn = {x=95,z=5},
-}
-```
+`export_world.luau` loads the **unmodified** CityBuilder source with `@lune/luau`, supplying
+Lune's Instance, Vector3, Enum and Color3 as the globals. It loads the same CityGenerator
+and CityConfig modules used by WorldBootstrap. This executes the real construction loops
+and exports the actual 1817 constructed BaseParts, including all collision obstacles.
+No separate formula-based mock or hand-maintained part estimate is used.
 
-This is a local consumer format, not a change to Manager-owned GeometryContract.
-Only exact anchored axis-aligned solid boxes are supported. Do not export rotated parts,
-ramps, wedges, mesh bounding boxes, cylinders or Terrain as boxes: that would create false
-proof. A future adapter must support their true surfaces or explicitly block acceptance.
-`walk` marks actual intended support surfaces, not roofs or decoration. Bounds declare a
-rectangular, continuously grounded area, including building footprints. Nonrectangular
-coastlines/holes require a proper domain extension; do not hide holes by shrinking bounds.
-Export ALL collision obstacles, including transparent ones. State source provenance in PR.
+Lune stores properties but does not simulate Roblox. The inspected builder revision writes
+Position and optional Orientation, never CFrame/PivotTo. Export therefore uses Position
+and Orientation directly, with zero default yaw. A future builder using CFrame or dynamic
+placement needs an adapter update; do not silently keep this assumption. No physics,
+streaming, Humanoid state, render submission or character grounding is simulated.
 
-The route must be independently checked for District A sidewalk -> grid -> public square ->
-station forecourt -> concourse, with station platform -> city also covered. Current audit
-cannot prove those semantic destinations, landmark visibility, avatar simulation or streaming.
+## Actual geometry audit
 
-## Algorithms / scope
+`python tools/walkaudit/audit_world.py`:
+* Exact base-solid containment: the actual closed CollidableGround box contains all corners
+  of the full rectangular slice. This proves every x/z coordinate is sealed at its top,
+  not just a sample grid. It does not prove every possible upper level is hole-free.
+* Analytic line/rotated-box clipping, including non-axis-aligned route links and diagonals.
+* Support uses a 1-stud inward margin: a radius-1 footprint must fit a true support rectangle
+  at every route interval. This is conservative; it can reject a valid union-supported edge.
+* Obstacles use a 1-stud outward margin, 5-stud headroom and 1.2-stud step threshold. Cylinder
+  obstacles are conservatively enclosed; cylinder support cannot establish a pass. Unknown
+  shapes and tilted surfaces fail. Future true ramps/meshes need exact surface support.
+* Every actual sidewalk's long axis is independently audited (48, including diagonals),
+  with 1-stud endpoint inset. Results identify source-part IDs and exact blocked spans.
+* District A and station-concourse spawn locations receive support/clearance checks. This
+  is not a runtime teleport or first-frame physics test. No platform is present to test.
+* Streaming envelopes at 64/256/384/512/1024 studs count footprint/circle intersections
+  at 114 route positions, max 16-stud spacing. These are sampled conservative residency
+  envelopes, NOT engine residency, true streaming maxima, GPU calls or memory measurements.
+* Unbatched main-pass estimate assumes one submission per resident part, no batching or
+  culling. This is a risk proxy, not a guaranteed upper bound on total GPU draw calls
+  (shadows/multipass effects can add calls; batching/occlusion can reduce calls).
 
-* Seal: split the declared rectangle at every box x/z boundary. Each nonzero cell has
-  constant box membership. Checking its interior proves rectangular union coverage, not
-  just coverage at a regular grid of sample coordinates. Boundaries are closed.
-* Route: split each segment at every surface and expanded obstacle boundary. Detect any
-  unsupported interval (stricter than the 0.5-stud contract), height changes >1.2, and
-  overlap with a 2-wide, 5-high conservative body box. Unknown geometry must not enter.
-* Spawn: requires a flat supported 2x2 footprint and body clearance. A plan validator,
-  **not runtime spawn wiring**, streamed availability or a first-frame physics test.
-* Complexity is intentionally headless: seal is O(B^3) worst case, route O(R*B^2).
-  Do not execute these full audits per frame or use them on a full 25k-part scene without
-  spatial indexing/union optimization. Report overhead separately from gameplay cost.
-* Route currently proves centerline support, not the full swept foot/body support width;
-  diagonal corner clipping and partial edge support remain acceptance blockers.
+The old `run.luau` proposed box adapter remains available but is no longer the main city
+check. It must not overwrite the current evidence with a synthetic fixture pass.
 
-Outputs: results JSON (including geometry on successful load), metrics JSON, SVG render,
-and Rojo-built milestone place. Render script shows an explicit blocker instead of drawing
-an invented route when there is no real geometry. Draw calls require engine measurement;
-part counts are not draw calls.
+## Outputs
+
+`docs/reports/walkability-world.json`: actual part export and source waypoints.
+`walkability-live-results.json` and `walkability-results.json`: results, spawn checks,
+all sidewalk findings, policy findings and streaming envelopes.
+`walkability-collision-defects.csv`: all 291 decorative-collision IDs, coordinates and sizes.
+`walkability-metrics.json`: configured properties and static/constructed part counts.
+`renders/walkability-route.svg`: actual footprints, gold audited route, red blocked sidewalks.
+`walkability-milestone.rbxlx`: Rojo assembly evidence, not simulated runtime geometry.
+
+No source geometry or collision flags are changed by these tools. Forward findings to strata.
+Full audits stay offline; no Heartbeat scan is introduced.

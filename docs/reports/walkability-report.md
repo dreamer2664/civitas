@@ -1,111 +1,223 @@
-# WALK · pave — walkability checkpoint
+# WALK · pave — real geometry audit checkpoint
 
-**2026-11-01 / Manager A / NOT FROZEN / CITY ACCEPTANCE BLOCKED**
+**2026-11-01 / Manager A / NOT FROZEN / overall continuity gate RED**
 
-Baseline: `aea670197fea6d24e5fde7b7e2a576a5ed4a0a09` (main).
-Implementation branch: `walk/pave-audit`. No Studio, Roblox account, device profiling,
-character simulation or multiplayer test was used or claimed.
+## Latest publication-first checkpoint
 
-## Delivery status
+Created branch **`walk/audit`** directly from the already committed patch work and attempted
+push before further analysis, including an authenticated attempt using the supplied PAT.
+GitHub returned **Invalid username or token**, exit 128. This is a write-access blocker,
+not unpublished work by choice. No source token or credential is stored in the repository.
 
-The first audit checkpoint is implemented locally, not a completed +3h spawn milestone.
-No World generator or city output exists in the checked-out repository. Public remote heads
-checked with `git ls-remote --heads origin`: main, lumen/ui-core, mason/emu-1, vector/rail-core;
-no strata branch was published at inspection. No city geometry was fabricated or repaired.
+Added **OrientedAudit.luau**, a pure strict Luau kernel, and **check_world.luau**, which executes
+the actual unmodified runtime builder in Lune, validates its exported data and asserts the
+real route, full base seal and all 48 sidewalk axes. The Python audit remains independent;
+`compare.py` proves the two implementations agree on parts, ground, route length, maximum
+step and every sidewalk finding. A noncollidable intended surface now fails even if a
+collidable base below it would prevent falling. Adapter guards reject unsupported part
+classes and CFrame/PivotTo placement rather than silently using stale Position values.
 
-Push attempted after the first commit. GitHub rejected authentication with the supplied PAT:
-`remote: Invalid username or token`. Branch has **not** been published. The token is not in
-source files or remote URLs. Replace/revoke the exposed credential through a secure channel.
-A local branch and portable patch are retained; neither substitutes for a successful push.
+Latest remote remains `329d358`. Command
+`git diff --exit-code 8ae4bb0 origin/world/historic-core-blockout -- src/server/World`
+returns **0**, confirming its World geometry matches the requested 8ae4bb0 exactly.
 
-## Acceptance matrix
+Concrete geometry categories, independently confirmed in Lune:
 
-| Contract | Evidence now | Remaining / status |
-|---|---|---|
-| District A sidewalk spawn; landmark visible; grounded first frame | Pure flat-footprint / clearance validator | BLOCKED: coordinates, landmark LOS, runtime spawn wiring and first-frame physics |
-| >=1500-stud grid-square-forecourt-concourse route | Exact segment-boundary audit; synthetic route 1596 studs | BLOCKED: real route and destination semantics |
-| Continuous crossings / driveways / dropped curbs | Regression rejects 1.21-stud step; permits 1.2 | BLOCKED: crossing inventory, actual ramps/slopes and curb geometry |
-| Ground sealed everywhere | Exact rectangular-union coverage checker detects 0.01-stud hole | BLOCKED: actual world boxes/domain; roofs must not be used as ground |
-| Performance budgets | Streaming configuration assembled by Rojo; static metrics below | BLOCKED: real generated part count and engine draw-call profile |
-| Collision policy | Policy below and obstacle regression tests | BLOCKED: actual generator compliance |
-| Station spawn / platform-to-city | Validator accepts second spawn field | BLOCKED: real station point, explicit platform-to-city route, teleport streaming |
-| Route render | Reproducible SVG pipeline, explicit BLOCKED artifact | NO real route render possible until world export exists |
+| Failure category | Actual findings |
+|---|---:|
+| Unsupported route/sidewalk intervals (including gaps >0.5 studs) | **0** |
+| Steps >1.2 studs | **0** |
+| Intended noncollidable walk surfaces | **0** |
+| Ground-plane holes within declared rectangle | **0**, exact base-containment proof |
+| Body-blocked sidewalk spans | **6 spans / 2 sidewalks**, WALK-004 below |
 
-A green fixture suite is **not** acceptance of a walkable city. Even a green box geometry
-result is not full acceptance: current centerline-only support, unverified semantic waypoints,
-landmark visibility, unsupported ramps/meshes, runtime integration and engine tests remain.
+Regression evidence is now **18 Luau tests + 11 Python tests + 6 strata tests**, all passing.
+The real-city acceptance command still returns **1**, correctly, for blocked sidewalks.
+Lint/format and scoped analysis include the new pure Luau kernel and its tests. All analysis
+is offline: no per-frame scan or training/player-model system was added to a phone client.
 
-## Precise defect / dependency handoff for WORLD · strata
+Commands for the requested measurements:
+* `lune run tools/walkaudit/check_world.luau`: **1817 actual constructed parts**; route
+  **1632.999280**; max route step **0.595001**; sealed base; 48 sidewalks, 2 blocked.
+* `python tools/walkaudit/audit_world.py`: current 1024-stud sampled envelope peak **1813**;
+  384-stud candidate peak **620**. Recommend **min=64 / target=384 as a mobile profiling
+  candidate**, not as certified phone performance. Configuration remains 64/1024 until
+  device/visibility validation, and measured draw calls remain unknown. Details below.
 
-| ID | Location | Failure | Required action |
-|---|---|---|---|
-| WALK-001 | `src/server/World` (absent) | `WORLD_DATA_UNAVAILABLE`; no auditable generated geometry | Publish pure runtime-source geometry export |
-| WALK-002 | coordinates unavailable | District A sidewalk spawn, station spawn, square/forecourt/concourse/platform route cannot be located | Publish source-linked markers and ordered route >=1500 studs |
-| WALK-003 | bounds unavailable | Cannot establish entire walkable coverage domain | Declare actual walkable bounds; do not exclude accidental holes |
+## Previous supervisor checkpoint (superseded by evidence above)
 
-There are **no invented coordinate defects**. No coordinate exists to quote until geometry is
-available. On load, each finding contains code, x/z coordinates, a rectangle or interval in
-studs, or source obstacle ID. Adapter details: `tools/walkaudit/README.md`.
-No changes made in `src/server/World` or Manager-owned shared contracts.
+Integrated strata revision `329d358ca71f4fa4af2ae68e09d10f906d7db673` at
+`7216be566410d5e5e9fe49af4c8b6c5fe35e699a` and reran the complete verification pipeline.
+The new strata commit adds a builder-recipe part-count assertion, not geometry changes.
+Results are unchanged: 1817 constructed parts, 1632.99928-stud route, 0.595001-stud maximum
+route step, sealed 2,895,200-square-stud base, two blocked sidewalk axes and 291 facade
+collision findings. Full audit still exits 1. Streaming envelopes are unchanged.
+Fresh JSON evidence records the current integration/world revisions. Push retried but no
+usable noninteractive write credentials are configured; the previously supplied token was
+already rejected. No grading, motif, player-model or training-scheduler systems belong to
+this assignment; none were modified.
 
-## Verification / exact commands
 
-Toolchain installed in `$HOME/bin` (not committed). Run from repository root with
-`export PATH="$HOME/bin:$PATH"`.
+Continued from the previous checkpoint; strata has now published geometry. Integrated
+`origin/world/historic-core-blockout` at `8ae4bb0de7046af8882a48dbcf8d1ffeaa259315`
+into `walk/audit` without changing any World-owned files. Audit evidence was generated
+against integration commit `8736e3f2a71407cd7418f7c60aab20f902ea8031` plus the owned audit
+changes in this checkpoint. An unrelated dirty asset file was left untouched.
 
-| Command | Observed result |
+## What is now verified headlessly
+
+The unmodified **CityGenerator + CityConfig + CityBuilder** execute in Lune. The export
+contains actual constructed parts, not a parallel geometry mock or an estimated formula.
+Lune's Roblox data model supplies Instance and datatypes; it is **not the Roblox engine**.
+No character physics, first-frame grounding, client streaming, mobile hardware or GPU
+profiling is claimed. Builder placement uses explicit Position/Orientation at this revision;
+Lune does not synchronize those properties with CFrame. See `tools/walkaudit/README.md`.
+
+| Check | Result |
 |---|---|
-| `lune run tests/walk/run.luau` | **10 passed, 0 failed**, synthetic fixtures only |
-| `selene src/server/Walkability src/server/Spawn tests/walk tools/walkaudit` | **0 errors, 0 warnings, 0 parse errors** |
-| `selene src/` | **0 errors, 0 warnings, 0 parse errors** at checkpoint |
-| `stylua --check src/server/Walkability src/server/Spawn tests/walk tools/walkaudit` | exit 0 |
-| `luau-lsp analyze --platform=standard src/server/Walkability/Audit.luau src/server/Spawn/Plan.luau tests/walk/run.luau` | exit 0, no diagnostics; tool warns no definitions file supplied |
-| `rojo build default.project.json -o docs/reports/walkability-milestone.rbxlx` | success; place committed as assembly evidence only |
-| `lune run tools/walkaudit/run.luau` | **fails intentionally**: missing World/Geometry module; BLOCKED JSON written |
-| `python tools/walkaudit/measure.py` | writes static metrics below |
-| `python tools/walkaudit/render.py` | writes `docs/reports/renders/walkability-route.svg` (BLOCKED, no invented route) |
+| Spawn → grid → square → forecourt → concourse | **1632.99928 studs**, 125 analytically partitioned intervals |
+| Unsupported route footprint intervals | **0**, radius-1 support footprint, not just centerline |
+| Route body blockers | **0**, conservative radius-1 / height-5 envelope |
+| Maximum route step | **0.595001 studs**, below 1.2 |
+| Ground sealing | **PROVEN across 2,895,200 square studs**, exact containment by actual closed base solid |
+| Ground domain | x **[-770, 770]**, z **[-825, 1055]**, base top y=0 |
+| Entire sidewalk axes | **48 checked**, including diagonal streets; **46 clear, 2 blocked** |
+| Sidewalk gaps / steps >1.2 | **0 / 0**, largest sidewalk step **0.75** studs |
+| Sidewalk body-block findings | **6 partitioned spans**, representing **2 distinct blocked sidewalks** |
+| Actual generated BaseParts | **1817**, below 25,000 slice budget |
+| District A spawn geometry | **clear**, x=136.75, z=-640, support top y=1.149994 |
+| Station-concourse spawn geometry | **clear**, x=120, z=925, support top y=0.630005 |
 
-`bash tools/walkaudit/verify.sh` combines checks and returns nonzero at city gate. Lune runner
-has runtime validation at its dynamic boundary; luau-lsp checks the pure modules/spec, not
-Lune-library bindings. No blanket claim that all repository tests or all code was analyzed.
+Ground proof: the builder's actual anchored collidable `CollidableGround` block contains
+all four corners of the declared rectangle, therefore every interior x/z coordinate. This
+proves a sealed base, not that every upper floor is hole-free. Rotated horizontal support
+rectangles use analytic clipping; no regular sampling grid substitutes for route continuity.
+The route uses strata's generated link slabs; WALK did not add or alter any geometry.
 
-## Performance budget / measurements
+## Precise defect handoff to WORLD · strata
 
-Source: `python tools/walkaudit/measure.py`, after the Rojo command above.
+### WALK-004 / two sidewalk axes intersect station rear wall — BLOCKER
 
-| Metric | Value | Meaning |
-|---|---|---|
-| Static Workspace BaseParts | **0** | Counted in assembled place; runtime city is absent. NOT a successful low part count. |
-| Generated walkable parts | **unknown / null** | World export unavailable. Target **<25,000** for slice. |
-| Estimated draw calls | **unavailable / null** | No geometry, material/mesh batches, camera or engine renderer. Do not equate parts with calls. Target **<1,000**. |
-| Triangles | unmeasured | Architecture target <1,000,000 worst-case visible triangles. |
-| Streaming min / target radius | **64 / 1024 studs** | Serialized configuration, not measured loaded extents. |
-| Streaming behavior on movement | unverified | Must measure client residency, pauses and memory on real mobile hardware. |
+Source wall:
+`Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall`.
+Actual solid footprint: **x=[42,198], z=[962.25,970.25], y=[0,19]**.
 
-Serialized Workspace settings: StreamingEnabled true; ModelStreamingBehavior Improved;
-StreamingIntegrityMode PauseOutsideLoadedArea; StreamOutBehavior Opportunistic. Rojo build
-success verifies property assembly, not runtime streaming. Keep architecture defaults rather
-than unilaterally lowering target radius and compromising landmark views. For mobile,
-recommend built-in materials, reused meshes, small spatially coherent models, collision
-simplification and tight local detail budgets first. Test a baseline low-memory phone before
-sign-off; require worst-case station/city camera draw calls, triangles, frame time and memory.
-Never keep the whole city Persistent. Break geometry into local units; avoid attaching huge
-city extents to a small moving prop/model. Teleports must request the destination stream,
-handle timeout and verify local support before releasing movement; this is not yet wired.
+| Actual sidewalk source | Centre x | Tested blocked centreline z interval |
+|---|---:|---|
+| `Streets.Sidewalk_z_120_1` | 136.75 | **[961.25,969]** |
+| `Streets.Sidewalk_z_120_-1` | 103.25 | **[961.25,969]** |
+
+The wall collides with the radius-1 pedestrian envelope starting 1 stud before its physical
+face. Source sidewalks continue to z=970; audit ends 1 stud before their endpoint. Six
+reported spans are subdivisions of these two continuous conflicts, not six distinct walls.
+Please resolve the sidewalk/station layout deliberately; WALK has not cut the wall, rerouted
+the street or added a rescue slab. Full spans and IDs: `walkability-live-results.json`.
+The contracted spawn-to-concourse route stops at z=925 and is clear; this broader sidewalk
+check is why the overall gate remains red.
+
+### WALK-005 / decorative collision policy — 291 findings
+
+57 each: `DisplayWindow_Left`, `DisplayWindow_Right`, `RecessedShopDoor`.
+60 each: `EntryLintel`, `RecessedDoor`. All are constructed with CanCollide=true by the
+shared builder helper despite being facade details over solid massing.
+
+Example: `Block 64 Plot 3-2.DisplayWindow_Right` centre **(578.57666, 5.800003, 552.474976)**,
+size **(9.520004,4,0.350006)** studs. Exact full source IDs, xyz and dimensions for all 291
+findings are in **`docs/reports/walkability-collision-defects.csv`**. This list does not claim
+these details currently block the acceptance route; it identifies policy noncompliance.
+Please disable decorative collision in the owning generator, keeping building massing,
+canopies and meaningful street furniture collision. No silent patch was made.
+
+### WALK-006 / platform-to-city promise — missing station interface
+
+The actual station is explicitly named `CentralStation_WalkablePlaceholder`; no platform
+geometry or platform marker is present in the generated city. The station-concourse spawn
+point can be validated, but must not be called a platform teleport test. Platform handoff,
+real teleport/stream readiness, landmark line of sight and first-frame character grounding
+remain unverified. The existing sidewalk spawn is created by strata's builder, not WALK.
+
+## Performance / streaming numbers
+
+Commands: `lune run tools/walkaudit/export_world.luau`, then
+`python tools/walkaudit/audit_world.py` and `python tools/walkaudit/measure.py`.
+
+* **1817 actual generated BaseParts**. Static Rojo Workspace count is 0 because the city
+  is built at runtime; do not confuse the two. Generator's current estimate also equals 1817.
+* Serialized settings remain **StreamingEnabled=true, MinRadius=64, TargetRadius=1024**,
+  **Improved / PauseOutsideLoadedArea / Opportunistic**. Rojo assembles these properties.
+* The following counts are geometric footprint/radius intersections at **114 route
+  positions**, maximum **16-stud spacing**. They are sampled residency envelopes, not
+  observed stream-in/out, memory usage or guaranteed continuous maxima.
+
+| Radius (studs) | Minimum intersecting parts | Maximum at sampled positions |
+|---:|---:|---:|
+| 64 | 7 | 38 |
+| 256 | 27 | 315 |
+| 384 | 82 | 620 |
+| 512 | 212 | 998 |
+| 1024 | 1023 | 1813 |
+
+**Estimated unbatched main-pass submissions: 1813** at the configured target envelope,
+assuming one submission per intersecting part, no batching and no culling. This conservative
+risk proxy exceeds the 1000-call target, but is **not measured engine draw calls** and is not
+an upper bound on all GPU passes. Batching/occlusion reduce calls; shadows/multipass rendering
+can add calls. Measured draw calls and triangles remain unknown, not zero.
+
+Mobile recommendation: test a **384-stud target-radius candidate** (620-part sampled peak),
+keeping min=64 and the integrity/stream-out settings, before approving it for production.
+512 already reaches 998 without characters or trains and leaves negligible headroom. Do not
+claim the 384 candidate meets the draw-call budget until profiling a baseline low-memory
+phone; also check landmark visibility and pause behavior. Current architecture-default
+1024 is retained in committed config pending this validation. Use built-in materials,
+reused mesh batches and small spatially coherent models; do not make the entire city
+Persistent. No full-city per-frame scanning is introduced.
 
 ## Collision design policy
 
-* Ground, sidewalks, crossings, floors and simplified building massing: anchored collidable
-  solids; no gaps, including underneath driveways/crossings. Do not rely on render-only mesh.
-* Curbs: heights <=1.2 studs on pedestrian paths; dropped kerbs or accurately represented
-  ramps at crossings. No continuous collidable curb fence across crossing openings.
-* Canopies and street furniture: simplified, appropriately placed collisions, maintaining
-  walking width and headroom; canopy support posts must be present in obstacle export.
-* Decorative trim, lettering, tactile visual strips, tiny handles and foliage detail:
-  noncollidable; no detailed render-mesh collision. Important obstacles may not be hidden
-  through the `walk` flag: export all collidable solids independently of transparency.
-* Enforce policy in generator; audit does not silently switch collision flags or add rescue
-  slabs. Collision group changes and query flags need explicit engine-side review.
+Ground, pavements, floors and simplified massing stay anchored and collidable. Crossings
+need continuous support and dropped kerbs/ramps, with no curb fence; permitted path step
+maximum is 1.2 studs. Canopies, posts and street furniture get simplified collision with
+walking clearance. Decorative lettering, facade detail, windows, tiny handles and visual
+strips do not get render-detail collision. Current 291 facade findings need strata's fix.
+Cylinder obstacles are conservatively bounded; cylinders do not prove support. Unsupported
+shapes/tilted surfaces fail rather than being silently treated as walkable boxes.
+
+## Evidence / commands
+
+Run **`bash tools/walkaudit/verify.sh`**. Current expected exit is **1** for the two blocked
+sidewalks; earlier missing-World blocker is superseded. Full output: `tools/walkaudit/evidence.log`.
+
+| Command | Observed result |
+|---|---|
+| `selene src/server/Walkability src/server/Spawn tests/walk tools/walkaudit` | 0 errors, 0 warnings, 0 parse errors |
+| `stylua --check src/server/Walkability src/server/Spawn tests/walk tools/walkaudit` | exit 0 |
+| `luau-lsp analyze --platform=standard src/server/Walkability/Audit.luau src/server/Spawn/Plan.luau tests/walk/run.luau src/server/Walkability/OrientedAudit.luau tests/walk/oriented.luau` | exit 0, no diagnostics; warns no definitions file supplied |
+| `lune run tests/walk/run.luau` | 10 passed, 0 failed |
+| `lune run tests/walk/oriented.luau` | 8 passed, 0 failed |
+| `lune run tools/walkaudit/check_world.luau` | asserts actual builder output in Lune; exits 1 for two blocked sidewalks |
+| `python tools/walkaudit/compare.py` | independent Lune/Python parity PASS |
+| `python tests/walk/test_world_audit.py` | 11 passed |
+| `lune run tools/world/test_city.luau` | 6 passed, 0 failed (strata's tests; not full acceptance) |
+| `rojo build default.project.json -o docs/reports/walkability-milestone.rbxlx` | success |
+| `lune run tools/walkaudit/export_world.luau` | actual builder: 1817 BaseParts, 1633.00 route studs |
+| `python tools/walkaudit/audit_world.py` | acceptance route clear; 48 sidewalk axes checked; 2 blocked; exit 1 |
+| `python tools/walkaudit/measure.py` | counts and configured streaming properties recorded |
+| `python tools/walkaudit/render_world.py` | real top-down footprints and gold route; red blocked sidewalk locations |
+
+**Render:** `docs/reports/renders/walkability-route.svg` — now real city geometry, replacing
+the earlier BLOCKED card. The place file is assembly evidence, not a city simulation.
+Lune-library bindings are runtime-validated/executed; scoped luau-lsp claim covers pure
+modules/specs only. No whole-project clean-analysis or engine acceptance claim.
+
+## Publication / remaining gates
+
+Initial push failed: supplied PAT rejected by GitHub. New checkpoint push is attempted at
+session end; no successful publication should be inferred from a local commit. The exposed
+PAT should be revoked and replaced securely. Portable patch remains available if push fails.
+
+Next: strata resolves WALK-004/005; rerun the same commands and render. Station/platform
+integration, real spawn/teleport streaming, landmark visibility and mobile profiling remain
+separate gates. No freeze until those gaps are explicitly resolved or accepted by Manager A.
 
 ## Resource study / adopted facts
 
@@ -130,13 +242,3 @@ RESOURCES before implementation. Specific facts from opened Creator documentatio
    warns about heavy work in high-frequency frame events: full audits stay offline; no
    Heartbeat loop added. Current seal algorithm is expensive and needs indexing for 25k parts.
 
-## Next gates (not claims of elapsed milestones)
-
-1. Publish this branch once working repository write access is available.
-2. Consume strata's real data; implement an adapter for its actual schema without a parallel
-   fake city; extend exact surface math for any true ramps/rotations.
-3. Assign grounded District A spawn with verified landmark line of sight; integrate runtime
-   spawn/stream handoff; add full-width route support and real station exit tests.
-4. Run city audit, send coordinate defects to strata, rerun after their fixes. No rescue floors.
-5. Render actual route and report actual parts; model draw-call estimate only with declared
-   batching assumptions, then hand device/engine checks to Manager. Freeze only after evidence.

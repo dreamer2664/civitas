@@ -14,8 +14,10 @@ count = sum(i.attrib.get('class') in classes for i in workspace.iter('Item')) if
 metrics = {
     'sourceRevision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip(),
     'staticWorkspaceParts': count,
-    'generatedWalkableParts': result.get('parts'),
+    'generatedWalkableParts': result.get('partCount', result.get('parts')),
     'drawCalls': None,
+    'unbatchedMainPassEstimate': result.get('unbatchedMainPassEstimate'),
+    'streamingEnvelope': result.get('streamingEnvelope'),
     'reason': 'No generator export available' if result['status'] == 'BLOCKED' else 'Engine profiling required; parts are not draw calls',
     'streaming': project['tree']['Workspace']['$properties'],
 }
