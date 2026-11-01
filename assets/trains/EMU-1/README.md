@@ -59,3 +59,12 @@ Shares use 20,260 render triangles; rounding may affect totals. No reference pho
 Renders: `renders/gangway.png` shows the car joint; `renders/roof-equipment.png` documents the raised pantograph. `renders/door-01.png`, `door-06.png`, `door-15.png`, `door-24.png` show the motion. Main views: `renders/front-three-quarter.png`, `renders/side.png`, `renders/cab-interior.png`. Exterior and door views are headless Blender Workbench previews; the cab view is headless Cycles, with a striped render-only target outside to show the sightline. The target is not included in the source asset or exports. None are Studio screenshots.
 
 Studio must validate importer axis, scale and pivots; glazing transparency; collisions, boarding and moving doors; and LOD transitions and runtime performance. Blender checks do not replace these tests.
+
+## Far LOD candidates
+
+`CAB_LOD1` and `INTERMEDIATE_LOD1` are static, frame-1 visual meshes produced by a 20% collapse of evaluated source geometry. Cab: 1,710 triangles; intermediate: 2,340; total 4,050; non-manifold edges 0. `lod1-mesh-stats.json` contains the audit and `renders/lod1.png` is a Blender preview. They contain no collision or usable door/pantograph animation and should not be substituted while nearby players interact. Material splits may produce multiple imported MeshParts. There is **no implemented runtime LOD switching**, no Roblox LOD transition test and no performance claim.
+
+```sh
+blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/build_lod.py
+blender -b assets/trains/EMU-1/EMU-1-LOD1.blend --python-exit-code 1 -P assets/trains/EMU-1/export_lod.py
+```
