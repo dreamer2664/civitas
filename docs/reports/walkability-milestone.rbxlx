@@ -1204,25 +1204,1317 @@ return Audit
 ]]></string>
           </Properties>
         </Item>
+        <Item class="ModuleScript" referent="15">
+          <Properties>
+            <string name="Name">OrientedAudit</string>
+            <string name="Source"><![CDATA[--!strict
+-- Pure yawed-box geometry audit. Used in Lune against the actual runtime builder export.
+-- Body/support margins are conservative: a valid union-supported edge may be rejected.
+local OrientedAudit = {}
+export type Point = { x: number, z: number }
+export type Part = {
+	id: string,
+	name: string,
+	x: number,
+	y: number,
+	z: number,
+	sx: number,
+	sy: number,
+	sz: number,
+	rx: number,
+	ry: number,
+	rz: number,
+	shape: string,
+	collide: boolean,
+	anchored: boolean,
+	walk: boolean,
+}
+export type Bounds = { minX: number, maxX: number, minZ: number, maxZ: number }
+export type Defect = { code: string, x: number, z: number, detail: string }
+type Interval = { part: Part, low: number, high: number }
+
+local function localPoint(part: Part, point: Point): (number, number)
+	local angle = math.rad(part.ry)
+	local dx, dz = point.x - part.x, point.z - part.z
+	return dx * math.cos(angle) - dz * math.sin(angle), dx * math.sin(angle) + dz * math.cos(angle)
+end
+
+function OrientedAudit.clip(part: Part, a: Point, b: Point, margin: number): (number?, number?)
+	local ax, az = localPoint(part, a)
+	local bx, bz = localPoint(part, b)
+	local low, high = 0, 1
+	for _, axis in { { ax, bx - ax, part.sx / 2 + margin }, { az, bz - az, part.sz / 2 + margin } } do
+		local origin, delta, half = axis[1], axis[2], axis[3]
+		if half < 0 then
+			return nil, nil
+		end
+		if math.abs(delta) < 1e-12 then
+			if math.abs(origin) > half then
+				return nil, nil
+			end
+		else
+			local u, v = (-half - origin) / delta, (half - origin) / delta
+			if u > v then
+				u, v = v, u
+			end
+			low, high = math.max(low, u), math.min(high, v)
+			if low > high then
+				return nil, nil
+			end
+		end
+	end
+	return math.max(0, low), math.min(1, high)
+end
+
+-- Convex containment proves every coordinate, not just regularly spaced samples.
+function OrientedAudit.sealed(parts: { Part }, bounds: Bounds): boolean
+	for _, part in parts do
+		if
+			part.name ~= "CollidableGround"
+			or not part.collide
+			or not part.anchored
+			or part.shape ~= "Block"
+			or part.rx ~= 0
+			or part.rz ~= 0
+			or part.sy <= 0
+		then
+			continue
+		end
+		local covers = true
+		for _, x in { bounds.minX, bounds.maxX } do
+			for _, z in { bounds.minZ, bounds.maxZ } do
+				local p = { x = x, z = z }
+				if OrientedAudit.clip(part, p, p, 0) == nil then
+					covers = false
+				end
+			end
+		end
+		if covers then
+			return true
+		end
+	end
+	return false
+end
+
+function OrientedAudit.route(parts: { Part }, route: { Point }, minimum: number)
+	local defects: { Defect } = {}
+	local length, maxStep, intervalCount = 0, 0, 0
+	local previous: number? = nil
+	local function add(code: string, x: number, z: number, detail: string)
+		table.insert(defects, { code = code, x = x, z = z, detail = detail })
+	end
+	for _, part in parts do
+		if not part.anchored then
+			add("UNANCHORED", part.x, part.z, part.id)
+		end
+		if part.walk and not part.collide then
+			add("NONCOLLIDABLE_SURFACE", part.x, part.z, part.id)
+		end
+		if part.rx ~= 0 or part.rz ~= 0 or (part.shape ~= "Block" and part.shape ~= "Cylinder") then
+			add("UNSUPPORTED_GEOMETRY", part.x, part.z, part.id)
+		end
+		if part.sx <= 0 or part.sy <= 0 or part.sz <= 0 then
+			add("DEGENERATE_GEOMETRY", part.x, part.z, part.id)
+		end
+	end
+	for i = 1, #route - 1 do
+		local a, b = route[i], route[i + 1]
+		local dx, dz = b.x - a.x, b.z - a.z
+		local distance = math.sqrt(dx * dx + dz * dz)
+		length += distance
+		local ts = { 0, 1 }
+		local supports: { Interval } = {}
+		local blockers: { Interval } = {}
+		for _, part in parts do
+			if part.collide then
+				local low, high = OrientedAudit.clip(part, a, b, 1)
+				if low ~= nil and high ~= nil then
+					table.insert(blockers, { part = part, low = low, high = high })
+					table.insert(ts, low)
+					table.insert(ts, high)
+				end
+				if part.walk and part.shape == "Block" and part.rx == 0 and part.rz == 0 then
+					local u, v = OrientedAudit.clip(part, a, b, -1)
+					if u ~= nil and v ~= nil then
+						table.insert(supports, { part = part, low = u, high = v })
+						table.insert(ts, u)
+						table.insert(ts, v)
+					end
+				end
+			end
+		end
+		table.sort(ts)
+		for j = 1, #ts - 1 do
+			local low, high = ts[j], ts[j + 1]
+			if high - low < 1e-10 then
+				continue
+			end
+			intervalCount += 1
+			local t = (low + high) / 2
+			local x, z = a.x + t * dx, a.z + t * dz
+			local top: number? = nil
+			for _, support in supports do
+				if t >= support.low - 1e-12 and t <= support.high + 1e-12 then
+					local y = support.part.y + support.part.sy / 2
+					if top == nil or y > top then
+						top = y
+					end
+				end
+			end
+			if top == nil then
+				add(
+					"ROUTE_GAP",
+					x,
+					z,
+					string.format(
+						"unsupported radius-1 footprint interval %.6f studs",
+						(high - low) * distance
+					)
+				)
+				previous = nil
+				continue
+			end
+			if previous ~= nil then
+				local step = math.abs(top - previous)
+				maxStep = math.max(maxStep, step)
+				if step > 1.2 + 1e-5 then
+					add("STEP", a.x + low * dx, a.z + low * dz, string.format("%.6f studs", step))
+				end
+			end
+			previous = top
+			for _, blocker in blockers do
+				local p = blocker.part
+				if
+					t > blocker.low + 1e-10
+					and t < blocker.high - 1e-10
+					and p.y - p.sy / 2 < top + 5 - 1e-5
+					and p.y + p.sy / 2 > top + 1.2 + 1e-5
+				then
+					add("BODY_BLOCKED", x, z, p.id)
+				end
+			end
+		end
+	end
+	if length < minimum then
+		add("ROUTE_TOO_SHORT", 0, 0, string.format("%.6f < %.6f", length, minimum))
+	end
+	return { defects = defects, length = length, maxStep = maxStep, intervals = intervalCount }
+end
+return OrientedAudit
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Folder" referent="16">
+        <Properties>
+          <string name="Name">World</string>
+        </Properties>
+        <Item class="ModuleScript" referent="17">
+          <Properties>
+            <string name="Name">CityBuilder</string>
+            <string name="Source"><![CDATA[--!strict
+-- Converts the pure city plan into anchored, collidable Roblox geometry. No per-frame work.
+local CityBuilder = {}
+
+local function createPart(
+	parent: Instance,
+	name: string,
+	size: Vector3,
+	position: Vector3,
+	material: Enum.Material,
+	color: Color3
+): Part
+	local part = Instance.new("Part")
+	part.Name = name
+	part.Size = size
+	part.Position = position
+	part.Anchored = true
+	part.CanCollide = true
+	part.CanTouch = false
+	part.CanQuery = true
+	part.TopSurface = Enum.SurfaceType.Smooth
+	part.BottomSurface = Enum.SurfaceType.Smooth
+	part.Material = material
+	part.Color = color
+	part.Parent = parent
+	return part
+end
+
+local function makeModel(parent: Instance, name: string): Model
+	local model = Instance.new("Model")
+	model.Name = name
+	model.Parent = parent
+	return model
+end
+
+local function axisSize(axis: string, length: number, width: number, height: number): Vector3
+	if axis == "x" then
+		return Vector3.new(length, height, width)
+	end
+	return Vector3.new(width, height, length)
+end
+
+local function buildStreet(parent: Instance, street: any, config: any, intersections: { any })
+	if street.axis == "segment" then
+		local dx = street.finishX - street.startX
+		local dz = street.finishZ - street.startZ
+		local length = math.sqrt(dx * dx + dz * dz)
+		local yaw = math.deg(math.atan2(dx, dz))
+		local midpointX = (street.startX + street.finishX) / 2
+		local midpointZ = (street.startZ + street.finishZ) / 2
+		local perpendicularX = dz / length
+		local perpendicularZ = -dx / length
+		local road = createPart(
+			parent,
+			street.name .. "_Carriageway",
+			Vector3.new(street.width, 0.3, length),
+			Vector3.new(midpointX, 0.15, midpointZ),
+			Enum.Material.Asphalt,
+			Color3.fromRGB(72, 75, 77)
+		)
+		road.Orientation = Vector3.new(0, yaw, 0)
+		road:SetAttribute("StreetKind", "narrow diagonal lane")
+		for side = -1, 1, 2 do
+			local sidewalkOffset = street.width / 2 + config.streets.sidewalkWidth / 2
+			local curbOffset = street.width / 2
+				+ config.streets.sidewalkWidth
+				+ config.streets.curbWidth / 2
+			local sidewalk = createPart(
+				parent,
+				street.name .. "_Sidewalk_" .. tostring(side),
+				Vector3.new(config.streets.sidewalkWidth, 0.4, length),
+				Vector3.new(
+					midpointX + side * perpendicularX * sidewalkOffset,
+					0.2,
+					midpointZ + side * perpendicularZ * sidewalkOffset
+				),
+				Enum.Material.Concrete,
+				Color3.fromRGB(184, 179, 165)
+			)
+			sidewalk.Orientation = Vector3.new(0, yaw, 0)
+			sidewalk:SetAttribute("Walkable", true)
+			local curb = createPart(
+				parent,
+				street.name .. "_Curb_" .. tostring(side),
+				Vector3.new(config.streets.curbWidth, config.streets.curbHeight, length),
+				Vector3.new(
+					midpointX + side * perpendicularX * curbOffset,
+					0.18,
+					midpointZ + side * perpendicularZ * curbOffset
+				),
+				Enum.Material.Concrete,
+				Color3.fromRGB(126, 124, 117)
+			)
+			curb.Orientation = Vector3.new(0, yaw, 0)
+			curb:SetAttribute("AccessibleCornerRadius", config.streets.cornerRadius)
+		end
+		return
+	end
+
+	local length = street.finish - street.start
+	local center = (street.start + street.finish) / 2
+	local roadColor = if street.kind == "arterial"
+		then Color3.fromRGB(62, 66, 69)
+		else Color3.fromRGB(72, 75, 77)
+	local road = createPart(
+		parent,
+		"Carriageway_" .. street.axis .. "_" .. tostring(street.center),
+		axisSize(street.axis, length, street.width, 0.3),
+		if street.axis == "x"
+			then Vector3.new(center, 0.15, street.center)
+			else Vector3.new(street.center, 0.15, center),
+		Enum.Material.Asphalt,
+		roadColor
+	)
+	road:SetAttribute("StreetKind", street.kind)
+
+	for side = -1, 1, 2 do
+		local offset = street.width / 2 + config.streets.sidewalkWidth / 2
+		local curbOffset = street.width / 2
+			+ config.streets.sidewalkWidth
+			+ config.streets.curbWidth / 2
+		local sidewalkCenter = street.center + side * offset
+		local curbCenter = street.center + side * curbOffset
+		local sidewalk = createPart(
+			parent,
+			"Sidewalk_" .. street.axis .. "_" .. tostring(street.center) .. "_" .. tostring(side),
+			axisSize(street.axis, length, config.streets.sidewalkWidth, 0.4),
+			if street.axis == "x"
+				then Vector3.new(center, 0.2, sidewalkCenter)
+				else Vector3.new(sidewalkCenter, 0.2, center),
+			Enum.Material.Concrete,
+			Color3.fromRGB(184, 179, 165)
+		)
+		sidewalk:SetAttribute("Walkable", true)
+		local curbGaps = {}
+		for _, intersection in ipairs(intersections) do
+			local matches = if street.axis == "z"
+				then intersection.x == street.center
+				else intersection.z == street.center
+			if matches then
+				local coordinate = if street.axis == "z" then intersection.z else intersection.x
+				local crossingWidth = if street.axis == "z"
+					then intersection.widthZ
+					else intersection.widthX
+				local halfGap = crossingWidth / 2 + intersection.radius
+				table.insert(
+					curbGaps,
+					{ start = coordinate - halfGap, finish = coordinate + halfGap }
+				)
+			end
+		end
+		table.sort(curbGaps, function(a, b)
+			return a.start < b.start
+		end)
+		local cursor = street.start
+		local piece = 0
+		for _, gap in ipairs(curbGaps) do
+			local gapStart = math.max(street.start, gap.start)
+			local gapFinish = math.min(street.finish, gap.finish)
+			if gapStart > cursor then
+				piece += 1
+				local curbLength = gapStart - cursor
+				local curbCenterline = (gapStart + cursor) / 2
+				local curb = createPart(
+					parent,
+					"CurbReturn_"
+						.. street.axis
+						.. "_"
+						.. tostring(street.center)
+						.. "_"
+						.. tostring(side)
+						.. "_"
+						.. tostring(piece),
+					axisSize(
+						street.axis,
+						curbLength,
+						config.streets.curbWidth,
+						config.streets.curbHeight
+					),
+					if street.axis == "x"
+						then Vector3.new(curbCenterline, 0.18, curbCenter)
+						else Vector3.new(curbCenter, 0.18, curbCenterline),
+					Enum.Material.Concrete,
+					Color3.fromRGB(126, 124, 117)
+				)
+				curb:SetAttribute("AccessibleCornerRadius", config.streets.cornerRadius)
+			end
+			cursor = math.max(cursor, gapFinish)
+		end
+		if cursor < street.finish then
+			piece += 1
+			local curbLength = street.finish - cursor
+			local curbCenterline = (street.finish + cursor) / 2
+			local curb = createPart(
+				parent,
+				"CurbReturn_"
+					.. street.axis
+					.. "_"
+					.. tostring(street.center)
+					.. "_"
+					.. tostring(side)
+					.. "_"
+					.. tostring(piece),
+				axisSize(
+					street.axis,
+					curbLength,
+					config.streets.curbWidth,
+					config.streets.curbHeight
+				),
+				if street.axis == "x"
+					then Vector3.new(curbCenterline, 0.18, curbCenter)
+					else Vector3.new(curbCenter, 0.18, curbCenterline),
+				Enum.Material.Concrete,
+				Color3.fromRGB(126, 124, 117)
+			)
+			curb:SetAttribute("AccessibleCornerRadius", config.streets.cornerRadius)
+		end
+	end
+end
+
+local function buildBuilding(parent: Instance, building: any, palette: any)
+	local model = makeModel(parent, building.name)
+	model:SetAttribute("Typology", building.style)
+	model:SetAttribute("Landmark", building.landmark)
+	model:SetAttribute("Frontage", building.frontage or "monumental-entry")
+	local color = palette[building.style] or Color3.fromRGB(181, 164, 139)
+	local groundHeight = math.min(10, building.height / 3)
+	local upperHeight = building.height - groundHeight
+	local groundColor = if building.frontage == "shopfront"
+		then Color3.fromRGB(83, 104, 106)
+		elseif building.frontage == "recessed-entry" then Color3.fromRGB(112, 98, 80)
+		elseif building.frontage == "awning" then Color3.fromRGB(151, 119, 84)
+		else Color3.fromRGB(139, 129, 111)
+	local groundStorey = createPart(
+		model,
+		"GroundStorey_DarkerStreetBand",
+		Vector3.new(building.width, groundHeight, building.depth),
+		Vector3.new(building.x, groundHeight / 2, building.z),
+		Enum.Material.Brick,
+		groundColor
+	)
+	groundStorey.Orientation = Vector3.new(0, building.rotation, 0)
+	local upper = createPart(
+		model,
+		"UpperMassing",
+		Vector3.new(building.width, upperHeight, building.depth),
+		Vector3.new(building.x, groundHeight + upperHeight / 2, building.z),
+		Enum.Material.Brick,
+		color
+	)
+	upper.Orientation = Vector3.new(0, building.rotation, 0)
+
+	local function facadePart(
+		name: string,
+		localX: number,
+		localY: number,
+		localZ: number,
+		size: Vector3,
+		partColor: Color3,
+		material: Enum.Material
+	)
+		local angle = math.rad(building.rotation)
+		local worldX = building.x + localX * math.cos(angle) - localZ * math.sin(angle)
+		local worldZ = building.z + localX * math.sin(angle) + localZ * math.cos(angle)
+		local part =
+			createPart(model, name, size, Vector3.new(worldX, localY, worldZ), material, partColor)
+		part.Orientation = Vector3.new(0, building.rotation, 0)
+		return part
+	end
+
+	if not building.landmark then
+		if building.frontage == "shopfront" then
+			facadePart(
+				"DisplayWindow_Left",
+				-building.width * 0.24,
+				groundHeight * 0.58,
+				-building.depth / 2 - 0.15,
+				Vector3.new(building.width * 0.28, 4, 0.35),
+				Color3.fromRGB(104, 145, 148),
+				Enum.Material.Glass
+			)
+			facadePart(
+				"DisplayWindow_Right",
+				building.width * 0.24,
+				groundHeight * 0.58,
+				-building.depth / 2 - 0.15,
+				Vector3.new(building.width * 0.28, 4, 0.35),
+				Color3.fromRGB(104, 145, 148),
+				Enum.Material.Glass
+			)
+			facadePart(
+				"RecessedShopDoor",
+				0,
+				groundHeight * 0.42,
+				-building.depth / 2 - 0.22,
+				Vector3.new(4, groundHeight * 0.72, 0.45),
+				Color3.fromRGB(54, 63, 62),
+				Enum.Material.WoodPlanks
+			)
+			facadePart(
+				"CanvasAwning",
+				0,
+				groundHeight * 0.96,
+				-building.depth / 2 - 1.35,
+				Vector3.new(building.width * 0.88, 1, 2.4),
+				Color3.fromRGB(154, 91, 68),
+				Enum.Material.Fabric
+			)
+		elseif building.frontage == "recessed-entry" then
+			facadePart(
+				"RecessedDoor",
+				0,
+				groundHeight * 0.4,
+				-building.depth / 2 - 0.15,
+				Vector3.new(4, groundHeight * 0.72, 0.3),
+				Color3.fromRGB(63, 58, 52),
+				Enum.Material.WoodPlanks
+			)
+			facadePart(
+				"EntryLintel",
+				0,
+				groundHeight * 0.88,
+				-building.depth / 2 - 0.22,
+				Vector3.new(7, 1.3, 0.45),
+				Color3.fromRGB(157, 142, 116),
+				Enum.Material.Slate
+			)
+		elseif building.frontage == "awning" then
+			facadePart(
+				"SingleShopAwning",
+				0,
+				groundHeight * 0.9,
+				-building.depth / 2 - 1.1,
+				Vector3.new(building.width * 0.58, 0.8, 2),
+				Color3.fromRGB(114, 124, 102),
+				Enum.Material.Fabric
+			)
+		end
+	end
+
+	if not building.landmark then
+		local roof = createPart(
+			model,
+			"RoofCap",
+			Vector3.new(math.max(4, building.width - 2), 1.5, math.max(4, building.depth - 2)),
+			Vector3.new(building.x, building.height + 0.75, building.z),
+			Enum.Material.Slate,
+			Color3.fromRGB(80, 70, 65)
+		)
+		roof.Orientation = Vector3.new(0, building.rotation, 0)
+	else
+		local roofHeight = if building.style == "tower" then 8 else 3
+		createPart(
+			model,
+			"Crown",
+			Vector3.new(building.width * 0.42, roofHeight, building.depth * 0.42),
+			Vector3.new(building.x, building.height + roofHeight / 2, building.z),
+			Enum.Material.Slate,
+			Color3.fromRGB(104, 76, 54)
+		)
+		if building.style == "tower" then
+			createPart(
+				model,
+				"Lantern",
+				Vector3.new(7, 12, 7),
+				Vector3.new(building.x, building.height + 14, building.z),
+				Enum.Material.Metal,
+				Color3.fromRGB(73, 82, 84)
+			)
+		end
+	end
+	return model
+end
+
+local function buildWalkLink(parent: Instance, first: any, last: any, index: number)
+	local dx = last.x - first.x
+	local dz = last.z - first.z
+	local length = math.sqrt(dx * dx + dz * dz)
+	local midpoint = Vector3.new((first.x + last.x) / 2, 0.43, (first.z + last.z) / 2)
+	local slab = createPart(
+		parent,
+		"RouteLink_" .. tostring(index) .. "_" .. first.label,
+		Vector3.new(7, 0.25, length + 0.25),
+		midpoint,
+		Enum.Material.Concrete,
+		Color3.fromRGB(195, 190, 176)
+	)
+	slab.Orientation = Vector3.new(0, math.deg(math.atan2(dx, dz)), 0)
+	slab:SetAttribute("Walkable", true)
+end
+
+local function buildStation(parent: Instance, station: any, palette: any)
+	local model = makeModel(parent, "CentralStation_WalkablePlaceholder")
+	model:SetAttribute("InterfaceStatus", "City shell only; station architecture handoff pending")
+	local x = station.centerX
+	local entry = station.entryZ
+	createPart(
+		model,
+		"ConcourseFloor",
+		Vector3.new(station.width - 20, 0.5, station.depth * 0.55),
+		Vector3.new(x, 0.38, station.concourseZ),
+		Enum.Material.Marble,
+		Color3.fromRGB(186, 177, 158)
+	)
+	for side = -1, 1, 2 do
+		createPart(
+			model,
+			"ConcourseSideWall_" .. tostring(side),
+			Vector3.new(8, 19, station.depth * 0.55),
+			Vector3.new(x + side * (station.width / 2 - 7), 9.5, station.concourseZ),
+			Enum.Material.Brick,
+			palette.civic
+		)
+	end
+	createPart(
+		model,
+		"StationRearWall",
+		Vector3.new(station.width - 20, 19, 8),
+		Vector3.new(x, 9.5, station.concourseZ + station.depth * 0.275),
+		Enum.Material.Brick,
+		palette.civic
+	)
+	for _, offset in ipairs({ -56, -28, 28, 56 }) do
+		createPart(
+			model,
+			"ForecourtColonnade_" .. tostring(offset),
+			Vector3.new(5, 20, 5),
+			Vector3.new(x + offset, 10, entry - 18),
+			Enum.Material.Marble,
+			Color3.fromRGB(206, 196, 174)
+		)
+	end
+	return model
+end
+
+function CityBuilder.build(plan: any, config: any, rootParent: Instance): Model
+	local old = rootParent:FindFirstChild("CivitasWorld")
+	if old then
+		old:Destroy()
+	end
+	local world = makeModel(rootParent, "CivitasWorld")
+	world:SetAttribute("GeneratorVersion", "0.1.0")
+	world:SetAttribute("Slice", "District A Historic Centre + central station approach")
+	world:SetAttribute("PlannedBuildingCount", plan.stats.buildingCount)
+
+	local city = makeModel(world, "City")
+	local district = makeModel(city, "DistrictA_HistoricCentreSlice")
+	district:SetAttribute("MinX", plan.districtBounds[1].minX)
+	district:SetAttribute("MaxX", plan.districtBounds[1].maxX)
+	district:SetAttribute("MinZ", plan.districtBounds[1].minZ)
+	district:SetAttribute("MaxZ", plan.districtBounds[1].maxZ)
+	local terrain = createPart(
+		district,
+		"CollidableGround",
+		Vector3.new(config.ground.width, config.ground.thickness, config.ground.depth),
+		Vector3.new(config.ground.centerX, -config.ground.thickness / 2, config.ground.centerZ),
+		Enum.Material.Ground,
+		Color3.fromRGB(91, 113, 76)
+	)
+	terrain:SetAttribute("GroundCoverage", "continuous slice base; no void beneath roads or plots")
+
+	local streetsModel = makeModel(district, "Streets")
+	for _, street in ipairs(plan.streets) do
+		buildStreet(streetsModel, street, config, plan.intersections)
+	end
+	local buildingsModel = makeModel(district, "BuildingMassing")
+	local palette = {
+		["historic-terrace"] = Color3.fromRGB(186, 164, 133),
+		["corner-shop"] = Color3.fromRGB(195, 177, 148),
+		church = Color3.fromRGB(177, 166, 145),
+		market = Color3.fromRGB(162, 131, 99),
+		civic = Color3.fromRGB(194, 182, 155),
+		tower = Color3.fromRGB(174, 157, 131),
+		hotel = Color3.fromRGB(184, 168, 144),
+	}
+	for _, building in ipairs(plan.buildings) do
+		buildBuilding(buildingsModel, building, palette)
+	end
+	for _, landmark in ipairs(plan.landmarks) do
+		buildBuilding(buildingsModel, landmark, palette)
+	end
+
+	local publicRealm = makeModel(district, "PublicRealm")
+	local plaza = createPart(
+		publicRealm,
+		"OldTownSquare",
+		Vector3.new(plan.plaza.width, 0.45, plan.plaza.depth),
+		Vector3.new(plan.plaza.centerX, 0.35, plan.plaza.centerZ),
+		Enum.Material.Cobblestone,
+		Color3.fromRGB(151, 143, 125)
+	)
+	plaza:SetAttribute("Walkable", true)
+	local fountain = createPart(
+		publicRealm,
+		"SquareFountainBasin",
+		Vector3.new(18, 1.1, 18),
+		Vector3.new(plan.plaza.centerX, 0.95, plan.plaza.centerZ + 28),
+		Enum.Material.Slate,
+		Color3.fromRGB(112, 126, 128)
+	)
+	fountain.Shape = Enum.PartType.Cylinder
+	fountain:SetAttribute("CollisionNote", "Low decorative basin; route passes west of basin")
+	local station = buildStation(makeModel(district, "Stations"), plan.station, palette)
+	local walkways = makeModel(publicRealm, "AcceptanceWalkRoute")
+	for index = 2, #plan.route do
+		buildWalkLink(walkways, plan.route[index - 1], plan.route[index], index - 1)
+	end
+	walkways:SetAttribute("AcceptanceLengthStuds", plan.stats.routeLength)
+	walkways:SetAttribute(
+		"AcceptanceSequence",
+		"sidewalk > grid > public square > forecourt > concourse"
+	)
+
+	local spawn = Instance.new("SpawnLocation")
+	spawn.Name = "CoreSidewalkSpawn"
+	spawn.Size = Vector3.new(6, 1, 6)
+	spawn.Position = Vector3.new(plan.route[1].x, 0.65, plan.route[1].z)
+	spawn.Anchored = true
+	spawn.CanCollide = true
+	spawn.Neutral = true
+	spawn.Duration = 0
+	spawn.Material = Enum.Material.Concrete
+	spawn.Color = Color3.fromRGB(176, 166, 145)
+	spawn.Parent = publicRealm
+	spawn:SetAttribute("AcceptanceStart", true)
+	station:SetAttribute("AcceptanceDestination", "concourse")
+
+	local actualPartCount = 0
+	for _, descendant in ipairs(world:GetDescendants()) do
+		if descendant:IsA("BasePart") then
+			actualPartCount += 1
+		end
+	end
+	world:SetAttribute("EstimatedGeneratedParts", plan.stats.estimatedParts)
+	world:SetAttribute("GeneratedPartCount", actualPartCount)
+	return world
+end
+
+return CityBuilder
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="18">
+          <Properties>
+            <string name="Name">CityConfig</string>
+            <string name="Source"><![CDATA[--!strict
+-- All dimensions are Roblox studs. This intentionally describes a walkable slice, not a full city.
+local CityConfig = {
+	seed = 2664,
+	ground = {
+		centerX = 0,
+		centerZ = 115,
+		width = 1540,
+		depth = 1880,
+		thickness = 12,
+	},
+	streets = {
+		localWidth = 13,
+		laneWidth = 8.5,
+		arterialWidth = 30,
+		sidewalkWidth = 3.5,
+		curbWidth = 0.65,
+		curbHeight = 0.28,
+		cornerRadius = 11,
+		gridX = { -650, -490, -350, -200, -55, 120, 270, 435, 620 },
+		gridZ = { -620, -450, -300, -145, 0, 150, 295, 455, 630 },
+		laneX = { -350, -55, 270 },
+		laneZ = { -300, 0, 295 },
+		minX = -720,
+		maxX = 700,
+		minZ = -650,
+		maxZ = 970,
+		stationAvenueX = 120,
+		cutSegments = {
+			{ name = "Canal diagonal", x1 = -490, z1 = -450, x2 = -350, z2 = -300 },
+			{ name = "Market diagonal", x1 = 270, z1 = 295, x2 = 435, z2 = 455 },
+			{ name = "Crooked Lane west 1", x1 = -200, z1 = -145, x2 = -175, z2 = -80 },
+			{ name = "Crooked Lane west 2", x1 = -175, z1 = -80, x2 = -200, z2 = 0 },
+			{ name = "Crooked Lane east 1", x1 = 435, z1 = 150, x2 = 455, z2 = 220 },
+			{ name = "Crooked Lane east 2", x1 = 455, z1 = 220, x2 = 435, z2 = 295 },
+		},
+	},
+	blocks = {
+		streetInset = 11,
+		lotsAcross = 3,
+		lotsDeep = 2,
+		lotGap = 8,
+		minWidth = 28,
+		maxWidth = 48,
+		minDepth = 25,
+		maxDepth = 43,
+		minHeight = 18,
+		maxHeight = 86,
+	},
+	square = {
+		centerX = 200,
+		centerZ = 75,
+		width = 100,
+		depth = 110,
+	},
+	station = {
+		centerX = 120,
+		forecourtZ = 810,
+		entryZ = 858,
+		concourseZ = 925,
+		width = 176,
+		depth = 150,
+	},
+	streaming = {
+		minRadius = 64,
+		targetRadius = 1024,
+		districtEdgePadding = 96,
+	},
+	buildingBudget = {
+		min = 200,
+		max = 400,
+		partTarget = 25000,
+	},
+}
+
+return CityConfig
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="19">
+          <Properties>
+            <string name="Name">CityGenerator</string>
+            <string name="Source"><![CDATA[--!strict
+-- Pure deterministic city plan. Roblox instance creation lives in CityBuilder, so the exact
+-- geometry used by the server can also be tested and rendered headlessly with Lune/Python.
+local CityGenerator = {}
+
+export type Segment = {
+	axis: string,
+	center: number,
+	start: number,
+	finish: number,
+	width: number,
+	kind: string,
+}
+
+export type Building = {
+	x: number,
+	z: number,
+	width: number,
+	depth: number,
+	height: number,
+	rotation: number,
+	style: string,
+	landmark: boolean,
+	name: string,
+}
+
+export type Point = { x: number, z: number, label: string }
+
+local function hash(a: number, b: number, seed: number): number
+	local value = (a * 73856093 + b * 19349663 + seed * 83492791) % 2147483647
+	value = (value * 48271) % 2147483647
+	return value
+end
+
+local function range(value: number, minimum: number, maximum: number): number
+	return minimum + (value % (maximum - minimum + 1))
+end
+
+local function roadKind(
+	value: number,
+	index: number,
+	count: number,
+	stationCoordinate: number?,
+	laneCoordinates: { number }
+): string
+	if index == 1 or index == count or value == stationCoordinate then
+		return "arterial"
+	end
+	if table.find(laneCoordinates, value) ~= nil then
+		return "lane"
+	end
+	return "local"
+end
+
+local function roadWidth(kind: string, streets: any): number
+	if kind == "arterial" then
+		return streets.arterialWidth
+	elseif kind == "lane" then
+		return streets.laneWidth
+	end
+	return streets.localWidth
+end
+
+local function distanceToSegment(
+	px: number,
+	pz: number,
+	x1: number,
+	z1: number,
+	x2: number,
+	z2: number
+): number
+	local dx = x2 - x1
+	local dz = z2 - z1
+	local lengthSquared = dx * dx + dz * dz
+	local t = math.clamp(((px - x1) * dx + (pz - z1) * dz) / lengthSquared, 0, 1)
+	local nearestX = x1 + t * dx
+	local nearestZ = z1 + t * dz
+	local offsetX = px - nearestX
+	local offsetZ = pz - nearestZ
+	return math.sqrt(offsetX * offsetX + offsetZ * offsetZ)
+end
+
+local function squareContains(x: number, z: number, config: any): boolean
+	-- Reserve a small public-realm apron as well as the square footprint, so its approaches
+	-- cannot be sealed off by a lot placed directly against the paving edge.
+	return math.abs(x - config.square.centerX) < config.square.width / 2 + 38
+		and math.abs(z - config.square.centerZ) < config.square.depth / 2 + 24
+end
+
+local function stationContains(x: number, z: number, config: any): boolean
+	return math.abs(x - config.station.centerX) < config.station.width / 2 + 20
+		and z > config.station.forecourtZ - 18
+		and z < config.station.entryZ + 28
+end
+
+function CityGenerator.generate(config: any): any
+	local plan = {
+		ground = config.ground,
+		streets = {},
+		intersections = {},
+		blocks = {},
+		buildings = {},
+		landmarks = {},
+		plaza = config.square,
+		station = config.station,
+		route = {},
+		districtBounds = {
+			{
+				name = "District A — Historic Centre slice",
+				minX = config.ground.centerX - config.ground.width / 2,
+				maxX = config.ground.centerX + config.ground.width / 2,
+				minZ = config.ground.centerZ - config.ground.depth / 2,
+				maxZ = config.ground.centerZ + config.ground.depth / 2,
+			},
+		},
+	}
+	local streets = config.streets
+
+	for index, x in ipairs(streets.gridX) do
+		local kind = roadKind(x, index, #streets.gridX, streets.stationAvenueX, streets.laneX)
+		table.insert(plan.streets, {
+			axis = "z",
+			center = x,
+			start = streets.minZ,
+			finish = streets.maxZ,
+			width = roadWidth(kind, streets),
+			kind = kind,
+		})
+	end
+	for index, z in ipairs(streets.gridZ) do
+		local kind = roadKind(z, index, #streets.gridZ, nil, streets.laneZ)
+		table.insert(plan.streets, {
+			axis = "x",
+			center = z,
+			start = streets.minX,
+			finish = streets.maxX,
+			width = roadWidth(kind, streets),
+			kind = kind,
+		})
+	end
+	for _, vertical in ipairs(plan.streets) do
+		if vertical.axis == "z" then
+			for _, horizontal in ipairs(plan.streets) do
+				if
+					horizontal.axis == "x"
+					and vertical.center >= horizontal.start
+					and vertical.center <= horizontal.finish
+					and horizontal.center >= vertical.start
+					and horizontal.center <= vertical.finish
+				then
+					table.insert(plan.intersections, {
+						x = vertical.center,
+						z = horizontal.center,
+						radius = streets.cornerRadius,
+						widthX = vertical.width,
+						widthZ = horizontal.width,
+					})
+				end
+			end
+		end
+	end
+	for _, cut in ipairs(streets.cutSegments) do
+		table.insert(plan.streets, {
+			axis = "segment",
+			startX = cut.x1,
+			startZ = cut.z1,
+			finishX = cut.x2,
+			finishZ = cut.z2,
+			width = streets.laneWidth,
+			kind = "lane",
+			name = cut.name,
+		})
+	end
+
+	local landmarkLots: { { x: number, z: number, name: string, style: string, height: number } } =
+		{
+			{ x = -570, z = -375, name = "Old Town Clock Tower", style = "tower", height = 112 },
+			{ x = -275, z = -375, name = "St. Elian's Church", style = "church", height = 78 },
+			{ x = -120, z = -370, name = "Civic Archive Tower", style = "tower", height = 96 },
+			{ x = 520, z = -370, name = "North Gate Hotel", style = "hotel", height = 64 },
+			{ x = -570, z = -220, name = "Covered Market Hall", style = "market", height = 34 },
+			{ x = -120, z = -220, name = "Guildhall", style = "civic", height = 58 },
+			{ x = 520, z = -220, name = "Riverside Exchange", style = "tower", height = 105 },
+			{ x = -570, z = 75, name = "Opera House", style = "civic", height = 48 },
+			{ x = -120, z = 75, name = "South Arcade Tower", style = "tower", height = 88 },
+			{ x = 520, z = 75, name = "Museum of Navigation", style = "civic", height = 42 },
+			{ x = -570, z = 370, name = "West Bastion Tower", style = "tower", height = 72 },
+			{ x = 520, z = 370, name = "East Gate Basilica", style = "church", height = 66 },
+		}
+	for _, item in ipairs(landmarkLots) do
+		table.insert(plan.landmarks, {
+			x = item.x,
+			z = item.z,
+			width = if item.style == "market" then 86 else 44,
+			depth = if item.style == "market" then 58 else 42,
+			height = item.height,
+			rotation = 0,
+			style = item.style,
+			landmark = true,
+			name = item.name,
+		})
+	end
+
+	local blockIndex = 0
+	for xi = 1, #streets.gridX - 1 do
+		for zi = 1, #streets.gridZ - 1 do
+			local leftKind = roadKind(
+				streets.gridX[xi],
+				xi,
+				#streets.gridX,
+				streets.stationAvenueX,
+				streets.laneX
+			)
+			local rightKind = roadKind(
+				streets.gridX[xi + 1],
+				xi + 1,
+				#streets.gridX,
+				streets.stationAvenueX,
+				streets.laneX
+			)
+			local topKind = roadKind(streets.gridZ[zi], zi, #streets.gridZ, nil, streets.laneZ)
+			local bottomKind =
+				roadKind(streets.gridZ[zi + 1], zi + 1, #streets.gridZ, nil, streets.laneZ)
+			local left = streets.gridX[xi]
+				+ roadWidth(leftKind, streets) / 2
+				+ config.blocks.streetInset
+			local right = streets.gridX[xi + 1]
+				- roadWidth(rightKind, streets) / 2
+				- config.blocks.streetInset
+			local top = streets.gridZ[zi]
+				+ roadWidth(topKind, streets) / 2
+				+ config.blocks.streetInset
+			local bottom = streets.gridZ[zi + 1]
+				- roadWidth(bottomKind, streets) / 2
+				- config.blocks.streetInset
+			local block = {
+				id = blockIndex + 1,
+				minX = left,
+				maxX = right,
+				minZ = top,
+				maxZ = bottom,
+			}
+			table.insert(plan.blocks, block)
+			blockIndex += 1
+
+			for lotX = 1, config.blocks.lotsAcross do
+				for lotZ = 1, config.blocks.lotsDeep do
+					local cellWidth = (right - left) / config.blocks.lotsAcross
+					local cellDepth = (bottom - top) / config.blocks.lotsDeep
+					local x = left + (lotX - 0.5) * cellWidth
+					local z = top + (lotZ - 0.5) * cellDepth
+					local reserved = squareContains(x, z, config) or stationContains(x, z, config)
+					for _, landmark in ipairs(plan.landmarks) do
+						if
+							math.abs(x - landmark.x) < landmark.width / 2 + 23
+							and math.abs(z - landmark.z) < landmark.depth / 2 + 23
+						then
+							reserved = true
+						end
+					end
+					for _, street in ipairs(plan.streets) do
+						if street.axis == "segment" then
+							local clearance = street.width / 2
+								+ streets.sidewalkWidth
+								+ math.max(config.blocks.maxWidth, config.blocks.maxDepth) / 2
+								+ config.blocks.lotGap
+							if
+								distanceToSegment(
+									x,
+									z,
+									street.startX,
+									street.startZ,
+									street.finishX,
+									street.finishZ
+								) < clearance
+							then
+								reserved = true
+							end
+						end
+					end
+					if not reserved then
+						local h = hash(blockIndex, lotX * 17 + lotZ, config.seed)
+						local plotWidth = math.min(
+							cellWidth - config.blocks.lotGap,
+							range(h, config.blocks.minWidth, config.blocks.maxWidth)
+						)
+						local plotDepth = math.min(
+							cellDepth - config.blocks.lotGap,
+							range(
+								math.floor(h / 17),
+								config.blocks.minDepth,
+								config.blocks.maxDepth
+							)
+						)
+						table.insert(plan.buildings, {
+							x = x,
+							z = z,
+							width = plotWidth,
+							depth = plotDepth,
+							height = range(
+								math.floor(h / 31),
+								config.blocks.minHeight,
+								config.blocks.maxHeight
+							),
+							rotation = if h % 4 == 0 then 90 else 0,
+							style = if h % 5 == 0 then "corner-shop" else "historic-terrace",
+							frontage = if h % 5 == 0
+								then "shopfront"
+								elseif h % 4 == 1 then "recessed-entry"
+								elseif h % 3 == 0 then "awning"
+								else "stone-plinth",
+							landmark = false,
+							name = "Block "
+								.. tostring(blockIndex)
+								.. " Plot "
+								.. tostring(lotX)
+								.. "-"
+								.. tostring(lotZ),
+						})
+					end
+				end
+			end
+		end
+	end
+
+	-- An unbroken pedestrian spine: north sidewalk, square connection, forecourt, then concourse.
+	-- Waypoints are centers of physical walk surfaces, not decorative route annotations.
+	local sidewalkX = streets.stationAvenueX + streets.arterialWidth / 2 + streets.sidewalkWidth / 2
+	local squareWest = config.square.centerX - config.square.width / 2
+	local squareSouth = config.square.centerZ + config.square.depth / 2
+	plan.route = {
+		{ x = sidewalkX, z = -640, label = "sidewalk spawn" },
+		{
+			x = sidewalkX,
+			z = config.square.centerZ - config.square.depth / 2,
+			label = "historic grid sidewalk",
+		},
+		{
+			x = squareWest,
+			z = config.square.centerZ - config.square.depth / 2,
+			label = "square north-west walk",
+		},
+		{ x = config.square.centerX, z = config.square.centerZ, label = "public square" },
+		{ x = squareWest, z = squareSouth, label = "square south-west walk" },
+		{ x = sidewalkX, z = squareSouth, label = "square south sidewalk return" },
+		{ x = sidewalkX, z = config.station.forecourtZ, label = "station forecourt" },
+		{ x = config.station.centerX, z = config.station.entryZ, label = "station entrance" },
+		{ x = config.station.centerX, z = config.station.concourseZ, label = "concourse" },
+	}
+
+	local extraTowerParts = 0
+	for _, landmark in ipairs(plan.landmarks) do
+		if landmark.style == "tower" then
+			extraTowerParts += 1
+		end
+	end
+	-- Exact Part count for the current builder recipe, including facade accents and
+	-- radius-cut curb segments; diagonal lanes use five Parts each.
+	local streetPartCount = 0
+	for _, street in ipairs(plan.streets) do
+		if street.axis == "segment" then
+			streetPartCount += 5
+		else
+			local crossingCount = 0
+			for _, intersection in ipairs(plan.intersections) do
+				if
+					(street.axis == "z" and intersection.x == street.center)
+					or (street.axis == "x" and intersection.z == street.center)
+				then
+					crossingCount += 1
+				end
+			end
+			streetPartCount += 3 + 2 * (crossingCount + 1)
+		end
+	end
+	local ordinaryPartCount = 0
+	for _, building in ipairs(plan.buildings) do
+		local facadeParts = if building.frontage == "shopfront"
+			then 4
+			elseif building.frontage == "recessed-entry" then 2
+			elseif building.frontage == "awning" then 1
+			else 0
+		ordinaryPartCount += 3 + facadeParts
+	end
+	local estimatedParts = 1
+		+ streetPartCount
+		+ ordinaryPartCount
+		+ #plan.landmarks * 3
+		+ extraTowerParts
+		+ 2
+		+ 8
+		+ (#plan.route - 1)
+		+ 1
+	plan.stats = {
+		blockCount = #plan.blocks,
+		buildingCount = #plan.buildings,
+		landmarkCount = #plan.landmarks,
+		streetSegmentCount = #plan.streets,
+		routeLength = CityGenerator.routeLength(plan.route),
+		routeLinkCount = #plan.route - 1,
+		estimatedParts = estimatedParts,
+		partBudget = config.buildingBudget.partTarget,
+	}
+	return plan
+end
+
+function CityGenerator.routeLength(route: { Point }): number
+	local distance = 0
+	for index = 2, #route do
+		local previous = route[index - 1]
+		local current = route[index]
+		local dx = current.x - previous.x
+		local dz = current.z - previous.z
+		distance += math.sqrt(dx * dx + dz * dz)
+	end
+	return distance
+end
+
+return CityGenerator
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="Script" referent="20">
+          <Properties>
+            <string name="Name">WorldBootstrap</string>
+            <token name="RunContext">0</token>
+            <string name="Source"><![CDATA[--!strict
+-- Server bootstraps one deterministic world build; no Studio placement or ticking is required.
+local Workspace = game:GetService("Workspace")
+local config = require(script.Parent.CityConfig)
+local generator = require(script.Parent.CityGenerator)
+local builder = require(script.Parent.CityBuilder)
+
+-- Workspace streaming properties are NotScriptable in Roblox's current API. They are
+-- authored in default.project.json; the district model carries explicit stream-in bounds.
+
+local plan = generator.generate(config)
+local world = builder.build(plan, config, Workspace)
+world:SetAttribute("StreamingBoundaryPadding", config.streaming.districtEdgePadding)
+world:SetAttribute("WalkRouteStuds", plan.stats.routeLength)
+world:SetAttribute("GeneratedPartEstimate", plan.stats.estimatedParts)
+local generatedPartCount = world:GetAttribute("GeneratedPartCount")
+if typeof(generatedPartCount) ~= "number" then
+	error("CityBuilder did not report a numeric generated-part count")
+end
+print(
+	string.format(
+		"Civitas World: %d buildings, %d landmarks, %.0f-stud acceptance route, %d parts",
+		plan.stats.buildingCount,
+		plan.stats.landmarkCount,
+		plan.stats.routeLength,
+		generatedPartCount
+	)
+)
+]]></string>
+          </Properties>
+        </Item>
       </Item>
     </Item>
   </Item>
-  <Item class="StarterPlayer" referent="15">
+  <Item class="StarterPlayer" referent="21">
     <Properties>
       <string name="Name">StarterPlayer</string>
     </Properties>
-    <Item class="StarterPlayerScripts" referent="16">
+    <Item class="StarterPlayerScripts" referent="22">
       <Properties>
         <string name="Name">StarterPlayerScripts</string>
       </Properties>
-      <Item class="Folder" referent="17">
+      <Item class="Folder" referent="23">
         <Properties>
           <string name="Name">Client</string>
         </Properties>
       </Item>
     </Item>
   </Item>
-  <Item class="Workspace" referent="18">
+  <Item class="Workspace" referent="24">
     <Properties>
       <string name="Name">Workspace</string>
       <token name="ModelStreamingBehavior">2</token>

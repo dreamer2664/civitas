@@ -4,6 +4,10 @@ import json
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[2]
+if (root / 'docs/reports/walkability-live-results.json').exists():
+    import runpy
+    runpy.run_path(str(root / 'tools/walkaudit/render_world.py'))
+    raise SystemExit(0)
 data = json.loads((root / 'docs/reports/walkability-results.json').read_text())
 svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">',
        '<rect width="1200" height="900" fill="#111c28"/>',

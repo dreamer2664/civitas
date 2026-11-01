@@ -1,0 +1,492 @@
+{
+  "blockedSidewalks": 2,
+  "categoryCounts": {
+    "BODY_BLOCKED": 6,
+    "NONCOLLIDABLE_SURFACE": 0,
+    "ROUTE_GAP": 0,
+    "STEP": 0
+  },
+  "engineTested": false,
+  "groundSealed": true,
+  "mainRoute": {
+    "defects": {},
+    "intervals": 125,
+    "length": 1632.999280097293,
+    "maxStep": 0.595001220703125
+  },
+  "maximumSidewalkStep": 0.75,
+  "partCount": 1817,
+  "sidewalkCount": 48,
+  "sidewalks": [
+    {
+      "result": {
+        "defects": {},
+        "intervals": 10,
+        "length": 75.62088012695315,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 16,
+        "length": 75.62088012695315,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 10,
+        "length": 70.80110168457033,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 1_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 15,
+        "length": 70.80110168457033,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 1_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 10,
+        "length": 81.81527709960938,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 14,
+        "length": 81.81527709960938,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 8,
+        "length": 67.64195251464842,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 14,
+        "length": 67.64195251464842,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 227.83689880371094,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 227.83689880371094,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 203.18284606933597,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Canal diagonal_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 203.18284606933597,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Canal diagonal_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_630_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_630_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 97,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_150_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_150_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_0_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_0_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 81,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-300_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-300_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-620_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 79,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-620_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_620_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_620_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 105,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 97,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 89,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_270_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_270_-1"
+    },
+    {
+      "result": {
+        "defects": [
+          {
+            "code": "BODY_BLOCKED",
+            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+            "x": 136.75,
+            "z": 963.25
+          },
+          {
+            "code": "BODY_BLOCKED",
+            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+            "x": 136.75,
+            "z": 966.2500000000002
+          },
+          {
+            "code": "BODY_BLOCKED",
+            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+            "x": 136.75,
+            "z": 968.125
+          }
+        ],
+        "intervals": 97,
+        "length": 1618,
+        "maxStep": 0.75
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_120_1"
+    },
+    {
+      "result": {
+        "defects": [
+          {
+            "code": "BODY_BLOCKED",
+            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+            "x": 103.25,
+            "z": 963.25
+          },
+          {
+            "code": "BODY_BLOCKED",
+            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+            "x": 103.25,
+            "z": 966.2500000000002
+          },
+          {
+            "code": "BODY_BLOCKED",
+            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
+            "x": 103.25,
+            "z": 968.125
+          }
+        ],
+        "intervals": 78,
+        "length": 1618,
+        "maxStep": 0.230010986328125
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_120_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 105,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 81,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 89,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 89,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-650_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-650_-1"
+    }
+  ]
+}

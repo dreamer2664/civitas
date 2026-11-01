@@ -14,20 +14,158 @@ PASS decorative noncollidable detail is ignored
 PASS spawn requires footprint support
 PASS short route rejected
 10 passed, 0 failed (synthetic fixtures, NOT city acceptance)
+PASS oriented audit exact base coverage
+PASS yaw 90 clipping is exact
+PASS subsample thin wall is detected
+PASS noncollidable walk surface fails despite sealed fallback base
+PASS 1.21 step fails
+PASS footprint support cannot use narrow centerline
+PASS 0.01 stud hole cannot hide between samples
+PASS ground with missing collision cannot establish seal
+8 oriented Luau tests passed, 0 failed
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.045s
+
+OK
+  ok   city slice has the required varied massing and landmarks
+  ok   walk acceptance route is continuous and exceeds 1500 studs
+  ok   route centerline stays clear of all building and landmark collision footprints
+  ok   diagonal and jog lanes stay clear of building collision footprints
+  ok   route follows the long sidewalk and every grid crossing has a radius cut
+  ok   walk surfaces are parameterized and the estimated slice stays within phone budget
+
+City acceptance: 6 passed, 0 failed
 Building project 'CIVITAS'
 Built project to walkability-milestone.rbxlx
-/home/user/civitas/tools/walkaudit/run:61: WORLD_DATA_UNAVAILABLE: error requiring module "../../src/server/World/Geometry": could not resolve child component "World"
+Executed real CityBuilder in Lune: 1817 BaseParts; 1633.00-stud route
+LUNE REAL AUDIT: parts=1817 route=1632.999280 maxStep=0.595001 routeDefects=0 sealed=true sidewalks=48 blocked=2
+/home/user/civitas/tools/walkaudit/check_world:107: real sidewalk continuity fails; see walkability-lune-results.json
 [Stack Begin]
-    Script '[C]' - function 'error'
-    Script '/home/user/civitas/tools/walkaudit/run', Line 61
+    Script '[C]' - function 'assert'
+    Script '/home/user/civitas/tools/walkaudit/check_world', Line 107
 [Stack End]
 
 {
-  "sourceRevision": "5b9117d9574c17ba12681c9490140e9c505d8e4c",
+  "status": "FAIL_SIDEWALK_CONTINUITY",
+  "engineTested": false,
+  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
+  "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
+  "partCount": 1817,
+  "spawnChecks": [
+    {
+      "label": "District A sidewalk",
+      "x": 136.75,
+      "z": -640,
+      "supportTop": 1.149993896484375,
+      "geometrySafe": true,
+      "blockers": [],
+      "runtimeVerified": false
+    },
+    {
+      "label": "station concourse",
+      "x": 120,
+      "z": 925,
+      "supportTop": 0.6300048828125,
+      "geometrySafe": true,
+      "blockers": [],
+      "runtimeVerified": false
+    }
+  ],
+  "routeLength": 1632.999280097293,
+  "routeIntervals": 125,
+  "maxStepStuds": 0.595001220703125,
+  "groundSeal": {
+    "proven": true,
+    "method": "exact closed base-solid contains all domain corners",
+    "witness": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.CollidableGround",
+    "bounds": {
+      "maxX": 770,
+      "maxZ": 1055,
+      "minX": -770,
+      "minZ": -825,
+      "name": "District A \u2014 Historic Centre slice"
+    },
+    "areaStudsSquared": 2895200
+  },
+  "decorativeCollisionCount": 291,
+  "streamingEnvelope": {
+    "64": {
+      "minIntersectingParts": 7,
+      "maxIntersectingParts": 38,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "256": {
+      "minIntersectingParts": 27,
+      "maxIntersectingParts": 315,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "384": {
+      "minIntersectingParts": 82,
+      "maxIntersectingParts": 620,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "512": {
+      "minIntersectingParts": 212,
+      "maxIntersectingParts": 998,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "1024": {
+      "minIntersectingParts": 1023,
+      "maxIntersectingParts": 1813,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    }
+  },
+  "unbatchedMainPassEstimate": 1813,
+  "measuredDrawCalls": null,
+  "sidewalkDefectCount": 6
+}
+defects=0; decorativeCollisions=291
+PARITY PASS: independent Luau/Python audits agree on real parts, seal, route, steps and all 48 sidewalk checks
+{
+  "sourceRevision": "aec1ad730b3ff75624fd248fb6fd834a2d0f5b46",
   "staticWorkspaceParts": 0,
-  "generatedWalkableParts": null,
+  "generatedWalkableParts": 1817,
   "drawCalls": null,
-  "reason": "No generator export available",
+  "unbatchedMainPassEstimate": 1813,
+  "streamingEnvelope": {
+    "64": {
+      "minIntersectingParts": 7,
+      "maxIntersectingParts": 38,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "256": {
+      "minIntersectingParts": 27,
+      "maxIntersectingParts": 315,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "384": {
+      "minIntersectingParts": 82,
+      "maxIntersectingParts": 620,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "512": {
+      "minIntersectingParts": 212,
+      "maxIntersectingParts": 998,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    },
+    "1024": {
+      "minIntersectingParts": 1023,
+      "maxIntersectingParts": 1813,
+      "samplePositions": 114,
+      "spacingMaxStuds": 16
+    }
+  },
+  "reason": "Engine profiling required; parts are not draw calls",
   "streaming": {
     "StreamingEnabled": true,
     "StreamingMinRadius": 64,
@@ -37,4 +175,5 @@ Built project to walkability-milestone.rbxlx
     "StreamOutBehavior": "Opportunistic"
   }
 }
-docs/reports/renders/walkability-route.svg
+Rendered docs/reports/renders/walkability-route.svg from actual CityBuilder parts
+Geometry checks only. Collision policy, platform exit and engine profiling are separate gates.
