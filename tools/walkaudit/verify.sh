@@ -8,12 +8,14 @@ luau-lsp analyze --platform=standard src/server/Walkability/Audit.luau src/serve
 lune run tests/walk/run.luau
 lune run tests/walk/oriented.luau
 python tests/walk/test_world_audit.py
+python tests/walk/test_streaming.py
 lune run tools/world/test_city.luau
 rojo build default.project.json -o docs/reports/walkability-milestone.rbxlx
 # Executes the same generator AND builder that the server loads, under Lune only.
 status=0
 lune run tools/walkaudit/check_world.luau || status=$?
 python tools/walkaudit/audit_world.py || status=$?
+python tools/walkaudit/streaming.py
 python tools/walkaudit/compare.py
 python tools/walkaudit/measure.py
 python tools/walkaudit/render_world.py

@@ -1,0 +1,67 @@
+{
+  "engineMeasured": false,
+  "partCount": 1817,
+  "assumptions": "All exported bounding footprints; cylinders conservatively boxed; no model retention/culling/shadow simulation",
+  "streamingEnvelope": {
+    "64": {
+      "minIntersectingParts": 7,
+      "maxIntersectingParts": 38,
+      "peakPosition": {
+        "x": 136.75,
+        "z": -156.37768510550535,
+        "segment": 1,
+        "t": 0.7327610831734768
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "256": {
+      "minIntersectingParts": 27,
+      "maxIntersectingParts": 317,
+      "peakPosition": {
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "384": {
+      "minIntersectingParts": 82,
+      "maxIntersectingParts": 621,
+      "peakPosition": {
+        "x": 136.75,
+        "z": 12.453606872578689,
+        "segment": 1,
+        "t": 0.9885660710190586
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "512": {
+      "minIntersectingParts": 212,
+      "maxIntersectingParts": 1005,
+      "peakPosition": {
+        "x": 136.75,
+        "z": 138.28786575625128,
+        "segment": 6,
+        "t": 0.0121880378768401
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    },
+    "1024": {
+      "minIntersectingParts": 1023,
+      "maxIntersectingParts": 1814,
+      "peakPosition": {
+        "x": 136.75,
+        "z": -21.76563357489283,
+        "segment": 1,
+        "t": 0.9367187370077381
+      },
+      "method": "continuous analytic rounded-rectangle interval sweep",
+      "engineMeasured": false
+    }
+  }
+}
