@@ -76,6 +76,9 @@ def shell_car(name,length,origin,cab):
   # A compact cab desk and seat, currently a blockout for dashboard integration.
   cube('CAB_desk',(-3.35,-.34,1.48),(.55,1.30,.22),black,root,.05)
   cube('CAB_console',(-3.32,-.34,1.63),(.38,1.18,.12),silver,root,.025)
+  cube('CAB_display',(-3.25,-.30,1.72),(.16,.42,.06),dark,root,.01)
+  cube('CAB_control_lever',(-3.35,-.72,1.76),(.10,.10,.23),black,root,.02)
+  cube('CAB_control_panel',(-3.30,.03,1.72),(.20,.28,.06),white,root,.01)
   cube('CAB_seat_base',(-4.32,-.32,1.05),(.6,.6,.16),dark,root,.04)
   cube('CAB_seat_back',(-4.62,-.32,1.45),(.15,.6,.85),dark,root,.05)
   cube('CAB_seat_stand',(-4.32,-.32,.86),(.25,.25,.3),black,root,.03)
@@ -101,6 +104,19 @@ def shell_car(name,length,origin,cab):
    me=bpy.data.meshes.new('windscreen'); me.from_pydata(vs,[],fs); me.update(); ob=bpy.data.objects.new(name+'_windscreen_'+str(j),me); scene.collection.objects.link(ob); ob.parent=root; ob.data.materials.append(cab_glass)
   for y in (-.75,.75): cube(name+'_headlamp',( -.19,y,1.24),(.08,.30,.14),light,root,.03)
  else:
+  # Five seat bays clear of the four doorways, central aisle remains open.
+  for x in (-3,-8,-10,-12,-17):
+   for side in (-1,1):
+    y=side*.90
+    cube(f'{name}_seat_cushion', (x,y,1.17),(.65,.55,.14),dark,root,.04)
+    cube(f'{name}_seat_back',(x-.28,y,1.52),(.12,.55,.74),dark,root,.035)
+    cube(f'{name}_seat_pedestal',(x,y,.96),(.12,.20,.38),silver,root)
+  for side in (-1,1):
+   # Short runs terminate away from doorways; aisle stanchions at door edges.
+   for a,b in [(-19,-16),(-13,-7),(-4,-1)]:
+    cube(f'{name}_luggage_rack',((a+b)/2,side*1.08,3.25),(b-a,.38,.07),silver,root,.02)
+   for x in (-6.2,-4.6,-15.4,-13.8):
+    cube(f'{name}_stanchion',(x,side*.67,1.90),(.05,.05,2.25),silver,root,.01)
   cube(name+'_leading_bulkhead',(-.06,0,2.15),(.12,2.85,2.98),white,root)
  # Rear plane is exactly the trailing coupling datum.
  cube(name+'_trailing_bulkhead',(-length+.06,0,2.15),(.12,2.85,2.98),white,root)

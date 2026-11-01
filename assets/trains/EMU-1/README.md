@@ -1,6 +1,6 @@
 # EMU-1 — preliminary two-car geometry study
 
-**Status: incomplete / not for production integration.** This is reproducible geometry, not the finished European EMU requested. The cab nose now has an aperture with raked glazing; its appearance and transparency in Studio still need validation. The interior desk and seat are blockouts; passenger interior, operational door detailing, materials and silhouette need substantial art work. Further asset revisions and validation remain required before acceptance. No Studio import or gameplay testing has been done.
+**Status: incomplete / not for production integration.** This is reproducible geometry, not the finished European EMU requested. The cab nose now has an aperture with raked glazing; its appearance and transparency in Studio still need validation. The cab has a seat, desk and controls; the intermediate car has basic seat rows, racks and stanchions. Interior and exterior materials and silhouette still need refinement. Further asset revisions and validation remain required before acceptance. No Studio import or gameplay testing has been done.
 
 ## Build and inspect
 
@@ -29,7 +29,7 @@ Trailing ends have been brought to the coupling datum. `CAB_ROOT` is at (0,0,0) 
 
 ## Geometry and collision
 
-`mesh-stats.json` lists evaluated triangles, bounding dimensions and non-manifold edge counts per mesh, including collisions. Latest: 12,228 visual triangles, 168 collision triangles; largest mesh 124; zero non-manifold edges. A manifold-edge test alone does not establish absence of self-intersection, correct normals, visual quality or Roblox compatibility. There are 173 separate meshes including proxies, so draw calls and runtime costs are **not** established by triangle totals. A material/mesh consolidation pass and mobile profiling are required. Train meshes are not suitable for automatic static SLIM assumptions.
+`mesh-stats.json` lists evaluated triangles, bounding dimensions and non-manifold edge counts per mesh, including collisions. Latest: 16,344 visual triangles, 168 collision triangles; largest mesh 124; zero non-manifold edges. A manifold-edge test alone does not establish absence of self-intersection, correct normals, visual quality or Roblox compatibility. There are 220 separate meshes including proxies, so draw calls and runtime costs are **not** established by triangle totals. A material/mesh consolidation pass and mobile profiling are required. Train meshes are not suitable for automatic static SLIM assumptions.
 
 `*_COLLISION_*` objects are separate simple proxy meshes. Wall proxies are segmented around door apertures; visual meshes should be made non-colliding by the integrator, and proxy visibility/collision must be set in Studio. This is not yet a complete collision solution: cab and car ends need properly designed proxies, and moving-door collision must be integrated and tested. Keep train unanchored per contract; vector determines runtime assembly.
 
