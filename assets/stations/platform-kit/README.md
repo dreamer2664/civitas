@@ -1,0 +1,31 @@
+# Platform kit — preliminary modular geometry
+
+**Status: study, not approved production art.** Eight types are included as individual visual meshes with separate `COLLISION` proxies and separate FBX and GLB exports. Dimensions, appearance, imports, joins, and passenger navigation have not been tested in Roblox Studio. Signs are blank, the bench and canopy need design refinement, and collision proxies are initial approximations, not finished navigation collision.
+
+## Build
+
+From repository root (Blender 4.3.2):
+
+```sh
+blender -b --factory-startup --python-exit-code 1 -P assets/stations/platform-kit/build_platform.py
+blender -b assets/stations/platform-kit/platform-kit.blend --python-exit-code 1 -P assets/stations/platform-kit/export_platform.py
+```
+
+Exporter depends on `assets/trains/tools/export_common.py`. Source is metric, Z-up, module direction +X; exported roots are positioned at (0,0,0), scaled by 1/0.28 = 3.5714286 studs/m with FBX Y-up / -Z forward and glTF Y-up conversion. Each named root is the base-centre datum at platform surface (edge geometry intentionally extends below this datum); the exploded Blender scene positions roots separately for review. Verify imported pivots and scale in Studio. Edge/coping/tactile/canopy repeat 4 m = 14.286 studs; tactile width 0.6 m = 2.143 studs. Canopy lowest roof/brace underside is 3.2 m = 11.429 studs above datum. Place edge 1.7 m = 6.071 studs from rail centre, with platform datum 0.76 m = 2.714 studs above rail top. Placement is an integration instruction, not a tested assembly.
+
+| Visual mesh | Evaluated triangles |
+|---|---:|
+| edge | 12 |
+| coping | 12 |
+| tactile | 3,612 |
+| canopy | 72 |
+| bench | 108 |
+| bin | 120 |
+| lamp | 84 |
+| gantry | 48 |
+
+Total 4,068 visual, 228 collision triangles; largest evaluated mesh 3,612; zero non-manifold edges. `mesh-stats.json` has per-object counts and Blender-world bounding dimensions. A zero non-manifold edge count does not prove absence of intersecting shells or good physical collision. The high tactile triangle count results from modeled raised studs; evaluate a normal-map or lower-detail alternative during optimization. Visual meshes combine disconnected closed pieces with material slots; the glTF importer may split multi-material primitives, creating more MeshParts. Neither draw calls nor streaming behavior has been measured.
+
+Static integration: anchor appropriate components, turn off visual mesh collisions and make only suitable proxy parts invisible/collidable. Bench, bin, lamp and gantry proxies are incomplete; validate and adjust in Studio. Repeat kit pieces as spatially grouped static bays, consider SLIM only after Manager tests; never promise measured performance.
+
+Materials: cast concrete, coping stone, tactile buff, painted steel, timber, off-white sign, dark detail. Original procedural work; no external models or photos. Headless workbench previews: `renders/overview.png`, `renders/canopy.png`, `renders/furniture.png`.

@@ -2,6 +2,7 @@
 import bpy, os, math
 from mathutils import Vector
 D=os.path.dirname(os.path.abspath(__file__))
+bpy.context.preferences.filepaths.save_version=0
 bpy.ops.object.select_all(action='SELECT'); bpy.ops.object.delete(use_global=False)
 s=bpy.context.scene; s.unit_settings.system='METRIC'
 def mat(n,c):
@@ -21,11 +22,11 @@ t=root('tactile',10.4,0); box('tactile_base',(0,0,.016),(4,.6,.032),yellow,t)
 for x in range(20):
  for y in range(3): cyl('tactile_stud',(-1.9+x*.2,-.2+y*.2,.045),.035,.026,yellow,t)
 box('tactile_COLLISION',(0,0,.02),(4,.6,.04),yellow,t).hide_render=True
-c=root('canopy',0,4); box('canopy_roof',(0,0,3.36),(4,2.65,.16),steel,c); box('canopy_fascia',(0,-1.27,3.25),(4,.11,.22),steel,c)
+c=root('canopy',0,4); box('canopy_roof',(0,0,3.28),(4,2.65,.16),steel,c); box('canopy_fascia',(0,-1.27,3.31),(4,.11,.22),steel,c)
 for x in (-1.78,1.78):
- box('canopy_post',(x,.65,1.6),(.14,.14,3.2),steel,c); box('canopy_brace',(x,0,3.23),(.13,2.5,.12),steel,c)
+ box('canopy_post',(x,.65,1.6),(.14,.14,3.2),steel,c); box('canopy_brace',(x,0,3.26),(.13,2.5,.12),steel,c)
  box('canopy_COLLISION_post',(x,.65,1.6),(.16,.16,3.2),steel,c).hide_render=True
-box('canopy_COLLISION_roof',(0,0,3.36),(4,2.65,.16),steel,c).hide_render=True
+box('canopy_COLLISION_roof',(0,0,3.28),(4,2.65,.16),steel,c).hide_render=True
 b=root('bench',5.2,4)
 for y in (-.18,0,.18): box('bench_seat_slat',(0,y,.48),(1.8,.14,.07),wood,b)
 for z in (.75,.95): box('bench_back_slat',(0,.26,z),(1.8,.08,.14),wood,b)

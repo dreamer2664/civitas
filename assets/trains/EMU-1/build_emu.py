@@ -3,6 +3,7 @@ import bpy, math, json, os
 from mathutils import Vector
 from mathutils.geometry import tessellate_polygon
 D=os.path.dirname(os.path.abspath(__file__))
+bpy.context.preferences.filepaths.save_version=0
 bpy.ops.object.select_all(action='SELECT'); bpy.ops.object.delete(use_global=False)
 scene=bpy.context.scene
 scene.unit_settings.system='METRIC'
@@ -99,7 +100,7 @@ scene.render.resolution_x=1400; scene.render.resolution_y=700; scene.render.reso
 world=scene.world; world.color=(.06,.06,.06)
 def camera(name,loc,target,scale):
  data=bpy.data.cameras.new(name); ob=bpy.data.objects.new(name,data); scene.collection.objects.link(ob); ob.location=loc; ob.rotation_euler=(Vector(target)-ob.location).to_track_quat('-Z','Y').to_euler(); data.type='ORTHO'; data.ortho_scale=scale; return ob
-scene.camera=camera('three_quarter',(13,-31,18),(-11,0,1.4),29)
+scene.camera=camera('three_quarter',(16,-55,24),(-20,0,1.4),49)
 scene.render.image_settings.file_format='PNG'; scene.render.filepath=os.path.join(D,'renders','front-three-quarter.png'); bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'EMU-1.blend')); bpy.ops.render.render(write_still=True)
 scene.camera=camera('side',(-21,-48,2.4),(-21,0,2.0),46)
 scene.render.filepath=os.path.join(D,'renders','side.png'); bpy.ops.render.render(write_still=True)
@@ -111,5 +112,4 @@ dep=bpy.context.evaluated_depsgraph_get(); total=0; counts={}
 for obj in scene.objects:
  if obj.type!='MESH': continue
  ev=obj.evaluated_get(dep); me=ev.to_mesh(); me.calc_loop_triangles(); counts[obj.name]=len(me.loop_triangles); total+=len(me.loop_triangles); ev.to_mesh_clear()
-with open(os.path.join(D,'study-stats.json'),'w') as f: json.dump({'status':'preliminary design study; not an export validation','total_evaluated_triangles':total,'meshes':counts},f,indent=2)
 print('STUDY evaluated_triangles=',total,' meshes=',len(counts))
