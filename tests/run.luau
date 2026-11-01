@@ -20,6 +20,7 @@ require("./client/layout.spec")
 require("./client/format.spec")
 require("./client/navigation.spec")
 require("./client/bindings.spec")
+require("./client/map.spec")
 
 local railPassed, railFailed = suite.run()
 print(string.format("\n%d passed, %d failed (rail)", railPassed, railFailed))
