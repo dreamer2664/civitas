@@ -15,6 +15,7 @@ blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains
 blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/verify_geometry.py
 blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/verify_roof.py
 blender -b assets/trains/EMU-1/EMU-1.blend --python-exit-code 1 -P assets/trains/EMU-1/verify_gangway.py
+blender -b --factory-startup --python-exit-code 1 -P assets/trains/EMU-1/verify_livery.py
 ```
 
 The builder regenerates the source and three workbench renders. Exporter reads the source in memory and writes FBX, GLB and `mesh-stats.json`, leaving the source unchanged. The shared `../tools/export_common.py` is required. GLB verifier imports the export into Blender and checks six root/bogie positions; it is not a Roblox import. Use `--python-exit-code 1` to fail on script exceptions.
@@ -42,7 +43,7 @@ The car-floor collision proxies now align with the 0.76 m platform floor. Fixed 
 
 `*_COLLISION_*` objects are separate simple proxy meshes. Wall proxies are segmented around door apertures; visual meshes should be made non-colliding by the integrator, and proxy visibility/collision must be set in Studio. This is not yet a complete collision solution: cab and car ends need properly designed proxies, and moving-door collision must be integrated and tested. Keep train unanchored per contract; vector determines runtime assembly.
 
-Nine purpose-named materials, including a blue waist belt and door surrounds, share `assets/trains/textures/rail_palette.png`, a reproducibly generated 1024×1024 base-colour swatch atlas. Each face has nondegenerate UVs within the appropriate swatch. This is a flat-colour atlas, not a detailed paint/weathering texture set; there are no normal, metallic or roughness texture maps. Roughness is 0.38 for stock materials and 0.12 for cab glazing. GLB contains one embedded image; FBX embeds the same atlas. Import appearance requires Studio validation.
+Nine purpose-named materials, including a blue waist belt and door surrounds, share `assets/trains/textures/rail_palette.png`, a reproducibly generated 1024×1024 base-colour swatch atlas. Each face has nondegenerate UVs within the appropriate swatch. This is a flat-colour atlas, not a detailed paint/weathering texture set; there are no normal, metallic or roughness texture maps. Roughness is 0.38 for stock materials and 0.12 for cab glazing. GLB contains one embedded image; FBX embeds the same atlas. `verify_livery.py` reimports the GLB into Blender and checks 432 blue triangles across all four car sides, with 1,296 UV loop samples inside the blue atlas swatch and belt/surround height coverage. This is not a visual-quality, FBX or Studio import test. Import appearance requires Studio validation.
 
 | Render material | Triangles | Share |
 |---|---:|---:|
