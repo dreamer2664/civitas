@@ -19,7 +19,14 @@
     },
     "Workspace": {
       "$className": "Workspace",
-      "$properties": { "StreamingEnabled": true }
+      "$properties": {
+        "StreamingEnabled": true,
+        "StreamingMinRadius": 64,
+        "StreamingTargetRadius": 1024,
+        "ModelStreamingBehavior": "Improved",
+        "StreamingIntegrityMode": "PauseOutsideLoadedArea",
+        "StreamOutBehavior": "Opportunistic"
+      }
     }
   }
 }

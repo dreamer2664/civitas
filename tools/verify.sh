@@ -1,27 +1,33 @@
 #!/usr/bin/env bash
-# Phase 1 verification script for CODE · vector.
-# Usage: ./tools/verify.sh   (run from the repo root)
-# Requires the toolchain on PATH: selene, stylua, luau-lsp, lune, rojo
-# (installed under $HOME/bin in this sandbox).
+# World + shared-code verification. The Roblox API definitions are fetched, never stubbed out.
+# Run from any directory: ./tools/verify.sh
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
-
 export PATH="$HOME/bin:$PATH"
+CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/civitas"
+DEFINITIONS="$CACHE_DIR/globalTypes.d.luau"
+SOURCEMAP="/tmp/civitas-verify-sourcemap.json"
+mkdir -p "$CACHE_DIR"
+if [[ ! -s "$DEFINITIONS" ]]; then
+  curl -fsSL https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.luau -o "$DEFINITIONS.tmp"
+  mv "$DEFINITIONS.tmp" "$DEFINITIONS"
+fi
 
-echo "== selene src/ =="
+printf '== selene src/ ==\n'
 selene src/
-
-echo "== stylua --check src/ tests/ =="
-stylua --check src/ tests/
-
-echo "== luau-lsp analyze --platform=standard src/shared/Rail/ =="
-luau-lsp analyze --platform=standard src/shared/Rail/Spline.luau src/shared/Rail/Kinematics.luau
-
-echo "== lune run tests/run.luau =="
+printf '== stylua --check src/ tests/ tools/world/ ==\n'
+stylua --check src/ tests/ tools/world/
+printf '== rojo sourcemap + Roblox API definitions ==\n'
+rojo sourcemap default.project.json --output "$SOURCEMAP"
+luau-lsp analyze --platform=roblox --definitions "@roblox=$DEFINITIONS" --sourcemap "$SOURCEMAP" src/server/World/*.luau
+printf '== lune shared tests ==\n'
 lune run tests/run.luau
-
-echo "== rojo build (place file to /tmp, not committed) =="
-rojo build default.project.json -o /tmp/civitas-verify.rbxlx
-
-echo "ALL CHECKS PASSED"
+printf '== lune generated-city acceptance tests ==\n'
+lune run tools/world/test_city.luau
+printf '== deterministic city export + plan/street-level renders ==\n'
+lune run tools/world/export_plan.luau
+python3 tools/world/render_city.py
+printf '== rojo build committed place file ==\n'
+rojo build default.project.json -o tools/world/civitas-world-blockout.rbxlx
+printf 'ALL CHECKS PASSED\n'
