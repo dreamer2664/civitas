@@ -9,7 +9,7 @@ Coordinates are Roblox studs, with world `Y` vertical. This is a bounded slice o
 - Collidable ground: 1,540 × 1,880 studs, centered at `(X=0, Z=115)`, top at `Y=0` (bounds `X=[-770,770]`, `Z=[-825,1055]`).
 - Historic core: 9 north-south × 9 east-west street lines, uneven 140–185-stud neighbor spacings, and 81 intersections. Four merged superblocks collapse 18 grid cells into 4 irregular parcels; 18 shared road runs are removed inside their footprints, including an L-shaped five-cell court and a 3×2 guild block. Arterials remain on the outer ring and station approach.
 - Carriageways: 30-stud outer/station arterials, 13-stud locals and 8.5-stud lanes at 140–150-stud intervals; sidewalks are 3.5 studs each side. Six narrow diagonal/jog segments cut across the network; their landings reserve building-free corridors. Low curbs are 0.65 wide × 0.28 high, with 11-stud radius cutbacks at intersections.
-- Three squares: the 100 × 110-stud main square at `(200,75)`, plus two smaller pocket squares at the Crooked Lane elbow and Market Cut junction. The main square is inside an irregular block, not an arterial cadence. Station forecourt begins at `Z=810`; entry at `Z=858`; concourse walk floor centered at `Z=925`.
+- Three squares: the 100 × 110-stud main square at `(200,75)`, plus two smaller pocket squares at the Crooked Lane elbow and Market Cut junction. Their paving replaces five intersecting orthogonal/diagonal street runs; those approaches terminate at the square edge rather than crossing through it. The main square is inside an irregular block, not an arterial cadence. Station forecourt begins at `Z=810`; entry at `Z=858`; concourse walk floor centered at `Z=925`.
 - The route is generated as connected physical walk links: east station-avenue sidewalk spawn → narrow-lane grid → square → station forecourt → concourse. The test-measured centerline is **1,633.0 studs**.
 - Ordinary massing has a darker separate ground storey, varied storefront glazing/doors, awnings or entry lintels, and upper massing. Landmark-scale forms retain their own crowns and tower lanterns.
 
@@ -24,13 +24,13 @@ From `lune run tools/world/export_plan.luau` (same `CityGenerator` consumed by t
 | Ordinary blockout buildings | 302 |
 | Landmark-scale buildings | 12 |
 | Total massings | 314 |
-| Blocks / merged superblocks / street segments / intersections | 50 / 4 / 34 / 81 |
-| Extra pocket squares / removed internal street runs | 2 / 18 |
-| Exact planned Roblox `BasePart` count | **1,915** |
+| Blocks / merged superblocks / street segments / intersections | 50 / 4 / 35 / 81 |
+| Extra pocket squares / removed internal street runs / square street cuts | 2 / 18 / 5 |
+| Exact planned Roblox `BasePart` count | **1,920** |
 | Part budget | 25,000 |
 | Route centerline | **1,633.0 studs** |
 
-The 1,915 figure is an exact count against the current builder recipe (ordinary ground/upper/roof pieces plus frontage accents, landmark ground/upper/crowns, segmented curb returns, diagonal-lane surfaces, plaza paving, ground, station shell, route, and spawn); the Roblox builder also counts actual `BasePart` descendants on startup and stores `GeneratedPartCount`. No Studio runtime count has been observed here.
+The 1,920 figure is an exact count against the current builder recipe (ordinary ground/upper/roof pieces plus frontage accents, landmark ground/upper/crowns, segmented curb returns, diagonal-lane surfaces, plaza paving, clipped junction approaches, ground, station shell, route, and spawn); the Roblox builder also counts actual `BasePart` descendants on startup and stores `GeneratedPartCount`. No Studio runtime count has been observed here.
 
 Landmarks: Old Town Clock Tower, St. Elian's Church, Civic Archive Tower, North Gate Hotel, Covered Market Hall, Guildhall, Riverside Exchange, Opera House, South Arcade Tower, Museum of Navigation, West Bastion Tower, and East Gate Basilica.
 
@@ -48,7 +48,7 @@ From repo root:
 
 The script runs Selene and StyLua; downloads Roblox `globalTypes.d.luau` into the user cache and passes it to `luau-lsp analyze --definitions`; makes a Rojo sourcemap; runs shared Lune tests plus `tools/world/test_city.luau`; exports `generated-plan.json`; renders evidence; and builds `civitas-world-blockout.rbxlx`.
 
-The acceptance test is deliberately a plan/geometry test, not an assertion that Studio was run. It checks the generated path length/stages, ground bounds, route and diagonal-lane collision-footprint clearance, irregular spacing, merged-block count, removed internal road runs, pocket squares, building count/height/frontage diversity, landmark count, and an independently reconstructed exact part recipe. It does not simulate Roblox character movement, physics, streaming, mobile frame rate, or the import in Studio.
+The acceptance test is deliberately a plan/geometry test, not an assertion that Studio was run. It checks the generated path length/stages, ground bounds, route and diagonal-lane collision-footprint clearance, irregular spacing, merged-block count, removed internal road runs, pocket-square street cutouts, building count/height/frontage diversity, landmark count, and an independently reconstructed exact part recipe. It does not simulate Roblox character movement, physics, streaming, mobile frame rate, or the import in Studio.
 
 ## Evidence renders
 

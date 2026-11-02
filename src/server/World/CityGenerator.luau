@@ -106,12 +106,112 @@ local function stationContains(x: number, z: number, config: any): boolean
 		and z < config.station.entryZ + 28
 end
 
+local function segmentSquareInterval(
+	street: any,
+	square: any,
+	sidewalkWidth: number,
+	curbWidth: number
+): { number }?
+	local dx = street.finishX - street.startX
+	local dz = street.finishZ - street.startZ
+	local length = math.sqrt(dx * dx + dz * dz)
+	local edgeRadius = street.width / 2 + sidewalkWidth + curbWidth
+	local insetX = edgeRadius * math.abs(dz) / length
+	local insetZ = edgeRadius * math.abs(dx) / length
+	local minX = square.centerX - square.width / 2 + insetX
+	local maxX = square.centerX + square.width / 2 - insetX
+	local minZ = square.centerZ - square.depth / 2 + insetZ
+	local maxZ = square.centerZ + square.depth / 2 - insetZ
+	if minX >= maxX or minZ >= maxZ then
+		return nil
+	end
+	local enterT = 0
+	local exitT = 1
+	local function clipAxis(
+		origin: number,
+		delta: number,
+		minimum: number,
+		maximum: number
+	): boolean
+		if math.abs(delta) < 1e-8 then
+			return origin >= minimum and origin <= maximum
+		end
+		local first = (minimum - origin) / delta
+		local second = (maximum - origin) / delta
+		local axisEnter = math.min(first, second)
+		local axisExit = math.max(first, second)
+		enterT = math.max(enterT, axisEnter)
+		exitT = math.min(exitT, axisExit)
+		return enterT < exitT
+	end
+	if
+		not clipAxis(street.startX, dx, minX, maxX) or not clipAxis(street.startZ, dz, minZ, maxZ)
+	then
+		return nil
+	end
+	local clippedStart = math.max(0, enterT)
+	local clippedFinish = math.min(1, exitT)
+	if clippedStart >= clippedFinish then
+		return nil
+	end
+	return { clippedStart, clippedFinish }
+end
+
+local function splitSegmentForSquares(street: any, squares: { any }, streets: any): { any }
+	local cuts = {}
+	for _, square in ipairs(squares) do
+		local interval =
+			segmentSquareInterval(street, square, streets.sidewalkWidth, streets.curbWidth)
+		if interval then
+			table.insert(cuts, { start = interval[1], finish = interval[2], square = square })
+		end
+	end
+	if #cuts == 0 then
+		return { street }
+	end
+	table.sort(cuts, function(a, b)
+		return a.start < b.start
+	end)
+	local mergedCuts = {}
+	for _, cut in ipairs(cuts) do
+		local previous = mergedCuts[#mergedCuts]
+		if previous and cut.start <= previous.finish then
+			previous.finish = math.max(previous.finish, cut.finish)
+		else
+			table.insert(mergedCuts, { start = cut.start, finish = cut.finish })
+		end
+	end
+	local dx = street.finishX - street.startX
+	local dz = street.finishZ - street.startZ
+	local fragments = {}
+	local cursor = 0
+	local function addFragment(startT: number, finishT: number)
+		if finishT - startT <= 1e-8 then
+			return
+		end
+		local fragment = table.clone(street)
+		fragment.startX = street.startX + dx * startT
+		fragment.startZ = street.startZ + dz * startT
+		fragment.finishX = street.startX + dx * finishT
+		fragment.finishZ = street.startZ + dz * finishT
+		fragment.name = street.name .. "_approach_" .. tostring(#fragments + 1)
+		table.insert(fragments, fragment)
+	end
+	for _, cut in ipairs(mergedCuts) do
+		addFragment(cursor, cut.start)
+		cursor = math.max(cursor, cut.finish)
+	end
+	addFragment(cursor, 1)
+	return fragments
+end
+
 function CityGenerator.generate(config: any): any
 	local plan: any = {
 		ground = config.ground,
 		streets = {},
 		intersections = {},
 		streetGaps = {},
+		squareStreetCuts = {},
 		blocks = {},
 		buildings = {},
 		landmarks = {},
@@ -424,12 +524,62 @@ function CityGenerator.generate(config: any): any
 	local openStreetRuns = {}
 	for _, street in ipairs(originalStreets) do
 		if street.axis == "segment" then
-			table.insert(openStreetRuns, street)
+			for _, square in ipairs(plan.pocketSquares) do
+				local interval =
+					segmentSquareInterval(street, square, streets.sidewalkWidth, streets.curbWidth)
+				if interval then
+					table.insert(plan.squareStreetCuts, {
+						streetName = street.name,
+						squareName = square.name,
+						axis = "segment",
+						startT = interval[1],
+						finishT = interval[2],
+					})
+				end
+			end
+			for _, fragment in ipairs(splitSegmentForSquares(street, plan.pocketSquares, streets)) do
+				table.insert(openStreetRuns, fragment)
+			end
 		else
 			local gaps = {}
 			for _, gap in ipairs(plan.streetGaps) do
 				if gap.axis == street.axis and gap.center == street.center then
 					table.insert(gaps, gap)
+				end
+			end
+			local profileHalfWidth = street.width / 2 + streets.sidewalkWidth + streets.curbWidth
+			for _, square in ipairs(plan.pocketSquares) do
+				local transverseCenter = if street.axis == "z"
+					then square.centerX
+					else square.centerZ
+				local transverseHalfSize = if street.axis == "z"
+					then square.width / 2
+					else square.depth / 2
+				if
+					math.abs(street.center - transverseCenter) + profileHalfWidth
+					<= transverseHalfSize
+				then
+					local squareCenter = if street.axis == "z"
+						then square.centerZ
+						else square.centerX
+					local squareHalfSize = if street.axis == "z"
+						then square.depth / 2
+						else square.width / 2
+					local cut = {
+						start = squareCenter - squareHalfSize,
+						finish = squareCenter + squareHalfSize,
+					}
+					table.insert(gaps, cut)
+					table.insert(plan.squareStreetCuts, {
+						streetName = street.kind .. "_" .. street.axis .. "_" .. tostring(
+							street.center
+						),
+						squareName = square.name,
+						axis = street.axis,
+						center = street.center,
+						start = cut.start,
+						finish = cut.finish,
+					})
 				end
 			end
 			table.sort(gaps, function(a, b)

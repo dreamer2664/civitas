@@ -140,28 +140,81 @@ suite.test("diagonal and jog lanes stay clear of building collision footprints",
 	end
 end)
 
-suite.test(
-	"superblocks merge cells and remove internal street runs; junction squares remain walkable",
-	function()
-		local expectedBlocks = (#config.streets.gridX - 1) * (#config.streets.gridZ - 1)
-		for _, group in ipairs(config.blocks.superblocks) do
-			expectedBlocks -= #group.cells - 1
+suite.test("superblocks merge cells and junction squares clear conflicting street runs", function()
+	local expectedBlocks = (#config.streets.gridX - 1) * (#config.streets.gridZ - 1)
+	for _, group in ipairs(config.blocks.superblocks) do
+		expectedBlocks -= #group.cells - 1
+	end
+	expect.equal(plan.stats.blockCount, expectedBlocks)
+	expect.equal(plan.stats.superblockCount, 4)
+	expect.equal(plan.stats.pocketSquareCount, 2)
+	expect.equal(#plan.squareStreetCuts, 5)
+	for _, gap in ipairs(plan.streetGaps) do
+		for _, street in ipairs(plan.streets) do
+			if street.axis == gap.axis and street.center == gap.center then
+				expect.ok(
+					street.finish <= gap.start or street.start >= gap.finish,
+					"merged cell edge still has a road through it"
+				)
+			end
 		end
-		expect.equal(plan.stats.blockCount, expectedBlocks)
-		expect.equal(plan.stats.superblockCount, 4)
-		expect.equal(plan.stats.pocketSquareCount, 2)
-		for _, gap in ipairs(plan.streetGaps) do
-			for _, street in ipairs(plan.streets) do
-				if street.axis == gap.axis and street.center == gap.center then
+	end
+	for _, square in ipairs(plan.pocketSquares) do
+		for _, street in ipairs(plan.streets) do
+			if street.axis == "segment" then
+				local dx = street.finishX - street.startX
+				local dz = street.finishZ - street.startZ
+				local length = math.sqrt(dx * dx + dz * dz)
+				local edgeRadius = street.width / 2
+					+ config.streets.sidewalkWidth
+					+ config.streets.curbWidth
+				local insetX = edgeRadius * math.abs(dz) / length
+				local insetZ = edgeRadius * math.abs(dx) / length
+				local minX = square.centerX - square.width / 2 + insetX
+				local maxX = square.centerX + square.width / 2 - insetX
+				local minZ = square.centerZ - square.depth / 2 + insetZ
+				local maxZ = square.centerZ + square.depth / 2 - insetZ
+				local steps = math.max(1, math.ceil(length))
+				for step = 0, steps do
+					local t = step / steps
+					local x = street.startX + dx * t
+					local z = street.startZ + dz * t
 					expect.ok(
-						street.finish <= gap.start or street.start >= gap.finish,
-						"merged cell edge still has a road through it"
+						x <= minX or x >= maxX or z <= minZ or z >= maxZ,
+						street.name .. " still cuts through " .. square.name
+					)
+				end
+			else
+				local profileHalfWidth = street.width / 2
+					+ config.streets.sidewalkWidth
+					+ config.streets.curbWidth
+				local transverseCenter = if street.axis == "z"
+					then square.centerX
+					else square.centerZ
+				local transverseHalfSize = if street.axis == "z"
+					then square.width / 2
+					else square.depth / 2
+				if
+					math.abs(street.center - transverseCenter) + profileHalfWidth
+					<= transverseHalfSize
+				then
+					local squareCenter = if street.axis == "z"
+						then square.centerZ
+						else square.centerX
+					local squareHalfSize = if street.axis == "z"
+						then square.depth / 2
+						else square.width / 2
+					local cutStart = squareCenter - squareHalfSize
+					local cutFinish = squareCenter + squareHalfSize
+					expect.ok(
+						street.finish <= cutStart or street.start >= cutFinish,
+						"orthogonal street still crosses " .. square.name
 					)
 				end
 			end
 		end
 	end
-)
+end)
 
 suite.test("route follows the long sidewalk and every grid crossing has a radius cut", function()
 	local avenue = nil

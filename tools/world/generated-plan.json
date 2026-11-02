@@ -5541,6 +5541,45 @@
       "z": 925
     }
   ],
+  "squareStreetCuts": [
+    {
+      "axis": "z",
+      "center": 435,
+      "finish": 472,
+      "squareName": "Market Cut Square",
+      "start": 438,
+      "streetName": "local_z_435"
+    },
+    {
+      "axis": "x",
+      "center": 455,
+      "finish": 454,
+      "squareName": "Market Cut Square",
+      "start": 416,
+      "streetName": "local_x_455"
+    },
+    {
+      "axis": "segment",
+      "finishT": 1,
+      "squareName": "Market Cut Square",
+      "startT": 0.9314397706561802,
+      "streetName": "Market diagonal"
+    },
+    {
+      "axis": "segment",
+      "finishT": 1,
+      "squareName": "Crooked Lane Court",
+      "startT": 0.8310065271722231,
+      "streetName": "Crooked Lane west 1"
+    },
+    {
+      "axis": "segment",
+      "finishT": 0.1436811257207255,
+      "squareName": "Crooked Lane Court",
+      "startT": 0,
+      "streetName": "Crooked Lane west 2"
+    }
+  ],
   "station": {
     "centerX": 120,
     "concourseZ": 925,
@@ -5552,13 +5591,13 @@
   "stats": {
     "blockCount": 50,
     "buildingCount": 302,
-    "estimatedParts": 1915,
+    "estimatedParts": 1920,
     "landmarkCount": 12,
     "partBudget": 25000,
     "pocketSquareCount": 2,
     "routeLength": 1632.999280097293,
     "routeLinkCount": 8,
-    "streetSegmentCount": 34,
+    "streetSegmentCount": 35,
     "superblockCount": 4
   },
   "streetGaps": [
@@ -5781,7 +5820,7 @@
       "center": 435,
       "finish": 970,
       "kind": "local",
-      "start": 455,
+      "start": 472,
       "width": 13
     },
     {
@@ -5883,9 +5922,17 @@
     {
       "axis": "x",
       "center": 455,
-      "finish": 700,
+      "finish": 416,
       "kind": "local",
       "start": -720,
+      "width": 13
+    },
+    {
+      "axis": "x",
+      "center": 455,
+      "finish": 700,
+      "kind": "local",
+      "start": 454,
       "width": 13
     },
     {
@@ -5908,20 +5955,20 @@
     },
     {
       "axis": "segment",
-      "finishX": 435,
-      "finishZ": 455,
+      "finishX": 423.68756215826977,
+      "finishZ": 444.03036330498884,
       "kind": "lane",
-      "name": "Market diagonal",
+      "name": "Market diagonal_approach_1",
       "startX": 270,
       "startZ": 295,
       "width": 8.5
     },
     {
       "axis": "segment",
-      "finishX": -175,
-      "finishZ": -80,
+      "finishX": -179.2248368206944,
+      "finishZ": -90.9845757338055,
       "kind": "lane",
-      "name": "Crooked Lane west 1",
+      "name": "Crooked Lane west 1_approach_1",
       "startX": -200,
       "startZ": -145,
       "width": 8.5
@@ -5931,9 +5978,9 @@
       "finishX": -200,
       "finishZ": 0,
       "kind": "lane",
-      "name": "Crooked Lane west 2",
-      "startX": -175,
-      "startZ": -80,
+      "name": "Crooked Lane west 2_approach_1",
+      "startX": -178.59202814301813,
+      "startZ": -68.50550994234196,
       "width": 8.5
     },
     {
