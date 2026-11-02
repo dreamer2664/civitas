@@ -1,42 +1,36 @@
-# Publishing the restored WALK checkpoint
+# Manual-sweep bundle delivery
 
-Branch: `walk/audit`. All WALK changes are committed, not merely present in a patch.
-Public remote: `https://github.com/dreamer2664/civitas.git`.
+Branch: `walk/audit`. No token is stored or required for this delivery.
 
-Push has been attempted before analysis and at checkpoint end. The supplied credential
-was rejected by GitHub: `Invalid username or token` (exit 128). Repeating that token cannot
-publish the branch. A working repository write credential/connected write-capable session
-is the remaining publication requirement. Do not put credentials in a source file, remote
-URL or committed script. Revoke the exposed token and configure authentication securely.
+## Current artifacts
 
-## Portable artifacts (workspace root, outside checkout)
+* `/home/user/walk-audit-7a12330.bundle`: original checkpoint, 995099 bytes, created with
+  `git bundle create /home/user/walk-audit-7a12330.bundle origin/main..walk/audit` before edits.
+* `/home/user/walk-audit-sidewalk-fix.bundle`: updated committed branch, including the real
+  rear doorway repair and fresh evidence. Same `origin/main..walk/audit` range.
 
-* `/home/user/walk-pave.patch`: binary-capable diff of committed WALK work against
-  `origin/world/historic-core-blockout` at 329d358. It must be applied on that base, not main.
-* `/home/user/walk-audit.bundle`: committed WALK branch history, excluding the already
-  published strata ancestry; verify prerequisites with `git bundle verify`.
+Both are current deliverables, not stale backups. The old generic `walk-audit.bundle` and
+stale patch are removed after replacement verification. Git bundle verify must succeed.
 
-With working authentication, publish the current local branch:
+Restore in a repository containing the public main prerequisites:
 
 ```sh
-cd /home/user/civitas
-git push -u origin walk/audit
+git fetch origin main
+git bundle verify /home/user/walk-audit-sidewalk-fix.bundle
+git fetch /home/user/walk-audit-sidewalk-fix.bundle refs/heads/walk/audit:refs/heads/walk/audit
+git switch walk/audit
+bash tools/walkaudit/verify.sh
 ```
 
-If restoring from the patch in a separate clean checkout instead:
+Do not force-update an existing unrelated branch. Use a fresh destination branch if needed.
+With working authentication, the manager can publish `git push -u origin walk/audit`.
+The earlier supplied token was rejected; do not paste credentials into chat or source files.
 
-```sh
-git fetch origin world/historic-core-blockout
-git switch -c walk/audit 329d358
-git apply --index /home/user/walk-pave.patch
-git commit -m 'walk: integrate headless continuity audit and evidence'
-git push -u origin walk/audit
-```
+The 53 regression tests pass. Both direct real-geometry commands now exit 0 (48 sidewalks,
+162 crossings clear), but the combined pipeline still exits 1 on the actual spawn's
+untouched tested-anchor sightline gate. Do not skip that gate to claim full acceptance.
 
-The full audit command is `bash tools/walkaudit/verify.sh`. Exit 1 is currently the correct
-result: two actual sidewalk axes hit StationRearWall. Do not skip the failing assertions
-or replace the output with a fixture pass in order to publish.
-
-An unrelated dirty `assets/trains/tools/install_blender.sh` file is deliberately excluded
-from WALK commits and artifacts. Preserved pre-integration World files remain in a local
-stash; they were not used to overwrite the authoritative fetched World branch.
+Tool executables are relocated into excluded cache with small ~/bin symlinks. verify.sh
+uses bootstrap_tools.py to fetch exact, SHA-256-pinned versions if the cache was omitted by
+a snapshot. The missing-cache path was tested. An unrelated dirty Blender installer is
+excluded from WALK commits; preserved restored files remain in a local stash.

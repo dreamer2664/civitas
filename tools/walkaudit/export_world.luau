@@ -78,6 +78,10 @@ for _, part in world:GetDescendants() do
 		})
 	end
 end
+assert(
+	#parts == plan.stats.estimatedParts,
+	"actual builder part count differs from generator recipe"
+)
 fs.writeFile(
 	"docs/reports/walkability-world.json",
 	serde.encode("json", {

@@ -697,7 +697,7 @@ function CityGenerator.generate(config: any): any
 		+ extraTowerParts
 		+ 2
 		+ #plan.pocketSquares
-		+ 8
+		+ (8 + 2 * #config.station.rearExitOffsets)
 		+ (#plan.route - 1)
 		+ 1
 	plan.stats = {

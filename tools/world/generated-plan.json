@@ -5586,12 +5586,18 @@
     "depth": 150,
     "entryZ": 858,
     "forecourtZ": 810,
+    "rearExitHeight": 8,
+    "rearExitOffsets": [
+      -16.75,
+      16.75
+    ],
+    "rearExitWidth": 7,
     "width": 176
   },
   "stats": {
     "blockCount": 50,
     "buildingCount": 302,
-    "estimatedParts": 1920,
+    "estimatedParts": 1924,
     "landmarkCount": 12,
     "partBudget": 25000,
     "pocketSquareCount": 2,

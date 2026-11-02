@@ -1,6 +1,6 @@
 {
   "engineMeasured": false,
-  "partCount": 1817,
+  "partCount": 1821,
   "assumptions": "All exported bounding footprints; cylinders conservatively boxed; no model retention/culling/shadow simulation",
   "streamingEnvelope": {
     "64": {
@@ -16,7 +16,7 @@
       "engineMeasured": false
     },
     "256": {
-      "minIntersectingParts": 27,
+      "minIntersectingParts": 31,
       "maxIntersectingParts": 317,
       "peakPosition": {
         "x": 198.63958923538172,
@@ -28,7 +28,7 @@
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 82,
+      "minIntersectingParts": 86,
       "maxIntersectingParts": 621,
       "peakPosition": {
         "x": 136.75,
@@ -40,7 +40,7 @@
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 212,
+      "minIntersectingParts": 216,
       "maxIntersectingParts": 1005,
       "peakPosition": {
         "x": 136.75,
@@ -52,8 +52,8 @@
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1023,
-      "maxIntersectingParts": 1814,
+      "minIntersectingParts": 1027,
+      "maxIntersectingParts": 1818,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,

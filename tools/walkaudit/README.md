@@ -9,16 +9,28 @@ It returns nonzero for route, sidewalk, crossing or actual-spawn tested-anchor f
 `lune run tools/walkaudit/check_world.luau` is the direct real-geometry Lune assertion gate.
 It loads the actual builder/exporter and runs the strict pure `OrientedAudit` kernel.
 `python tools/walkaudit/compare.py` requires the independent Python results to agree with
-Lune on seal, length, steps and every sidewalk/crossing defect. Both currently fail city continuity
-for the same two station-wall conflicts. Noncollidable intended surfaces are explicitly
+Lune on seal, length, steps and every sidewalk/crossing defect. Both currently pass city continuity; the two station-wall conflicts are now repaired by real rear doorways. Noncollidable intended surfaces are explicitly
 rejected even over an otherwise solid fallback ground slab.
+
+## Manual-sweep geometry repair and tool-cache budget
+
+The Director assistant explicitly authorized a local fix outside the original World lane.
+Two 7-wide / 8-high rear doorways now align with x=103.25 and x=136.75. Three solid wall
+piers and two solid headers replace the monolithic wall; all remain collidable. No audit
+exclusions or ground changes were used. Both real geometry audits now pass all 48 sidewalks;
+part count is 1821. The full pipeline still exits 1 for the original spawn tested-anchor gate.
+
+`bootstrap_tools.py` keeps 68,617,912 bytes of pinned, SHA-256-checked executables in excluded
+`~/.cache/civitas/toolchain`, with only small symlinks in `~/bin`. If the cache is missing in
+a later snapshot, verify.sh reinstalls those exact versions automatically. Existing binaries
+were relocated, not discarded. The missing-cache download path was tested with Selene.
 
 ## Provenance
 
 `export_world.luau` loads the **unmodified** CityBuilder source with `@lune/luau`, supplying
 Lune's Instance, Vector3, Enum and Color3 as the globals. It loads the same CityGenerator
 and CityConfig modules used by WorldBootstrap. This executes the real construction loops
-and exports the actual 1817 constructed BaseParts, including all collision obstacles.
+and exports the actual 1821 constructed BaseParts, including all collision obstacles.
 No separate formula-based mock or hand-maintained part estimate is used.
 
 Lune stores properties but does not simulate Roblox. The inspected builder revision writes
