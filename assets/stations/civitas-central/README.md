@@ -64,3 +64,14 @@ The second command imports the existing station/train GLBs and generated pose GL
 Roblox Studio and a Roblox account are unavailable in this workspace. The closest available check is Blender's independent FBX and GLB reimport of `platform-module.*`: root at zero, 81 Blender meshes, 10 repeated edge/coping/tactile/canopy visuals and one each bench/bin/lamp/gantry, surface and proxy top Y=0, and surface 142.857 × 21.429 studs. This does not establish Studio scale, axes, mesh splitting, collision or appearance.
 
 A Studio operator should import **one** `platform-module.fbx` with unit/axis and scene-origin settings recorded; check the surface measures 142.857 × 21.429 studs and top is at mounting Y=0; inspect the named visual and collision objects and kit count (imported MeshPart count may differ); set visuals non-colliding and proxies anchored/colliding/invisible as appropriate; then walk the length and inspect canopy clearance, tactile detail, material/UVs and clipping. Record import settings, actual hierarchy/counts, dimensions, collision fidelity, route result and screenshots. Do not import both proxy and visual as collidable. Reflection handling is a separate check; the main station's second platform still uses negative scale.
+
+## Conditional north-apron candidate — NOT a city connection
+
+`build_apron_candidate.py` generates a standalone, provisional 1.8 m-wide ramp and level end landings outside the repository. It is **not in the station export** and has no city geometry attached. It only applies if strata/pave agree both to the Director-specified station position and to a future adjacent square surface at Y=0.63 studs. At the central north doorway, the candidate starts at (4000, 2.714286, 3300), descends 2.084286 studs over 25.0114 studs horizontally at 1:12, and reaches Y=0.63 at Z≈3274.989; the 1.8 m lower landing extends to Z≈3268.56. A different approved square height or design needs a rebuild. Guardrails, city-side interface, drainage, obstacle integration, accessibility review and Studio testing are not provided; do not deploy this as an approved accessible route.
+
+```sh
+blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/build_apron_candidate.py -- /tmp/civitas-apron-candidate
+blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_apron_candidate.py -- --gltf
+```
+
+Blender reimport of the station and candidate GLBs passes 905 sampled collision-floor and visual/proxy headroom points in a 1.2 m-wide corridor from just inside the threshold to just inside the lower landing. This is not a continuous humanoid sweep, nor evidence of a sidewalk, square or actual city connection. The current world branch still locates the square/station elsewhere; its local Y=.63 station floor does not establish that elevation at the proposed new square.
