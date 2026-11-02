@@ -20,10 +20,29 @@
 - 1,920 planned BaseParts against a 25,000-part budget; exact estimate independently checked against the builder recipe.
 - Acceptance walk: 1,633.0 studs. Seven generated-city tests and 23 shared tests pass; Selene, StyLua, Luau analysis, deterministic export/renders, and Rojo build pass.
 
+## Build verification log
+
+```text
+== selene src/ ==
+Results: 0 errors, 0 warnings, 0 parse errors
+== stylua --check src/ tests/ tools/world/ ==
+== lune shared tests ==
+23 passed, 0 failed
+== lune generated-city acceptance tests ==
+City acceptance: 7 passed, 0 failed
+== deterministic city export + plan/street-level renders ==
+Exported tools/world/generated-plan.json: 302 buildings, 12 landmarks, 1633.0 route studs, 1920 estimated parts
+Rendered: district-a-plan.png, street-view-grid.png, street-view-station.png
+== rojo build committed place file ==
+Building project 'CIVITAS'
+Built project to civitas-world-blockout.rbxlx
+ALL CHECKS PASSED
+```
+
 ## Limits
 
 The renders are generated concept views, not Roblox Studio screenshots. No Studio import, live character/physics traversal, streaming behavior, or mobile runtime test was available for this pass.
 
 ## Local handoff
 
-Prepared on `world/historic-core-blockout`. GitHub push is pending restored repository credentials; see `tools/world/README.md` for the reproducible verify command and metrics.
+Prepared on `world/historic-core-blockout`, pushed through commit `2900231`; see `tools/world/README.md` for the reproducible verify command and metrics.
