@@ -4,6 +4,15 @@
 
 ## Current checkpoint
 
+**pass-1012 re-verification:** recovered the committed `walk/audit` history by fast-forward
+from the verified bundle, preserving unrelated asset changes. Fetched origin again; strata
+is still **329d358** and `git diff --exit-code origin/world/historic-core-blockout --
+src/server/World` returns **0**. Full verification was rerun: **53 regression tests pass**,
+Lune/Python parity passes, actual acceptance still exits **1** for the documented sidewalk
+and tested-anchor failures. Geometry, part counts and continuous streaming extrema are
+unchanged. This checkpoint refreshes evidence, not geometry or feature claims. Publication
+was retried before analysis; working GitHub write authentication is still required.
+
 Continued the existing audit; no restart or substitute city. First-action push was attempted
 and failed because no usable noninteractive GitHub authentication is configured. The
 previously supplied PAT was explicitly rejected (`Invalid username or token`, exit 128).
