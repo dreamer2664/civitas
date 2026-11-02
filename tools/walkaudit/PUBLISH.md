@@ -1,3 +1,13 @@
+# Current publication
+
+`walk/audit` is published on origin. The original 7a12330 checkpoint and 89edb24 doorway
+repair were both pushed successfully and independently verified by git ls-remote.
+Current session merges World 2900231 and publishes refreshed audit evidence.
+Credentials are supplied only through temporary askpass; none are stored in remote URLs
+or committed files. The old rejected token is not used.
+
+The bundles below preserve historical checkpoints, not the latest world integration.
+
 # Manual-sweep bundle delivery
 
 Branch: `walk/audit`. No token is stored or required for this delivery.
@@ -26,7 +36,7 @@ Do not force-update an existing unrelated branch. Use a fresh destination branch
 With working authentication, the manager can publish `git push -u origin walk/audit`.
 The earlier supplied token was rejected; do not paste credentials into chat or source files.
 
-The 53 regression tests pass. Both direct real-geometry commands now exit 0 (48 sidewalks,
+The current 54 regression tests pass. Both direct real-geometry commands now exit 0 (70 sidewalk pieces,
 162 crossings clear), but the combined pipeline still exits 1 on the actual spawn's
 untouched tested-anchor sightline gate. Do not skip that gate to claim full acceptance.
 

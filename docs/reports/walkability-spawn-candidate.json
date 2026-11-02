@@ -305,7 +305,7 @@
   },
   "routeProof": {
     "defects": {},
-    "intervals": 115,
+    "intervals": 125,
     "length": 1504.999280097293,
     "maxStep": 0.55499267578125
   }

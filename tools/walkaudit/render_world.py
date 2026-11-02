@@ -31,6 +31,6 @@ for i,p in enumerate(data['route']):
     x,z=xy(p['x'],p['z']);svg.append(f'<circle cx="{x}" cy="{z}" r="5" fill="#ffd465" stroke="#142230"/><text x="{x+9}" y="{z-8}" font-size="13" fill="#fff1c6">{i+1}</text>')
 for i,p in enumerate(data['route']):
     svg.append(f'<text x="40" y="{1280+i*11}" font-size="10">{i+1}. {html.escape(p["label"])} ({p["x"]}, {p["z"]})</text>')
-svg+=['<text x="480" y="1275" font-size="13">162 grid crossings: clear; max step 0.255 studs</text>','<text x="480" y="1300" font-size="13">Exact ground containment: 2,895,200 studs²</text>',f'<text x="480" y="1325" font-size="13">384-radius bound peak: {result["streamingEnvelope"]["384"]["maxIntersectingParts"]} parts; not engine profiling.</text>','<text x="480" y="1350" font-size="13">Platform absent; mobile draw calls unmeasured.</text>','</g></svg>']
+svg+=[f'<text x="480" y="1275" font-size="13">{len(result["crossingChecks"])} crossings; max step {result["maximumCrossingStep"]:.3f} studs</text>','<text x="480" y="1300" font-size="13">Exact ground containment: 2,895,200 studs²</text>',f'<text x="480" y="1325" font-size="13">384-radius bound peak: {result["streamingEnvelope"]["384"]["maxIntersectingParts"]} parts; not engine profiling.</text>','<text x="480" y="1350" font-size="13">Platform absent; mobile draw calls unmeasured.</text>','</g></svg>']
 (root/'docs/reports/renders/walkability-route.svg').write_text('\n'.join(svg)+'\n')
 print('Rendered docs/reports/renders/walkability-route.svg from actual CityBuilder parts')

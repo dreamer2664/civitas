@@ -1,10 +1,10 @@
 {
   "status": "GEOMETRY_CHECKS_PASS",
   "engineTested": false,
-  "sourceRevision": "7a12330404a7f381a7b5451811b9cf44774a5891",
-  "worldRevision": "329d358ca71f4fa4af2ae68e09d10f906d7db673",
+  "sourceRevision": "0a46a2790997361fe8a504e93e8f22da2a8e09c9",
+  "worldRevision": "29002314a6a42b9930e9bba6c910ced417a67a23",
   "worldSourceMatchesRemote": false,
-  "partCount": 1821,
+  "partCount": 1924,
   "spawnChecks": [
     {
       "label": "District A sidewalk",
@@ -26,7 +26,7 @@
     }
   ],
   "routeLength": 1632.999280097293,
-  "routeIntervals": 125,
+  "routeIntervals": 135,
   "maxStepStuds": 0.595001220703125,
   "groundSeal": {
     "proven": true,
@@ -2965,7 +2965,7 @@
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 38,
+      "maxIntersectingParts": 46,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -2977,31 +2977,31 @@
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 317,
+      "maxIntersectingParts": 337,
       "peakPosition": {
-        "x": 198.63958923538172,
-        "z": 73.50354815891987,
-        "segment": 3,
-        "t": 0.9727917847076342
+        "x": 196.75,
+        "z": 78.575,
+        "segment": 4,
+        "t": 0.065
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 86,
-      "maxIntersectingParts": 621,
+      "minIntersectingParts": 88,
+      "maxIntersectingParts": 650,
       "peakPosition": {
         "x": 136.75,
-        "z": 12.453606872578689,
+        "z": -44.27426787834531,
         "segment": 1,
-        "t": 0.9885660710190586
+        "t": 0.9026147456388708
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 216,
-      "maxIntersectingParts": 1005,
+      "minIntersectingParts": 222,
+      "maxIntersectingParts": 1065,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -3012,8 +3012,8 @@
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1027,
-      "maxIntersectingParts": 1818,
+      "minIntersectingParts": 1084,
+      "maxIntersectingParts": 1921,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,
@@ -3027,36 +3027,36 @@
   "sampledStreamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 38,
+      "maxIntersectingParts": 46,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 315,
+      "maxIntersectingParts": 333,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "384": {
-      "minIntersectingParts": 86,
-      "maxIntersectingParts": 620,
+      "minIntersectingParts": 88,
+      "maxIntersectingParts": 650,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "512": {
-      "minIntersectingParts": 216,
-      "maxIntersectingParts": 998,
+      "minIntersectingParts": 222,
+      "maxIntersectingParts": 1056,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "1024": {
-      "minIntersectingParts": 1027,
-      "maxIntersectingParts": 1817,
+      "minIntersectingParts": 1084,
+      "maxIntersectingParts": 1920,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     }
   },
-  "unbatchedMainPassEstimate": 1818,
+  "unbatchedMainPassEstimate": 1921,
   "measuredDrawCalls": null,
   "limitations": [
     "Lune data model only, no engine",
@@ -3231,7 +3231,7 @@
       "z": -450,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3247,7 +3247,7 @@
       "z": -300,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3255,7 +3255,7 @@
       "z": -300,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3263,7 +3263,7 @@
       "z": -145,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.29999542236328125,
       "defects": []
     },
     {
@@ -3271,7 +3271,7 @@
       "z": -145,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.29999542236328125,
       "defects": []
     },
     {
@@ -3359,7 +3359,7 @@
       "z": -620,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3367,7 +3367,7 @@
       "z": -620,
       "axis": "z",
       "length": 33.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3375,7 +3375,7 @@
       "z": -450,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.29999542236328125,
       "defects": []
     },
     {
@@ -3383,7 +3383,7 @@
       "z": -450,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.29999542236328125,
       "defects": []
     },
     {
@@ -3391,7 +3391,7 @@
       "z": -300,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3399,7 +3399,7 @@
       "z": -300,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3407,7 +3407,7 @@
       "z": -145,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3415,7 +3415,7 @@
       "z": -145,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3423,7 +3423,7 @@
       "z": 0,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3431,7 +3431,7 @@
       "z": 0,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3455,7 +3455,7 @@
       "z": 295,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3463,7 +3463,7 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3551,7 +3551,7 @@
       "z": -145,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3559,7 +3559,7 @@
       "z": -145,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3583,7 +3583,7 @@
       "z": 150,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3591,7 +3591,7 @@
       "z": 150,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3599,7 +3599,7 @@
       "z": 295,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3607,7 +3607,7 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3615,7 +3615,7 @@
       "z": 455,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3623,7 +3623,7 @@
       "z": 455,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3727,7 +3727,7 @@
       "z": 150,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3735,7 +3735,7 @@
       "z": 150,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3743,7 +3743,7 @@
       "z": 295,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3751,7 +3751,7 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3759,7 +3759,7 @@
       "z": 455,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -3767,7 +3767,7 @@
       "z": 455,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3887,7 +3887,7 @@
       "z": 295,
       "axis": "x",
       "length": 33.5,
-      "maxStepStuds": 0.25499725341796875,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -3895,28 +3895,12 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
       "x": 120,
       "z": 455,
-      "axis": "x",
-      "length": 33.5,
-      "maxStepStuds": 0.25499725341796875,
-      "defects": []
-    },
-    {
-      "x": 120,
-      "z": 455,
-      "axis": "z",
-      "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
-      "defects": []
-    },
-    {
-      "x": 120,
-      "z": 630,
       "axis": "x",
       "length": 33.5,
       "maxStepStuds": 0.25499725341796875,
@@ -3924,6 +3908,22 @@
     },
     {
       "x": 120,
+      "z": 455,
+      "axis": "z",
+      "length": 16.5,
+      "maxStepStuds": 0.09999847412109375,
+      "defects": []
+    },
+    {
+      "x": 120,
+      "z": 630,
+      "axis": "x",
+      "length": 33.5,
+      "maxStepStuds": 0.25499725341796875,
+      "defects": []
+    },
+    {
+      "x": 120,
       "z": 630,
       "axis": "z",
       "length": 33.5,
@@ -4031,7 +4031,7 @@
       "z": 295,
       "axis": "x",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -4039,7 +4039,7 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4175,7 +4175,7 @@
       "z": 295,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -4183,7 +4183,7 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.29999542236328125,
       "defects": []
     },
     {
@@ -4191,7 +4191,7 @@
       "z": 455,
       "axis": "x",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4199,7 +4199,7 @@
       "z": 455,
       "axis": "z",
       "length": 16.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4319,7 +4319,7 @@
       "z": 295,
       "axis": "x",
       "length": 33.5,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.399993896484375,
       "defects": []
     },
     {
@@ -4327,7 +4327,7 @@
       "z": 295,
       "axis": "z",
       "length": 12.0,
-      "maxStepStuds": 0.09999847412109375,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4364,7 +4364,7 @@
     }
   ],
   "crossingDefectCount": 0,
-  "maximumCrossingStep": 0.25499725341796875,
+  "maximumCrossingStep": 0.399993896484375,
   "sidewalkChecks": [
     {
       "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_1",
@@ -4391,39 +4391,39 @@
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_Sidewalk_1",
-      "length": 81.81527709960938,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_approach_1_Sidewalk_1",
+      "length": 69.77259826660156,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_Sidewalk_-1",
-      "length": 81.81527709960938,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_approach_1_Sidewalk_-1",
+      "length": 69.77259826660156,
+      "maxStepStuds": 0.16500091552734375,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_approach_1_Sidewalk_1",
+      "length": 55.87290954589842,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_Sidewalk_1",
-      "length": 67.64195251464844,
-      "maxStepStuds": 0.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_approach_1_Sidewalk_-1",
+      "length": 55.87290954589842,
+      "maxStepStuds": 0.16500091552734375,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_Sidewalk_-1",
-      "length": 67.64195251464844,
-      "maxStepStuds": 0.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_approach_1_Sidewalk_1",
+      "length": 212.07922363281259,
+      "maxStepStuds": 0.16500091552734375,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_Sidewalk_1",
-      "length": 227.83689880371094,
-      "maxStepStuds": 0.0,
-      "defects": []
-    },
-    {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_Sidewalk_-1",
-      "length": 227.83689880371094,
-      "maxStepStuds": 0.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_approach_1_Sidewalk_-1",
+      "length": 212.07922363281259,
+      "maxStepStuds": 0.16500091552734375,
       "defects": []
     },
     {
@@ -4451,27 +4451,63 @@
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1@piece1",
+      "length": 244.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1@piece1",
+      "length": 244.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1@piece2",
+      "length": 1134.0,
       "maxStepStuds": 0.154998779296875,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1@piece2",
+      "length": 1134.0,
       "maxStepStuds": 0.154998779296875,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1@piece1",
+      "length": 78.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1@piece1",
+      "length": 78.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1@piece2",
+      "length": 148.0,
       "maxStepStuds": 0.154998779296875,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1@piece2",
+      "length": 148.0,
       "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1@piece3",
+      "length": 368.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1@piece3",
+      "length": 368.0,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4499,15 +4535,27 @@
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1@piece1",
+      "length": 898.0,
       "maxStepStuds": 0.154998779296875,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1@piece1",
+      "length": 898.0,
       "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1@piece2",
+      "length": 228.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1@piece2",
+      "length": 228.0,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4523,15 +4571,27 @@
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1@piece1",
+      "length": 1048.0,
       "maxStepStuds": 0.154998779296875,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1",
-      "length": 1418.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1@piece1",
+      "length": 1048.0,
       "maxStepStuds": 0.154998779296875,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1@piece2",
+      "length": 228.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1@piece2",
+      "length": 228.0,
+      "maxStepStuds": 0.0,
       "defects": []
     },
     {
@@ -4559,14 +4619,26 @@
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1@piece1",
+      "length": 496.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1@piece1",
+      "length": 496.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1@piece2",
+      "length": 798.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1@piece2",
+      "length": 798.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
@@ -4595,50 +4667,110 @@
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1@piece1",
+      "length": 513.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1@piece1",
+      "length": 513.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1@piece2",
+      "length": 798.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1@piece2",
+      "length": 798.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1@piece1",
+      "length": 513.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1@piece1",
+      "length": 513.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1@piece2",
+      "length": 798.0,
       "maxStepStuds": 0.0,
       "defects": []
     },
     {
-      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1",
-      "length": 1618.0,
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1@piece2",
+      "length": 798.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1@piece1",
+      "length": 968.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1@piece1",
+      "length": 968.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1@piece2",
+      "length": 148.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1@piece2",
+      "length": 148.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1@piece3",
+      "length": 28.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1@piece3",
+      "length": 28.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1@piece1",
+      "length": 1113.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1@piece1",
+      "length": 1113.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1@piece2",
+      "length": 348.0,
+      "maxStepStuds": 0.0,
+      "defects": []
+    },
+    {
+      "id": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1@piece2",
+      "length": 348.0,
       "maxStepStuds": 0.0,
       "defects": []
     },

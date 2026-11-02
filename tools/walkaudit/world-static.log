@@ -1,11 +1,7 @@
-$ selene src/server/World tools/world/test_city.luau
 Results:
 0 errors
 0 warnings
 0 parse errors
-$ stylua --check src/server/World tools/world/test_city.luau
-$ rojo sourcemap default.project.json
 Created sourcemap at /home/user/.cache/civitas/sourcemap.json
-$ luau-lsp analyze --platform=roblox --definitions ... --sourcemap ... src/server/World/*.luau
 [INFO] Loading definitions file: @roblox - /home/user/.cache/civitas/globalTypes.d.luau
 [WARN] client does not allow didChangeWatchedFiles registration - automatic updating on sourcemap changes disabled

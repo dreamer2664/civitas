@@ -1,9 +1,9 @@
 {
-  "sourceRevision": "7a12330404a7f381a7b5451811b9cf44774a5891",
+  "sourceRevision": "0a46a2790997361fe8a504e93e8f22da2a8e09c9",
   "sourceSHA256": {
-    "src/server/World/CityBuilder.luau": "b066d356595bdc34914107fc0930438eff7c31dc19e22b8cd94f89684080d024",
-    "src/server/World/CityConfig.luau": "7d8e3ea4615ea2574f6db023438574ea628c43107c12497ff5c76218eb6eaba5",
-    "src/server/World/CityGenerator.luau": "d938ae1ea144abd1ecc56699b8cb18a5d1c0c4675a3cf0c563abe03a1b82d880",
+    "src/server/World/CityBuilder.luau": "6733d902c10523f8dd2399bc9d0642b92c6f90eefd38cb06c1f1253a38b83b4a",
+    "src/server/World/CityConfig.luau": "d4701dc2987a6ba581ed0f4a9baa79df0496c4c8fb0a0c11d1e4051186bc5bb3",
+    "src/server/World/CityGenerator.luau": "e795594eb62a0b0885ff0da981b17909b62c3e9c6f5be0888ead9d9b9da87236",
     "src/server/World/WorldBootstrap.server.luau": "6fd428708ea38d96ba6f02f6f17efaf6c21923f1e084cbee5290468dd6d73dac",
     "src/server/Walkability/Audit.luau": "39eada5d259940d4ef1392187ae4ee43f633950561ed402e8105e94b9d5d8d5a",
     "src/server/Walkability/OrientedAudit.luau": "98627af08ff30b1dda903f88c15edd63702d836d9af43bbdcc1b0a690b935f67",
@@ -12,11 +12,11 @@
     "tools/walkaudit/audit_world.py": "d3c84a672d949e5f16f5b3cfd2e97201ce9cb84805df85cdbcbbb34f24c810fb",
     "tools/walkaudit/bootstrap_tools.py": "4368cd87274ea05d8d2c8c0faca6015b67cfa17936e1d998fa9e53241ae106b8",
     "tools/walkaudit/check_world.luau": "724232f64809993c11a47719d54a207d611a0db0d930b145cfd0d6ba0b9353c5",
-    "tools/walkaudit/compare.py": "0d9b99419ab90c1372c8ebb29d37a05f0efdcc87790f8f25d50e17835c0e5941",
-    "tools/walkaudit/export_world.luau": "527190819cbd9b8fcb4f48aaff4b1671966814b099d3e52fceff585c96d33290",
+    "tools/walkaudit/compare.py": "fc00e1a135182ee6419020a45ddddf41c83c757df636baed8312352d4c246df7",
+    "tools/walkaudit/export_world.luau": "4286ba99caa9af7529acbfc362c5ca48171bc004ed0913a1ee58237fed3ac21d",
     "tools/walkaudit/measure.py": "f5a0be35263742a3a8bae42d6f83c6911f4189ce8c4db76824e11befe1928c56",
     "tools/walkaudit/render.py": "bd3de0649bb89019c4347b6502b24900e0f8872e89e0ea5b1206d1446c708237",
-    "tools/walkaudit/render_world.py": "4fbbf3bd181a040ccee78ae5bf9e1fa5871d30dbb361578f78e3878aa8d5c2ad",
+    "tools/walkaudit/render_world.py": "69d20b7f532673f9bf843253296e218dc825181f0687d6b214d255636bfaa1bd",
     "tools/walkaudit/run.luau": "205f30817e48cda3afca30760c5270c5229f55ee128e7284562051d2cdf16f88",
     "tools/walkaudit/sightlines.py": "e3d4d9b98bd2e71594d474b814210e9d43c9fb67aee5f33c9380c1d28b0bbe9a",
     "tools/walkaudit/streaming.py": "b299babe4ec9b48e55c8d4728d8dbe891f2887b8cc0597ac829efab5f6f18cee",
@@ -28,13 +28,13 @@
     "tests/walk/test_world_audit.py": "3525e17fb60a41a42aad105e17844a79b98b17cb9c3146906756eb17861c7b2d"
   },
   "staticWorkspaceParts": 0,
-  "generatedWalkableParts": 1821,
+  "generatedWalkableParts": 1924,
   "drawCalls": null,
-  "unbatchedMainPassEstimate": 1818,
+  "unbatchedMainPassEstimate": 1921,
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 38,
+      "maxIntersectingParts": 46,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -46,31 +46,31 @@
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 317,
+      "maxIntersectingParts": 337,
       "peakPosition": {
-        "x": 198.63958923538172,
-        "z": 73.50354815891987,
-        "segment": 3,
-        "t": 0.9727917847076342
+        "x": 196.75,
+        "z": 78.575,
+        "segment": 4,
+        "t": 0.065
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 86,
-      "maxIntersectingParts": 621,
+      "minIntersectingParts": 88,
+      "maxIntersectingParts": 650,
       "peakPosition": {
         "x": 136.75,
-        "z": 12.453606872578689,
+        "z": -44.27426787834531,
         "segment": 1,
-        "t": 0.9885660710190586
+        "t": 0.9026147456388708
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 216,
-      "maxIntersectingParts": 1005,
+      "minIntersectingParts": 222,
+      "maxIntersectingParts": 1065,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -81,8 +81,8 @@
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1027,
-      "maxIntersectingParts": 1818,
+      "minIntersectingParts": 1084,
+      "maxIntersectingParts": 1921,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,
