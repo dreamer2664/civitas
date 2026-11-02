@@ -529,6 +529,19 @@ function CityBuilder.build(plan: any, config: any, rootParent: Instance): Model
 		Color3.fromRGB(151, 143, 125)
 	)
 	plaza:SetAttribute("Walkable", true)
+	local pocketSquares = makeModel(publicRealm, "IrregularPocketSquares")
+	for _, square in ipairs(plan.pocketSquares) do
+		local paving = createPart(
+			pocketSquares,
+			square.name:gsub(" ", "") .. "_Paving",
+			Vector3.new(square.width, 0.45, square.depth),
+			Vector3.new(square.centerX, 0.34, square.centerZ),
+			Enum.Material.Cobblestone,
+			Color3.fromRGB(164, 153, 130)
+		)
+		paving:SetAttribute("Walkable", true)
+		paving:SetAttribute("IrregularJunctionSquare", true)
+	end
 	local fountain = createPart(
 		publicRealm,
 		"SquareFountainBasin",
