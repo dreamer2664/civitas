@@ -3,7 +3,7 @@
 `bash tools/walkaudit/verify.sh` from repo root runs lint, format and scoped Luau static
 analysis, 18 pure Luau regression tests, 11 Python clipping/geometry regression tests,
 9 continuous streaming-envelope regression tests, 9 conservative sightline tests,
-strata's 6 generator tests, Rojo assembly, actual builder export and exact geometry audit.
+strata's 7 generator tests, Rojo assembly, actual builder export and exact geometry audit.
 It returns nonzero for route, sidewalk, crossing or actual-spawn tested-anchor failures. This is NOT an engine test.
 
 `lune run tools/walkaudit/check_world.luau` is the direct real-geometry Lune assertion gate.
@@ -17,8 +17,8 @@ rejected even over an otherwise solid fallback ground slab.
 The Director assistant explicitly authorized a local fix outside the original World lane.
 Two 7-wide / 8-high rear doorways now align with x=103.25 and x=136.75. Three solid wall
 piers and two solid headers replace the monolithic wall; all remain collidable. No audit
-exclusions or ground changes were used. Both real geometry audits now pass all 48 sidewalks;
-part count is 1821. The full pipeline still exits 1 for the original spawn tested-anchor gate.
+exclusions or ground changes were used. Both real geometry audits now pass all 70 sidewalk pieces;
+part count is now 1924 after the latest superblock/pocket-square integration. The full pipeline still exits 1 for the original spawn tested-anchor gate.
 
 `bootstrap_tools.py` keeps 68,617,912 bytes of pinned, SHA-256-checked executables in excluded
 `~/.cache/civitas/toolchain`, with only small symlinks in `~/bin`. If the cache is missing in
@@ -30,7 +30,7 @@ were relocated, not discarded. The missing-cache download path was tested with S
 `export_world.luau` loads the **unmodified** CityBuilder source with `@lune/luau`, supplying
 Lune's Instance, Vector3, Enum and Color3 as the globals. It loads the same CityGenerator
 and CityConfig modules used by WorldBootstrap. This executes the real construction loops
-and exports the actual 1821 constructed BaseParts, including all collision obstacles.
+and exports the actual 1924 constructed BaseParts, including all collision obstacles.
 No separate formula-based mock or hand-maintained part estimate is used.
 
 Lune stores properties but does not simulate Roblox. The inspected builder revision writes
@@ -104,3 +104,13 @@ all sidewalk findings, policy findings and streaming envelopes.
 
 No source geometry or collision flags are changed by these tools. Forward findings to strata.
 Full audits stay offline; no Heartbeat scan is introduced.
+
+## Latest strata integration (2900231)
+
+Retains both real rear exits and includes strata's superblocks and two pocket squares.
+Actual builder count is 1924; 70 sidewalk pieces and 162 crossing axes pass. Split pieces
+reuse FullName, so the export now retains sourcePath/sourceIndex and assigns export-local
+@pieceN IDs for duplicates. Every exported ID is asserted unique; comparisons no longer
+conflate distinct pieces with identical source paths. Geometry algorithms are unchanged.
+Continuous peaks: radius 384 -> 650; radius 1024 -> 1921. Original spawn tested-anchor
+gate still fails. The 54 unit/regression tests pass; the full slice is not frozen.

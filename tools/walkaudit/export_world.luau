@@ -25,7 +25,17 @@ local builder = luau.load(builderSource, {
 local plan = generator.generate(config)
 local world = builder.build(plan, config, roblox.Instance.new("Workspace"))
 local parts = {}
-for _, part in world:GetDescendants() do
+local descendants = world:GetDescendants()
+local pathCounts: { [string]: number } = {}
+local occurrences: { [string]: number } = {}
+local idSeen: { [string]: boolean } = {}
+for _, part in descendants do
+	if part:IsA("BasePart") then
+		local path = part:GetFullName()
+		pathCounts[path] = (pathCounts[path] or 0) + 1
+	end
+end
+for _, part in descendants do
 	if part:IsA("BasePart") then
 		assert(
 			part.ClassName == "Part" or part.ClassName == "SpawnLocation",
@@ -53,8 +63,20 @@ for _, part in world:GetDescendants() do
 		if type(shape) ~= "string" then
 			shape = "Block"
 		end
+		-- Strata's clipped street pieces legitimately reuse names. FullName alone
+		-- is no longer unique; retain it and disambiguate actual exported instances.
+		local sourcePath = part:GetFullName()
+		occurrences[sourcePath] = (occurrences[sourcePath] or 0) + 1
+		local id = sourcePath
+		if pathCounts[sourcePath] > 1 then
+			id ..= "@piece" .. tostring(occurrences[sourcePath])
+		end
+		assert(not idSeen[id], "duplicate exported geometry ID: " .. id)
+		idSeen[id] = true
 		table.insert(parts, {
-			id = part:GetFullName(),
+			id = id,
+			sourcePath = sourcePath,
+			sourceIndex = #parts + 1,
 			name = part.Name,
 			x = pos.X,
 			y = pos.Y,
