@@ -1,5 +1,5 @@
 {
-  "sourceRevision": "0a46a2790997361fe8a504e93e8f22da2a8e09c9",
+  "sourceRevision": "8bb66a3ee80653bf448222254562f8a12ce4cc52",
   "sourceSHA256": {
     "src/server/World/CityBuilder.luau": "6733d902c10523f8dd2399bc9d0642b92c6f90eefd38cb06c1f1253a38b83b4a",
     "src/server/World/CityConfig.luau": "d4701dc2987a6ba581ed0f4a9baa79df0496c4c8fb0a0c11d1e4051186bc5bb3",
@@ -13,16 +13,18 @@
     "tools/walkaudit/bootstrap_tools.py": "4368cd87274ea05d8d2c8c0faca6015b67cfa17936e1d998fa9e53241ae106b8",
     "tools/walkaudit/check_world.luau": "724232f64809993c11a47719d54a207d611a0db0d930b145cfd0d6ba0b9353c5",
     "tools/walkaudit/compare.py": "fc00e1a135182ee6419020a45ddddf41c83c757df636baed8312352d4c246df7",
-    "tools/walkaudit/export_world.luau": "4286ba99caa9af7529acbfc362c5ca48171bc004ed0913a1ee58237fed3ac21d",
+    "tools/walkaudit/export_world.luau": "58da081e0a87a2cd40e7f853eb29f87e6cc421632775ce2bafcb4f2e14f0a88f",
     "tools/walkaudit/measure.py": "f5a0be35263742a3a8bae42d6f83c6911f4189ce8c4db76824e11befe1928c56",
+    "tools/walkaudit/parks.py": "f2ac6dfe3e9010b77de8744abd382ccd077376241d3c3f21b94bb05d914e15ee",
     "tools/walkaudit/render.py": "bd3de0649bb89019c4347b6502b24900e0f8872e89e0ea5b1206d1446c708237",
     "tools/walkaudit/render_world.py": "69d20b7f532673f9bf843253296e218dc825181f0687d6b214d255636bfaa1bd",
     "tools/walkaudit/run.luau": "205f30817e48cda3afca30760c5270c5229f55ee128e7284562051d2cdf16f88",
     "tools/walkaudit/sightlines.py": "e3d4d9b98bd2e71594d474b814210e9d43c9fb67aee5f33c9380c1d28b0bbe9a",
     "tools/walkaudit/streaming.py": "b299babe4ec9b48e55c8d4728d8dbe891f2887b8cc0597ac829efab5f6f18cee",
-    "tools/walkaudit/verify.sh": "89af644c7242f4a5ffe50356f0b77ee7d873f922ac288647cc73e9f41fbcca25",
+    "tools/walkaudit/verify.sh": "5d4d1c5f9166eb70257ade13def2a8b92ab3d416d932b05249d8e668b80770f9",
     "tests/walk/oriented.luau": "6d2b3edc0ea759cc75b2cf79c2139d1ee80330d1eac29ebf24375db435ebf737",
     "tests/walk/run.luau": "d0c299f1893524fb0d7b02559fea0522c95b49cef5b9d0a060b024f799900ed5",
+    "tests/walk/test_parks.py": "a017cdad77b0564807b5aa5906961b1bff3248ca7739bc07d7074ba657c107e4",
     "tests/walk/test_sightlines.py": "6223c0e81817e258831e1bd3cbb4675186aab3388c582d6aadd9a01ca3bdd4bb",
     "tests/walk/test_streaming.py": "4d991f557b97a5c5af00455ef807c3a9c44892d049787b03dffa431d23f96726",
     "tests/walk/test_world_audit.py": "3525e17fb60a41a42aad105e17844a79b98b17cb9c3146906756eb17861c7b2d"
