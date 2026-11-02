@@ -11,6 +11,7 @@ local specFiles = {
 	"rail/spline.spec",
 	"rail/kinematics.spec",
 	"util/rate_limit.spec",
+	"scheduling/timetable_scheduler.spec",
 }
 
 for _, specFile in ipairs(specFiles) do
