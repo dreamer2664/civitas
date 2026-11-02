@@ -1,4 +1,7 @@
-"""Test regenerated prototype GLBs at one static, hypothetical aligned door."""
+"""Test regenerated prototype GLB or FBX at one static, hypothetical aligned door.
+
+The train and station are always GLB. Pass --fbx to reimport bridge FBXs.
+"""
 import bpy,os,runpy,sys
 from mathutils import Vector
 D=os.path.dirname(os.path.abspath(__file__))
@@ -9,7 +12,9 @@ s=bpy.context.scene
 
 def check(pose,expect_missing):
  before={o.as_pointer() for o in s.objects}
- bpy.ops.import_scene.gltf(filepath=os.path.join(path,'boarding-bridge-'+pose+'.glb'))
+ bridge=os.path.join(path,'boarding-bridge-'+pose+('.fbx' if '--fbx' in sys.argv else '.glb'))
+ if '--fbx' in sys.argv: bpy.ops.import_scene.fbx(filepath=bridge)
+ else: bpy.ops.import_scene.gltf(filepath=bridge)
  objects=[o for o in s.objects if o.as_pointer() not in before]
  root=next(o for o in objects if o.name=='BRIDGE_'+pose.upper()+'_ROOT')
  # Prototype origin is the door-aligned track centre at rail-top height.
@@ -29,5 +34,5 @@ def check(pose,expect_missing):
  print('BRIDGE_POSE',pose,'extent_m',round(extent,3),'missing_support_samples',len(missing),'of',3*141)
  for o in objects:bpy.data.objects.remove(o,do_unlink=True)
 check('stowed',True);check('deployed',False)
-print('BRIDGE_SAMPLE_PASS: deployed prototype supports 423 sampled points over the representative 0.56m-wide boarding corridor')
-print('SAFETY LIMIT: static aligned GLBs only; no articulation, interlocks, service placement, moving-train clearance, Studio physics or avatar test')
+print('BRIDGE_SAMPLE_PASS', 'FBX' if '--fbx' in sys.argv else 'GLB', ': deployed prototype supports 423 sampled points over the representative 0.56m-wide boarding corridor')
+print('SAFETY LIMIT: static aligned Blender reimports only; no articulation, interlocks, service placement, moving-train clearance, Studio physics or avatar test')
