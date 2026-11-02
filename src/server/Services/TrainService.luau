@@ -4,10 +4,13 @@ TrainService.luau — server-authoritative train service (thin Roblox layer).
 
 Server owns position; clients send intent only. Integrates each active train along its
 spline at a fixed 30 Hz tick using Kinematics.luau and publishes TrainState snapshots
-(Train.State) at the same tick for clients to interpolate.
+(Train.State) at the same tick for clients to interpolate. Computes block signalling
+aspects (red/yellow/green) per tick and enforces red signals with auto-brake. Publishes
+SignalState snapshots (Signal.Observe) at the same tick.
 
-Pure rules live in src/shared/Rail (Spline, Kinematics — unit tested under lune). This module
-is the Roblox boundary: RunService tick loop, RemoteEvent wiring, intent validation.
+Pure rules live in src/shared/Rail (Spline, Kinematics, Signalling — unit tested under
+lune). This module is the Roblox boundary: RunService tick loop, RemoteEvent wiring,
+intent validation.
 
 Not unit-testable under lune (touches game:GetService / RunService); verified by selene +
 luau-lsp with tools/globalTypes.d.luau, plus rojo build.
@@ -23,17 +26,25 @@ local Shared = ReplicatedStorage:WaitForChild("Shared") :: Instance
 local Rail = Shared:WaitForChild("Rail") :: Instance
 
 -- Module loading at the Roblox boundary: WaitForChild returns Instance?, so the require
--- result is cast. Pure rules in Spline/Kinematics are unit-tested separately under lune.
+-- result is cast. Pure rules in Spline/Kinematics/Signalling are unit-tested separately
+-- under lune.
 local SplineModule = require(Rail:WaitForChild("Spline") :: ModuleScript)
 local KinematicsModule = require(Rail:WaitForChild("Kinematics") :: ModuleScript)
+local SignallingModule = require(Rail:WaitForChild("Signalling") :: ModuleScript)
 local StopsModule = require(Shared:WaitForChild("Config"):WaitForChild("Stops"))
+local TracksModule = require(Shared:WaitForChild("Config"):WaitForChild("Tracks"))
+local SignalsModule = require(Shared:WaitForChild("Config"):WaitForChild("Signals"))
 local Spline = SplineModule :: any
 local Kinematics = KinematicsModule :: any
+local Signalling = SignallingModule :: any
 local Stops = StopsModule :: any
+local Tracks = TracksModule :: any
+local Signals = SignalsModule :: any
 
 -- Remote names mirror src/shared/Contracts/RemoteContract.luau (PROVISIONALLY RATIFIED).
 local REMOTE_CONTROL = "Train.Control"
 local REMOTE_STATE = "Train.State"
+local REMOTE_OBSERVE = "Signal.Observe"
 
 -- Fixed tick: 30 Hz (~33.3 ms per tick). All of integration + publication fits in one tick.
 local TICK_RATE = 30
@@ -81,6 +92,7 @@ local pendingIntents: { [string]: { tractive: number, serviceBrake: number, emer
 
 local controlRemote: RemoteEvent?
 local stateRemote: RemoteEvent?
+local signalRemote: RemoteEvent?
 
 -- Helper: find a child by name, creating it if absent. Always returns non-nil.
 local function getOrCreate(child: Instance, name: string, className: string): Instance
@@ -95,11 +107,12 @@ local function getOrCreate(child: Instance, name: string, className: string): In
 end
 
 -- Ensure remotes exist under ReplicatedStorage.Remotes.
-local function ensureRemotes(): (RemoteEvent, RemoteEvent)
+local function ensureRemotes(): (RemoteEvent, RemoteEvent, RemoteEvent)
 	local remotes = getOrCreate(ReplicatedStorage, "Remotes", "Folder")
 	local control = getOrCreate(remotes, REMOTE_CONTROL, "RemoteEvent") :: RemoteEvent
 	local state = getOrCreate(remotes, REMOTE_STATE, "RemoteEvent") :: RemoteEvent
-	return control, state
+	local observe = getOrCreate(remotes, REMOTE_OBSERVE, "RemoteEvent") :: RemoteEvent
+	return control, state, observe
 end
 
 -- Validate and clamp an intent command before the sim sees it. All fields bounded.
@@ -207,6 +220,24 @@ end
 
 -- One fixed tick of the simulation.
 local function tick(dt: number)
+	-- Collect current train positions for signalling (before integration this tick).
+	local trainPositions: { { trainId: string, distanceStuds: number } } = {}
+	for _, train in pairs(activeTrains) do
+		table.insert(
+			trainPositions,
+			{ trainId = train.trainId, distanceStuds = train.state.distanceStuds }
+		)
+	end
+
+	-- Pre-compute sorted signals and aspects per line.
+	local lineSignalsSorted: { [string]: { any } } = {}
+	local lineAspects: { [string]: { [string]: any } } = {}
+	for lineId, lineSignals in pairs(Signals) do
+		local sorted = Signalling.sortSignals(lineSignals :: any)
+		lineSignalsSorted[lineId] = sorted
+		lineAspects[lineId] = Signalling.computeAspects(sorted :: any, trainPositions :: any) :: any
+	end
+
 	for _, train in pairs(activeTrains) do
 		-- Resolve the next stop ahead if we don't have one.
 		if train.nextStop == nil then
@@ -218,7 +249,7 @@ local function tick(dt: number)
 		-- Consume the intent: apply once per tick.
 		pendingIntents[train.trainId] = nil
 
-		-- Station stop logic: brake into stops, dwell, open/close doors.
+		-- === Station stop logic: brake into stops, dwell, open/close doors. ===
 		if train.nextStop ~= nil then
 			local distToStop = train.nextStop.distanceStuds - train.state.distanceStuds
 			local stopDist = serviceStopDistance(train)
@@ -258,6 +289,29 @@ local function tick(dt: number)
 			end
 		end
 
+		-- === Signal enforcement: red signal ahead => auto-brake into stop. ===
+		local sorted = lineSignalsSorted[train.lineId]
+		local aspects = lineAspects[train.lineId]
+		if sorted ~= nil and aspects ~= nil then
+			local signalAhead =
+				Signalling.signalAhead(sorted :: any, train.state.distanceStuds :: any)
+			if signalAhead ~= nil then
+				local aspect = aspects[signalAhead.signalId :: string]
+				if aspect == "red" then
+					-- Must stop before this signal. If within braking distance, auto-brake.
+					local distToSignal = signalAhead.distanceStuds - train.state.distanceStuds
+					local stopDist = serviceStopDistance(train)
+					if distToSignal <= stopDist + 2 then
+						command = { tractive = 0, serviceBrake = 1, emergencyBrake = false }
+						if train.state.speedMs <= 0.5 then
+							train.state.distanceStuds = signalAhead.distanceStuds
+							train.state.speedMs = 0
+						end
+					end
+				end
+			end
+		end
+
 		-- Kinematics.integrate is pure; called here at the Roblox boundary.
 		local newState = Kinematics.integrate(
 			train.state :: any,
@@ -276,10 +330,21 @@ local function tick(dt: number)
 		}
 	end
 
-	-- Publish authoritative state at the fixed tick.
+	-- Publish authoritative train state at the fixed tick.
 	if stateRemote ~= nil then
 		local states = {}
 		for _, train in pairs(activeTrains) do
+			-- Signal aspect this train is approaching (next signal ahead).
+			local signalAspect = "green"
+			local sorted = lineSignalsSorted[train.lineId]
+			local aspects = lineAspects[train.lineId]
+			if sorted ~= nil and aspects ~= nil then
+				local signalAhead =
+					Signalling.signalAhead(sorted :: any, train.state.distanceStuds :: any)
+				if signalAhead ~= nil then
+					signalAspect = aspects[signalAhead.signalId :: string] :: any
+				end
+			end
 			table.insert(states, {
 				trainId = train.trainId,
 				lineId = train.lineId,
@@ -287,23 +352,35 @@ local function tick(dt: number)
 				speedStudsPerS = train.state.speedMs / (1 / 0.28), -- m/s -> studs/s
 				direction = 1,
 				doorState = train.doorState,
-				signalAspect = "green",
+				signalAspect = signalAspect,
 				speedLimitKph = 120,
 				updatedAt = os.clock(),
 			})
 		end
 		stateRemote.FireAllClients(states)
 	end
+
+	-- Publish signal aspects (Signal.Observe) at the fixed tick.
+	if signalRemote ~= nil then
+		local signalStates = {}
+		for lineId, sorted in pairs(lineSignalsSorted) do
+			local aspects = lineAspects[lineId] :: any
+			for _, signal in ipairs(sorted :: any) do
+				table.insert(signalStates, {
+					segmentId = signal.signalId,
+					aspect = aspects[signal.signalId :: string] :: any,
+				})
+			end
+		end
+		signalRemote.FireAllClients(signalStates)
+	end
 end
 
--- Track config: data-driven line definitions (src/shared/Config/Tracks.luau).
-local TracksModule = require(Shared:WaitForChild("Config"):WaitForChild("Tracks"))
-local Tracks = TracksModule :: any
-
 function TrainService.start()
-	controlRemote, stateRemote = ensureRemotes()
+	controlRemote, stateRemote, signalRemote = ensureRemotes()
 	assert(controlRemote ~= nil, "TrainService: control remote must exist")
 	assert(stateRemote ~= nil, "TrainService: state remote must exist")
+	assert(signalRemote ~= nil, "TrainService: observe remote must exist")
 
 	-- Spawn a demonstration train on Line 1 at the start of the line (Airport Terminal).
 	-- The train applies throttle so it moves along the spline in the tick loop.
