@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# One command that runs every static and unit check for the client, in the order the standards
-# list them. Exits non-zero at the first failure. Run from anywhere; it changes to the repo root.
+# One command that runs every static and unit check for the client and the world lane, in the order
+# the standards list them. Exits non-zero at the first failure. Run from anywhere; it changes to the repo root.
 #
 #   tools/install-tools.sh   (once per machine: pinned toolchain + Roblox definitions)
 #   tools/verify.sh
@@ -68,6 +68,20 @@ python3 tools/check_streaming.py
 
 step "lune unit tests"
 lune run tests/run.luau
+
+step "stylua --check (world tools)"
+stylua --check tools/world
+
+# World lane (vector/pave/strata on main): server World analysis, city acceptance and export.
+analyse "luau-lsp analyze: src/server/World (strict, Roblox definitions)" \
+  --definitions="$DEFS" --sourcemap=build/sourcemap.json --base-luaurc=.luaurc src/server/World
+
+step "lune generated-city acceptance tests"
+lune run tools/world/test_city.luau
+
+step "deterministic city export + plan/street-level renders"
+lune run tools/world/export_plan.luau
+python3 tools/world/render_city.py
 
 step "rojo build (place file)"
 rojo build default.project.json --output build/civitas.rbxlx
