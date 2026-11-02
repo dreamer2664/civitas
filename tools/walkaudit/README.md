@@ -114,3 +114,14 @@ reuse FullName, so the export now retains sourcePath/sourceIndex and assigns exp
 conflate distinct pieces with identical source paths. Geometry algorithms are unchanged.
 Continuous peaks: radius 384 -> 650; radius 1024 -> 1921. Original spawn tested-anchor
 gate still fails. The 54 unit/regression tests pass; the full slice is not frozen.
+
+## Full parcel and PARKS audit
+
+`python tools/walkaudit/parks.py` creates `audit/PARKS.json` and
+`audit/meanGrade-summary.md`. It verifies every original grid cell is present exactly once
+across all 50 parcels, preserving the four superblock cell unions rather than their AABBs.
+All three actual public squares are inventoried too; no semantic parks are invented.
+meanGrade is percent physical surface slope, not a quality score. Uniform horizontal
+support proves 0%; tilted/unknown support reports null, never a fabricated grade. Step
+height bounds and obstacles are separate. Full free-space connectivity is not implied.
+Eight regression tests protect these distinctions. All analysis is offline.

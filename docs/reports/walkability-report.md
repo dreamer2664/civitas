@@ -13,7 +13,7 @@ snapshots), then authenticated without storing a credential in source or remote 
 ```
 
 Thus the earlier audit and sidewalk repair were already published. This checkpoint integrates
-strata's newer **29002314a6a42b9930e9bba6c910ced417a67a23**, through merge **0a46a27**,
+strata's newer **c015646** (geometry unchanged from **29002314a6a42b9930e9bba6c910ced417a67a23**), through merge **0a46a27**,
 retaining WALK's real rear pedestrian doorways. The resulting city has **302 ordinary
 buildings, 12 landmarks, 50 blocks including 4 irregular superblocks, 2 pocket squares and
 35 street segments**. Final published checkpoint SHA is verified after commit/push in the
@@ -111,8 +111,8 @@ count. No full-city per-frame scan or other phone-client analysis was introduced
 
 ## Verification
 
-Run `bash tools/walkaudit/verify.sh`. All **54 regression tests pass**: 18 Luau + 11 Python
-geometry + 9 streaming + 9 sightline + **7 upstream generator tests** (one added by strata).
+Run `bash tools/walkaudit/verify.sh`. All **62 regression tests pass**: 18 Luau + 11 Python
+geometry + 9 streaming + 9 sightline + **8 full-parcel grade tests** + **7 upstream generator tests** (one added by strata).
 The full pipeline still returns **1** for the separate current-spawn tested-anchor gate.
 
 * Direct Lune real-world geometry check: **exit 0**, 1924 parts, 70 sidewalks clear, sealed
@@ -129,6 +129,35 @@ The full pipeline still returns **1** for the separate current-spawn tested-anch
 
 Full evidence: `tools/walkaudit/evidence.log`, `world-static.log`, result JSONs and
 `docs/reports/renders/walkability-route.svg` (actual geometry and gold route).
+
+## Full-superblock PARKS audit and meanGrade
+
+Command: `python tools/walkaudit/parks.py` after the real Lune export. Artifact:
+**audit/PARKS.json**, with SHA-256 of the actual exported geometry. All **50 parcels / 64
+source grid cells** are covered exactly once; this includes every one of the four
+superblocks and three actual public squares. Domains are grid-centreline cell unions,
+including former road corridors; missing L-shape cells are not filled by a bounding box.
+No semantic park inventory exists, so the requested filename does not invent parks.
+
+**meanGrade means physical surface slope percent, NOT a quality score.** Every intersecting
+certified support face is horizontal, proving meanGrade=0 regardless of area overlap.
+Steps remain separate; full free-space connectivity around buildings/obstacles is not
+claimed by this grade statistic. This is headless data evidence, not engine profiling.
+
+| Region | Kind | Domain area (studs²) | meanGrade (%) | Support step bound (studs) | Base sealed |
+|---|---|---:|---:|---:|---|
+| West Cloister Superblock | superblock | 111800.0 | 0.000 | 0.400 | yes |
+| Northwest Irregular Court | superblock | 70300.0 | 0.000 | 0.400 | yes |
+| East Guild Superblock | superblock | 143350.0 | 0.000 | 0.400 | yes |
+| East Gate Superblock | superblock | 106750.0 | 0.000 | 0.565 | yes |
+| Old Town Square | public_square | 11000.0 | 0.000 | 0.575 | yes |
+| Crooked Lane Court | public_square | 896.0 | 0.000 | 0.565 | yes |
+| Market Cut Square | public_square | 1292.0 | 0.000 | 0.565 | yes |
+
+Uniform horizontal support proves meanGrade=0 without double-counting overlap. Step bounds are conservative max-minus-min of actual support tops, not a measured boundary transition. Buildings and obstacles remain excluded from any claim of free-space connectivity. No semantic parks or engine tests are invented.
+
+No HTTP 403 was observed. The push endpoint is `https://github.com/dreamer2664/civitas.git`;
+only the `walk/audit` branch is published.
 
 ## Remaining gates
 

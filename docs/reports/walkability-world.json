@@ -1,4 +1,1132 @@
 {
+  "blocks": [
+    {
+      "cells": [
+        {
+          "id": 3,
+          "maxX": -507.5,
+          "maxZ": -162.5,
+          "minX": -624,
+          "minZ": -284.75,
+          "xi": 1,
+          "zi": 3
+        },
+        {
+          "id": 11,
+          "maxX": -365.25,
+          "maxZ": -162.5,
+          "minX": -472.5,
+          "minZ": -284.75,
+          "xi": 2,
+          "zi": 3
+        },
+        {
+          "id": 19,
+          "maxX": -217.5,
+          "maxZ": -162.5,
+          "minX": -334.75,
+          "minZ": -284.75,
+          "xi": 3,
+          "zi": 3
+        },
+        {
+          "id": 12,
+          "maxX": -365.25,
+          "maxZ": -15.25,
+          "minX": -472.5,
+          "minZ": -127.5,
+          "xi": 2,
+          "zi": 4
+        },
+        {
+          "id": 20,
+          "maxX": -217.5,
+          "maxZ": -15.25,
+          "minX": -334.75,
+          "minZ": -127.5,
+          "xi": 3,
+          "zi": 4
+        }
+      ],
+      "id": 1,
+      "maxX": -217.5,
+      "maxZ": -15.25,
+      "minX": -624,
+      "minZ": -284.75,
+      "name": "West Cloister Superblock",
+      "superblock": true
+    },
+    {
+      "cells": [
+        {
+          "id": 9,
+          "maxX": -365.25,
+          "maxZ": -467.5,
+          "minX": -472.5,
+          "minZ": -594,
+          "xi": 2,
+          "zi": 1
+        },
+        {
+          "id": 17,
+          "maxX": -217.5,
+          "maxZ": -467.5,
+          "minX": -334.75,
+          "minZ": -594,
+          "xi": 3,
+          "zi": 1
+        },
+        {
+          "id": 10,
+          "maxX": -365.25,
+          "maxZ": -315.25,
+          "minX": -472.5,
+          "minZ": -432.5,
+          "xi": 2,
+          "zi": 2
+        }
+      ],
+      "id": 2,
+      "maxX": -217.5,
+      "maxZ": -315.25,
+      "minX": -472.5,
+      "minZ": -594,
+      "name": "Northwest Irregular Court",
+      "superblock": true
+    },
+    {
+      "cells": [
+        {
+          "id": 22,
+          "maxX": -217.5,
+          "maxZ": 279.75,
+          "minX": -334.75,
+          "minZ": 167.5,
+          "xi": 3,
+          "zi": 6
+        },
+        {
+          "id": 30,
+          "maxX": -70.25,
+          "maxZ": 279.75,
+          "minX": -182.5,
+          "minZ": 167.5,
+          "xi": 4,
+          "zi": 6
+        },
+        {
+          "id": 38,
+          "maxX": 94,
+          "maxZ": 279.75,
+          "minX": -39.75,
+          "minZ": 167.5,
+          "xi": 5,
+          "zi": 6
+        },
+        {
+          "id": 23,
+          "maxX": -217.5,
+          "maxZ": 437.5,
+          "minX": -334.75,
+          "minZ": 310.25,
+          "xi": 3,
+          "zi": 7
+        },
+        {
+          "id": 31,
+          "maxX": -70.25,
+          "maxZ": 437.5,
+          "minX": -182.5,
+          "minZ": 310.25,
+          "xi": 4,
+          "zi": 7
+        },
+        {
+          "id": 39,
+          "maxX": 94,
+          "maxZ": 437.5,
+          "minX": -39.75,
+          "minZ": 310.25,
+          "xi": 5,
+          "zi": 7
+        }
+      ],
+      "id": 3,
+      "maxX": 94,
+      "maxZ": 437.5,
+      "minX": -334.75,
+      "minZ": 167.5,
+      "name": "East Guild Superblock",
+      "superblock": true
+    },
+    {
+      "cells": [
+        {
+          "id": 54,
+          "maxX": 417.5,
+          "maxZ": 279.75,
+          "minX": 285.25,
+          "minZ": 167.5,
+          "xi": 7,
+          "zi": 6
+        },
+        {
+          "id": 62,
+          "maxX": 594,
+          "maxZ": 279.75,
+          "minX": 452.5,
+          "minZ": 167.5,
+          "xi": 8,
+          "zi": 6
+        },
+        {
+          "id": 55,
+          "maxX": 417.5,
+          "maxZ": 437.5,
+          "minX": 285.25,
+          "minZ": 310.25,
+          "xi": 7,
+          "zi": 7
+        },
+        {
+          "id": 63,
+          "maxX": 594,
+          "maxZ": 437.5,
+          "minX": 452.5,
+          "minZ": 310.25,
+          "xi": 8,
+          "zi": 7
+        }
+      ],
+      "id": 4,
+      "maxX": 594,
+      "maxZ": 437.5,
+      "minX": 285.25,
+      "minZ": 167.5,
+      "name": "East Gate Superblock",
+      "superblock": true
+    },
+    {
+      "cells": [
+        {
+          "id": 1,
+          "maxX": -507.5,
+          "maxZ": -467.5,
+          "minX": -624,
+          "minZ": -594,
+          "xi": 1,
+          "zi": 1
+        }
+      ],
+      "id": 5,
+      "maxX": -507.5,
+      "maxZ": -467.5,
+      "minX": -624,
+      "minZ": -594,
+      "name": "Block 1",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 2,
+          "maxX": -507.5,
+          "maxZ": -315.25,
+          "minX": -624,
+          "minZ": -432.5,
+          "xi": 1,
+          "zi": 2
+        }
+      ],
+      "id": 6,
+      "maxX": -507.5,
+      "maxZ": -315.25,
+      "minX": -624,
+      "minZ": -432.5,
+      "name": "Block 2",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 4,
+          "maxX": -507.5,
+          "maxZ": -15.25,
+          "minX": -624,
+          "minZ": -127.5,
+          "xi": 1,
+          "zi": 4
+        }
+      ],
+      "id": 7,
+      "maxX": -507.5,
+      "maxZ": -15.25,
+      "minX": -624,
+      "minZ": -127.5,
+      "name": "Block 4",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 5,
+          "maxX": -507.5,
+          "maxZ": 132.5,
+          "minX": -624,
+          "minZ": 15.25,
+          "xi": 1,
+          "zi": 5
+        }
+      ],
+      "id": 8,
+      "maxX": -507.5,
+      "maxZ": 132.5,
+      "minX": -624,
+      "minZ": 15.25,
+      "name": "Block 5",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 6,
+          "maxX": -507.5,
+          "maxZ": 279.75,
+          "minX": -624,
+          "minZ": 167.5,
+          "xi": 1,
+          "zi": 6
+        }
+      ],
+      "id": 9,
+      "maxX": -507.5,
+      "maxZ": 279.75,
+      "minX": -624,
+      "minZ": 167.5,
+      "name": "Block 6",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 7,
+          "maxX": -507.5,
+          "maxZ": 437.5,
+          "minX": -624,
+          "minZ": 310.25,
+          "xi": 1,
+          "zi": 7
+        }
+      ],
+      "id": 10,
+      "maxX": -507.5,
+      "maxZ": 437.5,
+      "minX": -624,
+      "minZ": 310.25,
+      "name": "Block 7",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 8,
+          "maxX": -507.5,
+          "maxZ": 604,
+          "minX": -624,
+          "minZ": 472.5,
+          "xi": 1,
+          "zi": 8
+        }
+      ],
+      "id": 11,
+      "maxX": -507.5,
+      "maxZ": 604,
+      "minX": -624,
+      "minZ": 472.5,
+      "name": "Block 8",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 13,
+          "maxX": -365.25,
+          "maxZ": 132.5,
+          "minX": -472.5,
+          "minZ": 15.25,
+          "xi": 2,
+          "zi": 5
+        }
+      ],
+      "id": 12,
+      "maxX": -365.25,
+      "maxZ": 132.5,
+      "minX": -472.5,
+      "minZ": 15.25,
+      "name": "Block 13",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 14,
+          "maxX": -365.25,
+          "maxZ": 279.75,
+          "minX": -472.5,
+          "minZ": 167.5,
+          "xi": 2,
+          "zi": 6
+        }
+      ],
+      "id": 13,
+      "maxX": -365.25,
+      "maxZ": 279.75,
+      "minX": -472.5,
+      "minZ": 167.5,
+      "name": "Block 14",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 15,
+          "maxX": -365.25,
+          "maxZ": 437.5,
+          "minX": -472.5,
+          "minZ": 310.25,
+          "xi": 2,
+          "zi": 7
+        }
+      ],
+      "id": 14,
+      "maxX": -365.25,
+      "maxZ": 437.5,
+      "minX": -472.5,
+      "minZ": 310.25,
+      "name": "Block 15",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 16,
+          "maxX": -365.25,
+          "maxZ": 604,
+          "minX": -472.5,
+          "minZ": 472.5,
+          "xi": 2,
+          "zi": 8
+        }
+      ],
+      "id": 15,
+      "maxX": -365.25,
+      "maxZ": 604,
+      "minX": -472.5,
+      "minZ": 472.5,
+      "name": "Block 16",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 18,
+          "maxX": -217.5,
+          "maxZ": -315.25,
+          "minX": -334.75,
+          "minZ": -432.5,
+          "xi": 3,
+          "zi": 2
+        }
+      ],
+      "id": 16,
+      "maxX": -217.5,
+      "maxZ": -315.25,
+      "minX": -334.75,
+      "minZ": -432.5,
+      "name": "Block 18",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 21,
+          "maxX": -217.5,
+          "maxZ": 132.5,
+          "minX": -334.75,
+          "minZ": 15.25,
+          "xi": 3,
+          "zi": 5
+        }
+      ],
+      "id": 17,
+      "maxX": -217.5,
+      "maxZ": 132.5,
+      "minX": -334.75,
+      "minZ": 15.25,
+      "name": "Block 21",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 24,
+          "maxX": -217.5,
+          "maxZ": 604,
+          "minX": -334.75,
+          "minZ": 472.5,
+          "xi": 3,
+          "zi": 8
+        }
+      ],
+      "id": 18,
+      "maxX": -217.5,
+      "maxZ": 604,
+      "minX": -334.75,
+      "minZ": 472.5,
+      "name": "Block 24",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 25,
+          "maxX": -70.25,
+          "maxZ": -467.5,
+          "minX": -182.5,
+          "minZ": -594,
+          "xi": 4,
+          "zi": 1
+        }
+      ],
+      "id": 19,
+      "maxX": -70.25,
+      "maxZ": -467.5,
+      "minX": -182.5,
+      "minZ": -594,
+      "name": "Block 25",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 26,
+          "maxX": -70.25,
+          "maxZ": -315.25,
+          "minX": -182.5,
+          "minZ": -432.5,
+          "xi": 4,
+          "zi": 2
+        }
+      ],
+      "id": 20,
+      "maxX": -70.25,
+      "maxZ": -315.25,
+      "minX": -182.5,
+      "minZ": -432.5,
+      "name": "Block 26",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 27,
+          "maxX": -70.25,
+          "maxZ": -162.5,
+          "minX": -182.5,
+          "minZ": -284.75,
+          "xi": 4,
+          "zi": 3
+        }
+      ],
+      "id": 21,
+      "maxX": -70.25,
+      "maxZ": -162.5,
+      "minX": -182.5,
+      "minZ": -284.75,
+      "name": "Block 27",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 28,
+          "maxX": -70.25,
+          "maxZ": -15.25,
+          "minX": -182.5,
+          "minZ": -127.5,
+          "xi": 4,
+          "zi": 4
+        }
+      ],
+      "id": 22,
+      "maxX": -70.25,
+      "maxZ": -15.25,
+      "minX": -182.5,
+      "minZ": -127.5,
+      "name": "Block 28",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 29,
+          "maxX": -70.25,
+          "maxZ": 132.5,
+          "minX": -182.5,
+          "minZ": 15.25,
+          "xi": 4,
+          "zi": 5
+        }
+      ],
+      "id": 23,
+      "maxX": -70.25,
+      "maxZ": 132.5,
+      "minX": -182.5,
+      "minZ": 15.25,
+      "name": "Block 29",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 32,
+          "maxX": -70.25,
+          "maxZ": 604,
+          "minX": -182.5,
+          "minZ": 472.5,
+          "xi": 4,
+          "zi": 8
+        }
+      ],
+      "id": 24,
+      "maxX": -70.25,
+      "maxZ": 604,
+      "minX": -182.5,
+      "minZ": 472.5,
+      "name": "Block 32",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 33,
+          "maxX": 94,
+          "maxZ": -467.5,
+          "minX": -39.75,
+          "minZ": -594,
+          "xi": 5,
+          "zi": 1
+        }
+      ],
+      "id": 25,
+      "maxX": 94,
+      "maxZ": -467.5,
+      "minX": -39.75,
+      "minZ": -594,
+      "name": "Block 33",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 34,
+          "maxX": 94,
+          "maxZ": -315.25,
+          "minX": -39.75,
+          "minZ": -432.5,
+          "xi": 5,
+          "zi": 2
+        }
+      ],
+      "id": 26,
+      "maxX": 94,
+      "maxZ": -315.25,
+      "minX": -39.75,
+      "minZ": -432.5,
+      "name": "Block 34",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 35,
+          "maxX": 94,
+          "maxZ": -162.5,
+          "minX": -39.75,
+          "minZ": -284.75,
+          "xi": 5,
+          "zi": 3
+        }
+      ],
+      "id": 27,
+      "maxX": 94,
+      "maxZ": -162.5,
+      "minX": -39.75,
+      "minZ": -284.75,
+      "name": "Block 35",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 36,
+          "maxX": 94,
+          "maxZ": -15.25,
+          "minX": -39.75,
+          "minZ": -127.5,
+          "xi": 5,
+          "zi": 4
+        }
+      ],
+      "id": 28,
+      "maxX": 94,
+      "maxZ": -15.25,
+      "minX": -39.75,
+      "minZ": -127.5,
+      "name": "Block 36",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 37,
+          "maxX": 94,
+          "maxZ": 132.5,
+          "minX": -39.75,
+          "minZ": 15.25,
+          "xi": 5,
+          "zi": 5
+        }
+      ],
+      "id": 29,
+      "maxX": 94,
+      "maxZ": 132.5,
+      "minX": -39.75,
+      "minZ": 15.25,
+      "name": "Block 37",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 40,
+          "maxX": 94,
+          "maxZ": 604,
+          "minX": -39.75,
+          "minZ": 472.5,
+          "xi": 5,
+          "zi": 8
+        }
+      ],
+      "id": 30,
+      "maxX": 94,
+      "maxZ": 604,
+      "minX": -39.75,
+      "minZ": 472.5,
+      "name": "Block 40",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 41,
+          "maxX": 254.75,
+          "maxZ": -467.5,
+          "minX": 146,
+          "minZ": -594,
+          "xi": 6,
+          "zi": 1
+        }
+      ],
+      "id": 31,
+      "maxX": 254.75,
+      "maxZ": -467.5,
+      "minX": 146,
+      "minZ": -594,
+      "name": "Block 41",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 42,
+          "maxX": 254.75,
+          "maxZ": -315.25,
+          "minX": 146,
+          "minZ": -432.5,
+          "xi": 6,
+          "zi": 2
+        }
+      ],
+      "id": 32,
+      "maxX": 254.75,
+      "maxZ": -315.25,
+      "minX": 146,
+      "minZ": -432.5,
+      "name": "Block 42",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 43,
+          "maxX": 254.75,
+          "maxZ": -162.5,
+          "minX": 146,
+          "minZ": -284.75,
+          "xi": 6,
+          "zi": 3
+        }
+      ],
+      "id": 33,
+      "maxX": 254.75,
+      "maxZ": -162.5,
+      "minX": 146,
+      "minZ": -284.75,
+      "name": "Block 43",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 44,
+          "maxX": 254.75,
+          "maxZ": -15.25,
+          "minX": 146,
+          "minZ": -127.5,
+          "xi": 6,
+          "zi": 4
+        }
+      ],
+      "id": 34,
+      "maxX": 254.75,
+      "maxZ": -15.25,
+      "minX": 146,
+      "minZ": -127.5,
+      "name": "Block 44",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 45,
+          "maxX": 254.75,
+          "maxZ": 132.5,
+          "minX": 146,
+          "minZ": 15.25,
+          "xi": 6,
+          "zi": 5
+        }
+      ],
+      "id": 35,
+      "maxX": 254.75,
+      "maxZ": 132.5,
+      "minX": 146,
+      "minZ": 15.25,
+      "name": "Block 45",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 46,
+          "maxX": 254.75,
+          "maxZ": 279.75,
+          "minX": 146,
+          "minZ": 167.5,
+          "xi": 6,
+          "zi": 6
+        }
+      ],
+      "id": 36,
+      "maxX": 254.75,
+      "maxZ": 279.75,
+      "minX": 146,
+      "minZ": 167.5,
+      "name": "Block 46",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 47,
+          "maxX": 254.75,
+          "maxZ": 437.5,
+          "minX": 146,
+          "minZ": 310.25,
+          "xi": 6,
+          "zi": 7
+        }
+      ],
+      "id": 37,
+      "maxX": 254.75,
+      "maxZ": 437.5,
+      "minX": 146,
+      "minZ": 310.25,
+      "name": "Block 47",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 48,
+          "maxX": 254.75,
+          "maxZ": 604,
+          "minX": 146,
+          "minZ": 472.5,
+          "xi": 6,
+          "zi": 8
+        }
+      ],
+      "id": 38,
+      "maxX": 254.75,
+      "maxZ": 604,
+      "minX": 146,
+      "minZ": 472.5,
+      "name": "Block 48",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 49,
+          "maxX": 417.5,
+          "maxZ": -467.5,
+          "minX": 285.25,
+          "minZ": -594,
+          "xi": 7,
+          "zi": 1
+        }
+      ],
+      "id": 39,
+      "maxX": 417.5,
+      "maxZ": -467.5,
+      "minX": 285.25,
+      "minZ": -594,
+      "name": "Block 49",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 50,
+          "maxX": 417.5,
+          "maxZ": -315.25,
+          "minX": 285.25,
+          "minZ": -432.5,
+          "xi": 7,
+          "zi": 2
+        }
+      ],
+      "id": 40,
+      "maxX": 417.5,
+      "maxZ": -315.25,
+      "minX": 285.25,
+      "minZ": -432.5,
+      "name": "Block 50",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 51,
+          "maxX": 417.5,
+          "maxZ": -162.5,
+          "minX": 285.25,
+          "minZ": -284.75,
+          "xi": 7,
+          "zi": 3
+        }
+      ],
+      "id": 41,
+      "maxX": 417.5,
+      "maxZ": -162.5,
+      "minX": 285.25,
+      "minZ": -284.75,
+      "name": "Block 51",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 52,
+          "maxX": 417.5,
+          "maxZ": -15.25,
+          "minX": 285.25,
+          "minZ": -127.5,
+          "xi": 7,
+          "zi": 4
+        }
+      ],
+      "id": 42,
+      "maxX": 417.5,
+      "maxZ": -15.25,
+      "minX": 285.25,
+      "minZ": -127.5,
+      "name": "Block 52",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 53,
+          "maxX": 417.5,
+          "maxZ": 132.5,
+          "minX": 285.25,
+          "minZ": 15.25,
+          "xi": 7,
+          "zi": 5
+        }
+      ],
+      "id": 43,
+      "maxX": 417.5,
+      "maxZ": 132.5,
+      "minX": 285.25,
+      "minZ": 15.25,
+      "name": "Block 53",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 56,
+          "maxX": 417.5,
+          "maxZ": 604,
+          "minX": 285.25,
+          "minZ": 472.5,
+          "xi": 7,
+          "zi": 8
+        }
+      ],
+      "id": 44,
+      "maxX": 417.5,
+      "maxZ": 604,
+      "minX": 285.25,
+      "minZ": 472.5,
+      "name": "Block 56",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 57,
+          "maxX": 594,
+          "maxZ": -467.5,
+          "minX": 452.5,
+          "minZ": -594,
+          "xi": 8,
+          "zi": 1
+        }
+      ],
+      "id": 45,
+      "maxX": 594,
+      "maxZ": -467.5,
+      "minX": 452.5,
+      "minZ": -594,
+      "name": "Block 57",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 58,
+          "maxX": 594,
+          "maxZ": -315.25,
+          "minX": 452.5,
+          "minZ": -432.5,
+          "xi": 8,
+          "zi": 2
+        }
+      ],
+      "id": 46,
+      "maxX": 594,
+      "maxZ": -315.25,
+      "minX": 452.5,
+      "minZ": -432.5,
+      "name": "Block 58",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 59,
+          "maxX": 594,
+          "maxZ": -162.5,
+          "minX": 452.5,
+          "minZ": -284.75,
+          "xi": 8,
+          "zi": 3
+        }
+      ],
+      "id": 47,
+      "maxX": 594,
+      "maxZ": -162.5,
+      "minX": 452.5,
+      "minZ": -284.75,
+      "name": "Block 59",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 60,
+          "maxX": 594,
+          "maxZ": -15.25,
+          "minX": 452.5,
+          "minZ": -127.5,
+          "xi": 8,
+          "zi": 4
+        }
+      ],
+      "id": 48,
+      "maxX": 594,
+      "maxZ": -15.25,
+      "minX": 452.5,
+      "minZ": -127.5,
+      "name": "Block 60",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 61,
+          "maxX": 594,
+          "maxZ": 132.5,
+          "minX": 452.5,
+          "minZ": 15.25,
+          "xi": 8,
+          "zi": 5
+        }
+      ],
+      "id": 49,
+      "maxX": 594,
+      "maxZ": 132.5,
+      "minX": 452.5,
+      "minZ": 15.25,
+      "name": "Block 61",
+      "superblock": false
+    },
+    {
+      "cells": [
+        {
+          "id": 64,
+          "maxX": 594,
+          "maxZ": 604,
+          "minX": 452.5,
+          "minZ": 472.5,
+          "xi": 8,
+          "zi": 8
+        }
+      ],
+      "id": 50,
+      "maxX": 594,
+      "maxZ": 604,
+      "minX": 452.5,
+      "minZ": 472.5,
+      "name": "Block 64",
+      "superblock": false
+    }
+  ],
   "bounds": {
     "maxX": 770,
     "maxZ": 1055,
@@ -11,6 +1139,28 @@
     "minRadius": 64,
     "targetRadius": 1024
   },
+  "gridX": [
+    -650,
+    -490,
+    -350,
+    -200,
+    -55,
+    120,
+    270,
+    435,
+    620
+  ],
+  "gridZ": [
+    -620,
+    -450,
+    -300,
+    -145,
+    0,
+    150,
+    295,
+    455,
+    630
+  ],
   "intersections": [
     {
       "radius": 11,
@@ -41118,6 +42268,28 @@
       "x": -604.5833129882812,
       "y": 5,
       "z": -562.375
+    }
+  ],
+  "plaza": {
+    "centerX": 200,
+    "centerZ": 75,
+    "depth": 110,
+    "width": 100
+  },
+  "pocketSquares": [
+    {
+      "centerX": -175,
+      "centerZ": -80,
+      "depth": 28,
+      "name": "Crooked Lane Court",
+      "width": 32
+    },
+    {
+      "centerX": 435,
+      "centerZ": 455,
+      "depth": 34,
+      "name": "Market Cut Square",
+      "width": 38
     }
   ],
   "recommendedSpawn": {
