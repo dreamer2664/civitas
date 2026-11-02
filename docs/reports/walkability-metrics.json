@@ -1,5 +1,5 @@
 {
-  "sourceRevision": "64e3aa1f33c0b624724918c135e21a067de925cd",
+  "sourceRevision": "dd5763275a57cf0586df12fe84db2cdff6cef40b",
   "sourceSHA256": {
     "src/server/World/CityBuilder.luau": "77bbab8baddb4223801e00c427fc83191c6ae6b6d46c2fd17605ff41f3fc1311",
     "src/server/World/CityConfig.luau": "59a685ec43cdf404012e467aa90befcfbe5aed5a44710d5e90db8ef418eda13d",
