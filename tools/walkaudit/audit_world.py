@@ -129,6 +129,7 @@ def audit(data, minimum=1500, measure_streaming=True, check_spawns=True):
     return dict(status='GEOMETRY_CHECKS_PASS' if not defects else 'FAIL',engineTested=False,
         sourceRevision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         worldRevision=subprocess.check_output(['git','rev-parse','origin/world/historic-core-blockout'],cwd=ROOT,text=True).strip(),
+        worldSourceMatchesRemote=subprocess.run(['git','diff','--quiet','origin/world/historic-core-blockout','--','src/server/World'],cwd=ROOT).returncode==0,
         partCount=len(parts),spawnChecks=spawn_results,routeLength=total,routeIntervals=checks,maxStepStuds=max_step,
         groundSeal={'proven':seal_witness is not None,'method':'exact closed base-solid contains all domain corners','witness':seal_witness['id'] if seal_witness else None,'bounds':bounds,'areaStudsSquared':(bounds['maxX']-bounds['minX'])*(bounds['maxZ']-bounds['minZ'])},
         defects=defects,decorativeCollisionCount=len(decorative),decorativeCollisionClasses=counts,

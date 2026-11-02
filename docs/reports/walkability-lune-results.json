@@ -1,8 +1,8 @@
 {
   "blockedCrossings": 0,
-  "blockedSidewalks": 2,
+  "blockedSidewalks": 0,
   "categoryCounts": {
-    "BODY_BLOCKED": 6,
+    "BODY_BLOCKED": 0,
     "NONCOLLIDABLE_SURFACE": 0,
     "ROUTE_GAP": 0,
     "STEP": 0
@@ -1802,7 +1802,7 @@
   },
   "maximumCrossingStep": 0.25499725341796875,
   "maximumSidewalkStep": 0.75,
-  "partCount": 1817,
+  "partCount": 1821,
   "recommendedSpawn": {
     "point": {
       "x": 136.75,
@@ -2144,26 +2144,7 @@
     },
     {
       "result": {
-        "defects": [
-          {
-            "code": "BODY_BLOCKED",
-            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
-            "x": 136.75,
-            "z": 963.25
-          },
-          {
-            "code": "BODY_BLOCKED",
-            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
-            "x": 136.75,
-            "z": 966.2500000000002
-          },
-          {
-            "code": "BODY_BLOCKED",
-            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
-            "x": 136.75,
-            "z": 968.125
-          }
-        ],
+        "defects": {},
         "intervals": 97,
         "length": 1618,
         "maxStep": 0.75
@@ -2172,26 +2153,7 @@
     },
     {
       "result": {
-        "defects": [
-          {
-            "code": "BODY_BLOCKED",
-            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
-            "x": 103.25,
-            "z": 963.25
-          },
-          {
-            "code": "BODY_BLOCKED",
-            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
-            "x": 103.25,
-            "z": 966.2500000000002
-          },
-          {
-            "code": "BODY_BLOCKED",
-            "detail": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Stations.CentralStation_WalkablePlaceholder.StationRearWall",
-            "x": 103.25,
-            "z": 968.125
-          }
-        ],
+        "defects": {},
         "intervals": 78,
         "length": 1618,
         "maxStep": 0.230010986328125

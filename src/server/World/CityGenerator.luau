@@ -388,7 +388,7 @@ function CityGenerator.generate(config: any): any
 		+ #plan.landmarks * 3
 		+ extraTowerParts
 		+ 2
-		+ 8
+		+ (8 + 2 * #config.station.rearExitOffsets) -- facade piers + headers replace one rear wall
 		+ (#plan.route - 1)
 		+ 1
 	plan.stats = {

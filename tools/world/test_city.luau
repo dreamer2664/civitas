@@ -174,6 +174,12 @@ suite.test(
 		expect.ok(config.streets.cornerRadius > 0)
 		expect.ok(plan.stats.estimatedParts < plan.stats.partBudget)
 		expect.equal(plan.stats.partBudget, 25000)
+		expect.equal(#config.station.rearExitOffsets, 2)
+		local sidewalkOffset = config.streets.arterialWidth / 2 + config.streets.sidewalkWidth / 2
+		expect.near(config.station.rearExitOffsets[1], -sidewalkOffset, 1e-6)
+		expect.near(config.station.rearExitOffsets[2], sidewalkOffset, 1e-6)
+		expect.ok(config.station.rearExitWidth >= config.streets.sidewalkWidth)
+		expect.ok(config.station.rearExitHeight >= 6)
 		local streetParts = 0
 		for _, street in ipairs(plan.streets) do
 			expect.ok(
@@ -216,7 +222,7 @@ suite.test(
 			+ ordinaryParts
 			+ landmarkParts
 			+ 2
-			+ 8
+			+ (8 + 2 * #config.station.rearExitOffsets)
 			+ plan.stats.routeLinkCount
 			+ 1
 		expect.equal(

@@ -60,6 +60,10 @@ local CityConfig = {
 		concourseZ = 925,
 		width = 176,
 		depth = 150,
+		-- Manual-sweep authorization: keep both avenue sidewalks open through the rear facade.
+		rearExitOffsets = { -16.75, 16.75 },
+		rearExitWidth = 7,
+		rearExitHeight = 8,
 	},
 	streaming = {
 		minRadius = 64,

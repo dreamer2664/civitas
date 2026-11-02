@@ -1843,11 +1843,50 @@ local function buildStation(parent: Instance, station: any, palette: any)
 			palette.civic
 		)
 	end
+	-- Keep a solid rear facade, but make two real pedestrian doorways on the
+	-- existing sidewalk axes. No collision disabling, audit exclusions or rescue paving.
+	local rearZ = station.concourseZ + station.depth * 0.275
+	local cursor = x - (station.width - 20) / 2
+	local right = x + (station.width - 20) / 2
+	local wallHeight = 19
+	assert(
+		station.rearExitHeight >= 6 and station.rearExitHeight < wallHeight,
+		"invalid rear exit headroom"
+	)
+	assert(station.rearExitWidth >= 3, "rear exits must clear a pedestrian body")
+	for index, offset in ipairs(station.rearExitOffsets) do
+		local center = x + offset
+		local openingLeft = center - station.rearExitWidth / 2
+		local openingRight = center + station.rearExitWidth / 2
+		assert(
+			openingLeft > cursor and openingRight < right,
+			"rear exits overlap or leave the facade"
+		)
+		createPart(
+			model,
+			"StationRearWall_Pier_" .. tostring(index),
+			Vector3.new(openingLeft - cursor, wallHeight, 8),
+			Vector3.new((cursor + openingLeft) / 2, wallHeight / 2, rearZ),
+			Enum.Material.Brick,
+			palette.civic
+		)
+		local header = createPart(
+			model,
+			"StationRearWall_Header_" .. tostring(index),
+			Vector3.new(station.rearExitWidth, wallHeight - station.rearExitHeight, 8),
+			Vector3.new(center, (wallHeight + station.rearExitHeight) / 2, rearZ),
+			Enum.Material.Brick,
+			palette.civic
+		)
+		header:SetAttribute("PedestrianOpeningWidth", station.rearExitWidth)
+		header:SetAttribute("PedestrianOpeningHeight", station.rearExitHeight)
+		cursor = openingRight
+	end
 	createPart(
 		model,
-		"StationRearWall",
-		Vector3.new(station.width - 20, 19, 8),
-		Vector3.new(x, 9.5, station.concourseZ + station.depth * 0.275),
+		"StationRearWall_Pier_" .. tostring(#station.rearExitOffsets + 1),
+		Vector3.new(right - cursor, wallHeight, 8),
+		Vector3.new((cursor + right) / 2, wallHeight / 2, rearZ),
 		Enum.Material.Brick,
 		palette.civic
 	)
@@ -2036,6 +2075,10 @@ local CityConfig = {
 		concourseZ = 925,
 		width = 176,
 		depth = 150,
+		-- Manual-sweep authorization: keep both avenue sidewalks open through the rear facade.
+		rearExitOffsets = { -16.75, 16.75 },
+		rearExitWidth = 7,
+		rearExitHeight = 8,
 	},
 	streaming = {
 		minRadius = 64,
@@ -2446,7 +2489,7 @@ function CityGenerator.generate(config: any): any
 		+ #plan.landmarks * 3
 		+ extraTowerParts
 		+ 2
-		+ 8
+		+ (8 + 2 * #config.station.rearExitOffsets) -- facade piers + headers replace one rear wall
 		+ (#plan.route - 1)
 		+ 1
 	plan.stats = {

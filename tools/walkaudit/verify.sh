@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/../.."
+python tools/walkaudit/bootstrap_tools.py
 export PATH="$HOME/bin:$PATH"
 selene src/server/Walkability src/server/Spawn tests/walk tools/walkaudit
 stylua --check src/server/Walkability src/server/Spawn tests/walk tools/walkaudit
