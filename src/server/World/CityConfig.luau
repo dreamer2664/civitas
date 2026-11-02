@@ -43,10 +43,13 @@ local CityConfig = {
 		superblocks = {
 			{
 				name = "West Cloister Superblock",
-				cells = { { 2, 3 }, { 3, 3 }, { 2, 4 }, { 3, 4 } },
+				cells = { { 1, 3 }, { 2, 3 }, { 3, 3 }, { 2, 4 }, { 3, 4 } },
 			},
 			{ name = "Northwest Irregular Court", cells = { { 2, 1 }, { 3, 1 }, { 2, 2 } } },
-			{ name = "East Guild Superblock", cells = { { 4, 6 }, { 5, 6 }, { 4, 7 }, { 5, 7 } } },
+			{
+				name = "East Guild Superblock",
+				cells = { { 3, 6 }, { 4, 6 }, { 5, 6 }, { 3, 7 }, { 4, 7 }, { 5, 7 } },
+			},
 			{ name = "East Gate Superblock", cells = { { 7, 6 }, { 8, 6 }, { 7, 7 }, { 8, 7 } } },
 		},
 		minWidth = 28,
