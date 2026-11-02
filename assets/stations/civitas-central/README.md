@@ -30,6 +30,7 @@ blender -b assets/stations/civitas-central/civitas-central.blend --python-exit-c
 blender -b assets/stations/civitas-central/civitas-central.blend --python-exit-code 1 -P assets/stations/civitas-central/export_reflected_module.py
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_reflected_module.py
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_module_export.py
+blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_module_export.py -- --fbx
 blender -b assets/stations/civitas-central/civitas-central.blend --python-exit-code 1 -P assets/stations/civitas-central/verify_instances.py
 blender -b assets/stations/civitas-central/civitas-central.blend --python-exit-code 1 -P assets/stations/civitas-central/verify_station.py
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_station.py -- --gltf
@@ -57,3 +58,9 @@ blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-cen
 ```
 
 The second command imports the existing station/train GLBs and generated pose GLBs into Blender at one hypothetical aligned intermediate-car doorway. Along three sample lines and 141 points each across a 0.56 m corridor, the stowed pose leaves 30 support points absent; the deployed pose leaves zero. This is static point sampling, not continuous support, a humanoid crossing, motion envelope or Studio collision verification. The deployed geometry intentionally overlaps existing footboard/platform support at the same height; actual physics handling of overlaps remains untested. It closes the gap **in that test only**, not in the delivered operational train.
+
+## One-module Studio import handoff (not yet performed)
+
+Roblox Studio and a Roblox account are unavailable in this workspace. The closest available check is Blender's independent FBX and GLB reimport of `platform-module.*`: root at zero, 81 Blender meshes, 10 repeated edge/coping/tactile/canopy visuals and one each bench/bin/lamp/gantry, surface and proxy top Y=0, and surface 142.857 × 21.429 studs. This does not establish Studio scale, axes, mesh splitting, collision or appearance.
+
+A Studio operator should import **one** `platform-module.fbx` with unit/axis and scene-origin settings recorded; check the surface measures 142.857 × 21.429 studs and top is at mounting Y=0; inspect the named visual and collision objects and kit count (imported MeshPart count may differ); set visuals non-colliding and proxies anchored/colliding/invisible as appropriate; then walk the length and inspect canopy clearance, tactile detail, material/UVs and clipping. Record import settings, actual hierarchy/counts, dimensions, collision fidelity, route result and screenshots. Do not import both proxy and visual as collidable. Reflection handling is a separate check; the main station's second platform still uses negative scale.
