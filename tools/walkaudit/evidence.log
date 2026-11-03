@@ -4,6 +4,7 @@ Results:
 0 warnings
 0 parse errors
 [WARN] No definitions file provided by client
+[INFO] Loading Luau configuration from /home/user/civitas/.luaurc
 PASS sealed 1596-stud fixture
 PASS 0.01 stud hole missed by coarse sampling is detected
 PASS noncollidable floor fails
@@ -24,14 +25,18 @@ PASS footprint support cannot use narrow centerline
 PASS 0.01 stud hole cannot hide between samples
 PASS ground with missing collision cannot establish seal
 8 oriented Luau tests passed, 0 failed
+PASS four crossings follow sidewalk desire lines, not carriageway centre
+PASS asymmetric widths are not swapped
+PASS off-centre crossing blocker cannot hide behind a centreline pass
+3 street regression tests passed
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.062s
+Ran 11 tests in 0.074s
 
 OK
 .........
 ----------------------------------------------------------------------
-Ran 9 tests in 0.179s
+Ran 9 tests in 0.273s
 
 OK
 .........
@@ -41,7 +46,7 @@ Ran 9 tests in 0.000s
 OK
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.000s
+Ran 10 tests in 0.001s
 
 OK
   ok   city slice has the required varied massing and landmarks
@@ -58,10 +63,11 @@ Built project to walkability-milestone.rbxlx
 Executed real CityBuilder in Lune: 1924 BaseParts; 1633.00-stud route
 LUNE REAL AUDIT: parts=1924 route=1632.999280 maxStep=0.595001 routeDefects=0 sealed=true sidewalks=70 blocked=0
 LUNE CROSSINGS: checked=162 blocked=0 maxStep=0.399994
+STREET CROSSINGS: 324 checked, 0 failed
 {
   "status": "GEOMETRY_CHECKS_PASS",
   "engineTested": false,
-  "sourceRevision": "b0d542ba780a0463b1ed47b250fdf89418815457",
+  "sourceRevision": "11aa647cb3a72a1b0bb0af8b6303c0977d49ad98",
   "worldRevision": "c01564694fefc9825b0da33522f59f6e746b2a03",
   "worldSourceMatchesRemote": false,
   "partCount": 1924,
@@ -276,7 +282,7 @@ PARKS: parcels=50 superblocks=4 publicSquares=3 regionEvidencePass=True
 CANDIDATE SPAWN: point={'x': 136.75, 'z': -512} clearAnchors=2 route=1504.999280 (runtime not applied)
 SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks=12 testedAnchors=17 clear=0 (NO_TESTED_ANCHOR_CLEAR; camera/rig unverified)
 {
-  "sourceRevision": "b0d542ba780a0463b1ed47b250fdf89418815457",
+  "sourceRevision": "11aa647cb3a72a1b0bb0af8b6303c0977d49ad98",
   "sourceSHA256": {
     "src/server/World/CityBuilder.luau": "6733d902c10523f8dd2399bc9d0642b92c6f90eefd38cb06c1f1253a38b83b4a",
     "src/server/World/CityConfig.luau": "d4701dc2987a6ba581ed0f4a9baa79df0496c4c8fb0a0c11d1e4051186bc5bb3",
@@ -284,6 +290,7 @@ SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks
     "src/server/World/WorldBootstrap.server.luau": "6fd428708ea38d96ba6f02f6f17efaf6c21923f1e084cbee5290468dd6d73dac",
     "src/server/Walkability/Audit.luau": "39eada5d259940d4ef1392187ae4ee43f633950561ed402e8105e94b9d5d8d5a",
     "src/server/Walkability/OrientedAudit.luau": "98627af08ff30b1dda903f88c15edd63702d836d9af43bbdcc1b0a690b935f67",
+    "src/server/Walkability/StreetChecks.luau": "282654a726f81407c0dbf1820bf8b96c97fc1a90fbf5209527a0f4c63d608a4f",
     "src/server/Spawn/Plan.luau": "6e9a19546a80d9787ab8a1ff1b41b3e9fd2709e6727b82c5809fca570621271c",
     "src/server/Spawn/RecommendedPlan.luau": "ab13a94702c2a35c896b54ed4be168dc6cb6793d021dcf8bf3b69ec09a89c6d7",
     "tools/walkaudit/audit_world.py": "d3c84a672d949e5f16f5b3cfd2e97201ce9cb84805df85cdbcbbb34f24c810fb",
@@ -298,9 +305,11 @@ SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks
     "tools/walkaudit/run.luau": "205f30817e48cda3afca30760c5270c5229f55ee128e7284562051d2cdf16f88",
     "tools/walkaudit/sightlines.py": "e3d4d9b98bd2e71594d474b814210e9d43c9fb67aee5f33c9380c1d28b0bbe9a",
     "tools/walkaudit/streaming.py": "b299babe4ec9b48e55c8d4728d8dbe891f2887b8cc0597ac829efab5f6f18cee",
-    "tools/walkaudit/verify.sh": "5d4d1c5f9166eb70257ade13def2a8b92ab3d416d932b05249d8e668b80770f9",
+    "tools/walkaudit/street_checks.luau": "dc4ec6e45c49f0c1a92f688134adaaf1da42fb17fff1bdf641abb000f8109e60",
+    "tools/walkaudit/verify.sh": "3e0d358c1e367ed9aba09c2684b0a1bdcbeb8436ce7390a7f1651370b1cb15a4",
     "tests/walk/oriented.luau": "6d2b3edc0ea759cc75b2cf79c2139d1ee80330d1eac29ebf24375db435ebf737",
     "tests/walk/run.luau": "d0c299f1893524fb0d7b02559fea0522c95b49cef5b9d0a060b024f799900ed5",
+    "tests/walk/streets.luau": "097f7e24903c28254e8bde93cf00eb181df21c10eb5c0745f2aeace01e9c8d55",
     "tests/walk/test_parks.py": "8c1c20608584ddf0395750b1ea3bc2c938113a856bd2c20caf242ab89ebd9ba6",
     "tests/walk/test_sightlines.py": "6223c0e81817e258831e1bd3cbb4675186aab3388c582d6aadd9a01ca3bdd4bb",
     "tests/walk/test_streaming.py": "4d991f557b97a5c5af00455ef807c3a9c44892d049787b03dffa431d23f96726",
