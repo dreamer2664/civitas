@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-      - ci/rojo-place-artifact
+    tags:
+      - 'v*'
   pull_request:
     branches:
       - main
