@@ -22,3 +22,14 @@ off-centre can pass the former check yet fail this gate. Three regression tests 
 Reproduce: `bash tools/walkaudit/verify.sh`; JSON: `docs/reports/walkability-street-fixes.json`.
 Current total: 67 passing regression tests. Full command exits 1 only for the known actual
 spawn anchor gate; no Studio, physics, rig, camera or device claim.
+
+## 2. Sidewalk width
+
+Enforce the independent **3.5-stud** District A physical slab floor, not merely the
+config's declared value or the availability of sealed ground beneath a too-narrow slab.
+Sweep both edge lanes plus centre (radius-1 body/footprint); all 70 actual slabs have
+three passing lanes. Preserve yaw and use named street axis to distinguish true transverse
+width from clipped length. Three new negative/boundary tests cover a 3.49-wide slab,
+an edge-only obstruction hidden from the old centreline check, and a short yawed X slab.
+Nominal width plus these edge sweeps is not a two-avatar passing or engine navigation claim.
+Total now 70 passing regressions; full gate remains spawn-only exit 1.

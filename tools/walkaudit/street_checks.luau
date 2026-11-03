@@ -24,10 +24,24 @@ for _, intersection in data.intersections do
 		})
 	end
 end
+local sidewalks = {}
+local widthFailures = 0
+for _, part in parts do
+	if string.find(part.name, "Sidewalk") and part.name ~= "CoreSidewalkSpawn" then
+		local result = Checks.sidewalk(part, parts, 3.5)
+		if not result.passed then
+			widthFailures += 1
+		end
+		table.insert(sidewalks, result)
+	end
+end
 fs.writeFile(
 	"docs/reports/walkability-street-fixes.json",
 	serde.encode("json", {
 		engineTested = false,
+		sidewalkCount = #sidewalks,
+		failedSidewalkWidths = widthFailures,
+		sidewalks = sidewalks,
 		crossingCount = #crossings,
 		failedCrossings = failures,
 		crossings = crossings,
@@ -35,3 +49,6 @@ fs.writeFile(
 )
 print(string.format("STREET CROSSINGS: %d checked, %d failed", #crossings, failures))
 assert(failures == 0, "sidewalk-aligned crossing audit failed")
+
+print(string.format("STREET WIDTHS: %d checked, %d failed", #sidewalks, widthFailures))
+assert(widthFailures == 0, "full sidewalk width audit failed")
