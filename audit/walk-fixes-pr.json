@@ -7,5 +7,7 @@
   "reviewDelivery": "explicit Manager-directed role-addressed PR body and comment",
   "formalReviewerRequested": false,
   "formalReviewerLimitation": "Strata PR #5 author is dreamer2664; same GitHub author as WALK PR, so self-review cannot be requested",
-  "merged": false
+  "merged": false,
+  "lumenNamesHandoffURL": "https://github.com/dreamer2664/civitas/pull/13#issuecomment-6606868187",
+  "canonicalNamesBranch": "walk/audit"
 }

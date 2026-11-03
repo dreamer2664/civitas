@@ -38,3 +38,11 @@ capture still requires Roblox Studio/account access, which WALK does not have.
 Prepared poses: `docs/reports/renders/route-stills/camera-manifest.json`.
 Reproduction after merged-main audit:
 `python tools/walkaudit/camera_pass.py --world docs/reports/walkability-world.json --out docs/reports/renders/route-stills --main-sha ACTUAL_MAIN_SHA`.
+
+## Additional handoff guards
+
+Names are delivered directly to lumen in PR #13 comment 6606868187. CanonicalPlan and
+canonical-spawns.json are generated from NAMES.md; no alternate naming authority.
+Four naming regressions pass (all four IDs, no false activation, missing district,
+unsafe Harbour enabling and centroid-anchor drift); the separate four camera recipe
+tests also pass. Neither suite implies an engine camera or runtime-spawn integration.
