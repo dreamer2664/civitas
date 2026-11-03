@@ -1,0 +1,12 @@
+{
+  "pullRequest": 5,
+  "pullRequestURL": "https://github.com/dreamer2664/civitas/pull/5",
+  "pullRequestStateObserved": "merged",
+  "auditCommit": "a1bf937a684b82e7c147b951773f4651f3c11f81",
+  "bodySHA256": "018d1a770c2888e2fbd31dfed95675258d4b16cc0a791f8099cb9d0f05208c67",
+  "endpoint": "https://api.github.com/repos/dreamer2664/civitas/issues/5/comments",
+  "status": "posted",
+  "httpStatus": 201,
+  "commentURL": "https://github.com/dreamer2664/civitas/pull/5#issuecomment-6597577511",
+  "commentID": 6597577511
+}
