@@ -124,4 +124,5 @@ All three actual public squares are inventoried too; no semantic parks are inven
 meanGrade is percent physical surface slope, not a quality score. Uniform horizontal
 support proves 0%; tilted/unknown support reports null, never a fabricated grade. Step
 height bounds and obstacles are separate. Full free-space connectivity is not implied.
-Eight regression tests protect these distinctions. All analysis is offline.
+Ten regression tests protect these distinctions, including exact declared-superblock
+coverage and cell-membership checks. All analysis is offline.

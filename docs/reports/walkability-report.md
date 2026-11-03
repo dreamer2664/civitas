@@ -214,3 +214,10 @@ RESOURCES before implementation. Specific facts from opened Creator documentatio
    warns about heavy work in high-frequency frame events: full audits stay offline; no
    Heartbeat loop added. Current seal algorithm is expensive and needs indexing for 25k parts.
 
+
+### Strata handoff receipt
+
+The three ranked follow-ups were [posted to already-merged PR #5](https://github.com/dreamer2664/civitas/pull/5#issuecomment-6597577511)
+as post-merge work, not as a claim that its merge is pending. The immutable audit revision
+is `a1bf937a684b82e7c147b951773f4651f3c11f81`; machine-readable delivery receipt:
+`audit/strata-pr-handoff.json` (HTTP 201).
