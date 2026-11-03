@@ -42,7 +42,11 @@ for i = 1, REF_SAMPLES do
 	local p = track:sample(t)
 	refPositions[i] = p
 	if i > 1 then
-		running += math.sqrt((p.x - refPositions[i - 1].x) ^ 2 + (p.y - refPositions[i - 1].y) ^ 2 + (p.z - refPositions[i - 1].z) ^ 2)
+		running += math.sqrt(
+			(p.x - refPositions[i - 1].x) ^ 2
+				+ (p.y - refPositions[i - 1].y) ^ 2
+				+ (p.z - refPositions[i - 1].z) ^ 2
+		)
 	end
 	refLengths[i] = running
 end
@@ -134,7 +138,9 @@ local function integrateBody(body: Body, dt: number, throttle: number, brake: nu
 	local tractive = throttle * TRACTIVE_N
 	local brakeForce = brake * (TRACTIVE_N * 1.5)
 	local netF = tractive - brakeForce
-	if speed == 0 and netF < 0 then netF = 0 end
+	if speed == 0 and netF < 0 then
+		netF = 0
+	end
 	local drag = DRAG_COEFF * speed * speed
 	local forwardF = netF - drag
 	-- lateral constraint force toward the centre line
@@ -200,7 +206,13 @@ local NUM_TICKS = 1500 -- 25 s at 60 Hz: long enough to traverse the early curve
 local DT = 1 / 60
 local WIRE_TRAINS = 20
 
-print(string.format("== Train movement A/B measurement (%d trains, %d ticks @ 60 Hz) ==", NUM_TRAINS, NUM_TICKS))
+print(
+	string.format(
+		"== Train movement A/B measurement (%d trains, %d ticks @ 60 Hz) ==",
+		NUM_TRAINS,
+		NUM_TICKS
+	)
+)
 print(string.format("Test track length: %.1f studs; curve starts at x=300 (studs)", trackLength))
 print()
 
@@ -210,8 +222,16 @@ print(string.format("  mean position error vs reference: %.4f studs", a.meanErro
 print(string.format("  max   position error vs reference: %.4f studs", a.maxError))
 print(string.format("  per-tick cost: %.3f µs / train / tick", a.microsPerTrainTick))
 local rawA, wireA = packetSizeA()
-print(string.format("  state packet: ~%d B raw / ~%d B per train per tick on the wire", rawA, wireA))
-print(string.format("  downstream, %d trains @ 30 Hz: ~%.1f KB/s per client", WIRE_TRAINS, wireA * WIRE_TRAINS * 30 / 1024))
+print(
+	string.format("  state packet: ~%d B raw / ~%d B per train per tick on the wire", rawA, wireA)
+)
+print(
+	string.format(
+		"  downstream, %d trains @ 30 Hz: ~%.1f KB/s per client",
+		WIRE_TRAINS,
+		wireA * WIRE_TRAINS * 30 / 1024
+	)
+)
 print()
 
 local b = runCandidateB(NUM_TRAINS, NUM_TICKS, DT)
@@ -221,7 +241,13 @@ print(string.format("  max   position error vs reference: %.3f studs", b.maxErro
 print(string.format("  per-tick cost: %.3f µs / train / tick", b.microsPerTrainTick))
 local rawB, wireB = packetSizeB()
 print(string.format("  state packet: ~%d B per train per tick (%d networked parts)", rawB, 24))
-print(string.format("  downstream, %d trains @ 60 Hz: ~%.1f KB/s per client", WIRE_TRAINS, wireB * WIRE_TRAINS * 60 / 1024))
+print(
+	string.format(
+		"  downstream, %d trains @ 60 Hz: ~%.1f KB/s per client",
+		WIRE_TRAINS,
+		wireB * WIRE_TRAINS * 60 / 1024
+	)
+)
 print()
 
 print("Candidate A stays exactly on the spline (error limited to spline approximation,")
