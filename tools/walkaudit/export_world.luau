@@ -114,6 +114,7 @@ fs.writeFile(
 		bounds = plan.districtBounds[1],
 		stats = plan.stats,
 		blocks = plan.blocks,
+		declaredSuperblocks = config.blocks.superblocks,
 		gridX = config.streets.gridX,
 		gridZ = config.streets.gridZ,
 		plaza = plan.plaza,

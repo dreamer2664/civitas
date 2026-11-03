@@ -1,6 +1,7 @@
 # Full-superblock meanGrade summary
 
 meanGrade = physical slope %, not a quality score. All 50 parcels are inventoried in PARKS.json; the table summarizes every superblock plus all three public squares.
+Coverage certificate: 4/4 declared superblocks, exact cell membership; missing 0, unexpected 0. All 64 grid cells audited exactly once.
 
 | Region | Kind | Domain area (studs²) | meanGrade (%) | Support step bound (studs) | Base sealed |
 |---|---|---:|---:|---:|---|

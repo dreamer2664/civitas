@@ -3,6 +3,25 @@
   "engineTested": false,
   "meanGradeDefinition": "Physical surface slope percent, not a quality/grading score. Horizontal support has zero slope; steps are excluded and bounded separately.",
   "domainDefinition": "Full union of source grid-centreline cells including former internal road corridors; L-shape missing cells are NOT filled by a bounding box. Public squares use exact declared rectangles.",
+  "superblockCoverageCertificate": {
+    "expectedCount": 4,
+    "auditedCount": 4,
+    "expectedNames": [
+      "East Gate Superblock",
+      "East Guild Superblock",
+      "Northwest Irregular Court",
+      "West Cloister Superblock"
+    ],
+    "auditedNames": [
+      "East Gate Superblock",
+      "East Guild Superblock",
+      "Northwest Irregular Court",
+      "West Cloister Superblock"
+    ],
+    "missing": [],
+    "unexpected": [],
+    "membershipMatches": true
+  },
   "semanticParksDeclared": 0,
   "note": "No semantic park inventory exists. PARKS.json names the requested artifact; records are actual parcels and public squares, not invented parks.",
   "fullBlockCount": 50,
@@ -4052,5 +4071,5 @@
     "Base seal does not prove elevated floors",
     "No engine or phone profiling"
   ],
-  "geometryExportSHA256": "14ddbe967634df84daa1738c78c639aa310df4f38a2e1b09c1594c6375ae6e37"
+  "geometryExportSHA256": "a1401e8a9f5ab21c5e0a183387499ab5c37d800bf4aa73b834bbb0a8511f6328"
 }
