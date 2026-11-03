@@ -11,6 +11,7 @@ def mat(name,col,metal=0):
  m=bpy.data.materials.new(name); m.diffuse_color=(*col,1); m.use_nodes=True
  p=m.node_tree.nodes.get('Principled BSDF'); p.inputs['Base Color'].default_value=(*col,1); p.inputs['Metallic'].default_value=metal; p.inputs['Roughness'].default_value=.38
  return m
+livery=mat('livery_blue',(.125,.255,.345),.18)
 white=mat('body_porcelain',(0.76,.79,.78),.25); dark=mat('window_smoked',(.025,.07,.105),.15); red=mat('door_vermilion',(.56,.06,.04)); black=mat('undercarriage',(.035,.045,.052),.3); silver=mat('metal',(.37,.42,.44),.8); light=mat('headlamp',(.91,.86,.66)); interior=mat('interior',(.35,.38,.36))
 # A real translucent material, exported in the GLB as alpha blending.
 cab_glass=mat('cab_windscreen_glazing',(.16,.34,.40),.02)
@@ -27,6 +28,17 @@ def cube(n,loc,dim,material,parent, bevel=0):
  return o
 def wheel(name,loc,parent):
  bpy.ops.mesh.primitive_cylinder_add(vertices=24,radius=.42,depth=.13,location=(0,0,0),rotation=(math.pi/2,0,0)); o=bpy.context.object; o.name=name; o.parent=parent; o.location=loc; o.data.materials.append(black)
+def rod(name,a,b,r,material,parent):
+ a,b=Vector(a),Vector(b); d=b-a
+ bpy.ops.mesh.primitive_cylinder_add(vertices=12,radius=r,depth=d.length,location=(0,0,0))
+ o=bpy.context.object; o.name=name; o.parent=parent; o.location=(a+b)/2
+ o.rotation_euler=d.to_track_quat('Z','Y').to_euler(); o.data.materials.append(material); return o
+def gangway_portal(name,x,parent):
+ # Four closed pieces leave a 1.57m-wide, 2m-high passage.
+ for side in (-1,1):
+  cube(name+'_portal_post',(x,side*1.105,2.15),(.12,.64,2.98),white,parent)
+ cube(name+'_portal_header',(x,0,3.20),(.12,1.57,.88),white,parent)
+ cube(name+'_portal_sill',(x,0,.71),(.12,1.57,.10),interior,parent)
 def shell_car(name,length,origin,cab):
  root=empty(name+'_ROOT',(origin,0,0)); root['pivot']='leading coupling face, rail top, track centre'; root['length_m']=length
  # Hollow, sectional body: two clearly separated doorway apertures per side.
@@ -34,6 +46,7 @@ def shell_car(name,length,origin,cab):
  cube(name+'_floor',((start+end)/2,0,.70),(end-start,2.75,.12),interior,root)
  cube(name+'_roof',((start+end)/2,0,3.91),(end-start,2.72,.38),white,root,.12)
  doors=[-length*.27,-length*.73]
+ steps=empty(name+'_DOOR_STEPS',(0,0,0),root)
  for side in [-1,1]:
   suffix='L' if side<0 else 'R'; wall_y=side*1.35
   # Walls are built from short solid pieces, leaving physical openings at doors.
@@ -45,13 +58,32 @@ def shell_car(name,length,origin,cab):
    if b<=a: continue
    for z,h,ma in [(1.08,.64,white),(2.21,1.62,dark),(3.31,.58,white)]:
     cube(f'{name}_{suffix}_side_{i}_{z}',((a+b)/2,wall_y,z),(b-a,.12,h),ma,root,.025)
+   # A fine continuous blue belt aligns the glazing with the door surrounds.
+   cube(f'{name}_{suffix}_livery_band_{i}',((a+b)/2,side*1.412,1.32),(b-a,.012,.14),livery,root)
    # white pillars over window band
    n=max(1,int((b-a)/1.8))
    for j in range(n+1):
     x=a+.06+(b-a-.12)*j/n
     cube(f'{name}_{suffix}_pillar_{i}_{j}',(x,side*1.405,2.25),(.09,.025,1.54),white,root)
   for i,d in enumerate(doors):
+   # Low fixed footboard reaches the approved 3.20m structural envelope;
+   # independent collision proxy joins the car floor at platform height.
+   cube(f'{name}_{suffix}_footboard_{i}',(d,side*1.40,.70),(1.20,.40,.12),silver,steps)
+   foot=cube(f'{name}_{suffix}_COLLISION_footboard_{i}',(d,side*1.40,.70),(1.20,.40,.12),black,steps); foot.hide_render=True
+   # Static stowed bridge is vehicle-mounted but NOT automatically deployed.
+   # A runtime controller must move the pivot out 0.18m and up 0.04m only
+   # after alignment/interlock checks; proxy collision must be disabled until
+   # fully deployed. The stowed plate sits inside the fixed footboard.
+   bridge=empty(f'{name}_{suffix}_BRIDGE_{i}_PIVOT',(d,side*1.47,.70),root)
+   bridge['outward_travel_m']=.18;bridge['upward_travel_m']=.04
+   bridge['safety']='stowed by default; runtime must interlock movement and collision'
+   cube(f'{name}_{suffix}_BRIDGE_{i}_VISUAL',(0,0,0),(1.10,.26,.04),silver,bridge)
+   proxy=cube(f'{name}_{suffix}_BRIDGE_{i}_COLLISION',(0,0,0),(1.10,.26,.04),black,bridge);proxy.hide_render=True
    cube(f'{name}_{suffix}_door_header_{i}',(d,wall_y,3.52),(1.3,.12,.45),white,root,.02)
+   # Blue door surrounds sit outside the clear aperture; leaves remain separate.
+   for sign in (-1,1):
+    cube(f'{name}_{suffix}_door_surround_{i}_{sign}',(d+sign*.71,side*1.412,1.735),(.10,.012,1.95),livery,root)
+   cube(f'{name}_{suffix}_door_surround_top_{i}',(d,side*1.412,2.80),(1.52,.012,.14),livery,root)
    # Separate leaves. Their closure blocks entry only while closed, no wall behind them.
    for leaf in [-1,1]:
     leafroot=empty(f'{name}_{suffix}_door_{i}_{leaf}_PIVOT',(d+leaf*.65,side*1.345,.76),root)
@@ -63,10 +95,11 @@ def shell_car(name,length,origin,cab):
  for k,x in enumerate((-3,-length+3)):
   bogie=empty(f'{name}_BOGIE_{k}_PIVOT',(x,0,0),root); bogie['pivot']='bogie centre at rail top'
   cube(f'{name}_bogie_{k}_frame',(0,0,.55),(2.35,1.95,.27),black,bogie,.05)
-  for dx in (-.75,.75):
-   for side in (-1,1): wheel(f'{name}_wheel_{k}_{dx}_{side}',(dx,side*.72,.42),bogie)
+  for j,dx in enumerate((-.75,.75)):
+   axle=empty(f'{name}_BOGIE_{k}_AXLE_{j}_PIVOT',(dx,0,.42),bogie)
+   for side in (-1,1): wheel(f'{name}_wheel_{k}_{dx}_{side}',(0,side*.72,0),axle)
  # Walkable collision proxies, individually named; no continuous wall across doors.
- coll=cube(name+'_COLLISION_floor',((start+end)/2,0,.64),(end-start,2.60,.12),black,root); coll.hide_render=True
+ coll=cube(name+'_COLLISION_floor',((start+end)/2,0,.70),(end-start,2.60,.12),black,root); coll.hide_render=True
  for side in (-1,1):
   prev=start
   for i,(a,b) in enumerate([(start,sorted(doors)[0]-.65),(sorted(doors)[0]+.65,sorted(doors)[1]-.65),(sorted(doors)[1]+.65,end)]):
@@ -117,12 +150,51 @@ def shell_car(name,length,origin,cab):
     cube(f'{name}_luggage_rack',((a+b)/2,side*1.08,3.25),(b-a,.38,.07),silver,root,.02)
    for x in (-6.2,-4.6,-15.4,-13.8):
     cube(f'{name}_stanchion',(x,side*.67,1.90),(.05,.05,2.25),silver,root,.01)
-  cube(name+'_leading_bulkhead',(-.06,0,2.15),(.12,2.85,2.98),white,root)
+  gangway_portal(name+'_leading',-.06,root)
+  cube(name+'_leading_floor',(-.09,0,.70),(.18,1.57,.12),interior,root)
+  p=cube(name+'_COLLISION_leading_floor',(-.09,0,.70),(.18,1.57,.12),interior,root); p.hide_render=True
  # Rear plane is exactly the trailing coupling datum.
- cube(name+'_trailing_bulkhead',(-length+.06,0,2.15),(.12,2.85,2.98),white,root)
+ if cab:
+  gangway_portal(name+'_trailing',-length+.06,root)
+  cube(name+'_trailing_floor',(-length+.09,0,.70),(.18,1.57,.12),interior,root)
+  p=cube(name+'_COLLISION_trailing_floor',(-length+.09,0,.70),(.18,1.57,.12),interior,root); p.hide_render=True
+ else:
+  cube(name+'_trailing_bulkhead',(-length+.06,0,2.15),(.12,2.85,2.98),white,root)
  cube(name+'_coupler',(-.1,0,.58),(.2,.42,.22),black,root,.02)
  return root
 shell_car('CAB',21,0,True); shell_car('INTERMEDIATE',20,-21.5,False)
+# Bespoke raised single-arm pantograph and HVAC, all separate from car-body
+# envelope. Height is rail-top referenced; contact shoe at 5.65m.
+cab=bpy.data.objects['CAB_ROOT']
+gangway=empty('CAB_GANGWAY',(-21.25,0,0),cab)
+# Hollow diaphragm spans the 0.5m coupling gap; end portals and tread connect
+# the interiors in the straight pose, not a simulated flexible joint.
+for side in (-1,1): cube('gangway_bellows_side',(0,side*.85,2.0),(.5,.14,2.48),black,gangway,.015)
+cube('gangway_bellows_roof',(0,0,3.20),(.5,1.84,.12),black,gangway,.015)
+cube('gangway_bellows_tread',(0,0,.70),(.5,1.57,.12),black,gangway,.015)
+proxy=cube('CAB_GANGWAY_COLLISION_floor',(0,0,.70),(.5,1.57,.12),black,gangway); proxy.hide_render=True
+for x in (-.18,0,.18):
+ for side in (-1,1): cube('gangway_bellows_rib',(x,side*.91,2.0),(.035,.06,2.48),silver,gangway,.01)
+ cube('gangway_bellows_top_rib',(x,0,3.26),(.035,1.84,.05),silver,gangway,.01)
+inter=bpy.data.objects['INTERMEDIATE_ROOT']
+panto=empty('INTERMEDIATE_PANTOGRAPH',(-10,0,0),inter)
+panto['contact_height_m']=5.65
+for x in (-.65,.65):
+ for y in (-.53,.53):
+  cube('pantograph_insulator',(x,y,4.18),(.18,.18,.16),light,panto,.015)
+for y in (-.53,.53):
+ cube('pantograph_base',(0,y,4.30),(1.65,.08,.08),black,panto,.01)
+ rod('pantograph_lower_arm',(-.65,y,4.34),(.35,y,5.00),.045,silver,panto)
+ rod('pantograph_upper_arm',(.35,y,5.00),(-.42,y,5.60),.035,silver,panto)
+ rod('pantograph_brace',(-.50,y,4.34),(-.42,y,5.60),.022,black,panto)
+rod('pantograph_crossbrace',(.35,-.53,5),(.35,.53,5),.028,silver,panto)
+rod('pantograph_head_carrier',(-.42,-.62,5.60),(-.42,.62,5.60),.035,silver,panto)
+cube('pantograph_contact_strip',(-.42,0,5.64),(.10,2.15,.02),black,panto,.01)
+hvac=empty('INTERMEDIATE_ROOF_EQUIPMENT',(0,0,0),inter)
+for x in (-5.5,-14.5):
+ cube('HVAC_case',(x,0,4.24),(2.8,2.0,.28),white,hvac,.07)
+ for offset in (-.8,0,.8): cube('HVAC_vent',(x+offset,0,4.395),(.5,1.6,.03),black,hvac,.01)
+
 # Plug-slide: move each leaf outward first, then along the body.  The named
 # outboard-edge pivots are unchanged at rest. NLA tracks share a name for GLB.
 for door in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name and o.name.endswith('_PIVOT')]:
@@ -150,6 +222,14 @@ for rootname in ('CAB_ROOT','INTERMEDIATE_ROOT'):
   material=obj.data.materials[0].name if obj.data.materials else 'none'
   groups.setdefault(material,[]).append(obj)
  for material,objects in groups.items(): combine(objects,rootname.replace('_ROOT','')+'_STATIC_'+material)
+# Each pair of wheels is combined below its own centred axle pivot.
+for axle in [o for o in scene.objects if o.type=='EMPTY' and '_AXLE_' in o.name and o.name.endswith('_PIVOT')]:
+ combine([o for o in axle.children if o.type=='MESH'],axle.name.replace('_PIVOT','_WHEELSET'))
+for equipment in [bpy.data.objects['INTERMEDIATE_PANTOGRAPH'],bpy.data.objects['INTERMEDIATE_ROOF_EQUIPMENT'],bpy.data.objects['CAB_GANGWAY'],bpy.data.objects['CAB_DOOR_STEPS'],bpy.data.objects['INTERMEDIATE_DOOR_STEPS']]:
+ groups={}
+ for obj in list(equipment.children):
+  if obj.type=='MESH' and 'COLLISION' not in obj.name: groups.setdefault(obj.data.materials[0].name,[]).append(obj)
+ for material,items in groups.items(): combine(items,equipment.name+'_'+material)
 for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name and o.name.endswith('_PIVOT')]:
  items=[o for o in pivot.children if o.type=='MESH']
  items.sort(key=lambda o: 0 if o.name.endswith('_leaf') else 1)
@@ -157,6 +237,9 @@ for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name
 sys.path.insert(0,os.path.join(D,'..','tools'))
 from palette import setup as setup_palette
 setup_palette()
+# Asset-only builds avoid unnecessary regenerable render batches.
+if os.environ.get('CIVITAS_SKIP_RENDERS')=='1':
+ bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'EMU-1.blend'));print('SAVED_WITHOUT_RENDERS');sys.exit(0)
 # Studio workbench preview. Render is a design study, not proof of final visual quality.
 scene.render.engine='BLENDER_WORKBENCH'; scene.display.shading.light='STUDIO'; scene.display.shading.color_type='MATERIAL'; scene.display.shading.show_shadows=True; scene.display.shading.show_cavity=True
 scene.render.resolution_x=1400; scene.render.resolution_y=700; scene.render.resolution_percentage=100
@@ -191,6 +274,10 @@ scene.camera=camera('door_sequence',(-5.67,-8,1.8),(-5.67,-1.3,1.75),5.8)
 for frame in (1,6,15,24):
  scene.frame_set(frame); scene.render.filepath=os.path.join(D,'renders',f'door-{frame:02d}.png'); bpy.ops.render.render(write_still=True)
 scene.frame_set(1)
+scene.camera=camera('gangway_detail',(-17,-8,6),(-21.25,0,2),10)
+scene.render.filepath=os.path.join(D,'renders','gangway.png'); bpy.ops.render.render(write_still=True)
+scene.camera=camera('roof_equipment',(-24,-10,11),(-31.5,0,4.8),13)
+scene.render.filepath=os.path.join(D,'renders','roof-equipment.png'); bpy.ops.render.render(write_still=True)
 dep=bpy.context.evaluated_depsgraph_get(); total=0; counts={}
 for obj in scene.objects:
  if obj.type!='MESH': continue

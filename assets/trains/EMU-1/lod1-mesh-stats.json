@@ -1,0 +1,42 @@
+{
+  "max_mesh_triangles": 2350,
+  "meshes": {
+    "CAB_LOD1_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 1720,
+      "world_aabb_studs_blender_xyz": [
+        76.746,
+        11.429,
+        14.585
+      ]
+    },
+    "INTERMEDIATE_LOD1_VISUAL": {
+      "collision": false,
+      "nonmanifold_edges": 0,
+      "triangles": 2350,
+      "world_aabb_studs_blender_xyz": [
+        71.429,
+        11.429,
+        20.173
+      ]
+    }
+  },
+  "render_material_triangles": {
+    "body_porcelain": 886,
+    "cab_windscreen_glazing": 14,
+    "door_vermilion": 192,
+    "headlamp": 72,
+    "interior": 64,
+    "livery_blue": 144,
+    "metal": 486,
+    "undercarriage": 832,
+    "window_smoked": 1380
+  },
+  "status": "design study, not validated in Studio",
+  "summary": {
+    "collision_triangles": 0,
+    "render_triangles": 4070
+  },
+  "units": "1 metre = 3.571428571 studs"
+}
