@@ -45,3 +45,12 @@ exist: this table binds identity/placement handoff; runtime integration must use
 
 Evidence: `audit/spawn-anchor-ruling.json`; actual builder export
 `docs/reports/walkability-world.json`; `audit/PARKS.json`.
+
+## Headless validation of the selected anchor
+
+SC-01 has collidable support and a clear radius-1 / height-5 body envelope at the
+selected point. **5 of 17 tested landmark-anchor rays are clear** from the assumed
+4.5-stud eye offset (Museum of Navigation, South Arcade Tower, Riverside Exchange).
+This resolves the selected-anchor geometry/sightline evidence, not runtime relocation
+or first-frame engine framing. Evidence: `audit/sc01-geometry.json` and
+`audit/sc01-sightlines.json`. The old south-sidewalk runtime anchor still has 0/17.

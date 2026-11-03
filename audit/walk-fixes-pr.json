@@ -1,0 +1,11 @@
+{
+  "pullRequest": 15,
+  "url": "https://github.com/dreamer2664/civitas/pull/15",
+  "head": "3e370261bc8f744464eb64643301e0b2bc5e8e37",
+  "requestedNumber13OccupiedBy": "lumen/ui-core",
+  "strataReviewRequestURL": "https://github.com/dreamer2664/civitas/pull/15#issuecomment-6606752272",
+  "reviewDelivery": "explicit Manager-directed role-addressed PR body and comment",
+  "formalReviewerRequested": false,
+  "formalReviewerLimitation": "Strata PR #5 author is dreamer2664; same GitHub author as WALK PR, so self-review cannot be requested",
+  "merged": false
+}

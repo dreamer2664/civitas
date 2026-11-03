@@ -1,0 +1,292 @@
+{
+  "engineTested": false,
+  "eyeOffsetAssumed": 4.5,
+  "eye": {
+    "x": 200,
+    "y": 5.075004577636719,
+    "z": 75
+  },
+  "landmarkCount": 12,
+  "anchorCount": 17,
+  "visibleAnchorCount": 5,
+  "status": "ANCHOR_SIGHTLINE_EXISTS",
+  "limitations": [
+    "No engine camera or rig test",
+    "Blocked anchors do not prove all pixels invisible",
+    "Cylinders boxed; partial transparency conservatively opaque"
+  ],
+  "anchors": [
+    {
+      "landmark": "East Gate Basilica",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.East Gate Basilica.Crown",
+      "target": {
+        "x": 520,
+        "y": 68.7,
+        "z": 370
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 54 Plot 1-1.UpperMassing",
+      "hitPoint": {
+        "x": 310.7118644067797,
+        "y": 27.087635409145033,
+        "z": 177.0625
+      }
+    },
+    {
+      "landmark": "West Bastion Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.West Bastion Tower.Lantern",
+      "target": {
+        "x": -570,
+        "y": 90.8,
+        "z": 370
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 3-2.UpperMassing",
+      "hitPoint": {
+        "x": 90.00000762939452,
+        "y": 17.321431645727824,
+        "z": 117.14285421990729
+      }
+    },
+    {
+      "landmark": "West Bastion Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.West Bastion Tower.Crown",
+      "target": {
+        "x": -570,
+        "y": 79.2,
+        "z": 370
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 3-2.UpperMassing",
+      "hitPoint": {
+        "x": 90.00000762939452,
+        "y": 15.6642889035213,
+        "z": 117.14285421990729
+      }
+    },
+    {
+      "landmark": "Museum of Navigation",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Museum of Navigation.Crown",
+      "target": {
+        "x": 520,
+        "y": 44.7,
+        "z": 75
+      },
+      "visibleAnchor": true,
+      "blocker": null,
+      "hitPoint": {
+        "x": 498.0,
+        "y": 41.97578156471253,
+        "z": 75.0
+      }
+    },
+    {
+      "landmark": "South Arcade Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.South Arcade Tower.Lantern",
+      "target": {
+        "x": -120,
+        "y": 106.8,
+        "z": 75
+      },
+      "visibleAnchor": true,
+      "blocker": null,
+      "hitPoint": {
+        "x": -116.5,
+        "y": 105.6873828625679,
+        "z": 75.0
+      }
+    },
+    {
+      "landmark": "South Arcade Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.South Arcade Tower.Crown",
+      "target": {
+        "x": -120,
+        "y": 95.2,
+        "z": 75
+      },
+      "visibleAnchor": true,
+      "blocker": null,
+      "hitPoint": {
+        "x": -110.76000213623047,
+        "y": 92.59764135882851,
+        "z": 75.0
+      }
+    },
+    {
+      "landmark": "Opera House",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Opera House.Crown",
+      "target": {
+        "x": -570,
+        "y": 50.7,
+        "z": 75
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.South Arcade Tower.UpperMassing",
+      "hitPoint": {
+        "x": -98.0,
+        "y": 22.732470338499393,
+        "z": 75.0
+      }
+    },
+    {
+      "landmark": "Riverside Exchange",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Riverside Exchange.Lantern",
+      "target": {
+        "x": 520,
+        "y": 123.8,
+        "z": -220
+      },
+      "visibleAnchor": true,
+      "blocker": null,
+      "hitPoint": {
+        "x": 516.5,
+        "y": 122.50144536256789,
+        "z": -216.7734375
+      }
+    },
+    {
+      "landmark": "Riverside Exchange",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Riverside Exchange.Crown",
+      "target": {
+        "x": 520,
+        "y": 112.2,
+        "z": -220
+      },
+      "visibleAnchor": true,
+      "blocker": null,
+      "hitPoint": {
+        "x": 498.0,
+        "y": 104.83515656471253,
+        "z": -199.71875
+      }
+    },
+    {
+      "landmark": "Guildhall",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Guildhall.Crown",
+      "target": {
+        "x": -120,
+        "y": 60.7,
+        "z": -220
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 3-2.UpperMassing",
+      "hitPoint": {
+        "x": 87.20834350585938,
+        "y": 24.68136512815967,
+        "z": -28.97980833053589
+      }
+    },
+    {
+      "landmark": "Covered Market Hall",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Covered Market Hall.Crown",
+      "target": {
+        "x": -570,
+        "y": 36.7,
+        "z": -220
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 37 Plot 3-1.GroundStorey_DarkerStreetBand",
+      "hitPoint": {
+        "x": 90.00000762939452,
+        "y": 9.592860753195673,
+        "z": 32.85714578009271
+      }
+    },
+    {
+      "landmark": "North Gate Hotel",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.North Gate Hotel.Crown",
+      "target": {
+        "x": 520,
+        "y": 66.7,
+        "z": -370
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 52 Plot 1-2.UpperMassing",
+      "hitPoint": {
+        "x": 294.7916564941406,
+        "y": 23.329802694916868,
+        "z": -56.81964731216428
+      }
+    },
+    {
+      "landmark": "Civic Archive Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Civic Archive Tower.Lantern",
+      "target": {
+        "x": -120,
+        "y": 114.8,
+        "z": -370
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-2.UpperMassing",
+      "hitPoint": {
+        "x": 19.460674157303373,
+        "y": 66.98024427028184,
+        "z": -176.0625
+      }
+    },
+    {
+      "landmark": "Civic Archive Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Civic Archive Tower.Crown",
+      "target": {
+        "x": -120,
+        "y": 103.2,
+        "z": -370
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 35 Plot 2-2.UpperMassing",
+      "hitPoint": {
+        "x": 19.460674157303373,
+        "y": 60.435693708484095,
+        "z": -176.0625
+      }
+    },
+    {
+      "landmark": "St. Elian's Church",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.St. Elian's Church.Crown",
+      "target": {
+        "x": -275,
+        "y": 80.7,
+        "z": -375
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 3-2.UpperMassing",
+      "hitPoint": {
+        "x": 87.20834350585938,
+        "y": 23.032622485110736,
+        "z": -31.855253520764805
+      }
+    },
+    {
+      "landmark": "Old Town Clock Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Old Town Clock Tower.Lantern",
+      "target": {
+        "x": -570,
+        "y": 130.8,
+        "z": -375
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 2-2.UpperMassing",
+      "hitPoint": {
+        "x": 28.853236389160145,
+        "y": 33.0197137614356,
+        "z": -25.020835876464844
+      }
+    },
+    {
+      "landmark": "Old Town Clock Tower",
+      "anchor": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Old Town Clock Tower.Crown",
+      "target": {
+        "x": -570,
+        "y": 119.2,
+        "z": -375
+      },
+      "visibleAnchor": false,
+      "blocker": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.BuildingMassing.Block 36 Plot 2-2.UpperMassing",
+      "hitPoint": {
+        "x": 28.853236389160145,
+        "y": 30.441398881064497,
+        "z": -25.020835876464844
+      }
+    }
+  ]
+}

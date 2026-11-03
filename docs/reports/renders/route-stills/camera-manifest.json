@@ -1,0 +1,170 @@
+{
+  "engineCaptured": false,
+  "mainRevision": "PENDING-PR15-MERGE",
+  "geometrySHA256": "a1401e8a9f5ab21c5e0a183387499ab5c37d800bf4aa73b834bbb0a8511f6328",
+  "status": "POSES_PREPARED",
+  "horizontalFOVDegrees": 70,
+  "resolution": [
+    960,
+    540
+  ],
+  "cameraCount": 10,
+  "cameras": [
+    {
+      "label": "SC-01 / Old Town Square",
+      "routeDistance": null,
+      "eye": [
+        200,
+        5.075004577636719,
+        75
+      ],
+      "target": [
+        520,
+        44.7,
+        75
+      ],
+      "targetLabel": "Museum of Navigation"
+    },
+    {
+      "label": "Route 0.0 / 1633.0 studs",
+      "routeDistance": 0.0,
+      "eye": [
+        136.75,
+        5.649993896484375,
+        -640.0
+      ],
+      "target": [
+        136.75,
+        3.649993896484375,
+        -610.0
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 204.1 / 1633.0 studs",
+      "routeDistance": 204.12491001216162,
+      "eye": [
+        136.75,
+        5.05499267578125,
+        -435.8750899878384
+      ],
+      "target": [
+        136.75,
+        3.05499267578125,
+        -405.8750899878384
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 408.2 / 1633.0 studs",
+      "routeDistance": 408.24982002432324,
+      "eye": [
+        136.75,
+        5.05499267578125,
+        -231.75017997567682
+      ],
+      "target": [
+        136.75,
+        3.05499267578125,
+        -201.75017997567682
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 612.4 / 1633.0 studs",
+      "routeDistance": 612.3747300364848,
+      "eye": [
+        136.75,
+        5.05499267578125,
+        -27.625269963515166
+      ],
+      "target": [
+        136.75,
+        3.05499267578125,
+        2.3747300364848343
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 816.5 / 1633.0 studs",
+      "routeDistance": 816.4996400486465,
+      "eye": [
+        153.6398643895109,
+        5.075004577636719,
+        125.99614917153801
+      ],
+      "target": [
+        133.45968056962153,
+        3.0750045776367188,
+        148.1943513734163
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 1020.6 / 1633.0 studs",
+      "routeDistance": 1020.6245500608081,
+      "eye": [
+        136.75,
+        5.05499267578125,
+        315.4638625876231
+      ],
+      "target": [
+        136.75,
+        3.05499267578125,
+        345.4638625876231
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 1224.7 / 1633.0 studs",
+      "routeDistance": 1224.7494600729697,
+      "eye": [
+        136.75,
+        5.05499267578125,
+        519.5887725997845
+      ],
+      "target": [
+        136.75,
+        3.05499267578125,
+        549.5887725997845
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 1428.9 / 1633.0 studs",
+      "routeDistance": 1428.8743700851314,
+      "eye": [
+        136.75,
+        5.05499267578125,
+        723.7136826119463
+      ],
+      "target": [
+        136.75,
+        3.05499267578125,
+        753.7136826119463
+      ],
+      "targetLabel": "route tangent"
+    },
+    {
+      "label": "Route 1633.0 / 1633.0 studs",
+      "routeDistance": 1632.999280097293,
+      "eye": [
+        120.0,
+        5.1300048828125,
+        925.0
+      ],
+      "target": [
+        120.0,
+        3.1300048828125,
+        895.0
+      ],
+      "targetLabel": "station entry / city-facing"
+    }
+  ],
+  "limitations": [
+    "Not an engine camera pass",
+    "Cylinders conservatively boxed",
+    "Approximate material colours",
+    "No rig, physics, streaming, engine lighting, texture or mobile validation"
+  ]
+}

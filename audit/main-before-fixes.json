@@ -1,0 +1,13 @@
+{
+  "mainRevision": "eaad19c",
+  "engineTested": false,
+  "partCount": 1920,
+  "routeLength": 1632.999280097293,
+  "blockedSidewalks": 2,
+  "blockedCrossings": 0,
+  "failedSidewalkAlignedCrossings": 0,
+  "failedWidths": 2,
+  "failedCurbReturns": 104,
+  "curbReturnCount": 428,
+  "auditToolsFrom": "walk/fixes 3e37026; actual main World modules untouched"
+}
