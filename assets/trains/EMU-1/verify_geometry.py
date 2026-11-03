@@ -8,7 +8,7 @@ for rootname,expected in [('CAB_ROOT',(21,2.85,4.1)),('INTERMEDIATE_ROOT',(20,2.
  for obj in scene.objects:
   parent=obj; excluded=False
   while parent and parent!=root:
-   if any(t in parent.name for t in ('PANTOGRAPH','ROOF_EQUIPMENT','GANGWAY','DOOR_STEPS')): excluded=True
+   if any(t in parent.name for t in ('PANTOGRAPH','ROOF_EQUIPMENT','GANGWAY','DOOR_STEPS','BRIDGE')): excluded=True
    parent=parent.parent
   if parent!=root or excluded or obj.type!='MESH' or 'COLLISION' in obj.name: continue
   ev=obj.evaluated_get(dg); me=ev.to_mesh(); points.extend(ev.matrix_world @ v.co for v in me.vertices); ev.to_mesh_clear()

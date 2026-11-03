@@ -70,6 +70,15 @@ def shell_car(name,length,origin,cab):
    # independent collision proxy joins the car floor at platform height.
    cube(f'{name}_{suffix}_footboard_{i}',(d,side*1.40,.70),(1.20,.40,.12),silver,steps)
    foot=cube(f'{name}_{suffix}_COLLISION_footboard_{i}',(d,side*1.40,.70),(1.20,.40,.12),black,steps); foot.hide_render=True
+   # Static stowed bridge is vehicle-mounted but NOT automatically deployed.
+   # A runtime controller must move the pivot out 0.18m and up 0.04m only
+   # after alignment/interlock checks; proxy collision must be disabled until
+   # fully deployed. The stowed plate sits inside the fixed footboard.
+   bridge=empty(f'{name}_{suffix}_BRIDGE_{i}_PIVOT',(d,side*1.47,.70),root)
+   bridge['outward_travel_m']=.18;bridge['upward_travel_m']=.04
+   bridge['safety']='stowed by default; runtime must interlock movement and collision'
+   cube(f'{name}_{suffix}_BRIDGE_{i}_VISUAL',(0,0,0),(1.10,.26,.04),silver,bridge)
+   proxy=cube(f'{name}_{suffix}_BRIDGE_{i}_COLLISION',(0,0,0),(1.10,.26,.04),black,bridge);proxy.hide_render=True
    cube(f'{name}_{suffix}_door_header_{i}',(d,wall_y,3.52),(1.3,.12,.45),white,root,.02)
    # Blue door surrounds sit outside the clear aperture; leaves remain separate.
    for sign in (-1,1):
@@ -228,6 +237,9 @@ for pivot in [o for o in scene.objects if o.type=='EMPTY' and '_door_' in o.name
 sys.path.insert(0,os.path.join(D,'..','tools'))
 from palette import setup as setup_palette
 setup_palette()
+# Asset-only builds avoid unnecessary regenerable render batches.
+if os.environ.get('CIVITAS_SKIP_RENDERS')=='1':
+ bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'EMU-1.blend'));print('SAVED_WITHOUT_RENDERS');sys.exit(0)
 # Studio workbench preview. Render is a design study, not proof of final visual quality.
 scene.render.engine='BLENDER_WORKBENCH'; scene.display.shading.light='STUDIO'; scene.display.shading.color_type='MATERIAL'; scene.display.shading.show_shadows=True; scene.display.shading.show_cavity=True
 scene.render.resolution_x=1400; scene.render.resolution_y=700; scene.render.resolution_percentage=100

@@ -1,5 +1,7 @@
 # Boarding-gap verification — experimental bridge
 
+**Update:** eight stowed bridge mounts are now included in the EMU-1 vehicle graph; see `assets/trains/EMU-1/INTEGRATION.md`. They have no deployment controller or safety interlock, and the default pose still leaves the gap. The FBX test and cutaway below document the original separate experimental plate, not a Studio import.
+
 **Result: Blender FBX reimport and static sample only. Not Studio verification; not an integrated or approved boarding system.** The delivered station/train still have the approximately 0.10 m unsupported gap. The optional candidate is two separately exported static poses with no attachment, deployment animation, control logic or interlocks.
 
 ## What was run
@@ -26,7 +28,7 @@ Both FBX source poses have 12 visual + 12 collision triangles; the builder's man
 
 ![Blender cutaway of the experimental deployed bridge](renders/boarding-bridge-deployed.png)
 
-This is a **headless Blender Workbench cutaway, not a Studio screenshot**. Unrelated station architecture and collision proxies are hidden and the experimental bridge is orange for visibility; those are render-only changes. The visible striping at the plate overlap is coplanar surface z-fighting, not evidence of safe physics; overlapping visuals/proxies require an actual integration design and Studio inspection. The unmodified station/train and bridge FBX remain separate.
+This is a **headless Blender Workbench cutaway, not a Studio screenshot**. Unrelated station architecture and collision proxies are hidden and the experimental bridge is orange for visibility; those are render-only changes. The visible striping at the plate overlap is coplanar surface z-fighting, not evidence of safe physics; overlapping visuals/proxies require an actual integration design and Studio inspection. The cutaway uses the separate prototype FBX; later EMU exports also include stowed mounts.
 
 ## Studio / physical-device checklist — not performed
 

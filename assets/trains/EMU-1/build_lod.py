@@ -10,7 +10,8 @@ for car in ('CAB','INTERMEDIATE'):
  root=bpy.data.objects[car+'_ROOT']; parent=bpy.data.objects.new(car+'_LOD1_ROOT',None); s.collection.objects.link(parent); parent.location=root.matrix_world.translation.copy(); lodroots.append(parent)
  components=[]
  for ob in original:
-  if ob.type!='MESH' or 'COLLISION' in ob.name: continue
+  # Stowed bridge plates are concealed in their footboards and have no far-LOD effect.
+  if ob.type!='MESH' or 'COLLISION' in ob.name or '_BRIDGE_' in ob.name: continue
   p=ob
   while p and p!=root: p=p.parent
   if p!=root: continue
@@ -27,5 +28,6 @@ s.render.resolution_x=1400; s.render.resolution_y=700; s.render.resolution_perce
 camera=bpy.data.cameras.new('LOD_camera'); cam=bpy.data.objects.new('LOD_camera',camera); s.collection.objects.link(cam);cam.location=(16,-55,24);cam.rotation_euler=(Vector((-20,0,1.4))-cam.location).to_track_quat('-Z','Y').to_euler();camera.type='ORTHO';camera.ortho_scale=49;s.camera=cam
 bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=os.path.join(D,'EMU-1-LOD1.blend'))
-s.render.filepath=os.path.join(D,'renders','lod1.png'); bpy.ops.render.render(write_still=True)
+if os.environ.get('CIVITAS_SKIP_RENDERS')!='1':
+ s.render.filepath=os.path.join(D,'renders','lod1.png'); bpy.ops.render.render(write_still=True)
 print('LOD1 generated at 20% collapse from evaluated frame-1 visual geometry')
