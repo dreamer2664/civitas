@@ -31,20 +31,23 @@ PASS off-centre crossing blocker cannot hide behind a centreline pass
 PASS physical narrow sidewalk fails despite sealed ground fallback
 PASS edge obstruction fails even when centreline remains clear
 PASS short yawed X slab measures transverse width, not shorter dimension
-6 street regression tests passed
+PASS low curb in promised opening fails even when step audit passes
+PASS exact return boundary passes but 0.01-stud intrusion fails
+PASS misplaced curb cannot borrow a correctly named opening
+9 street regression tests passed
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.091s
+Ran 11 tests in 0.075s
 
 OK
 .........
 ----------------------------------------------------------------------
-Ran 9 tests in 0.289s
+Ran 9 tests in 0.259s
 
 OK
 .........
 ----------------------------------------------------------------------
-Ran 9 tests in 0.001s
+Ran 9 tests in 0.000s
 
 OK
 ..........
@@ -63,18 +66,19 @@ OK
 City acceptance: 7 passed, 0 failed
 Building project 'CIVITAS'
 Built project to walkability-milestone.rbxlx
-Executed real CityBuilder in Lune: 1924 BaseParts; 1633.00-stud route
-LUNE REAL AUDIT: parts=1924 route=1632.999280 maxStep=0.595001 routeDefects=0 sealed=true sidewalks=70 blocked=0
+Executed real CityBuilder in Lune: 1820 BaseParts; 1633.00-stud route
+LUNE REAL AUDIT: parts=1820 route=1632.999280 maxStep=0.595001 routeDefects=0 sealed=true sidewalks=70 blocked=0
 LUNE CROSSINGS: checked=162 blocked=0 maxStep=0.399994
 STREET CROSSINGS: 324 checked, 0 failed
 STREET WIDTHS: 70 checked, 0 failed
+STREET CURB RETURNS: 324 checked, 0 failed
 {
   "status": "GEOMETRY_CHECKS_PASS",
   "engineTested": false,
-  "sourceRevision": "a4c8947d6015b3e40e679311b9ebe5d5212f2b68",
+  "sourceRevision": "02b2f6ed1fe23e09150557f744b45e40022dd4cd",
   "worldRevision": "c01564694fefc9825b0da33522f59f6e746b2a03",
   "worldSourceMatchesRemote": false,
-  "partCount": 1924,
+  "partCount": 1820,
   "spawnChecks": [
     {
       "label": "District A sidewalk",
@@ -96,7 +100,7 @@ STREET WIDTHS: 70 checked, 0 failed
     }
   ],
   "routeLength": 1632.999280097293,
-  "routeIntervals": 135,
+  "routeIntervals": 125,
   "maxStepStuds": 0.595001220703125,
   "groundSeal": {
     "proven": true,
@@ -115,7 +119,7 @@ STREET WIDTHS: 70 checked, 0 failed
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -127,19 +131,19 @@ STREET WIDTHS: 70 checked, 0 failed
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 337,
+      "maxIntersectingParts": 312,
       "peakPosition": {
-        "x": 196.75,
-        "z": 78.575,
-        "segment": 4,
-        "t": 0.065
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "peakPosition": {
         "x": 136.75,
         "z": -44.27426787834531,
@@ -150,8 +154,8 @@ STREET WIDTHS: 70 checked, 0 failed
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1065,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 999,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -162,8 +166,8 @@ STREET WIDTHS: 70 checked, 0 failed
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1921,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1817,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,
@@ -177,36 +181,36 @@ STREET WIDTHS: 70 checked, 0 failed
   "sampledStreamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 333,
+      "maxIntersectingParts": 310,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1056,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 990,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1920,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1816,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     }
   },
-  "unbatchedMainPassEstimate": 1921,
+  "unbatchedMainPassEstimate": 1817,
   "measuredDrawCalls": null,
   "crossingDefectCount": 0,
   "maximumCrossingStep": 0.399993896484375,
@@ -215,12 +219,12 @@ STREET WIDTHS: 70 checked, 0 failed
 defects=0; decorativeCollisions=291
 {
   "engineMeasured": false,
-  "partCount": 1924,
+  "partCount": 1820,
   "assumptions": "All exported bounding footprints; cylinders conservatively boxed; no model retention/culling/shadow simulation",
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -232,19 +236,19 @@ defects=0; decorativeCollisions=291
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 337,
+      "maxIntersectingParts": 312,
       "peakPosition": {
-        "x": 196.75,
-        "z": 78.575,
-        "segment": 4,
-        "t": 0.065
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "peakPosition": {
         "x": 136.75,
         "z": -44.27426787834531,
@@ -255,8 +259,8 @@ defects=0; decorativeCollisions=291
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1065,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 999,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -267,8 +271,8 @@ defects=0; decorativeCollisions=291
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1921,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1817,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,
@@ -286,15 +290,15 @@ PARKS: parcels=50 superblocks=4 publicSquares=3 regionEvidencePass=True
 CANDIDATE SPAWN: point={'x': 136.75, 'z': -512} clearAnchors=2 route=1504.999280 (runtime not applied)
 SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks=12 testedAnchors=17 clear=0 (NO_TESTED_ANCHOR_CLEAR; camera/rig unverified)
 {
-  "sourceRevision": "a4c8947d6015b3e40e679311b9ebe5d5212f2b68",
+  "sourceRevision": "02b2f6ed1fe23e09150557f744b45e40022dd4cd",
   "sourceSHA256": {
-    "src/server/World/CityBuilder.luau": "6733d902c10523f8dd2399bc9d0642b92c6f90eefd38cb06c1f1253a38b83b4a",
+    "src/server/World/CityBuilder.luau": "9ebfdc6ea2fbba6d5aae49bc7e8819cb5da002c75b331f808f8ccf2689685267",
     "src/server/World/CityConfig.luau": "d4701dc2987a6ba581ed0f4a9baa79df0496c4c8fb0a0c11d1e4051186bc5bb3",
-    "src/server/World/CityGenerator.luau": "e795594eb62a0b0885ff0da981b17909b62c3e9c6f5be0888ead9d9b9da87236",
+    "src/server/World/CityGenerator.luau": "27747b84b299ab09363b3612011a3a7b50b2da23767962dec62f0081fc18e892",
     "src/server/World/WorldBootstrap.server.luau": "6fd428708ea38d96ba6f02f6f17efaf6c21923f1e084cbee5290468dd6d73dac",
     "src/server/Walkability/Audit.luau": "39eada5d259940d4ef1392187ae4ee43f633950561ed402e8105e94b9d5d8d5a",
     "src/server/Walkability/OrientedAudit.luau": "98627af08ff30b1dda903f88c15edd63702d836d9af43bbdcc1b0a690b935f67",
-    "src/server/Walkability/StreetChecks.luau": "0ac891372e185c6c9b645ec8c1d6a11227dc7be836b7ed2091632b42b54fb12d",
+    "src/server/Walkability/StreetChecks.luau": "78f5657ebf4db4f30a9f8f510c552315fae429e917dfb5c025f72d7d4a16dbad",
     "src/server/Spawn/Plan.luau": "6e9a19546a80d9787ab8a1ff1b41b3e9fd2709e6727b82c5809fca570621271c",
     "src/server/Spawn/RecommendedPlan.luau": "ab13a94702c2a35c896b54ed4be168dc6cb6793d021dcf8bf3b69ec09a89c6d7",
     "tools/walkaudit/audit_world.py": "d3c84a672d949e5f16f5b3cfd2e97201ce9cb84805df85cdbcbbb34f24c810fb",
@@ -309,24 +313,24 @@ SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks
     "tools/walkaudit/run.luau": "205f30817e48cda3afca30760c5270c5229f55ee128e7284562051d2cdf16f88",
     "tools/walkaudit/sightlines.py": "e3d4d9b98bd2e71594d474b814210e9d43c9fb67aee5f33c9380c1d28b0bbe9a",
     "tools/walkaudit/streaming.py": "b299babe4ec9b48e55c8d4728d8dbe891f2887b8cc0597ac829efab5f6f18cee",
-    "tools/walkaudit/street_checks.luau": "89bbfbd5ac679ab7f12206e03862738b96fa647a30990bdffa00ac9464939ff9",
+    "tools/walkaudit/street_checks.luau": "b6f622e4902d972c995b68007d422cb6e9122eeb7bcf33f0e2bb07ec6897a6cb",
     "tools/walkaudit/verify.sh": "3e0d358c1e367ed9aba09c2684b0a1bdcbeb8436ce7390a7f1651370b1cb15a4",
     "tests/walk/oriented.luau": "6d2b3edc0ea759cc75b2cf79c2139d1ee80330d1eac29ebf24375db435ebf737",
     "tests/walk/run.luau": "d0c299f1893524fb0d7b02559fea0522c95b49cef5b9d0a060b024f799900ed5",
-    "tests/walk/streets.luau": "143a5a09a98295fb27ae18f7c1e91644f8fd0970bcd2dc2332eec97b9a20efe0",
+    "tests/walk/streets.luau": "cbc566aa9f83a2e4e3eb68a56044a941273fcbc0d5ac6febc0835bb10101219e",
     "tests/walk/test_parks.py": "8c1c20608584ddf0395750b1ea3bc2c938113a856bd2c20caf242ab89ebd9ba6",
     "tests/walk/test_sightlines.py": "6223c0e81817e258831e1bd3cbb4675186aab3388c582d6aadd9a01ca3bdd4bb",
     "tests/walk/test_streaming.py": "4d991f557b97a5c5af00455ef807c3a9c44892d049787b03dffa431d23f96726",
     "tests/walk/test_world_audit.py": "3525e17fb60a41a42aad105e17844a79b98b17cb9c3146906756eb17861c7b2d"
   },
   "staticWorkspaceParts": 0,
-  "generatedWalkableParts": 1924,
+  "generatedWalkableParts": 1820,
   "drawCalls": null,
-  "unbatchedMainPassEstimate": 1921,
+  "unbatchedMainPassEstimate": 1817,
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -338,19 +342,19 @@ SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 337,
+      "maxIntersectingParts": 312,
       "peakPosition": {
-        "x": 196.75,
-        "z": 78.575,
-        "segment": 4,
-        "t": 0.065
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "peakPosition": {
         "x": 136.75,
         "z": -44.27426787834531,
@@ -361,8 +365,8 @@ SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1065,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 999,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -373,8 +377,8 @@ SPAWN SIGHTLINES: eye={'x': 136.75, 'y': 5.649993896484375, 'z': -640} landmarks
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1921,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1817,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,

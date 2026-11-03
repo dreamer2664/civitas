@@ -7130,8 +7130,1956 @@
       "z": 630
     }
   ],
+  "curbReturnCount": 324,
+  "curbReturns": [
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_630_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_1@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_1@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_150_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_0_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-300_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-620_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_620_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_270_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_120_-1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_1@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_1@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_3@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_3@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_1@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_1@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_1_1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_10"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": {},
+      "passed": true,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-650_-1_1"
+    }
+  ],
   "engineTested": false,
   "failedCrossings": 0,
+  "failedCurbReturns": 0,
   "failedSidewalkWidths": 0,
   "sidewalkCount": 70,
   "sidewalks": [
@@ -7140,7 +9088,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 6,
+            "intervals": 1,
             "length": 75.6208801269531,
             "maxStep": 0
           },
@@ -7159,7 +9107,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 6,
+            "intervals": 1,
             "length": 75.62088012695315,
             "maxStep": 0
           },
@@ -7178,7 +9126,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 6,
+            "intervals": 1,
             "length": 75.6208801269531,
             "maxStep": 0
           },
@@ -7205,7 +9153,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 9,
+            "intervals": 5,
             "length": 75.6208801269531,
             "maxStep": 0
           },
@@ -7224,7 +9172,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 9,
+            "intervals": 5,
             "length": 75.62088012695315,
             "maxStep": 0
           },
@@ -7243,7 +9191,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 9,
+            "intervals": 5,
             "length": 75.62088012695312,
             "maxStep": 0
           },
@@ -7270,7 +9218,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 8,
+            "intervals": 6,
             "length": 70.80110168457033,
             "maxStep": 0
           },
@@ -7289,7 +9237,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 8,
+            "intervals": 6,
             "length": 70.80110168457033,
             "maxStep": 0
           },
@@ -7308,7 +9256,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 9,
+            "intervals": 7,
             "length": 70.80110168457033,
             "maxStep": 0
           },
@@ -7335,7 +9283,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 9,
             "length": 70.80110168457033,
             "maxStep": 0
           },
@@ -7354,7 +9302,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 9,
             "length": 70.80110168457033,
             "maxStep": 0
           },
@@ -7373,7 +9321,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 9,
             "length": 70.80110168457033,
             "maxStep": 0
           },
@@ -7530,7 +9478,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 10,
+            "intervals": 9,
             "length": 55.87290954589842,
             "maxStep": 0
           },
@@ -7549,7 +9497,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 10,
+            "intervals": 9,
             "length": 55.87290954589844,
             "maxStep": 0
           },
@@ -7568,7 +9516,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 10,
             "length": 55.87290954589845,
             "maxStep": 0
           },
@@ -7595,7 +9543,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 10,
+            "intervals": 8,
             "length": 55.87290954589845,
             "maxStep": 0.16500091552734375
           },
@@ -7614,7 +9562,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 10,
+            "intervals": 8,
             "length": 55.87290954589844,
             "maxStep": 0.16500091552734375
           },
@@ -7633,7 +9581,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 9,
             "length": 55.87290954589842,
             "maxStep": 0.16500091552734375
           },
@@ -7660,7 +9608,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 8,
+            "intervals": 4,
             "length": 212.07922363281256,
             "maxStep": 0.399993896484375
           },
@@ -7679,7 +9627,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 10,
+            "intervals": 6,
             "length": 212.07922363281256,
             "maxStep": 0.16500091552734375
           },
@@ -7698,7 +9646,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 6,
             "length": 212.07922363281256,
             "maxStep": 0.5649948120117188
           },
@@ -7725,7 +9673,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 17,
+            "intervals": 14,
             "length": 212.07922363281256,
             "maxStep": 0.5649948120117188
           },
@@ -7744,7 +9692,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 19,
+            "intervals": 15,
             "length": 212.07922363281256,
             "maxStep": 0.16500091552734375
           },
@@ -7763,7 +9711,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 18,
+            "intervals": 15,
             "length": 212.07922363281256,
             "maxStep": 0.5649948120117188
           },
@@ -7790,7 +9738,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 203.18284606933597,
             "maxStep": 0
           },
@@ -7809,7 +9757,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 17,
+            "intervals": 15,
             "length": 203.18284606933597,
             "maxStep": 0
           },
@@ -7828,7 +9776,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 16,
+            "intervals": 14,
             "length": 203.18284606933597,
             "maxStep": 0.399993896484375
           },
@@ -7855,7 +9803,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 23,
+            "intervals": 18,
             "length": 203.18284606933597,
             "maxStep": 0
           },
@@ -7874,7 +9822,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 25,
+            "intervals": 20,
             "length": 203.18284606933597,
             "maxStep": 0
           },
@@ -7893,7 +9841,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 24,
+            "intervals": 20,
             "length": 203.18284606933597,
             "maxStep": 0.399993896484375
           },
@@ -8180,7 +10128,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 61,
             "length": 1134,
             "maxStep": 0.154998779296875
           },
@@ -8199,7 +10147,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 61,
             "length": 1134,
             "maxStep": 0.154998779296875
           },
@@ -8218,7 +10166,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 61,
             "length": 1134,
             "maxStep": 0.154998779296875
           },
@@ -8245,7 +10193,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 63,
+            "intervals": 47,
             "length": 1134,
             "maxStep": 0.154998779296875
           },
@@ -8264,7 +10212,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 63,
+            "intervals": 47,
             "length": 1134,
             "maxStep": 0.154998779296875
           },
@@ -8283,7 +10231,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 63,
+            "intervals": 47,
             "length": 1134,
             "maxStep": 0.154998779296875
           },
@@ -8570,7 +10518,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 27,
+            "intervals": 21,
             "length": 368,
             "maxStep": 0
           },
@@ -8589,7 +10537,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 27,
+            "intervals": 21,
             "length": 368,
             "maxStep": 0
           },
@@ -8608,7 +10556,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 27,
+            "intervals": 21,
             "length": 368,
             "maxStep": 0
           },
@@ -8635,7 +10583,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 27,
+            "intervals": 21,
             "length": 368,
             "maxStep": 0
           },
@@ -8654,7 +10602,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 27,
+            "intervals": 21,
             "length": 368,
             "maxStep": 0
           },
@@ -8673,7 +10621,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 27,
+            "intervals": 21,
             "length": 368,
             "maxStep": 0
           },
@@ -8700,7 +10648,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 89,
+            "intervals": 69,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8719,7 +10667,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 89,
+            "intervals": 69,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8738,7 +10686,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 107,
+            "intervals": 87,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8765,7 +10713,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 103,
+            "intervals": 95,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8784,7 +10732,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 85,
+            "intervals": 77,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8803,7 +10751,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 85,
+            "intervals": 77,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8830,7 +10778,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 85,
+            "intervals": 77,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8849,7 +10797,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 85,
+            "intervals": 77,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8868,7 +10816,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 103,
+            "intervals": 95,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8895,7 +10843,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 111,
+            "intervals": 103,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8914,7 +10862,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 93,
+            "intervals": 85,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -8933,7 +10881,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 93,
+            "intervals": 85,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9090,7 +11038,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 228,
             "maxStep": 0
           },
@@ -9109,7 +11057,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 228,
             "maxStep": 0
           },
@@ -9128,7 +11076,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 18,
+            "intervals": 16,
             "length": 228,
             "maxStep": 0
           },
@@ -9155,7 +11103,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 14,
+            "intervals": 12,
             "length": 228,
             "maxStep": 0
           },
@@ -9174,7 +11122,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 9,
             "length": 228,
             "maxStep": 0
           },
@@ -9193,7 +11141,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 11,
+            "intervals": 9,
             "length": 228,
             "maxStep": 0
           },
@@ -9220,7 +11168,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 65,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9239,7 +11187,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 65,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9258,7 +11206,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 71,
+            "intervals": 63,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9285,7 +11233,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 97,
+            "intervals": 93,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9304,7 +11252,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 97,
+            "intervals": 93,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9323,7 +11271,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 97,
+            "intervals": 93,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9350,7 +11298,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 59,
+            "intervals": 57,
             "length": 1048,
             "maxStep": 0.154998779296875
           },
@@ -9369,7 +11317,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 59,
+            "intervals": 57,
             "length": 1048,
             "maxStep": 0.154998779296875
           },
@@ -9388,7 +11336,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 59,
+            "intervals": 57,
             "length": 1048,
             "maxStep": 0.154998779296875
           },
@@ -9415,7 +11363,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 55,
+            "intervals": 53,
             "length": 1048,
             "maxStep": 0.154998779296875
           },
@@ -9434,7 +11382,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 55,
+            "intervals": 53,
             "length": 1048,
             "maxStep": 0.154998779296875
           },
@@ -9453,7 +11401,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 55,
+            "intervals": 53,
             "length": 1048,
             "maxStep": 0.154998779296875
           },
@@ -9610,7 +11558,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 69,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9629,7 +11577,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 69,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -9648,7 +11596,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 73,
+            "intervals": 69,
             "length": 1418,
             "maxStep": 0.154998779296875
           },
@@ -10000,7 +11948,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 52,
+            "intervals": 46,
             "length": 798,
             "maxStep": 0
           },
@@ -10019,7 +11967,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 53,
+            "intervals": 47,
             "length": 798,
             "maxStep": 0
           },
@@ -10038,7 +11986,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 53,
+            "intervals": 47,
             "length": 798,
             "maxStep": 0
           },
@@ -10065,7 +12013,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10084,7 +12032,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10103,7 +12051,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10130,7 +12078,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 91,
+            "intervals": 81,
             "length": 1618,
             "maxStep": 0
           },
@@ -10149,7 +12097,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 91,
+            "intervals": 81,
             "length": 1618,
             "maxStep": 0
           },
@@ -10168,7 +12116,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 91,
+            "intervals": 81,
             "length": 1618,
             "maxStep": 0
           },
@@ -10195,7 +12143,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 87,
+            "intervals": 77,
             "length": 1618,
             "maxStep": 0
           },
@@ -10214,7 +12162,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 87,
+            "intervals": 77,
             "length": 1618,
             "maxStep": 0
           },
@@ -10233,7 +12181,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 87,
+            "intervals": 77,
             "length": 1618,
             "maxStep": 0
           },
@@ -10260,7 +12208,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 125,
+            "intervals": 115,
             "length": 1618,
             "maxStep": 0.75
           },
@@ -10279,7 +12227,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 107,
+            "intervals": 97,
             "length": 1618,
             "maxStep": 0.75
           },
@@ -10298,7 +12246,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 107,
+            "intervals": 97,
             "length": 1618,
             "maxStep": 0.75
           },
@@ -10325,7 +12273,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 80,
+            "intervals": 70,
             "length": 1618,
             "maxStep": 0.230010986328125
           },
@@ -10344,7 +12292,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 80,
+            "intervals": 70,
             "length": 1618,
             "maxStep": 0.230010986328125
           },
@@ -10363,7 +12311,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 80,
+            "intervals": 70,
             "length": 1618,
             "maxStep": 0.230010986328125
           },
@@ -10520,7 +12468,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 62,
+            "intervals": 56,
             "length": 798,
             "maxStep": 0
           },
@@ -10539,7 +12487,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10558,7 +12506,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10585,7 +12533,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10604,7 +12552,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 51,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10623,7 +12571,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 62,
+            "intervals": 56,
             "length": 798,
             "maxStep": 0
           },
@@ -10780,7 +12728,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 96,
+            "intervals": 90,
             "length": 798,
             "maxStep": 0
           },
@@ -10799,7 +12747,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 85,
+            "intervals": 79,
             "length": 798,
             "maxStep": 0
           },
@@ -10818,7 +12766,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 83,
+            "intervals": 77,
             "length": 798,
             "maxStep": 0
           },
@@ -10845,7 +12793,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 53,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10864,7 +12812,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 53,
+            "intervals": 45,
             "length": 798,
             "maxStep": 0
           },
@@ -10883,7 +12831,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 60,
+            "intervals": 52,
             "length": 798,
             "maxStep": 0
           },
@@ -10910,7 +12858,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 33,
+            "intervals": 29,
             "length": 968,
             "maxStep": 0
           },
@@ -10929,7 +12877,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 33,
+            "intervals": 29,
             "length": 968,
             "maxStep": 0
           },
@@ -10948,7 +12896,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 33,
+            "intervals": 29,
             "length": 968,
             "maxStep": 0
           },
@@ -11040,7 +12988,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 148,
             "maxStep": 0
           },
@@ -11059,7 +13007,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 148,
             "maxStep": 0
           },
@@ -11078,7 +13026,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 148,
             "maxStep": 0
           },
@@ -11105,7 +13053,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 15,
+            "intervals": 13,
             "length": 148,
             "maxStep": 0
           },
@@ -11124,7 +13072,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 17,
+            "intervals": 15,
             "length": 148,
             "maxStep": 0
           },
@@ -11143,7 +13091,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 17,
+            "intervals": 15,
             "length": 148,
             "maxStep": 0
           },
@@ -11300,7 +13248,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 43,
+            "intervals": 41,
             "length": 1113,
             "maxStep": 0
           },
@@ -11319,7 +13267,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 43,
+            "intervals": 41,
             "length": 1113,
             "maxStep": 0
           },
@@ -11338,7 +13286,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 43,
+            "intervals": 41,
             "length": 1113,
             "maxStep": 0
           },
@@ -11430,7 +13378,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 33,
+            "intervals": 29,
             "length": 348,
             "maxStep": 0
           },
@@ -11449,7 +13397,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 33,
+            "intervals": 29,
             "length": 348,
             "maxStep": 0
           },
@@ -11468,7 +13416,7 @@
         {
           "result": {
             "defects": {},
-            "intervals": 33,
+            "intervals": 29,
             "length": 348,
             "maxStep": 0
           },

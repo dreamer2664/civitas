@@ -1,10 +1,10 @@
 {
   "status": "GEOMETRY_CHECKS_PASS",
   "engineTested": false,
-  "sourceRevision": "a4c8947d6015b3e40e679311b9ebe5d5212f2b68",
+  "sourceRevision": "02b2f6ed1fe23e09150557f744b45e40022dd4cd",
   "worldRevision": "c01564694fefc9825b0da33522f59f6e746b2a03",
   "worldSourceMatchesRemote": false,
-  "partCount": 1924,
+  "partCount": 1820,
   "spawnChecks": [
     {
       "label": "District A sidewalk",
@@ -26,7 +26,7 @@
     }
   ],
   "routeLength": 1632.999280097293,
-  "routeIntervals": 135,
+  "routeIntervals": 125,
   "maxStepStuds": 0.595001220703125,
   "groundSeal": {
     "proven": true,
@@ -2965,7 +2965,7 @@
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -2977,19 +2977,19 @@
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 337,
+      "maxIntersectingParts": 312,
       "peakPosition": {
-        "x": 196.75,
-        "z": 78.575,
-        "segment": 4,
-        "t": 0.065
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "peakPosition": {
         "x": 136.75,
         "z": -44.27426787834531,
@@ -3000,8 +3000,8 @@
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1065,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 999,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -3012,8 +3012,8 @@
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1921,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1817,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,
@@ -3027,36 +3027,36 @@
   "sampledStreamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 333,
+      "maxIntersectingParts": 310,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1056,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 990,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1920,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1816,
       "samplePositions": 114,
       "spacingMaxStuds": 16
     }
   },
-  "unbatchedMainPassEstimate": 1921,
+  "unbatchedMainPassEstimate": 1817,
   "measuredDrawCalls": null,
   "limitations": [
     "Lune data model only, no engine",

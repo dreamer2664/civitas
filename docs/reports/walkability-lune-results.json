@@ -1796,13 +1796,13 @@
   "groundSealed": true,
   "mainRoute": {
     "defects": {},
-    "intervals": 135,
+    "intervals": 125,
     "length": 1632.999280097293,
     "maxStep": 0.595001220703125
   },
   "maximumCrossingStep": 0.399993896484375,
   "maximumSidewalkStep": 0.75,
-  "partCount": 1924,
+  "partCount": 1820,
   "recommendedSpawn": {
     "point": {
       "x": 136.75,
@@ -1810,7 +1810,7 @@
     },
     "route": {
       "defects": {},
-      "intervals": 125,
+      "intervals": 115,
       "length": 1504.999280097293,
       "maxStep": 0.55499267578125
     },
@@ -1821,7 +1821,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 6,
+        "intervals": 1,
         "length": 75.62088012695315,
         "maxStep": 0
       },
@@ -1830,7 +1830,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 9,
+        "intervals": 5,
         "length": 75.62088012695315,
         "maxStep": 0
       },
@@ -1839,7 +1839,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 8,
+        "intervals": 6,
         "length": 70.80110168457033,
         "maxStep": 0
       },
@@ -1848,7 +1848,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 11,
+        "intervals": 9,
         "length": 70.80110168457033,
         "maxStep": 0
       },
@@ -1875,7 +1875,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 10,
+        "intervals": 9,
         "length": 55.87290954589844,
         "maxStep": 0
       },
@@ -1884,7 +1884,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 10,
+        "intervals": 8,
         "length": 55.87290954589844,
         "maxStep": 0.16500091552734375
       },
@@ -1893,7 +1893,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 10,
+        "intervals": 6,
         "length": 212.07922363281256,
         "maxStep": 0.16500091552734375
       },
@@ -1902,7 +1902,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 19,
+        "intervals": 15,
         "length": 212.07922363281256,
         "maxStep": 0.16500091552734375
       },
@@ -1911,7 +1911,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 17,
+        "intervals": 15,
         "length": 203.18284606933597,
         "maxStep": 0
       },
@@ -1920,7 +1920,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 25,
+        "intervals": 20,
         "length": 203.18284606933597,
         "maxStep": 0
       },
@@ -1965,7 +1965,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 73,
+        "intervals": 61,
         "length": 1134,
         "maxStep": 0.154998779296875
       },
@@ -1974,7 +1974,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 63,
+        "intervals": 47,
         "length": 1134,
         "maxStep": 0.154998779296875
       },
@@ -2019,7 +2019,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 27,
+        "intervals": 21,
         "length": 368,
         "maxStep": 0
       },
@@ -2028,7 +2028,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 27,
+        "intervals": 21,
         "length": 368,
         "maxStep": 0
       },
@@ -2037,7 +2037,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 89,
+        "intervals": 69,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2046,7 +2046,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 85,
+        "intervals": 77,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2055,7 +2055,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 85,
+        "intervals": 77,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2064,7 +2064,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 93,
+        "intervals": 85,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2091,7 +2091,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 15,
+        "intervals": 13,
         "length": 228,
         "maxStep": 0
       },
@@ -2100,7 +2100,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 11,
+        "intervals": 9,
         "length": 228,
         "maxStep": 0
       },
@@ -2109,7 +2109,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 73,
+        "intervals": 65,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2118,7 +2118,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 97,
+        "intervals": 93,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2127,7 +2127,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 59,
+        "intervals": 57,
         "length": 1048,
         "maxStep": 0.154998779296875
       },
@@ -2136,7 +2136,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 55,
+        "intervals": 53,
         "length": 1048,
         "maxStep": 0.154998779296875
       },
@@ -2163,7 +2163,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 73,
+        "intervals": 69,
         "length": 1418,
         "maxStep": 0.154998779296875
       },
@@ -2217,7 +2217,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 53,
+        "intervals": 47,
         "length": 798,
         "maxStep": 0
       },
@@ -2226,7 +2226,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 51,
+        "intervals": 45,
         "length": 798,
         "maxStep": 0
       },
@@ -2235,7 +2235,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 91,
+        "intervals": 81,
         "length": 1618,
         "maxStep": 0
       },
@@ -2244,7 +2244,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 87,
+        "intervals": 77,
         "length": 1618,
         "maxStep": 0
       },
@@ -2253,7 +2253,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 107,
+        "intervals": 97,
         "length": 1618,
         "maxStep": 0.75
       },
@@ -2262,7 +2262,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 80,
+        "intervals": 70,
         "length": 1618,
         "maxStep": 0.230010986328125
       },
@@ -2289,7 +2289,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 51,
+        "intervals": 45,
         "length": 798,
         "maxStep": 0
       },
@@ -2298,7 +2298,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 51,
+        "intervals": 45,
         "length": 798,
         "maxStep": 0
       },
@@ -2325,7 +2325,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 85,
+        "intervals": 79,
         "length": 798,
         "maxStep": 0
       },
@@ -2334,7 +2334,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 53,
+        "intervals": 45,
         "length": 798,
         "maxStep": 0
       },
@@ -2343,7 +2343,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 33,
+        "intervals": 29,
         "length": 968,
         "maxStep": 0
       },
@@ -2361,7 +2361,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 15,
+        "intervals": 13,
         "length": 148,
         "maxStep": 0
       },
@@ -2370,7 +2370,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 17,
+        "intervals": 15,
         "length": 148,
         "maxStep": 0
       },
@@ -2397,7 +2397,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 43,
+        "intervals": 41,
         "length": 1113,
         "maxStep": 0
       },
@@ -2415,7 +2415,7 @@
     {
       "result": {
         "defects": {},
-        "intervals": 33,
+        "intervals": 29,
         "length": 348,
         "maxStep": 0
       },

@@ -1,28 +1,19 @@
 # WALK · pave — latest strata integration audit
 
-**2026-11-02 · `walk/audit` · GEOMETRY CONTINUITY PASS · overall slice NOT FROZEN**
+**2026-11-03 · `walk/fixes` · GEOMETRY CONTINUITY PASS · overall slice NOT FROZEN**
 
 ## Publication and provenance
 
-At the first push attempt, restored the public remote configuration (excluded from workspace
-snapshots), then authenticated without storing a credential in source or remote URL.
-`git push -u origin walk/audit` returned **Everything up-to-date**. Remote verification:
+Rebased WALK history onto `main` **ce23e4d**, preserving both upstream pocket squares
+and WALK's station rear exits/count recipe. Published `walk/audit` is left intact. No HUD
+conflicts occurred; lumen's `src/client` matches main exactly. PARKS (b0d542b) and handoff
+(0ffb8e6) are closed; new changes are isolated to crossing, width, and curb-return commits.
 
-```
-89edb247844602465bb0f40da45451c04469a1da refs/heads/walk/audit
-```
-
-Thus the earlier audit and sidewalk repair were already published. This checkpoint integrates
-strata's newer **c015646** (geometry unchanged from **29002314a6a42b9930e9bba6c910ced417a67a23**), through merge **0a46a27**,
-retaining WALK's real rear pedestrian doorways. The resulting city has **302 ordinary
-buildings, 12 landmarks, 50 blocks including 4 irregular superblocks, 2 pocket squares and
-35 street segments**. Final published checkpoint SHA is verified after commit/push in the
-session response; publication is no longer blocked by the earlier rejected credential.
-
-Merge conflicts were limited to the part-count recipe and generated plan. Resolution counts
-both the two new pocket squares and the rear facade piers/headers; no geometry was omitted.
-The generated plan was regenerated from the merged modules, not hand-edited. The actual
-builder export asserts its constructed part count equals the recipe estimate.
+A new exact curb-opening gate reproduced **104 failing pieces / 428 prior curb pieces**.
+Clamping both gap endpoints to each clipped street run removes those overshooting solids:
+**324 curb pieces, zero opening violations; 1820 actual/estimated parts**. Pocket squares,
+station exits, all 302 ordinary buildings and 12 landmarks are retained. See
+`audit/WALK-FIXES.md`, `audit/curb-return-before.json` and the current street-fixes JSON.
 
 ## Real geometry audit results
 
@@ -32,7 +23,7 @@ No Roblox engine, physics, mobile hardware or camera execution is claimed.
 
 | Metric | Current result |
 |---|---|
-| Actual BaseParts / estimated recipe | **1924 / 1924** |
+| Actual BaseParts / estimated recipe | **1820 / 1820** |
 | Spawn → grid → public square → forecourt → concourse | **1632.999280 studs** |
 | Route geometry defects | **0** |
 | All constructed sidewalk pieces | **70 checked, 70 clear** |
@@ -56,7 +47,7 @@ and every sidewalk/crossing result are committed in the world/result JSONs.
 
 ### Split-street export identity correction
 
-The new clipped streets reuse instance names: the 1924 parts contain **119 duplicate full
+The new clipped streets reuse instance names: the 1820 parts contain **71 duplicate full
 paths**. The old parity comparison incorrectly conflated distinct sidewalk pieces under
 one dictionary key. The exporter now keeps `sourcePath` and `sourceIndex`, and adds an
 export-local `@pieceN` suffix only where needed. IDs are asserted unique for all constructed
@@ -81,25 +72,25 @@ z=961.25–969 remain absent in the new 70-piece audit.
 ## Part count, streaming and mobile recommendation
 
 Commands:
-* `lune run tools/walkaudit/check_world.luau` → **1924 actual parts**, 70 sidewalks clear.
+* `lune run tools/walkaudit/check_world.luau` → **1820 actual parts**, 70 sidewalks clear.
 * `python tools/walkaudit/streaming.py` → continuous bounding-footprint envelopes below.
 * `python tools/walkaudit/audit_world.py` → independent geometry and integrated same envelopes.
 
 | Radius | Continuous minimum | Continuous peak |
 |---:|---:|---:|
-| 64 | 7 | **46** |
-| 256 | 31 | **337** |
-| 384 | 88 | **650** |
-| 512 | 222 | **1065** |
-| 1024 | 1084 | **1921** |
+| 64 | 7 | **38** |
+| 256 | 31 | **312** |
+| 384 | 86 | **611** |
+| 512 | 216 | **999** |
+| 1024 | 1024 | **1817** |
 
 The analytic rounded-rectangle entry/exit sweep spans the whole route and includes closed
 contacts; no 16-stud sampling is used to claim a maximum. Cylinder footprints remain
 conservative. These are not observed stream residency, retained models or GPU draw calls.
 
-**Recommend profiling min 64 / target 384**, whose continuous envelope is now 650 parts
-(up from 621). 512 reaches 1065 before characters/trains under a one-main-pass-submission-
-per-part proxy. At configured 1024 the same proxy is 1921. These are estimates, not an upper
+**Recommend profiling min 64 / target 384**, whose continuous envelope is now 611 parts
+(down from 650). 512 reaches 999 before characters/trains under a one-main-pass-submission-
+per-part proxy. At configured 1024 the same proxy is 1817. These are estimates, not an upper
 bound on total GPU passes: batching/culling reduce calls; shadows/multipass work may add them.
 Streaming can retain models beyond the target radius. Actual phone memory, frame time,
 draw calls, triangles and pause behavior remain unmeasured.
@@ -109,13 +100,24 @@ PauseOutsideLoadedArea, Opportunistic** pending device/visibility validation. St
 Workspace BaseParts are 0 because geometry is generated at runtime; that is not the city
 count. No full-city per-frame scan or other phone-client analysis was introduced.
 
+## New street acceptance checks
+
+In addition to the original 162 axes: **324 sidewalk-aligned crossings clear**, **70/70
+physical sidewalk widths pass at 3.5 studs**, with three swept lanes per slab, and **324/324
+curb-return pieces preserve their promised openings**. This certifies the exported geometry,
+not engine navigation or two-avatar passing. No paving was invented to satisfy a test.
+
 ## Verification
 
-Run `bash tools/walkaudit/verify.sh`. All **64 regression tests pass**: 18 Luau + 11 Python
+`bash tools/verify.sh` also **passes in full** after rebase: main/client formatting, lints,
+strict analyses, 122 main tests, 23 rail tests, seven city tests, export and Rojo build.
+Evidence: `tools/walkaudit/main-rebase-verify.log`.
+
+Run `bash tools/walkaudit/verify.sh`. All **73 regression tests pass**: 18 original Luau + 9 street regressions + 11 Python
 geometry + 9 streaming + 9 sightline + **10 full-parcel grade/coverage tests** + **7 upstream generator tests** (one added by strata).
 The full pipeline still returns **1** for the separate current-spawn tested-anchor gate.
 
-* Direct Lune real-world geometry check: **exit 0**, 1924 parts, 70 sidewalks clear, sealed
+* Direct Lune real-world geometry check: **exit 0**, 1820 parts, 70 sidewalks clear, sealed
   base, 162 crossings clear. Independent Python geometry command: **exit 0**.
 * `compare.py`: Lune/Python parity PASS on actual parts, seal, route, steps, all sidewalks
   and crossings; streaming report and integrated audit agree.

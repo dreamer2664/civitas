@@ -1,0 +1,90 @@
+
+== stylua --check (formatting)
+ok
+
+== selene (lints)
+Results:
+0 errors
+0 warnings
+0 parse errors
+
+== rojo sourcemap
+Created sourcemap at build/sourcemap.json
+
+== luau-lsp analyze: src/client (strict, Roblox definitions)
+0 diagnostics
+
+== luau-lsp analyze: shared contracts (types only, no Roblox globals)
+0 diagnostics
+
+== luau-lsp analyze: src/shared/Rail (pure, standard)
+0 diagnostics
+
+== gen_network --check (map data matches docs/rail/NETWORK.md)
+gen_network: src/client/UI/Map/NetworkData.luau is current
+
+== check_enums (Roblox names vs API dump)
+check_enums: 121 references checked against Full-API-Dump.json
+check_enums: 0 problems
+
+== check_streaming (no Workspace in client code)
+check_streaming: scanned src/client
+check_streaming: 0 references to Workspace
+
+== lune unit tests
+  ok   Spline: two points give a straight line of exactly their distance
+  ok   Spline: arc length interpolates endpoints exactly
+  ok   Spline: sample(t) covers the full spline
+  ok   Spline: tangent along a straight line is the line direction
+  ok   Spline: arc length matches independent numerical integration
+  ok   Spline: arcLengthToT then lengthTo round-trips
+  ok   Spline: sampleArcLength is monotonic in position along a line
+  ok   Spline: distanceToPoint snaps to the nearest point on a line
+  ok   Spline: degenerate all-points-identical spline is safe
+  ok   Spline: duplicate adjacent control points do not crash
+  ok   Spline: 180-degree reversal backtracks exactly
+  ok   Spline: endpoint behaviour clamps at the ends
+  ok   Spline: closed spline wraps and endpoints coincide
+  ok   Spline: addPoint grows the control point list and rebuilds
+  ok   Spline: empty spline has zero length and safe samples
+  ok   Kinematics: constant acceleration from rest matches v = a * t
+  ok   Kinematics: speed is clamped at maxSpeedMs
+  ok   Kinematics: braking distance formula matches d = v^2 / (2 * dec)
+  ok   Kinematics: uphill grade shortens braking distance, downhill lengthens it
+  ok   Kinematics: emergency brake stops in less distance than service brake
+  ok   Kinematics: coasting slows the train down (resistance)
+  ok   Kinematics: stopped state has zero speed and the given position
+  ok   Kinematics: default config is a self-consistent EMU target
+
+23 passed, 0 failed (rail)
+122 passed, 0 failed, 122 total
+
+== stylua --check (world tools)
+
+== luau-lsp analyze: src/server/World (strict, Roblox definitions)
+0 diagnostics
+
+== lune generated-city acceptance tests
+  ok   city slice has the required varied massing and landmarks
+  ok   walk acceptance route is continuous and exceeds 1500 studs
+  ok   route centerline stays clear of all building and landmark collision footprints
+  ok   diagonal and jog lanes stay clear of building collision footprints
+  ok   superblocks merge cells and junction squares clear conflicting street runs
+  ok   route follows the long sidewalk and every grid crossing has a radius cut
+  ok   walk surfaces are parameterized and the estimated slice stays within phone budget
+
+City acceptance: 7 passed, 0 failed
+
+== deterministic city export + plan/street-level renders
+Exported tools/world/generated-plan.json: 302 buildings, 12 landmarks, 1633.0 route studs, 1820 estimated parts
+Rendered: tools/world/renders/district-a-plan.png tools/world/renders/street-view-grid.png tools/world/renders/street-view-station.png
+
+== rojo build (place file)
+Building project 'CIVITAS'
+Built project to civitas.rbxlx
+built build/civitas.rbxlx (200474 bytes)
+
+== evidence
+api dump sha256: ea24eacc06acb6f14e13d35029176af487310318c82b3af9e77cd427626ed133
+luau-lsp 1.70.1 | selene 0.32.0 | lune 0.11.1 | rojo 7.7.1 | stylua 2.6.0
+verify: all checks passed

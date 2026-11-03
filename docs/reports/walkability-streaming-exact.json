@@ -1,11 +1,11 @@
 {
   "engineMeasured": false,
-  "partCount": 1924,
+  "partCount": 1820,
   "assumptions": "All exported bounding footprints; cylinders conservatively boxed; no model retention/culling/shadow simulation",
   "streamingEnvelope": {
     "64": {
       "minIntersectingParts": 7,
-      "maxIntersectingParts": 46,
+      "maxIntersectingParts": 38,
       "peakPosition": {
         "x": 136.75,
         "z": -156.37768510550535,
@@ -17,19 +17,19 @@
     },
     "256": {
       "minIntersectingParts": 31,
-      "maxIntersectingParts": 337,
+      "maxIntersectingParts": 312,
       "peakPosition": {
-        "x": 196.75,
-        "z": 78.575,
-        "segment": 4,
-        "t": 0.065
+        "x": 198.63958923538172,
+        "z": 73.50354815891987,
+        "segment": 3,
+        "t": 0.9727917847076342
       },
       "method": "continuous analytic rounded-rectangle interval sweep",
       "engineMeasured": false
     },
     "384": {
-      "minIntersectingParts": 88,
-      "maxIntersectingParts": 650,
+      "minIntersectingParts": 86,
+      "maxIntersectingParts": 611,
       "peakPosition": {
         "x": 136.75,
         "z": -44.27426787834531,
@@ -40,8 +40,8 @@
       "engineMeasured": false
     },
     "512": {
-      "minIntersectingParts": 222,
-      "maxIntersectingParts": 1065,
+      "minIntersectingParts": 216,
+      "maxIntersectingParts": 999,
       "peakPosition": {
         "x": 136.75,
         "z": 138.28786575625128,
@@ -52,8 +52,8 @@
       "engineMeasured": false
     },
     "1024": {
-      "minIntersectingParts": 1084,
-      "maxIntersectingParts": 1921,
+      "minIntersectingParts": 1024,
+      "maxIntersectingParts": 1817,
       "peakPosition": {
         "x": 136.75,
         "z": -21.76563357489283,

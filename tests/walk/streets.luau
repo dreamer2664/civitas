@@ -89,4 +89,41 @@ test("short yawed X slab measures transverse width, not shorter dimension", func
 	local result = Checks.sidewalk(p, { ground(), p }, 3.5)
 	assert(result.passed and result.nominalWidth == 3.5, "true transverse width should pass")
 end)
+local function curb(): Audit.Part
+	local p = ground()
+	p.id, p.name, p.walk = "curb", "CurbReturn_x_0_1_1", false
+	p.x, p.z, p.y, p.sx, p.sz, p.sy = -31, 8.075, 0.18, 10, 0.65, 0.28
+	return p
+end
+
+test("low curb in promised opening fails even when step audit passes", function()
+	local p = curb()
+	p.x, p.sx = 0, 2
+	assert(
+		#Audit.route({ ground(), p }, { { x = -10, z = 8.075 }, { x = 10, z = 8.075 } }, 0).defects
+			== 0,
+		"ordinary height gate deliberately accepts this low curb"
+	)
+	assert(
+		not Checks.curbReturn(p, { intersection }, 3.5).passed,
+		"metadata cannot substitute for a physical return opening"
+	)
+end)
+test("exact return boundary passes but 0.01-stud intrusion fails", function()
+	local p = curb()
+	assert(Checks.curbReturn(p, { intersection }, 3.5).passed, "touching boundary is not intrusion")
+	p.x += 0.01
+	assert(
+		not Checks.curbReturn(p, { intersection }, 3.5).passed,
+		"thin intrusion cannot hide between samples"
+	)
+end)
+test("misplaced curb cannot borrow a correctly named opening", function()
+	local p = curb()
+	p.z += 2
+	assert(
+		not Checks.curbReturn(p, { intersection }, 3.5).passed,
+		"actual curb offset must match its street"
+	)
+end)
 print(string.format("%d street regression tests passed", passed))

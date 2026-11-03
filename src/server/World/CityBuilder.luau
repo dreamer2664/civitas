@@ -155,8 +155,8 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 		local cursor = street.start
 		local piece = 0
 		for _, gap in ipairs(curbGaps) do
-			local gapStart = math.max(street.start, gap.start)
-			local gapFinish = math.min(street.finish, gap.finish)
+			local gapStart = math.clamp(gap.start, street.start, street.finish)
+			local gapFinish = math.clamp(gap.finish, street.start, street.finish)
 			if gapStart > cursor then
 				piece += 1
 				local curbLength = gapStart - cursor

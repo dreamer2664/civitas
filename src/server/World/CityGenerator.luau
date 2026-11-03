@@ -668,8 +668,8 @@ function CityGenerator.generate(config: any): any
 			local cursor = street.start
 			local curbPieces = 0
 			for _, gap in ipairs(curbGaps) do
-				local gapStart = math.max(street.start, gap.start)
-				local gapFinish = math.min(street.finish, gap.finish)
+				local gapStart = math.clamp(gap.start, street.start, street.finish)
+				local gapFinish = math.clamp(gap.finish, street.start, street.finish)
 				if gapStart > cursor then
 					curbPieces += 1
 				end

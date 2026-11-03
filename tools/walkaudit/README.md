@@ -126,3 +126,13 @@ support proves 0%; tilted/unknown support reports null, never a fabricated grade
 height bounds and obstacles are separate. Full free-space connectivity is not implied.
 Ten regression tests protect these distinctions, including exact declared-superblock
 coverage and cell-membership checks. All analysis is offline.
+
+### Post-rebase street fixes (`walk/fixes`)
+
+`StreetChecks.luau` and `street_checks.luau` additionally check 324 sidewalk-aligned
+crossings, 70 physical widths (3.5-stud floor, three swept lanes each), and 324 actual
+curb-return solids. Nine negative/boundary regressions bring WALK's total to 73. The
+curb gate reproduced 104 oversized pieces, repaired by clamping both gap endpoints to
+each clipped run; current total is **1820 parts**, superseding the earlier checkpoint
+counts above. `audit/WALK-FIXES.md` records scope, before/after evidence and limits.
+The actual-spawn anchor gate is still unresolved; `tools/verify.sh` passes in full.

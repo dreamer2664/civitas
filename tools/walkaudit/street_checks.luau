@@ -35,10 +35,24 @@ for _, part in parts do
 		table.insert(sidewalks, result)
 	end
 end
+local curbReturns = {}
+local curbFailures = 0
+for _, part in parts do
+	if string.find(part.name, "^CurbReturn_") then
+		local result = Checks.curbReturn(part, data.intersections, data.sidewalkWidth)
+		if not result.passed then
+			curbFailures += 1
+		end
+		table.insert(curbReturns, result)
+	end
+end
 fs.writeFile(
 	"docs/reports/walkability-street-fixes.json",
 	serde.encode("json", {
 		engineTested = false,
+		curbReturnCount = #curbReturns,
+		failedCurbReturns = curbFailures,
+		curbReturns = curbReturns,
 		sidewalkCount = #sidewalks,
 		failedSidewalkWidths = widthFailures,
 		sidewalks = sidewalks,
@@ -52,3 +66,6 @@ assert(failures == 0, "sidewalk-aligned crossing audit failed")
 
 print(string.format("STREET WIDTHS: %d checked, %d failed", #sidewalks, widthFailures))
 assert(widthFailures == 0, "full sidewalk width audit failed")
+
+print(string.format("STREET CURB RETURNS: %d checked, %d failed", #curbReturns, curbFailures))
+assert(curbFailures == 0, "physical curb-return opening audit failed")

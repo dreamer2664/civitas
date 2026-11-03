@@ -72,4 +72,64 @@ function StreetChecks.sidewalk(part: Audit.Part, parts: { Audit.Part }, minimumW
 	}
 end
 
+-- Check actual curb solids against promised return openings. An attribute alone
+-- does not prove an opening, and a low curb can pass the ordinary step-height gate.
+function StreetChecks.curbReturn(
+	part: Audit.Part,
+	intersections: { Intersection },
+	sidewalkWidth: number
+)
+	local axis, rawCenter = string.match(part.name, "^CurbReturn_([xz])_([%-%d%.]+)_")
+	local center = tonumber(rawCenter)
+	assert(axis ~= nil and center ~= nil, "unrecognized curb-return identity")
+	local alongX = axis == "x"
+	local coordinate = if alongX then part.x else part.z
+	local length = if alongX then part.sx else part.sz
+	local transverse = if alongX then part.sz else part.sx
+	local actualOffset = math.abs((if alongX then part.z else part.x) - center)
+	local low, high = coordinate - length / 2, coordinate + length / 2
+	local passed = part.collide
+		and part.anchored
+		and part.shape == "Block"
+		and part.rx == 0
+		and part.ry == 0
+		and part.rz == 0
+	local windows = 0
+	local overlaps = {}
+	for _, intersection in intersections do
+		if (if alongX then intersection.z else intersection.x) ~= center then
+			continue
+		end
+		windows += 1
+		local roadWidth = if alongX then intersection.widthZ else intersection.widthX
+		local expectedOffset = roadWidth / 2 + sidewalkWidth + transverse / 2
+		if math.abs(actualOffset - expectedOffset) > 1e-3 then
+			passed = false
+		end
+		assert(intersection.radius >= sidewalkWidth + 1, "return radius leaves no body-width apron")
+		local crossingWidth = if alongX then intersection.widthX else intersection.widthZ
+		local crossingCenter = if alongX then intersection.x else intersection.z
+		local halfGap = crossingWidth / 2 + intersection.radius
+		local gapLow, gapHigh = crossingCenter - halfGap, crossingCenter + halfGap
+		local overlap = math.min(high, gapHigh) - math.max(low, gapLow)
+		-- Roblox export coordinates are float32; tolerate sub-millistud quantization only.
+		if overlap > 1e-4 then
+			passed = false
+			table.insert(overlaps, {
+				x = intersection.x,
+				z = intersection.z,
+				gapStart = gapLow,
+				gapFinish = gapHigh,
+				intrusionStuds = overlap,
+			})
+		end
+	end
+	return {
+		source = part.id,
+		passed = passed and windows > 0,
+		checkedOpeningCount = windows,
+		overlaps = overlaps,
+	}
+end
+
 return StreetChecks
