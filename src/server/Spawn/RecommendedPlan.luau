@@ -1,5 +1,6 @@
 --!strict
--- Geometry-verified recommendation, NOT applied to World or runtime character spawning.
+-- LEGACY geometry fixture, superseded for naming/anchor decisions by root NAMES.md.
+-- CanonicalPlan.luau is generated from NAMES.md. Neither fixture applies runtime spawning.
 -- Retains >1500 studs to concourse and exposes Civic Archive Tower from the sidewalk.
 -- Runtime integration must orient the spawn/camera and verify streamed support/first frame.
 return table.freeze({

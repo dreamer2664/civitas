@@ -54,3 +54,11 @@ selected point. **5 of 17 tested landmark-anchor rays are clear** from the assum
 This resolves the selected-anchor geometry/sightline evidence, not runtime relocation
 or first-frame engine framing. Evidence: `audit/sc01-geometry.json` and
 `audit/sc01-sightlines.json`. The old south-sidewalk runtime anchor still has 0/17.
+
+## Machine-readable handoff
+
+`python tools/walkaudit/names.py` generates `audit/canonical-spawns.json` and
+`src/server/Spawn/CanonicalPlan.luau` directly from the table above.
+`python tools/walkaudit/names.py --check` rejects drift. All runtimeActive flags remain
+false until actual integration/ground/engine checks; the old RecommendedPlan is a
+legacy audit fixture, not an alternate naming authority.

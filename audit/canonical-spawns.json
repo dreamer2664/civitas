@@ -1,0 +1,56 @@
+{
+  "source": "NAMES.md",
+  "authority": "Manager A binding interim ruling",
+  "engineTested": false,
+  "minimumAcceptanceRouteStuds": 1500,
+  "spawns": [
+    {
+      "id": "SC-01",
+      "district": "Historic Core (District A)",
+      "plaza": "Old Town Square",
+      "x": 200.0,
+      "surfaceY": 0.575,
+      "z": 75.0,
+      "built": true,
+      "runtimeActive": false,
+      "primary": true,
+      "availability": "Built plaza; selected primary anchor; runtime relocation pending"
+    },
+    {
+      "id": "SC-02",
+      "district": "Harbour",
+      "plaza": "Harbour Plaza (reserved)",
+      "x": 3700.0,
+      "surfaceY": 0.0,
+      "z": 2200.0,
+      "built": false,
+      "runtimeActive": false,
+      "primary": false,
+      "availability": "Reserved planning node; plaza/ground unbuilt; teleport disabled"
+    },
+    {
+      "id": "SC-03",
+      "district": "Market",
+      "plaza": "Market Cut Square",
+      "x": 435.0,
+      "surfaceY": 0.565,
+      "z": 455.0,
+      "built": true,
+      "runtimeActive": false,
+      "primary": false,
+      "availability": "Built plaza; named anchor; district spawn activation pending"
+    },
+    {
+      "id": "SC-04",
+      "district": "Cathedral Quarter",
+      "plaza": "Crooked Lane Court",
+      "x": -175.0,
+      "surfaceY": 0.565,
+      "z": -80.0,
+      "built": true,
+      "runtimeActive": false,
+      "primary": false,
+      "availability": "Built plaza; named anchor; district spawn activation pending"
+    }
+  ]
+}
