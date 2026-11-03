@@ -46,3 +46,12 @@ canonical-spawns.json are generated from NAMES.md; no alternate naming authority
 Four naming regressions pass (all four IDs, no false activation, missing district,
 unsafe Harbour enabling and centroid-anchor drift); the separate four camera recipe
 tests also pass. Neither suite implies an engine camera or runtime-spawn integration.
+
+## Ordered continuation command
+
+`python -u tools/walkaudit/post_merge.py --wait` waits read-only for the authorized PR
+merge, then creates a clean detached main worktree, verifies actual main, writes the delta,
+and ONLY THEN renders the ten labelled geometry previews. It cannot approve, merge or push.
+It rejects a PR head different from the reviewed 3e37026 and stops on geometry/main-check
+failures. WALK will verify and push its outputs to walk/audit after it completes.
+The watcher checks Git refs and uses low-frequency API reads, honoring rate-limit reset.
