@@ -155,8 +155,8 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 		local cursor = street.start
 		local piece = 0
 		for _, gap in ipairs(curbGaps) do
-			local gapStart = math.max(street.start, gap.start)
-			local gapFinish = math.min(street.finish, gap.finish)
+			local gapStart = math.clamp(gap.start, street.start, street.finish)
+			local gapFinish = math.clamp(gap.finish, street.start, street.finish)
 			if gapStart > cursor then
 				piece += 1
 				local curbLength = gapStart - cursor
@@ -412,11 +412,50 @@ local function buildStation(parent: Instance, station: any, palette: any)
 			palette.civic
 		)
 	end
+	-- Keep a solid rear facade, but make two real pedestrian doorways on the
+	-- existing sidewalk axes. No collision disabling, audit exclusions or rescue paving.
+	local rearZ = station.concourseZ + station.depth * 0.275
+	local cursor = x - (station.width - 20) / 2
+	local right = x + (station.width - 20) / 2
+	local wallHeight = 19
+	assert(
+		station.rearExitHeight >= 6 and station.rearExitHeight < wallHeight,
+		"invalid rear exit headroom"
+	)
+	assert(station.rearExitWidth >= 3, "rear exits must clear a pedestrian body")
+	for index, offset in ipairs(station.rearExitOffsets) do
+		local center = x + offset
+		local openingLeft = center - station.rearExitWidth / 2
+		local openingRight = center + station.rearExitWidth / 2
+		assert(
+			openingLeft > cursor and openingRight < right,
+			"rear exits overlap or leave the facade"
+		)
+		createPart(
+			model,
+			"StationRearWall_Pier_" .. tostring(index),
+			Vector3.new(openingLeft - cursor, wallHeight, 8),
+			Vector3.new((cursor + openingLeft) / 2, wallHeight / 2, rearZ),
+			Enum.Material.Brick,
+			palette.civic
+		)
+		local header = createPart(
+			model,
+			"StationRearWall_Header_" .. tostring(index),
+			Vector3.new(station.rearExitWidth, wallHeight - station.rearExitHeight, 8),
+			Vector3.new(center, (wallHeight + station.rearExitHeight) / 2, rearZ),
+			Enum.Material.Brick,
+			palette.civic
+		)
+		header:SetAttribute("PedestrianOpeningWidth", station.rearExitWidth)
+		header:SetAttribute("PedestrianOpeningHeight", station.rearExitHeight)
+		cursor = openingRight
+	end
 	createPart(
 		model,
-		"StationRearWall",
-		Vector3.new(station.width - 20, 19, 8),
-		Vector3.new(x, 9.5, station.concourseZ + station.depth * 0.275),
+		"StationRearWall_Pier_" .. tostring(#station.rearExitOffsets + 1),
+		Vector3.new(right - cursor, wallHeight, 8),
+		Vector3.new((cursor + right) / 2, wallHeight / 2, rearZ),
 		Enum.Material.Brick,
 		palette.civic
 	)

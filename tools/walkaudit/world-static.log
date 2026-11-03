@@ -1,0 +1,7 @@
+Results:
+0 errors
+0 warnings
+0 parse errors
+Created sourcemap at /home/user/.cache/civitas/sourcemap.json
+[INFO] Loading definitions file: @roblox - /home/user/.cache/civitas/globalTypes.d.luau
+[WARN] client does not allow didChangeWatchedFiles registration - automatic updating on sourcemap changes disabled

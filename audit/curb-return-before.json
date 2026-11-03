@@ -1,0 +1,3216 @@
+{
+  "baseline": "0ffb8e6eb8150b0aa4da17fcd438457d21449110",
+  "method": "real prior generator and builder loaded under Lune, tested with new StreetChecks; no engine",
+  "builderSHA256": "6733d902c10523f8dd2399bc9d0642b92c6f90eefd38cb06c1f1253a38b83b4a",
+  "generatorSHA256": "e795594eb62a0b0885ff0da981b17909b62c3e9c6f5be0888ead9d9b9da87236",
+  "curbReturnCount": 428,
+  "failedCurbReturns": 104,
+  "findings": [
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_455_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 15.25,
+          "x": 270,
+          "z": 295
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_3@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 15.25,
+          "x": 270,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 15.25,
+          "x": 270,
+          "z": 295
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_3@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 15.25,
+          "x": 270,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_2@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": 295
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": 295
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": 295
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": 295
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": 295
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": 295
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_6"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_5"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_295_-1_4"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -145
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -145
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -145
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -145
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -145
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -145
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-145_-1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -450
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -450
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -450
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_7@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -450
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -450
+        },
+        {
+          "gapFinish": 452.5,
+          "gapStart": 417.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -450
+        },
+        {
+          "gapFinish": 285.25,
+          "gapStart": 254.75,
+          "intrusionStuds": 30.5,
+          "x": 270,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        },
+        {
+          "gapFinish": 146,
+          "gapStart": 94,
+          "intrusionStuds": 52,
+          "x": 120,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_7@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        },
+        {
+          "gapFinish": -39.75,
+          "gapStart": -70.25,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -182.5,
+          "gapStart": -217.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        },
+        {
+          "gapFinish": -334.75,
+          "gapStart": -365.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -472.5,
+          "gapStart": -507.5,
+          "intrusionStuds": 17.5,
+          "x": -490,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_x_-450_-1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": 435,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": 435,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": 435,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": 435,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": 435,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": 435,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": 435,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": 435,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": 435,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": 435,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": 435,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_435_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -55,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -55,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -55,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -55,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -55,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -55,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -55,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -55,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -55,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-55_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -200,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -200,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -200,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -200,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -200,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -200,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -200,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -200,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -200,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 17.5,
+          "x": -200,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-200_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_7@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_6@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_7@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_6@piece1"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_3@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -350,
+          "z": -300
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_2@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_7@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_5@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_4@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_3@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_1_2@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_7@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": 0
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_5@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        },
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 30.5,
+          "x": -350,
+          "z": -300
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_4@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        },
+        {
+          "gapFinish": -432.5,
+          "gapStart": -467.5,
+          "intrusionStuds": 35,
+          "x": -350,
+          "z": -450
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_3@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -594,
+          "gapStart": -646,
+          "intrusionStuds": 26,
+          "x": -350,
+          "z": -620
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-350_-1_2@piece3"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_1_4@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 295
+        },
+        {
+          "gapFinish": 472.5,
+          "gapStart": 437.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 455
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_9"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 150
+        },
+        {
+          "gapFinish": 310.25,
+          "gapStart": 279.75,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 295
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_8"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        },
+        {
+          "gapFinish": 167.5,
+          "gapStart": 132.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": 150
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_7"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        },
+        {
+          "gapFinish": 15.25,
+          "gapStart": -15.25,
+          "intrusionStuds": 30.5,
+          "x": -490,
+          "z": 0
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_6@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        },
+        {
+          "gapFinish": -127.5,
+          "gapStart": -162.5,
+          "intrusionStuds": 35,
+          "x": -490,
+          "z": -145
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_5@piece2"
+    },
+    {
+      "checkedOpeningCount": 9,
+      "overlaps": [
+        {
+          "gapFinish": -284.75,
+          "gapStart": -315.25,
+          "intrusionStuds": 15.25,
+          "x": -490,
+          "z": -300
+        }
+      ],
+      "passed": false,
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.CurbReturn_z_-490_-1_4@piece2"
+    }
+  ]
+}

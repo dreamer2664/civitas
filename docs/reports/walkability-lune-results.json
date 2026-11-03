@@ -1,0 +1,2452 @@
+{
+  "blockedCrossings": 0,
+  "blockedSidewalks": 0,
+  "categoryCounts": {
+    "BODY_BLOCKED": 0,
+    "NONCOLLIDABLE_SURFACE": 0,
+    "ROUTE_GAP": 0,
+    "STEP": 0
+  },
+  "crossingCount": 162,
+  "crossings": [
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -650,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -490,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": -490,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.399993896484375
+      },
+      "x": -490,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.29999542236328125
+      },
+      "x": -490,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.29999542236328125
+      },
+      "x": -490,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -490,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -350,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -350,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.29999542236328125
+      },
+      "x": -350,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.29999542236328125
+      },
+      "x": -350,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -350,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 12,
+        "maxStep": 0.399993896484375
+      },
+      "x": -350,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -350,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": -350,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -350,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.399993896484375
+      },
+      "x": -350,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.399993896484375
+      },
+      "x": -350,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -350,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -350,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 15,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -200,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": -200,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": -200,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -200,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": -200,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -200,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": -200,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -200,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -200,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -55,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -55,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -55,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -55,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": -55,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": -55,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": -55,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 33.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": 120,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": 120,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.25499725341796875
+      },
+      "x": 120,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 120,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 12,
+        "maxStep": 0.399993896484375
+      },
+      "x": 270,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": 270,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 270,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 16.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": 435,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 3,
+        "length": 12,
+        "maxStep": 0.29999542236328125
+      },
+      "x": 435,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": 435,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 16.5,
+        "maxStep": 0
+      },
+      "x": 435,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 435,
+      "z": 630
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -620
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -620
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -450
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -450
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -300
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -300
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -145
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": -145
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 0
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 0
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 150
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 150
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 7,
+        "length": 33.5,
+        "maxStep": 0.399993896484375
+      },
+      "x": 620,
+      "z": 295
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 12,
+        "maxStep": 0
+      },
+      "x": 620,
+      "z": 295
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 455
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 16.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 455
+    },
+    {
+      "axis": "x",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 630
+    },
+    {
+      "axis": "z",
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 33.5,
+        "maxStep": 0.09999847412109375
+      },
+      "x": 620,
+      "z": 630
+    }
+  ],
+  "engineTested": false,
+  "groundSealed": true,
+  "mainRoute": {
+    "defects": {},
+    "intervals": 125,
+    "length": 1632.999280097293,
+    "maxStep": 0.595001220703125
+  },
+  "maximumCrossingStep": 0.399993896484375,
+  "maximumSidewalkStep": 0.75,
+  "partCount": 1820,
+  "recommendedSpawn": {
+    "point": {
+      "x": 136.75,
+      "z": -512
+    },
+    "route": {
+      "defects": {},
+      "intervals": 115,
+      "length": 1504.999280097293,
+      "maxStep": 0.55499267578125
+    },
+    "runtimeApplied": false
+  },
+  "sidewalkCount": 70,
+  "sidewalks": [
+    {
+      "result": {
+        "defects": {},
+        "intervals": 1,
+        "length": 75.62088012695315,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 75.62088012695315,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 2_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 6,
+        "length": 70.80110168457033,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 1_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 70.80110168457033,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane east 1_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 11,
+        "length": 69.77259826660156,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_approach_1_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 12,
+        "length": 69.77259826660156,
+        "maxStep": 0.16500091552734375
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 2_approach_1_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 55.87290954589844,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_approach_1_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 8,
+        "length": 55.87290954589844,
+        "maxStep": 0.16500091552734375
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Crooked Lane west 1_approach_1_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 6,
+        "length": 212.07922363281256,
+        "maxStep": 0.16500091552734375
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_approach_1_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 15,
+        "length": 212.07922363281256,
+        "maxStep": 0.16500091552734375
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Market diagonal_approach_1_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 15,
+        "length": 203.18284606933597,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Canal diagonal_Sidewalk_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 20,
+        "length": 203.18284606933597,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Canal diagonal_Sidewalk_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_630_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_630_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 244,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 244,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 61,
+        "length": 1134,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 47,
+        "length": 1134,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_455_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 78,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 78,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 19,
+        "length": 148,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 148,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 368,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_1@piece3"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 368,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_295_-1@piece3"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 69,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_150_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_150_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_0_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 85,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_0_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 57,
+        "length": 898,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 49,
+        "length": 898,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 228,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 228,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-145_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 65,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-300_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 93,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-300_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 57,
+        "length": 1048,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 53,
+        "length": 1048,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 17,
+        "length": 228,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 228,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-450_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 69,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-620_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 79,
+        "length": 1418,
+        "maxStep": 0.154998779296875
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_x_-620_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_620_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 65,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_620_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 496,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 9,
+        "length": 496,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 47,
+        "length": 798,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 45,
+        "length": 798,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_435_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 81,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_270_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 77,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_270_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 97,
+        "length": 1618,
+        "maxStep": 0.75
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_120_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 70,
+        "length": 1618,
+        "maxStep": 0.230010986328125
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_120_-1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 513,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 513,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 45,
+        "length": 798,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 45,
+        "length": 798,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-55_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 513,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 513,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 79,
+        "length": 798,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 45,
+        "length": 798,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-200_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 29,
+        "length": 968,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 37,
+        "length": 968,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 13,
+        "length": 148,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 15,
+        "length": 148,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 28,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_1@piece3"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 5,
+        "length": 28,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-350_-1@piece3"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 41,
+        "length": 1113,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 45,
+        "length": 1113,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1@piece1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 29,
+        "length": 348,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 21,
+        "length": 348,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-490_-1@piece2"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-650_1"
+    },
+    {
+      "result": {
+        "defects": {},
+        "intervals": 73,
+        "length": 1618,
+        "maxStep": 0
+      },
+      "source": "Workspace.CivitasWorld.City.DistrictA_HistoricCentreSlice.Streets.Sidewalk_z_-650_-1"
+    }
+  ]
+}
