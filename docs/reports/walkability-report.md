@@ -111,8 +111,8 @@ count. No full-city per-frame scan or other phone-client analysis was introduced
 
 ## Verification
 
-Run `bash tools/walkaudit/verify.sh`. All **62 regression tests pass**: 18 Luau + 11 Python
-geometry + 9 streaming + 9 sightline + **8 full-parcel grade tests** + **7 upstream generator tests** (one added by strata).
+Run `bash tools/walkaudit/verify.sh`. All **64 regression tests pass**: 18 Luau + 11 Python
+geometry + 9 streaming + 9 sightline + **10 full-parcel grade/coverage tests** + **7 upstream generator tests** (one added by strata).
 The full pipeline still returns **1** for the separate current-spawn tested-anchor gate.
 
 * Direct Lune real-world geometry check: **exit 0**, 1924 parts, 70 sidewalks clear, sealed
@@ -131,6 +131,12 @@ Full evidence: `tools/walkaudit/evidence.log`, `world-static.log`, result JSONs 
 `docs/reports/renders/walkability-route.svg` (actual geometry and gold route).
 
 ## Full-superblock PARKS audit and meanGrade
+
+The final coverage certificate compares every named superblock and its exact source cell
+set against `config.blocks.superblocks`: **4 expected / 4 audited**, missing=[], unexpected=[],
+membershipMatches=true. All **64 original cells** are covered exactly once across 50 parcels.
+Two added negative tests reject omitted superblocks and incorrect membership. Ranked merge
+follow-ups are documented in `audit/STRATA-TOP3.md` for strata's already-merged PR #5.
 
 Command: `python tools/walkaudit/parks.py` after the real Lune export. Artifact:
 **audit/PARKS.json**, with SHA-256 of the actual exported geometry. All **50 parcels / 64

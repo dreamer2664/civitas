@@ -13,6 +13,16 @@ def part(**kw):
 
 R=dict(minX=-1,maxX=1,minZ=-1,maxZ=1)
 class Parks(unittest.TestCase):
+    def inventory(self):
+        return dict(parts=[part()],blocks=[dict(name='A',superblock=True,cells=[dict(xi=1,zi=1),dict(xi=2,zi=1)])],
+            declaredSuperblocks=[dict(name='A',cells=[[1,1],[2,1]])],gridX=[-1,0,1],gridZ=[-1,1],
+            plaza=dict(centerX=0,centerZ=0,width=1,depth=1),pocketSquares=[])
+    def test_missing_declared_superblock_cannot_pass(self):
+        data=self.inventory();data['declaredSuperblocks'][0]['name']='B'
+        with self.assertRaises(ValueError):m.build(data)
+    def test_declared_membership_must_match(self):
+        data=self.inventory();data['declaredSuperblocks'][0]['cells']=[[1,1]]
+        with self.assertRaises(ValueError):m.build(data)
     def test_flat_mean_is_zero(self):
         r=m.region('test','block',[R],[part()])
         self.assertEqual(r['meanGrade'],0)

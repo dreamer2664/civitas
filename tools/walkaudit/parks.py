@@ -78,6 +78,18 @@ def build(data):
     expected={(x,z) for x in range(1,len(data['gridX'])) for z in range(1,len(data['gridZ']))}
     if len(references)!=len(set(references)) or set(references)!=expected:
         raise ValueError('Full block inventory must cover every source grid cell exactly once')
+    declared=data['declaredSuperblocks']
+    expected_names=[group['name'] for group in declared]
+    actual_groups=[block for block in data['blocks'] if block['superblock']]
+    actual_names=[block['name'] for block in actual_groups]
+    if len(set(expected_names))!=len(expected_names) or len(set(actual_names))!=len(actual_names) or set(expected_names)!=set(actual_names):
+        raise ValueError('Every declared superblock must be audited exactly once')
+    by_name={block['name']:block for block in actual_groups}
+    for group in declared:
+        expected_cells={tuple(cell) for cell in group['cells']}
+        actual_cells={(cell['xi'],cell['zi']) for cell in by_name[group['name']]['cells']}
+        if expected_cells!=actual_cells:
+            raise ValueError('Superblock membership differs from source declaration: '+group['name'])
     rows=[]
     for block in data['blocks']:
         rows.append(region(block['name'],'superblock' if block['superblock'] else 'block',cell_domain(block,data['gridX'],data['gridZ']),data['parts']))
@@ -87,6 +99,7 @@ def build(data):
     return dict(schema='civitas.walk.PARKS.v1',engineTested=False,
         meanGradeDefinition='Physical surface slope percent, not a quality/grading score. Horizontal support has zero slope; steps are excluded and bounded separately.',
         domainDefinition='Full union of source grid-centreline cells including former internal road corridors; L-shape missing cells are NOT filled by a bounding box. Public squares use exact declared rectangles.',
+        superblockCoverageCertificate=dict(expectedCount=len(expected_names),auditedCount=len(actual_names),expectedNames=sorted(expected_names),auditedNames=sorted(actual_names),missing=[],unexpected=[],membershipMatches=True),
         semanticParksDeclared=0,note='No semantic park inventory exists. PARKS.json names the requested artifact; records are actual parcels and public squares, not invented parks.',
         fullBlockCount=sum(r['kind'] in ('block','superblock') for r in rows),superblockCount=sum(r['kind']=='superblock' for r in rows),publicSquareCount=sum(r['kind']=='public_square' for r in rows),
         sourceGridCellCount=len(expected),auditedGridCellCount=len(references),gridCoverageComplete=True,
@@ -103,6 +116,7 @@ if __name__=='__main__':
     (root/'audit/PARKS.json').write_text(json.dumps(result,indent=2)+'\n')
     summary=['# Full-superblock meanGrade summary','',
         'meanGrade = physical slope %, not a quality score. All 50 parcels are inventoried in PARKS.json; the table summarizes every superblock plus all three public squares.',
+        f"Coverage certificate: {result['superblockCoverageCertificate']['auditedCount']}/{result['superblockCoverageCertificate']['expectedCount']} declared superblocks, exact cell membership; missing 0, unexpected 0. All {result['auditedGridCellCount']} grid cells audited exactly once.",
         '','| Region | Kind | Domain area (studs²) | meanGrade (%) | Support step bound (studs) | Base sealed |',
         '|---|---|---:|---:|---:|---|']
     for row in result['regions']:
