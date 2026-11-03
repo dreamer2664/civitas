@@ -30,6 +30,8 @@ This is a **headless Blender Workbench cutaway, not a Studio screenshot**. Unrel
 
 ## Studio / physical-device checklist — not performed
 
+Emulator and physical-device rows are **deferred to the Director device session**, alongside lattice `DEVICE-VERIFICATION.md` and rook `ENGINE-IN-WEBVIEW.md`; do not retry emulator installation in this workspace.
+
 Roblox Studio and Wine are not installed; an actual Studio import cannot be run in this workspace. The requested Android command `emulator -memory 4096 -no-snapshot -no-window -gpu swiftshader_indirect` was attempted and exited 127 because `emulator` is not installed; `adb` is also absent. This is **not** an out-of-memory result and no emulator or physical device was tested. A physical-device operator should:
 
 1. On a computer with Roblox Studio and appropriate access, import the committed `boarding-bridge-deployed.fbx` and `boarding-bridge-stowed.fbx` into an isolated test place. Record importer settings, scale, axes, hierarchy, origin, materials, MeshPart splitting, dimensions and screenshot. Independently import the assembled platform and train, with render/proxy collision settings verified. For the Blender sample pose only, put the station root at (4000, 0, 3400), intermediate-car rail-top root at approximately (3983.571, 0, 3403.214), and bridge root at approximately (3964.286, 0, 3403.214) in world studs, with bridge projecting toward increasing Z; position and orientation depend on confirmed Studio import axes and pivots. Open the intermediate door before capturing the boarding gap. Do not infer any service stop from this test pose.
