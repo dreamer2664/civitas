@@ -24,6 +24,7 @@ require("./client/bindings.spec")
 require("./client/map.spec")
 require("./client/gauge.spec")
 require("./client/compass.spec")
+require("./client/walk_hud.spec")
 
 local railPassed, railFailed = suite.run()
 print(string.format("\n%d passed, %d failed (rail)", railPassed, railFailed))
