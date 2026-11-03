@@ -12,7 +12,7 @@ blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-cen
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/render_boarding_bridge.py -- --gltf
 ```
 
-The builder writes `boarding-bridge-stowed.fbx` and `boarding-bridge-deployed.fbx` (and GLBs/audits) into `/tmp`, rather than committing reproducible binary exports. The verifier reimports the **bridge FBXs** into Blender alongside the station and train **GLBs**, positions them at one hypothetical aligned intermediate-car doorway, and ray-samples support along three lines across a 0.56 m corridor, at 1 cm intervals. Output:
+The builder writes `boarding-bridge-stowed.fbx` and `boarding-bridge-deployed.fbx` (and GLBs/audits) into `/tmp`. For Studio handoff, copies of both tested FBXs are now committed beside this file; they are static experimental assets, not a runtime implementation. The verifier reimports the **bridge FBXs** into Blender alongside the station and train **GLBs**, positions them at one hypothetical aligned intermediate-car doorway, and ray-samples support along three lines across a 0.56 m corridor, at 1 cm intervals. Output:
 
 ```text
 BRIDGE_POSE stowed extent_m 1.6 missing_support_samples 30 of 423
@@ -30,9 +30,13 @@ This is a **headless Blender Workbench cutaway, not a Studio screenshot**. Unrel
 
 Roblox Studio and Wine are not installed; an actual Studio import cannot be run in this workspace. The requested Android command `emulator -memory 4096 -no-snapshot -no-window -gpu swiftshader_indirect` was attempted and exited 127 because `emulator` is not installed; `adb` is also absent. This is **not** an out-of-memory result and no emulator or physical device was tested. A physical-device operator should:
 
-1. On a computer with Roblox Studio and appropriate access, regenerate both FBXs and import each into a test place. Record importer settings, scale, axes, hierarchy, origin, materials, MeshPart splitting, dimensions and screenshot. Independently import the assembled platform and train, with render/proxy collision settings verified.
+1. On a computer with Roblox Studio and appropriate access, import the committed `boarding-bridge-deployed.fbx` and `boarding-bridge-stowed.fbx` into an isolated test place. Record importer settings, scale, axes, hierarchy, origin, materials, MeshPart splitting, dimensions and screenshot. Independently import the assembled platform and train, with render/proxy collision settings verified. For the Blender sample pose only, put the station root at (4000, 0, 3400), intermediate-car rail-top root at approximately (3983.571, 0, 3403.214), and bridge root at approximately (3964.286, 0, 3403.214) in world studs, with bridge projecting toward increasing Z; position and orientation depend on confirmed Studio import axes and pivots. Open the intermediate door before capturing the boarding gap. Do not infer any service stop from this test pose.
 2. Have the train/runtime owner implement and review secure attachment, alignment limits and fail-safe interlocks: collision disabled while stowed or moving, deploy only stopped/aligned with doors open, retract and confirm clearance before movement. This prototype does not supply those controls and must not be used operationally as-is.
 3. In an isolated test with the approved implementation, check boarding and alighting in both directions across supported door positions, multiple avatar sizes and alignment tolerances; inspect overlap, clipping, edge cases, moving/closing doors and emergency retraction. Never test unsafe movement with a deployed plate in live service.
 4. Publish only an approved test build using authorized tooling. On a physical mobile device, record model/OS, app version, settings, network and scene; run the same interaction and measure frame rate, memory and stability, documenting passes/failures and screenshots. Test desktop too. No mobile compatibility or performance claim is made until results are recorded.
 
 The separate city alignment issue also remains unresolved: no street connection is claimed. See the station README and issue #4 for coordinates and owner handoff.
+
+## Latest Studio request
+
+On the 07:02 supervisor follow-up, this workspace still had no Roblox Studio executable, Wine, Android emulator, `adb` or Roblox account. An actual Studio import and Studio boarding-gap screenshot remain **blocked and not performed**; the committed PNG above is the previously recorded Blender cutaway. A Studio operator with authorized access must carry out the checklist, capture the actual Studio screenshot, and append the results before the Studio loop can be closed.
