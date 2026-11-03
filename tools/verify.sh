@@ -66,6 +66,12 @@ python3 tools/check_enums.py --dump "$DUMP"
 step "check_streaming (no Workspace in client code)"
 python3 tools/check_streaming.py
 
+step "theme tokens page is current (docs/ui/THEME-TOKENS.md)"
+lune run tools/theme_doc.luau -- --check
+
+step "component snapshot (tokens exist, no literal colours, snapshot current)"
+lune run tools/component_snapshot.luau
+
 step "lune unit tests"
 lune run tests/run.luau
 
