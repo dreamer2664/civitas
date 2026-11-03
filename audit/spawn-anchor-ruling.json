@@ -1,0 +1,39 @@
+{
+  "authority": "Manager A explicit spawn-anchor ruling",
+  "routeLengthStuds": 1632.999280097293,
+  "centroidMethod": "arc-length-weighted centroid of the full polyline, not vertex average or halfway point",
+  "centroidXZ": {
+    "x": 139.39164879629672,
+    "z": 141.00859725748057
+  },
+  "plazaCandidates": [
+    {
+      "name": "Old Town Square",
+      "x": 200,
+      "z": 75,
+      "distanceStuds": 89.61309696429262
+    },
+    {
+      "name": "Crooked Lane Court",
+      "x": -175,
+      "z": -80,
+      "distanceStuds": 384.3005450094668
+    },
+    {
+      "name": "Market Cut Square",
+      "x": 435,
+      "z": 455,
+      "distanceStuds": 431.2480704856394
+    }
+  ],
+  "selected": {
+    "name": "Old Town Square",
+    "x": 200,
+    "z": 75,
+    "distanceStuds": 89.61309696429262
+  },
+  "surfaceY": 0.575,
+  "runtimeApplied": false,
+  "engineTested": false,
+  "originalAcceptanceRouteRetained": true
+}
