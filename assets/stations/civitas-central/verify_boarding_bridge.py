@@ -1,12 +1,14 @@
 """Test regenerated prototype GLB or FBX at one static, hypothetical aligned door.
 
-The train and station are always GLB. Pass --fbx to reimport bridge FBXs.
+The train and station are always GLB. Pass --fbx to reimport bridge FBXs;
+add --committed to audit the copies checked into the station directory.
 """
 import bpy,os,runpy,sys
 from mathutils import Vector
 D=os.path.dirname(os.path.abspath(__file__))
 if '--gltf' not in sys.argv: raise RuntimeError('Pass -- --gltf; build prototype GLBs first')
-path='/tmp/civitas-boarding-bridge'
+if '--committed' in sys.argv and '--fbx' not in sys.argv: raise RuntimeError('--committed requires --fbx')
+path=D if '--committed' in sys.argv else '/tmp/civitas-boarding-bridge'
 ns=runpy.run_path(os.path.join(D,'verify_boarding.py'))
 s=bpy.context.scene
 

@@ -9,10 +9,12 @@ Blender 4.3.2, headless, from the repository root:
 ```sh
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/build_boarding_bridge.py -- /tmp/civitas-boarding-bridge
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_boarding_bridge.py -- --gltf --fbx
+# Independently test the FBXs committed alongside this document:
+blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/verify_boarding_bridge.py -- --gltf --fbx --committed
 blender -b --factory-startup --python-exit-code 1 -P assets/stations/civitas-central/render_boarding_bridge.py -- --gltf
 ```
 
-The builder writes `boarding-bridge-stowed.fbx` and `boarding-bridge-deployed.fbx` (and GLBs/audits) into `/tmp`. For Studio handoff, copies of both tested FBXs are now committed beside this file; they are static experimental assets, not a runtime implementation. The verifier reimports the **bridge FBXs** into Blender alongside the station and train **GLBs**, positions them at one hypothetical aligned intermediate-car doorway, and ray-samples support along three lines across a 0.56 m corridor, at 1 cm intervals. Output:
+The builder writes `boarding-bridge-stowed.fbx` and `boarding-bridge-deployed.fbx` (and GLBs/audits) into `/tmp`. For Studio handoff, copies of both tested FBXs are now committed beside this file; they are static experimental assets, not a runtime implementation. Both the regenerated and committed FBXs were reimported and produced the same results. The verifier reimports the **bridge FBXs** into Blender alongside the station and train **GLBs**, positions them at one hypothetical aligned intermediate-car doorway, and ray-samples support along three lines across a 0.56 m corridor, at 1 cm intervals. Output:
 
 ```text
 BRIDGE_POSE stowed extent_m 1.6 missing_support_samples 30 of 423
@@ -40,3 +42,5 @@ The separate city alignment issue also remains unresolved: no street connection 
 ## Latest Studio request
 
 On the 07:02 supervisor follow-up, this workspace still had no Roblox Studio executable, Wine, Android emulator, `adb` or Roblox account. An actual Studio import and Studio boarding-gap screenshot remain **blocked and not performed**; the committed PNG above is the previously recorded Blender cutaway. A Studio operator with authorized access must carry out the checklist, capture the actual Studio screenshot, and append the results before the Studio loop can be closed.
+
+The foreman workaround was re-attempted on the latest continuation; `emulator` again exited 127 (command not found), so the physical-device checklist above remains unexecuted.
