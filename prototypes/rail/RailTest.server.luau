@@ -8,6 +8,7 @@ local RunService = game:GetService("RunService")
 local rail = ReplicatedStorage.Shared.Rail
 local Kinematics = require(rail.Kinematics)
 local DriverControl = require(rail.DriverControl)
+local ControlGate = require(rail.ControlGate)
 local Simulation = require(rail.TrainSimulation).create(Kinematics, DriverControl)
 
 local settings =
@@ -176,20 +177,13 @@ snapshot.Name = "Snapshot"
 snapshot.Parent = remotes
 
 -- Per-player token bucket, capped and removed on exit. This is not a production authority layer.
-local buckets: { [Player]: { tokens: number, time: number } } = {}
+local buckets: { [Player]: ControlGate.Bucket } = {}
 local function allow(player: Player, now: number): boolean
-	local bucket = buckets[player]
-	if not bucket then
-		bucket = { tokens = 20, time = now }
-		buckets[player] = bucket
+	local updated, allowed = ControlGate.consume(buckets[player], now)
+	if updated then
+		buckets[player] = updated
 	end
-	bucket.tokens = math.min(20, bucket.tokens + math.max(0, now - bucket.time) * 10)
-	bucket.time = now
-	if bucket.tokens < 1 then
-		return false
-	end
-	bucket.tokens -= 1
-	return true
+	return allowed
 end
 Players.PlayerRemoving:Connect(function(player: Player)
 	buckets[player] = nil
@@ -200,7 +194,7 @@ control.OnServerEvent:Connect(function(player: Player, raw: any)
 		return
 	end
 	local occupant = seat.Occupant
-	if occupant == nil or player.Character == nil or occupant.Parent ~= player.Character then
+	if not ControlGate.authorized(player.Character, if occupant then occupant.Parent else nil) then
 		return
 	end
 	local nextState = Simulation.submit(state, raw, now)

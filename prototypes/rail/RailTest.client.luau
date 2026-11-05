@@ -179,12 +179,14 @@ end)
 -- Repeat current intent to satisfy the server's dead-man timeout. This runs only while the GUI exists.
 task.spawn(function()
 	while gui.Parent do
-		control:FireServer({
-			throttle = throttle,
-			brake = brake,
-			reverser = reverser,
-			doors = doors,
-		})
+		if driving then
+			control:FireServer({
+				throttle = throttle,
+				brake = brake,
+				reverser = reverser,
+				doors = doors,
+			})
+		end
 		task.wait(0.2)
 	end
 end)

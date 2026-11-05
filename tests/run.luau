@@ -14,6 +14,7 @@ local suite = require("./support/suite")
 require("./rail/spline.spec")
 require("./rail/kinematics.spec")
 require("./rail/train_simulation.spec")
+require("./rail/control_gate.spec")
 
 -- Client specs (CODE · lumen), registered with tests/harness.
 require("./client/theme.spec")

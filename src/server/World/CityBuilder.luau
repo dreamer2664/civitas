@@ -438,14 +438,116 @@ local function buildStation(parent: Instance, station: any, palette: any)
 			palette.civic
 		)
 	end
+	-- Open a central doorway to the experimental platform. The existing building shell is
+	-- provisional and will still need reconciliation with the final station asset.
+	local openingWidth = 24
+	local wallWidth = (station.width - 20 - openingWidth) / 2
+	local rearZ = station.concourseZ + station.depth * 0.275
+	for side = -1, 1, 2 do
+		createPart(
+			model,
+			"StationRearWall_" .. tostring(side),
+			Vector3.new(wallWidth, 19, 8),
+			Vector3.new(x + side * (openingWidth / 2 + wallWidth / 2), 9.5, rearZ),
+			Enum.Material.Brick,
+			palette.civic
+		)
+	end
 	createPart(
 		model,
-		"StationRearWall",
-		Vector3.new(station.width - 20, 19, 8),
-		Vector3.new(x, 9.5, station.concourseZ + station.depth * 0.275),
+		"StationRearLintel",
+		Vector3.new(openingWidth, 5, 8),
+		Vector3.new(x, 16.5, rearZ),
 		Enum.Material.Brick,
 		palette.civic
 	)
+	local startTop = 0.63
+	local rise = station.platformTopY - startTop
+	local run = station.rampEndZ - station.rampStartZ
+	local angle = math.atan2(rise, run)
+	local ramp = createPart(
+		model,
+		"PlatformAccessRamp",
+		Vector3.new(20, 0.4, math.sqrt(run * run + rise * rise) + 0.4),
+		Vector3.new(
+			x,
+			(startTop + station.platformTopY) / 2 - 0.2 * math.cos(angle),
+			(station.rampStartZ + station.rampEndZ) / 2
+		),
+		Enum.Material.Concrete,
+		Color3.fromRGB(184, 179, 165)
+	)
+	ramp.Orientation = Vector3.new(-math.deg(angle), 0, 0)
+	ramp:SetAttribute("Walkable", true)
+	local platform = createPart(
+		model,
+		"ExperimentalPlatform",
+		Vector3.new(station.platformWidth, 0.8, station.platformDepth),
+		Vector3.new(x, station.platformTopY - 0.4, station.platformCenterZ),
+		Enum.Material.Concrete,
+		Color3.fromRGB(184, 179, 165)
+	)
+	platform:SetAttribute("Walkable", true)
+	local tactile = createPart(
+		model,
+		"ExperimentalPlatformTactile",
+		Vector3.new(station.platformWidth, 0.08, 2.14),
+		Vector3.new(
+			x,
+			station.platformTopY + 0.04,
+			station.platformCenterZ + station.platformDepth / 2 - 1.1
+		),
+		Enum.Material.Concrete,
+		Color3.fromRGB(211, 189, 130)
+	)
+	tactile.CanCollide = false
+	tactile.CanQuery = false
+	for _, offset in ipairs({ -80, -40, 40, 80 }) do
+		createPart(
+			model,
+			"PlatformCanopyColumn_" .. tostring(offset),
+			Vector3.new(1.2, 12, 1.2),
+			Vector3.new(x + offset, station.platformTopY + 6, station.platformCenterZ - 5),
+			Enum.Material.Metal,
+			Color3.fromRGB(68, 83, 86)
+		)
+	end
+	createPart(
+		model,
+		"PlatformCanopy",
+		Vector3.new(station.platformWidth - 4, 0.8, station.platformDepth - 5),
+		Vector3.new(x, station.platformTopY + 12.4, station.platformCenterZ),
+		Enum.Material.Metal,
+		Color3.fromRGB(76, 92, 96)
+	)
+	for _, offset in ipairs({ -50, 50 }) do
+		local bench = createPart(
+			model,
+			"PlatformBenchSeat_" .. tostring(offset),
+			Vector3.new(9, 0.5, 2),
+			Vector3.new(x + offset, station.platformTopY + 1.8, station.platformCenterZ - 2),
+			Enum.Material.WoodPlanks,
+			Color3.fromRGB(130, 97, 65)
+		)
+		bench.CanCollide = false
+		bench.CanQuery = false
+		for _, side in ipairs({ -1, 1 }) do
+			local support = createPart(
+				model,
+				"PlatformBenchSupport",
+				Vector3.new(0.5, 1.6, 1.8),
+				Vector3.new(
+					x + offset + side * 3.5,
+					station.platformTopY + 0.8,
+					station.platformCenterZ - 2
+				),
+				Enum.Material.Metal,
+				Color3.fromRGB(68, 83, 86)
+			)
+			support.CanCollide = false
+			support.CanQuery = false
+		end
+	end
 	for _, offset in ipairs({ -56, -28, 28, 56 }) do
 		createPart(
 			model,

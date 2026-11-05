@@ -48,7 +48,7 @@ heading.Size = UDim2.new(1, -32, 0, 25)
 heading.Parent = mapPanel
 local note = Label.new({
 	name = "Status",
-	text = "Concept only - no train services yet. Zoom for station names.",
+	text = "Plan only - test shuttle separate. Zoom for names.",
 	type = "caption",
 	color = "textMuted",
 })

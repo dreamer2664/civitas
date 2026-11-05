@@ -32,7 +32,7 @@ def render(w, h, name):
     x, y, pw, ph = w*.05, h*.08, w*.9, h*.84
     d.rectangle((x, y, x+pw, y+ph), fill="#0e1216")
     d.text((x+16, y+5), "PLANNED NETWORK", font=font(18, True), fill="#eef1f3")
-    d.text((x+16, y+32), "Concept only - no train services yet. Zoom for station names.", font=font(12), fill="#aeb8c1")
+    d.text((x+16, y+32), "Plan only - test shuttle separate. Zoom for names.", font=font(12), fill="#aeb8c1")
     mx, my, mw, mh = x+12, y+64, pw-24, ph-128
     d.rectangle((mx, my, mx+mw, my+mh), fill="#161c22")
     points = [p for pts in lines.values() for p in pts] + [(s['x'], s['z']) for s in stations]

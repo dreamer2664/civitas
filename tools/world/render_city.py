@@ -146,12 +146,16 @@ def draw_plan() -> None:
         ))
         ax.text(square["centerX"], square["centerZ"], square["name"], fontsize=4.8, ha="center", va="center", color="#2e2b25", zorder=6)
     station = PLAN["station"]
-    ax.add_patch(Rectangle((station["centerX"] - station["width"] / 2, station["entryZ"]), station["width"], station["depth"] * 0.55, facecolor="#b8a789", edgecolor="#3c3630", lw=1.3, zorder=4))
+    ax.add_patch(Rectangle((station["centerX"] - (station["width"]-20) / 2, station["concourseZ"] - station["depth"]*.275), station["width"]-20, station["depth"] * .55, facecolor="#b8a789", edgecolor="#3c3630", lw=1.3, zorder=4))
+    ax.add_patch(Rectangle((station["centerX"]-station["platformWidth"]/2,station["platformCenterZ"]-station["platformDepth"]/2),station["platformWidth"],station["platformDepth"],facecolor="#d4cbb8",edgecolor="#6a6253",lw=.6,zorder=5))
+    ax.add_patch(Rectangle((station["centerX"]-10,station["rampStartZ"]),20,station["rampEndZ"]-station["rampStartZ"],facecolor="#c9c0ab",edgecolor="#6a6253",lw=.5,zorder=5))
+    for offset in (-2.56285, 2.56285):
+        ax.plot([station["railMinX"],station["railMaxX"]],[station["railCenterZ"]+offset]*2,color="#4b5353",lw=.5,zorder=4)
     ax.add_patch(Rectangle((station["centerX"] - station["width"] / 2 - 18, station["forecourtZ"] - 20), station["width"] + 36, 45, facecolor="#c9c0ab", edgecolor="none", zorder=3))
     route = PLAN["route"]
     ax.plot([p["x"] for p in route], [p["z"] for p in route], color="#c54635", lw=2.2, marker="o", markersize=2.5, zorder=7, label=f"Acceptance walk · {PLAN['stats']['routeLength']:.0f} studs")
     ax.scatter([route[0]["x"]], [route[0]["z"]], marker="*", s=85, color="#f0bf55", edgecolor="#392e22", zorder=8, label="Sidewalk spawn")
-    ax.scatter([route[-1]["x"]], [route[-1]["z"]], marker="s", s=25, color="#4e7480", edgecolor="white", zorder=8, label="Concourse")
+    ax.scatter([route[-1]["x"]], [route[-1]["z"]], marker="s", s=25, color="#4e7480", edgecolor="white", zorder=8, label="Test platform")
 
     ax.text(-665, 930, "DISTRICT A  /  HISTORIC CENTRE SLICE", fontsize=10, fontweight="bold", color="#293128")
     ax.text(-665, 890, f"{PLAN['stats']['buildingCount']} ordinary   ·   {PLAN['stats']['landmarkCount']} landmarks   ·   {PLAN['stats']['superblockCount']} superblocks   ·   {PLAN['stats']['pocketSquareCount']} pocket squares", fontsize=7.5, color="#293128")
@@ -159,7 +163,7 @@ def draw_plan() -> None:
     ax.annotate("Old Town Square", (plaza["centerX"], plaza["centerZ"]), xytext=(plaza["centerX"] + 96, plaza["centerZ"] + 32), fontsize=7, arrowprops={"arrowstyle": "-", "color": "#554d41"})
 
     ax.set_xlim(-740, 740)
-    ax.set_ylim(-700, 1015)
+    ax.set_ylim(-700, 1065)
     ax.set_aspect("equal", adjustable="box")
     ax.set_xlabel("West  ←  world X (studs)  →  East", labelpad=8)
     ax.set_ylabel("North  ←  world Z (studs)  →  South", labelpad=8)

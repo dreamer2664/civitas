@@ -630,6 +630,7 @@ function CityGenerator.generate(config: any): any
 		{ x = sidewalkX, z = config.station.forecourtZ, label = "station forecourt" },
 		{ x = config.station.centerX, z = config.station.entryZ, label = "station entrance" },
 		{ x = config.station.centerX, z = config.station.concourseZ, label = "concourse" },
+		{ x = config.station.centerX, z = config.station.platformCenterZ, label = "test platform" },
 	}
 
 	local extraTowerParts = 0
@@ -699,7 +700,7 @@ function CityGenerator.generate(config: any): any
 		+ extraTowerParts
 		+ 2
 		+ #plan.pocketSquares
-		+ 8
+		+ 24 -- station shell, ramp, experimental platform, canopy and benches
 		+ (#plan.route - 1)
 		+ 1
 	plan.stats = {

@@ -79,12 +79,16 @@ stylua --check tools/world
 analyse "luau-lsp analyze: src/server/World (strict, Roblox definitions)" \
   --definitions="$DEFS" --sourcemap=build/sourcemap.json --base-luaurc=.luaurc src/server/World
 
+analyse "luau-lsp analyze: experimental in-city railway (strict, Roblox definitions)" \
+  --definitions="$DEFS" --sourcemap=build/sourcemap.json --base-luaurc=.luaurc src/server/RailDemo
+
 step "lune generated-city acceptance tests"
 lune run tools/world/test_city.luau
 
 step "deterministic city export + plan/street-level renders"
 lune run tools/world/export_plan.luau
 python3 tools/world/render_city.py
+python3 tools/world/render_station_shuttle.py
 
 step "interface concept renders (not Studio screenshots)"
 python3 tools/world/render_interface.py
@@ -92,6 +96,7 @@ python3 tools/world/render_interface.py
 step "rojo build (place file)"
 rojo build default.project.json --output build/civitas.rbxlx
 echo "built build/civitas.rbxlx ($(stat -c %s build/civitas.rbxlx) bytes)"
+python3 tools/check_place_contents.py build/civitas.rbxlx
 
 step "isolated rail-test lint and sourcemap"
 stylua --check prototypes/rail tools/measure_train_simulation.luau
