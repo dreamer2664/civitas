@@ -45,11 +45,11 @@ Record the Studio version, device/emulation mode, route completion, observed ste
 
 - The station is a procedural placeholder shell. It has no rails or platforms and is **not** integrated with Pave's separate Central station proposal. District A currently uses entry `(120, 858)` and concourse top `Y=0.63`; the separate proposal specifies a different world footprint and elevation. Coordinate, footprint, rail-datum, and square/sidewalk-height agreement remains tracked in [issue #4](https://github.com/dreamer2664/civitas/issues/4) and [station PR #6](https://github.com/dreamer2664/civitas/pull/6).
 - The route-length, geometry-clearance, and part-recipe checks are automated plan/build checks, not Roblox physics or humanoid traversal. Studio import, actual grounding/collision at seams, streaming behavior, and mobile frame time/draw calls still need measured playtest evidence.
-- The city is still blockout massing: no shop interiors, upper-storey window detailing, street trees/furniture, NPCs, or traffic. Buildings remain procedural; no sourced building kit is included.
+- The city is still blockout massing: no shop interiors, detailed building interiors, street trees/furniture, NPCs, or traffic. Buildings remain procedural; no sourced building kit is included.
 - Facade windows, door cues, lintels and awnings are now non-collidable and non-queryable; the underlying building mass remains solid. This addresses the facade portion of [WALK-005](https://github.com/dreamer2664/civitas/issues/8), but still needs Studio collision verification and a broader decorative-detail audit. Spawn landmark sightlines ([WALK-007](https://github.com/dreamer2664/civitas/issues/9)) and the live station/platform gate ([WALK-006](https://github.com/dreamer2664/civitas/issues/10)) remain open. The suggested spawn candidate is not applied; don't infer full landmark visibility from sampled rays.
 
 ## Build record
 
 - Main release baseline before this guide: `ce23e4df1e76d11791ec06c0c797e49b7e95852f`.
-- District A plan: 302 ordinary buildings, 12 landmarks, 50 blocks, 4 superblocks, 2 pocket squares, 1,920 planned `BasePart`s (25,000 budget).
+- District A plan: 302 ordinary buildings, 12 landmarks, 50 blocks, 4 superblocks, 2 pocket squares, 10,326 planned `BasePart`s (25,000 budget). This is an increase from 1,920 after adding non-colliding upper-window overlays; actual runtime count, draw calls and mobile frame time remain unmeasured.
 - CI workflow: [Rojo place artifact](https://github.com/dreamer2664/civitas/actions/workflows/rojo-place.yml). The release tag triggers its own build and artifact upload.

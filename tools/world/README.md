@@ -11,7 +11,7 @@ Coordinates are Roblox studs, with world `Y` vertical. This is a bounded slice o
 - Carriageways: 30-stud outer/station arterials, 13-stud locals and 8.5-stud lanes at 140–150-stud intervals; sidewalks are 3.5 studs each side. Six narrow diagonal/jog segments cut across the network; their landings reserve building-free corridors. Low curbs are 0.65 wide × 0.28 high, with 11-stud radius cutbacks at intersections.
 - Three squares: the 100 × 110-stud main square at `(200,75)`, plus two smaller pocket squares at the Crooked Lane elbow and Market Cut junction. Their paving replaces five intersecting orthogonal/diagonal street runs; those approaches terminate at the square edge rather than crossing through it. The main square is inside an irregular block, not an arterial cadence. Station forecourt begins at `Z=810`; entry at `Z=858`; concourse walk floor centered at `Z=925`.
 - The route is generated as connected physical walk links: east station-avenue sidewalk spawn → narrow-lane grid → square → station forecourt → concourse. The test-measured centerline is **1,633.0 studs**.
-- Ordinary massing has a darker separate ground storey, varied storefront glazing/doors, awnings or entry lintels, and upper massing. Landmark-scale forms retain their own crowns and tower lanterns.
+- Ordinary massing has a darker separate ground storey, varied storefront glazing/doors, awnings or entry lintels, and upper massing with non-colliding window overlays on two faces. Landmark-scale forms retain their own crowns and tower lanterns.
 
 All street widths, sidewalk width, block lot pattern, square, station, bounds, seed, streaming values, and building ranges come from `src/server/World/CityConfig.luau`. Change a parameter there; `CityGenerator.generate(config)` regenerates the deterministic plan.
 
@@ -26,11 +26,11 @@ From `lune run tools/world/export_plan.luau` (same `CityGenerator` consumed by t
 | Total massings | 314 |
 | Blocks / merged superblocks / street segments / intersections | 50 / 4 / 35 / 81 |
 | Extra pocket squares / removed internal street runs / square street cuts | 2 / 18 / 5 |
-| Exact planned Roblox `BasePart` count | **1,920** |
+| Exact planned Roblox `BasePart` count | **10,326** |
 | Part budget | 25,000 |
 | Route centerline | **1,633.0 studs** |
 
-The 1,920 figure is an exact count against the current builder recipe (ordinary ground/upper/roof pieces plus frontage accents, landmark ground/upper/crowns, segmented curb returns, diagonal-lane surfaces, plaza paving, clipped junction approaches, ground, station shell, route, and spawn); the Roblox builder also counts actual `BasePart` descendants on startup and stores `GeneratedPartCount`. No Studio runtime count has been observed here.
+The 10,326 figure is an exact count against the current builder recipe (ordinary ground/upper/roof pieces plus frontage accents and upper windows, landmark ground/upper/crowns, segmented curb returns, diagonal-lane surfaces, plaza paving, clipped junction approaches, ground, station shell, route, and spawn); the Roblox builder also counts actual `BasePart` descendants on startup and stores `GeneratedPartCount`. No Studio runtime count has been observed here. This increases the original 1,920-part recipe substantially; instance count is not a draw-call or mobile performance measurement. Profile in Studio on target hardware before accepting it as a performance budget.
 
 Landmarks: Old Town Clock Tower, St. Elian's Church, Civic Archive Tower, North Gate Hotel, Covered Market Hall, Guildhall, Riverside Exchange, Opera House, South Arcade Tower, Museum of Navigation, West Bastion Tower, and East Gate Basilica.
 
@@ -66,4 +66,4 @@ Read `docs/ASSET-SOURCING-POLICY.md` from current `origin/main` before deciding.
 
 ## Handoff / not in this slice
 
-The station is a **walkable placeholder shell** (entry opening, forecourt colonnade, floor, side/rear walls), not mason's final station asset or rail concourse integration. No tracks/platforms, coastline, other districts, NPCs/traffic, shop interiors, upper-storey window detail, street trees/furniture, Studio import, or mobile runtime profiling are represented. The route's collidable geometry is generated and statically checked; only a Roblox Studio run can confirm the live character controller clears every seam and collision interaction.
+The station is a **walkable placeholder shell** (entry opening, forecourt colonnade, floor, side/rear walls), not mason's final station asset or rail concourse integration. No tracks/platforms, coastline, other districts, NPCs/traffic, shop interiors, fully detailed facades, street trees/furniture, Studio import, or mobile runtime profiling are represented. The route's collidable geometry is generated and statically checked; only a Roblox Studio run can confirm the live character controller clears every seam and collision interaction.

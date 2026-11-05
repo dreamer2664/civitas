@@ -13,7 +13,7 @@ for statement in ("part.CanCollide = false", "part.CanQuery = false"):
         raise SystemExit(f"facade policy missing: {statement}")
 if not (helper.index("part.CanCollide = false") < helper.index("part.CanQuery = false") < helper.index("return part")):
     raise SystemExit("facade policy must be applied in order before returning")
-for name in ("DisplayWindow_Left", "DisplayWindow_Right", "RecessedShopDoor", "CanvasAwning", "RecessedDoor", "EntryLintel", "SingleShopAwning"):
+for name in ("UpperWindow", "DisplayWindow_Left", "DisplayWindow_Right", "RecessedShopDoor", "CanvasAwning", "RecessedDoor", "EntryLintel", "SingleShopAwning"):
     if not re.search(r'facadePart\(\s*"' + re.escape(name) + r'"', source):
         raise SystemExit(f"facade element missing or bypasses facadePart: {name}")
-print("facade collision policy: 7 decorative overlays use the non-collidable, non-queryable helper")
+print("facade collision policy: 8 decorative overlay call sites use the non-collidable, non-queryable helper")

@@ -307,7 +307,9 @@ suite.test(
 				elseif building.frontage == "recessed-entry" then 2
 				elseif building.frontage == "awning" then 1
 				else 0
-			ordinaryParts += 3 + facadeParts
+			local upperHeight = building.height - math.min(10, building.height / 3)
+			local windowRows = math.max(1, math.floor((upperHeight - 2) / 8))
+			ordinaryParts += 3 + facadeParts + 6 * windowRows
 		end
 		local landmarkParts = #plan.landmarks * 3
 		for _, landmark in ipairs(plan.landmarks) do
@@ -332,6 +334,16 @@ suite.test(
 		expect.ok(expectedParts < plan.stats.partBudget)
 	end
 )
+
+suite.test("facade offsets follow Roblox Y-axis rotation", function()
+	local facade = require("../../src/server/World/FacadeMath")
+	local x0, z0 = facade.worldPoint(100, 200, 0, 3, -10)
+	expect.near(x0, 103, 1e-9)
+	expect.near(z0, 190, 1e-9)
+	local x90, z90 = facade.worldPoint(100, 200, 90, 3, -10)
+	expect.near(x90, 90, 1e-9)
+	expect.near(z90, 197, 1e-9)
+end)
 
 local passed, failed = suite.run()
 print(string.format("\nCity acceptance: %d passed, %d failed", passed, failed))

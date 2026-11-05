@@ -189,7 +189,7 @@ def cuboid_faces(cx: float, cy: float, cz: float, width: float, height: float, d
     a = math.radians(rotation)
     transformed = []
     for x, y, z in corners:
-        tx, tz = x * math.cos(a) - z * math.sin(a), x * math.sin(a) + z * math.cos(a)
+        tx, tz = x * math.cos(a) + z * math.sin(a), -x * math.sin(a) + z * math.cos(a)
         transformed.append((cx + tx, cy + y, cz + tz))
     indices = [(0, 1, 2, 3), (4, 7, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)]
     return [[transformed[i] for i in face] for face in indices]
@@ -289,8 +289,8 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
     def facade_center(building, local_x, local_z):
         angle = math.radians(building["rotation"])
         return (
-            building["x"] + local_x * math.cos(angle) - local_z * math.sin(angle),
-            building["z"] + local_x * math.sin(angle) + local_z * math.cos(angle),
+            building["x"] + local_x * math.cos(angle) + local_z * math.sin(angle),
+            building["z"] - local_x * math.sin(angle) + local_z * math.cos(angle),
         )
 
     for building in PLAN["buildings"] + PLAN["landmarks"]:
@@ -325,6 +325,14 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
                 ]
             elif frontage == "awning":
                 details = [(0, ground_height * .9, facade_z - 1.1, building["width"] * .58, .8, 2, "#727c66")]
+            upper_height = building["height"] - ground_height
+            window_rows = max(1, int((upper_height - 2) // 8))
+            for side in (-1, 1):
+                for row in range(1, window_rows + 1):
+                    for column in (-.3, 0, .3):
+                        details.append((building["width"] * column, ground_height + upper_height * (row - .5) / window_rows,
+                                        side * (building["depth"] / 2 + .18),
+                                        min(4, building["width"] * .18), min(4, upper_height / window_rows * .52), .4, "#516e74"))
             for local_x, y, local_z, part_width, part_height, part_depth, color in details:
                 world_x, world_z = facade_center(building, local_x, local_z)
                 queue_box(world_x, y - part_height / 2, world_z, part_width, part_height, part_depth, color, building["rotation"], edge="#574b3a")

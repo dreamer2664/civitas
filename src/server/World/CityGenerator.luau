@@ -688,7 +688,9 @@ function CityGenerator.generate(config: any): any
 			elseif building.frontage == "recessed-entry" then 2
 			elseif building.frontage == "awning" then 1
 			else 0
-		ordinaryPartCount += 3 + facadeParts
+		local upperHeight = building.height - math.min(10, building.height / 3)
+		local windowRows = math.max(1, math.floor((upperHeight - 2) / 8))
+		ordinaryPartCount += 3 + facadeParts + 6 * windowRows
 	end
 	local estimatedParts = 1
 		+ streetPartCount

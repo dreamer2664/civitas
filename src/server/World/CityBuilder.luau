@@ -1,5 +1,6 @@
 --!strict
 -- Converts the pure city plan into anchored, collidable Roblox geometry. No per-frame work.
+local FacadeMath = require(script.Parent.FacadeMath)
 local CityBuilder = {}
 
 local function createPart(
@@ -259,9 +260,8 @@ local function buildBuilding(parent: Instance, building: any, palette: any)
 		partColor: Color3,
 		material: Enum.Material
 	)
-		local angle = math.rad(building.rotation)
-		local worldX = building.x + localX * math.cos(angle) - localZ * math.sin(angle)
-		local worldZ = building.z + localX * math.sin(angle) + localZ * math.cos(angle)
+		local worldX, worldZ =
+			FacadeMath.worldPoint(building.x, building.z, building.rotation, localX, localZ)
 		local part =
 			createPart(model, name, size, Vector3.new(worldX, localY, worldZ), material, partColor)
 		part.Orientation = Vector3.new(0, building.rotation, 0)
@@ -273,6 +273,28 @@ local function buildBuilding(parent: Instance, building: any, palette: any)
 	end
 
 	if not building.landmark then
+		-- Non-colliding window overlays on both long faces. Storey spacing scales with
+		-- the massing height; these are not openings into a building interior.
+		local windowRows = math.max(1, math.floor((upperHeight - 2) / 8))
+		for _, side in ipairs({ -1, 1 }) do
+			for row = 1, windowRows do
+				for _, column in ipairs({ -0.3, 0, 0.3 }) do
+					facadePart(
+						"UpperWindow",
+						building.width * column,
+						groundHeight + upperHeight * (row - 0.5) / windowRows,
+						side * (building.depth / 2 + 0.18),
+						Vector3.new(
+							math.min(4, building.width * 0.18),
+							math.min(4, upperHeight / windowRows * 0.52),
+							0.4
+						),
+						Color3.fromRGB(81, 110, 116),
+						Enum.Material.Glass
+					)
+				end
+			end
+		end
 		if building.frontage == "shopfront" then
 			facadePart(
 				"DisplayWindow_Left",
