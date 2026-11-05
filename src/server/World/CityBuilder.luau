@@ -265,6 +265,10 @@ local function buildBuilding(parent: Instance, building: any, palette: any)
 		local part =
 			createPart(model, name, size, Vector3.new(worldX, localY, worldZ), material, partColor)
 		part.Orientation = Vector3.new(0, building.rotation, 0)
+		-- These are visual overlays on the solid ground-storey mass, not entrances or
+		-- walkable surfaces. Protruding awnings must not snag characters or raycasts.
+		part.CanCollide = false
+		part.CanQuery = false
 		return part
 	end
 

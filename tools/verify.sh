@@ -66,6 +66,9 @@ python3 tools/check_enums.py --dump "$DUMP"
 step "check_streaming (no Workspace in client code)"
 python3 tools/check_streaming.py
 
+step "facade decoration collision policy (static)"
+python3 tools/world/check_facade_collision.py
+
 step "lune unit tests"
 lune run tests/run.luau
 
