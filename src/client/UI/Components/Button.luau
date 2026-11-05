@@ -54,6 +54,7 @@ function Button.new(options: Options): TextButton
 	button.Text = string.upper(options.text)
 	button.AutoButtonColor = false
 	button.BorderSizePixel = 0
+	button.Active = true
 	button.Selectable = true
 	button.Size = UDim2.fromOffset(width, height)
 	button.TextTruncate = Enum.TextTruncate.AtEnd

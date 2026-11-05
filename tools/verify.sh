@@ -86,6 +86,9 @@ step "deterministic city export + plan/street-level renders"
 lune run tools/world/export_plan.luau
 python3 tools/world/render_city.py
 
+step "interface concept renders (not Studio screenshots)"
+python3 tools/world/render_interface.py
+
 step "rojo build (place file)"
 rojo build default.project.json --output build/civitas.rbxlx
 echo "built build/civitas.rbxlx ($(stat -c %s build/civitas.rbxlx) bytes)"

@@ -12,6 +12,12 @@ This release contains the generated historic-core slice, not the full 10,000 × 
 
 The tag build is reproducible from `default.project.json` using the workflow's checksum-pinned Rojo 7.7.1. The artifact is built on GitHub Actions; it is not a Studio-published place.
 
+## City interface and planned network map
+
+The client now starts with a Historic Core sign and a MAP button. Open/close the map with the button, keyboard **M**, or gamepad **View/Select**. The diagram is explicitly labelled as a concept: its stations and train services are not operational. Drag the diagram to pan and use the + / - buttons to zoom. Station labels may be suppressed to avoid overlaps; zoom for more names. Roblox's normal movement controls remain in place.
+
+In Studio test button and gamepad focus, touch drag and zoom, screen rotation, map open/close across respawns, font readability, label collisions, and interaction with Roblox's own touch controls. The interface has only been statically checked and illustrated with approximate concept images, not observed running in Studio. Pinch zoom, live player position, real station status, and a usable train service are not implemented.
+
 ## Walk the acceptance route
 
 World coordinates are in studs (`X` east/west, `Z` along the route, `Y` vertical). The generated route is **1,632.999280 studs** (reported as 1,633.0). Use these waypoint anchors in order; increasing `Z` leads from the spawn side toward the station in this slice:

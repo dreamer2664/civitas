@@ -108,6 +108,31 @@ function MapProjection.clampToView(
 	}
 end
 
+-- Preserve the relative zoom and the world point at the viewport centre across a resize.
+-- The visibility clamp may move the centre if the resized view would leave the map off screen.
+function MapProjection.resize(
+	t: Transform,
+	bounds: Bounds,
+	oldW: number,
+	oldH: number,
+	newW: number,
+	newH: number,
+	padding: number
+): Transform
+	local oldFit = MapProjection.fit(bounds, oldW, oldH, padding)
+	local newFit = MapProjection.fit(bounds, newW, newH, padding)
+	local worldX, worldZ = MapProjection.fromScreen(t, oldW / 2, oldH / 2)
+	local scale = newFit.scale * (t.scale / oldFit.scale)
+	local resized: Transform = {
+		minX = t.minX,
+		minZ = t.minZ,
+		scale = scale,
+		ox = newW / 2 - (worldX - t.minX) * scale,
+		oy = newH / 2 - (worldZ - t.minZ) * scale,
+	}
+	return MapProjection.clampToView(resized, bounds, newW, newH)
+end
+
 -- Screen-space placement of one straight segment: its midpoint, length and angle.
 function MapProjection.drawSegment(t: Transform, seg: Segment): Drawn
 	local ax, ay = MapProjection.toScreen(t, seg.x1, seg.z1)

@@ -19,6 +19,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local MapModel = require(script.Parent.MapModel)
 local MapProjection = require(script.Parent.MapProjection)
+local LabelLayout = require(script.Parent.LabelLayout)
 local NetworkSource = require(script.Parent.NetworkSource)
 local Label = require(script.Parent.Parent.Components.Label)
 local Theme = require(script.Parent.Parent.Theme)
@@ -26,7 +27,11 @@ local Style = require(script.Parent.Parent.Style)
 
 local MapView = {}
 
-export type Placeable = { frame: GuiObject, place: (MapProjection.Transform) -> () }
+export type Placeable = {
+	frame: GuiObject,
+	place: (MapProjection.Transform) -> (),
+	label: { x: number, z: number, offset: number, width: number }?,
+}
 export type View = {
 	root: Frame,
 	canvas: Frame,
@@ -35,6 +40,8 @@ export type View = {
 	items: { Placeable },
 	transform: MapProjection.Transform?,
 	userZoomed: boolean,
+	viewWidth: number,
+	viewHeight: number,
 	connections: { RBXScriptConnection },
 	destroyed: boolean,
 }
@@ -119,6 +126,13 @@ local function buildStation(canvas: Frame, station: MapModel.Station): { Placeab
 		},
 		{
 			frame = label,
+			-- Conservative estimated text width; verify actual font metrics in Studio.
+			label = {
+				x = station.x,
+				z = station.z,
+				offset = size / 2 + 4,
+				width = #station.name * 9,
+			},
 			place = function(t: MapProjection.Transform)
 				local x, y = MapProjection.toScreen(t, station.x, station.z)
 				label.Position = UDim2.fromOffset(x + size / 2 + 4, y - 8)
@@ -166,8 +180,29 @@ end
 -- pass over at most `maxElements` items, with no instance creation.
 local function applyTransform(view: View, t: MapProjection.Transform)
 	view.transform = t
+	local accepted: { LabelLayout.Rect } = {}
+	local width, height = view.canvas.AbsoluteSize.X, view.canvas.AbsoluteSize.Y
+	-- Reserve marker footprints first, so labels cannot obscure another station's marker.
+	for _, station in view.data.stations do
+		local x, y = MapProjection.toScreen(t, station.x, station.z)
+		local size = if station.interchange then INTERCHANGE_SIZE else STATION_SIZE
+		table.insert(
+			accepted,
+			{ x = x - size / 2 - 2, y = y - size / 2 - 2, w = size + 4, h = size + 4 }
+		)
+	end
 	for _, item in view.items do
 		item.place(t)
+		if item.label then
+			local label = item.label
+			local x, y = MapProjection.toScreen(t, label.x, label.z)
+			item.frame.Visible = LabelLayout.accept(
+				{ x = x + label.offset, y = y - 8, w = label.width, h = 18 },
+				accepted,
+				width,
+				height
+			)
+		end
 	end
 end
 
@@ -175,17 +210,30 @@ function MapView.relayout(view: View)
 	if view.destroyed or #view.items == 0 then
 		return
 	end
+	local w = view.canvas.AbsoluteSize.X
+	local h = view.canvas.AbsoluteSize.Y
+	if w <= 0 or h <= 0 then
+		return
+	end
 	local fitted = currentTransform(view)
-	if view.userZoomed and view.transform then
-		-- Keep the user's zoom ratio when the window is resized, rather than snapping back.
-		local ratio = view.transform.scale / fitted.scale
-		local w = view.canvas.AbsoluteSize.X
-		local h = view.canvas.AbsoluteSize.Y
-		local rescaled = MapProjection.zoomAt(fitted, w / 2, h / 2, ratio, 0, math.huge)
-		applyTransform(view, MapProjection.clampToView(rescaled, view.bounds, w, h))
+	if view.userZoomed and view.transform and view.viewWidth > 0 and view.viewHeight > 0 then
+		applyTransform(
+			view,
+			MapProjection.resize(
+				view.transform,
+				view.bounds,
+				view.viewWidth,
+				view.viewHeight,
+				w,
+				h,
+				PADDING
+			)
+		)
 	else
 		applyTransform(view, fitted)
 	end
+	view.viewWidth = w
+	view.viewHeight = h
 end
 
 function MapView.zoom(view: View, factor: number)
@@ -246,6 +294,7 @@ function MapView.new(parent: GuiObject, source: NetworkSource.Source): View
 	canvas.Name = "Canvas"
 	canvas.BackgroundTransparency = 1
 	canvas.Size = UDim2.fromScale(1, 1)
+	canvas.Active = true
 	canvas.Parent = root
 
 	local view: View = {
@@ -256,6 +305,8 @@ function MapView.new(parent: GuiObject, source: NetworkSource.Source): View
 		items = {},
 		transform = nil,
 		userZoomed = false,
+		viewWidth = 0,
+		viewHeight = 0,
 		connections = {},
 		destroyed = false,
 	}
@@ -322,30 +373,32 @@ function MapView.new(parent: GuiObject, source: NetworkSource.Source): View
 	)
 
 	-- Drag to pan with mouse or touch. Pinch is not implemented in Phase 1 (see the spec).
-	local dragging = false
+	local activeTouch: InputObject? = nil
+	local mouseDragging = false
 	local lastX, lastY = 0, 0
 	table.insert(
 		view.connections,
 		canvas.InputBegan:Connect(function(input: InputObject)
-			if
-				input.UserInputType == Enum.UserInputType.MouseButton1
-				or input.UserInputType == Enum.UserInputType.Touch
-			then
-				dragging = true
-				lastX = input.Position.X
-				lastY = input.Position.Y
+			if activeTouch ~= nil or mouseDragging then
+				return
 			end
+			if input.UserInputType == Enum.UserInputType.Touch then
+				activeTouch = input
+			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+				mouseDragging = true
+			else
+				return
+			end
+			lastX = input.Position.X
+			lastY = input.Position.Y
 		end)
 	)
 	table.insert(
 		view.connections,
 		UserInputService.InputChanged:Connect(function(input: InputObject)
-			if not dragging then
-				return
-			end
 			if
-				input.UserInputType == Enum.UserInputType.MouseMovement
-				or input.UserInputType == Enum.UserInputType.Touch
+				(activeTouch ~= nil and input == activeTouch)
+				or (mouseDragging and input.UserInputType == Enum.UserInputType.MouseMovement)
 			then
 				MapView.pan(view, input.Position.X - lastX, input.Position.Y - lastY)
 				lastX = input.Position.X
@@ -356,11 +409,10 @@ function MapView.new(parent: GuiObject, source: NetworkSource.Source): View
 	table.insert(
 		view.connections,
 		UserInputService.InputEnded:Connect(function(input: InputObject)
-			if
-				input.UserInputType == Enum.UserInputType.MouseButton1
-				or input.UserInputType == Enum.UserInputType.Touch
-			then
-				dragging = false
+			if activeTouch ~= nil and input == activeTouch then
+				activeTouch = nil
+			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+				mouseDragging = false
 			end
 		end)
 	)
@@ -402,6 +454,8 @@ function MapView.unavailable(parent: GuiObject): View
 		items = {},
 		transform = nil,
 		userZoomed = false,
+		viewWidth = 0,
+		viewHeight = 0,
 		connections = {},
 		destroyed = false,
 	}

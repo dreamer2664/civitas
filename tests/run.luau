@@ -22,6 +22,7 @@ require("./client/format.spec")
 require("./client/navigation.spec")
 require("./client/bindings.spec")
 require("./client/map.spec")
+require("./client/map-labels.spec")
 require("./client/gauge.spec")
 require("./client/compass.spec")
 
