@@ -89,6 +89,7 @@ step "deterministic city export + plan/street-level renders"
 lune run tools/world/export_plan.luau
 python3 tools/world/render_city.py
 python3 tools/world/render_station_shuttle.py
+python3 tools/world/render_passenger_interface.py
 
 step "interface concept renders (not Studio screenshots)"
 python3 tools/world/render_interface.py

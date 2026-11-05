@@ -10,6 +10,7 @@ local rail = ReplicatedStorage.Shared.Rail
 local Kinematics = require(rail.Kinematics)
 local DriverControl = require(rail.DriverControl)
 local ControlGate = require(rail.ControlGate)
+local BoardingRules = require(rail.BoardingRules)
 local Simulation = require(rail.TrainSimulation).create(Kinematics, DriverControl)
 local station = require(script.Parent.Parent.World.CityConfig).station
 
@@ -184,12 +185,34 @@ seat.Anchored = true
 seat.CanCollide = false
 seat.Transparency = 1
 seat.Parent = train
+local passengerSeats: { Seat } = {}
+for index, carX in ipairs(carCenters) do
+	for _, offset in ipairs({ -20, 0, 20 }) do
+		local passengerSeat = Instance.new("Seat")
+		passengerSeat.Name = "PassengerSeat_" .. tostring(index) .. "_" .. tostring(offset)
+		passengerSeat.Size = Vector3.new(3, 1, 3)
+		passengerSeat.Position = Vector3.new(carX + offset, bodyBottom + 3, station.railCenterZ)
+		passengerSeat.Anchored = true
+		passengerSeat.CanCollide = false
+		passengerSeat.Transparency = 1
+		passengerSeat.Parent = train
+		table.insert(passengerSeats, passengerSeat)
+	end
+end
 local prompt = Instance.new("ProximityPrompt")
 prompt.ActionText = "Board test shuttle"
 prompt.ObjectText = "Experimental driver seat"
 prompt.MaxActivationDistance = 24
 prompt.RequiresLineOfSight = false
 prompt.Parent = anchor
+local passengerPrompt = Instance.new("ProximityPrompt")
+passengerPrompt.Name = "PassengerBoarding"
+passengerPrompt.ActionText = "Board as passenger"
+passengerPrompt.ObjectText = "Experimental shuttle"
+passengerPrompt.MaxActivationDistance = 24
+passengerPrompt.RequiresLineOfSight = false
+passengerPrompt.Enabled = false
+passengerPrompt.Parent = anchor
 local generatedPartCount = 0
 for _, descendant in ipairs(model:GetDescendants()) do
 	if descendant:IsA("BasePart") then
@@ -212,12 +235,44 @@ prompt.Triggered:Connect(function(player: Player)
 		and root
 		and root:IsA("BasePart")
 		and humanoid.Health > 0
+		and not humanoid.Sit
 		and seat.Occupant == nil
 		and (root.Position - anchor.Position).Magnitude <= prompt.MaxActivationDistance + 3
 		and math.abs(state.motion.speedMs) < 0.01
 		and math.abs(state.motion.distanceStuds - START_DISTANCE) <= 20
 	then
 		seat:Sit(humanoid)
+	end
+end)
+passengerPrompt.Triggered:Connect(function(player: Player)
+	local character = player.Character
+	local humanoid = if character then character:FindFirstChildOfClass("Humanoid") else nil
+	local root = if character then character:FindFirstChild("HumanoidRootPart") else nil
+	if
+		not humanoid
+		or not root
+		or not root:IsA("BasePart")
+		or humanoid.Health <= 0
+		or humanoid.Sit
+	then
+		return
+	end
+	if (root.Position - anchor.Position).Magnitude > passengerPrompt.MaxActivationDistance + 3 then
+		return
+	end
+	local atPlatform = math.abs(state.motion.distanceStuds - START_DISTANCE) <= 20
+	for _, passengerSeat in ipairs(passengerSeats) do
+		if
+			BoardingRules.canBoard(
+				state.doorsOpen,
+				state.motion.speedMs,
+				atPlatform,
+				passengerSeat.Occupant == nil
+			)
+		then
+			passengerSeat:Sit(humanoid)
+			return
+		end
 	end
 end)
 
@@ -230,6 +285,9 @@ control.Parent = remotes
 local snapshot = Instance.new("RemoteEvent")
 snapshot.Name = "Snapshot"
 snapshot.Parent = remotes
+local alight = Instance.new("RemoteEvent")
+alight.Name = "Alight"
+alight.Parent = remotes
 
 local buckets: { [Player]: ControlGate.Bucket } = {}
 local function allow(player: Player, now: number): boolean
@@ -256,6 +314,32 @@ control.OnServerEvent:Connect(function(player: Player, raw: any)
 		state = nextState
 	end
 end)
+alight.OnServerEvent:Connect(function(player: Player)
+	if not allow(player, os.clock()) then
+		return
+	end
+	local character = player.Character
+	local humanoid = if character then character:FindFirstChildOfClass("Humanoid") else nil
+	local root = if character then character:FindFirstChild("HumanoidRootPart") else nil
+	if not humanoid or not root or not root:IsA("BasePart") then
+		return
+	end
+	local isPassenger = false
+	for _, passengerSeat in ipairs(passengerSeats) do
+		if passengerSeat.Occupant == humanoid then
+			isPassenger = true
+			break
+		end
+	end
+	local atPlatform = math.abs(state.motion.distanceStuds - START_DISTANCE) <= 20
+	if
+		not BoardingRules.canAlight(state.doorsOpen, state.motion.speedMs, atPlatform, isPassenger)
+	then
+		return
+	end
+	humanoid.Sit = false
+	root.CFrame = CFrame.new(station.centerX, station.platformTopY + 3, station.platformCenterZ)
+end)
 local accumulator = 0
 local ticks = 0
 local previousOccupant: Humanoid? = nil
@@ -270,12 +354,25 @@ RunService.Heartbeat:Connect(function(elapsed: number)
 		end
 		local atPlatform = math.abs(state.motion.distanceStuds - START_DISTANCE) <= 20
 		state = Simulation.step(state, settings, dynamics, DT, os.clock(), 0, atPlatform)
+		local hasFreeSeat = false
+		for _, passengerSeat in ipairs(passengerSeats) do
+			if passengerSeat.Occupant == nil then
+				hasFreeSeat = true
+				break
+			end
+		end
+		local canBoard =
+			BoardingRules.canBoard(state.doorsOpen, state.motion.speedMs, atPlatform, hasFreeSeat)
+		if passengerPrompt.Enabled ~= canBoard then
+			passengerPrompt.Enabled = canBoard
+		end
 		train:PivotTo(CFrame.new(MIN_X + state.motion.distanceStuds, 0, station.railCenterZ))
 		ticks += 1
 		if ticks % 6 == 0 then
 			snapshot:FireAllClients({
 				speedKph = math.abs(state.motion.speedMs) * 3.6,
 				position = state.motion.distanceStuds,
+				atPlatform = atPlatform,
 				doorsOpen = state.doorsOpen,
 				intervention = state.intervention,
 			})

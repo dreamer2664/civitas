@@ -7,12 +7,14 @@ import xml.etree.ElementTree as ET
 EXPECTED = {
     'ReplicatedStorage/Shared/Rail/DriverControl': 'ModuleScript',
     'ReplicatedStorage/Shared/Rail/ControlGate': 'ModuleScript',
+    'ReplicatedStorage/Shared/Rail/BoardingRules': 'ModuleScript',
     'ReplicatedStorage/Shared/Rail/TrainSimulation': 'ModuleScript',
     'ReplicatedStorage/Shared/Rail/Kinematics': 'ModuleScript',
     'ServerScriptService/Services/World/WorldBootstrap': 'Script',
     'ServerScriptService/Services/RailDemo/RailDemo': 'Script',
     'StarterPlayer/StarterPlayerScripts/Client/CityInterface': 'LocalScript',
     'StarterPlayer/StarterPlayerScripts/Client/ShuttleInterface': 'LocalScript',
+    'StarterPlayer/StarterPlayerScripts/Client/PassengerInterface': 'LocalScript',
 }
 
 def collect(item, prefix, found):
