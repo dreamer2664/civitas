@@ -124,3 +124,68 @@ suite.test("Kinematics: default config is a self-consistent EMU target", functio
 	expect.ok(accel > 0)
 	expect.ok(accel < c.maxTractiveEffortN / c.massKg + 1) -- resistance reduces it slightly
 end)
+
+suite.test("Kinematics: reverse traction accelerates in the negative direction", function()
+	local c = config()
+	local reverse = { tractive = -1, serviceBrake = 0, emergencyBrake = false }
+	local state = Kinematics.integrate(Kinematics.stopped(100), 1, reverse, c, 0)
+	expect.ok(state.speedMs < 0)
+	expect.ok(state.distanceStuds < 100)
+end)
+
+suite.test("Kinematics: braking never reverses a slow train or moves it back", function()
+	local c = config({ rollingResistanceN = 0, airResistanceCoeff = 0 })
+	local brake = { tractive = 0, serviceBrake = 1, emergencyBrake = false }
+	for _, speed in ipairs({ 0.1, -0.1 }) do
+		local state = { speedMs = speed, distanceStuds = 0 }
+		state = Kinematics.integrate(state, 1, brake, c, 0)
+		expect.equal(state.speedMs, 0)
+		expect.ok(state.distanceStuds * speed > 0)
+		local stoppedDistance = state.distanceStuds
+		for _ = 1, 20 do
+			state = Kinematics.integrate(state, 1 / 30, brake, c, 0)
+		end
+		expect.equal(state.speedMs, 0)
+		expect.equal(state.distanceStuds, stoppedDistance)
+	end
+end)
+
+suite.test(
+	"Kinematics: service and emergency brakes interlock traction and hold on a slope",
+	function()
+		local c = config()
+		local state = Kinematics.stopped(50)
+		for _, brake in ipairs({
+			{ tractive = 1, serviceBrake = 1, emergencyBrake = false },
+			{ tractive = -1, serviceBrake = 0, emergencyBrake = true },
+		}) do
+			for _ = 1, 60 do
+				state = Kinematics.integrate(state, 1 / 30, brake, c, 0.03)
+			end
+			expect.equal(state.speedMs, 0)
+			expect.equal(state.distanceStuds, 50)
+		end
+	end
+)
+
+suite.test("Kinematics: reverse braking distance accounts for direction of grade", function()
+	local c = config()
+	local brake = { tractive = 0, serviceBrake = 1, emergencyBrake = false }
+	local forward = { speedMs = 10, distanceStuds = 0 }
+	local reverse = { speedMs = -10, distanceStuds = 0 }
+	local forwardUphill = Kinematics.stopDistanceStuds(forward, brake, c, 0.03)
+	local reverseDownhill = Kinematics.stopDistanceStuds(reverse, brake, c, 0.03)
+	expect.ok(forwardUphill > 0)
+	expect.ok(reverseDownhill > forwardUphill)
+	expect.near(reverseDownhill, Kinematics.stopDistanceStuds(forward, brake, c, -0.03), 1e-9)
+end)
+
+suite.test("Kinematics: low-speed coasting comes to rest without oscillation", function()
+	local c = config()
+	local state = { speedMs = 0.001, distanceStuds = 0 }
+	for _ = 1, 90 do
+		state = Kinematics.integrate(state, 1 / 30, coasting(), c, 0)
+		expect.ok(state.speedMs >= 0)
+	end
+	expect.equal(state.speedMs, 0)
+end)

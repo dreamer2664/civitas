@@ -93,6 +93,22 @@ step "rojo build (place file)"
 rojo build default.project.json --output build/civitas.rbxlx
 echo "built build/civitas.rbxlx ($(stat -c %s build/civitas.rbxlx) bytes)"
 
+step "isolated rail-test lint and sourcemap"
+stylua --check prototypes/rail tools/measure_train_simulation.luau
+selene prototypes/rail tools/measure_train_simulation.luau
+rojo sourcemap rail-test.project.json --output build/rail-test-sourcemap.json
+analyse "luau-lsp analyze: isolated rail-test scripts" \
+  --definitions="$DEFS" --sourcemap=build/rail-test-sourcemap.json --base-luaurc=.luaurc prototypes/rail
+
+step "prototype simulation evidence and concept renders"
+lune run tools/measure_train_simulation.luau
+python3 tools/render_train_simulation.py
+python3 tools/render_rail_test.py
+
+step "rojo build (isolated rail-test place)"
+rojo build rail-test.project.json --output build/rail-test.rbxlx
+echo "built build/rail-test.rbxlx ($(stat -c %s build/rail-test.rbxlx) bytes)"
+
 step "evidence"
 echo "api dump sha256: $(sha256sum "$DUMP" | cut -d' ' -f1)"
 echo "luau-lsp $(luau-lsp --version) | selene $(selene --version | cut -d' ' -f2) | lune $(lune --version | cut -d' ' -f2) | rojo $(rojo --version | cut -d' ' -f2) | stylua $(stylua --version | cut -d' ' -f2)"

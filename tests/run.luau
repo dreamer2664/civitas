@@ -13,6 +13,7 @@ local suite = require("./support/suite")
 -- Shared rail specs (CODE · vector), registered with tests/support/suite.
 require("./rail/spline.spec")
 require("./rail/kinematics.spec")
+require("./rail/train_simulation.spec")
 
 -- Client specs (CODE · lumen), registered with tests/harness.
 require("./client/theme.spec")

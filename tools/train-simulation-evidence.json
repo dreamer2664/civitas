@@ -1,0 +1,2402 @@
+[
+  {
+    "distanceStuds": 100.01726189755169,
+    "doorsOpen": false,
+    "speedKph": 0.3479996885186523,
+    "time": 0.1
+  },
+  {
+    "distanceStuds": 100.06904745939322,
+    "doorsOpen": false,
+    "speedKph": 0.6959965737186248,
+    "time": 0.2
+  },
+  {
+    "distanceStuds": 100.15535624055678,
+    "doorsOpen": false,
+    "speedKph": 1.043987291710118,
+    "time": 0.3
+  },
+  {
+    "distanceStuds": 100.27618746236548,
+    "doorsOpen": false,
+    "speedKph": 1.3919684788255333,
+    "time": 0.4
+  },
+  {
+    "distanceStuds": 100.4315400124617,
+    "doorsOpen": false,
+    "speedKph": 1.7399367717495215,
+    "time": 0.5
+  },
+  {
+    "distanceStuds": 100.62141244484853,
+    "doorsOpen": false,
+    "speedKph": 2.087888807649003,
+    "time": 0.6
+  },
+  {
+    "distanceStuds": 100.84580297994414,
+    "doorsOpen": false,
+    "speedKph": 2.435821224303152,
+    "time": 0.7
+  },
+  {
+    "distanceStuds": 101.1047095046489,
+    "doorsOpen": false,
+    "speedKph": 2.783730660233326,
+    "time": 0.8
+  },
+  {
+    "distanceStuds": 101.39812957242542,
+    "doorsOpen": false,
+    "speedKph": 3.1316137548329417,
+    "time": 0.9
+  },
+  {
+    "distanceStuds": 101.72606040339156,
+    "doorsOpen": false,
+    "speedKph": 3.479467148497276,
+    "time": 1
+  },
+  {
+    "distanceStuds": 102.08849888442626,
+    "doorsOpen": false,
+    "speedKph": 3.8272874827531873,
+    "time": 1.1
+  },
+  {
+    "distanceStuds": 102.48544156928817,
+    "doorsOpen": false,
+    "speedKph": 4.175071400388747,
+    "time": 1.2
+  },
+  {
+    "distanceStuds": 102.91688467874727,
+    "doorsOpen": false,
+    "speedKph": 4.52281554558276,
+    "time": 1.3
+  },
+  {
+    "distanceStuds": 103.3828241007292,
+    "doorsOpen": false,
+    "speedKph": 4.870516564034184,
+    "time": 1.4
+  },
+  {
+    "distanceStuds": 103.88325539047251,
+    "doorsOpen": false,
+    "speedKph": 5.218171103091419,
+    "time": 1.5
+  },
+  {
+    "distanceStuds": 104.41817377069871,
+    "doorsOpen": false,
+    "speedKph": 5.56577581188146,
+    "time": 1.6
+  },
+  {
+    "distanceStuds": 104.98757413179513,
+    "doorsOpen": false,
+    "speedKph": 5.913327341438909,
+    "time": 1.7
+  },
+  {
+    "distanceStuds": 105.59145103201047,
+    "doorsOpen": false,
+    "speedKph": 6.260822344834831,
+    "time": 1.8
+  },
+  {
+    "distanceStuds": 106.22979869766334,
+    "doorsOpen": false,
+    "speedKph": 6.6082574773054406,
+    "time": 1.9
+  },
+  {
+    "distanceStuds": 106.90261102336338,
+    "doorsOpen": false,
+    "speedKph": 6.95562939638062,
+    "time": 2
+  },
+  {
+    "distanceStuds": 107.60988157224511,
+    "doorsOpen": false,
+    "speedKph": 7.30293476201224,
+    "time": 2.1
+  },
+  {
+    "distanceStuds": 108.3516035762147,
+    "doorsOpen": false,
+    "speedKph": 7.65017023670229,
+    "time": 2.2
+  },
+  {
+    "distanceStuds": 109.12776993620918,
+    "doorsOpen": false,
+    "speedKph": 7.997332485630803,
+    "time": 2.3
+  },
+  {
+    "distanceStuds": 109.9383732224685,
+    "doorsOpen": false,
+    "speedKph": 8.34441817678355,
+    "time": 2.4
+  },
+  {
+    "distanceStuds": 110.78340567482023,
+    "doorsOpen": false,
+    "speedKph": 8.691423981079526,
+    "time": 2.5
+  },
+  {
+    "distanceStuds": 111.66285920297679,
+    "doorsOpen": false,
+    "speedKph": 9.03834657249817,
+    "time": 2.6
+  },
+  {
+    "distanceStuds": 112.57672538684547,
+    "doorsOpen": false,
+    "speedKph": 9.38518262820637,
+    "time": 2.7
+  },
+  {
+    "distanceStuds": 113.52499547685086,
+    "doorsOpen": false,
+    "speedKph": 9.731928828685176,
+    "time": 2.8
+  },
+  {
+    "distanceStuds": 114.50766039426995,
+    "doorsOpen": false,
+    "speedKph": 10.078581857856259,
+    "time": 2.9
+  },
+  {
+    "distanceStuds": 115.52471073157969,
+    "doorsOpen": false,
+    "speedKph": 10.425138403208095,
+    "time": 3
+  },
+  {
+    "distanceStuds": 116.57613675281708,
+    "doorsOpen": false,
+    "speedKph": 10.771595155921851,
+    "time": 3.1
+  },
+  {
+    "distanceStuds": 117.66192839395178,
+    "doorsOpen": false,
+    "speedKph": 11.11794881099697,
+    "time": 3.2
+  },
+  {
+    "distanceStuds": 118.78207526327112,
+    "doorsOpen": false,
+    "speedKph": 11.464196067376449,
+    "time": 3.3
+  },
+  {
+    "distanceStuds": 119.93656664177747,
+    "doorsOpen": false,
+    "speedKph": 11.810333628071795,
+    "time": 3.4
+  },
+  {
+    "distanceStuds": 121.12539148359814,
+    "doorsOpen": false,
+    "speedKph": 12.156358200287661,
+    "time": 3.5
+  },
+  {
+    "distanceStuds": 122.34853841640742,
+    "doorsOpen": false,
+    "speedKph": 12.502266495546124,
+    "time": 3.6
+  },
+  {
+    "distanceStuds": 123.60599574186115,
+    "doorsOpen": false,
+    "speedKph": 12.848055229810628,
+    "time": 3.7
+  },
+  {
+    "distanceStuds": 124.89775143604342,
+    "doorsOpen": false,
+    "speedKph": 13.19372112360956,
+    "time": 3.8
+  },
+  {
+    "distanceStuds": 126.22379314992554,
+    "doorsOpen": false,
+    "speedKph": 13.539260902159457,
+    "time": 3.9
+  },
+  {
+    "distanceStuds": 127.58410820983724,
+    "doorsOpen": false,
+    "speedKph": 13.884671295487843,
+    "time": 4
+  },
+  {
+    "distanceStuds": 128.97868361795008,
+    "doorsOpen": false,
+    "speedKph": 14.22994903855566,
+    "time": 4.1
+  },
+  {
+    "distanceStuds": 130.40750605277282,
+    "doorsOpen": false,
+    "speedKph": 14.575090871379313,
+    "time": 4.2
+  },
+  {
+    "distanceStuds": 131.8705618696591,
+    "doorsOpen": false,
+    "speedKph": 14.920093539152306,
+    "time": 4.3
+  },
+  {
+    "distanceStuds": 133.367837101327,
+    "doorsOpen": false,
+    "speedKph": 15.264953792366457,
+    "time": 4.4
+  },
+  {
+    "distanceStuds": 134.89931745839073,
+    "doorsOpen": false,
+    "speedKph": 15.609668386932688,
+    "time": 4.5
+  },
+  {
+    "distanceStuds": 136.46498832990403,
+    "doorsOpen": false,
+    "speedKph": 15.95423408430137,
+    "time": 4.6
+  },
+  {
+    "distanceStuds": 138.06483478391593,
+    "doorsOpen": false,
+    "speedKph": 16.298647651582247,
+    "time": 4.7
+  },
+  {
+    "distanceStuds": 139.69884156803792,
+    "doorsOpen": false,
+    "speedKph": 16.642905861663863,
+    "time": 4.8
+  },
+  {
+    "distanceStuds": 141.36699311002326,
+    "doorsOpen": false,
+    "speedKph": 16.987005493332575,
+    "time": 4.9
+  },
+  {
+    "distanceStuds": 143.06927351835787,
+    "doorsOpen": false,
+    "speedKph": 17.330943331391058,
+    "time": 5
+  },
+  {
+    "distanceStuds": 144.80566658286315,
+    "doorsOpen": false,
+    "speedKph": 17.674716166776324,
+    "time": 5.1
+  },
+  {
+    "distanceStuds": 146.5761557753103,
+    "doorsOpen": false,
+    "speedKph": 18.018320796677276,
+    "time": 5.2
+  },
+  {
+    "distanceStuds": 148.3807242500464,
+    "doorsOpen": false,
+    "speedKph": 18.361754024651752,
+    "time": 5.3
+  },
+  {
+    "distanceStuds": 150.21935484463202,
+    "doorsOpen": false,
+    "speedKph": 18.705012660743034,
+    "time": 5.4
+  },
+  {
+    "distanceStuds": 152.09203008049036,
+    "doorsOpen": false,
+    "speedKph": 19.048093521595888,
+    "time": 5.5
+  },
+  {
+    "distanceStuds": 153.9987321635679,
+    "doorsOpen": false,
+    "speedKph": 19.39099343057202,
+    "time": 5.6
+  },
+  {
+    "distanceStuds": 155.93944298500648,
+    "doorsOpen": false,
+    "speedKph": 19.733709217865044,
+    "time": 5.7
+  },
+  {
+    "distanceStuds": 157.91414412182675,
+    "doorsOpen": false,
+    "speedKph": 20.076237720614888,
+    "time": 5.8
+  },
+  {
+    "distanceStuds": 159.9228168376229,
+    "doorsOpen": false,
+    "speedKph": 20.418575783021637,
+    "time": 5.9
+  },
+  {
+    "distanceStuds": 161.96544208326878,
+    "doorsOpen": false,
+    "speedKph": 20.76072025645883,
+    "time": 6
+  },
+  {
+    "distanceStuds": 164.0420004976351,
+    "doorsOpen": false,
+    "speedKph": 21.102667999586178,
+    "time": 6.1
+  },
+  {
+    "distanceStuds": 166.15247240831772,
+    "doorsOpen": false,
+    "speedKph": 21.44441587846172,
+    "time": 6.2
+  },
+  {
+    "distanceStuds": 168.29683783237738,
+    "doorsOpen": false,
+    "speedKph": 21.78596076665336,
+    "time": 6.3
+  },
+  {
+    "distanceStuds": 170.47507647709006,
+    "doorsOpen": false,
+    "speedKph": 22.12729954534985,
+    "time": 6.4
+  },
+  {
+    "distanceStuds": 172.6871677407085,
+    "doorsOpen": false,
+    "speedKph": 22.468429103471138,
+    "time": 6.5
+  },
+  {
+    "distanceStuds": 174.93309071323478,
+    "doorsOpen": false,
+    "speedKph": 22.809346337778138,
+    "time": 6.6
+  },
+  {
+    "distanceStuds": 177.2128241772034,
+    "doorsOpen": false,
+    "speedKph": 23.15004815298183,
+    "time": 6.7
+  },
+  {
+    "distanceStuds": 179.52634660847554,
+    "doorsOpen": false,
+    "speedKph": 23.490531461851806,
+    "time": 6.8
+  },
+  {
+    "distanceStuds": 181.87363617704384,
+    "doorsOpen": false,
+    "speedKph": 23.83079318532411,
+    "time": 6.9
+  },
+  {
+    "distanceStuds": 184.25467074784777,
+    "doorsOpen": false,
+    "speedKph": 24.170830252608496,
+    "time": 7
+  },
+  {
+    "distanceStuds": 186.66942788159992,
+    "doorsOpen": false,
+    "speedKph": 24.510639601294997,
+    "time": 7.1
+  },
+  {
+    "distanceStuds": 189.11788483562245,
+    "doorsOpen": false,
+    "speedKph": 24.85021817745985,
+    "time": 7.2
+  },
+  {
+    "distanceStuds": 191.6000185646943,
+    "doorsOpen": false,
+    "speedKph": 25.189562935770777,
+    "time": 7.3
+  },
+  {
+    "distanceStuds": 194.11580572190877,
+    "doorsOpen": false,
+    "speedKph": 25.528670839591545,
+    "time": 7.4
+  },
+  {
+    "distanceStuds": 196.6652226595412,
+    "doorsOpen": false,
+    "speedKph": 25.867538861085915,
+    "time": 7.5
+  },
+  {
+    "distanceStuds": 199.24824542992732,
+    "doorsOpen": false,
+    "speedKph": 26.206163981320845,
+    "time": 7.6
+  },
+  {
+    "distanceStuds": 201.86484978635147,
+    "doorsOpen": false,
+    "speedKph": 26.544543190369044,
+    "time": 7.7
+  },
+  {
+    "distanceStuds": 204.51501118394512,
+    "doorsOpen": false,
+    "speedKph": 26.88267348741079,
+    "time": 7.8
+  },
+  {
+    "distanceStuds": 207.19870478059534,
+    "doorsOpen": false,
+    "speedKph": 27.22055188083508,
+    "time": 7.9
+  },
+  {
+    "distanceStuds": 209.91590543786347,
+    "doorsOpen": false,
+    "speedKph": 27.558175388340032,
+    "time": 8
+  },
+  {
+    "distanceStuds": 212.66658772191357,
+    "doorsOpen": false,
+    "speedKph": 27.89554103703259,
+    "time": 8.1
+  },
+  {
+    "distanceStuds": 215.45072590445074,
+    "doorsOpen": false,
+    "speedKph": 28.232645863527488,
+    "time": 8.2
+  },
+  {
+    "distanceStuds": 218.26829396366912,
+    "doorsOpen": false,
+    "speedKph": 28.569486914045505,
+    "time": 8.3
+  },
+  {
+    "distanceStuds": 221.11926558520992,
+    "doorsOpen": false,
+    "speedKph": 28.90606124451095,
+    "time": 8.4
+  },
+  {
+    "distanceStuds": 224.00361416312867,
+    "doorsOpen": false,
+    "speedKph": 29.24236592064843,
+    "time": 8.5
+  },
+  {
+    "distanceStuds": 226.92131280087244,
+    "doorsOpen": false,
+    "speedKph": 29.57839801807883,
+    "time": 8.6
+  },
+  {
+    "distanceStuds": 229.87233431226613,
+    "doorsOpen": false,
+    "speedKph": 29.914154622414586,
+    "time": 8.7
+  },
+  {
+    "distanceStuds": 232.85665122250856,
+    "doorsOpen": false,
+    "speedKph": 30.249632829354148,
+    "time": 8.8
+  },
+  {
+    "distanceStuds": 235.87423576917766,
+    "doorsOpen": false,
+    "speedKph": 30.58482974477569,
+    "time": 8.9
+  },
+  {
+    "distanceStuds": 238.92505990324494,
+    "doorsOpen": false,
+    "speedKph": 30.91974248483007,
+    "time": 9
+  },
+  {
+    "distanceStuds": 242.00909529009928,
+    "doorsOpen": false,
+    "speedKph": 31.25436817603297,
+    "time": 9.1
+  },
+  {
+    "distanceStuds": 245.12631331057958,
+    "doorsOpen": false,
+    "speedKph": 31.588703955356262,
+    "time": 9.2
+  },
+  {
+    "distanceStuds": 248.27668506201672,
+    "doorsOpen": false,
+    "speedKph": 31.922746970318595,
+    "time": 9.3
+  },
+  {
+    "distanceStuds": 251.46018135928426,
+    "doorsOpen": false,
+    "speedKph": 32.25649437907516,
+    "time": 9.4
+  },
+  {
+    "distanceStuds": 254.67677273585807,
+    "doorsOpen": false,
+    "speedKph": 32.58994335050668,
+    "time": 9.5
+  },
+  {
+    "distanceStuds": 257.9264294448848,
+    "doorsOpen": false,
+    "speedKph": 32.92309106430758,
+    "time": 9.6
+  },
+  {
+    "distanceStuds": 261.20912146025887,
+    "doorsOpen": false,
+    "speedKph": 33.25593471107335,
+    "time": 9.7
+  },
+  {
+    "distanceStuds": 264.5248184777085,
+    "doorsOpen": false,
+    "speedKph": 33.58847149238706,
+    "time": 9.8
+  },
+  {
+    "distanceStuds": 267.87348991588954,
+    "doorsOpen": false,
+    "speedKph": 33.92069862090507,
+    "time": 9.9
+  },
+  {
+    "distanceStuds": 271.25510491748884,
+    "doorsOpen": false,
+    "speedKph": 34.252613320441974,
+    "time": 10
+  },
+  {
+    "distanceStuds": 274.6696323503349,
+    "doorsOpen": false,
+    "speedKph": 34.584212826054596,
+    "time": 10.1
+  },
+  {
+    "distanceStuds": 278.11704080851746,
+    "doorsOpen": false,
+    "speedKph": 34.9154943841252,
+    "time": 10.2
+  },
+  {
+    "distanceStuds": 281.59729861351514,
+    "doorsOpen": false,
+    "speedKph": 35.24645525244396,
+    "time": 10.3
+  },
+  {
+    "distanceStuds": 285.11037381533134,
+    "doorsOpen": false,
+    "speedKph": 35.57709270029036,
+    "time": 10.4
+  },
+  {
+    "distanceStuds": 288.656234193638,
+    "doorsOpen": false,
+    "speedKph": 35.90740400851397,
+    "time": 10.5
+  },
+  {
+    "distanceStuds": 292.2348472589272,
+    "doorsOpen": false,
+    "speedKph": 36.23738646961424,
+    "time": 10.6
+  },
+  {
+    "distanceStuds": 295.8461802536711,
+    "doorsOpen": false,
+    "speedKph": 36.56703738781949,
+    "time": 10.7
+  },
+  {
+    "distanceStuds": 299.49020015348924,
+    "doorsOpen": false,
+    "speedKph": 36.89635407916494,
+    "time": 10.8
+  },
+  {
+    "distanceStuds": 303.1668736683238,
+    "doorsOpen": false,
+    "speedKph": 37.22533387157005,
+    "time": 10.9
+  },
+  {
+    "distanceStuds": 306.8761672436222,
+    "doorsOpen": false,
+    "speedKph": 37.55397410491483,
+    "time": 11
+  },
+  {
+    "distanceStuds": 310.6180470615277,
+    "doorsOpen": false,
+    "speedKph": 37.882272131115364,
+    "time": 11.1
+  },
+  {
+    "distanceStuds": 314.392479042077,
+    "doorsOpen": false,
+    "speedKph": 38.2102253141984,
+    "time": 11.2
+  },
+  {
+    "distanceStuds": 318.1994288444052,
+    "doorsOpen": false,
+    "speedKph": 38.5378310303751,
+    "time": 11.3
+  },
+  {
+    "distanceStuds": 322.0388618679585,
+    "doorsOpen": false,
+    "speedKph": 38.86508666811394,
+    "time": 11.4
+  },
+  {
+    "distanceStuds": 325.9107432537135,
+    "doorsOpen": false,
+    "speedKph": 39.191989628212575,
+    "time": 11.5
+  },
+  {
+    "distanceStuds": 329.81503788540425,
+    "doorsOpen": false,
+    "speedKph": 39.518537323869026,
+    "time": 11.6
+  },
+  {
+    "distanceStuds": 333.7517103907554,
+    "doorsOpen": false,
+    "speedKph": 39.84472718075182,
+    "time": 11.7
+  },
+  {
+    "distanceStuds": 337.7207251427233,
+    "doorsOpen": false,
+    "speedKph": 40.170556637069254,
+    "time": 11.8
+  },
+  {
+    "distanceStuds": 341.72204626074307,
+    "doorsOpen": false,
+    "speedKph": 40.49602314363781,
+    "time": 11.9
+  },
+  {
+    "distanceStuds": 345.75563761198293,
+    "doorsOpen": false,
+    "speedKph": 40.82112416394967,
+    "time": 12
+  },
+  {
+    "distanceStuds": 349.79021937488585,
+    "doorsOpen": false,
+    "speedKph": 40.516095299390756,
+    "time": 12.1
+  },
+  {
+    "distanceStuds": 353.79455740300233,
+    "doorsOpen": false,
+    "speedKph": 40.211410030609194,
+    "time": 12.2
+  },
+  {
+    "distanceStuds": 357.7686856360883,
+    "doorsOpen": false,
+    "speedKph": 39.907065393311385,
+    "time": 12.3
+  },
+  {
+    "distanceStuds": 361.7126377204176,
+    "doorsOpen": false,
+    "speedKph": 39.60305843517266,
+    "time": 12.4
+  },
+  {
+    "distanceStuds": 365.62644700996304,
+    "doorsOpen": false,
+    "speedKph": 39.299386215714485,
+    "time": 12.5
+  },
+  {
+    "distanceStuds": 369.51014656756587,
+    "doorsOpen": false,
+    "speedKph": 38.99604580618251,
+    "time": 12.6
+  },
+  {
+    "distanceStuds": 373.3637691660927,
+    "doorsOpen": false,
+    "speedKph": 38.69303428942561,
+    "time": 12.7
+  },
+  {
+    "distanceStuds": 377.18734728958066,
+    "doorsOpen": false,
+    "speedKph": 38.39034875977572,
+    "time": 12.8
+  },
+  {
+    "distanceStuds": 380.98091313437084,
+    "doorsOpen": false,
+    "speedKph": 38.0879863229286,
+    "time": 12.9
+  },
+  {
+    "distanceStuds": 384.74449861022964,
+    "doorsOpen": false,
+    "speedKph": 37.78594409582553,
+    "time": 13
+  },
+  {
+    "distanceStuds": 388.47813534145837,
+    "doorsOpen": false,
+    "speedKph": 37.484219206535705,
+    "time": 13.1
+  },
+  {
+    "distanceStuds": 392.1818546679919,
+    "doorsOpen": false,
+    "speedKph": 37.18280879413969,
+    "time": 13.2
+  },
+  {
+    "distanceStuds": 395.85568764648485,
+    "doorsOpen": false,
+    "speedKph": 36.88171000861351,
+    "time": 13.3
+  },
+  {
+    "distanceStuds": 399.499665051387,
+    "doorsOpen": false,
+    "speedKph": 36.5809200107137,
+    "time": 13.4
+  },
+  {
+    "distanceStuds": 403.1138173760071,
+    "doorsOpen": false,
+    "speedKph": 36.28043597186313,
+    "time": 13.5
+  },
+  {
+    "distanceStuds": 406.69817483356525,
+    "doorsOpen": false,
+    "speedKph": 35.98025507403762,
+    "time": 13.6
+  },
+  {
+    "distanceStuds": 410.25276735823456,
+    "doorsOpen": false,
+    "speedKph": 35.68037450965338,
+    "time": 13.7
+  },
+  {
+    "distanceStuds": 413.77762460617106,
+    "doorsOpen": false,
+    "speedKph": 35.38079148145524,
+    "time": 13.8
+  },
+  {
+    "distanceStuds": 417.27277595653294,
+    "doorsOpen": false,
+    "speedKph": 35.08150320240563,
+    "time": 13.9
+  },
+  {
+    "distanceStuds": 420.7382505124886,
+    "doorsOpen": false,
+    "speedKph": 34.78250689557431,
+    "time": 14
+  },
+  {
+    "distanceStuds": 424.17407710221437,
+    "doorsOpen": false,
+    "speedKph": 34.48379979402896,
+    "time": 14.1
+  },
+  {
+    "distanceStuds": 427.58028427988035,
+    "doorsOpen": false,
+    "speedKph": 34.18537914072639,
+    "time": 14.2
+  },
+  {
+    "distanceStuds": 430.95690032662657,
+    "doorsOpen": false,
+    "speedKph": 33.887242188404564,
+    "time": 14.3
+  },
+  {
+    "distanceStuds": 434.30395325152784,
+    "doorsOpen": false,
+    "speedKph": 33.589386199475356,
+    "time": 14.4
+  },
+  {
+    "distanceStuds": 437.6214707925482,
+    "doorsOpen": false,
+    "speedKph": 33.291808445917965,
+    "time": 14.5
+  },
+  {
+    "distanceStuds": 440.9094804174848,
+    "doorsOpen": false,
+    "speedKph": 32.994506209173096,
+    "time": 14.6
+  },
+  {
+    "distanceStuds": 444.1680093249014,
+    "doorsOpen": false,
+    "speedKph": 32.69747678003786,
+    "time": 14.7
+  },
+  {
+    "distanceStuds": 447.39708444505106,
+    "doorsOpen": false,
+    "speedKph": 32.40071745856128,
+    "time": 14.8
+  },
+  {
+    "distanceStuds": 450.5967324407895,
+    "doorsOpen": false,
+    "speedKph": 32.104225553940566,
+    "time": 14.9
+  },
+  {
+    "distanceStuds": 453.7669797084767,
+    "doorsOpen": false,
+    "speedKph": 31.80799838441804,
+    "time": 15
+  },
+  {
+    "distanceStuds": 456.9078523788699,
+    "doorsOpen": false,
+    "speedKph": 31.51203327717869,
+    "time": 15.1
+  },
+  {
+    "distanceStuds": 460.01937631800536,
+    "doorsOpen": false,
+    "speedKph": 31.216327568248463,
+    "time": 15.2
+  },
+  {
+    "distanceStuds": 463.10157712807035,
+    "doorsOpen": false,
+    "speedKph": 30.9208786023931,
+    "time": 15.3
+  },
+  {
+    "distanceStuds": 466.1544801482654,
+    "doorsOpen": false,
+    "speedKph": 30.625683733017688,
+    "time": 15.4
+  },
+  {
+    "distanceStuds": 469.17811045565634,
+    "doorsOpen": false,
+    "speedKph": 30.330740322066852,
+    "time": 15.5
+  },
+  {
+    "distanceStuds": 472.17249286601646,
+    "doorsOpen": false,
+    "speedKph": 30.036045739925513,
+    "time": 15.6
+  },
+  {
+    "distanceStuds": 475.1376519346592,
+    "doorsOpen": false,
+    "speedKph": 29.741597365320278,
+    "time": 15.7
+  },
+  {
+    "distanceStuds": 478.07361195726054,
+    "doorsOpen": false,
+    "speedKph": 29.447392585221486,
+    "time": 15.8
+  },
+  {
+    "distanceStuds": 480.9803969706722,
+    "doorsOpen": false,
+    "speedKph": 29.153428794745786,
+    "time": 15.9
+  },
+  {
+    "distanceStuds": 483.8580307537248,
+    "doorsOpen": false,
+    "speedKph": 28.859703397059363,
+    "time": 16
+  },
+  {
+    "distanceStuds": 486.7065368280219,
+    "doorsOpen": false,
+    "speedKph": 28.566213803281702,
+    "time": 16.1
+  },
+  {
+    "distanceStuds": 489.5259384587241,
+    "doorsOpen": false,
+    "speedKph": 28.272957432389944,
+    "time": 16.2
+  },
+  {
+    "distanceStuds": 492.31625865532385,
+    "doorsOpen": false,
+    "speedKph": 27.979931711123836,
+    "time": 16.3
+  },
+  {
+    "distanceStuds": 495.07752017241097,
+    "doorsOpen": false,
+    "speedKph": 27.687134073891187,
+    "time": 16.4
+  },
+  {
+    "distanceStuds": 497.8097455104286,
+    "doorsOpen": false,
+    "speedKph": 27.394561962673926,
+    "time": 16.5
+  },
+  {
+    "distanceStuds": 500.51295691642,
+    "doorsOpen": false,
+    "speedKph": 27.10221282693468,
+    "time": 16.6
+  },
+  {
+    "distanceStuds": 503.18717638476613,
+    "doorsOpen": false,
+    "speedKph": 26.810084123523882,
+    "time": 16.7
+  },
+  {
+    "distanceStuds": 505.83242565791375,
+    "doorsOpen": false,
+    "speedKph": 26.51817331658744,
+    "time": 16.8
+  },
+  {
+    "distanceStuds": 508.44872622709494,
+    "doorsOpen": false,
+    "speedKph": 26.22647787747489,
+    "time": 16.9
+  },
+  {
+    "distanceStuds": 511.03609933303704,
+    "doorsOpen": false,
+    "speedKph": 25.934995284648092,
+    "time": 17
+  },
+  {
+    "distanceStuds": 513.5945659666637,
+    "doorsOpen": false,
+    "speedKph": 25.643723023590425,
+    "time": 17.1
+  },
+  {
+    "distanceStuds": 516.124146869787,
+    "doorsOpen": false,
+    "speedKph": 25.35265858671647,
+    "time": 17.2
+  },
+  {
+    "distanceStuds": 518.6248625357906,
+    "doorsOpen": false,
+    "speedKph": 25.061799473282196,
+    "time": 17.3
+  },
+  {
+    "distanceStuds": 521.0967332103045,
+    "doorsOpen": false,
+    "speedKph": 24.771143189295664,
+    "time": 17.4
+  },
+  {
+    "distanceStuds": 523.5397788918694,
+    "doorsOpen": false,
+    "speedKph": 24.480687247428136,
+    "time": 17.5
+  },
+  {
+    "distanceStuds": 525.9540193325944,
+    "doorsOpen": false,
+    "speedKph": 24.190429166925732,
+    "time": 17.6
+  },
+  {
+    "distanceStuds": 528.3394740388042,
+    "doorsOpen": false,
+    "speedKph": 23.900366473521498,
+    "time": 17.7
+  },
+  {
+    "distanceStuds": 530.6961622716788,
+    "doorsOpen": false,
+    "speedKph": 23.61049669934798,
+    "time": 17.8
+  },
+  {
+    "distanceStuds": 533.0241030478837,
+    "doorsOpen": false,
+    "speedKph": 23.320817382850194,
+    "time": 17.9
+  },
+  {
+    "distanceStuds": 535.3233151401921,
+    "doorsOpen": false,
+    "speedKph": 23.0313260686991,
+    "time": 18
+  },
+  {
+    "distanceStuds": 537.5938170780981,
+    "doorsOpen": false,
+    "speedKph": 22.742020307705474,
+    "time": 18.1
+  },
+  {
+    "distanceStuds": 539.8356271484216,
+    "doorsOpen": false,
+    "speedKph": 22.45289765673421,
+    "time": 18.2
+  },
+  {
+    "distanceStuds": 542.0487633959046,
+    "doorsOpen": false,
+    "speedKph": 22.163955678619086,
+    "time": 18.3
+  },
+  {
+    "distanceStuds": 544.2332436237996,
+    "doorsOpen": false,
+    "speedKph": 21.875191942077908,
+    "time": 18.4
+  },
+  {
+    "distanceStuds": 546.3890853944482,
+    "doorsOpen": false,
+    "speedKph": 21.586604021628087,
+    "time": 18.5
+  },
+  {
+    "distanceStuds": 548.5163060298532,
+    "doorsOpen": false,
+    "speedKph": 21.298189497502612,
+    "time": 18.6
+  },
+  {
+    "distanceStuds": 550.6149226122411,
+    "doorsOpen": false,
+    "speedKph": 21.009945955566437,
+    "time": 18.7
+  },
+  {
+    "distanceStuds": 552.6849519846166,
+    "doorsOpen": false,
+    "speedKph": 20.721870987233235,
+    "time": 18.8
+  },
+  {
+    "distanceStuds": 554.7264107513092,
+    "doorsOpen": false,
+    "speedKph": 20.433962189382566,
+    "time": 18.9
+  },
+  {
+    "distanceStuds": 556.7393152785112,
+    "doorsOpen": false,
+    "speedKph": 20.146217164277424,
+    "time": 19
+  },
+  {
+    "distanceStuds": 558.7236816948079,
+    "doorsOpen": false,
+    "speedKph": 19.858633519482133,
+    "time": 19.1
+  },
+  {
+    "distanceStuds": 560.6795258916989,
+    "doorsOpen": false,
+    "speedKph": 19.571208867780623,
+    "time": 19.2
+  },
+  {
+    "distanceStuds": 562.6068635241124,
+    "doorsOpen": false,
+    "speedKph": 19.283940827095105,
+    "time": 19.3
+  },
+  {
+    "distanceStuds": 564.5057100109112,
+    "doorsOpen": false,
+    "speedKph": 18.996827020405025,
+    "time": 19.4
+  },
+  {
+    "distanceStuds": 566.3760805353894,
+    "doorsOpen": false,
+    "speedKph": 18.709865075666457,
+    "time": 19.5
+  },
+  {
+    "distanceStuds": 568.2179900457634,
+    "doorsOpen": false,
+    "speedKph": 18.42305262573177,
+    "time": 19.6
+  },
+  {
+    "distanceStuds": 570.0314532556525,
+    "doorsOpen": false,
+    "speedKph": 18.13638730826967,
+    "time": 19.7
+  },
+  {
+    "distanceStuds": 571.8164846445535,
+    "doorsOpen": false,
+    "speedKph": 17.849866765685558,
+    "time": 19.8
+  },
+  {
+    "distanceStuds": 573.5730984583065,
+    "doorsOpen": false,
+    "speedKph": 17.563488645042234,
+    "time": 19.9
+  },
+  {
+    "distanceStuds": 575.3013087095527,
+    "doorsOpen": false,
+    "speedKph": 17.277250597980895,
+    "time": 20
+  },
+  {
+    "distanceStuds": 577.0011291781851,
+    "doorsOpen": false,
+    "speedKph": 16.991150280642486,
+    "time": 20.1
+  },
+  {
+    "distanceStuds": 578.6725734117913,
+    "doorsOpen": false,
+    "speedKph": 16.7051853535893,
+    "time": 20.2
+  },
+  {
+    "distanceStuds": 580.3156547260872,
+    "doorsOpen": false,
+    "speedKph": 16.419353481726954,
+    "time": 20.3
+  },
+  {
+    "distanceStuds": 581.9303862053451,
+    "doorsOpen": false,
+    "speedKph": 16.133652334226614,
+    "time": 20.4
+  },
+  {
+    "distanceStuds": 583.5167807028124,
+    "doorsOpen": false,
+    "speedKph": 15.848079584447525,
+    "time": 20.5
+  },
+  {
+    "distanceStuds": 585.0748508411235,
+    "doorsOpen": false,
+    "speedKph": 15.56263290985984,
+    "time": 20.6
+  },
+  {
+    "distanceStuds": 586.6046090127038,
+    "doorsOpen": false,
+    "speedKph": 15.277309991967702,
+    "time": 20.7
+  },
+  {
+    "distanceStuds": 588.1060673801659,
+    "doorsOpen": false,
+    "speedKph": 14.99210851623264,
+    "time": 20.8
+  },
+  {
+    "distanceStuds": 589.5792378766986,
+    "doorsOpen": false,
+    "speedKph": 14.7070261719972,
+    "time": 20.9
+  },
+  {
+    "distanceStuds": 591.0241322064484,
+    "doorsOpen": false,
+    "speedKph": 14.422060652408872,
+    "time": 21
+  },
+  {
+    "distanceStuds": 592.4407618448923,
+    "doorsOpen": false,
+    "speedKph": 14.137209654344247,
+    "time": 21.1
+  },
+  {
+    "distanceStuds": 593.8291380392054,
+    "doorsOpen": false,
+    "speedKph": 13.85247087833345,
+    "time": 21.2
+  },
+  {
+    "distanceStuds": 595.1892718086183,
+    "doorsOpen": false,
+    "speedKph": 13.567842028484817,
+    "time": 21.3
+  },
+  {
+    "distanceStuds": 596.5211739447689,
+    "doorsOpen": false,
+    "speedKph": 13.283320812409803,
+    "time": 21.4
+  },
+  {
+    "distanceStuds": 597.8248550120463,
+    "doorsOpen": false,
+    "speedKph": 12.99890494114815,
+    "time": 21.5
+  },
+  {
+    "distanceStuds": 599.1003253479274,
+    "doorsOpen": false,
+    "speedKph": 12.714592129093266,
+    "time": 21.6
+  },
+  {
+    "distanceStuds": 600.3475950633051,
+    "doorsOpen": false,
+    "speedKph": 12.430380093917849,
+    "time": 21.7
+  },
+  {
+    "distanceStuds": 601.5666740428107,
+    "doorsOpen": false,
+    "speedKph": 12.14626655649973,
+    "time": 21.8
+  },
+  {
+    "distanceStuds": 602.7575719451282,
+    "doorsOpen": false,
+    "speedKph": 11.862249240847918,
+    "time": 21.9
+  },
+  {
+    "distanceStuds": 603.9202982033007,
+    "doorsOpen": false,
+    "speedKph": 11.578325874028877,
+    "time": 22
+  },
+  {
+    "distanceStuds": 605.0548620250306,
+    "doorsOpen": false,
+    "speedKph": 11.294494186093006,
+    "time": 22.1
+  },
+  {
+    "distanceStuds": 606.1612723929716,
+    "doorsOpen": false,
+    "speedKph": 11.010751910001314,
+    "time": 22.2
+  },
+  {
+    "distanceStuds": 607.2395380650142,
+    "doorsOpen": false,
+    "speedKph": 10.72709678155229,
+    "time": 22.3
+  },
+  {
+    "distanceStuds": 608.2896675745636,
+    "doorsOpen": false,
+    "speedKph": 10.443526539308985,
+    "time": 22.4
+  },
+  {
+    "distanceStuds": 609.3116692308097,
+    "doorsOpen": false,
+    "speedKph": 10.160038924526242,
+    "time": 22.5
+  },
+  {
+    "distanceStuds": 610.3055511189913,
+    "doorsOpen": false,
+    "speedKph": 9.876631681078159,
+    "time": 22.6
+  },
+  {
+    "distanceStuds": 611.2713211006519,
+    "doorsOpen": false,
+    "speedKph": 9.593302555385682,
+    "time": 22.7
+  },
+  {
+    "distanceStuds": 612.2089868138892,
+    "doorsOpen": false,
+    "speedKph": 9.310049296344403,
+    "time": 22.8
+  },
+  {
+    "distanceStuds": 613.1185556735962,
+    "doorsOpen": false,
+    "speedKph": 9.0268696552525,
+    "time": 22.9
+  },
+  {
+    "distanceStuds": 614.0000348716973,
+    "doorsOpen": false,
+    "speedKph": 8.74376138573886,
+    "time": 23
+  },
+  {
+    "distanceStuds": 614.8534313773745,
+    "doorsOpen": false,
+    "speedKph": 8.460722243691343,
+    "time": 23.1
+  },
+  {
+    "distanceStuds": 615.678751937289,
+    "doorsOpen": false,
+    "speedKph": 8.17774998718521,
+    "time": 23.2
+  },
+  {
+    "distanceStuds": 616.4760030757943,
+    "doorsOpen": false,
+    "speedKph": 7.894842376411687,
+    "time": 23.3
+  },
+  {
+    "distanceStuds": 617.2451910951426,
+    "doorsOpen": false,
+    "speedKph": 7.61199717360668,
+    "time": 23.4
+  },
+  {
+    "distanceStuds": 617.986322075684,
+    "doorsOpen": false,
+    "speedKph": 7.329212142979627,
+    "time": 23.5
+  },
+  {
+    "distanceStuds": 618.6994018760589,
+    "doorsOpen": false,
+    "speedKph": 7.04648505064248,
+    "time": 23.6
+  },
+  {
+    "distanceStuds": 619.3844361333834,
+    "doorsOpen": false,
+    "speedKph": 6.76381366453881,
+    "time": 23.7
+  },
+  {
+    "distanceStuds": 620.041430263427,
+    "doorsOpen": false,
+    "speedKph": 6.481195754373045,
+    "time": 23.8
+  },
+  {
+    "distanceStuds": 620.6703894607841,
+    "doorsOpen": false,
+    "speedKph": 6.198629091539825,
+    "time": 23.9
+  },
+  {
+    "distanceStuds": 621.2713186990386,
+    "doorsOpen": false,
+    "speedKph": 5.916111449053459,
+    "time": 24
+  },
+  {
+    "distanceStuds": 621.84422273092,
+    "doorsOpen": false,
+    "speedKph": 5.6336406014775084,
+    "time": 24.1
+  },
+  {
+    "distanceStuds": 622.3891060884547,
+    "doorsOpen": false,
+    "speedKph": 5.351214324854457,
+    "time": 24.2
+  },
+  {
+    "distanceStuds": 622.9059730831085,
+    "doorsOpen": false,
+    "speedKph": 5.068830396635492,
+    "time": 24.3
+  },
+  {
+    "distanceStuds": 623.3948278059235,
+    "doorsOpen": false,
+    "speedKph": 4.786486595610374,
+    "time": 24.4
+  },
+  {
+    "distanceStuds": 623.8556741276468,
+    "doorsOpen": false,
+    "speedKph": 4.504180701837407,
+    "time": 24.5
+  },
+  {
+    "distanceStuds": 624.2885156988533,
+    "doorsOpen": false,
+    "speedKph": 4.221910496573472,
+    "time": 24.6
+  },
+  {
+    "distanceStuds": 624.6933559500609,
+    "doorsOpen": false,
+    "speedKph": 3.9396737622041633,
+    "time": 24.7
+  },
+  {
+    "distanceStuds": 625.0701980918391,
+    "doorsOpen": false,
+    "speedKph": 3.6574682821739906,
+    "time": 24.8
+  },
+  {
+    "distanceStuds": 625.4190451149107,
+    "doorsOpen": false,
+    "speedKph": 3.3752918409166517,
+    "time": 24.9
+  },
+  {
+    "distanceStuds": 625.7398997902461,
+    "doorsOpen": false,
+    "speedKph": 3.0931422237853723,
+    "time": 25
+  },
+  {
+    "distanceStuds": 626.032764669152,
+    "doorsOpen": false,
+    "speedKph": 2.811017216983312,
+    "time": 25.1
+  },
+  {
+    "distanceStuds": 626.297642083351,
+    "doorsOpen": false,
+    "speedKph": 2.5289146074940185,
+    "time": 25.2
+  },
+  {
+    "distanceStuds": 626.5345341450562,
+    "doorsOpen": false,
+    "speedKph": 2.2468321830119455,
+    "time": 25.3
+  },
+  {
+    "distanceStuds": 626.7434427470387,
+    "doorsOpen": false,
+    "speedKph": 1.9647677318730077,
+    "time": 25.4
+  },
+  {
+    "distanceStuds": 626.9243695626869,
+    "doorsOpen": false,
+    "speedKph": 1.6827190429851855,
+    "time": 25.5
+  },
+  {
+    "distanceStuds": 627.0773160460609,
+    "doorsOpen": false,
+    "speedKph": 1.4006839057591673,
+    "time": 25.6
+  },
+  {
+    "distanceStuds": 627.2022834319375,
+    "doorsOpen": false,
+    "speedKph": 1.118660110039024,
+    "time": 25.7
+  },
+  {
+    "distanceStuds": 627.2992727358512,
+    "doorsOpen": false,
+    "speedKph": 0.8366454460329145,
+    "time": 25.8
+  },
+  {
+    "distanceStuds": 627.3682847541259,
+    "doorsOpen": false,
+    "speedKph": 0.5546377042438131,
+    "time": 25.9
+  },
+  {
+    "distanceStuds": 627.4093200639012,
+    "doorsOpen": false,
+    "speedKph": 0.2726346754002622,
+    "time": 26
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 26.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 27.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 28.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 29.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": false,
+    "speedKph": 0,
+    "time": 30
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 30.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 31.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 32.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 33.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 34.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 35.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 36.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 37.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 38.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.1
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.2
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.3
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.4
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.5
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.6
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.7
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.8
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 39.9
+  },
+  {
+    "distanceStuds": 627.4223944527479,
+    "doorsOpen": true,
+    "speedKph": 0,
+    "time": 40
+  }
+]
