@@ -50,6 +50,43 @@ local throttle = 0
 local brake = 1
 local reverser = 1
 local doors = "hold"
+local driving = false
+local seatConnection: RBXScriptConnection? = nil
+
+local function refreshTitle()
+	if not driving then
+		title.Text = "RAIL TEST  /  board at platform to drive"
+		return
+	end
+	local mode = if brake > 0 then "BRAKE" elseif throttle ~= 0 then "POWER" else "COAST"
+	title.Text = `RAIL TEST  /  {mode}  /  {if reverser == 1 then "FORWARD" else "REVERSE"}`
+end
+
+local function connectCharacter(character: Model)
+	if seatConnection then
+		seatConnection:Disconnect()
+		seatConnection = nil
+	end
+	driving = false
+	throttle, brake, reverser, doors = 0, 1, 1, "hold"
+	refreshTitle()
+	local humanoid = character:WaitForChild("Humanoid") :: Humanoid
+	if player.Character ~= character then
+		return
+	end
+	local function updateSeat(active: boolean, seatPart: BasePart?)
+		driving = active and seatPart ~= nil and seatPart.Name == "PrototypeDriverSeat"
+		-- Never carry a previously latched power command into a newly occupied seat.
+		throttle, brake, reverser, doors = 0, 1, 1, "hold"
+		refreshTitle()
+	end
+	seatConnection = humanoid.Seated:Connect(updateSeat)
+	updateSeat(humanoid.Sit, humanoid.SeatPart)
+end
+player.CharacterAdded:Connect(connectCharacter)
+if player.Character then
+	task.spawn(connectCharacter, player.Character)
+end
 local function makeButton(text: string, column: number, row: number, action: () -> ())
 	local button = Instance.new("TextButton")
 	button.Name = text
@@ -71,23 +108,28 @@ local function forward()
 	reverser = 1
 	throttle = 0
 	brake = 1
+	refreshTitle()
 end
 local function reverse()
 	reverser = -1
 	throttle = 0
 	brake = 1
+	refreshTitle()
 end
 local function power()
 	throttle = reverser
 	brake = 0
+	refreshTitle()
 end
 local function coast()
 	throttle = 0
 	brake = 0
+	refreshTitle()
 end
 local function stop()
 	throttle = 0
 	brake = 1
+	refreshTitle()
 end
 makeButton("POWER [W]", 1, 1, power)
 makeButton("COAST [C]", 2, 1, coast)

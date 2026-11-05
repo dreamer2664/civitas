@@ -104,6 +104,7 @@ step "prototype simulation evidence and concept renders"
 lune run tools/measure_train_simulation.luau
 python3 tools/render_train_simulation.py
 python3 tools/render_rail_test.py
+python3 tools/render_rail_controls.py
 
 step "rojo build (isolated rail-test place)"
 rojo build rail-test.project.json --output build/rail-test.rbxlx
