@@ -1,0 +1,1815 @@
+<roblox version="4">
+  <Item class="ReplicatedStorage" referent="0">
+    <Properties>
+      <string name="Name">ReplicatedStorage</string>
+    </Properties>
+    <Item class="Folder" referent="1">
+      <Properties>
+        <string name="Name">Shared</string>
+      </Properties>
+      <Item class="Folder" referent="2">
+        <Properties>
+          <string name="Name">Contracts</string>
+        </Properties>
+        <Item class="ModuleScript" referent="3">
+          <Properties>
+            <string name="Name">GeometryContract</string>
+            <string name="Source"><![CDATA[--!strict
+--[[
+	GeometryContract — ratified dimensional constants (Manager A, 2026-11-01).
+
+	Single source of truth for every physical interface between art and code.
+	Mirrors docs/ASSET-INTERFACES.md. Change only by PR with Manager approval.
+
+	Units: all values are in ROBLOX STUDS unless the field name ends in `M` (metres).
+]]
+
+local GeometryContract = {}
+
+-- 1 m = 3.5714286 studs (Roblox default 0.28 m/stud)
+GeometryContract.STUDS_PER_METRE = 1 / 0.28 :: number
+
+-- §2 Permanent way -----------------------------------------------------------
+GeometryContract.RAIL_GAUGE = 1.435 * GeometryContract.STUDS_PER_METRE -- 5.1257
+GeometryContract.RAIL_HEAD_WIDTH = 0.07 * GeometryContract.STUDS_PER_METRE
+GeometryContract.SLEEPER_SPACING = 0.6 * GeometryContract.STUDS_PER_METRE
+GeometryContract.MIN_CURVE_RADIUS_RUNNING = 120 * GeometryContract.STUDS_PER_METRE
+GeometryContract.MIN_CURVE_RADIUS_DEPOT = 60 * GeometryContract.STUDS_PER_METRE
+GeometryContract.MAX_GRADIENT = 0.025
+GeometryContract.TRACK_CENTRE_SPACING = 3.4 * GeometryContract.STUDS_PER_METRE
+
+-- §3 Platforms ---------------------------------------------------------------
+GeometryContract.PLATFORM_TOP_ABOVE_RAIL = 0.76 * GeometryContract.STUDS_PER_METRE
+GeometryContract.PLATFORM_EDGE_SETBACK = 1.7 * GeometryContract.STUDS_PER_METRE
+GeometryContract.PLATFORM_MIN_ISLAND_WIDTH = 6.0 * GeometryContract.STUDS_PER_METRE
+GeometryContract.CANOPY_CLEARANCE = 3.2 * GeometryContract.STUDS_PER_METRE
+GeometryContract.TACTILE_STRIP_WIDTH = 0.6 * GeometryContract.STUDS_PER_METRE
+
+-- §4 Rolling stock -----------------------------------------------------------
+GeometryContract.CAR_WIDTH = 2.85 * GeometryContract.STUDS_PER_METRE
+GeometryContract.CAR_HEIGHT_ABOVE_RAIL = 4.1 * GeometryContract.STUDS_PER_METRE
+GeometryContract.CLEARANCE_WIDTH = 3.2 * GeometryContract.STUDS_PER_METRE
+GeometryContract.CLEARANCE_HEIGHT = 4.6 * GeometryContract.STUDS_PER_METRE
+GeometryContract.CAB_CAR_LENGTH = 21.0 * GeometryContract.STUDS_PER_METRE
+GeometryContract.INTERMEDIATE_CAR_LENGTH = 20.0 * GeometryContract.STUDS_PER_METRE
+GeometryContract.INTER_CAR_GAP = 0.5 * GeometryContract.STUDS_PER_METRE
+GeometryContract.DOOR_WIDTH = 1.3 * GeometryContract.STUDS_PER_METRE
+GeometryContract.DOOR_HEIGHT = 1.95 * GeometryContract.STUDS_PER_METRE
+GeometryContract.DOOR_TRAVEL = 1.35 * GeometryContract.STUDS_PER_METRE
+GeometryContract.BOGIE_CENTRES_FROM_END = 3.0 * GeometryContract.STUDS_PER_METRE
+GeometryContract.WHEEL_DIAMETER = 0.84 * GeometryContract.STUDS_PER_METRE
+GeometryContract.KIT_MODULE_LENGTH = 4.0 * GeometryContract.STUDS_PER_METRE
+
+-- §5 Pivots: car root is at rail-top level on the centreline at the leading
+-- coupling face. Expressed here so code and art agree without interpretation.
+GeometryContract.CAR_ROOT_Y = 0 -- rail top datum
+GeometryContract.BOGIE_PIVOT_Y = 0
+
+export type Geometry = typeof(GeometryContract)
+
+return table.freeze(GeometryContract)
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="4">
+          <Properties>
+            <string name="Name">RailContract</string>
+            <string name="Source"><![CDATA[--!strict
+--[[
+RailContract.luau — PROPOSED rail types.
+
+OWNERSHIP: src/shared/Contracts/** is Manager A-owned. This file is a PROPOSAL by CODE · vector;
+it is not merged or frozen until the Manager ratifies it in the PR thread, after agreement with
+CODE · lumen (who implements the client side).
+
+CONTENTS: types only — TrainState, TrainCommand, TrackSegment, SignalState. No implementation.
+
+NOTE: selene 0.32.0's parser does not accept inline literal types (e.g. `"closed" | "open"`)
+inside type tables, so literal domains are declared as aliases first and referenced by name.
+--]]
+
+export type Direction = number -- train direction along the line: -1 backward, 1 forward (validated at the remote boundary)
+export type Reverser = number -- reverser handle: -1, 0 (neutral), or 1 (validated at the remote boundary)
+export type DoorState = "closed" | "opening" | "open" | "closing"
+export type DoorCommand = "open" | "close" | "hold"
+export type SignalAspect = "red" | "yellow" | "green"
+
+-- Server-authoritative snapshot of one train, replicated at the fixed tick.
+-- All distances are studs along the train's current line (arc-length position).
+export type TrainState = {
+	trainId: string,
+	lineId: string,
+	distanceStuds: number,
+	speedStudsPerS: number,
+	direction: Direction,
+	doorState: DoorState,
+	signalAspect: SignalAspect,
+	speedLimitKph: number,
+	updatedAt: number, -- server os.clock() when this state was computed
+}
+
+-- Driving intent sent by the client. The server validates and decides; the client never sends
+-- position. Numeric fields are bounded (-1..1 or 0..1) — see RemoteContract validators.
+export type TrainCommand = {
+	throttle: number, -- -1 (full reverse power) .. 1 (full forward power)
+	brake: number, -- 0 (none) .. 1 (full service brake)
+	reverser: Reverser,
+	horn: boolean?,
+	doors: DoorCommand?,
+}
+
+-- One tracked section of the network. Control points are studs in the world frame defined by
+-- docs/rail/NETWORK.md. The server holds the authoritative spline; clients interpolate visually.
+export type TrackSegment = {
+	segmentId: string,
+	lineId: string,
+	-- Cubic Catmull-Rom control points defining the centre line, in order.
+	spline: { { x: number, y: number, z: number } },
+	lengthStuds: number,
+	speedLimitKph: number,
+	-- Track grade (slope sine, -1 = straight down, 1 = straight up), used by Kinematics.luau.
+	grade: number,
+}
+
+export type SignalState = {
+	segmentId: string,
+	aspect: SignalAspect,
+}
+
+-- A scheduled stop marker on a line (timetable data, Phase 2).
+export type StationStop = {
+	stationId: string,
+	lineId: string,
+	distanceStuds: number, -- stop marker arc-length position on the line
+	platformLengthStuds: number,
+}
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="5">
+          <Properties>
+            <string name="Name">RemoteContract</string>
+            <string name="Source"><![CDATA[--!strict
+--[[
+RemoteContract.luau — PROPOSED remote table.
+
+OWNERSHIP: src/shared/Contracts/** is Manager A-owned. This file is a PROPOSAL by CODE · vector;
+it is not merged or frozen until the Manager ratifies it in the PR thread, after agreement with
+CODE · lumen (who implements the client side).
+
+CONTENTS: data only — remote names, directions, request/response shape references and per-player
+rate limits. No implementation. Every remote is validated server-side on type, finite numbers,
+bounds, rate limit, player state and authority (STANDARDS.md; Remote events/security resource).
+
+RATE LIMITS are per player: maxPerSecond sustained, burst allowed.
+--]]
+
+export type RemoteDirection = "ClientToServer" | "ServerToClient"
+
+export type RemoteRate = {
+	maxPerSecond: number,
+	burst: number,
+}
+
+export type RemoteEntry = {
+	name: string,
+	direction: RemoteDirection,
+	request: string?, -- shape name in RailContract / GameplayContract, if any
+	response: string?, -- shape name, if any
+	rate: RemoteRate,
+}
+
+local RemoteContract = {
+	Train = {
+		-- Player drives a train: intent only; the server applies it at the fixed tick.
+		Control = {
+			name = "Train.Control",
+			direction = "ClientToServer",
+			request = "TrainCommand",
+			response = nil,
+			rate = { maxPerSecond = 30, burst = 60 }, -- one per client tick at 30 Hz
+		},
+		-- Server publishes authoritative train state at the fixed tick.
+		State = {
+			name = "Train.State",
+			direction = "ServerToClient",
+			request = nil,
+			response = "TrainState[]",
+			rate = { maxPerSecond = 30, burst = 60 },
+		},
+	},
+	Station = {
+		-- Player requests to board/alight at a station (Phase 2 passenger system).
+		Board = {
+			name = "Station.Board",
+			direction = "ClientToServer",
+			request = "StationBoardRequest",
+			response = "StationBoardResponse",
+			rate = { maxPerSecond = 2, burst = 4 },
+		},
+	},
+	Signal = {
+		-- Server pushes current signal aspects for the lines relevant to a player.
+		Observe = {
+			name = "Signal.Observe",
+			direction = "ServerToClient",
+			request = nil,
+			response = "SignalState[]",
+			rate = { maxPerSecond = 10, burst = 20 },
+		},
+	},
+}
+
+return RemoteContract
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Folder" referent="6">
+        <Properties>
+          <string name="Name">Rail</string>
+        </Properties>
+        <Item class="ModuleScript" referent="7">
+          <Properties>
+            <string name="Name">BoardingRules</string>
+            <string name="Source"><![CDATA[--!strict
+-- Pure admission rule for the experimental shuttle, not a complete passenger service.
+-- The server must derive every argument from its own train, platform and seat state.
+local BoardingRules = {}
+
+function BoardingRules.canBoard(
+	doorsOpen: boolean,
+	speedMs: number,
+	atPlatform: boolean,
+	seatFree: boolean
+): boolean
+	if
+		type(speedMs) ~= "number"
+		or speedMs ~= speedMs
+		or speedMs == math.huge
+		or speedMs == -math.huge
+	then
+		return false
+	end
+	return doorsOpen == true
+		and atPlatform == true
+		and seatFree == true
+		and math.abs(speedMs) <= 0.01
+end
+
+-- `isPassenger` must be determined by finding this character in the server's passenger seats.
+function BoardingRules.canAlight(
+	doorsOpen: boolean,
+	speedMs: number,
+	atPlatform: boolean,
+	isPassenger: boolean
+): boolean
+	return BoardingRules.canBoard(doorsOpen, speedMs, atPlatform, isPassenger)
+end
+
+return BoardingRules
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="8">
+          <Properties>
+            <string name="Name">ControlGate</string>
+            <string name="Source"><![CDATA[--!strict
+-- Pure helpers for a server-owned driver's remote. The server supplies identity and time;
+-- clients never choose the character or occupant used by `authorized`.
+local ControlGate = {}
+
+export type Bucket = { tokens: number, time: number }
+local RATE = 10
+local CAPACITY = 20
+
+function ControlGate.authorized(character: any, occupantCharacter: any): boolean
+	return character ~= nil and occupantCharacter ~= nil and character == occupantCharacter
+end
+
+-- Per-player token bucket. Rejected requests do not spend a token. Clock rollback and non-finite
+-- time fail closed; the service must remove a player's bucket when that player leaves.
+function ControlGate.consume(bucket: Bucket?, now: number): (Bucket?, boolean)
+	if type(now) ~= "number" or now ~= now or now == math.huge or now == -math.huge then
+		return bucket, false
+	end
+	if bucket == nil then
+		return { tokens = CAPACITY - 1, time = now }, true
+	end
+	if now < bucket.time then
+		return bucket, false
+	end
+	local tokens = math.min(CAPACITY, bucket.tokens + (now - bucket.time) * RATE)
+	if tokens < 1 then
+		return { tokens = tokens, time = now }, false
+	end
+	return { tokens = tokens - 1, time = now }, true
+end
+
+return ControlGate
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="9">
+          <Properties>
+            <string name="Name">DriverControl</string>
+            <string name="Source"><![CDATA[--!strict
+-- Pure command boundary for a future server-owned driving service. No remotes are installed here.
+-- Authority, player identity, rate limiting, and platform detection MUST be supplied by the server.
+-- Reject malformed inputs rather than coercing or accepting non-finite values.
+local DriverControl = {}
+
+export type Command = {
+	throttle: number,
+	brake: number,
+	reverser: number,
+	horn: boolean?,
+	doors: string?,
+}
+
+local function finiteNumber(value: any): boolean
+	return type(value) == "number" and value == value and value ~= math.huge and value ~= -math.huge
+end
+
+function DriverControl.validate(raw: any): (Command?, string?)
+	if type(raw) ~= "table" then
+		return nil, "command must be a table"
+	end
+	if not finiteNumber(raw.throttle) or raw.throttle < -1 or raw.throttle > 1 then
+		return nil, "throttle must be finite and between -1 and 1"
+	end
+	if not finiteNumber(raw.brake) or raw.brake < 0 or raw.brake > 1 then
+		return nil, "brake must be finite and between 0 and 1"
+	end
+	if
+		not finiteNumber(raw.reverser)
+		or (raw.reverser ~= -1 and raw.reverser ~= 0 and raw.reverser ~= 1)
+	then
+		return nil, "reverser must be -1, 0 or 1"
+	end
+	if raw.horn ~= nil and type(raw.horn) ~= "boolean" then
+		return nil, "horn must be boolean"
+	end
+	if
+		raw.doors ~= nil
+		and raw.doors ~= "open"
+		and raw.doors ~= "close"
+		and raw.doors ~= "hold"
+	then
+		return nil, "doors must be open, close or hold"
+	end
+	if raw.throttle ~= 0 and raw.throttle * raw.reverser <= 0 then
+		return nil, "throttle direction must match reverser"
+	end
+	-- Copy only the recognised fields. No client-supplied position or unknown fields propagate.
+	return {
+		throttle = raw.throttle,
+		brake = raw.brake,
+		reverser = raw.reverser,
+		horn = raw.horn,
+		doors = raw.doors :: string?,
+	},
+		nil
+end
+
+return DriverControl
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="10">
+          <Properties>
+            <string name="Name">Kinematics</string>
+            <string name="Source"><![CDATA[--!strict
+--[[
+Kinematics.luau — train dynamics along a spline (pure Luau).
+
+Pure Luau: no DataModel access, testable with lune without Studio. All integration units are
+SI internally (metres, m/s, newtons, kilograms); distances exposed to the simulation are
+converted to studs (1 m = 3.571... studs, docs/STANDARDS.md).
+
+Model
+-----
+Longitudinal dynamics only — lateral/vertical behaviour is handled by the spline (the train
+is constrained to the track centre line by construction).
+
+	force = tractiveEffort - brakeForce - rollingResistance - airResistance - mass * g * grade
+	acceleration = force / mass
+
+where grade is the track slope (sin of the incline, -1 for straight down, +1 for straight up).
+Braking distance under constant deceleration: d = v^2 / (2 * deceleration), used for stop
+markers and signal braking curves.
+
+Integration is semi-implicit Euler with speed clamping; the caller subdivides dt as needed
+for stability (a fixed 30 Hz tick with at most one integration per tick is the intended use).
+--]]
+
+local STUD_PER_METER = 1 / 0.28 -- 1 m = 3.571... studs
+local GRAVITY = 9.81 -- m/s^2
+
+export type TrainConfig = {
+	massKg: number,
+	-- Tractive effort at full throttle (newtons), flat track, from standstill.
+	maxTractiveEffortN: number,
+	-- Service brake force at full application (newtons).
+	serviceBrakeForceN: number,
+	-- Emergency brake force at full application (newtons).
+	emergencyBrakeForceN: number,
+	-- Maximum allowed speed (m/s).
+	maxSpeedMs: number,
+	-- Constant rolling resistance (newtons).
+	rollingResistanceN: number,
+	-- Air resistance coefficient: force = airResistanceCoeff * speed^2 (newtons).
+	airResistanceCoeff: number,
+}
+
+export type MotionState = {
+	speedMs: number, -- signed speed along the track (m/s)
+	distanceStuds: number, -- arc-length position on the spline (studs)
+}
+
+export type Controls = {
+	tractive: number, -- -1 (full reverse) to 1 (full forward)
+	serviceBrake: number, -- 0 (none) to 1 (full)
+	emergencyBrake: boolean,
+}
+
+local Kinematics = {}
+
+-- Clamp a value to [min, max].
+local function clamp(value: number, min: number, max: number): number
+	if value < min then
+		return min
+	end
+	if value > max then
+		return max
+	end
+	return value
+end
+
+-- Signed sign: -1, 0 or 1.
+local function sign(value: number): number
+	if value > 0 then
+		return 1
+	end
+	if value < 0 then
+		return -1
+	end
+	return 0
+end
+
+-- Total resistive force opposing motion (newtons), always >= 0 and acting against velocity.
+local function resistanceForce(config: TrainConfig, speedMs: number): number
+	local speed = math.abs(speedMs)
+	return config.rollingResistanceN + config.airResistanceCoeff * speed * speed
+end
+
+-- Longitudinal acceleration (m/s^2) for the given controls and track grade.
+function Kinematics.computeAcceleration(
+	state: MotionState,
+	controls: Controls,
+	config: TrainConfig,
+	grade: number
+): number
+	local speed = state.speedMs
+	local direction = sign(speed)
+
+	-- Brake demand interlocks traction. Signed traction is along the track coordinate.
+	local brakeDemand = clamp(controls.serviceBrake, 0, 1)
+	local tractive = 0
+	if not controls.emergencyBrake and brakeDemand == 0 then
+		tractive = clamp(controls.tractive, -1, 1) * config.maxTractiveEffortN
+	end
+
+	local brakeForce = if controls.emergencyBrake
+		then config.emergencyBrakeForceN
+		else brakeDemand * config.serviceBrakeForceN
+	brakeForce = math.min(brakeForce, config.massKg * GRAVITY)
+	local gradeForce = config.massKg * GRAVITY * grade
+	local driveForce = tractive - gradeForce
+	local opposingForce = brakeForce + resistanceForce(config, speed)
+
+	if direction == 0 then
+		-- Static holding: brakes and rolling resistance oppose the force trying to move
+		-- the stationary train, up to their combined capacity.
+		if math.abs(driveForce) <= opposingForce then
+			return 0
+		end
+		return (driveForce - sign(driveForce) * opposingForce) / config.massKg
+	end
+	return (driveForce - direction * opposingForce) / config.massKg
+end
+
+-- Integrate one step (semi-implicit Euler), returning a new state.
+function Kinematics.integrate(
+	state: MotionState,
+	dt: number,
+	controls: Controls,
+	config: TrainConfig,
+	grade: number
+): MotionState
+	local acceleration = Kinematics.computeAcceleration(state, controls, config, grade)
+	assert(dt >= 0 and dt < math.huge, "integration timestep must be finite and non-negative")
+	local newSpeed = state.speedMs + acceleration * dt
+	local travelTime = dt
+	-- Resistance and braking must not create a spurious reversal when a tick crosses zero.
+	-- Integrate only until the stop, then reevaluate static forces on the next tick.
+	if state.speedMs ~= 0 and state.speedMs * newSpeed < 0 then
+		travelTime = math.abs(state.speedMs / acceleration)
+		newSpeed = 0
+	end
+	newSpeed = clamp(newSpeed, -config.maxSpeedMs, config.maxSpeedMs)
+
+	local averageSpeed = (state.speedMs + newSpeed) / 2
+	local distanceMeters = averageSpeed * travelTime
+	return {
+		speedMs = newSpeed,
+		distanceStuds = state.distanceStuds + distanceMeters * STUD_PER_METER,
+	}
+end
+
+-- Braking distance (metres) to come to a complete stop from speedMs under constant deceleration.
+-- grade positive (uphill) helps braking; negative (downhill) hurts it.
+function Kinematics.brakingDistance(
+	speedMs: number,
+	brakeForceN: number,
+	massKg: number,
+	grade: number
+): number
+	local speed = math.abs(speedMs)
+	-- Uphill (grade > 0) adds to braking; downhill reduces it.
+	local deceleration = (brakeForceN + massKg * GRAVITY * grade) / massKg
+	-- Resistance also helps braking; including it would require integrating over speed, so we
+	-- report the conservative (longer) pure-brake distance plus a small resistance margin.
+	if deceleration <= 0 then
+		return math.huge
+	end
+	return (speed * speed) / (2 * deceleration)
+end
+
+-- Distance (studs) required to stop from the current state under the given brake, in either direction.
+function Kinematics.stopDistanceStuds(
+	state: MotionState,
+	controls: Controls,
+	config: TrainConfig,
+	grade: number
+): number
+	if state.speedMs == 0 then
+		return 0
+	end
+	local brakeForce = controls.emergencyBrake and config.emergencyBrakeForceN
+		or clamp(controls.serviceBrake, 0, 1) * config.serviceBrakeForceN
+	brakeForce = math.min(brakeForce, config.massKg * GRAVITY)
+	if brakeForce <= 0 then
+		return math.huge
+	end
+	-- Grade is defined in the positive track direction; reverse travel sees the opposite slope.
+	local meters = Kinematics.brakingDistance(
+		state.speedMs,
+		brakeForce,
+		config.massKg,
+		grade * sign(state.speedMs)
+	)
+	return meters * STUD_PER_METER
+end
+
+-- Create a default EMU-ish configuration (numbers are placeholder targets, to be replaced by
+-- the measured EMU-1 data from assets/trains/EMU-1/README.md once mason publishes it).
+function Kinematics.defaultConfig(): TrainConfig
+	return {
+		massKg = 120000, -- 120 t EMU two-car
+		maxTractiveEffortN = 120000,
+		serviceBrakeForceN = 90000,
+		emergencyBrakeForceN = 200000,
+		maxSpeedMs = 33.3, -- 120 km/h
+		rollingResistanceN = 4000,
+		airResistanceCoeff = 60,
+	}
+end
+
+-- Create a stopped state at the given arc-length position (studs).
+function Kinematics.stopped(distanceStuds: number): MotionState
+	return { speedMs = 0, distanceStuds = distanceStuds }
+end
+
+return Kinematics
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="11">
+          <Properties>
+            <string name="Name">Spline</string>
+            <string name="Source"><![CDATA[--!strict
+--[[
+Spline.luau — arc-length parameterised cubic Catmull-Rom spline for railway centre lines.
+
+Pure Luau: no DataModel access, no Roblox globals, testable with lune without Studio.
+All units are studs.
+
+Model
+-----
+A spline is a piecewise cubic curve through a list of control points. Segment i runs from
+controlPoints[i] to controlPoints[i+1] (open spline) or wraps around (closed spline) and is
+evaluated with the standard centripetal Catmull-Rom formulation, parameterised by t in [0, 1]
+over the segment.
+
+Arc length
+----------
+Each segment is approximated by sampling sub-points and summing chord lengths, giving a
+cumulative arc-length table per segment. Mapping arc length s -> (segment, local t) is a
+binary search; evaluating at t integrates the same table. Position, tangent and frame normal
+are all available in arc-length parameterisation, which is what train movement needs: speed is
+studs per second, so the simulation integrates s directly and can never drift off the track.
+
+The arc-length table is an approximation: sub-sample count targets a maximum chord of 1 stud
+per segment, so length error is well below a millimetre for typical track segments and far
+below train braking tolerances.
+--]]
+
+local STUD_PER_METER = 1 / 0.28 -- 1 m = 3.571... studs (docs/STANDARDS.md)
+
+export type Vec3 = {
+	x: number,
+	y: number,
+	z: number,
+}
+
+type SubSample = {
+	t: number,
+	length: number, -- cumulative length within the segment up to this sub-sample
+	position: Vec3,
+}
+
+type Segment = {
+	p0: Vec3,
+	p1: Vec3,
+	p2: Vec3,
+	p3: Vec3,
+	subSamples: { SubSample },
+	length: number,
+	sStart: number,
+}
+
+export type Spline = {
+	controlPoints: { Vec3 },
+	segments: { Segment },
+	totalLength: number,
+	closed: boolean,
+	sample: (self: Spline, t: number) -> Vec3,
+	sampleSegment: (self: Spline, segmentIndex: number, t: number) -> Vec3,
+	tangent: (self: Spline, t: number) -> Vec3,
+	segmentTangent: (self: Spline, segmentIndex: number, t: number) -> Vec3,
+	sampleArcLength: (self: Spline, s: number) -> { position: Vec3, tangent: Vec3 },
+	arcLengthToT: (self: Spline, s: number) -> { segmentIndex: number, t: number },
+	lengthTo: (self: Spline, segmentIndex: number, t: number) -> number,
+	addPoint: (self: Spline, point: Vec3) -> number,
+	-- distanceToPoint returns the closest point on the spline to a world point, the arc-length
+	-- position s of that closest point, and the distance between them. Used by station stop
+	-- markers to snap a platform position onto the track centre line.
+	distanceToPoint: (self: Spline, point: Vec3) -> { position: Vec3, s: number, distance: number },
+}
+
+-- -----------------------------------------------------------------------------
+-- Vector helpers (pure)
+-- -----------------------------------------------------------------------------
+
+local function vec3(x: number, y: number, z: number): Vec3
+	return { x = x, y = y, z = z }
+end
+
+local function sub(a: Vec3, b: Vec3): Vec3
+	return { x = a.x - b.x, y = a.y - b.y, z = a.z - b.z }
+end
+
+local function dot(a: Vec3, b: Vec3): number
+	return a.x * b.x + a.y * b.y + a.z * b.z
+end
+
+local function len(a: Vec3): number
+	return math.sqrt(dot(a, a))
+end
+
+-- -----------------------------------------------------------------------------
+-- Catmull-Rom segment evaluation
+-- -----------------------------------------------------------------------------
+
+local function catmullRom(p0: Vec3, p1: Vec3, p2: Vec3, p3: Vec3, t: number): Vec3
+	local t2 = t * t
+	local t3 = t2 * t
+	return {
+		x = 0.5
+			* (
+				(2 * p1.x)
+				+ (-p0.x + p2.x) * t
+				+ (2 * p0.x - 5 * p1.x + 4 * p2.x - p3.x) * t2
+				+ (-p0.x + 3 * p1.x - 3 * p2.x + p3.x) * t3
+			),
+		y = 0.5
+			* (
+				(2 * p1.y)
+				+ (-p0.y + p2.y) * t
+				+ (2 * p0.y - 5 * p1.y + 4 * p2.y - p3.y) * t2
+				+ (-p0.y + 3 * p1.y - 3 * p2.y + p3.y) * t3
+			),
+		z = 0.5
+			* (
+				(2 * p1.z)
+				+ (-p0.z + p2.z) * t
+				+ (2 * p0.z - 5 * p1.z + 4 * p2.z - p3.z) * t2
+				+ (-p0.z + 3 * p1.z - 3 * p2.z + p3.z) * t3
+			),
+	}
+end
+
+local function catmullRomTangent(p0: Vec3, p1: Vec3, p2: Vec3, p3: Vec3, t: number): Vec3
+	local t2 = t * t
+	return {
+		x = 0.5
+			* (
+				(-p0.x + p2.x)
+				+ 2 * (2 * p0.x - 5 * p1.x + 4 * p2.x - p3.x) * t
+				+ 3 * (-p0.x + 3 * p1.x - 3 * p2.x + p3.x) * t2
+			),
+		y = 0.5
+			* (
+				(-p0.y + p2.y)
+				+ 2 * (2 * p0.y - 5 * p1.y + 4 * p2.y - p3.y) * t
+				+ 3 * (-p0.y + 3 * p1.y - 3 * p2.y + p3.y) * t2
+			),
+		z = 0.5
+			* (
+				(-p0.z + p2.z)
+				+ 2 * (2 * p0.z - 5 * p1.z + 4 * p2.z - p3.z) * t
+				+ 3 * (-p0.z + 3 * p1.z - 3 * p2.z + p3.z) * t2
+			),
+	}
+end
+
+-- -----------------------------------------------------------------------------
+-- Segment construction
+-- -----------------------------------------------------------------------------
+
+local function clampIndex(index: number, count: number): number
+	if index < 1 then
+		return 1
+	end
+	if index > count then
+		return count
+	end
+	return index
+end
+
+local function wrapIndex(index: number, count: number): number
+	while index < 1 do
+		index += count
+	end
+	while index > count do
+		index -= count
+	end
+	return index
+end
+
+local function buildSubSamples(p0: Vec3, p1: Vec3, p2: Vec3, p3: Vec3): { SubSample }
+	-- Sub-sample count chosen generously; track segments are short enough that this keeps the
+	local count = 97
+	local samples = table.create(count)
+	local previous: Vec3? = nil
+	local cumulative = 0
+	for k = 0, count - 1 do
+		local t = k / (count - 1)
+		local position = catmullRom(p0, p1, p2, p3, t)
+		if previous ~= nil then
+			cumulative += len(sub(position, previous))
+		end
+		samples[k + 1] = { t = t, length = cumulative, position = position }
+		previous = position
+	end
+	return samples
+end
+
+local function segmentLengthAt(samples: { SubSample }, t: number): number
+	if t <= 0 then
+		return 0
+	end
+	if t >= 1 then
+		return samples[#samples].length
+	end
+	local count = #samples
+	local step = 1 / (count - 1)
+	local k = math.floor(t / step)
+	if k < 1 then
+		k = 1
+	end
+	if k > count - 1 then
+		k = count - 1
+	end
+	local t0 = (k - 1) * step
+	local t1 = k * step
+	local s = (t - t0) / (t1 - t0)
+	local a = samples[k].length
+	local b = samples[k + 1].length
+	return a + (b - a) * s
+end
+
+local function buildSegment(p0: Vec3, p1: Vec3, p2: Vec3, p3: Vec3, sStart: number): Segment
+	local samples = buildSubSamples(p0, p1, p2, p3)
+	return {
+		p0 = p0,
+		p1 = p1,
+		p2 = p2,
+		p3 = p3,
+		subSamples = samples,
+		length = samples[#samples].length,
+		sStart = sStart,
+	}
+end
+
+-- -----------------------------------------------------------------------------
+-- Spline
+-- -----------------------------------------------------------------------------
+
+local Spline = {}
+
+local function rebuild(self: Spline)
+	local points = self.controlPoints
+	local count = #points
+	local segments =
+		table.create(count > 0 and (self.closed and count or math.max(count - 1, 0)) or 0)
+	local sStart = 0
+	if count >= 2 then
+		for i = 1, (self.closed and count or count - 1) do
+			local p0 = points[self.closed and wrapIndex(i - 1, count) or clampIndex(i - 1, count)]
+			local p1 = points[i]
+			local p2 = points[self.closed and wrapIndex(i + 1, count) or clampIndex(i + 1, count)]
+			local p3 = points[self.closed and wrapIndex(i + 2, count) or clampIndex(i + 2, count)]
+			local segment = buildSegment(p0, p1, p2, p3, sStart)
+			table.insert(segments, segment)
+			sStart += segment.length
+		end
+	end
+	self.segments = segments
+	self.totalLength = sStart
+end
+
+function Spline.sample(self: Spline, t: number): Vec3
+	if self.totalLength <= 0 then
+		return { x = 0, y = 0, z = 0 }
+	end
+	if t <= 0 then
+		return self.controlPoints[1]
+	end
+	if t >= 1 then
+		return self.controlPoints[#self.controlPoints]
+	end
+	return self:sampleArcLength(t * self.totalLength).position
+end
+
+function Spline.sampleSegment(self: Spline, segmentIndex: number, t: number): Vec3
+	if segmentIndex < 1 or segmentIndex > #self.segments then
+		return { x = 0, y = 0, z = 0 }
+	end
+	local segment = self.segments[segmentIndex]
+	if t <= 0 then
+		return segment.p1
+	end
+	if t >= 1 then
+		return segment.p2
+	end
+	return catmullRom(segment.p0, segment.p1, segment.p2, segment.p3, t)
+end
+
+function Spline.tangent(self: Spline, t: number): Vec3
+	return self:sampleArcLength(t * self.totalLength).tangent
+end
+
+function Spline.sampleArcLength(self: Spline, s: number): { position: Vec3, tangent: Vec3 }
+	if self.totalLength <= 0 then
+		return { position = { x = 0, y = 0, z = 0 }, tangent = { x = 0, y = 0, z = 0 } }
+	end
+	if self.closed then
+		while s < 0 do
+			s += self.totalLength
+		end
+		while s > self.totalLength do
+			s -= self.totalLength
+		end
+	else
+		if s <= 0 then
+			local first = self.controlPoints[1]
+			return { position = first, tangent = self:segmentTangent(1, 0) }
+		end
+		if s >= self.totalLength then
+			local last = self.controlPoints[#self.controlPoints]
+			local segCount = #self.segments
+			return { position = last, tangent = self:segmentTangent(segCount, 1) }
+		end
+	end
+
+	-- Binary search the segment containing s.
+	local segments = self.segments
+	local low, high = 1, #segments
+	local segmentIndex = 1
+	while low <= high do
+		local mid = math.floor((low + high) / 2)
+		if segments[mid].sStart <= s then
+			segmentIndex = mid
+			low = mid + 1
+		else
+			high = mid - 1
+		end
+	end
+
+	local segment = segments[segmentIndex]
+	local localS = s - segment.sStart
+	local samples = segment.subSamples
+	local count = #samples
+
+	-- Binary search the sub-sample bracket containing localS.
+	if localS <= 0 then
+		return {
+			position = samples[1].position,
+			tangent = catmullRomTangent(segment.p0, segment.p1, segment.p2, segment.p3, 0),
+		}
+	end
+	if localS >= segment.length then
+		return {
+			position = samples[count].position,
+			tangent = catmullRomTangent(segment.p0, segment.p1, segment.p2, segment.p3, 1),
+		}
+	end
+
+	low, high = 1, count - 1
+	local bracket = 1
+	while low <= high do
+		local mid = math.floor((low + high) / 2)
+		if samples[mid].length <= localS then
+			bracket = mid
+			low = mid + 1
+		else
+			high = mid - 1
+		end
+	end
+
+	local a = samples[bracket]
+	local b = samples[bracket + 1]
+	local segSpan = b.length - a.length
+	local u = 0
+	if segSpan > 0 then
+		u = (localS - a.length) / segSpan
+	end
+	local t = a.t + (b.t - a.t) * u
+	local position = catmullRom(segment.p0, segment.p1, segment.p2, segment.p3, t)
+	local tangent = catmullRomTangent(segment.p0, segment.p1, segment.p2, segment.p3, t)
+	return { position = position, tangent = tangent }
+end
+
+function Spline.segmentTangent(self: Spline, segmentIndex: number, t: number): Vec3
+	local segment = self.segments[segmentIndex]
+	return catmullRomTangent(segment.p0, segment.p1, segment.p2, segment.p3, t)
+end
+
+function Spline.arcLengthToT(self: Spline, s: number): { segmentIndex: number, t: number }
+	if self.totalLength <= 0 then
+		return { segmentIndex = 1, t = 0 }
+	end
+	if self.closed then
+		while s < 0 do
+			s += self.totalLength
+		end
+		while s > self.totalLength do
+			s -= self.totalLength
+		end
+	else
+		if s <= 0 then
+			return { segmentIndex = 1, t = 0 }
+		end
+		if s >= self.totalLength then
+			return { segmentIndex = #self.segments, t = 1 }
+		end
+	end
+	local segments = self.segments
+	local low, high = 1, #segments
+	local segmentIndex = 1
+	while low <= high do
+		local mid = math.floor((low + high) / 2)
+		if segments[mid].sStart <= s then
+			segmentIndex = mid
+			low = mid + 1
+		else
+			high = mid - 1
+		end
+	end
+	local segment = segments[segmentIndex]
+	local localS = s - segment.sStart
+	local samples = segment.subSamples
+	low, high = 1, #samples - 1
+	local bracket = 1
+	while low <= high do
+		local mid = math.floor((low + high) / 2)
+		if samples[mid].length <= localS then
+			bracket = mid
+			low = mid + 1
+		else
+			high = mid - 1
+		end
+	end
+	local a = samples[bracket]
+	local b = samples[bracket + 1]
+	local segSpan = b.length - a.length
+	local u = 0
+	if segSpan > 0 then
+		u = (localS - a.length) / segSpan
+	end
+	local t = a.t + (b.t - a.t) * u
+	return { segmentIndex = segmentIndex, t = t }
+end
+
+function Spline.lengthTo(self: Spline, segmentIndex: number, t: number): number
+	if segmentIndex < 1 or segmentIndex > #self.segments then
+		return 0
+	end
+	local segment = self.segments[segmentIndex]
+	local base = segment.sStart
+	if t <= 0 then
+		return base
+	end
+	if t >= 1 then
+		return base + segment.length
+	end
+	return base + segmentLengthAt(segment.subSamples, t)
+end
+
+function Spline.addPoint(self: Spline, point: Vec3): number
+	table.insert(self.controlPoints, point)
+	rebuild(self)
+	return #self.controlPoints
+end
+
+function Spline.distanceToPoint(
+	self: Spline,
+	point: Vec3
+): { position: Vec3, s: number, distance: number }
+	local best: { position: Vec3, s: number, distance: number }? = nil
+	for segmentIndex = 1, #self.segments do
+		local segment = self.segments[segmentIndex]
+		local samples = segment.subSamples
+		for k = 1, #samples do
+			local distance = len(sub(samples[k].position, point))
+			if best == nil or distance < best.distance then
+				best = {
+					position = samples[k].position,
+					s = segment.sStart + samples[k].length,
+					distance = distance,
+				}
+			end
+		end
+	end
+	if best == nil then
+		return { position = { x = 0, y = 0, z = 0 }, s = 0, distance = 0 }
+	end
+	-- Refine around the best sub-sample with a shrinking window search.
+	local segmentIndex = 1
+	for i = 1, #self.segments do
+		if self.segments[i].sStart <= best.s then
+			segmentIndex = i
+		end
+	end
+	local segment = self.segments[segmentIndex]
+	-- Recover t from the stored sample instead: find sub-sample matching best.position distance.
+	-- Simpler: refine in s-space around best.s.
+	local searchS = best.s
+	local searchStep = math.min(segment.length, 4) -- studs
+	for _ = 1, 10 do
+		searchStep /= 2
+		local candidates = {
+			{ s = searchS - searchStep },
+			{ s = searchS },
+			{ s = searchS + searchStep },
+		}
+		local improved = false
+		for _, c in ipairs(candidates) do
+			local s = c.s
+			if self.closed then
+				while s < 0 do
+					s += self.totalLength
+				end
+				while s > self.totalLength do
+					s -= self.totalLength
+				end
+			elseif s < 0 or s > self.totalLength then
+				continue
+			end
+			local sampled = self:sampleArcLength(s)
+			local distance = len(sub(sampled.position, point))
+			if distance < best.distance then
+				best.distance = distance
+				best.position = sampled.position
+				best.s = s
+				searchS = s
+				improved = true
+			end
+		end
+		if not improved then
+			break
+		end
+	end
+	return best
+end
+
+-- -----------------------------------------------------------------------------
+-- Constructor
+-- -----------------------------------------------------------------------------
+
+local function new(points: { Vec3 }, closed: boolean?): Spline
+	local self: Spline = {
+		controlPoints = points,
+		segments = {},
+		totalLength = 0,
+		closed = closed == true,
+		sample = Spline.sample,
+		sampleSegment = Spline.sampleSegment,
+		tangent = Spline.tangent,
+		sampleArcLength = Spline.sampleArcLength,
+		segmentTangent = Spline.segmentTangent,
+		arcLengthToT = Spline.arcLengthToT,
+		lengthTo = Spline.lengthTo,
+		addPoint = Spline.addPoint,
+		distanceToPoint = Spline.distanceToPoint,
+	}
+	rebuild(self)
+	return self
+end
+
+return {
+	new = new,
+	vec3 = vec3,
+	STUD_PER_METER = STUD_PER_METER,
+}
+]]></string>
+          </Properties>
+        </Item>
+        <Item class="ModuleScript" referent="12">
+          <Properties>
+            <string name="Name">TrainSimulation</string>
+            <string name="Source"><![CDATA[--!strict
+-- Deterministic, single-train driving prototype. It is NOT a Roblox service or signalling system.
+-- Server callers must authenticate/rate-limit drivers, supply trustworthy platform/track state,
+-- and run bounded fixed ticks. The hard end clamps are a prototype fallback, not real railway ATP.
+local TrainSimulation = {}
+
+export type MotionState = { speedMs: number, distanceStuds: number }
+export type Command = {
+	throttle: number,
+	brake: number,
+	reverser: number,
+	horn: boolean?,
+	doors: string?,
+}
+export type TrainConfig = {
+	massKg: number,
+	maxTractiveEffortN: number,
+	serviceBrakeForceN: number,
+	emergencyBrakeForceN: number,
+	maxSpeedMs: number,
+	rollingResistanceN: number,
+	airResistanceCoeff: number,
+}
+
+export type Settings = {
+	trackLengthStuds: number,
+	marginStuds: number,
+	commandTimeoutSeconds: number,
+	maxSpeedMs: number,
+}
+export type State = {
+	motion: MotionState,
+	reverser: number,
+	doorsOpen: boolean,
+	lastCommand: Command?,
+	commandTime: number?,
+	intervention: string?,
+}
+
+local function finite(n: number): boolean
+	return n == n and n ~= math.huge and n ~= -math.huge
+end
+
+function TrainSimulation.create(Kinematics: any, DriverControl: any)
+	local Engine = {}
+
+	function Engine.new(position: number, settings: Settings): State
+		assert(
+			finite(settings.trackLengthStuds) and settings.trackLengthStuds > 0,
+			"invalid track length"
+		)
+		assert(finite(settings.marginStuds) and settings.marginStuds >= 0, "invalid safety margin")
+		assert(
+			finite(settings.commandTimeoutSeconds) and settings.commandTimeoutSeconds > 0,
+			"invalid timeout"
+		)
+		assert(finite(settings.maxSpeedMs) and settings.maxSpeedMs > 0, "invalid speed limit")
+		assert(
+			finite(position) and position >= 0 and position <= settings.trackLengthStuds,
+			"invalid position"
+		)
+		return {
+			motion = Kinematics.stopped(position),
+			reverser = 0,
+			doorsOpen = false,
+			lastCommand = nil,
+			commandTime = nil,
+			intervention = nil,
+		}
+	end
+
+	-- The caller must perform authorization and rate limiting before this function.
+	function Engine.submit(state: State, raw: any, now: number): (State?, string?)
+		if not finite(now) or (state.commandTime ~= nil and now < state.commandTime) then
+			return nil, "invalid or non-monotonic command time"
+		end
+		local command, reason = DriverControl.validate(raw)
+		if command == nil then
+			return nil, reason
+		end
+		return {
+			motion = state.motion,
+			reverser = state.reverser,
+			doorsOpen = state.doorsOpen,
+			lastCommand = command,
+			commandTime = now,
+			intervention = state.intervention,
+		},
+			nil
+	end
+
+	-- `atPlatform` is a SERVER-DERIVED alignment/permission decision, never a client assertion.
+	-- A missing/stale command applies service brake; open doors inhibit traction and hold the brake.
+	function Engine.step(
+		state: State,
+		settings: Settings,
+		config: TrainConfig,
+		dt: number,
+		now: number,
+		grade: number,
+		atPlatform: boolean
+	): State
+		assert(finite(dt) and dt > 0 and dt <= 1 / 15, "step requires bounded fixed timestep")
+		assert(finite(now) and finite(grade) and math.abs(grade) <= 1, "invalid time or grade")
+		local speed = state.motion.speedMs
+		local doorsOpen = state.doorsOpen
+		local reverser = state.reverser
+		local command = state.lastCommand
+		local fresh = command ~= nil
+			and state.commandTime ~= nil
+			and now >= state.commandTime
+			and now - state.commandTime <= settings.commandTimeoutSeconds
+		local traction = 0
+		local brake = 1
+		local emergency = false
+		local intervention: string? = nil
+
+		if fresh and command then
+			if math.abs(speed) <= 0.01 then
+				reverser = command.reverser
+			elseif command.reverser ~= reverser then
+				intervention = "reverser change while moving"
+			end
+			if command.doors == "close" then
+				doorsOpen = false
+			elseif command.doors == "open" and math.abs(speed) <= 0.01 and atPlatform then
+				doorsOpen = true
+			end
+			if intervention == nil then
+				traction = command.throttle
+				brake = command.brake
+			end
+		else
+			intervention = "command timeout"
+		end
+
+		if doorsOpen then
+			traction = 0
+			brake = 1
+			intervention = "doors open"
+		end
+		if math.abs(speed) > settings.maxSpeedMs then
+			traction = 0
+			brake = 1
+			intervention = "speed limit"
+		end
+
+		local distanceToEnd = if speed < 0
+			then state.motion.distanceStuds
+			else settings.trackLengthStuds - state.motion.distanceStuds
+		local emergencyStop = Kinematics.stopDistanceStuds(
+			state.motion,
+			{ tractive = 0, serviceBrake = 0, emergencyBrake = true },
+			config,
+			grade
+		)
+		if speed ~= 0 and distanceToEnd <= emergencyStop + settings.marginStuds then
+			traction = 0
+			brake = 1
+			emergency = true
+			intervention = "track end"
+		end
+
+		-- Do not repeatedly power toward an end while within the stop margin. Reverse power
+		-- away from the end remains possible after stopping.
+		if
+			(state.motion.distanceStuds <= settings.marginStuds and traction < 0)
+			or (
+				state.motion.distanceStuds >= settings.trackLengthStuds - settings.marginStuds
+				and traction > 0
+			)
+		then
+			traction = 0
+			brake = 1
+			intervention = "track end"
+		end
+
+		local motion = Kinematics.integrate(state.motion, dt, {
+			tractive = traction,
+			serviceBrake = brake,
+			emergencyBrake = emergency,
+		}, config, grade)
+		if motion.distanceStuds < 0 or motion.distanceStuds > settings.trackLengthStuds then
+			motion = {
+				distanceStuds = math.clamp(motion.distanceStuds, 0, settings.trackLengthStuds),
+				speedMs = 0,
+			}
+			intervention = "track end hard clamp"
+		end
+		return {
+			motion = motion,
+			reverser = reverser,
+			doorsOpen = doorsOpen,
+			lastCommand = state.lastCommand,
+			commandTime = state.commandTime,
+			intervention = intervention,
+		}
+	end
+
+	return Engine
+end
+
+return TrainSimulation
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="13">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+    <Item class="Script" referent="14">
+      <Properties>
+        <string name="Name">RailTestServer</string>
+        <token name="RunContext">0</token>
+        <string name="Source"><![CDATA[--!strict
+-- Standalone test track only: this does not install unreviewed railway geometry in District A.
+-- Server owns the simulation and geometry. A seated driver may send validated intent only.
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+
+local rail = ReplicatedStorage.Shared.Rail
+local Kinematics = require(rail.Kinematics)
+local DriverControl = require(rail.DriverControl)
+local ControlGate = require(rail.ControlGate)
+local Simulation = require(rail.TrainSimulation).create(Kinematics, DriverControl)
+
+local settings =
+	{ trackLengthStuds = 1200, marginStuds = 35, commandTimeoutSeconds = 0.6, maxSpeedMs = 20 }
+local config = Kinematics.defaultConfig()
+local state = Simulation.new(160, settings)
+
+local function part(
+	parent: Instance,
+	name: string,
+	size: Vector3,
+	position: Vector3,
+	color: Color3,
+	material: Enum.Material
+): Part
+	local p = Instance.new("Part")
+	p.Name = name
+	p.Size = size
+	p.Position = position
+	p.Color = color
+	p.Material = material
+	p.Anchored = true
+	p.TopSurface = Enum.SurfaceType.Smooth
+	p.BottomSurface = Enum.SurfaceType.Smooth
+	p.Parent = parent
+	return p
+end
+
+local world = Instance.new("Model")
+world.Name = "RailTestWorld"
+world.Parent = workspace
+part(
+	world,
+	"Ground",
+	Vector3.new(1400, 2, 160),
+	Vector3.new(600, -1, 0),
+	Color3.fromRGB(84, 105, 79),
+	Enum.Material.Grass
+)
+part(
+	world,
+	"Ballast",
+	Vector3.new(1200, 0.5, 17),
+	Vector3.new(600, 0.25, 0),
+	Color3.fromRGB(91, 88, 80),
+	Enum.Material.Slate
+)
+for _, z in ipairs({ -3.2, 3.2 }) do
+	part(
+		world,
+		"Rail",
+		Vector3.new(1200, 0.5, 0.5),
+		Vector3.new(600, 0.75, z),
+		Color3.fromRGB(130, 135, 137),
+		Enum.Material.Metal
+	)
+end
+for x = 0, 1200, 15 do
+	part(
+		world,
+		"Sleeper",
+		Vector3.new(2, 0.3, 11),
+		Vector3.new(x, 0.58, 0),
+		Color3.fromRGB(88, 70, 57),
+		Enum.Material.WoodPlanks
+	)
+end
+part(
+	world,
+	"Platform",
+	Vector3.new(230, 2, 15),
+	Vector3.new(160, 1, -14),
+	Color3.fromRGB(175, 170, 155),
+	Enum.Material.Concrete
+)
+part(
+	world,
+	"TactileEdge",
+	Vector3.new(230, 0.08, 1),
+	Vector3.new(160, 2.04, -7),
+	Color3.fromRGB(217, 194, 126),
+	Enum.Material.Concrete
+).CanCollide =
+	false
+local spawn = Instance.new("SpawnLocation")
+spawn.Name = "RailTestSpawn"
+spawn.Size = Vector3.new(8, 1, 8)
+spawn.Position = Vector3.new(160, 2.5, -17)
+spawn.Anchored = true
+spawn.Neutral = true
+spawn.Duration = 0
+spawn.Parent = world
+
+local train = Instance.new("Model")
+train.Name = "PrototypeTrain"
+train.Parent = world
+local body = part(
+	train,
+	"Body",
+	Vector3.new(44, 7, 9),
+	Vector3.new(160, 5, 0),
+	Color3.fromRGB(207, 213, 208),
+	Enum.Material.Metal
+)
+body.CanCollide = false
+train.PrimaryPart = body
+local stripe = part(
+	train,
+	"WindowBand",
+	Vector3.new(36, 2.3, 9.15),
+	Vector3.new(157, 6, 0),
+	Color3.fromRGB(30, 61, 70),
+	Enum.Material.SmoothPlastic
+)
+stripe.CanCollide = false
+local roof = part(
+	train,
+	"Roof",
+	Vector3.new(44, 0.5, 9.2),
+	Vector3.new(160, 8.75, 0),
+	Color3.fromRGB(99, 109, 109),
+	Enum.Material.Metal
+)
+roof.CanCollide = false
+local seat = Instance.new("Seat")
+seat.Name = "PrototypeDriverSeat"
+seat.Size = Vector3.new(3, 1, 3)
+seat.Position = Vector3.new(175, 9.5, 0)
+seat.Anchored = true
+seat.CanCollide = false
+seat.Color = Color3.fromRGB(40, 48, 52)
+seat.Parent = train
+local prompt = Instance.new("ProximityPrompt")
+prompt.Name = "BoardDriver"
+prompt.ActionText = "Board driver seat"
+prompt.ObjectText = "Test train"
+prompt.MaxActivationDistance = 20
+prompt.RequiresLineOfSight = false
+prompt.Parent = body
+prompt.Triggered:Connect(function(player: Player)
+	local character = player.Character
+	local humanoid = if character then character:FindFirstChildOfClass("Humanoid") else nil
+	local root = if character then character:FindFirstChild("HumanoidRootPart") else nil
+	if
+		humanoid
+		and root
+		and root:IsA("BasePart")
+		and humanoid.Health > 0
+		and seat.Occupant == nil
+		and (root.Position - body.Position).Magnitude <= prompt.MaxActivationDistance + 3
+		and math.abs(state.motion.speedMs) < 0.01
+		and math.abs(state.motion.distanceStuds - 160) <= 20
+	then
+		seat:Sit(humanoid)
+	end
+end)
+
+local remotes = Instance.new("Folder")
+remotes.Name = "RailTestRemotes"
+remotes.Parent = ReplicatedStorage
+local control = Instance.new("RemoteEvent")
+control.Name = "Control"
+control.Parent = remotes
+local snapshot = Instance.new("RemoteEvent")
+snapshot.Name = "Snapshot"
+snapshot.Parent = remotes
+
+-- Per-player token bucket, capped and removed on exit. This is not a production authority layer.
+local buckets: { [Player]: ControlGate.Bucket } = {}
+local function allow(player: Player, now: number): boolean
+	local updated, allowed = ControlGate.consume(buckets[player], now)
+	if updated then
+		buckets[player] = updated
+	end
+	return allowed
+end
+Players.PlayerRemoving:Connect(function(player: Player)
+	buckets[player] = nil
+end)
+control.OnServerEvent:Connect(function(player: Player, raw: any)
+	local now = os.clock()
+	if not allow(player, now) then
+		return
+	end
+	local occupant = seat.Occupant
+	if not ControlGate.authorized(player.Character, if occupant then occupant.Parent else nil) then
+		return
+	end
+	local nextState = Simulation.submit(state, raw, now)
+	if nextState then
+		state = nextState
+	end
+end)
+
+local accumulator = 0
+local ticks = 0
+local previousOccupant: Humanoid? = nil
+RunService.Heartbeat:Connect(function(elapsed: number)
+	-- Discard excessive backlog rather than doing unbounded catch-up work on a stalled server.
+	accumulator = math.min(accumulator + elapsed, 4 / 30)
+	while accumulator >= 1 / 30 do
+		accumulator -= 1 / 30
+		-- A vacated or changed seat immediately loses the previous driver's intent.
+		if seat.Occupant ~= previousOccupant then
+			state.lastCommand = nil
+			state.commandTime = nil
+			previousOccupant = seat.Occupant
+		end
+		local atPlatform = math.abs(state.motion.distanceStuds - 160) <= 20
+		state = Simulation.step(state, settings, config, 1 / 30, os.clock(), 0, atPlatform)
+		train:PivotTo(CFrame.new(state.motion.distanceStuds, 5, 0))
+		ticks += 1
+		if ticks % 6 == 0 then
+			snapshot:FireAllClients({
+				speedKph = math.abs(state.motion.speedMs) * 3.6,
+				position = state.motion.distanceStuds,
+				doorsOpen = state.doorsOpen,
+				intervention = state.intervention,
+			})
+		end
+	end
+end)
+]]></string>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="StarterPlayer" referent="15">
+    <Properties>
+      <string name="Name">StarterPlayer</string>
+    </Properties>
+    <Item class="StarterPlayerScripts" referent="16">
+      <Properties>
+        <string name="Name">StarterPlayerScripts</string>
+      </Properties>
+      <Item class="LocalScript" referent="17">
+        <Properties>
+          <string name="Name">RailTestClient</string>
+          <string name="Source"><![CDATA[--!strict
+-- Standalone, deliberately simple driving controls. Server checks driver seat and every command.
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
+local player = Players.LocalPlayer
+local remoteFolder = ReplicatedStorage:WaitForChild("RailTestRemotes")
+local control = remoteFolder:WaitForChild("Control") :: RemoteEvent
+local snapshot = remoteFolder:WaitForChild("Snapshot") :: RemoteEvent
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "RailTestControls"
+gui.ResetOnSpawn = false
+gui.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+gui.Parent = player:WaitForChild("PlayerGui")
+local panel = Instance.new("Frame")
+panel.Name = "Controls"
+panel.AnchorPoint = Vector2.new(0.5, 1)
+panel.Position = UDim2.new(0.5, 0, 1, -12)
+panel.Size = UDim2.new(0.96, 0, 0, 166)
+panel.BackgroundColor3 = Color3.fromRGB(22, 28, 34)
+panel.BorderSizePixel = 0
+panel.Parent = gui
+local sizeConstraint = Instance.new("UISizeConstraint")
+sizeConstraint.MaxSize = Vector2.new(850, 166)
+sizeConstraint.Parent = panel
+local title = Instance.new("TextLabel")
+title.BackgroundTransparency = 1
+title.Size = UDim2.new(1, -16, 0, 24)
+title.Position = UDim2.fromOffset(8, 4)
+title.Font = Enum.Font.BuilderSansBold
+title.TextSize = 16
+title.TextColor3 = Color3.fromRGB(238, 241, 243)
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Text = "RAIL TEST  /  board at platform to drive"
+title.Parent = panel
+local status = Instance.new("TextLabel")
+status.BackgroundTransparency = 1
+status.Position = UDim2.fromOffset(8, 27)
+status.Size = UDim2.new(1, -16, 0, 24)
+status.Font = Enum.Font.RobotoMono
+status.TextSize = 14
+status.TextColor3 = Color3.fromRGB(174, 184, 193)
+status.TextXAlignment = Enum.TextXAlignment.Left
+status.TextTruncate = Enum.TextTruncate.AtEnd
+status.Text = "Awaiting server state..."
+status.Parent = panel
+
+local throttle = 0
+local brake = 1
+local reverser = 1
+local doors = "hold"
+local driving = false
+local seatConnection: RBXScriptConnection? = nil
+
+local function refreshTitle()
+	if not driving then
+		title.Text = "RAIL TEST  /  board at platform to drive"
+		return
+	end
+	local mode = if brake > 0 then "BRAKE" elseif throttle ~= 0 then "POWER" else "COAST"
+	title.Text = `RAIL TEST  /  {mode}  /  {if reverser == 1 then "FORWARD" else "REVERSE"}`
+end
+
+local function connectCharacter(character: Model)
+	if seatConnection then
+		seatConnection:Disconnect()
+		seatConnection = nil
+	end
+	driving = false
+	throttle, brake, reverser, doors = 0, 1, 1, "hold"
+	refreshTitle()
+	local humanoid = character:WaitForChild("Humanoid") :: Humanoid
+	if player.Character ~= character then
+		return
+	end
+	local function updateSeat(active: boolean, seatPart: BasePart?)
+		driving = active and seatPart ~= nil and seatPart.Name == "PrototypeDriverSeat"
+		-- Never carry a previously latched power command into a newly occupied seat.
+		throttle, brake, reverser, doors = 0, 1, 1, "hold"
+		refreshTitle()
+	end
+	seatConnection = humanoid.Seated:Connect(updateSeat)
+	updateSeat(humanoid.Sit, humanoid.SeatPart)
+end
+player.CharacterAdded:Connect(connectCharacter)
+if player.Character then
+	task.spawn(connectCharacter, player.Character)
+end
+local function makeButton(text: string, column: number, row: number, action: () -> ())
+	local button = Instance.new("TextButton")
+	button.Name = text
+	button.Text = text
+	button.Font = Enum.Font.BuilderSansMedium
+	button.TextSize = 14
+	button.TextColor3 = Color3.fromRGB(238, 241, 243)
+	button.BackgroundColor3 = Color3.fromRGB(31, 38, 46)
+	button.BorderSizePixel = 0
+	button.AutoButtonColor = true
+	button.Active = true
+	button.Selectable = true
+	button.Position = UDim2.new((column - 1) / 4, 4, 0, 55 + (row - 1) * 52)
+	button.Size = UDim2.new(0.25, -8, 0, 46)
+	button.Parent = panel
+	button.Activated:Connect(action)
+end
+local function forward()
+	reverser = 1
+	throttle = 0
+	brake = 1
+	refreshTitle()
+end
+local function reverse()
+	reverser = -1
+	throttle = 0
+	brake = 1
+	refreshTitle()
+end
+local function power()
+	throttle = reverser
+	brake = 0
+	refreshTitle()
+end
+local function coast()
+	throttle = 0
+	brake = 0
+	refreshTitle()
+end
+local function stop()
+	throttle = 0
+	brake = 1
+	refreshTitle()
+end
+makeButton("POWER [W]", 1, 1, power)
+makeButton("COAST [C]", 2, 1, coast)
+makeButton("BRAKE [S]", 3, 1, stop)
+makeButton("FORWARD [F]", 4, 1, forward)
+makeButton("REVERSE [R]", 1, 2, reverse)
+makeButton("OPEN DOORS", 2, 2, function()
+	doors = "open"
+end)
+makeButton("CLOSE DOORS", 3, 2, function()
+	doors = "close"
+end)
+makeButton("HOLD DOORS", 4, 2, function()
+	doors = "hold"
+end)
+UserInputService.InputBegan:Connect(function(input: InputObject, processed: boolean)
+	if processed then
+		return
+	end
+	if input.KeyCode == Enum.KeyCode.W then
+		power()
+	elseif input.KeyCode == Enum.KeyCode.C then
+		coast()
+	elseif input.KeyCode == Enum.KeyCode.S then
+		stop()
+	elseif input.KeyCode == Enum.KeyCode.F then
+		forward()
+	elseif input.KeyCode == Enum.KeyCode.R then
+		reverse()
+	end
+end)
+snapshot.OnClientEvent:Connect(function(data: any)
+	if type(data) ~= "table" then
+		return
+	end
+	if type(data.speedKph) ~= "number" or type(data.position) ~= "number" then
+		return
+	end
+	status.Text = string.format(
+		"%05.1f km/h  |  %.0f studs  |  doors %s  |  %s",
+		data.speedKph,
+		data.position,
+		if data.doorsOpen then "open" else "closed",
+		data.intervention or "ready"
+	)
+end)
+-- Repeat current intent to satisfy the server's dead-man timeout. This runs only while the GUI exists.
+task.spawn(function()
+	while gui.Parent do
+		if driving then
+			control:FireServer({
+				throttle = throttle,
+				brake = brake,
+				reverser = reverser,
+				doors = doors,
+			})
+		end
+		task.wait(0.2)
+	end
+end)
+]]></string>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+</roblox>

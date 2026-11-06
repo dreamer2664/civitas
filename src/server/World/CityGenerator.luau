@@ -630,6 +630,7 @@ function CityGenerator.generate(config: any): any
 		{ x = sidewalkX, z = config.station.forecourtZ, label = "station forecourt" },
 		{ x = config.station.centerX, z = config.station.entryZ, label = "station entrance" },
 		{ x = config.station.centerX, z = config.station.concourseZ, label = "concourse" },
+		{ x = config.station.centerX, z = config.station.platformCenterZ, label = "test platform" },
 	}
 
 	local extraTowerParts = 0
@@ -688,7 +689,9 @@ function CityGenerator.generate(config: any): any
 			elseif building.frontage == "recessed-entry" then 2
 			elseif building.frontage == "awning" then 1
 			else 0
-		ordinaryPartCount += 3 + facadeParts
+		local upperHeight = building.height - math.min(10, building.height / 3)
+		local windowRows = math.max(1, math.floor((upperHeight - 2) / 8))
+		ordinaryPartCount += 3 + facadeParts + 6 * windowRows
 	end
 	local estimatedParts = 1
 		+ streetPartCount
@@ -697,7 +700,7 @@ function CityGenerator.generate(config: any): any
 		+ extraTowerParts
 		+ 2
 		+ #plan.pocketSquares
-		+ 8
+		+ 43 -- station shell, ramp, platform, canopy, benches and 19 architectural details
 		+ (#plan.route - 1)
 		+ 1
 	plan.stats = {

@@ -76,6 +76,19 @@ local CityConfig = {
 		concourseZ = 925,
 		width = 176,
 		depth = 150,
+		-- Experimental, straight test platform behind the placeholder concourse. These
+		-- are not the proposed final Central station alignment in the rail network plan.
+		platformCenterZ = 1010.5,
+		platformWidth = 200,
+		platformDepth = 21,
+		platformTopY = 3.4642857,
+		railCenterZ = 1027.0714,
+		railTopY = 0.75,
+		railMinX = -650,
+		westStopX = -450,
+		railMaxX = 700,
+		rampStartZ = 961,
+		rampEndZ = 1000,
 	},
 	streaming = {
 		minRadius = 64,

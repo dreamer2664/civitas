@@ -13,6 +13,10 @@ local suite = require("./support/suite")
 -- Shared rail specs (CODE · vector), registered with tests/support/suite.
 require("./rail/spline.spec")
 require("./rail/kinematics.spec")
+require("./rail/train_simulation.spec")
+require("./rail/control_gate.spec")
+require("./rail/boarding_rules.spec")
+require("./rail/shuttle_service.spec")
 
 -- Client specs (CODE · lumen), registered with tests/harness.
 require("./client/theme.spec")
@@ -22,6 +26,7 @@ require("./client/format.spec")
 require("./client/navigation.spec")
 require("./client/bindings.spec")
 require("./client/map.spec")
+require("./client/map-labels.spec")
 require("./client/gauge.spec")
 require("./client/compass.spec")
 

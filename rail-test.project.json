@@ -1,0 +1,21 @@
+{
+  "name": "CIVITAS Rail Test",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": { "$path": "src/shared" }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "RailTestServer": { "$path": "prototypes/rail/RailTest.server.luau" }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "RailTestClient": { "$path": "prototypes/rail/RailTest.client.luau" }
+      }
+    }
+  }
+}

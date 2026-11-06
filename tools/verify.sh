@@ -37,10 +37,10 @@ rojo sourcemap default.project.json --output build/sourcemap.json
 analyse() {
   local label="$1"; shift
   step "$label"
-  local out
-  out="$(luau-lsp analyze "$@" 2>&1 || true)"
+  local out status=0
+  out="$(luau-lsp analyze "$@" 2>&1)" || status=$?
   printf '%s\n' "$out" | grep -v '^\[INFO\]\|^\[WARN\]' || true
-  if printf '%s\n' "$out" | grep -q 'TypeError\|SyntaxError\|LintWarning\|Error:'; then
+  if [ "$status" -ne 0 ] || printf '%s\n' "$out" | grep -q 'TypeError\|SyntaxError\|LintWarning\|Error:'; then
     echo "luau-lsp reported diagnostics for: $label"
     exit 1
   fi
@@ -66,6 +66,9 @@ python3 tools/check_enums.py --dump "$DUMP"
 step "check_streaming (no Workspace in client code)"
 python3 tools/check_streaming.py
 
+step "facade decoration collision policy (static)"
+python3 tools/world/check_facade_collision.py
+
 step "lune unit tests"
 lune run tests/run.luau
 
@@ -76,16 +79,49 @@ stylua --check tools/world
 analyse "luau-lsp analyze: src/server/World (strict, Roblox definitions)" \
   --definitions="$DEFS" --sourcemap=build/sourcemap.json --base-luaurc=.luaurc src/server/World
 
+analyse "luau-lsp analyze: experimental in-city railway (strict, Roblox definitions)" \
+  --definitions="$DEFS" --sourcemap=build/sourcemap.json --base-luaurc=.luaurc src/server/RailDemo
+
 step "lune generated-city acceptance tests"
 lune run tools/world/test_city.luau
 
 step "deterministic city export + plan/street-level renders"
 lune run tools/world/export_plan.luau
 python3 tools/world/render_city.py
+python3 tools/world/render_station_shuttle.py
+python3 tools/world/render_passenger_interface.py
+
+step "interface concept renders (not Studio screenshots)"
+python3 tools/world/render_interface.py
+
+step "executed geometry recipes, sampled west walk and service telemetry"
+stylua --check tools/review/*.luau
+selene tools/review/*.luau
+lune run tools/review/export_geometry.luau
+python3 tools/review/check_geometry.py
+lune run tools/review/measure_service.luau
 
 step "rojo build (place file)"
 rojo build default.project.json --output build/civitas.rbxlx
 echo "built build/civitas.rbxlx ($(stat -c %s build/civitas.rbxlx) bytes)"
+python3 tools/check_place_contents.py build/civitas.rbxlx
+
+step "isolated rail-test lint and sourcemap"
+stylua --check prototypes/rail tools/measure_train_simulation.luau
+selene prototypes/rail tools/measure_train_simulation.luau
+rojo sourcemap rail-test.project.json --output build/rail-test-sourcemap.json
+analyse "luau-lsp analyze: isolated rail-test scripts" \
+  --definitions="$DEFS" --sourcemap=build/rail-test-sourcemap.json --base-luaurc=.luaurc prototypes/rail
+
+step "prototype simulation evidence and concept renders"
+lune run tools/measure_train_simulation.luau
+python3 tools/render_train_simulation.py
+python3 tools/render_rail_test.py
+python3 tools/render_rail_controls.py
+
+step "rojo build (isolated rail-test place)"
+rojo build rail-test.project.json --output build/rail-test.rbxlx
+echo "built build/rail-test.rbxlx ($(stat -c %s build/rail-test.rbxlx) bytes)"
 
 step "evidence"
 echo "api dump sha256: $(sha256sum "$DUMP" | cut -d' ' -f1)"

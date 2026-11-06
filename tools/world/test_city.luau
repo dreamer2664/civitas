@@ -57,6 +57,7 @@ suite.test("walk acceptance route is continuous and exceeds 1500 studs", functio
 		"public square",
 		"station forecourt",
 		"concourse",
+		"test platform",
 	}
 	local labels = {}
 	for _, point in ipairs(plan.route) do
@@ -307,7 +308,9 @@ suite.test(
 				elseif building.frontage == "recessed-entry" then 2
 				elseif building.frontage == "awning" then 1
 				else 0
-			ordinaryParts += 3 + facadeParts
+			local upperHeight = building.height - math.min(10, building.height / 3)
+			local windowRows = math.max(1, math.floor((upperHeight - 2) / 8))
+			ordinaryParts += 3 + facadeParts + 6 * windowRows
 		end
 		local landmarkParts = #plan.landmarks * 3
 		for _, landmark in ipairs(plan.landmarks) do
@@ -321,7 +324,7 @@ suite.test(
 			+ landmarkParts
 			+ 2
 			+ #plan.pocketSquares
-			+ 8
+			+ 43
 			+ plan.stats.routeLinkCount
 			+ 1
 		expect.equal(
@@ -332,6 +335,43 @@ suite.test(
 		expect.ok(expectedParts < plan.stats.partBudget)
 	end
 )
+
+suite.test("experimental platform connects the concourse and matches rail datum", function()
+	local station = config.station
+	local rampRun = station.rampEndZ - station.rampStartZ
+	local rise = station.platformTopY - 0.63
+	local rearWallZ = station.concourseZ + station.depth * 0.275
+	expect.ok(station.rampStartZ < rearWallZ and station.rampEndZ > rearWallZ)
+	expect.ok(rampRun > 0 and rise / rampRun < 1 / 12, "ramp slope exceeds 1:12")
+	expect.ok(station.rampEndZ >= station.platformCenterZ - station.platformDepth / 2 - 1)
+	expect.near(station.platformTopY - station.railTopY, 2.7142857, 1e-5)
+	expect.near(
+		station.railCenterZ - (station.platformCenterZ + station.platformDepth / 2),
+		6.0714,
+		1e-5
+	)
+	expect.ok(
+		station.platformCenterZ + station.platformDepth / 2
+			< plan.ground.centerZ + plan.ground.depth / 2
+	)
+	local trainLength = 75 + 1.7857 + 71.4286
+	expect.ok(station.platformWidth > trainLength, "prototype does not fit platform")
+	expect.ok(station.railMinX >= plan.ground.centerX - plan.ground.width / 2)
+	expect.ok(station.railMaxX <= plan.ground.centerX + plan.ground.width / 2)
+	expect.ok(station.railCenterZ + 6 < plan.ground.centerZ + plan.ground.depth / 2)
+	expect.ok(station.centerX - station.railMinX > trainLength / 2)
+	expect.ok(station.railMaxX - station.centerX > trainLength / 2)
+end)
+
+suite.test("facade offsets follow Roblox Y-axis rotation", function()
+	local facade = require("../../src/server/World/FacadeMath")
+	local x0, z0 = facade.worldPoint(100, 200, 0, 3, -10)
+	expect.near(x0, 103, 1e-9)
+	expect.near(z0, 190, 1e-9)
+	local x90, z90 = facade.worldPoint(100, 200, 90, 3, -10)
+	expect.near(x90, 90, 1e-9)
+	expect.near(z90, 197, 1e-9)
+end)
 
 local passed, failed = suite.run()
 print(string.format("\nCity acceptance: %d passed, %d failed", passed, failed))

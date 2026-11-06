@@ -1,0 +1,6 @@
+# Offline geometry renders and evidence plots; verification itself does not import bpy.
+bpy==5.1.2
+numpy==2.3.5
+matplotlib==3.11.2
+Pillow==13.0.0
+mistune==3.4.0

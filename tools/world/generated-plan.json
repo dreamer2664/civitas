@@ -5539,6 +5539,11 @@
       "label": "concourse",
       "x": 120,
       "z": 925
+    },
+    {
+      "label": "test platform",
+      "x": 120,
+      "z": 1010.5
     }
   ],
   "squareStreetCuts": [
@@ -5586,17 +5591,28 @@
     "depth": 150,
     "entryZ": 858,
     "forecourtZ": 810,
+    "platformCenterZ": 1010.5,
+    "platformDepth": 21,
+    "platformTopY": 3.4642857,
+    "platformWidth": 200,
+    "railCenterZ": 1027.0714,
+    "railMaxX": 700,
+    "railMinX": -650,
+    "railTopY": 0.75,
+    "rampEndZ": 1000,
+    "rampStartZ": 961,
+    "westStopX": -450,
     "width": 176
   },
   "stats": {
     "blockCount": 50,
     "buildingCount": 302,
-    "estimatedParts": 1920,
+    "estimatedParts": 10362,
     "landmarkCount": 12,
     "partBudget": 25000,
     "pocketSquareCount": 2,
-    "routeLength": 1632.999280097293,
-    "routeLinkCount": 8,
+    "routeLength": 1718.499280097293,
+    "routeLinkCount": 9,
     "streetSegmentCount": 35,
     "superblockCount": 4
   },

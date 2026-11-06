@@ -47,7 +47,7 @@ export type MotionState = {
 }
 
 export type Controls = {
-	tractive: number, -- 0 (none) to 1 (full)
+	tractive: number, -- -1 (full reverse) to 1 (full forward)
 	serviceBrake: number, -- 0 (none) to 1 (full)
 	emergencyBrake: boolean,
 }
@@ -92,30 +92,30 @@ function Kinematics.computeAcceleration(
 	local speed = state.speedMs
 	local direction = sign(speed)
 
-	-- Tractive effort only applies when motoring (not braking).
+	-- Brake demand interlocks traction. Signed traction is along the track coordinate.
+	local brakeDemand = clamp(controls.serviceBrake, 0, 1)
 	local tractive = 0
-	if controls.tractive > 0 and not controls.emergencyBrake then
-		tractive = controls.tractive * config.maxTractiveEffortN
+	if not controls.emergencyBrake and brakeDemand == 0 then
+		tractive = clamp(controls.tractive, -1, 1) * config.maxTractiveEffortN
 	end
 
-	local brakeForce = 0
-	if controls.emergencyBrake then
-		brakeForce = config.emergencyBrakeForceN
-	else
-		brakeForce = controls.serviceBrake * config.serviceBrakeForceN
-	end
-	-- Brake only opposes motion; never accelerates backwards from a standstill.
-	brakeForce = math.min(brakeForce, config.massKg * GRAVITY) -- physical upper bound sanity
-	local brake = direction * brakeForce
-	if speed == 0 and direction == 0 then
-		brake = 0 -- holding brake handled by the service layer; dynamics stay at zero
-	end
-
-	local resist = direction * resistanceForce(config, speed)
+	local brakeForce = if controls.emergencyBrake
+		then config.emergencyBrakeForceN
+		else brakeDemand * config.serviceBrakeForceN
+	brakeForce = math.min(brakeForce, config.massKg * GRAVITY)
 	local gradeForce = config.massKg * GRAVITY * grade
+	local driveForce = tractive - gradeForce
+	local opposingForce = brakeForce + resistanceForce(config, speed)
 
-	local force = tractive - brake - resist - gradeForce
-	return force / config.massKg
+	if direction == 0 then
+		-- Static holding: brakes and rolling resistance oppose the force trying to move
+		-- the stationary train, up to their combined capacity.
+		if math.abs(driveForce) <= opposingForce then
+			return 0
+		end
+		return (driveForce - sign(driveForce) * opposingForce) / config.massKg
+	end
+	return (driveForce - direction * opposingForce) / config.massKg
 end
 
 -- Integrate one step (semi-implicit Euler), returning a new state.
@@ -127,12 +127,19 @@ function Kinematics.integrate(
 	grade: number
 ): MotionState
 	local acceleration = Kinematics.computeAcceleration(state, controls, config, grade)
+	assert(dt >= 0 and dt < math.huge, "integration timestep must be finite and non-negative")
 	local newSpeed = state.speedMs + acceleration * dt
+	local travelTime = dt
+	-- Resistance and braking must not create a spurious reversal when a tick crosses zero.
+	-- Integrate only until the stop, then reevaluate static forces on the next tick.
+	if state.speedMs ~= 0 and state.speedMs * newSpeed < 0 then
+		travelTime = math.abs(state.speedMs / acceleration)
+		newSpeed = 0
+	end
 	newSpeed = clamp(newSpeed, -config.maxSpeedMs, config.maxSpeedMs)
 
-	-- Use the average speed over the step for distance (trapezoid, better than explicit Euler).
 	local averageSpeed = (state.speedMs + newSpeed) / 2
-	local distanceMeters = averageSpeed * dt
+	local distanceMeters = averageSpeed * travelTime
 	return {
 		speedMs = newSpeed,
 		distanceStuds = state.distanceStuds + distanceMeters * STUD_PER_METER,
@@ -158,22 +165,29 @@ function Kinematics.brakingDistance(
 	return (speed * speed) / (2 * deceleration)
 end
 
--- Distance (studs) required to stop from the current state under the given brake, forward only.
+-- Distance (studs) required to stop from the current state under the given brake, in either direction.
 function Kinematics.stopDistanceStuds(
 	state: MotionState,
 	controls: Controls,
 	config: TrainConfig,
 	grade: number
 ): number
-	if state.speedMs <= 0 then
+	if state.speedMs == 0 then
 		return 0
 	end
 	local brakeForce = controls.emergencyBrake and config.emergencyBrakeForceN
-		or controls.serviceBrake * config.serviceBrakeForceN
+		or clamp(controls.serviceBrake, 0, 1) * config.serviceBrakeForceN
+	brakeForce = math.min(brakeForce, config.massKg * GRAVITY)
 	if brakeForce <= 0 then
 		return math.huge
 	end
-	local meters = Kinematics.brakingDistance(state.speedMs, brakeForce, config.massKg, grade)
+	-- Grade is defined in the positive track direction; reverse travel sees the opposite slope.
+	local meters = Kinematics.brakingDistance(
+		state.speedMs,
+		brakeForce,
+		config.massKg,
+		grade * sign(state.speedMs)
+	)
 	return meters * STUD_PER_METER
 end
 

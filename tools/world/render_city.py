@@ -146,12 +146,16 @@ def draw_plan() -> None:
         ))
         ax.text(square["centerX"], square["centerZ"], square["name"], fontsize=4.8, ha="center", va="center", color="#2e2b25", zorder=6)
     station = PLAN["station"]
-    ax.add_patch(Rectangle((station["centerX"] - station["width"] / 2, station["entryZ"]), station["width"], station["depth"] * 0.55, facecolor="#b8a789", edgecolor="#3c3630", lw=1.3, zorder=4))
+    ax.add_patch(Rectangle((station["centerX"] - (station["width"]-20) / 2, station["concourseZ"] - station["depth"]*.275), station["width"]-20, station["depth"] * .55, facecolor="#b8a789", edgecolor="#3c3630", lw=1.3, zorder=4))
+    ax.add_patch(Rectangle((station["centerX"]-station["platformWidth"]/2,station["platformCenterZ"]-station["platformDepth"]/2),station["platformWidth"],station["platformDepth"],facecolor="#d4cbb8",edgecolor="#6a6253",lw=.6,zorder=5))
+    ax.add_patch(Rectangle((station["centerX"]-10,station["rampStartZ"]),20,station["rampEndZ"]-station["rampStartZ"],facecolor="#c9c0ab",edgecolor="#6a6253",lw=.5,zorder=5))
+    for offset in (-2.56285, 2.56285):
+        ax.plot([station["railMinX"],station["railMaxX"]],[station["railCenterZ"]+offset]*2,color="#4b5353",lw=.5,zorder=4)
     ax.add_patch(Rectangle((station["centerX"] - station["width"] / 2 - 18, station["forecourtZ"] - 20), station["width"] + 36, 45, facecolor="#c9c0ab", edgecolor="none", zorder=3))
     route = PLAN["route"]
     ax.plot([p["x"] for p in route], [p["z"] for p in route], color="#c54635", lw=2.2, marker="o", markersize=2.5, zorder=7, label=f"Acceptance walk · {PLAN['stats']['routeLength']:.0f} studs")
     ax.scatter([route[0]["x"]], [route[0]["z"]], marker="*", s=85, color="#f0bf55", edgecolor="#392e22", zorder=8, label="Sidewalk spawn")
-    ax.scatter([route[-1]["x"]], [route[-1]["z"]], marker="s", s=25, color="#4e7480", edgecolor="white", zorder=8, label="Concourse")
+    ax.scatter([route[-1]["x"]], [route[-1]["z"]], marker="s", s=25, color="#4e7480", edgecolor="white", zorder=8, label="Test platform")
 
     ax.text(-665, 930, "DISTRICT A  /  HISTORIC CENTRE SLICE", fontsize=10, fontweight="bold", color="#293128")
     ax.text(-665, 890, f"{PLAN['stats']['buildingCount']} ordinary   ·   {PLAN['stats']['landmarkCount']} landmarks   ·   {PLAN['stats']['superblockCount']} superblocks   ·   {PLAN['stats']['pocketSquareCount']} pocket squares", fontsize=7.5, color="#293128")
@@ -159,7 +163,7 @@ def draw_plan() -> None:
     ax.annotate("Old Town Square", (plaza["centerX"], plaza["centerZ"]), xytext=(plaza["centerX"] + 96, plaza["centerZ"] + 32), fontsize=7, arrowprops={"arrowstyle": "-", "color": "#554d41"})
 
     ax.set_xlim(-740, 740)
-    ax.set_ylim(-700, 1015)
+    ax.set_ylim(-700, 1065)
     ax.set_aspect("equal", adjustable="box")
     ax.set_xlabel("West  ←  world X (studs)  →  East", labelpad=8)
     ax.set_ylabel("North  ←  world Z (studs)  →  South", labelpad=8)
@@ -189,7 +193,7 @@ def cuboid_faces(cx: float, cy: float, cz: float, width: float, height: float, d
     a = math.radians(rotation)
     transformed = []
     for x, y, z in corners:
-        tx, tz = x * math.cos(a) - z * math.sin(a), x * math.sin(a) + z * math.cos(a)
+        tx, tz = x * math.cos(a) + z * math.sin(a), -x * math.sin(a) + z * math.cos(a)
         transformed.append((cx + tx, cy + y, cz + tz))
     indices = [(0, 1, 2, 3), (4, 7, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)]
     return [[transformed[i] for i in face] for face in indices]
@@ -289,8 +293,8 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
     def facade_center(building, local_x, local_z):
         angle = math.radians(building["rotation"])
         return (
-            building["x"] + local_x * math.cos(angle) - local_z * math.sin(angle),
-            building["z"] + local_x * math.sin(angle) + local_z * math.cos(angle),
+            building["x"] + local_x * math.cos(angle) + local_z * math.sin(angle),
+            building["z"] - local_x * math.sin(angle) + local_z * math.cos(angle),
         )
 
     for building in PLAN["buildings"] + PLAN["landmarks"]:
@@ -325,6 +329,14 @@ def draw_street_view(filename: str, camera_x: float, camera_z: float, title: str
                 ]
             elif frontage == "awning":
                 details = [(0, ground_height * .9, facade_z - 1.1, building["width"] * .58, .8, 2, "#727c66")]
+            upper_height = building["height"] - ground_height
+            window_rows = max(1, int((upper_height - 2) // 8))
+            for side in (-1, 1):
+                for row in range(1, window_rows + 1):
+                    for column in (-.3, 0, .3):
+                        details.append((building["width"] * column, ground_height + upper_height * (row - .5) / window_rows,
+                                        side * (building["depth"] / 2 + .18),
+                                        min(4, building["width"] * .18), min(4, upper_height / window_rows * .52), .4, "#516e74"))
             for local_x, y, local_z, part_width, part_height, part_depth, color in details:
                 world_x, world_z = facade_center(building, local_x, local_z)
                 queue_box(world_x, y - part_height / 2, world_z, part_width, part_height, part_depth, color, building["rotation"], edge="#574b3a")
