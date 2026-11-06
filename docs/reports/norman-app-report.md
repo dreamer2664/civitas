@@ -62,3 +62,7 @@ Do not publish this as the finished game. Use the supplied place for the new `PL
 3. `lune run tools/review/measure_service.luau` and `python tools/review/render_service_evidence.py` regenerate service evidence after the geometry renders exist.
 4. Open `deliverables/norman/civitas-norman.rbxlx` in Roblox Studio and follow `PLAYTEST.md`. Scripts create the city and railway at runtime.
 5. The native review scene is supplied separately as `civitas-norman-review.blend`; regeneration scripts and camera recipes remain in the repository.
+
+## Publication
+
+Implementation commit: [`76b6d0c`](https://github.com/dreamer2664/civitas/commit/76b6d0c94ed7dbd6e7ed3cfe2e12438e2afaf4f7). Pushed and remote SHA verified. [Pull request #16](https://github.com/dreamer2664/civitas/pull/16) is open; main was not changed. GitHub's **Build and upload Roblox place** check succeeded for that implementation commit. This is a Rojo build check, not a Studio run. Publication evidence: `evidence/norman/PUBLISH-RECEIPT.md`. Later documentation/package metadata does not change the tested implementation.
