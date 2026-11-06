@@ -1,66 +1,47 @@
-# Civitas — District A and experimental shuttle playtest guide
+# Civitas — Norman's two-stop prototype playtest
 
-This release contains the generated historic-core slice, not the full 10,000 × 8,000-stud city. The Rojo artifact contains the project scripts/configuration; the server bootstrap generates the District A geometry when a test server starts.
+**6 November 2026. This checklist has NOT been run in Roblox Studio.**
 
-## Build the current branch
+Open `deliverables/norman/civitas-norman.rbxlx` in Studio, or build from `norman/civitas-integration` using `bash tools/verify.sh`. Older `v0.1-city` release artifacts and the root `deliverables/` files describe historical baselines, not this updated build. The isolated rail-test place is not the integrated city.
 
-Run `rojo build default.project.json --output build/civitas.rbxlx`, open that file in Studio, and start a local server/player. The old `v0.1-city` tag and its artifacts predate the experimental shuttle and the newer facade work.
+## Boot and inspect
 
-## Fetch the older tagged place artifact
+- Start one player. Record Studio version, device/emulation mode and Output errors. Expect a generated city count of 10,362 and a separate railway count of 771. These are expected recipe counts, not performance measurements.
+- Verify stock walking/jump/camera controls remain available. Test map open/close, pan and zoom; it is a **planned network**, not a live S1 map.
+- Check that service/passenger panels hide while the map is open. Walkers see the service board; seated passengers see the alight panel instead. Check portrait and landscape layouts, safe areas and gamepad focus.
 
-1. Open the [Rojo place artifact workflow](https://github.com/dreamer2664/civitas/actions/workflows/rojo-place.yml).
-2. Select the successful run for tag `v0.1-city` (the run's ref is `refs/tags/v0.1-city`). The artifact name is `civitas-world-blockout-<full commit SHA>`.
-3. Under **Artifacts**, download the ZIP and extract `civitas-world-blockout.rbxlx`.
-4. In Roblox Studio, use **File → Open from File** and select the extracted `.rbxlx`.
-5. Use **Test → Start** (one local player). Wait for the server Output message beginning `Civitas World:`; it reports the generated buildings, landmarks, route length, and actual generated part count.
+## Walk the primary route
 
-The tag build is reproducible from `default.project.json` using the workflow's checksum-pinned Rojo 7.7.1. The artifact is built on GitHub Actions; it is not a Studio-published place.
+World coordinates are studs: X east/west, Y up, Z along the streets. Follow these X/Z anchors on actual surfaces, without teleports:
 
-## City interface and planned network map
+`(136.75,-640) -> (136.75,20) -> (150,20) -> (200,75) -> (150,130) -> (136.75,130) -> (136.75,810) -> (120,858) -> (120,925) -> (120,1010.5)`.
 
-The client now starts with a Historic Core sign and a MAP button. Open/close the map with the button, keyboard **M**, or gamepad **View/Select**. The diagram is explicitly labelled as a plan; the experimental one-track shuttle is separate from its proposed network. Drag the diagram to pan and use the + / - buttons to zoom. Station labels may be suppressed to avoid overlaps; zoom for more names. Roblox's normal movement controls remain in place.
+The planned horizontal route is 1,718.5 studs, not an observed humanoid walk. Inspect sidewalk/road crossings, all diagonal joints, the fountain, station portico clearance, doorway, concourse, ramp and platform seams. Report every snag, visible overlap, unsupported step and streaming pause. Decorative station trims should not collide. Verify roof/lettering appearance in Roblox rather than assuming Blender matches it.
 
-In Studio test button and gamepad focus, touch drag and zoom, screen rotation, map open/close across respawns, font readability, label collisions, and interaction with Roblox's own touch controls. The interface has only been statically checked and illustrated with approximate concept images, not observed running in Studio. Pinch zoom, live player position, and real station status are not implemented. The experimental shuttle has not been tested in Studio.
+## Walk to West Gardens
 
-## Walk the acceptance route
+From the forecourt, use `(120,810) -> (-450,810) -> (-450,965.5) -> (-450,1000) -> (-450,1010.5)`. The route is separately sampled at 2,328 corridor points; it has not been swept by a humanoid. Check the 1:12-or-shallower ramp, path turns, ground support, canopy clearance and platform edge. Do not walk across the running rail to shortcut the route.
 
-World coordinates are in studs (`X` east/west, `Z` along the route, `Y` vertical). The generated route is **1,718.5 studs** (plan centerline, excluding elevation change). Use these waypoint anchors in order; increasing `Z` leads from the spawn side toward the station in this slice:
+## Ride the automatic service
 
-1. Sidewalk spawn: `(136.75, -640)`.
-2. Historic-grid sidewalk: `(136.75, 20)`.
-3. Square north-west walk: `(150, 20)`; cross the public square at `(200, 75)`.
-4. Leave via `(150, 130)` and rejoin the sidewalk at `(136.75, 130)`.
-5. Follow the sidewalk to the station forecourt `(136.75, 810)`.
-6. Continue through the station entrance `(120, 858)` to the placeholder concourse `(120, 925)`.
-7. Pass through the rear doorway, ascend the shallow ramp and reach the experimental platform `(120, 1010.5)`.
+1. At either platform, wait for S1. It should travel automatically when the driver seat is empty.
+2. At a stop, check the 18-second dwell countdown, platform-side door opening, closed offside leaves and enabled passenger prompt. Board as passenger, not driver.
+3. Observe departure after door closing and a 1.5-second closing interval. Test actual character carrying as the anchored train pivots. If the seat does not carry passengers reliably, stop and treat transport as broken.
+4. On arrival at the other stop, verify the HUD stop name and alight button. Use the button; verify the seat weld releases and the player lands on the **current** platform, not always at Central or in the track.
+5. Repeat in both directions with two clients. Test last free seat contention, death, reset, leaving/rejoining, streaming and rapid repeated boarding/alighting requests.
+6. Try Roblox's ordinary seat exit while moving. It is not blocked and can bypass the button; document behavior. This prototype does not claim safe physical boarding or protected exit.
 
-The coordinates are review anchors, not a teleport sequence. Walk the actual collidable surfaces. Watch the Output window for script errors and note any fall, snag, unexpected step, collision, or stream-in pause. Do not use a Studio teleport to claim the route was walked.
+The pure simulation used a small docking snap (guarded to 0.6 studs at <=0.12 m/s). Do not interpret that as measured physical stopping accuracy. Door leaves are visual/non-colliding; prompts and seat checks, not physical doors, control admission.
 
-## Experimental shuttle checklist
+## Drive and hand back
 
-The single test track is at `Z=1027.0714`, separate from the proposed network. At the platform, use **Board test shuttle** to take the driver seat. The control panel should appear only while seated; use POWER, COAST, BRAKE, FORWARD and REVERSE buttons (or W, C, S, F, R). Doors are a state/interlock only, not animated doors. With a driver seated, stopped at the platform, and doors open, a second player can use **Board as passenger** to take an available one of six prototype seats. A seated passenger also sees an **ALIGHT AT PLATFORM** button; the server accepts it only at a stopped platform with doors open, then attempts to place the passenger on the platform. Passenger seating, transport and alighting are untested in Studio. Stop at the test platform to open them; close before powering. Track ends use an experimental brake and a hard-clamp fallback, not real signalling.
+- Only board the driver seat at a stopped, aligned, doors-open platform. Occupied cab means manual control; no cab occupant means automatic service.
+- Test throttle, service brake, reverse only at rest, doors only at a stop and emergency track-end intervention. Driver inputs should time out to brake after loss of fresh commands.
+- Leave/disconnect/reset the driver at rest and in motion. Verify old commands are cleared, automatic recovery brakes rather than reversing a moving train, and passengers remain attached. Check the status board never presents a stale manual timetable as an automatic arrival prediction.
+- With two clients, attempt to drive from outside the seat and spam malformed/non-finite/control/alight requests. Verify no unauthorized position, door or occupancy changes.
 
-In Studio verify that a seated character actually follows the server-moved anchored seat, that exiting or disconnecting applies the brake, that direction changes while moving are blocked, that platform and door interlocks work, and that two clients cannot control the same train. Test passenger boarding and the alight button with two clients; also check whether passengers can exit unsafely while moving. The normal Roblox seat-exit/jump behavior is not blocked. Check prompt reach, touch/gamepad input, server Output, replication and mobile performance. **None of these runtime claims have been verified here.** If seat transport fails, the shuttle is not playable and needs redesign; do not treat it as a completed service.
+## Performance and release gates
 
-## What to inspect
+Measure actual frame time, memory, draw calls, part stream-in/out and network traffic on a representative ordinary phone and multiple clients. The 11,133 combined recipe parts are **not** a mobile performance result. Confirm script-generated models have suitable streaming behavior. Record screenshots/video and exact source commit, device and failures.
 
-- Sidewalk continuity at all crossings, radius-cut curb returns, and the five street approaches clipped at the Crooked Lane Court and Market Cut Square edges.
-- The three 8.5-stud narrow-lane alignments in each direction, six diagonal/jog cuts, variable blocks, and four irregular superblocks. Check that removed internal street runs read as courts rather than road seams.
-- The main square and two pocket squares: paving should meet surrounding walk surfaces without a visible collision lip or hole.
-- Articulated ground floors (darker street band, shopfront glazing/door cues, awnings or entry lintels) versus the deliberately simple upper-storey massing; identify repeated or unreadable frontages.
-- The final forecourt, entry opening, concourse, rear doorway, ramp and test platform. Check ramp slope, seam heights, clearance from canopy columns, and boarding-prompt reach. The plan test does not prove live traversal.
-
-Record the Studio version, device/emulation mode, route completion, observed steps/gaps, Output errors, and any screenshots with the issue report. Keep the generated-part count separate from GPU draw calls or mobile performance measurements.
-
-## Known rough edges / not yet proven
-
-- The station remains a procedural placeholder shell with an experimental platform and single test track; it is **not** integrated with Pave's separate Central station proposal. District A currently uses entry `(120, 858)` and concourse top `Y=0.63`; the separate proposal specifies a different world footprint and elevation. Coordinate, footprint, rail-datum, and square/sidewalk-height agreement remains tracked in [issue #4](https://github.com/dreamer2664/civitas/issues/4) and [station PR #6](https://github.com/dreamer2664/civitas/pull/6).
-- The route-length, geometry-clearance, and part-recipe checks are automated plan/build checks, not Roblox physics or humanoid traversal. Studio import, actual grounding/collision at seams, streaming behavior, and mobile frame time/draw calls still need measured playtest evidence.
-- The city is still blockout massing: no shop interiors, detailed building interiors, street trees/furniture, NPCs, or traffic. Buildings remain procedural; no sourced building kit is included.
-- Facade windows, door cues, lintels and awnings are now non-collidable and non-queryable; the underlying building mass remains solid. This addresses the facade portion of [WALK-005](https://github.com/dreamer2664/civitas/issues/8), but still needs Studio collision verification and a broader decorative-detail audit. Spawn landmark sightlines ([WALK-007](https://github.com/dreamer2664/civitas/issues/9)) and the live station/platform gate ([WALK-006](https://github.com/dreamer2664/civitas/issues/10)) remain open. The suggested spawn candidate is not applied; don't infer full landmark visibility from sampled rays.
-
-## Build record
-
-- Main release baseline before this guide: `ce23e4df1e76d11791ec06c0c797e49b7e95852f`.
-- District A plan: 302 ordinary buildings, 12 landmarks, 50 blocks, 4 superblocks, 2 pocket squares, 10,343 planned city-builder `BasePart`s (25,000 budget), excluding the separately generated test railway and train (about 661 more parts). This is an increase from 1,920 after adding non-colliding upper-window overlays; actual runtime count, draw calls and mobile frame time remain unmeasured.
-- CI workflow: [Rojo place artifact](https://github.com/dreamer2664/civitas/actions/workflows/rojo-place.yml). The release tag triggers its own build and artifact upload.
+The final station/EMU-1/network integration, loop, signalling, multi-train operation, wider world, progression and persistence are not supplied here. Do not publish as finished. Current assessment: `docs/reports/norman-app-report.md`.

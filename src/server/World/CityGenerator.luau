@@ -700,7 +700,7 @@ function CityGenerator.generate(config: any): any
 		+ extraTowerParts
 		+ 2
 		+ #plan.pocketSquares
-		+ 24 -- station shell, ramp, experimental platform, canopy and benches
+		+ 43 -- station shell, ramp, platform, canopy, benches and 19 architectural details
 		+ (#plan.route - 1)
 		+ 1
 	plan.stats = {

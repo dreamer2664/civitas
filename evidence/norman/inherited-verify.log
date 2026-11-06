@@ -1,0 +1,142 @@
+
+== stylua --check (formatting)
+ok
+
+== selene (lints)
+Results:
+0 errors
+0 warnings
+0 parse errors
+
+== rojo sourcemap
+Created sourcemap at build/sourcemap.json
+
+== luau-lsp analyze: src/client (strict, Roblox definitions)
+0 diagnostics
+
+== luau-lsp analyze: shared contracts (types only, no Roblox globals)
+0 diagnostics
+
+== luau-lsp analyze: src/shared/Rail (pure, standard)
+0 diagnostics
+
+== gen_network --check (map data matches docs/rail/NETWORK.md)
+gen_network: src/client/UI/Map/NetworkData.luau is current
+
+== check_enums (Roblox names vs API dump)
+check_enums: 153 references checked against Full-API-Dump.json
+check_enums: 0 problems
+
+== check_streaming (no Workspace in client code)
+check_streaming: scanned src/client
+check_streaming: 0 references to Workspace
+
+== facade decoration collision policy (static)
+facade collision policy: 8 decorative overlay call sites use the non-collidable, non-queryable helper
+
+== lune unit tests
+  ok   Spline: two points give a straight line of exactly their distance
+  ok   Spline: arc length interpolates endpoints exactly
+  ok   Spline: sample(t) covers the full spline
+  ok   Spline: tangent along a straight line is the line direction
+  ok   Spline: arc length matches independent numerical integration
+  ok   Spline: arcLengthToT then lengthTo round-trips
+  ok   Spline: sampleArcLength is monotonic in position along a line
+  ok   Spline: distanceToPoint snaps to the nearest point on a line
+  ok   Spline: degenerate all-points-identical spline is safe
+  ok   Spline: duplicate adjacent control points do not crash
+  ok   Spline: 180-degree reversal backtracks exactly
+  ok   Spline: endpoint behaviour clamps at the ends
+  ok   Spline: closed spline wraps and endpoints coincide
+  ok   Spline: addPoint grows the control point list and rebuilds
+  ok   Spline: empty spline has zero length and safe samples
+  ok   Kinematics: constant acceleration from rest matches v = a * t
+  ok   Kinematics: speed is clamped at maxSpeedMs
+  ok   Kinematics: braking distance formula matches d = v^2 / (2 * dec)
+  ok   Kinematics: uphill grade shortens braking distance, downhill lengthens it
+  ok   Kinematics: emergency brake stops in less distance than service brake
+  ok   Kinematics: coasting slows the train down (resistance)
+  ok   Kinematics: stopped state has zero speed and the given position
+  ok   Kinematics: default config is a self-consistent EMU target
+  ok   Kinematics: reverse traction accelerates in the negative direction
+  ok   Kinematics: braking never reverses a slow train or moves it back
+  ok   Kinematics: service and emergency brakes interlock traction and hold on a slope
+  ok   Kinematics: reverse braking distance accounts for direction of grade
+  ok   Kinematics: low-speed coasting comes to rest without oscillation
+  ok   DriverControl: rejects malformed and adversarial commands
+  ok   TrainSimulation: stale driver commands brake the train to rest
+  ok   TrainSimulation: doors require platform and standstill, then interlock traction
+  ok   TrainSimulation: reverser cannot switch while moving
+  ok   TrainSimulation: repeated throttle cannot leave either track end
+  ok   TrainSimulation: rejects out-of-order command time
+  ok   TrainSimulation: stop margin prevents creeping toward the end and allows retreat
+  ok   ControlGate: only the seated character has authority
+  ok   ControlGate: independent per-player buckets enforce burst and refill
+  ok   ControlGate: rejects invalid time and rollback without granting tokens
+  ok   BoardingRules: requires platform, open doors, a free seat and a stopped train
+  ok   BoardingRules: alighting requires a seated passenger and a safe stop
+
+40 passed, 0 failed (rail)
+125 passed, 0 failed, 125 total
+
+== stylua --check (world tools)
+
+== luau-lsp analyze: src/server/World (strict, Roblox definitions)
+0 diagnostics
+
+== luau-lsp analyze: experimental in-city railway (strict, Roblox definitions)
+0 diagnostics
+
+== lune generated-city acceptance tests
+  ok   city slice has the required varied massing and landmarks
+  ok   walk acceptance route is continuous and exceeds 1500 studs
+  ok   route centerline stays clear of all building and landmark collision footprints
+  ok   diagonal and jog lanes stay clear of building collision footprints
+  ok   superblocks merge cells and junction squares clear conflicting street runs
+  ok   route follows the long sidewalk and every grid crossing has a radius cut
+  ok   walk surfaces are parameterized and the estimated slice stays within phone budget
+  ok   experimental platform connects the concourse and matches rail datum
+  ok   facade offsets follow Roblox Y-axis rotation
+
+City acceptance: 9 passed, 0 failed
+
+== deterministic city export + plan/street-level renders
+Exported tools/world/generated-plan.json: 302 buildings, 12 landmarks, 1718.5 route studs, 10343 estimated parts
+Rendered: tools/world/renders/district-a-plan.png tools/world/renders/passenger-interface-concept.png tools/world/renders/rail-controls-concept.png tools/world/renders/rail-test-concept.png tools/world/renders/station-shuttle-concept.png tools/world/renders/street-view-grid.png tools/world/renders/street-view-station.png tools/world/renders/train-simulation-evidence.png tools/world/renders/ui-map-desktop-concept.png tools/world/renders/ui-map-phone-concept.png
+Rendered station/shuttle concept (not a Studio screenshot).
+Rendered passenger interface concept (not a Studio screenshot).
+
+== interface concept renders (not Studio screenshots)
+Wrote interface concepts (not Roblox screenshots).
+
+== rojo build (place file)
+Building project 'CIVITAS'
+Built project to civitas.rbxlx
+built build/civitas.rbxlx (226331 bytes)
+place contents: 10 essential instances found; runtime not verified
+
+== isolated rail-test lint and sourcemap
+Results:
+0 errors
+0 warnings
+0 parse errors
+Created sourcemap at build/rail-test-sourcemap.json
+
+== luau-lsp analyze: isolated rail-test scripts
+0 diagnostics
+
+== prototype simulation evidence and concept renders
+Prototype evidence: 400 samples, final speed 0 m/s
+Rendered tools/world/renders/train-simulation-evidence.png
+Rendered isolated rail-test concept (not a Studio screenshot).
+Rendered rail controls concept (not a Studio screenshot).
+
+== rojo build (isolated rail-test place)
+Building project 'CIVITAS Rail Test'
+Built project to rail-test.rbxlx
+built build/rail-test.rbxlx (55324 bytes)
+
+== evidence
+api dump sha256: 334a77ca58d9562851fabfa61086a61c170adc01d01097af5fb7b9dc3ddb4648
+luau-lsp 1.70.1 | selene 0.32.0 | lune 0.11.1 | rojo 7.7.1 | stylua 2.6.0
+verify: all checks passed

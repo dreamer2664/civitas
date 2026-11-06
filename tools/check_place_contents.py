@@ -5,6 +5,9 @@ import sys
 import xml.etree.ElementTree as ET
 
 EXPECTED = {
+    'ReplicatedStorage/Shared/Rail/ShuttleService': 'ModuleScript',
+    'ServerScriptService/Services/RailDemo/RailGeometry': 'ModuleScript',
+    'StarterPlayer/StarterPlayerScripts/Client/ServiceInterface': 'LocalScript',
     'ReplicatedStorage/Shared/Rail/DriverControl': 'ModuleScript',
     'ReplicatedStorage/Shared/Rail/ControlGate': 'ModuleScript',
     'ReplicatedStorage/Shared/Rail/BoardingRules': 'ModuleScript',

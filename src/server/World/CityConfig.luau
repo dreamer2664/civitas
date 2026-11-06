@@ -85,6 +85,7 @@ local CityConfig = {
 		railCenterZ = 1027.0714,
 		railTopY = 0.75,
 		railMinX = -650,
+		westStopX = -450,
 		railMaxX = 700,
 		rampStartZ = 961,
 		rampEndZ = 1000,

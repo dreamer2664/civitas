@@ -70,6 +70,7 @@ local function setMapOpen(open: boolean)
 		return
 	end
 	mapPanel.Visible = open
+	playerGui:SetAttribute("CivitasMapOpen", open)
 	if open then
 		view = MapView.new(mapHolder, NetworkSource.fromTable("planned network", NetworkData))
 	else

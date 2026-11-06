@@ -5601,12 +5601,13 @@
     "railTopY": 0.75,
     "rampEndZ": 1000,
     "rampStartZ": 961,
+    "westStopX": -450,
     "width": 176
   },
   "stats": {
     "blockCount": 50,
     "buildingCount": 302,
-    "estimatedParts": 10343,
+    "estimatedParts": 10362,
     "landmarkCount": 12,
     "partBudget": 25000,
     "pocketSquareCount": 2,

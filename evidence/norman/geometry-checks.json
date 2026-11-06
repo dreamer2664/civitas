@@ -1,0 +1,11 @@
+{
+  "cityParts": 10362,
+  "railParts": 771,
+  "combinedParts": 11133,
+  "westCorridorSamplePoints": 2328,
+  "unsupportedSamples": 0,
+  "blockedSamples": 0,
+  "westRampSlope": 0.08215324571489896,
+  "doorLeaves": 16,
+  "scope": "Lune data model / sampled boxes only; no Roblox runtime verification"
+}

@@ -324,7 +324,7 @@ suite.test(
 			+ landmarkParts
 			+ 2
 			+ #plan.pocketSquares
-			+ 24
+			+ 43
 			+ plan.stats.routeLinkCount
 			+ 1
 		expect.equal(

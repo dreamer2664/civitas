@@ -1,0 +1,54 @@
+/home/user/civitas/tools/review/render_geometry.py:37: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+/home/user/civitas/tools/review/render_geometry.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:36.073  render           | Saved: '/home/user/civitas/evidence/norman/renders/01-central-arrival.png'
+Info: Saved as "civitas-norman-review.blend"
+RENDERED 01-central-arrival
+Info: Saved as "civitas-norman-review.blend"
+Saved native review scene and 6 camera recipes
+/home/user/civitas/tools/review/render_geometry.py:37: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+/home/user/civitas/tools/review/render_geometry.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:23.132  render           | Saved: '/home/user/civitas/evidence/norman/renders/02-garden-platform.png'
+Info: Saved as "civitas-norman-review.blend"
+RENDERED 02-garden-platform
+Info: Saved as "civitas-norman-review.blend"
+Saved native review scene and 6 camera recipes
+/home/user/civitas/tools/review/render_geometry.py:37: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+/home/user/civitas/tools/review/render_geometry.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:49.661  render           | Saved: '/home/user/civitas/evidence/norman/renders/03-historic-core.png'
+Info: Saved as "civitas-norman-review.blend"
+RENDERED 03-historic-core
+Info: Saved as "civitas-norman-review.blend"
+Saved native review scene and 6 camera recipes
+/home/user/civitas/tools/review/render_geometry.py:37: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+/home/user/civitas/tools/review/render_geometry.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:36.796  render           | Saved: '/home/user/civitas/evidence/norman/renders/04-network-context.png'
+Info: Saved as "civitas-norman-review.blend"
+RENDERED 04-network-context
+Info: Saved as "civitas-norman-review.blend"
+Saved native review scene and 6 camera recipes
+/home/user/civitas/tools/review/render_geometry.py:37: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+/home/user/civitas/tools/review/render_geometry.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:43.740  render           | Saved: '/home/user/civitas/evidence/norman/renders/05-shuttle-detail.png'
+Info: Saved as "civitas-norman-review.blend"
+RENDERED 05-shuttle-detail
+Info: Saved as "civitas-norman-review.blend"
+Saved native review scene and 6 camera recipes
+/home/user/civitas/tools/review/render_geometry.py:37: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+/home/user/civitas/tools/review/render_geometry.py:58: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:31.435  render           | Saved: '/home/user/civitas/evidence/norman/renders/06-station-front.png'
+Info: Saved as "civitas-norman-review.blend"
+RENDERED 06-station-front
+Info: Saved as "civitas-norman-review.blend"
+Saved native review scene and 6 camera recipes

@@ -14,8 +14,8 @@ gui.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 gui.Parent = player:WaitForChild("PlayerGui")
 local panel = Instance.new("Frame")
 panel.Name = "PassengerPanel"
-panel.AnchorPoint = Vector2.new(1, 1)
-panel.Position = UDim2.new(1, -16, 1, -16)
+panel.AnchorPoint = Vector2.new(0, 0)
+panel.Position = UDim2.fromOffset(16, 78)
 panel.Size = UDim2.fromOffset(260, 110)
 panel.BackgroundColor3 = Color3.fromRGB(22, 28, 34)
 panel.BorderSizePixel = 0
@@ -50,22 +50,30 @@ button.Activated:Connect(function()
 	alight:FireServer()
 end)
 
+local seatedPassenger = false
+local playerGui = player:WaitForChild("PlayerGui")
+local function refreshVisibility()
+	panel.Visible = seatedPassenger and playerGui:GetAttribute("CivitasMapOpen") ~= true
+end
+playerGui:GetAttributeChangedSignal("CivitasMapOpen"):Connect(refreshVisibility)
 local connection: RBXScriptConnection? = nil
 local function watchCharacter(character: Model)
 	if connection then
 		connection:Disconnect()
 		connection = nil
 	end
-	panel.Visible = false
+	seatedPassenger = false
+	refreshVisibility()
 	local humanoid = character:WaitForChild("Humanoid") :: Humanoid
 	if player.Character ~= character then
 		return
 	end
 	local function updateSeat(active: boolean, seatPart: BasePart?)
-		panel.Visible = active
+		seatedPassenger = active
 			and seatPart ~= nil
 			and string.sub(seatPart.Name, 1, 14) == "PassengerSeat_"
 			and seatPart:FindFirstAncestor("ExperimentalShuttle") ~= nil
+		refreshVisibility()
 	end
 	connection = humanoid.Seated:Connect(updateSeat)
 	updateSeat(humanoid.Sit, humanoid.SeatPart)
@@ -80,8 +88,12 @@ snapshot.OnClientEvent:Connect(function(data: any)
 	end
 	local safe = data.atPlatform == true and data.doorsOpen == true and data.speedKph <= 0.036
 	label.Text = if safe
-		then "EXPERIMENTAL SHUTTLE\nDoors open - alighting available"
-		else "EXPERIMENTAL SHUTTLE\nWaiting for safe alighting"
+		then "S1 · "
+			.. (if type(data.stopName) == "string" then data.stopName else "Platform")
+			.. "\nDoors open - alighting available"
+		else "S1 · Next: " .. (if type(data.targetName) == "string"
+			then data.targetName
+			else "Waiting for server") .. "\nStay seated while moving"
 	button.Active = safe
 	button.Selectable = safe
 	button.TextTransparency = if safe then 0 else 0.5

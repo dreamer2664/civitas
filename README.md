@@ -1,5 +1,7 @@
 # PROJECT CIVITAS
 
+> **Current continuation — Norman, 6 Nov 2026:** experimental two-stop automatic shuttle, second halt, live service UI and executed-geometry Blender review. [App report](docs/reports/norman-app-report.md) · [Playtest](PLAYTEST.md) · [Updated handoff](deliverables/norman/README.md). Not Studio-tested or release-ready. Older Pericles reports and root deliverables are historical.
+
 A large-scale passenger railway simulator with a walkable, semi-open-world city, built for Roblox.
 
 - **Game**: **CIVITAS**.

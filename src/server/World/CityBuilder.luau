@@ -41,7 +41,33 @@ local function axisSize(axis: string, length: number, width: number, height: num
 	return Vector3.new(width, height, length)
 end
 
-local function buildStreet(parent: Instance, street: any, config: any, intersections: { any })
+local function buildStreet(
+	parent: Instance,
+	street: any,
+	config: any,
+	intersections: { any },
+	layer: number
+)
+	-- Separate overlapping road/sidewalk recipe surfaces by tiny deterministic layers.
+	-- This avoids coplanar z-fighting without materially changing the walk datum.
+	local function streetPart(
+		parentModel: Instance,
+		name: string,
+		size: Vector3,
+		position: Vector3,
+		material: Enum.Material,
+		color: Color3
+	): Part
+		return createPart(
+			parentModel,
+			name,
+			size,
+			position + Vector3.new(0, layer, 0),
+			material,
+			color
+		)
+	end
+
 	if street.axis == "segment" then
 		local dx = street.finishX - street.startX
 		local dz = street.finishZ - street.startZ
@@ -51,11 +77,11 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 		local midpointZ = (street.startZ + street.finishZ) / 2
 		local perpendicularX = dz / length
 		local perpendicularZ = -dx / length
-		local road = createPart(
+		local road = streetPart(
 			parent,
 			street.name .. "_Carriageway",
 			Vector3.new(street.width, 0.3, length),
-			Vector3.new(midpointX, 0.15, midpointZ),
+			Vector3.new(midpointX, 0.17, midpointZ),
 			Enum.Material.Asphalt,
 			Color3.fromRGB(72, 75, 77)
 		)
@@ -66,13 +92,13 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 			local curbOffset = street.width / 2
 				+ config.streets.sidewalkWidth
 				+ config.streets.curbWidth / 2
-			local sidewalk = createPart(
+			local sidewalk = streetPart(
 				parent,
 				street.name .. "_Sidewalk_" .. tostring(side),
 				Vector3.new(config.streets.sidewalkWidth, 0.4, length),
 				Vector3.new(
 					midpointX + side * perpendicularX * sidewalkOffset,
-					0.2,
+					0.22,
 					midpointZ + side * perpendicularZ * sidewalkOffset
 				),
 				Enum.Material.Concrete,
@@ -80,7 +106,7 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 			)
 			sidewalk.Orientation = Vector3.new(0, yaw, 0)
 			sidewalk:SetAttribute("Walkable", true)
-			local curb = createPart(
+			local curb = streetPart(
 				parent,
 				street.name .. "_Curb_" .. tostring(side),
 				Vector3.new(config.streets.curbWidth, config.streets.curbHeight, length),
@@ -103,12 +129,12 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 	local roadColor = if street.kind == "arterial"
 		then Color3.fromRGB(62, 66, 69)
 		else Color3.fromRGB(72, 75, 77)
-	local road = createPart(
+	local road = streetPart(
 		parent,
 		"Carriageway_" .. street.axis .. "_" .. tostring(street.center),
 		axisSize(street.axis, length, street.width, 0.3),
 		if street.axis == "x"
-			then Vector3.new(center, 0.15, street.center)
+			then Vector3.new(center, 0.16, street.center)
 			else Vector3.new(street.center, 0.15, center),
 		Enum.Material.Asphalt,
 		roadColor
@@ -122,12 +148,12 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 			+ config.streets.curbWidth / 2
 		local sidewalkCenter = street.center + side * offset
 		local curbCenter = street.center + side * curbOffset
-		local sidewalk = createPart(
+		local sidewalk = streetPart(
 			parent,
 			"Sidewalk_" .. street.axis .. "_" .. tostring(street.center) .. "_" .. tostring(side),
 			axisSize(street.axis, length, config.streets.sidewalkWidth, 0.4),
 			if street.axis == "x"
-				then Vector3.new(center, 0.2, sidewalkCenter)
+				then Vector3.new(center, 0.21, sidewalkCenter)
 				else Vector3.new(sidewalkCenter, 0.2, center),
 			Enum.Material.Concrete,
 			Color3.fromRGB(184, 179, 165)
@@ -162,7 +188,7 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 				piece += 1
 				local curbLength = gapStart - cursor
 				local curbCenterline = (gapStart + cursor) / 2
-				local curb = createPart(
+				local curb = streetPart(
 					parent,
 					"CurbReturn_"
 						.. street.axis
@@ -192,7 +218,7 @@ local function buildStreet(parent: Instance, street: any, config: any, intersect
 			piece += 1
 			local curbLength = street.finish - cursor
 			local curbCenterline = (street.finish + cursor) / 2
-			local curb = createPart(
+			local curb = streetPart(
 				parent,
 				"CurbReturn_"
 					.. street.axis
@@ -402,7 +428,8 @@ local function buildWalkLink(parent: Instance, first: any, last: any, index: num
 	local dx = last.x - first.x
 	local dz = last.z - first.z
 	local length = math.sqrt(dx * dx + dz * dz)
-	local midpoint = Vector3.new((first.x + last.x) / 2, 0.43, (first.z + last.z) / 2)
+	local midpoint =
+		Vector3.new((first.x + last.x) / 2, 0.43 + index * 0.003, (first.z + last.z) / 2)
 	local slab = createPart(
 		parent,
 		"RouteLink_" .. tostring(index) .. "_" .. first.label,
@@ -441,7 +468,7 @@ local function buildStation(parent: Instance, station: any, palette: any)
 	-- Open a central doorway to the experimental platform. The existing building shell is
 	-- provisional and will still need reconciliation with the final station asset.
 	local openingWidth = 24
-	local wallWidth = (station.width - 20 - openingWidth) / 2
+	local wallWidth = (station.width - 22 - openingWidth) / 2
 	local rearZ = station.concourseZ + station.depth * 0.275
 	for side = -1, 1, 2 do
 		createPart(
@@ -461,6 +488,96 @@ local function buildStation(parent: Instance, station: any, palette: any)
 		Enum.Material.Brick,
 		palette.civic
 	)
+	-- A small, original architectural pass on the provisional shell. Keep openings clear;
+	-- all trims are visual/non-colliding and do not change the accepted walk surfaces.
+	local function detail(
+		name: string,
+		size: Vector3,
+		position: Vector3,
+		color: Color3,
+		material: Enum.Material
+	): Part
+		local p = createPart(model, name, size, position, material, color)
+		p.CanCollide = false
+		p.CanQuery = false
+		return p
+	end
+	local stone = Color3.fromRGB(206, 196, 174)
+	local metal = Color3.fromRGB(68, 83, 86)
+	detail(
+		"ConcourseRoof",
+		Vector3.new(station.width - 4, 1.2, station.depth * 0.55 + 8),
+		Vector3.new(x, 20.2, station.concourseZ),
+		metal,
+		Enum.Material.Metal
+	)
+	detail(
+		"StationRearCornice",
+		Vector3.new(station.width - 4, 1.1, 2),
+		Vector3.new(x, 18.9, rearZ + 4.8),
+		stone,
+		Enum.Material.Marble
+	)
+	for _, offset in ipairs({ -66, -44, 44, 66 }) do
+		detail(
+			"StationRearWindow",
+			Vector3.new(9, 8, 0.25),
+			Vector3.new(x + offset, 10.4, rearZ + 4.15),
+			Color3.fromRGB(42, 68, 72),
+			Enum.Material.Glass
+		)
+		detail(
+			"StationWindowSill",
+			Vector3.new(10.5, 0.7, 1),
+			Vector3.new(x + offset, 6.1, rearZ + 4.5),
+			stone,
+			Enum.Material.Marble
+		)
+	end
+	for _, offset in ipairs({ -75, -55, -33, 33, 55, 75 }) do
+		detail(
+			"StationRearPilaster",
+			Vector3.new(2, 17.5, 0.7),
+			Vector3.new(x + offset, 8.75, rearZ + 4.4),
+			stone,
+			Enum.Material.Marble
+		)
+	end
+	detail(
+		"PorticoEntablature",
+		Vector3.new(136, 3, 7),
+		Vector3.new(x, 21.5, entry - 18),
+		stone,
+		Enum.Material.Marble
+	)
+	detail(
+		"PorticoRoof",
+		Vector3.new(140, 0.8, 47),
+		Vector3.new(x, 23.4, entry + 2),
+		metal,
+		Enum.Material.Metal
+	)
+	local board = detail(
+		"CentralStationName",
+		Vector3.new(54, 4, 0.5),
+		Vector3.new(x, 21.3, entry - 21.6),
+		Color3.fromRGB(28, 51, 55),
+		Enum.Material.Metal
+	)
+	board:SetAttribute("SignText", "CIVITAS CENTRAL")
+	local sign = Instance.new("SurfaceGui")
+	sign.Face = Enum.NormalId.Front
+	sign.PixelsPerStud = 24
+	sign.SizingMode = Enum.SurfaceGuiSizingMode.PixelsPerStud
+	sign.Parent = board
+	local lettering = Instance.new("TextLabel")
+	lettering.Size = UDim2.fromScale(1, 1)
+	lettering.BackgroundTransparency = 1
+	lettering.TextColor3 = Color3.fromRGB(239, 232, 210)
+	lettering.Font = Enum.Font.BuilderSansBold
+	lettering.TextScaled = true
+	lettering.Text = "CIVITAS CENTRAL"
+	lettering.Parent = sign
 	local startTop = 0.63
 	local rise = station.platformTopY - startTop
 	local run = station.rampEndZ - station.rampStartZ
@@ -588,8 +705,8 @@ function CityBuilder.build(plan: any, config: any, rootParent: Instance): Model
 	terrain:SetAttribute("GroundCoverage", "continuous slice base; no void beneath roads or plots")
 
 	local streetsModel = makeModel(district, "Streets")
-	for _, street in ipairs(plan.streets) do
-		buildStreet(streetsModel, street, config, plan.intersections)
+	for index, street in ipairs(plan.streets) do
+		buildStreet(streetsModel, street, config, plan.intersections, index * 0.0005)
 	end
 	local buildingsModel = makeModel(district, "BuildingMassing")
 	local palette = {
@@ -634,12 +751,13 @@ function CityBuilder.build(plan: any, config: any, rootParent: Instance): Model
 	local fountain = createPart(
 		publicRealm,
 		"SquareFountainBasin",
-		Vector3.new(18, 1.1, 18),
+		Vector3.new(1.1, 18, 18),
 		Vector3.new(plan.plaza.centerX, 0.95, plan.plaza.centerZ + 28),
 		Enum.Material.Slate,
 		Color3.fromRGB(112, 126, 128)
 	)
 	fountain.Shape = Enum.PartType.Cylinder
+	fountain.Orientation = Vector3.new(0, 0, 90)
 	fountain:SetAttribute("CollisionNote", "Low decorative basin; route passes west of basin")
 	local station = buildStation(makeModel(district, "Stations"), plan.station, palette)
 	local walkways = makeModel(publicRealm, "AcceptanceWalkRoute")

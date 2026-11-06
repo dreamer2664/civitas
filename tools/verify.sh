@@ -37,10 +37,10 @@ rojo sourcemap default.project.json --output build/sourcemap.json
 analyse() {
   local label="$1"; shift
   step "$label"
-  local out
-  out="$(luau-lsp analyze "$@" 2>&1 || true)"
+  local out status=0
+  out="$(luau-lsp analyze "$@" 2>&1)" || status=$?
   printf '%s\n' "$out" | grep -v '^\[INFO\]\|^\[WARN\]' || true
-  if printf '%s\n' "$out" | grep -q 'TypeError\|SyntaxError\|LintWarning\|Error:'; then
+  if [ "$status" -ne 0 ] || printf '%s\n' "$out" | grep -q 'TypeError\|SyntaxError\|LintWarning\|Error:'; then
     echo "luau-lsp reported diagnostics for: $label"
     exit 1
   fi
@@ -93,6 +93,13 @@ python3 tools/world/render_passenger_interface.py
 
 step "interface concept renders (not Studio screenshots)"
 python3 tools/world/render_interface.py
+
+step "executed geometry recipes, sampled west walk and service telemetry"
+stylua --check tools/review/*.luau
+selene tools/review/*.luau
+lune run tools/review/export_geometry.luau
+python3 tools/review/check_geometry.py
+lune run tools/review/measure_service.luau
 
 step "rojo build (place file)"
 rojo build default.project.json --output build/civitas.rbxlx

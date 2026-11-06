@@ -1,0 +1,5103 @@
+{
+  "arrivals": [
+    {
+      "seconds": 0.03333333333333333,
+      "station": "Civitas Central"
+    },
+    {
+      "seconds": 57.4,
+      "station": "West Gardens"
+    },
+    {
+      "seconds": 114.76666666666667,
+      "station": "Civitas Central"
+    },
+    {
+      "seconds": 172.13333333333333,
+      "station": "West Gardens"
+    },
+    {
+      "seconds": 229.5,
+      "station": "Civitas Central"
+    },
+    {
+      "seconds": 286.8666666666667,
+      "station": "West Gardens"
+    },
+    {
+      "seconds": 344.23333333333335,
+      "station": "Civitas Central"
+    },
+    {
+      "seconds": 401.6,
+      "station": "West Gardens"
+    },
+    {
+      "seconds": 458.96666666666664,
+      "station": "Civitas Central"
+    },
+    {
+      "seconds": 516.3333333333334,
+      "station": "West Gardens"
+    },
+    {
+      "seconds": 573.7,
+      "station": "Civitas Central"
+    },
+    {
+      "seconds": 631.0666666666667,
+      "station": "West Gardens"
+    },
+    {
+      "seconds": 688.4333333333333,
+      "station": "Civitas Central"
+    }
+  ],
+  "arrivalsIncludingStartup": 13,
+  "doorViolations": 0,
+  "maxDockingCorrectionStuds": 0.026239642097351634,
+  "peakSpeedKph": 21.554964842926527,
+  "provenance": "720 simulated seconds at 30 Hz through ShuttleService + TrainSimulation + Kinematics, not Roblox runtime",
+  "samples": [
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 1,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 2,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 3,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 4,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 5,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 6,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 7,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 8,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 9,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 10,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 11,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 12,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 13,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 14,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 15,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 16,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 17,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 18,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 19,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.7601875120066,
+      "seconds": 20,
+      "speedKph": 1.035979237280672
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 767.6314671080758,
+      "seconds": 21,
+      "speedKph": 3.2553046698546826
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 763.3019058385584,
+      "seconds": 22,
+      "speedKph": 5.472647126717529
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 756.7741472009051,
+      "seconds": 23,
+      "speedKph": 7.686644353540505
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 748.0521823512263,
+      "seconds": 24,
+      "speedKph": 9.895942277903156
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 737.1413403472208,
+      "seconds": 25,
+      "speedKph": 12.099198307226324
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 724.0482751474743,
+      "seconds": 26,
+      "speedKph": 14.29508456721509
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 708.7809494343526,
+      "seconds": 27,
+      "speedKph": 16.482291064355206
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 691.3486153437278,
+      "seconds": 28,
+      "speedKph": 18.659528756676792
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 671.8802390911186,
+      "seconds": 29,
+      "speedKph": 20.37467023756582
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 651.2619971774303,
+      "seconds": 30,
+      "speedKph": 21.084519479082378
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 630.1832686158697,
+      "seconds": 31,
+      "speedKph": 21.367466601486964
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 608.9209979467574,
+      "seconds": 32,
+      "speedKph": 21.480239162832927
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 587.5855753606315,
+      "seconds": 33,
+      "speedKph": 21.525184564648946
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 566.220998362945,
+      "seconds": 34,
+      "speedKph": 21.543097245079846
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 544.8448021099689,
+      "seconds": 35,
+      "speedKph": 21.550236177866672
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 523.4639751159865,
+      "seconds": 36,
+      "speedKph": 21.553081326594942
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 502.08130258836024,
+      "seconds": 37,
+      "speedKph": 21.554215230477176
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 480.6978945429922,
+      "seconds": 38,
+      "speedKph": 21.554667135685122
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 459.31419336495395,
+      "seconds": 39,
+      "speedKph": 21.554847237622678
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 437.93037536206083,
+      "seconds": 40,
+      "speedKph": 21.554919015299472
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 416.54651079988747,
+      "seconds": 41,
+      "speedKph": 21.554947621514568
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 395.1626276820179,
+      "seconds": 42,
+      "speedKph": 21.554959022211424
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 373.7787371689768,
+      "seconds": 43,
+      "speedKph": 21.554963565835514
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 352.42574635831915,
+      "seconds": 44,
+      "speedKph": 21.340779830559356
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 331.8355218515401,
+      "seconds": 45,
+      "speedKph": 20.090027602325424
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 312.6228263893971,
+      "seconds": 46,
+      "speedKph": 18.63401701751764
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 294.8705616073141,
+      "seconds": 47,
+      "speedKph": 17.15294703312331
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 278.59146040073443,
+      "seconds": 48,
+      "speedKph": 15.664731024870186
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 263.79177872462964,
+      "seconds": 49,
+      "speedKph": 14.170327875610926
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 250.47814466708746,
+      "seconds": 50,
+      "speedKph": 12.668607068215211
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 238.65868239957075,
+      "seconds": 51,
+      "speedKph": 11.157702592522465
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 228.34379492057087,
+      "seconds": 52,
+      "speedKph": 9.63481107849619
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 219.54739973633215,
+      "seconds": 53,
+      "speedKph": 8.095479864625664
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 212.28926535938535,
+      "seconds": 54,
+      "speedKph": 6.531951197404648
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 206.60013940691474,
+      "seconds": 55,
+      "speedKph": 4.9285944794164855
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 202.53613523636736,
+      "seconds": 56,
+      "speedKph": 3.2441750823726236
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.25743281859914,
+      "seconds": 57,
+      "speedKph": 1.1904088166272706
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 58,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 59,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 60,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 61,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 62,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 63,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 64,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 65,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 66,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 67,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 68,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 69,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 70,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 71,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 72,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 73,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 74,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 75,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 76,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.01101190182766,
+      "seconds": 77,
+      "speedKph": 0.22199987324077547
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 201.33236250278938,
+      "seconds": 78,
+      "speedKph": 2.4417100143779082
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 204.85518420702624,
+      "seconds": 79,
+      "speedKph": 4.659938063773509
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 210.5773294533656,
+      "seconds": 80,
+      "speedKph": 6.875319602323427
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 218.4953002676304,
+      "seconds": 81,
+      "speedKph": 9.086497172027762
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 228.6042568167987,
+      "seconds": 82,
+      "speedKph": 11.292123591504788
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 240.8980292273138,
+      "seconds": 83,
+      "speedKph": 13.490865218188762
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 255.3691326063416,
+      "seconds": 84,
+      "speedKph": 15.681405140544788
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 272.0087851885297,
+      "seconds": 85,
+      "speedKph": 17.86244628425283
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 290.7896496726513,
+      "seconds": 86,
+      "speedKph": 19.90128258281604
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 311.10078278372987,
+      "seconds": 87,
+      "speedKph": 20.8958051192472
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 332.05709339216787,
+      "seconds": 88,
+      "speedKph": 21.2922484619661
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 353.27057204856635,
+      "seconds": 89,
+      "speedKph": 21.450260505876194
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 374.58654852499114,
+      "seconds": 90,
+      "speedKph": 21.513236692220605
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 395.94337539408025,
+      "seconds": 91,
+      "speedKph": 21.53833551772721
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 417.3164829026678,
+      "seconds": 92,
+      "speedKph": 21.54833843793059
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 438.69607890874016,
+      "seconds": 93,
+      "speedKph": 21.552325002108308
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 460.07826083911465,
+      "seconds": 94,
+      "speedKph": 21.553913805425893
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 481.46147336220986,
+      "seconds": 95,
+      "speedKph": 21.554547005979398
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 502.8450966169574,
+      "seconds": 96,
+      "speedKph": 21.554799361228035
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 524.2288835643667,
+      "seconds": 97,
+      "speedKph": 21.554899934681107
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 545.6127357497137,
+      "seconds": 98,
+      "speedKph": 21.554940017140968
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 566.9966139349335,
+      "seconds": 99,
+      "speedKph": 21.554955991570786
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 588.3805024821211,
+      "seconds": 100,
+      "speedKph": 21.554962358006556
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 609.764391057264,
+      "seconds": 101,
+      "speedKph": 21.55471682481421
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 630.7633884890985,
+      "seconds": 102,
+      "speedKph": 20.59785849915974
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 650.5007253305243,
+      "seconds": 103,
+      "speedKph": 19.17338202224754
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 668.7909490467729,
+      "seconds": 104,
+      "speedKph": 17.697063710810735
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 685.610993494817,
+      "seconds": 105,
+      "speedKph": 16.21109899625763
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 700.9538421402979,
+      "seconds": 106,
+      "speedKph": 14.719048384819347
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 714.8132095581673,
+      "seconds": 107,
+      "speedKph": 13.220189757819075
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 727.1816021978608,
+      "seconds": 108,
+      "speedKph": 11.712918609070693
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 738.0495619831835,
+      "seconds": 109,
+      "speedKph": 10.19482988581444
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 747.4046534103795,
+      "seconds": 110,
+      "speedKph": 8.662198794941377
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 755.2296413033512,
+      "seconds": 111,
+      "speedKph": 7.108780187770932
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 761.4987276608832,
+      "seconds": 112,
+      "speedKph": 5.52274824506935
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 766.1680815970674,
+      "seconds": 113,
+      "speedKph": 3.876516837635244
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.1400978908804,
+      "seconds": 114,
+      "speedKph": 2.064336877215248
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 115,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 116,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 117,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 118,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 119,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 120,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 121,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 122,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 123,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 124,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 125,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 126,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 127,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 128,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 129,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 130,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 131,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 132,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 133,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 134,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.4078191763315,
+      "seconds": 135,
+      "speedKph": 1.627916064874872
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 766.6920258159464,
+      "seconds": 136,
+      "speedKph": 3.8468462357101627
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 761.7759643271248,
+      "seconds": 137,
+      "speedKph": 6.063429551126962
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 754.6626383516199,
+      "seconds": 138,
+      "speedKph": 8.27630561346477
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 745.3563969082758,
+      "seconds": 139,
+      "speedKph": 10.484123091285461
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 733.8629237653436,
+      "seconds": 140,
+      "speedKph": 12.685543003083822
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 720.1892235854929,
+      "seconds": 141,
+      "speedKph": 14.87924193706195
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 704.3436049150757,
+      "seconds": 142,
+      "speedKph": 17.063915190676337
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 686.3356630715235,
+      "seconds": 143,
+      "speedKph": 19.238100401218592
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 666.454790622747,
+      "seconds": 144,
+      "speedKph": 20.631401250002746
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 645.670001022977,
+      "seconds": 145,
+      "speedKph": 21.18685730890779
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 624.5248873998014,
+      "seconds": 146,
+      "speedKph": 21.408255485557245
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 603.2361582089362,
+      "seconds": 147,
+      "speedKph": 21.496495646761264
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 581.8901906315575,
+      "seconds": 148,
+      "speedKph": 21.531663492059817
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 560.521411004746,
+      "seconds": 149,
+      "speedKph": 21.54567936436543
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 539.1435398335988,
+      "seconds": 150,
+      "speedKph": 21.55126525557392
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 517.7620453182049,
+      "seconds": 151,
+      "speedKph": 21.553491454683236
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 496.37910675701056,
+      "seconds": 152,
+      "speedKph": 21.554378682631004
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 474.99559268682555,
+      "seconds": 153,
+      "speedKph": 21.55473227777663
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 453.61184925374266,
+      "seconds": 154,
+      "speedKph": 21.55487319929808
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 432.2280144105591,
+      "seconds": 155,
+      "speedKph": 21.55492936204385
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 410.8441431368706,
+      "seconds": 156,
+      "speedKph": 21.55495174509736
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 389.4602573441994,
+      "seconds": 157,
+      "speedKph": 21.554960665620623
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 368.076365765145,
+      "seconds": 158,
+      "speedKph": 21.554964220798432
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 346.8154794219915,
+      "seconds": 159,
+      "speedKph": 21.061538147962125
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 326.57111309314627,
+      "seconds": 160,
+      "speedKph": 19.707699718847255
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 307.74527729424494,
+      "seconds": 161,
+      "speedKph": 18.240083714199805
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 290.38515274292826,
+      "seconds": 162,
+      "speedKph": 16.756672226843747
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 274.4999705235639,
+      "seconds": 163,
+      "speedKph": 15.266860141048065
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 260.0958708195911,
+      "seconds": 164,
+      "speedKph": 13.770648699379072
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 247.1798101076032,
+      "seconds": 165,
+      "speedKph": 12.266692349765684
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 235.76043338630322,
+      "seconds": 166,
+      "speedKph": 10.752916146398807
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 225.84892985909988,
+      "seconds": 167,
+      "speedKph": 9.226170955762743
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 217.46047907745805,
+      "seconds": 168,
+      "speedKph": 7.681348251350349
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 210.61708413898285,
+      "seconds": 169,
+      "speedKph": 6.10925768252919
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 205.35411962275737,
+      "seconds": 170,
+      "speedKph": 4.490349866539826
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 201.74066818661515,
+      "seconds": 171,
+      "speedKph": 2.76641386901452
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.02661653726568,
+      "seconds": 172,
+      "speedKph": 0.613242078696715
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 173,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 174,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 175,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 176,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 177,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 178,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 179,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 180,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 181,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 182,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 183,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 184,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 185,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 186,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 187,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 188,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 189,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 190,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 191,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.14804808877977,
+      "seconds": 192,
+      "speedKph": 0.8139902396585611
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 202.0565911093171,
+      "seconds": 193,
+      "speedKph": 3.0334388303176416
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 206.16616494639592,
+      "seconds": 194,
+      "speedKph": 5.251040992371931
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 212.47426127858856,
+      "seconds": 195,
+      "speedKph": 7.46543383647411
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 220.97702333059647,
+      "seconds": 196,
+      "speedKph": 9.675262322769964
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 231.6692553028944,
+      "seconds": 197,
+      "speedKph": 11.879182563853739
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 244.54443505082568,
+      "seconds": 198,
+      "speedKph": 14.075865069910488
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 259.5947299475548,
+      "seconds": 199,
+      "speedKph": 16.26399791952966
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 276.8110158492109,
+      "seconds": 200,
+      "speedKph": 18.442289840330574
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 296.10402776875964,
+      "seconds": 201,
+      "speedKph": 20.260960985600125
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 316.648502411518,
+      "seconds": 202,
+      "speedKph": 21.039191227313005
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 337.69782698919187,
+      "seconds": 203,
+      "speedKph": 21.34939982434037
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 358.9483782508293,
+      "seconds": 204,
+      "speedKph": 21.473038575650182
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 380.2791300721197,
+      "seconds": 205,
+      "speedKph": 21.52231480597772
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 401.64184556774507,
+      "seconds": 206,
+      "speedKph": 21.54195352709593
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 423.0172999361828,
+      "seconds": 207,
+      "speedKph": 21.549780360389878
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 444.3978312596396,
+      "seconds": 208,
+      "speedKph": 21.55289966531179
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 465.78038595090675,
+      "seconds": 209,
+      "speedKph": 21.554142831315747
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 487.1637470338595,
+      "seconds": 210,
+      "speedKph": 21.554638281780214
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 508.5474294955345,
+      "seconds": 211,
+      "speedKph": 21.554835738211118
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 529.9312400392238,
+      "seconds": 212,
+      "speedKph": 21.554914432333604
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 551.3151016286124,
+      "seconds": 213,
+      "speedKph": 21.554945795023208
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 572.6989835617111,
+      "seconds": 214,
+      "speedKph": 21.554958294283097
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 594.0828736025751,
+      "seconds": 215,
+      "speedKph": 21.554963275727573
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 615.4528686507266,
+      "seconds": 216,
+      "speedKph": 21.424183138221014
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 636.164408681419,
+      "seconds": 217,
+      "speedKph": 20.231145955876393
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 655.5212468453025,
+      "seconds": 218,
+      "speedKph": 18.781437438538198
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 673.4203912030578,
+      "seconds": 219,
+      "speedKph": 17.30143463209492
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 689.8471030819119,
+      "seconds": 220,
+      "speedKph": 15.813820208732086
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 704.7950064286474,
+      "seconds": 221,
+      "speedKph": 14.320072781657553
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 718.2575807229828,
+      "seconds": 222,
+      "speedKph": 12.819155734649192
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 730.2268832528382,
+      "seconds": 223,
+      "speedKph": 11.309276534218478
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 740.6927832978135,
+      "seconds": 224,
+      "speedKph": 9.787748457440317
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 749.6417942420153,
+      "seconds": 225,
+      "speedKph": 8.25033524497324
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 757.0548941769567,
+      "seconds": 226,
+      "speedKph": 6.689737447749748
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 762.9028262184494,
+      "seconds": 227,
+      "speedKph": 5.091513160029479
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 767.1333369172274,
+      "seconds": 228,
+      "speedKph": 3.4189685151562275
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.6105272176915,
+      "seconds": 229,
+      "speedKph": 1.4696847784267324
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 230,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 231,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 232,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 233,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 234,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 235,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 236,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 237,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 238,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 239,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 240,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 241,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 242,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 243,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 244,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 245,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 246,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 247,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 248,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 770,
+      "seconds": 249,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 768.8988624599275,
+      "seconds": 250,
+      "speedKph": 2.2197831391336513
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 765.5961135639693,
+      "seconds": 251,
+      "speedKph": 4.4382208824768545
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 760.0937654886058,
+      "seconds": 252,
+      "speedKph": 6.653948298711529
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 752.3951814973517,
+      "seconds": 253,
+      "speedKph": 8.86560708379668
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 742.5050677157348,
+      "seconds": 254,
+      "speedKph": 11.071848880877726
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 730.4294616369203,
+      "seconds": 255,
+      "speedKph": 13.271338548574903
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 716.175717417528,
+      "seconds": 256,
+      "speedKph": 15.462757360929887
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 699.7524880394855,
+      "seconds": 257,
+      "speedKph": 17.644806122894558
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 681.1768896428414,
+      "seconds": 258,
+      "speedKph": 19.74198043601458
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 660.9691064225332,
+      "seconds": 259,
+      "speedKph": 20.832296045853866
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 640.0539942896644,
+      "seconds": 260,
+      "speedKph": 21.266934283915862
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 618.8569363478019,
+      "seconds": 261,
+      "speedKph": 21.44017128646054
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 597.5475044087572,
+      "seconds": 262,
+      "speedKph": 21.50921565932804
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 576.1932858321355,
+      "seconds": 263,
+      "speedKph": 21.536732965348488
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 554.8212178362701,
+      "seconds": 264,
+      "speedKph": 21.547699755943203
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 533.44203611768,
+      "seconds": 265,
+      "speedKph": 21.552070461992695
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 512.0600192972411,
+      "seconds": 266,
+      "speedKph": 21.553812361169985
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 490.67687257694416,
+      "seconds": 267,
+      "speedKph": 21.55450657646292
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 469.2932755471921,
+      "seconds": 268,
+      "speedKph": 21.554783248481368
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 447.9094990514711,
+      "seconds": 269,
+      "speedKph": 21.554893513120458
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 426.5256510315313,
+      "seconds": 270,
+      "speedKph": 21.554937457897577
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 405.1417745063895,
+      "seconds": 271,
+      "speedKph": 21.554954971612084
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 383.75788662080856,
+      "seconds": 272,
+      "speedKph": 21.554961951513075
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 362.3739942076476,
+      "seconds": 273,
+      "speedKph": 21.554964733276922
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 341.2866439192322,
+      "seconds": 274,
+      "speedKph": 20.730280018890497
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 321.40865999419566,
+      "seconds": 275,
+      "speedKph": 19.31976762603151
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 302.972064853047,
+      "seconds": 276,
+      "speedKph": 17.8452841801833
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 286.0046353701125,
+      "seconds": 277,
+      "speedKph": 16.359970209972293
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 270.5137966185471,
+      "seconds": 278,
+      "speedKph": 14.868539084125084
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 256.50576982623454,
+      "seconds": 279,
+      "speedKph": 13.370422402361278
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 243.98789280207524,
+      "seconds": 280,
+      "speedKph": 11.864084927804265
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 232.96938981877977,
+      "seconds": 281,
+      "speedKph": 10.347217517507929
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 223.46233537912852,
+      "seconds": 282,
+      "speedKph": 8.81626558901346
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 215.48336224295548,
+      "seconds": 283,
+      "speedKph": 7.265325687799121
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 209.05713610371984,
+      "seconds": 284,
+      "speedKph": 5.683384489329774
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 204.22488250897564,
+      "seconds": 285,
+      "speedKph": 4.045450921476567
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 201.07462980962458,
+      "seconds": 286,
+      "speedKph": 2.263446758365858
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 287,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 288,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 289,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 290,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 291,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 292,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 293,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 294,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 295,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 296,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 297,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 298,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 299,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 300,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 301,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 302,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 303,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 304,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 305,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 306,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.44169154033807,
+      "seconds": 307,
+      "speedKph": 1.4059465351998706
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 202.93734492155164,
+      "seconds": 308,
+      "speedKph": 3.6250363198487725
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 207.63349248817607,
+      "seconds": 309,
+      "speedKph": 5.8419156595676816
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 214.52726559470415,
+      "seconds": 310,
+      "speedKph": 8.055223432638991
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 223.61444933553807,
+      "seconds": 311,
+      "speedKph": 10.263607252324835
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 234.88949284663522,
+      "seconds": 312,
+      "speedKph": 12.465726756052135
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 248.34552284072134,
+      "seconds": 313,
+      "speedKph": 14.660256832324201
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 263.9743603061265,
+      "seconds": 314,
+      "speedKph": 16.84589076900457
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 281.76654028340937,
+      "seconds": 315,
+      "speedKph": 19.021343307311646
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 301.50279693770347,
+      "seconds": 316,
+      "speedKph": 20.542421396131235
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 322.2298635903851,
+      "seconds": 317,
+      "speedKph": 21.151388824551177
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 343.3519693967791,
+      "seconds": 318,
+      "speedKph": 21.394118868619305
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 364.63152860122176,
+      "seconds": 319,
+      "speedKph": 21.49086148664772
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 385.9738415052165,
+      "seconds": 320,
+      "speedKph": 21.52941803248246
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 407.34116458971437,
+      "seconds": 321,
+      "speedKph": 21.544784456647182
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 428.71845526983344,
+      "seconds": 322,
+      "speedKph": 21.550908599148208
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 450.09971843652426,
+      "seconds": 323,
+      "speedKph": 21.553349313027972
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 471.4825647961545,
+      "seconds": 324,
+      "speedKph": 21.554322033599217
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 492.86604212039856,
+      "seconds": 325,
+      "speedKph": 21.554709700916746
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 514.2497709087841,
+      "seconds": 326,
+      "speedKph": 21.554864201535004
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 535.6335999154823,
+      "seconds": 327,
+      "speedKph": 21.554925776082893
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 557.0174688631027,
+      "seconds": 328,
+      "speedKph": 21.5549503159515
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 578.4013537287451,
+      "seconds": 329,
+      "speedKph": 21.554960096050042
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 599.7852449383425,
+      "seconds": 330,
+      "speedKph": 21.55496399380225
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 621.089439637886,
+      "seconds": 331,
+      "speedKph": 21.174115009676537
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 641.4665983883045,
+      "seconds": 332,
+      "speedKph": 19.851910337050388
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 660.4378560893455,
+      "seconds": 333,
+      "speedKph": 18.387928268385767
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 677.9451048193413,
+      "seconds": 334,
+      "speedKph": 16.905326380914634
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 693.9780561187714,
+      "seconds": 335,
+      "speedKph": 15.416113452417182
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 708.5305552328531,
+      "seconds": 336,
+      "speedKph": 13.920590813505505
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 721.5957754260486,
+      "seconds": 337,
+      "speedKph": 12.417489050293904
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 733.1652735103069,
+      "seconds": 338,
+      "speedKph": 10.904814109090012
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 743.2281658913107,
+      "seconds": 339,
+      "speedKph": 9.379552853211536
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 751.7697667594599,
+      "seconds": 340,
+      "speedKph": 7.836857221796291
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 758.7689557735109,
+      "seconds": 341,
+      "speedKph": 6.268113591014536
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 764.192216248488,
+      "seconds": 342,
+      "speedKph": 4.655387420162639
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 767.9758629495028,
+      "seconds": 343,
+      "speedKph": 2.947859021169825
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.9041347590135,
+      "seconds": 344,
+      "speedKph": 0.7888924070762698
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 345,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 346,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 347,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 348,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 349,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 350,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 351,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 352,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 353,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 354,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 355,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 356,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 357,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 358,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 359,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 360,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 361,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 362,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 363,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.9216933446947,
+      "seconds": 364,
+      "speedKph": 0.5919964507614118
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 768.2333392472254,
+      "seconds": 365,
+      "speedKph": 2.8115545227747356
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 764.3437779308612,
+      "seconds": 366,
+      "speedKph": 5.029402758366499
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 758.255382479667,
+      "seconds": 367,
+      "speedKph": 7.244177666622531
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 749.971875193793,
+      "seconds": 368,
+      "speedKph": 9.454523273298474
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 739.498318487745,
+      "seconds": 369,
+      "speedKph": 11.659094428627043
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 726.8411025335535,
+      "seconds": 370,
+      "speedKph": 13.856560058994496
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 712.0079297127934,
+      "seconds": 371,
+      "speedKph": 16.045606345912685
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 695.0077959575384,
+      "seconds": 372,
+      "speedKph": 18.224939816355487
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 675.899888822398,
+      "seconds": 373,
+      "speedKph": 20.13629948929402
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 655.4362874803932,
+      "seconds": 374,
+      "speedKph": 20.989495923969862
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 634.4191998948626,
+      "seconds": 375,
+      "speedKph": 21.329592263988648
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 613.181497260664,
+      "seconds": 376,
+      "speedKph": 21.46514416384502
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 591.8558662672403,
+      "seconds": 377,
+      "speedKph": 21.519168522394008
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 570.4951916453334,
+      "seconds": 378,
+      "speedKph": 21.54069960173575
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 549.1205506486843,
+      "seconds": 379,
+      "speedKph": 21.549280620740678
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 527.7403434863209,
+      "seconds": 380,
+      "speedKph": 21.552700499288584
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 506.3579179860352,
+      "seconds": 381,
+      "speedKph": 21.554063455824522
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 484.97460839076183,
+      "seconds": 382,
+      "speedKph": 21.55460664753385
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 463.5909464489454,
+      "seconds": 383,
+      "speedKph": 21.55482313072449
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 442.2071440832237,
+      "seconds": 384,
+      "speedKph": 21.554909407756412
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 420.8232857530755,
+      "seconds": 385,
+      "speedKph": 21.55494379253244
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 399.43940511891196,
+      "seconds": 386,
+      "speedKph": 21.554957496212115
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 378.05551559572496,
+      "seconds": 387,
+      "speedKph": 21.554962957665037
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 356.676005624794,
+      "seconds": 388,
+      "speedKph": 21.491213081657733
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 335.84957828272707,
+      "seconds": 389,
+      "speedKph": 20.370547911831736
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 316.3492945607623,
+      "seconds": 390,
+      "speedKph": 18.928642440851192
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 298.30338360487457,
+      "seconds": 391,
+      "speedKph": 17.449855334015197
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 281.72912104224963,
+      "seconds": 392,
+      "speedKph": 15.962849275730827
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 266.6330605222763,
+      "seconds": 393,
+      "speedKph": 14.469746511102107
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 253.02162484382131,
+      "seconds": 394,
+      "speedKph": 12.969615475530436
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 240.90258244969587,
+      "seconds": 395,
+      "speedKph": 11.460735187188648
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 230.28580303944048,
+      "seconds": 396,
+      "speedKph": 9.940529295195558
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 221.1843631014837,
+      "seconds": 397,
+      "speedKph": 8.40496389641922
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 213.6165815786814,
+      "seconds": 398,
+      "speedKph": 6.847161555533609
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 207.61033638401196,
+      "seconds": 399,
+      "speedKph": 5.253747316083329
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 203.21443652227046,
+      "seconds": 400,
+      "speedKph": 3.591884425021778
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.5474182395649,
+      "seconds": 401,
+      "speedKph": 1.7095800365670157
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 402,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 403,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 404,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 405,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 406,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 407,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 408,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 409,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 410,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 411,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 412,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 413,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 414,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 415,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 416,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 417,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 418,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 419,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 420,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 421,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.89192980998052,
+      "seconds": 422,
+      "speedKph": 1.9978428072294625
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 203.97458577183914,
+      "seconds": 423,
+      "speedKph": 4.216476592437828
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 209.2571030368011,
+      "seconds": 424,
+      "speedKph": 6.432536300576035
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 216.73625313430009,
+      "seconds": 425,
+      "speedKph": 8.644662814775282
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 226.40746376129485,
+      "seconds": 426,
+      "speedKph": 10.851506635404824
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 238.264829952115,
+      "seconds": 427,
+      "speedKph": 13.051731154283653
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 252.30112846481452,
+      "seconds": 428,
+      "speedKph": 15.244015862197601
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 268.5078353097831,
+      "seconds": 429,
+      "speedKph": 17.427059473539014
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 286.873125431795,
+      "seconds": 430,
+      "speedKph": 19.56733726954804
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 306.96760422423154,
+      "seconds": 431,
+      "speedKph": 20.762668748834688
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 327.8375486906824,
+      "seconds": 432,
+      "speedKph": 21.239181082494465
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 349.01660373526903,
+      "seconds": 433,
+      "speedKph": 21.429109914020533
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 370.3188605267454,
+      "seconds": 434,
+      "speedKph": 21.50480716844006
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 391.6702194803578,
+      "seconds": 435,
+      "speedKph": 21.534975993095355
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 413.0411477972175,
+      "seconds": 436,
+      "speedKph": 21.54699953116194
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 434.4198753079457,
+      "seconds": 437,
+      "speedKph": 21.551791394596112
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 455.8017111085839,
+      "seconds": 438,
+      "speedKph": 21.55370114182146
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 477.1847856853733,
+      "seconds": 439,
+      "speedKph": 21.554462251187587
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 498.5683539631083,
+      "seconds": 440,
+      "speedKph": 21.554765583121984
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 519.9521190000241,
+      "seconds": 441,
+      "speedKph": 21.55488647278281
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 541.3359624531813,
+      "seconds": 442,
+      "speedKph": 21.554934652047322
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 562.7198371582816,
+      "seconds": 443,
+      "speedKph": 21.554953853370883
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 584.1037243185051,
+      "seconds": 444,
+      "speedKph": 21.554961505850173
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 605.4876164425829,
+      "seconds": 445,
+      "speedKph": 21.554964555662803
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 626.6503736767332,
+      "seconds": 446,
+      "speedKph": 20.858800329701946
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 646.6674533881902,
+      "seconds": 447,
+      "speedKph": 19.465714777003697
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 665.2502211072473,
+      "seconds": 448,
+      "speedKph": 17.993417253483305
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 682.3649697111249,
+      "seconds": 449,
+      "speedKph": 16.508782641236746
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 698.0037374924273,
+      "seconds": 450,
+      "speedKph": 15.01796351022838
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 712.1603508191783,
+      "seconds": 451,
+      "speedKph": 13.52057343188939
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 724.8276207347448,
+      "seconds": 452,
+      "speedKph": 12.015146917078166
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 735.9965474880386,
+      "seconds": 453,
+      "speedKph": 10.499466096352775
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 745.6554012107227,
+      "seconds": 454,
+      "speedKph": 8.970136250166503
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 753.788118920515,
+      "seconds": 455,
+      "speedKph": 7.421570586653704
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 760.3710904165281,
+      "seconds": 456,
+      "speedKph": 5.8434932669579185
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 765.3654549025199,
+      "seconds": 457,
+      "speedKph": 4.213177203055639
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 768.691229089194,
+      "seconds": 458,
+      "speedKph": 2.4560040562309107
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 459,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 460,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 461,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 462,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 463,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 464,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 465,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 466,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 467,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 468,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 469,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 470,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 471,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 472,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 473,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 474,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 475,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 476,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 477,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 478,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.6867765275666,
+      "seconds": 479,
+      "speedKph": 1.183968564614668
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 767.4112782822789,
+      "seconds": 480,
+      "speedKph": 3.4032042950796466
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 762.9350733300977,
+      "seconds": 481,
+      "speedKph": 5.620366045130582
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 756.2608952501072,
+      "seconds": 482,
+      "speedKph": 7.834092002352581
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 747.3928247315986,
+      "seconds": 483,
+      "speedKph": 10.043028757613847
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 736.3362795989946,
+      "seconds": 484,
+      "speedKph": 12.24583459955606
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 723.0980015971163,
+      "seconds": 485,
+      "speedKph": 14.441182748479523
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 707.6860400051016,
+      "seconds": 486,
+      "speedKph": 16.62776451320702
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 690.1097321632595,
+      "seconds": 487,
+      "speedKph": 18.804292355189638
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 670.5303687685017,
+      "seconds": 488,
+      "speedKph": 20.444870383681515
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 649.8665858996577,
+      "seconds": 489,
+      "speedKph": 21.11250307934298
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 628.7697047195238,
+      "seconds": 490,
+      "speedKph": 21.378620129934667
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 607.5001990819316,
+      "seconds": 491,
+      "speedKph": 21.484684434405697
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 586.1618930078163,
+      "seconds": 492,
+      "speedKph": 21.526956203849075
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 564.7961668161823,
+      "seconds": 493,
+      "speedKph": 21.543803316548626
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 543.4195125626618,
+      "seconds": 494,
+      "speedKph": 21.55051757560918
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 522.0385030372499,
+      "seconds": 495,
+      "speedKph": 21.553193474711236
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 500.6557577636577,
+      "seconds": 496,
+      "speedKph": 21.554259925908184
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 479.2723207261668,
+      "seconds": 497,
+      "speedKph": 21.554684948566884
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 457.88860799363135,
+      "seconds": 498,
+      "speedKph": 21.554854336753912
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 436.5047853858185,
+      "seconds": 499,
+      "speedKph": 21.554921844581294
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 415.1209189884043,
+      "seconds": 500,
+      "speedKph": 21.554948749094162
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 393.73703513911937,
+      "seconds": 501,
+      "speedKph": 21.554959471596042
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 372.3531443345806,
+      "seconds": 502,
+      "speedKph": 21.55496374493288
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 351.01638117231295,
+      "seconds": 503,
+      "speedKph": 21.277754016065426
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 330.50995092254857,
+      "seconds": 504,
+      "speedKph": 19.995166555362367
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 311.3936709349533,
+      "seconds": 505,
+      "speedKph": 18.53563445377413
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 293.739382040064,
+      "seconds": 506,
+      "speedKph": 17.053919566767693
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 277.5587210189355,
+      "seconds": 507,
+      "speedKph": 15.565304486591774
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 262.8578901794193,
+      "seconds": 508,
+      "speedKph": 14.070457667134493
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 249.64359430382507,
+      "seconds": 509,
+      "speedKph": 12.568190814318017
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 237.92408263549845,
+      "seconds": 510,
+      "speedKph": 11.056587621930294
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 227.70994626339763,
+      "seconds": 511,
+      "speedKph": 9.532763217396973
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 219.01540220239542,
+      "seconds": 512,
+      "speedKph": 7.992112245729538
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 211.8607428036588,
+      "seconds": 513,
+      "speedKph": 6.426549256152808
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 206.27777792575662,
+      "seconds": 514,
+      "speedKph": 4.819574495805098
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 202.3254618112273,
+      "seconds": 515,
+      "speedKph": 3.1264629928989014
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.18475616666447,
+      "seconds": 516,
+      "speedKph": 1.0108319026690311
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 517,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 518,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 519,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 520,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 521,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 522,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 523,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 524,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 525,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 526,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 527,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 528,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 529,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 530,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 531,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 532,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 533,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 534,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 535,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.03058859499623,
+      "seconds": 536,
+      "speedKph": 0.3699992394457125
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 201.49874358667395,
+      "seconds": 537,
+      "speedKph": 2.589653113425148
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 205.1682686466952,
+      "seconds": 538,
+      "speedKph": 4.8077337848821635
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 211.0369259863752,
+      "seconds": 539,
+      "speedKph": 7.022877194818789
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 219.10112787176902,
+      "seconds": 540,
+      "speedKph": 9.233726467692692
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 229.35594539701106,
+      "seconds": 541,
+      "speedKph": 11.438935223905515
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 241.795120518242,
+      "seconds": 542,
+      "speedKph": 13.637170837847602
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 256.4110812858186,
+      "seconds": 543,
+      "speedKph": 15.827117624869073
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 273.19496019630054,
+      "seconds": 544,
+      "speedKph": 18.007479941175628
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 292.1091492577779,
+      "seconds": 545,
+      "speedKph": 19.99963134690782
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 312.4840869677711,
+      "seconds": 546,
+      "speedKph": 20.93501291384926
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 333.4658316346546,
+      "seconds": 547,
+      "speedKph": 21.307876203754777
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 354.6894476214869,
+      "seconds": 548,
+      "speedKph": 21.456489074775423
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 376.0094643579856,
+      "seconds": 549,
+      "speedKph": 21.515719068758308
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 397.3679014506658,
+      "seconds": 550,
+      "speedKph": 21.539324849590912
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 418.74165069985787,
+      "seconds": 551,
+      "speedKph": 21.548732726625033
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 440.1215024652371,
+      "seconds": 552,
+      "speedKph": 21.55248214178344
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 461.50378632579674,
+      "seconds": 553,
+      "speedKph": 21.553976431769705
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 482.8870394720756,
+      "seconds": 554,
+      "speedKph": 21.554571965034366
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 504.27067891675466,
+      "seconds": 555,
+      "speedKph": 21.554809308389473
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 525.6544723164859,
+      "seconds": 556,
+      "speedKph": 21.554903899014544
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 547.038327073336,
+      "seconds": 557,
+      "speedKph": 21.554941597083083
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 568.4222062834003,
+      "seconds": 558,
+      "speedKph": 21.554956621239583
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 589.8060952390287,
+      "seconds": 559,
+      "speedKph": 21.554962608954224
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 611.1894554657905,
+      "seconds": 560,
+      "speedKph": 21.53769042707846
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 632.1227080575608,
+      "seconds": 561,
+      "speedKph": 20.507805271246223
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 651.765572851164,
+      "seconds": 562,
+      "speedKph": 19.075588446745503
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 669.9581207853105,
+      "seconds": 563,
+      "speedKph": 17.598205357169007
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 686.6798731604415,
+      "seconds": 564,
+      "speedKph": 16.111818816257927
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 701.9240274129058,
+      "seconds": 565,
+      "speedKph": 14.619350483588464
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 715.6842473498598,
+      "seconds": 566,
+      "speedKph": 13.11998838798234
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 727.9529317722629,
+      "seconds": 567,
+      "speedKph": 11.612081714912831
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 738.7204613427238,
+      "seconds": 568,
+      "speedKph": 10.093158689835041
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 747.9741502731273,
+      "seconds": 569,
+      "speedKph": 8.559374866087383
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 755.6963423662604,
+      "seconds": 570,
+      "speedKph": 7.0042421291318275
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 761.8604381997079,
+      "seconds": 571,
+      "speedKph": 5.415346390585523
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 766.4207188215004,
+      "seconds": 572,
+      "speedKph": 3.7631551835671244
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.2720961243455,
+      "seconds": 573,
+      "speedKph": 1.926715990379566
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 574,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 575,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 576,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 577,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 578,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 579,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 580,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 581,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 582,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 583,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 584,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 585,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 586,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 587,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 588,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 589,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 590,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 591,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 592,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 593,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.295259420333,
+      "seconds": 594,
+      "speedKph": 1.775890386230221
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 766.4327151637812,
+      "seconds": 595,
+      "speedKph": 3.9947065564326945
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 761.3700610004445,
+      "seconds": 596,
+      "speedKph": 6.2110849625614435
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 754.1103905289526,
+      "seconds": 597,
+      "speedKph": 8.42366570817541
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 744.6581421181139,
+      "seconds": 598,
+      "speedKph": 10.63109818362366
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 733.0190880621776,
+      "seconds": 599,
+      "speedKph": 12.832044346012472
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 719.2003205130579,
+      "seconds": 600,
+      "speedKph": 15.025181934131004
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 703.2102342621505,
+      "seconds": 601,
+      "speedKph": 17.209207602087197
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 685.0587109388913,
+      "seconds": 602,
+      "speedKph": 19.375876695595846
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 665.0884494784991,
+      "seconds": 603,
+      "speedKph": 20.686333976493287
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 644.2680242034168,
+      "seconds": 604,
+      "speedKph": 21.208753882171703
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 623.1087066755128,
+      "seconds": 605,
+      "speedKph": 21.416982720052626
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 601.8143164035528,
+      "seconds": 606,
+      "speedKph": 21.499973885566416
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 580.4660926209856,
+      "seconds": 607,
+      "speedKph": 21.533049721367004
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 559.0964138012811,
+      "seconds": 608,
+      "speedKph": 21.546231833396902
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 537.7181842654807,
+      "seconds": 609,
+      "speedKph": 21.551485436491962
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 516.3365469275697,
+      "seconds": 610,
+      "speedKph": 21.55357920546011
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 494.9535514459829,
+      "seconds": 611,
+      "speedKph": 21.554413654760953
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 473.5700146907885,
+      "seconds": 612,
+      "speedKph": 21.55474621554125
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 452.1862622168405,
+      "seconds": 613,
+      "speedKph": 21.554878754043244
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 430.8024237705181,
+      "seconds": 614,
+      "speedKph": 21.554931575827332
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 409.4185510608376,
+      "seconds": 615,
+      "speedKph": 21.554952627376764
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 388.03466469586743,
+      "seconds": 616,
+      "speedKph": 21.55496101724351
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 366.6507728887295,
+      "seconds": 617,
+      "speedKph": 21.55496436093392
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 345.4251243879203,
+      "seconds": 618,
+      "speedKph": 20.982432377376398
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 325.27088618275224,
+      "seconds": 619,
+      "speedKph": 19.611122437449573
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 306.5421839342582,
+      "seconds": 620,
+      "speedKph": 18.141453143696562
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 289.2801854251528,
+      "seconds": 621,
+      "speedKph": 16.65753615401518
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 273.4935490114734,
+      "seconds": 622,
+      "speedKph": 15.167322850897206
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 259.1884204997649,
+      "seconds": 623,
+      "speedKph": 13.670644668613441
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 246.3718469764835,
+      "seconds": 624,
+      "speedKph": 12.166107280697878
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 235.0526125132679,
+      "seconds": 625,
+      "speedKph": 10.65157986225694
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 225.24211772425247,
+      "seconds": 626,
+      "speedKph": 9.12381800965132
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 216.95588608544043,
+      "seconds": 627,
+      "speedKph": 7.577528857700097
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 210.21654211935726,
+      "seconds": 628,
+      "speedKph": 6.0031077275029086
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 205.06079234607782,
+      "seconds": 629,
+      "speedKph": 4.379813786048966
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 201.56175920372326,
+      "seconds": 630,
+      "speedKph": 2.6435911500158955
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 199.98930273738844,
+      "seconds": 631,
+      "speedKph": 0.5170021743798013
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 632,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 633,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 634,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 635,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 636,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 637,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 638,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 639,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 640,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 641,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 642,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 643,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 644,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 645,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 646,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 647,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 648,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 200,
+      "seconds": 649,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 200,
+      "seconds": 650,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 200.20677738946713,
+      "seconds": 651,
+      "speedKph": 0.9619835215968565
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 202.26210669820398,
+      "seconds": 652,
+      "speedKph": 3.1813515263247476
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 206.51834169463325,
+      "seconds": 653,
+      "speedKph": 5.398782065827688
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 212.9728839329581,
+      "seconds": 654,
+      "speedKph": 7.612912670389241
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 221.62178703998805,
+      "seconds": 655,
+      "speedKph": 9.822388941442586
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 232.45976636312238,
+      "seconds": 656,
+      "speedKph": 12.025867851196574
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 245.48021186392478,
+      "seconds": 657,
+      "speedKph": 14.222020983330138
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 260.67520419060327,
+      "seconds": 658,
+      "speedKph": 16.409537698278683
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 278.0355338466819,
+      "seconds": 659,
+      "speedKph": 18.58712820730177
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 297.44660295384665,
+      "seconds": 660,
+      "speedKph": 20.33792288288186
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 318.04100562746527,
+      "seconds": 661,
+      "speedKph": 21.06987088077857
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 339.1102318035641,
+      "seconds": 662,
+      "speedKph": 21.361628031086877
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 360.3687151593511,
+      "seconds": 663,
+      "speedKph": 21.477912179665474
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 381.70262831459877,
+      "seconds": 664,
+      "speedKph": 21.524257157361344
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 403.06660373890725,
+      "seconds": 665,
+      "speedKph": 21.542727634837703
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 424.44256024037304,
+      "seconds": 666,
+      "speedKph": 21.550088873375582
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 445.8232916838384,
+      "seconds": 667,
+      "speedKph": 21.55302261993396
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 467.205926130818,
+      "seconds": 668,
+      "speedKph": 21.554191833565614
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 488.5893189995534,
+      "seconds": 669,
+      "speedKph": 21.55465781109842
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 509.9730141291087,
+      "seconds": 670,
+      "speedKph": 21.55484352140956
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 531.3568297214446,
+      "seconds": 671,
+      "speedKph": 21.554917534243007
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 552.7406933229164,
+      "seconds": 672,
+      "speedKph": 21.554947031255573
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 574.1245760579092,
+      "seconds": 673,
+      "speedKph": 21.5549587869701
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 595.5084664183594,
+      "seconds": 674,
+      "speedKph": 21.554963472082637
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 616.8680539198024,
+      "seconds": 675,
+      "speedKph": 21.37017934867151
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 637.499344836024,
+      "seconds": 676,
+      "speedKph": 20.137235133834462
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 656.7601564840752,
+      "seconds": 677,
+      "speedKph": 18.68317879487597
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 674.5613928045002,
+      "seconds": 678,
+      "speedKph": 17.202450140364796
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 690.8897041963886,
+      "seconds": 679,
+      "speedKph": 15.714434141136453
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 705.7388003309502,
+      "seconds": 680,
+      "speedKph": 14.220250842935952
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 719.1020900048923,
+      "seconds": 681,
+      "speedKph": 12.718799970478154
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 730.9715103444245,
+      "seconds": 682,
+      "speedKph": 11.20824025069377
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 741.336750400155,
+      "seconds": 683,
+      "speedKph": 9.685807924045648
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 750.1840386901883,
+      "seconds": 684,
+      "speedKph": 8.147124099458695
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 757.4938606448649,
+      "seconds": 685,
+      "speedKph": 6.584588065574241
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 763.2359787388532,
+      "seconds": 686,
+      "speedKph": 4.9829800645542255
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 767.3556167518101,
+      "seconds": 687,
+      "speedKph": 3.3026646726659767
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.7016474513931,
+      "seconds": 688,
+      "speedKph": 1.284416454245805
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 689,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 690,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 691,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 692,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 693,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 694,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 695,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 696,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 697,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 698,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 699,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 700,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 701,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 702,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 703,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 704,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 705,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": true,
+      "phase": "dwelling",
+      "positionStuds": 770,
+      "seconds": 706,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "closing",
+      "positionStuds": 770,
+      "seconds": 707,
+      "speedKph": 0
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 769.995105820525,
+      "seconds": 708,
+      "speedKph": 0.14799997464814815
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 768.7471587601611,
+      "seconds": 709,
+      "speedKph": 2.3677359688854005
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 765.2976923388833,
+      "seconds": 710,
+      "speedKph": 4.586035432852173
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 759.6488089952996,
+      "seconds": 711,
+      "speedKph": 6.801533772979283
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 751.8039618093798,
+      "seconds": 712,
+      "speedKph": 9.012873245565451
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 741.7679460579576,
+      "seconds": 713,
+      "speedKph": 11.218706273775423
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 729.5468875043337,
+      "seconds": 714,
+      "speedKph": 13.417698711886553
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 715.1482274826234,
+      "seconds": 715,
+      "speedKph": 15.608533040098788
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 698.5807048537661,
+      "seconds": 716,
+      "speedKph": 17.789911473837304
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 679.8676103030366,
+      "seconds": 717,
+      "speedKph": 19.849800746840177
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 659.5898767096127,
+      "seconds": 718,
+      "speedKph": 20.875281038162548
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 638.6468800905145,
+      "seconds": 719,
+      "speedKph": 21.28406777074049
+    },
+    {
+      "doorsOpen": false,
+      "phase": "approaching",
+      "positionStuds": 617.4387080526326,
+      "seconds": 720,
+      "speedKph": 21.44700001469496
+    }
+  ]
+}
